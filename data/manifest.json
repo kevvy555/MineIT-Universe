@@ -1,18 +1,27 @@
 {
-  "schemaVersion": 1,
-  "contentVersion": "0.1.0",
+  "schemaVersion": 2,
+  "contentVersion": "0.2.0",
   "universeId": "mineit",
   "name": "MineIT Universe",
+  "canonicalDate": "2389-08-30",
+  "calendar": "Standard Terran Calendar",
   "published": "2026-08-30",
   "collections": {
+    "regions": "regions.json",
     "starSystems": "star-systems.json",
     "planets": "planets.json",
     "settlements": "settlements.json",
-    "companies": "companies.json",
+    "organisations": "organisations.json",
     "organisationUnits": "organisation-units.json",
     "facilities": "facilities.json",
     "operations": "operations.json",
+    "products": "products.json",
+    "species": "species.json",
     "people": "people.json",
-    "ships": "ships.json"
+    "shipClasses": "ship-classes.json",
+    "ships": "ships.json",
+    "projects": "projects.json",
+    "events": "events.json",
+    "relationships": "relationships.json"
   }
 }
