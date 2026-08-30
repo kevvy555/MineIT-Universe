@@ -1,0 +1,26 @@
+[
+  {
+    "id": "station-solace-commercial-ring",
+    "name": "Solace Commercial Ring",
+    "locationType": "orbital commercial station",
+    "systemId": "system-solace",
+    "planetId": "planet-solace-ii",
+    "population": 420000,
+    "purpose": "Corporate administration, procurement, passenger transfer and high-value freight exchange.",
+    "description": "A major orbital commercial hub containing corporate offices, procurement departments, passenger terminals, berths and high-value freight handling infrastructure.",
+    "visualDescription": "A broad segmented orbital ring with graphite commercial towers, illuminated docking arms and constant freight traffic.",
+    "image": {"key": "assets/art/universe/settlements/station-solace-commercial-ring.webp", "status": "missing", "promptDescription": "Large segmented sci-fi commercial ring station above a temperate industrial world, dense docking traffic and corporate districts."}
+  },
+  {
+    "id": "settlement-varda-biosphere",
+    "name": "Varda Biosphere Enclave",
+    "locationType": "sealed surface research settlement",
+    "systemId": "system-varda",
+    "planetId": "planet-varda-prime",
+    "population": 86000,
+    "purpose": "Bioscience research, controlled agriculture, specialist housing and scientific logistics.",
+    "description": "A sealed coastal research settlement supporting laboratories, food-production trials, specialist housing and an orbital shuttle port.",
+    "visualDescription": "White and green sealed modules on a misty coast, transparent growth galleries and clean research infrastructure.",
+    "image": {"key": "assets/art/universe/settlements/settlement-varda-biosphere.webp", "status": "missing", "promptDescription": "Sealed coastal bioscience settlement on a cool oceanic planet, white and green modules, growth galleries and misty atmosphere."}
+  }
+]
