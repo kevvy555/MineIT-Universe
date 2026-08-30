@@ -1,0 +1,28 @@
+[
+  {
+    "id": "ship-csv-halcyon-reach",
+    "name": "CSV Halcyon Reach",
+    "companyId": "company-helix-industrial-group",
+    "shipClassId": "ship-class-dart-courier",
+    "homePortLocationId": "station-solace-commercial-ring",
+    "operationIds": ["operation-helix-driveworks-propulsion"],
+    "personIds": ["person-talia-chen"],
+    "role": "priority high-value materials collection",
+    "description": "A compact high-value cargo vessel operated by Helix for urgent movement of specialist metals and precision components between Solace and regional suppliers.",
+    "visualDescription": "Small angular courier with graphite hull armour, narrow bronze Helix stripes, compact cargo spine and oversized high-output engines.",
+    "image": {"key": "assets/art/universe/ships/ship-csv-halcyon-reach.webp", "status": "missing", "promptDescription": "Compact high-value sci-fi materials courier, angular graphite hull with narrow bronze Helix striping and oversized engines."}
+  },
+  {
+    "id": "ship-csv-seedway",
+    "name": "CSV Seedway",
+    "companyId": "company-verdant-horizon",
+    "shipClassId": "ship-class-sterile-courier",
+    "homePortLocationId": "settlement-varda-biosphere",
+    "operationIds": ["operation-verdant-nutrition"],
+    "personIds": ["person-lena-ortiz"],
+    "role": "temperature-controlled scientific logistics",
+    "description": "A compact temperature-controlled supply ship carrying sensitive biological samples, nutrient feedstocks and research equipment between Varda and external suppliers.",
+    "visualDescription": "Small smooth-sided white courier with dark green Verdant markings and compact refrigerated cargo modules.",
+    "image": {"key": "assets/art/universe/ships/ship-csv-seedway.webp", "status": "missing", "promptDescription": "Small clean scientific supply courier, white smooth-sided hull with dark green Verdant markings and refrigerated cargo modules."}
+  }
+]
