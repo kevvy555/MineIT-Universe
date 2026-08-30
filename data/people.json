@@ -14,7 +14,7 @@
     "biography": "A veteran engineering executive responsible for strategy, output and commercial performance across Helix's propulsion business.",
     "personality": "Measured, technically literate and intolerant of avoidable operational risk.",
     "visualDescription": "Late-50s man with close-cropped silver hair, formal graphite Helix executive jacket with a narrow bronze collar line.",
-    "image": {"key": "assets/art/universe/people/person-arun-das.webp", "status": "missing", "promptDescription": "Head-and-shoulders portrait of a veteran Helix engineering executive in a graphite and bronze corporate office."}
+    "image": {"key": "assets/art/universe/people/person-arun-das.webp", "status": "generated", "promptDescription": "Head-and-shoulders portrait of a veteran Helix engineering executive in a graphite and bronze corporate office."}
   },
   {
     "id": "person-talia-chen",
