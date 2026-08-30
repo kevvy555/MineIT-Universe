@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+  <meta name="theme-color" content="#081015">
+  <title>MineIT Universe Directory</title>
+  <link rel="stylesheet" href="./css/universe.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="title">
+        <small>MINEIT UNIVERSE</small>
+        <strong>Universe Directory</strong>
+      </div>
+      <div class="version" id="version">Loading…</div>
+    </header>
+
+    <main class="workspace" id="workspace">
+      <section class="detailPane" id="detail" aria-live="polite"></section>
+      <div class="divider" id="divider" role="separator" aria-orientation="horizontal" aria-label="Resize detail and explorer panels"></div>
+      <section class="explorerPane" aria-label="Universe Explorer">
+        <div class="explorerToolbar">
+          <button class="perspective active" data-view="geography">Geography</button>
+          <button class="perspective" data-view="organisation">Organisation</button>
+          <button class="perspective" data-view="directory">Directory</button>
+        </div>
+        <div class="searchRow">
+          <input class="search" id="search" placeholder="Search universe…" autocomplete="off" aria-label="Search universe">
+          <button class="treeAction" id="expandCurrent">Current</button>
+          <button class="treeAction" id="collapseAll">Collapse</button>
+        </div>
+        <div class="tree" id="tree"></div>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="./js/universe-app.js"></script>
+</body>
+</html>
