@@ -1,0 +1,55 @@
+[
+  {
+    "id": "operation-helix-driveworks-propulsion",
+    "name": "Commercial Drive Assembly Programme",
+    "companyId": "company-helix-industrial-group",
+    "organisationUnitId": "division-helix-propulsion",
+    "facilityId": "facility-helix-solace-driveworks",
+    "operationType": "propulsion manufacturing",
+    "status": "active",
+    "description": "Produces medium and heavy commercial propulsion assemblies for freight, survey and colony-support vessels.",
+    "managerPersonIds": ["person-marcus-vale"],
+    "procurementPersonIds": ["person-talia-chen"],
+    "shipIds": ["ship-csv-halcyon-reach"],
+    "resourceRequirements": [
+      {"resourceType": "ore", "resourceId": "magnetic", "displayName": "Magnetic Ore", "importance": "critical", "demandScale": "high", "qualityPreference": "excellent", "reason": "Used in high-density field assemblies."},
+      {"resourceType": "ore", "resourceId": "copper", "displayName": "Copper Ore", "importance": "important", "demandScale": "high", "qualityPreference": "good", "reason": "Used in power routing and control systems."},
+      {"resourceType": "precious", "resourceId": "platinum", "displayName": "Platinum", "importance": "important", "demandScale": "moderate", "qualityPreference": "excellent", "reason": "Used in high-temperature catalyst and control assemblies."}
+    ]
+  },
+  {
+    "id": "operation-helix-alloy-fabrication",
+    "name": "Advanced Alloy Fabrication",
+    "companyId": "company-helix-industrial-group",
+    "organisationUnitId": "division-helix-propulsion",
+    "facilityId": "facility-helix-alloyworks",
+    "operationType": "advanced materials fabrication",
+    "status": "active",
+    "description": "Produces high-purity structural and thermal alloys used internally by Helix and sold to regional spacecraft manufacturers.",
+    "managerPersonIds": ["person-arun-das"],
+    "procurementPersonIds": ["person-talia-chen"],
+    "shipIds": [],
+    "resourceRequirements": [
+      {"resourceType": "ore", "resourceId": "iron", "displayName": "Iron Ore", "importance": "important", "demandScale": "high", "qualityPreference": "good", "reason": "Bulk structural alloy feedstock."},
+      {"resourceType": "ore", "resourceId": "reactive", "displayName": "Reactive Metal Ore", "importance": "critical", "demandScale": "moderate", "qualityPreference": "excellent", "reason": "Used in specialist high-performance alloy recipes."}
+    ]
+  },
+  {
+    "id": "operation-verdant-nutrition",
+    "name": "Closed-Habitat Nutrition Programme",
+    "companyId": "company-verdant-horizon",
+    "organisationUnitId": "division-verdant-biosciences",
+    "facilityId": "facility-verdant-habitat-lab",
+    "operationType": "bioscience research and pilot production",
+    "status": "active",
+    "description": "Develops resilient food cultures and nutrient systems intended to keep remote industrial colonies supplied with compact, reliable nutrition sources.",
+    "managerPersonIds": ["person-imani-okoro"],
+    "procurementPersonIds": ["person-lena-ortiz"],
+    "shipIds": ["ship-csv-seedway"],
+    "resourceRequirements": [
+      {"resourceType": "food", "resourceId": "protein-bloom", "displayName": "Protein Bloom", "importance": "critical", "demandScale": "moderate", "qualityPreference": "good", "reason": "Used as a high-density protein culture input."},
+      {"resourceType": "food", "resourceId": "thermal-algae", "displayName": "Thermal Algae", "importance": "important", "demandScale": "moderate", "qualityPreference": "good", "reason": "Used in resilient closed-loop nutrient cultures."},
+      {"resourceType": "water", "resourceId": "hydrogen-rich-brine", "displayName": "Hydrogen-rich Brine", "importance": "important", "demandScale": "low", "qualityPreference": "common", "reason": "Used in specialist nutrient and biochemical processing."}
+    ]
+  }
+]
