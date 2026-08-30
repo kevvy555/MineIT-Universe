@@ -1,0 +1,44 @@
+[
+  {
+    "id": "facility-helix-solace-driveworks",
+    "name": "Solace Driveworks",
+    "companyId": "company-helix-industrial-group",
+    "organisationUnitId": "division-helix-propulsion",
+    "systemId": "system-solace",
+    "planetId": "planet-solace-ii",
+    "settlementId": null,
+    "facilityType": "propulsion manufacturing complex",
+    "status": "operational",
+    "description": "A large automated industrial complex on Solace II assembling commercial drives and precision field-control systems for Helix customers.",
+    "visualDescription": "Kilometres of low graphite production halls, bronze gantry markings, enclosed magnetic assembly bays and bright inspection chambers linked by automated freight rails.",
+    "image": {"key": "assets/art/universe/facilities/facility-helix-solace-driveworks.webp", "status": "missing", "promptDescription": "Huge sci-fi propulsion factory complex, graphite halls with bronze markings, magnetic assembly bays and automated freight lines."}
+  },
+  {
+    "id": "facility-helix-alloyworks",
+    "name": "Solace Advanced Alloy Works",
+    "companyId": "company-helix-industrial-group",
+    "organisationUnitId": "division-helix-propulsion",
+    "systemId": "system-solace",
+    "planetId": "planet-solace-ii",
+    "settlementId": null,
+    "facilityType": "high-purity materials complex",
+    "status": "operational",
+    "description": "A specialist facility producing precision alloys for propulsion housings, thermal systems and high-stress spacecraft structures.",
+    "visualDescription": "Dense high-temperature processing halls, clean ingot handling lines and shielded materials laboratories in Helix graphite and bronze.",
+    "image": {"key": "assets/art/universe/facilities/facility-helix-alloyworks.webp", "status": "missing", "promptDescription": "Advanced sci-fi alloy manufacturing complex with high-temperature furnaces, clean material handling and graphite-bronze Helix branding."}
+  },
+  {
+    "id": "facility-verdant-habitat-lab",
+    "name": "Varda Closed-Habitat Research Complex",
+    "companyId": "company-verdant-horizon",
+    "organisationUnitId": "division-verdant-biosciences",
+    "systemId": "system-varda",
+    "planetId": "planet-varda-prime",
+    "settlementId": "settlement-varda-biosphere",
+    "facilityType": "agricultural bioscience facility",
+    "status": "operational",
+    "description": "A network of sealed growth chambers, biochemical laboratories and pilot-scale food-production modules on Varda Prime.",
+    "visualDescription": "White low-rise sealed modules surrounded by dark green utility structures, transparent growth galleries and bright clean laboratory interiors.",
+    "image": {"key": "assets/art/universe/facilities/facility-verdant-habitat-lab.webp", "status": "missing", "promptDescription": "Sealed agricultural bioscience complex with white clean-room modules, dark green utilities, transparent growth galleries and misty coastal atmosphere."}
+  }
+]
