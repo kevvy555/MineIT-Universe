@@ -1,0 +1,12 @@
+[
+  {
+    "id": "region-koplin-reach",
+    "name": "Koplin Reach",
+    "regionType": "Core-commercial region",
+    "description": "A ten-system corridor of mature industry, research, finance and frontier logistics centred on the Koplin system. The Reach is politically mixed: the Koplin Compact provides inter-system standards while individual worlds, corporate territories and specialist authorities retain substantial autonomy.",
+    "administrativeOrganisationIds": ["organisation-koplin-compact"],
+    "systemIds": ["system-koplin", "system-solace", "system-varda", "system-meridian", "system-aster-vale", "system-orison", "system-caldera", "system-halcyon", "system-nacre", "system-damaris"],
+    "economicProfile": ["interstellar trade", "heavy industry", "biotechnology", "shipbuilding", "finance", "frontier support"],
+    "history": "The Reach formed around a chain of dependable jump routes linking Koplin's charter economy to Solace manufacturing and the Damaris frontier. Its institutions are old enough to be recognisable across generations but flexible enough for corporate and synthetic powers to compete inside the same legal framework."
+  }
+]
