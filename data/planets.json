@@ -1,0 +1,38 @@
+[
+  {
+    "id": "planet-solace-ii",
+    "systemId": "system-solace",
+    "name": "Solace II",
+    "worldType": "temperate industrial world",
+    "environment": "Temperate; heavily urbanised equatorial belt",
+    "population": 2800000000,
+    "description": "A densely developed temperate world whose equatorial industrial belt supplies propulsion, fabrication and logistics businesses across the region.",
+    "economicProfile": ["aerospace", "heavy engineering", "advanced materials"],
+    "visualDescription": "Blue-green temperate world with bright equatorial city belts and extensive orbital traffic.",
+    "image": {"key": "assets/art/universe/planets/planet-solace-ii.webp", "status": "missing", "promptDescription": "Temperate industrial planet seen from orbit, blue-green oceans and continents crossed by bright equatorial urban belts."}
+  },
+  {
+    "id": "planet-solace-iii",
+    "systemId": "system-solace",
+    "name": "Solace III",
+    "worldType": "cold mineral-processing world",
+    "environment": "Cold, dry, thin atmosphere",
+    "population": 19000000,
+    "description": "A cold, sparsely inhabited world used for specialist mineral processing, bulk storage and hazardous industrial work separated from Solace II's major population centres.",
+    "economicProfile": ["mineral refining", "bulk materials storage"],
+    "visualDescription": "Pale grey-blue cold world with isolated industrial lights and large surface processing zones.",
+    "image": {"key": "assets/art/universe/planets/planet-solace-iii.webp", "status": "missing", "promptDescription": "Cold sparsely inhabited industrial planet with pale terrain, thin atmosphere and isolated mineral-processing complexes."}
+  },
+  {
+    "id": "planet-varda-prime",
+    "systemId": "system-varda",
+    "name": "Varda Prime",
+    "worldType": "cool oceanic research world",
+    "environment": "Cool oceanic; dense cloud cover",
+    "population": 146000000,
+    "description": "A cool oceanic world with carefully controlled settlement zones and extensive biological research infrastructure.",
+    "economicProfile": ["bioscience", "food research", "life-support systems"],
+    "visualDescription": "Deep ocean world with cool cloud bands, scattered island settlements and small clean orbital stations.",
+    "image": {"key": "assets/art/universe/planets/planet-varda-prime.webp", "status": "missing", "promptDescription": "Cool oceanic research planet seen from orbit, dark blue oceans, dense clouds and restrained scientific settlement lights."}
+  }
+]
