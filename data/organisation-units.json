@@ -1,0 +1,52 @@
+[
+  {
+    "id": "division-helix-propulsion",
+    "companyId": "company-helix-industrial-group",
+    "parentUnitId": null,
+    "unitType": "division",
+    "name": "Propulsion Systems Division",
+    "primaryLocationId": "station-solace-commercial-ring",
+    "purpose": "Commercial drive assemblies, field-control hardware and high-temperature propulsion components.",
+    "description": "Helix division responsible for commercial propulsion systems and the facilities that manufacture them."
+  },
+  {
+    "id": "department-helix-procurement",
+    "companyId": "company-helix-industrial-group",
+    "parentUnitId": "division-helix-propulsion",
+    "unitType": "department",
+    "name": "Strategic Materials Procurement",
+    "primaryLocationId": "station-solace-commercial-ring",
+    "purpose": "Supplier qualification and long-term acquisition of critical materials.",
+    "description": "Qualifies suppliers and secures strategic metals and specialist ores used by Helix propulsion manufacturing."
+  },
+  {
+    "id": "department-helix-operations",
+    "companyId": "company-helix-industrial-group",
+    "parentUnitId": "division-helix-propulsion",
+    "unitType": "department",
+    "name": "Driveworks Operations",
+    "primaryLocationId": "facility-helix-solace-driveworks",
+    "purpose": "Production targets, staffing, maintenance and delivery performance.",
+    "description": "Coordinates production and operational performance across Helix's main propulsion manufacturing complex."
+  },
+  {
+    "id": "division-verdant-biosciences",
+    "companyId": "company-verdant-horizon",
+    "parentUnitId": null,
+    "unitType": "division",
+    "name": "Habitat Biosciences Division",
+    "primaryLocationId": "settlement-varda-biosphere",
+    "purpose": "Food-system biology, protein cultures and resilient closed-environment nutrition.",
+    "description": "Verdant division responsible for practical biological systems used by remote colonies."
+  },
+  {
+    "id": "department-verdant-procurement",
+    "companyId": "company-verdant-horizon",
+    "parentUnitId": "division-verdant-biosciences",
+    "unitType": "department",
+    "name": "Bio-Resource Procurement",
+    "primaryLocationId": "settlement-varda-biosphere",
+    "purpose": "External sourcing of biological feedstocks and nutrient precursors.",
+    "description": "Sources unusual biological materials and supplier relationships for Verdant's habitat programmes."
+  }
+]
