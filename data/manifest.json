@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "contentVersion": "0.1.0",
+  "universeId": "mineit",
+  "name": "MineIT Universe",
+  "published": "2026-08-30",
+  "collections": {
+    "starSystems": "star-systems.json",
+    "planets": "planets.json",
+    "settlements": "settlements.json",
+    "companies": "companies.json",
+    "organisationUnits": "organisation-units.json",
+    "facilities": "facilities.json",
+    "operations": "operations.json",
+    "people": "people.json",
+    "ships": "ships.json"
+  }
+}
