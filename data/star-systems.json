@@ -1,0 +1,26 @@
+[
+  {
+    "id": "system-solace",
+    "name": "Solace System",
+    "region": "Koplin Commercial Sphere",
+    "starType": "G-type yellow star",
+    "coordinates": {"x": 12.4, "y": -7.8, "z": 3.1},
+    "description": "A mature trade system centred on Solace II and a dense orbital and surface industrial network.",
+    "history": "Solace grew from a logistics waypoint into one of the region's principal commercial manufacturing systems after propulsion and alloy industries established permanent facilities around Solace II.",
+    "economicProfile": ["aerospace manufacturing", "advanced materials", "regional freight"],
+    "visualDescription": "A warm yellow primary with a busy inner commercial zone and dense orbital traffic around Solace II.",
+    "image": {"key": "assets/art/universe/systems/system-solace.webp", "status": "missing", "promptDescription": "Wide astronomical view of a prosperous yellow-star commercial system, with a busy temperate industrial world and visible orbital infrastructure."}
+  },
+  {
+    "id": "system-varda",
+    "name": "Varda System",
+    "region": "Outer Koplin Commercial Sphere",
+    "starType": "K-type orange star",
+    "coordinates": {"x": -18.7, "y": 22.1, "z": -4.6},
+    "description": "A quieter system known for controlled-environment agriculture, bioscience campuses and food-security research serving remote colonies.",
+    "history": "Varda became a specialist research system after sealed agricultural campuses proved valuable to long-duration colony programmes.",
+    "economicProfile": ["biotechnology", "closed-habitat agriculture", "life-support research"],
+    "visualDescription": "A soft orange star illuminating a cool oceanic primary world, with sparse traffic and clean scientific infrastructure.",
+    "image": {"key": "assets/art/universe/systems/system-varda.webp", "status": "missing", "promptDescription": "Wide astronomical view of a calm orange-star research system with a cool oceanic world and restrained scientific orbital infrastructure."}
+  }
+]
