@@ -1,39 +1,58 @@
 export const DEFAULT_DATA_ROOT = './data/';
 
 const COLLECTION_LABELS = {
+  regions: 'Region',
   starSystems: 'Star System',
-  planets: 'Planet',
-  settlements: 'Settlement',
-  companies: 'Company',
+  planets: 'World',
+  settlements: 'Settlement / Station',
+  organisations: 'Organisation',
   organisationUnits: 'Organisation Unit',
   facilities: 'Facility',
   operations: 'Operation',
+  products: 'Product',
+  species: 'Species',
   people: 'Person',
-  ships: 'Ship'
+  shipClasses: 'Ship Class',
+  ships: 'Ship',
+  projects: 'Project',
+  events: 'Historical Event',
+  relationships: 'Relationship'
 };
 
-const REFERENCE_FIELDS = {
-  planets: ['systemId'],
-  settlements: ['systemId', 'planetId', 'parentLocationId'],
-  companies: ['headquartersLocationId'],
-  organisationUnits: ['companyId', 'parentUnitId', 'primaryLocationId'],
-  facilities: ['companyId', 'organisationUnitId', 'systemId', 'planetId', 'settlementId'],
-  operations: ['companyId', 'organisationUnitId', 'facilityId'],
-  people: ['companyId', 'organisationUnitId', 'workLocationId', 'homeLocationId'],
-  ships: ['companyId', 'homePortLocationId']
+const SCALAR_REFS = {
+  starSystems: ['regionId', 'primaryAuthorityOrganisationId'],
+  planets: ['systemId', 'parentPlanetId', 'governingOrganisationId'],
+  settlements: ['systemId', 'planetId', 'parentLocationId', 'governingOrganisationId'],
+  organisations: ['headquartersLocationId', 'parentOrganisationId'],
+  organisationUnits: ['organisationId', 'parentUnitId', 'primaryLocationId'],
+  facilities: ['organisationId', 'organisationUnitId', 'systemId', 'planetId', 'settlementId'],
+  operations: ['organisationId', 'organisationUnitId', 'facilityId'],
+  people: ['speciesId', 'organisationId', 'organisationUnitId', 'workLocationId', 'homeLocationId'],
+  shipClasses: ['manufacturerOrganisationId'],
+  ships: ['organisationId', 'shipClassId', 'homePortLocationId'],
+  relationships: ['personAId', 'personBId']
 };
 
-const REFERENCE_ARRAY_FIELDS = {
-  operations: ['managerPersonIds', 'procurementPersonIds', 'shipIds'],
+const ARRAY_REFS = {
+  regions: ['administrativeOrganisationIds', 'systemIds'],
+  facilities: ['partnerOrganisationIds'],
+  operations: ['managerPersonIds', 'procurementPersonIds', 'shipIds', 'productIds'],
+  products: ['producerOrganisationIds'],
   people: ['operationIds', 'shipIds'],
-  ships: ['operationIds', 'personIds']
+  shipClasses: ['designerOrganisationIds'],
+  ships: ['operationIds', 'personIds'],
+  projects: ['organisationIds', 'locationIds', 'personIds', 'shipIds', 'operationIds'],
+  events: ['linkedEntityIds']
 };
+
+const IMAGE_STATUSES = new Set(['not-generated', 'generated', 'approved', 'needs-regeneration']);
 
 export class UniverseCatalogue {
-  constructor(manifest, collections, dataRoot) {
+  constructor(manifest, collections, dataRoot, manifestUrl) {
     this.manifest = manifest;
     this.collections = collections;
     this.dataRoot = dataRoot;
+    this.manifestUrl = manifestUrl;
     this.byId = new Map();
     this.collectionById = new Map();
 
@@ -47,28 +66,16 @@ export class UniverseCatalogue {
     }
   }
 
-  get(id) {
-    return id ? this.byId.get(id) ?? null : null;
-  }
+  get(id) { return id ? this.byId.get(id) ?? null : null; }
+  collection(name) { return this.collections[name] ?? []; }
+  collectionNameFor(id) { return this.collectionById.get(id) ?? null; }
+  typeLabelFor(id) { return COLLECTION_LABELS[this.collectionNameFor(id)] ?? 'Entity'; }
+  nameFor(id) { return this.get(id)?.name ?? id ?? '—'; }
 
-  collection(name) {
-    return this.collections[name] ?? [];
-  }
-
-  collectionNameFor(id) {
-    return this.collectionById.get(id) ?? null;
-  }
-
-  typeLabelFor(id) {
-    return COLLECTION_LABELS[this.collectionNameFor(id)] ?? 'Entity';
-  }
-
-  nameFor(id) {
-    return this.get(id)?.name ?? id ?? '—';
-  }
-
-  recordsForCompany(companyId, collectionName) {
-    return this.collection(collectionName).filter(record => record.companyId === companyId);
+  allRecords() {
+    return Object.entries(this.collections).flatMap(([collectionName, records]) =>
+      records.map(record => ({ collectionName, record }))
+    );
   }
 
   operationsForResource(resourceType, resourceId) {
@@ -79,56 +86,43 @@ export class UniverseCatalogue {
     );
   }
 
-  allRecords() {
-    return Object.entries(this.collections).flatMap(([collectionName, records]) =>
-      records.map(record => ({ collectionName, record }))
-    );
+  assetUrl(key) {
+    if (!key) return null;
+    return new URL(`../${key.replace(/^\.?\//, '')}`, this.manifestUrl).toString();
   }
-}
-
-function resolveCollectionUrl(dataRoot, collectionPath) {
-  return new URL(collectionPath, new URL(dataRoot, window.location.href)).toString();
 }
 
 async function fetchJson(url) {
   const response = await fetch(url, { cache: 'no-cache' });
-  if (!response.ok) {
-    throw new Error(`Failed to load ${url} (${response.status} ${response.statusText})`);
-  }
-  try {
-    return await response.json();
-  } catch (error) {
-    throw new Error(`Invalid JSON at ${url}: ${error.message}`);
-  }
+  if (!response.ok) throw new Error(`Failed to load ${url} (${response.status} ${response.statusText})`);
+  try { return await response.json(); }
+  catch (error) { throw new Error(`Invalid JSON at ${url}: ${error.message}`); }
 }
 
 export async function loadUniverse(dataRoot = DEFAULT_DATA_ROOT) {
-  const manifestUrl = new URL('manifest.json', new URL(dataRoot, window.location.href)).toString();
+  const rootUrl = new URL(dataRoot, window.location.href);
+  const manifestUrl = new URL('manifest.json', rootUrl).toString();
   const manifest = await fetchJson(manifestUrl);
 
   if (!manifest.collections || typeof manifest.collections !== 'object') {
     throw new Error('Universe manifest does not declare collections.');
   }
 
-  const entries = await Promise.all(
-    Object.entries(manifest.collections).map(async ([collectionName, collectionPath]) => {
-      const url = resolveCollectionUrl(dataRoot, collectionPath);
-      const records = await fetchJson(url);
-      if (!Array.isArray(records)) {
-        throw new Error(`${collectionName} must contain a JSON array.`);
-      }
-      return [collectionName, records];
-    })
-  );
+  const entries = await Promise.all(Object.entries(manifest.collections).map(async ([name, path]) => {
+    const url = new URL(path, rootUrl).toString();
+    const records = await fetchJson(url);
+    if (!Array.isArray(records)) throw new Error(`${name} must contain a JSON array.`);
+    return [name, records];
+  }));
 
-  const catalogue = new UniverseCatalogue(manifest, Object.fromEntries(entries), dataRoot);
+  const catalogue = new UniverseCatalogue(manifest, Object.fromEntries(entries), dataRoot, manifestUrl);
   return { catalogue, validation: validateUniverse(catalogue) };
 }
 
 export function validateUniverse(catalogue) {
   const errors = [];
   const warnings = [];
-  const seenIds = new Map();
+  const seen = new Map();
   const idPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
   for (const [collectionName, records] of Object.entries(catalogue.collections)) {
@@ -141,33 +135,38 @@ export function validateUniverse(catalogue) {
         errors.push(`${collectionName} contains a record without an id.`);
         continue;
       }
-      if (!idPattern.test(record.id)) {
-        errors.push(`${record.id}: ID does not follow lower-kebab-case convention.`);
-      }
-      if (seenIds.has(record.id)) {
-        errors.push(`${record.id}: duplicate ID in ${collectionName} and ${seenIds.get(record.id)}.`);
-      } else {
-        seenIds.set(record.id, collectionName);
-      }
-      if (!record.name) {
-        warnings.push(`${record.id}: no display name.`);
+      if (!idPattern.test(record.id)) errors.push(`${record.id}: invalid lower-kebab-case ID.`);
+      if (seen.has(record.id)) errors.push(`${record.id}: duplicate ID in ${collectionName} and ${seen.get(record.id)}.`);
+      else seen.set(record.id, collectionName);
+      if (!record.name) warnings.push(`${record.id}: no display name.`);
+
+      if (record.image) {
+        if (typeof record.image.generated !== 'boolean') errors.push(`${record.id}.image.generated must be boolean.`);
+        if (!IMAGE_STATUSES.has(record.image.status)) errors.push(`${record.id}.image.status is invalid.`);
+        if (!record.image.key) errors.push(`${record.id}.image.key is required.`);
+        if (record.image.status === 'not-generated' && record.image.generated !== false) {
+          errors.push(`${record.id}: not-generated image must have generated=false.`);
+        }
+        if (['generated', 'approved'].includes(record.image.status) && record.image.generated !== true) {
+          errors.push(`${record.id}: ${record.image.status} image must have generated=true.`);
+        }
       }
     }
   }
 
-  const knownIds = new Set(seenIds.keys());
-  const validateReference = (sourceId, field, value) => {
+  const knownIds = new Set(seen.keys());
+  const ref = (sourceId, field, value) => {
     if (value == null || value === '') return;
     if (!knownIds.has(value)) errors.push(`${sourceId}.${field} references missing entity ${value}.`);
   };
 
-  for (const [collectionName, fields] of Object.entries(REFERENCE_FIELDS)) {
+  for (const [collectionName, fields] of Object.entries(SCALAR_REFS)) {
     for (const record of catalogue.collection(collectionName)) {
-      for (const field of fields) validateReference(record.id, field, record[field]);
+      for (const field of fields) ref(record.id, field, record[field]);
     }
   }
 
-  for (const [collectionName, fields] of Object.entries(REFERENCE_ARRAY_FIELDS)) {
+  for (const [collectionName, fields] of Object.entries(ARRAY_REFS)) {
     for (const record of catalogue.collection(collectionName)) {
       for (const field of fields) {
         const values = record[field] ?? [];
@@ -175,7 +174,7 @@ export function validateUniverse(catalogue) {
           errors.push(`${record.id}.${field} must be an array.`);
           continue;
         }
-        values.forEach(value => validateReference(record.id, field, value));
+        values.forEach(value => ref(record.id, field, value));
       }
     }
   }
@@ -183,15 +182,26 @@ export function validateUniverse(catalogue) {
   for (const unit of catalogue.collection('organisationUnits')) {
     if (!unit.parentUnitId) continue;
     const parent = catalogue.get(unit.parentUnitId);
-    if (parent && parent.companyId !== unit.companyId) {
-      errors.push(`${unit.id}: parent organisation unit belongs to a different company.`);
+    if (parent && parent.organisationId !== unit.organisationId) {
+      errors.push(`${unit.id}: parent organisation unit belongs to another organisation.`);
+    }
+  }
+
+  for (const planet of catalogue.collection('planets')) {
+    if (!planet.parentPlanetId) continue;
+    const parent = catalogue.get(planet.parentPlanetId);
+    if (parent && parent.systemId !== planet.systemId) {
+      errors.push(`${planet.id}: parent planet/moon belongs to another system.`);
+    }
+  }
+
+  for (const relationship of catalogue.collection('relationships')) {
+    if (relationship.personAId === relationship.personBId) {
+      errors.push(`${relationship.id}: person relationship cannot point to the same person twice.`);
     }
   }
 
   for (const operation of catalogue.collection('operations')) {
-    if (!(operation.resourceRequirements ?? []).length) {
-      warnings.push(`${operation.id}: operation has no resource requirements.`);
-    }
     for (const requirement of operation.resourceRequirements ?? []) {
       if (!requirement.resourceType || !requirement.resourceId || !requirement.reason) {
         errors.push(`${operation.id}: resource requirement is missing type, id or reason.`);
@@ -199,10 +209,5 @@ export function validateUniverse(catalogue) {
     }
   }
 
-  return {
-    errors,
-    warnings,
-    isValid: errors.length === 0,
-    entityCount: seenIds.size
-  };
+  return { errors, warnings, isValid: errors.length === 0, entityCount: seen.size };
 }
