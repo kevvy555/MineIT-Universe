@@ -1,3 +1,5 @@
+import { loadUniverse } from './universe-data.js';
+
 const $=id=>document.getElementById(id);
 const catalogueEl=$('catalogue'),manufacturersEl=$('manufacturers'),summaryEl=$('summary');
 const state={manufacturer:'all',data:null};
@@ -5,17 +7,26 @@ const esc=v=>String(v??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replac
 const fmt=v=>new Intl.NumberFormat('en-GB').format(v);
 const money=v=>v>=1_000_000_000?`CC ${(v/1_000_000_000).toFixed(2)}bn`:v>=1_000_000?`CC ${(v/1_000_000).toFixed(v>=100_000_000?0:1)}m`:`CC ${fmt(v)}`;
 const rating=n=>`${'●'.repeat(n)}${'○'.repeat(Math.max(0,5-n))}`;
+const lead=days=>days>=720?`${(days/360).toFixed(days%360?1:0)} years`:days>=60?`${Math.round(days/30)} months`:`${days} days`;
 
 async function load(){
-  const manifest=await fetch('./data/manifest.json').then(r=>r.json());
-  const get=key=>fetch(`./data/${manifest.collections[key]}`).then(r=>r.json());
-  const [organisations,facilities,shipLines,shipClasses,currencies]=await Promise.all([get('organisations'),get('facilities'),get('shipLines'),get('shipClasses'),get('currencies')]);
-  state.data={manifest,organisations,facilities,shipLines,shipClasses,currencies};
+  const {catalogue,validation}=await loadUniverse('./data/');
+  if(!validation.isValid)throw new Error(`Universe validation failed: ${validation.errors[0]||'unknown error'}`);
+  state.data={
+    manifest:catalogue.manifest,
+    organisations:catalogue.collection('organisations'),
+    facilities:catalogue.collection('facilities'),
+    shipLines:catalogue.collection('shipLines'),
+    shipClasses:catalogue.collection('shipClasses'),
+    runtimeProfiles:catalogue.collection('shipClassRuntimeProfiles'),
+    currencies:catalogue.collection('currencies')
+  };
   renderFilters();render();
 }
 
 function org(id){return state.data.organisations.find(x=>x.id===id);}
 function facility(id){return state.data.facilities.find(x=>x.id===id);}
+function runtimeFor(id){return state.data.runtimeProfiles.find(profile=>profile.shipClassId===id)||null;}
 function classesFor(line){return state.data.shipClasses.filter(c=>c.shipLineId===line.id&&c.retailStatus==='factory-new').sort((a,b)=>a.specifications.cargoCapacity-b.specifications.cargoCapacity);}
 
 function renderFilters(){
@@ -26,7 +37,7 @@ function renderFilters(){
 
 function spec(label,value){return `<div><span>${esc(label)}</span><strong>${esc(value)}</strong></div>`;}
 function card(c){
-  const s=c.specifications,p=c.pricing,img=c.image;
+  const s=c.specifications,p=c.pricing,img=c.image,runtime=runtimeFor(c.id),fuelUse=runtime?.specifications?.fuelUsePerLightYear,leadDays=runtime?.production?.factoryLeadTimeDays;
   return `<article class="shipCard">
     <div class="shipImage">${img?.generated?`<img src="./${esc(img.key)}" alt="${esc(c.name)}">`:`<div class="imageMissing"><b>IMAGE NOT GENERATED</b><span>${esc(img?.status||'not-generated')}</span></div>`}</div>
     <div class="shipBody">
@@ -35,6 +46,7 @@ function card(c){
       <div class="specGrid">
         ${spec('Cargo',fmt(s.cargoCapacity))}${spec('Fuel',fmt(s.fuelCapacity))}${spec('Food',fmt(s.foodCapacity))}${spec('Colonists',fmt(s.colonistCapacity))}
         ${spec('Crew',`${s.minimumCrew}–${s.maximumCrew}`)}${spec('Berth',s.berthClass)}${spec('Landing',s.atmosphericCapability)}${spec('Range',s.rangeClass)}
+        ${spec('Factory lead',Number.isFinite(leadDays)?lead(leadDays):'—')}${spec('Fuel / LY',Number.isFinite(fuelUse)?fmt(fuelUse):'—')}
       </div>
       <div class="ratings">${spec('Speed',rating(s.speedRating))}${spec('Efficiency',rating(s.fuelEfficiencyRating))}${spec('Reliability',rating(s.reliabilityRating))}</div>
       <div class="drive">${s.vectorExchangeCapable?`Vector Exchange • ${s.transitWeeksPerLightYear} weeks/light-year`:'In-system only • No Vector Exchange Drive'}</div>
