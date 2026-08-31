@@ -1,0 +1,131 @@
+name: Materialize Universe portrait batch
+
+on:
+  push:
+    branches: [image-batch-upload-20260831]
+    paths:
+      - 'transport/image-batch-20260831/READY'
+
+permissions:
+  contents: write
+
+jobs:
+  materialize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout transport branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Decode and verify portrait masters
+        shell: bash
+        run: |
+          set -euo pipefail
+          transport='transport/image-batch-20260831'
+          out='/tmp/mineit-portraits'
+          mkdir -p "$out"
+
+          verify_portrait() {
+            local name="$1"
+            local expected="$2"
+            cat "$transport/$name"/*.b64 | base64 --decode > "$out/$name.webp"
+            echo "$expected  $out/$name.webp" | sha256sum -c -
+          }
+
+          verify_portrait person-talia-chen d12a91ae7f90b4a14b67d1b3c35635cfb84e5278241d886d17c8aa3178bc017f
+          verify_portrait person-arun-das 09656c0ddd7aa2afdaf4387cc09f8298c4e84b3d1581fcb0f0e1d93e8e1082bd
+          verify_portrait person-marcus-vale de0374af07c9d7e1e33a5597740d24310f0769cd17be9d1aa6bf71514d5d2b55
+          verify_portrait person-imani-okoro 752a4c331fa720254f6a3143eb8d3d0d06448794bba62d0d973679504e161612
+          verify_portrait person-lena-ortiz e308aae8d2e38afdac7c2ab3306cd4ac990b76ce402be4a3da92e96246483aac
+          verify_portrait person-maeve-rourke 82105815fb267527a8b5518184d07c44e6744129dd495b33856d9f4aeb72881c
+          verify_portrait person-idris-hale 2c77b4f2ffd92363bc0a0f1883bb168e8a1001beb92d6c96f5de874f8077ff3d
+          verify_portrait person-soren-vey 3204bebaf225f90d3347f4eb8155a560f55f7dee2a3f153df2451c122ed9476e
+          verify_portrait person-aya-nkem e464de931a9ea5bbc6b439d2de96fef0bf68302201a3f4020628a1bf4d7e6bd0
+          verify_portrait person-jonas-rhee 60028735d135da60c439918b804be69b8e6f0877f572559dbea77b9f8fc0f4ee
+
+      - name: Apply one validated commit to latest main
+        shell: bash
+        run: |
+          set -euo pipefail
+          out='/tmp/mineit-portraits'
+          ids=(
+            person-talia-chen
+            person-arun-das
+            person-marcus-vale
+            person-imani-okoro
+            person-lena-ortiz
+            person-maeve-rourke
+            person-idris-hale
+            person-soren-vey
+            person-aya-nkem
+            person-jonas-rhee
+          )
+
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git checkout -B image-materialize origin/main
+            mkdir -p assets/art/universe/people
+            for id in "${ids[@]}"; do
+              cp "$out/$id.webp" "assets/art/universe/people/$id.webp"
+            done
+
+            python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path('data/people.json')
+          data = json.loads(path.read_text())
+          ids = {
+              'person-talia-chen',
+              'person-arun-das',
+              'person-marcus-vale',
+              'person-imani-okoro',
+              'person-lena-ortiz',
+              'person-maeve-rourke',
+              'person-idris-hale',
+              'person-soren-vey',
+              'person-aya-nkem',
+              'person-jonas-rhee',
+          }
+          found = set()
+          for person in data:
+              if person.get('id') in ids:
+                  image = person.get('image')
+                  if not isinstance(image, dict):
+                      raise SystemExit(f"Missing image object for {person.get('id')}")
+                  expected_key = f"assets/art/universe/people/{person['id']}.webp"
+                  if image.get('key') != expected_key:
+                      raise SystemExit(f"Unexpected image key for {person['id']}: {image.get('key')}")
+                  image['generated'] = True
+                  image['status'] = 'generated'
+                  found.add(person['id'])
+          missing = ids - found
+          if missing:
+              raise SystemExit(f"Missing people records: {sorted(missing)}")
+          path.write_text(json.dumps(data, ensure_ascii=False, separators=(',', ':')) + '\n')
+          PY
+
+            node validation/validate-universe.mjs
+            node --check js/universe-data.js
+            node --check js/universe-app.js
+            node --check js/lore-app.js
+            node --check js/ship-catalogue-app.js
+
+            git add data/people.json assets/art/universe/people/*.webp
+            if git diff --cached --quiet; then
+              echo 'Nothing to commit.'
+              exit 0
+            fi
+            git commit -m 'Add first high-resolution Universe people portraits'
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "main moved while publishing; retrying from latest main (attempt $attempt)" >&2
+          done
+
+          echo 'Failed to publish after three fast-forward retries.' >&2
+          exit 1
