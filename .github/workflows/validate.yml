@@ -21,6 +21,8 @@ jobs:
           node-version: '22'
       - name: Validate canonical universe
         run: node validation/validate-universe.mjs
+      - name: Validate ship procurement data
+        run: node validation/validate-ship-procurement.mjs
       - name: Syntax check data loader
         run: node --check js/universe-data.js
       - name: Syntax check Directory app
