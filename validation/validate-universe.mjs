@@ -7,11 +7,18 @@ const repoRoot = resolve(here, '..');
 const dataRoot = resolve(repoRoot, 'data');
 const manifest = JSON.parse(await readFile(resolve(dataRoot, 'manifest.json'), 'utf8'));
 const collections = {};
+const collectionFiles = {};
 
-for (const [name, file] of Object.entries(manifest.collections ?? {})) {
-  const parsed = JSON.parse(await readFile(resolve(dataRoot, file), 'utf8'));
-  if (!Array.isArray(parsed)) throw new Error(`${name} must contain an array.`);
-  collections[name] = parsed;
+for (const [name, specification] of Object.entries(manifest.collections ?? {})) {
+  const files = Array.isArray(specification) ? specification : [specification];
+  if (!files.length || files.some(file => typeof file !== 'string' || !file)) throw new Error(`${name} must declare one or more collection files.`);
+  collectionFiles[name] = files;
+  collections[name] = [];
+  for (const file of files) {
+    const parsed = JSON.parse(await readFile(resolve(dataRoot, file), 'utf8'));
+    if (!Array.isArray(parsed)) throw new Error(`${name} shard ${file} must contain an array.`);
+    collections[name].push(...parsed);
+  }
 }
 
 const errors = [];
@@ -25,21 +32,19 @@ if (!Number.isInteger(manifest.civilisationBaselineYear)) errors.push('manifest.
 if (!manifest.calendar) errors.push('manifest.calendar is required.');
 if (manifest.canonicalYear !== 5326) errors.push('manifest.canonicalYear must match the Deep Reach canonical era: 5326.');
 if (manifest.civilisationBaselineYear !== 5300) errors.push('manifest.civilisationBaselineYear must match the foundation lore baseline: 5300.');
+if (!['authored-materialised', 'generated-materialised'].includes(manifest.generation?.mode)) errors.push('manifest.generation.mode must be authored-materialised or generated-materialised.');
+if (manifest.generation?.materialised !== true) errors.push('Published universes must have generation.materialised=true.');
+if (manifest.generation?.mode === 'generated-materialised' && (manifest.generation.seed == null || !manifest.generation.generatorVersion)) errors.push('Generated universes require generation.seed and generation.generatorVersion.');
 
 for (const [collectionName, records] of Object.entries(collections)) {
   for (const record of records) {
-    if (!record.id) {
-      errors.push(`${collectionName}: record missing id.`);
-      continue;
-    }
+    if (!record?.id) { errors.push(`${collectionName}: record missing id.`); continue; }
     if (!idPattern.test(record.id)) errors.push(`${record.id}: invalid ID format.`);
     if (byId.has(record.id)) errors.push(`${record.id}: duplicate ID.`);
     byId.set(record.id, { collectionName, record });
     if (!record.name) warnings.push(`${record.id}: missing display name.`);
 
-    if (['people', 'ships'].includes(collectionName) && !record.image) {
-      errors.push(`${record.id}: ${collectionName} records require image-generation metadata.`);
-    }
+    if (['people', 'ships'].includes(collectionName) && !record.image) errors.push(`${record.id}: ${collectionName} records require image-generation metadata.`);
     if (record.image) {
       if (typeof record.image.generated !== 'boolean') errors.push(`${record.id}.image.generated must be boolean.`);
       if (!imageStatuses.has(record.image.status)) errors.push(`${record.id}.image.status invalid.`);
@@ -62,6 +67,7 @@ function validateRef(sourceId, field, value) {
 
 for (const { record } of byId.values()) {
   if (record.sourceDocumentId) validateRef(record.id, 'sourceDocumentId', record.sourceDocumentId);
+  if (record.provenance?.sourceId) validateRef(record.id, 'provenance.sourceId', record.provenance.sourceId);
 }
 
 const scalarRefs = {
@@ -71,9 +77,11 @@ const scalarRefs = {
   organisations: ['headquartersLocationId', 'parentOrganisationId'],
   organisationUnits: ['organisationId', 'parentUnitId', 'primaryLocationId'],
   facilities: ['organisationId', 'organisationUnitId', 'systemId', 'planetId', 'settlementId'],
-  operations: ['organisationId', 'organisationUnitId', 'facilityId'],
+  operations: ['organisationId', 'organisationUnitId', 'facilityId', 'economicSectorId'],
   species: ['homeworldId'],
   people: ['speciesId', 'organisationId', 'organisationUnitId', 'workLocationId', 'homeLocationId'],
+  economicSectors: ['anchorOrganisationId'],
+  visualAssetSeries: ['generationSourceId'],
   shipLines: ['manufacturerOrganisationId', 'flagshipYardFacilityId'],
   shipClasses: ['manufacturerOrganisationId', 'shipLineId'],
   ships: ['organisationId', 'shipClassId', 'homePortLocationId'],
@@ -83,6 +91,7 @@ const scalarRefs = {
 };
 const arrayRefs = {
   regions: ['administrativeOrganisationIds', 'systemIds'],
+  organisations: ['economicSectorIds'],
   facilities: ['partnerOrganisationIds'],
   operations: ['managerPersonIds', 'procurementPersonIds', 'shipIds', 'productIds', 'shipClassIds'],
   products: ['producerOrganisationIds'],
@@ -93,24 +102,15 @@ const arrayRefs = {
   projects: ['organisationIds', 'locationIds', 'personIds', 'shipIds', 'operationIds'],
   events: ['linkedEntityIds']
 };
-
-for (const [collectionName, fields] of Object.entries(scalarRefs)) {
-  for (const record of collections[collectionName] ?? []) {
-    fields.forEach(field => validateRef(record.id, field, record[field]));
-  }
-}
+for (const [collectionName, fields] of Object.entries(scalarRefs)) for (const record of collections[collectionName] ?? []) fields.forEach(field => validateRef(record.id, field, record[field]));
 for (const [collectionName, fields] of Object.entries(arrayRefs)) {
-  for (const record of collections[collectionName] ?? []) {
-    for (const field of fields) {
-      const values = record[field] ?? [];
-      if (!Array.isArray(values)) {
-        errors.push(`${record.id}.${field} must be an array.`);
-        continue;
-      }
-      values.forEach(value => validateRef(record.id, field, value));
-    }
+  for (const record of collections[collectionName] ?? []) for (const field of fields) {
+    const values = record[field] ?? [];
+    if (!Array.isArray(values)) { errors.push(`${record.id}.${field} must be an array.`); continue; }
+    values.forEach(value => validateRef(record.id, field, value));
   }
 }
+for (const person of collections.people ?? []) if (person.commercialProfile?.economicSectorId) validateRef(person.id, 'commercialProfile.economicSectorId', person.commercialProfile.economicSectorId);
 
 for (const unit of collections.organisationUnits ?? []) {
   if (!unit.parentUnitId) continue;
@@ -122,19 +122,11 @@ for (const planet of collections.planets ?? []) {
   const parent = byId.get(planet.parentPlanetId)?.record;
   if (parent && parent.systemId !== planet.systemId) errors.push(`${planet.id}: parent world belongs to another system.`);
 }
-for (const relationship of collections.relationships ?? []) {
-  if (relationship.personAId === relationship.personBId) errors.push(`${relationship.id}: relationship self-reference.`);
-}
-for (const operation of collections.operations ?? []) {
-  for (const requirement of operation.resourceRequirements ?? []) {
-    if (!requirement.resourceType || !requirement.resourceId || !requirement.reason) errors.push(`${operation.id}: incomplete resource requirement.`);
-  }
-}
+for (const relationship of collections.relationships ?? []) if (relationship.personAId === relationship.personBId) errors.push(`${relationship.id}: relationship self-reference.`);
+for (const operation of collections.operations ?? []) for (const requirement of operation.resourceRequirements ?? []) if (!requirement.resourceType || !requirement.resourceId || !requirement.reason) errors.push(`${operation.id}: incomplete resource requirement.`);
+
 for (const document of collections.loreDocuments ?? []) {
-  if (!document.contentPath) {
-    errors.push(`${document.id}: lore document contentPath missing.`);
-    continue;
-  }
+  if (!document.contentPath) { errors.push(`${document.id}: lore document contentPath missing.`); continue; }
   try { await access(resolve(dataRoot, document.contentPath)); }
   catch { errors.push(`${document.id}: lore source missing at data/${document.contentPath}.`); }
   if (!document.canonLevel || !document.canonStatus) errors.push(`${document.id}: lore document requires canonLevel and canonStatus.`);
@@ -143,9 +135,7 @@ for (const topic of collections.loreTopics ?? []) {
   if (!topic.sourceSection) warnings.push(`${topic.id}: lore topic has no sourceSection.`);
   if (!topic.summary) warnings.push(`${topic.id}: lore topic has no summary.`);
 }
-for (const currency of collections.currencies ?? []) {
-  if (!currency.symbol) errors.push(`${currency.id}: currency symbol missing.`);
-}
+for (const currency of collections.currencies ?? []) if (!currency.symbol) errors.push(`${currency.id}: currency symbol missing.`);
 
 const retailClasses = (collections.shipClasses ?? []).filter(c => c.retailStatus === 'factory-new');
 if (retailClasses.length !== 30) errors.push(`Year-5326 retail ship catalogue must contain exactly 30 factory-new classes; found ${retailClasses.length}.`);
@@ -157,41 +147,39 @@ for (const shipClass of retailClasses) {
   if (!Number.isFinite(shipClass.pricing?.manufacturerListPrice) || shipClass.pricing.manufacturerListPrice <= 0) errors.push(`${shipClass.id}: retail manufacturerListPrice must be positive.`);
   if (shipClass.pricing?.effectiveYear !== 5326) errors.push(`${shipClass.id}: retail list price effectiveYear must be 5326.`);
   const spec = shipClass.specifications ?? {};
-  for (const field of ['cargoCapacity', 'fuelCapacity', 'foodCapacity', 'colonistCapacity', 'minimumCrew', 'maximumCrew']) {
-    if (!Number.isFinite(spec[field]) || spec[field] < 0) errors.push(`${shipClass.id}.specifications.${field} must be a non-negative number.`);
-  }
+  for (const field of ['cargoCapacity', 'fuelCapacity', 'foodCapacity', 'colonistCapacity', 'minimumCrew', 'maximumCrew']) if (!Number.isFinite(spec[field]) || spec[field] < 0) errors.push(`${shipClass.id}.specifications.${field} must be a non-negative number.`);
   if (spec.vectorExchangeCapable && !Number.isFinite(spec.transitWeeksPerLightYear)) errors.push(`${shipClass.id}: Vector Exchange-capable retail ship requires transitWeeksPerLightYear.`);
 }
-
-const expectedShipbuilders = new Set([
-  'organisation-asterion-shipworks',
-  'organisation-kestrel-aerospace-systems',
-  'organisation-keystone-modular-fabrication',
-  'organisation-longreach-engineering',
-  'organisation-crownline-heavy-works'
-]);
+const expectedShipbuilders = new Set(['organisation-asterion-shipworks','organisation-kestrel-aerospace-systems','organisation-keystone-modular-fabrication','organisation-longreach-engineering','organisation-crownline-heavy-works']);
 const retailManufacturerIds = new Set(retailClasses.map(c => c.manufacturerOrganisationId));
 for (const id of expectedShipbuilders) if (!retailManufacturerIds.has(id)) errors.push(`Retail catalogue missing manufacturer: ${id}.`);
 if (retailManufacturerIds.size !== 5) errors.push(`Retail catalogue must use exactly five manufacturers; found ${retailManufacturerIds.size}.`);
-for (const line of collections.shipLines ?? []) {
-  if (!expectedShipbuilders.has(line.manufacturerOrganisationId)) errors.push(`${line.id}: unexpected retail ship-line manufacturer.`);
+
+const sectors = collections.economicSectors ?? [];
+if (sectors.length !== 20) errors.push(`Commercial economic model must contain 20 sectors; found ${sectors.length}.`);
+const sectorIds = new Set(sectors.map(sector => sector.id));
+const commercialOperations = (collections.operations ?? []).filter(operation => operation.operationType === 'procurement and supply contracting');
+if (commercialOperations.length !== 20) errors.push(`Commercial economic model must contain 20 external procurement operations; found ${commercialOperations.length}.`);
+for (const operation of commercialOperations) {
+  if (!sectorIds.has(operation.economicSectorId)) errors.push(`${operation.id}: commercial operation requires a valid economicSectorId.`);
+  if (!(operation.resourceRequirements ?? []).length) errors.push(`${operation.id}: commercial operation must express structural resource demand.`);
 }
+const commercialContacts = (collections.people ?? []).filter(person => person.commercialProfile?.canSourceGameOffers === true);
+if (commercialContacts.length !== 100) errors.push(`Universe 0.5.0 commercial materialisation must contain 100 game-offer contacts; found ${commercialContacts.length}.`);
+for (const person of commercialContacts) {
+  if (!sectorIds.has(person.commercialProfile?.economicSectorId)) errors.push(`${person.id}: commercial contact has invalid economicSectorId.`);
+  if (person.commercialProfile?.contactType !== 'procurement') errors.push(`${person.id}: materialised commercial contact must use procurement contactType.`);
+  if (!(person.operationIds ?? []).length) errors.push(`${person.id}: commercial contact requires at least one operation.`);
+  if ((person.shipIds ?? []).length) errors.push(`${person.id}: commercial contact must not own a permanently paired collection ship.`);
+  for (const forbidden of ['tier', 'minRep', 'typicalQuality', 'shipName', 'shipClassId']) if (Object.hasOwn(person, forbidden)) errors.push(`${person.id}: gameplay-only legacy field ${forbidden} must not be canonical.`);
+  if (person.provenance?.sourceId !== 'generation-source-legacy-buyer-directory') errors.push(`${person.id}: commercial contact must preserve legacy generation provenance.`);
+}
+const portraitSeries = byId.get('visual-series-commercial-portraits')?.record;
+if (!portraitSeries?.identityNeutral || !portraitSeries?.reusableAcrossUniverses) errors.push('Commercial portrait series must remain identity-neutral and reusable across universes.');
+if ((portraitSeries?.materialisedThroughIndex ?? 0) < commercialContacts.length) errors.push('Commercial portrait series must cover all currently materialised commercial contacts.');
 
-const requiredSourceEntities = [
-  'species-trondonian',
-  'species-zoran',
-  'species-blaxmar',
-  'organisation-koplin-compact',
-  'organisation-koplin-resource-charter',
-  'organisation-koplin-commonwealth-exploration-service',
-  'currency-commonwealth-credit',
-  'ship-class-pathfinder-long-range-survey-support',
-  'ship-class-prospector-frontier-utility',
-  'ship-ksv-meridian',
-  'ship-ksv-wayfarer'
-];
+const requiredSourceEntities = ['species-trondonian','species-zoran','species-blaxmar','organisation-koplin-compact','organisation-koplin-resource-charter','organisation-koplin-commonwealth-exploration-service','currency-commonwealth-credit','ship-class-pathfinder-long-range-survey-support','ship-class-prospector-frontier-utility','ship-ksv-meridian','ship-ksv-wayfarer'];
 for (const id of requiredSourceEntities) if (!byId.has(id)) errors.push(`Required source-canonical entity missing: ${id}.`);
-
 const commonwealth = byId.get('organisation-koplin-compact')?.record;
 if (commonwealth?.name !== 'Koplin Commonwealth') errors.push('organisation-koplin-compact must resolve to Koplin Commonwealth.');
 const deepReach = byId.get('organisation-koplin-resource-charter')?.record;
@@ -203,21 +191,13 @@ if (koplin3?.name !== 'Koplin 3') errors.push('planet-koplin-prime must resolve 
 if ((collections.organisations ?? []).some(org => String(org.organisationType).toLowerCase().includes('synthetic polity'))) errors.push('AI may not be represented as a sovereign synthetic polity under foundation canon.');
 
 const retiredSpecies = new Set((collections.species ?? []).filter(s => s.canonStatus === 'retired-pre-lore-placeholder').map(s => s.id));
-for (const person of collections.people ?? []) {
-  if (retiredSpecies.has(person.speciesId)) warnings.push(`${person.id}: pre-lore generated person still requires heritage reconciliation from retired species placeholder ${person.speciesId}.`);
-}
+for (const person of collections.people ?? []) if (retiredSpecies.has(person.speciesId)) warnings.push(`${person.id}: pre-lore generated person still requires heritage reconciliation from retired species placeholder ${person.speciesId}.`);
 
 console.log(`MineIT Universe ${manifest.contentVersion} / schema ${manifest.schemaVersion}`);
 console.log(`Canonical Year ${manifest.canonicalYear}; civilisation baseline Year ${manifest.civilisationBaselineYear}.`);
-console.log(`${byId.size} entities across ${Object.keys(collections).length} collections.`);
+console.log(`${byId.size} entities across ${Object.keys(collections).length} logical collections and ${Object.values(collectionFiles).flat().length} JSON shards.`);
 console.log(`${retailClasses.length} factory-new ship classes across ${retailManufacturerIds.size} manufacturers.`);
-if (warnings.length) {
-  console.log(`\nWarnings (${warnings.length}):`);
-  warnings.forEach(w => console.log(`- ${w}`));
-}
-if (errors.length) {
-  console.error(`\nErrors (${errors.length}):`);
-  errors.forEach(e => console.error(`- ${e}`));
-  process.exit(1);
-}
+console.log(`${commercialContacts.length} commercial contacts across ${sectors.length} economic sectors and ${commercialOperations.length} procurement operations.`);
+if (warnings.length) { console.log(`\nWarnings (${warnings.length}):`); warnings.forEach(w => console.log(`- ${w}`)); }
+if (errors.length) { console.error(`\nErrors (${errors.length}):`); errors.forEach(e => console.error(`- ${e}`)); process.exit(1); }
 console.log('\nValidation passed.');
