@@ -44,6 +44,7 @@ for (const [collectionName, records] of Object.entries(collections)) {
       if (typeof record.image.generated !== 'boolean') errors.push(`${record.id}.image.generated must be boolean.`);
       if (!imageStatuses.has(record.image.status)) errors.push(`${record.id}.image.status invalid.`);
       if (!record.image.key) errors.push(`${record.id}.image.key missing.`);
+      if (!record.image.promptDescription) errors.push(`${record.id}.image.promptDescription missing.`);
       if (record.image.status === 'not-generated' && record.image.generated !== false) errors.push(`${record.id}: not-generated image must have generated=false.`);
       if (['generated', 'approved'].includes(record.image.status) && record.image.generated !== true) errors.push(`${record.id}: generated/approved image must have generated=true.`);
       if (record.image.generated && record.image.key) {
@@ -73,7 +74,8 @@ const scalarRefs = {
   operations: ['organisationId', 'organisationUnitId', 'facilityId'],
   species: ['homeworldId'],
   people: ['speciesId', 'organisationId', 'organisationUnitId', 'workLocationId', 'homeLocationId'],
-  shipClasses: ['manufacturerOrganisationId'],
+  shipLines: ['manufacturerOrganisationId', 'flagshipYardFacilityId'],
+  shipClasses: ['manufacturerOrganisationId', 'shipLineId'],
   ships: ['organisationId', 'shipClassId', 'homePortLocationId'],
   relationships: ['personAId', 'personBId'],
   currencies: ['sourceDocumentId'],
@@ -82,9 +84,10 @@ const scalarRefs = {
 const arrayRefs = {
   regions: ['administrativeOrganisationIds', 'systemIds'],
   facilities: ['partnerOrganisationIds'],
-  operations: ['managerPersonIds', 'procurementPersonIds', 'shipIds', 'productIds'],
+  operations: ['managerPersonIds', 'procurementPersonIds', 'shipIds', 'productIds', 'shipClassIds'],
   products: ['producerOrganisationIds'],
   people: ['operationIds', 'shipIds'],
+  shipLines: ['productionOperationIds'],
   shipClasses: ['designerOrganisationIds'],
   ships: ['operationIds', 'personIds'],
   projects: ['organisationIds', 'locationIds', 'personIds', 'shipIds', 'operationIds'],
@@ -144,6 +147,36 @@ for (const currency of collections.currencies ?? []) {
   if (!currency.symbol) errors.push(`${currency.id}: currency symbol missing.`);
 }
 
+const retailClasses = (collections.shipClasses ?? []).filter(c => c.retailStatus === 'factory-new');
+if (retailClasses.length !== 30) errors.push(`Year-5326 retail ship catalogue must contain exactly 30 factory-new classes; found ${retailClasses.length}.`);
+for (const shipClass of retailClasses) {
+  if (!shipClass.manufacturerOrganisationId) errors.push(`${shipClass.id}: retail ship requires manufacturerOrganisationId.`);
+  if (!shipClass.shipLineId) errors.push(`${shipClass.id}: retail ship requires shipLineId.`);
+  if (!shipClass.image) errors.push(`${shipClass.id}: retail ship requires image prompt/state metadata.`);
+  if (shipClass.pricing?.currencyId !== 'currency-commonwealth-credit') errors.push(`${shipClass.id}: retail list price must use Commonwealth Credit.`);
+  if (!Number.isFinite(shipClass.pricing?.manufacturerListPrice) || shipClass.pricing.manufacturerListPrice <= 0) errors.push(`${shipClass.id}: retail manufacturerListPrice must be positive.`);
+  if (shipClass.pricing?.effectiveYear !== 5326) errors.push(`${shipClass.id}: retail list price effectiveYear must be 5326.`);
+  const spec = shipClass.specifications ?? {};
+  for (const field of ['cargoCapacity', 'fuelCapacity', 'foodCapacity', 'colonistCapacity', 'minimumCrew', 'maximumCrew']) {
+    if (!Number.isFinite(spec[field]) || spec[field] < 0) errors.push(`${shipClass.id}.specifications.${field} must be a non-negative number.`);
+  }
+  if (spec.vectorExchangeCapable && !Number.isFinite(spec.transitWeeksPerLightYear)) errors.push(`${shipClass.id}: Vector Exchange-capable retail ship requires transitWeeksPerLightYear.`);
+}
+
+const expectedShipbuilders = new Set([
+  'organisation-asterion-shipworks',
+  'organisation-kestrel-aerospace-systems',
+  'organisation-keystone-modular-fabrication',
+  'organisation-longreach-engineering',
+  'organisation-crownline-heavy-works'
+]);
+const retailManufacturerIds = new Set(retailClasses.map(c => c.manufacturerOrganisationId));
+for (const id of expectedShipbuilders) if (!retailManufacturerIds.has(id)) errors.push(`Retail catalogue missing manufacturer: ${id}.`);
+if (retailManufacturerIds.size !== 5) errors.push(`Retail catalogue must use exactly five manufacturers; found ${retailManufacturerIds.size}.`);
+for (const line of collections.shipLines ?? []) {
+  if (!expectedShipbuilders.has(line.manufacturerOrganisationId)) errors.push(`${line.id}: unexpected retail ship-line manufacturer.`);
+}
+
 const requiredSourceEntities = [
   'species-trondonian',
   'species-zoran',
@@ -177,6 +210,7 @@ for (const person of collections.people ?? []) {
 console.log(`MineIT Universe ${manifest.contentVersion} / schema ${manifest.schemaVersion}`);
 console.log(`Canonical Year ${manifest.canonicalYear}; civilisation baseline Year ${manifest.civilisationBaselineYear}.`);
 console.log(`${byId.size} entities across ${Object.keys(collections).length} collections.`);
+console.log(`${retailClasses.length} factory-new ship classes across ${retailManufacturerIds.size} manufacturers.`);
 if (warnings.length) {
   console.log(`\nWarnings (${warnings.length}):`);
   warnings.forEach(w => console.log(`- ${w}`));
