@@ -1,0 +1,24 @@
+[
+  {
+    "id": "visual-series-commercial-portraits",
+    "name": "Commercial Contact Portrait Library",
+    "assetType": "person-portrait-series",
+    "assetIdPattern": "visual-person-portrait-{NNNN}",
+    "assetKeyPattern": "assets/art/visual-library/people/portrait-{NNNN}.webp",
+    "indexStart": 1,
+    "indexEnd": 1000,
+    "materialisedThroughIndex": 100,
+    "generatedAssetCount": 0,
+    "status": "prompted-not-generated",
+    "reusableAcrossUniverses": true,
+    "identityNeutral": true,
+    "generationSourceId": "generation-source-legacy-buyer-directory",
+    "description": "Identity-neutral portrait series derived from the deterministic Stage 8 visual-trait generator. A portrait is a reusable visual asset, not the identity of the person currently using it. Current Koplin commercial contacts 0001-0100 use the corresponding portrait indices, while a future generated universe may assign the same visual assets to entirely different people.",
+    "constraints": [
+      "Do not bake personal names into the image.",
+      "Do not bake company names or readable logos into the image.",
+      "Do not bake registration numbers or universe-specific text into the image.",
+      "The stored per-person image prompt is the current materialisation prompt for the corresponding visual asset index."
+    ]
+  }
+]
