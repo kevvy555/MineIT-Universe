@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+  <meta name="theme-color" content="#081015">
+  <title>MineIT Ship Catalogue</title>
+  <link rel="stylesheet" href="./css/ship-catalogue.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <a class="nav" href="./index.html">← Directory</a>
+      <div class="title"><small>MINEIT UNIVERSE</small><strong>Factory-New Ship Catalogue</strong></div>
+      <a class="nav" href="./lore.html">Lore</a>
+    </header>
+    <main>
+      <section class="intro">
+        <div><strong id="summary">Loading catalogue…</strong><span>Year 5326 • Manufacturer-direct • New vessels only</span></div>
+        <div class="filters" id="manufacturers"></div>
+      </section>
+      <section id="catalogue" class="catalogue"><div class="loading">Loading canonical ship data…</div></section>
+    </main>
+  </div>
+  <script type="module" src="./js/ship-catalogue-app.js"></script>
+</body>
+</html>
