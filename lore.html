@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+  <meta name="theme-color" content="#081015">
+  <title>MineIT Universe Lore</title>
+  <link rel="stylesheet" href="./css/lore.css">
+</head>
+<body>
+  <div class="loreApp">
+    <header class="topbar">
+      <a class="backLink" href="./index.html">← Directory</a>
+      <div class="title">
+        <small>MINEIT UNIVERSE</small>
+        <strong>Canon & Lore</strong>
+      </div>
+      <div class="version" id="version">Loading…</div>
+    </header>
+
+    <main class="loreWorkspace">
+      <aside class="navigator">
+        <label class="label" for="documentSelect">Canon source</label>
+        <select id="documentSelect" class="control"></select>
+        <div id="documentMeta" class="documentMeta"></div>
+
+        <label class="label" for="topicSelect">Quick reference</label>
+        <select id="topicSelect" class="control">
+          <option value="">Choose a lore topic…</option>
+        </select>
+
+        <label class="label" for="sectionSearch">Find section</label>
+        <input id="sectionSearch" class="control" placeholder="Search headings…" autocomplete="off">
+
+        <div class="sectionList" id="sectionList"></div>
+      </aside>
+
+      <article class="article" id="article" aria-live="polite">
+        <div class="status">Loading canonical lore…</div>
+      </article>
+    </main>
+  </div>
+  <script type="module" src="./js/lore-app.js"></script>
+</body>
+</html>

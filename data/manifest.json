@@ -1,11 +1,13 @@
 {
-  "schemaVersion": 2,
-  "contentVersion": "0.2.0",
+  "schemaVersion": 3,
+  "contentVersion": "0.3.0",
   "universeId": "mineit",
   "name": "MineIT Universe",
-  "canonicalDate": "2389-08-30",
-  "calendar": "Standard Terran Calendar",
-  "published": "2026-08-30",
+  "canonicalYear": 5326,
+  "civilisationBaselineYear": 5300,
+  "calendar": "Koplin Commonwealth Calendar",
+  "published": "2026-08-31",
+  "canonSourcePolicy": "Foundation lore outranks scenario extensions; structured JSON must agree with canonical lore sources.",
   "collections": {
     "regions": "regions.json",
     "starSystems": "star-systems.json",
@@ -22,6 +24,9 @@
     "ships": "ships.json",
     "projects": "projects.json",
     "events": "events.json",
-    "relationships": "relationships.json"
+    "relationships": "relationships.json",
+    "currencies": "currencies.json",
+    "loreDocuments": "lore-documents.json",
+    "loreTopics": "lore-topics.json"
   }
 }

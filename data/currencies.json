@@ -1,0 +1,12 @@
+[
+  {
+    "id": "currency-commonwealth-credit",
+    "name": "Commonwealth Credit",
+    "symbol": "CC",
+    "currencyType": "Commonwealth standard monetary unit",
+    "canonicalYear": 5326,
+    "description": "The standard monetary unit used by the Commonwealth economy and Deep Reach commercial accounts. Goods, freight charges, bonuses, penalties and direct cargo exchanges are valued transparently in Commonwealth Credits.",
+    "sourceDocumentId": "lore-deep-reach-mining-charter",
+    "sourceSection": "22. Trade, Prices, Credits and Barter"
+  }
+]
