@@ -10,27 +10,33 @@ const COLLECTION_LABELS = {
   facilities: 'Facility',
   operations: 'Operation',
   products: 'Product',
-  species: 'Species',
+  species: 'Species / People Category',
   people: 'Person',
   shipClasses: 'Ship Class',
   ships: 'Ship',
   projects: 'Project',
   events: 'Historical Event',
-  relationships: 'Relationship'
+  relationships: 'Relationship',
+  currencies: 'Currency',
+  loreDocuments: 'Canon Source',
+  loreTopics: 'Lore Topic'
 };
 
 const SCALAR_REFS = {
-  starSystems: ['regionId', 'primaryAuthorityOrganisationId'],
+  starSystems: ['regionId', 'primaryAuthorityOrganisationId', 'homeworldId'],
   planets: ['systemId', 'parentPlanetId', 'governingOrganisationId'],
   settlements: ['systemId', 'planetId', 'parentLocationId', 'governingOrganisationId'],
   organisations: ['headquartersLocationId', 'parentOrganisationId'],
   organisationUnits: ['organisationId', 'parentUnitId', 'primaryLocationId'],
   facilities: ['organisationId', 'organisationUnitId', 'systemId', 'planetId', 'settlementId'],
   operations: ['organisationId', 'organisationUnitId', 'facilityId'],
+  species: ['homeworldId'],
   people: ['speciesId', 'organisationId', 'organisationUnitId', 'workLocationId', 'homeLocationId'],
   shipClasses: ['manufacturerOrganisationId'],
   ships: ['organisationId', 'shipClassId', 'homePortLocationId'],
-  relationships: ['personAId', 'personBId']
+  relationships: ['personAId', 'personBId'],
+  currencies: ['sourceDocumentId'],
+  loreTopics: ['sourceDocumentId']
 };
 
 const ARRAY_REFS = {
@@ -160,6 +166,10 @@ export function validateUniverse(catalogue) {
     if (!knownIds.has(value)) errors.push(`${sourceId}.${field} references missing entity ${value}.`);
   };
 
+  for (const { record } of catalogue.allRecords()) {
+    if (record.sourceDocumentId) ref(record.id, 'sourceDocumentId', record.sourceDocumentId);
+  }
+
   for (const [collectionName, fields] of Object.entries(SCALAR_REFS)) {
     for (const record of catalogue.collection(collectionName)) {
       for (const field of fields) ref(record.id, field, record[field]);
@@ -206,6 +216,15 @@ export function validateUniverse(catalogue) {
       if (!requirement.resourceType || !requirement.resourceId || !requirement.reason) {
         errors.push(`${operation.id}: resource requirement is missing type, id or reason.`);
       }
+    }
+  }
+
+  const retiredSpecies = new Set(catalogue.collection('species')
+    .filter(species => species.canonStatus === 'retired-pre-lore-placeholder')
+    .map(species => species.id));
+  for (const person of catalogue.collection('people')) {
+    if (retiredSpecies.has(person.speciesId)) {
+      warnings.push(`${person.id}: pre-lore generated person still requires heritage reconciliation.`);
     }
   }
 

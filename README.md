@@ -6,12 +6,14 @@ This repository is the authoritative owner of persistent universe entities **and
 
 ## Current canon release
 
-Content version: **0.3.0**  
+Content version: **0.3.1**  
 Schema version: **3**  
 Civilisation baseline: **Year 5300**  
 Current commercial/scenario era: **Year 5326**
 
-The canonical foundation is now the uploaded **Koplin Universe — Expanded Backstory & Lore Bible**, with **Scenario II: The Deep Reach Mining Charter** as a later Year-5326 scenario extension.
+The canonical foundation is the **Koplin Universe — Expanded Backstory & Lore Bible**, with **Scenario II: The Deep Reach Mining Charter** as a later Year-5326 scenario extension.
+
+Release 0.3.1 also reconciles the highest-impact pre-lore generated records: the Koplin white-dwarf system, Koplin 3, the Koplin Commonwealth, Commonwealth AI constraints, the three canonical peoples, Koplin Deep Reach Corporation and its seven divisions, source timeline events, Commonwealth Credit, the KSV Meridian and KSV Wayfarer.
 
 ## Canon precedence
 
@@ -21,6 +23,8 @@ The canonical foundation is now the uploaded **Koplin Universe — Expanded Back
 4. Game save state — mutable gameplay state, never canonical universe truth.
 
 If a structured record conflicts with a higher-precedence lore source, the lore source wins and the structured record must be reconciled.
+
+Generated expansion material that does not conflict with the source bibles may remain, but it is explicitly labelled separately from source-derived canon.
 
 ## Browse
 
@@ -39,9 +43,7 @@ If a structured record conflicts with a higher-precedence lore source, the lore 
 
 ## Published data
 
-Consumers should begin with:
-
-`data/manifest.json`
+Consumers should begin with `data/manifest.json`.
 
 The manifest identifies schema/content version, canonical era and collection files.
 
