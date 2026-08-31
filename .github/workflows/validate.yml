@@ -27,3 +27,5 @@ jobs:
         run: node --check js/universe-app.js
       - name: Syntax check Lore app
         run: node --check js/lore-app.js
+      - name: Syntax check Ship Catalogue app
+        run: node --check js/ship-catalogue-app.js
