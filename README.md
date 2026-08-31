@@ -6,14 +6,16 @@ This repository is the authoritative owner of persistent universe entities **and
 
 ## Current canon release
 
-Content version: **0.3.1**  
-Schema version: **3**  
+Content version: **0.4.0**  
+Schema version: **4**  
 Civilisation baseline: **Year 5300**  
 Current commercial/scenario era: **Year 5326**
 
 The canonical foundation is the **Koplin Universe — Expanded Backstory & Lore Bible**, with **Scenario II: The Deep Reach Mining Charter** as a later Year-5326 scenario extension.
 
-Release 0.3.1 also reconciles the highest-impact pre-lore generated records: the Koplin white-dwarf system, Koplin 3, the Koplin Commonwealth, Commonwealth AI constraints, the three canonical peoples, Koplin Deep Reach Corporation and its seven divisions, source timeline events, Commonwealth Credit, the KSV Meridian and KSV Wayfarer.
+Release 0.4.0 adds the first full factory-new ship market: five canonical commercial shipbuilders, ten ship lines, flagship shipyards, production/resource demand and 30 purchasable Year-5326 ship classes with Commonwealth Credit list prices, game-consumable specifications and stored factory-image prompts.
+
+The source-canonical Pathfinder-class and Prospector-class remain reference classes outside the retail catalogue because their source lore does not establish a manufacturer.
 
 ## Canon precedence
 
@@ -29,15 +31,17 @@ Generated expansion material that does not conflict with the source bibles may r
 ## Browse
 
 - `index.html` — entity Directory: Geography / Organisation / Directory.
+- `ship-catalogue.html` — factory-new Year-5326 ship catalogue grouped by manufacturer and ship line.
 - `lore.html` — full canonical lore explorer with source switching, quick-reference topics and section navigation.
 
 ## Principles
 
 - One canonical authored source of truth lives in `data/`.
 - Games consume universe content by stable IDs; they do not author duplicate copies.
-- The Universe Directory and Lore Explorer are read-only consumers.
+- The Universe Directory, Ship Catalogue and Lore Explorer are read-only consumers.
 - Mutable per-save gameplay state remains inside each game.
 - Persistent IDs remain stable even when names, roles, descriptions or artwork evolve.
+- Manufacturer list prices may be canonical product facts; player-specific quotes remain game state.
 - Every image-bearing entity records whether its artwork has actually been generated.
 - Lore documents may include designer-only truth; it must be clearly labelled rather than silently mixed with in-universe public knowledge.
 
@@ -53,12 +57,13 @@ The manifest identifies schema/content version, canonical era and collection fil
 data/                 Canonical structured universe records
 data/lore/            Full canonical lore source documents
 assets/art/universe/  Canonical universe artwork
-js/                   Directory and Lore Explorer application code
-css/                  Directory and Lore Explorer styles
+js/                   Read-only browser application code
+css/                  Browser application styles
 prototypes/           Non-canonical design references only
 docs/                 Canon architecture and integration specifications
 validation/           Canon validation
 index.html            GitHub Pages Universe Directory
+ship-catalogue.html   GitHub Pages factory-new ship catalogue
 lore.html             GitHub Pages full-lore explorer
 ```
 
@@ -66,5 +71,6 @@ Key documents:
 
 - `docs/MineitUniverseCanonDesign.md`
 - `docs/CanonSourceHierarchy.md`
+- `docs/ShipbuildingSectorAndPurchaseCatalogue.md`
 
 See `AGENTS.md` before making architectural or content changes.
