@@ -125,9 +125,9 @@ Each image record explicitly stores:
 }
 ```
 
-Allowed statuses are `not-generated`, `generated`, `approved` and `needs-regeneration`.
+Allowed statuses are `not-generated`, `in-progress`, `generated`, `approved` and `needs-regeneration`.
 
-Validation checks the boolean/status relationship, and a record marked generated must have a real asset in the repository.
+An `in-progress` image remains `generated: false` and records `generationBatchId` plus `generationStartedAt` so generation work can be resumed safely. Validation checks the boolean/status relationship, and a record marked generated must have a real asset in the repository.
 
 ## Initial canonical release — Koplin Reach
 

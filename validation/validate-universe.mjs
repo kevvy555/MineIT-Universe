@@ -25,7 +25,7 @@ const errors = [];
 const warnings = [];
 const byId = new Map();
 const idPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
-const imageStatuses = new Set(['not-generated', 'generated', 'approved', 'needs-regeneration']);
+const imageStatuses = new Set(['not-generated', 'in-progress', 'generated', 'approved', 'needs-regeneration']);
 
 if (!Number.isInteger(manifest.canonicalYear)) errors.push('manifest.canonicalYear must be an integer.');
 if (!Number.isInteger(manifest.civilisationBaselineYear)) errors.push('manifest.civilisationBaselineYear must be an integer.');
@@ -50,7 +50,9 @@ for (const [collectionName, records] of Object.entries(collections)) {
       if (!imageStatuses.has(record.image.status)) errors.push(`${record.id}.image.status invalid.`);
       if (!record.image.key) errors.push(`${record.id}.image.key missing.`);
       if (!record.image.promptDescription) errors.push(`${record.id}.image.promptDescription missing.`);
-      if (record.image.status === 'not-generated' && record.image.generated !== false) errors.push(`${record.id}: not-generated image must have generated=false.`);
+      if (['not-generated', 'in-progress'].includes(record.image.status) && record.image.generated !== false) errors.push(`${record.id}: ${record.image.status} image must have generated=false.`);
+      if (record.image.status === 'in-progress' && !record.image.generationBatchId) errors.push(`${record.id}: in-progress image requires generationBatchId.`);
+      if (record.image.status === 'in-progress' && !record.image.generationStartedAt) errors.push(`${record.id}: in-progress image requires generationStartedAt.`);
       if (['generated', 'approved'].includes(record.image.status) && record.image.generated !== true) errors.push(`${record.id}: generated/approved image must have generated=true.`);
       if (record.image.generated && record.image.key) {
         try { await access(resolve(repoRoot, record.image.key)); }

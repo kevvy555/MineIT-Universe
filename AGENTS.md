@@ -90,9 +90,9 @@ Do not reintroduce a parallel canonical `companies` dataset.
 
 Any entity with an `image` object must explicitly record `image.generated`, `image.status`, canonical asset `key`, and generation prompt information where applicable.
 
-Allowed statuses are `not-generated`, `generated`, `approved`, and `needs-regeneration`.
+Allowed statuses are `not-generated`, `in-progress`, `generated`, `approved`, and `needs-regeneration`.
 
-`not-generated` requires `generated: false`. `generated` and `approved` require `generated: true`.
+`not-generated` and `in-progress` require `generated: false`. An `in-progress` record must include `generationBatchId` and `generationStartedAt`. `generated` and `approved` require `generated: true`.
 
 People and named ships are current primary image-bearing types. Purchasable ship classes may also carry image metadata and prompts.
 
