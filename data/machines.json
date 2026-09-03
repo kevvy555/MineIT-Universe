@@ -1,0 +1,637 @@
+[
+  {
+    "id": "machine-exploration-vehicle",
+    "name": "Exploration Vehicle",
+    "entityType": "Machine",
+    "category": "Transport",
+    "subCategory": "Wheeled Vehicle",
+    "sources": [
+      "Crashed Ship"
+    ],
+    "partIds": [
+      "part-mechanical-parts",
+      "part-power-electronics",
+      "part-structural-components"
+    ],
+    "description": "A rugged, heavy-duty six-wheeled all-terrain exploration rover salvaged from the crashed ship. Equipped with basic geological sampling arms, sensor dishes, and a pressurized cabin to transport workers and geological samples safely across rugged alien terrain.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
+    "fuelType": "Liquid (limited; vehicle cannot move if depleted)"
+  },
+  {
+    "id": "machine-ship-scanner",
+    "name": "Ship Scanner",
+    "entityType": "Machine",
+    "category": "Surveying",
+    "subCategory": "Scanner",
+    "sources": [
+      "Crashed Ship"
+    ],
+    "partIds": [
+      "part-power-electronics",
+      "part-control-and-sensor-parts",
+      "part-structural-components"
+    ],
+    "description": "The colony ship's integrated long-range sensor suite. Utilizing a combination of radar, seismic, and thermal detection, it scans wide sectors of the planetary surface and shallow subsurface layers to map approximate resource locations.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    }
+  },
+  {
+    "id": "machine-substance-analyser",
+    "name": "Substance Analyser",
+    "entityType": "Machine",
+    "category": "Surveying",
+    "subCategory": "Analyser",
+    "sources": [
+      "Crashed Ship"
+    ],
+    "partIds": [
+      "part-power-electronics",
+      "part-control-and-sensor-parts",
+      "part-extraction-parts",
+      "part-structural-components"
+    ],
+    "description": "A specialized, close-range spectrographic inspection tool used by field engineers. It conducts deep subsurface scans of individual deposit nodes to reveal precise chemical compositions, material densities, and structural properties.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    }
+  },
+  {
+    "id": "machine-ship-reactor",
+    "name": "Ship Reactor",
+    "entityType": "Machine",
+    "category": "Power",
+    "subCategory": "Reactor",
+    "sources": [
+      "Crashed Ship"
+    ],
+    "partIds": [
+      "part-generator-parts",
+      "part-battery-parts",
+      "part-power-electronics",
+      "part-thermal-optical-parts",
+      "part-control-and-sensor-parts",
+      "part-fabrication-parts",
+      "part-structural-components"
+    ],
+    "description": "The colony ship's primary nuclear-fusion core. It provides initial electrical grid power, utilizing raw hydrogen isotopes salvaged from the ship's fuel reserves.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
+    "outputSummary": "Ship power (shared across all ship systems and connected buildings)"
+  },
+  {
+    "id": "machine-ship-life-support",
+    "name": "Ship Life Support",
+    "entityType": "Machine",
+    "category": "Life Support",
+    "subCategory": "Environmental",
+    "sources": [
+      "Crashed Ship"
+    ],
+    "partIds": [
+      "part-fluid-handling-parts",
+      "part-mechanical-parts",
+      "part-power-electronics",
+      "part-control-and-sensor-parts"
+    ],
+    "description": "The centralized environmental management unit of the ship. Controls oxygen circulation, water filtration, humidity, and atmospheric pressure inside the crashed hull.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
+    "outputSummary": "Breathable air, climate regulation, water recycling"
+  },
+  {
+    "id": "machine-ship-computer",
+    "name": "Ship Computer",
+    "entityType": "Machine",
+    "category": "Computing",
+    "subCategory": "Data Processing",
+    "sources": [
+      "Crashed Ship"
+    ],
+    "partIds": [
+      "part-computing-parts",
+      "part-power-electronics",
+      "part-control-and-sensor-parts"
+    ],
+    "description": "The central navigation and mainframe computer of the colony ship. Re-routed to function as the initial data processing center and tech research node.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
+    "outputSummary": "Research data, navigation records, system diagnostics"
+  },
+  {
+    "id": "machine-ship-refinery-unit",
+    "name": "Ship Refinery Unit",
+    "entityType": "Machine",
+    "category": "Processing",
+    "subCategory": "Refinery",
+    "sources": [
+      "Crashed Ship"
+    ],
+    "partIds": [
+      "part-processing-parts",
+      "part-mechanical-parts",
+      "part-hydraulic-parts",
+      "part-power-electronics",
+      "part-thermal-optical-parts",
+      "part-structural-components"
+    ],
+    "description": "The onboard materials processing unit of the ship, capable of basic thermal reduction and ore separation for immediate bootstrap construction materials.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
+    "inputSummary": "Raw ore",
+    "outputSummary": "Refined substances (limited throughput)"
+  },
+  {
+    "id": "machine-drill-machine",
+    "name": "Drill Machine",
+    "entityType": "Machine",
+    "category": "Extraction",
+    "subCategory": "Drill",
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-extraction-parts",
+      "part-mechanical-parts",
+      "part-hydraulic-parts",
+      "part-power-electronics",
+      "part-structural-components"
+    ],
+    "description": "A heavy rotary boring rig that uses diamond-ceramic tipped drill bits to break solid rock face and access underground deposit seams.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
+    "inputSummary": "Power",
+    "outputSummary": "Raw substance from deposit"
+  },
+  {
+    "id": "machine-conveyor-machine",
+    "name": "Conveyor Machine",
+    "entityType": "Machine",
+    "category": "Transport",
+    "subCategory": "Conveyor",
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-mechanical-parts",
+      "part-power-electronics",
+      "part-structural-components"
+    ],
+    "description": "An automated material transport track that utilizes heavy-duty magnetic rollers to move loose minerals from the mine face back to the surface storage bins.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
+    "inputSummary": "Power",
+    "outputSummary": "Substance movement (drill face → surface)"
+  },
+  {
+    "id": "machine-mine-ventilation",
+    "name": "Mine Ventilation",
+    "entityType": "Machine",
+    "category": "Safety",
+    "subCategory": "Ventilation",
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-mechanical-parts",
+      "part-fluid-handling-parts",
+      "part-power-electronics"
+    ],
+    "description": "A high-capacity fan and duct system that circulates fresh air, filters toxic particulate dust, and controls heat build-up inside underground shafts.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
+    "inputSummary": "Power",
+    "outputSummary": "Breathable air circulation"
+  },
+  {
+    "id": "machine-crusher-machine",
+    "name": "Crusher Machine",
+    "entityType": "Machine",
+    "category": "Processing",
+    "subCategory": "Crushing",
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-mechanical-parts",
+      "part-processing-parts",
+      "part-structural-components",
+      "part-power-electronics"
+    ],
+    "description": "A heavy mechanical ore crushing machine inside a factory. Giant grinding rollers pulverizing rocks into dust, with steel plates, structural beams, and warning stripes.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
+    "inputSummary": "Raw ore, Power",
+    "outputSummary": "Crushed ore (intermediate)"
+  },
+  {
+    "id": "machine-smelter-machine",
+    "name": "Smelter Machine",
+    "entityType": "Machine",
+    "category": "Processing",
+    "subCategory": "Smelting",
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-processing-parts",
+      "part-thermal-optical-parts",
+      "part-structural-components",
+      "part-power-electronics",
+      "part-fluid-handling-parts"
+    ],
+    "description": "A futuristic induction smelting furnace with glowing orange liquid metal pouring out into molds. Heavy ceramic lining, heat shielding, and cooling pipes venting steam.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
+    "inputSummary": "Crushed ore, Fuel or Power (heat source)",
+    "outputSummary": "Refined substances"
+  },
+  {
+    "id": "machine-crude-chemical-battery",
+    "name": "Crude Chemical Battery",
+    "entityType": "Machine",
+    "category": "Power",
+    "subCategory": "General",
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-battery-parts",
+      "part-power-electronics",
+      "part-structural-components"
+    ],
+    "description": "A bank of modular industrial battery cells connected by thick copper busbars. Glowing green charging lights, glass reservoirs filled with electrolyte liquid, and steel structural casing.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
+    "inputSummary": "Electrolyte solution; consumable reactant: Refined reactive metal",
+    "outputSummary": "Power"
+  },
+  {
+    "id": "machine-wind-generator",
+    "name": "Wind Generator",
+    "entityType": "Machine",
+    "category": "Power",
+    "subCategory": "General",
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-generator-parts",
+      "part-mechanical-parts",
+      "part-power-electronics",
+      "part-structural-components",
+      "part-control-and-sensor-parts"
+    ],
+    "description": "A tall Sci-Fi wind turbine with three rotating aerodynamic blades standing on a dusty alien hillside. Modern metallic structure, gearless generator hub, set against a sunset sky with stars.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
+    "inputSummary": "Wind (ambient energy source)",
+    "outputSummary": "Power"
+  },
+  {
+    "id": "machine-water-wheel-generator",
+    "name": "Water Wheel Generator",
+    "entityType": "Machine",
+    "category": "Power",
+    "subCategory": "General",
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-generator-parts",
+      "part-mechanical-parts",
+      "part-power-electronics",
+      "part-structural-components",
+      "part-control-and-sensor-parts"
+    ],
+    "description": "A large futuristic metal water wheel spinning in a rushing river on an alien planet. Integrated generator coils, copper wiring, and water splashing off the steel blades.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
+    "inputSummary": "Flowing fresh water (ambient energy source)",
+    "outputSummary": "Power"
+  },
+  {
+    "id": "machine-thermoelectric-trickler",
+    "name": "Thermoelectric Trickler",
+    "entityType": "Machine",
+    "category": "Power",
+    "subCategory": "General",
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-thermal-optical-parts",
+      "part-power-electronics",
+      "part-battery-parts"
+    ],
+    "description": "A compact thermal generator device with a combustion chamber beneath radiating heat fins. Copper thermoelectric modules, glowing heat indicators, and small power outlets.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
+    "inputSummary": "Heat source (fuel): Solid fuel deposit, Liquid fuel deposit, or Gas fuel deposit",
+    "outputSummary": "Power"
+  },
+  {
+    "id": "machine-solar-thermal-generator",
+    "name": "Solar Thermal Generator",
+    "entityType": "Machine",
+    "category": "Power",
+    "subCategory": "General",
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-generator-parts",
+      "part-mechanical-parts",
+      "part-power-electronics",
+      "part-thermal-optical-parts",
+      "part-control-and-sensor-parts",
+      "part-structural-components"
+    ],
+    "description": "A central solar tower surrounded by a ring of reflective parabolic mirrors focusing light onto the receiver tip. High-intensity glare, futuristic white metal frame, standing in a desert landscape under a double sun.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
+    "inputSummary": "Sunlight (ambient energy source); working fluid: Fresh water",
+    "outputSummary": "Power"
+  },
+  {
+    "id": "machine-power-distribution-system",
+    "name": "Power Distribution System",
+    "entityType": "Machine",
+    "category": "Power",
+    "subCategory": "Distribution",
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-power-electronics",
+      "part-control-and-sensor-parts",
+      "part-structural-components"
+    ],
+    "description": "A centralized switchyard and transformer substation that steps voltage up or down to safely route electricity across the colony buildings.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
+    "inputSummary": "Power (from generators or ship reactor)",
+    "outputSummary": "Distributed power to buildings"
+  },
+  {
+    "id": "machine-life-support-machine",
+    "name": "Life Support Machine",
+    "entityType": "Machine",
+    "category": "Life Support",
+    "subCategory": "Environmental",
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-fluid-handling-parts",
+      "part-mechanical-parts",
+      "part-power-electronics",
+      "part-control-and-sensor-parts"
+    ],
+    "description": "A modular habitat system that recycles greywater, extracts carbon dioxide, and generates breathable oxygen from raw ice resources.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
+    "inputSummary": "Power",
+    "outputSummary": "Breathable air, air recycling"
+  },
+  {
+    "id": "machine-climate-control-machine",
+    "name": "Climate Control Machine",
+    "entityType": "Machine",
+    "category": "Life Support",
+    "subCategory": "Climate",
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-thermal-optical-parts",
+      "part-mechanical-parts",
+      "part-power-electronics",
+      "part-control-and-sensor-parts"
+    ],
+    "description": "A localized air handling unit that provides heating, ventilation, air conditioning, and dust filtration within colony habitat rooms.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
+    "inputSummary": "Power",
+    "outputSummary": "Temperature and humidity regulation"
+  },
+  {
+    "id": "machine-irrigation-system",
+    "name": "Irrigation System",
+    "entityType": "Machine",
+    "category": "Agriculture",
+    "subCategory": "Irrigation",
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-fluid-handling-parts",
+      "part-mechanical-parts",
+      "part-power-electronics"
+    ],
+    "description": "An automated water distribution pipe network equipped with soil moisture sensors and nutrient dosing pumps for crop beds.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
+    "inputSummary": "Fresh water, Power",
+    "outputSummary": "Water distribution to crops"
+  },
+  {
+    "id": "machine-growth-management-system",
+    "name": "Growth Management System",
+    "entityType": "Machine",
+    "category": "Agriculture",
+    "subCategory": "Growth Control",
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-thermal-optical-parts",
+      "part-control-and-sensor-parts",
+      "part-power-electronics"
+    ],
+    "description": "A computerized farm node that controls spectrum grow lamps, ambient CO2 levels, and growth hormones to maximize crop yields.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
+    "inputSummary": "Power",
+    "outputSummary": "Optimised growing conditions"
+  },
+  {
+    "id": "machine-pump-machine",
+    "name": "Pump Machine",
+    "entityType": "Machine",
+    "category": "Fluid",
+    "subCategory": "Pump",
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-hydraulic-parts",
+      "part-mechanical-parts",
+      "part-power-electronics",
+      "part-structural-components"
+    ],
+    "description": "A high-pressure positive displacement pump designed to draw fresh water, brine, or gases from deposits and push them to storage.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
+    "inputSummary": "Power",
+    "outputSummary": "Pressurised fluid flow"
+  },
+  {
+    "id": "machine-filtration-machine",
+    "name": "Filtration Machine",
+    "entityType": "Machine",
+    "category": "Fluid",
+    "subCategory": "Filtration",
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-fluid-handling-parts",
+      "part-processing-parts",
+      "part-structural-components"
+    ],
+    "description": "A mechanical filter bank that purifies raw water, separating out salt, acidic compounds, and organic contaminants.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
+    "inputSummary": "Raw water, Power",
+    "outputSummary": "Fresh water"
+  },
+  {
+    "id": "machine-research-computer",
+    "name": "Research Computer",
+    "entityType": "Machine",
+    "category": "Research",
+    "subCategory": "Data Processing",
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-computing-parts",
+      "part-power-electronics",
+      "part-control-and-sensor-parts"
+    ],
+    "description": "An advanced data-crunching workstation designed for processing geological samples, simulating new technologies, and compiling blueprints.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
+    "inputSummary": "Power",
+    "outputSummary": "Research points"
+  },
+  {
+    "id": "machine-fabrication-machine",
+    "name": "Fabrication Machine",
+    "entityType": "Machine",
+    "category": "Manufacturing",
+    "subCategory": "Fabrication",
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-fabrication-parts",
+      "part-mechanical-parts",
+      "part-power-electronics",
+      "part-structural-components"
+    ],
+    "description": "A high-precision CNC tool and mechanical press that shapes refined metals and ceramics into standard mechanical and structural parts.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
+    "inputSummary": "Refined substances, Power",
+    "outputSummary": "Fabricated ship components"
+  },
+  {
+    "id": "machine-assembly-crane",
+    "name": "Assembly Crane",
+    "entityType": "Machine",
+    "category": "Manufacturing",
+    "subCategory": "Assembly",
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-hydraulic-parts",
+      "part-mechanical-parts",
+      "part-power-electronics",
+      "part-structural-components",
+      "part-control-and-sensor-parts"
+    ],
+    "description": "A overhead gantry crane and manipulator claw used in shipyard bays to lift heavy plates and install machines into building shells.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
+    "inputSummary": "Power",
+    "outputSummary": "Structural assembly capability"
+  },
+  {
+    "id": "machine-welding-machine",
+    "name": "Welding Machine",
+    "entityType": "Machine",
+    "category": "Manufacturing",
+    "subCategory": "Welding",
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-fabrication-parts",
+      "part-power-electronics",
+      "part-thermal-optical-parts"
+    ],
+    "description": "A heavy industrial welding node that uses high-current arc and laser emitters to fuse metallic structural joints.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
+    "inputSummary": "Power, Refined conductive metal (consumable electrode)",
+    "outputSummary": "Welded joints"
+  }
+]

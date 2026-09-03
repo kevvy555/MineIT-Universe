@@ -6,12 +6,12 @@ This repository is the authoritative owner of persistent universe entities **and
 
 ## Current canon release
 
-Content version: **0.7.2**  
+Content version: **0.8.0**  
 Schema version: **7**  
 Civilisation baseline: **Year 5300**  
 Current commercial/scenario era: **Year 5326**
 
-The canonical foundation is the **Koplin Universe — Expanded Backstory & Lore Bible**, with **Materials of the Commonwealth** as the foundation substances companion and **Scenario II: The Deep Reach Mining Charter** as a later Year-5326 scenario extension. Structured `substances` records (75 P0/P1 industrial categories) are browsable in the Directory.
+The canonical foundation is the **Koplin Universe — Expanded Backstory & Lore Bible**, with **Materials of the Commonwealth** as the foundation substances companion and **Scenario II: The Deep Reach Mining Charter** as a later Year-5326 scenario extension. Structured industrial catalogues (`substances`, `parts`, `machines`, `buildings`) are browsable in the Directory.
 
 Release 0.5.0 future-proofs the materialised Universe for later deterministic generation and introduces the first canonical commercial-contact network: 20 economic sectors, 20 structural procurement operations, additional sector organisations and 100 persistent commercial contacts materialised from the useful parts of the legacy Stage 8 deterministic buyer source.
 

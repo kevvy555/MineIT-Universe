@@ -44,6 +44,28 @@ Stable fields on each substance:
 
 No mutable prices, reserves, contract terms or quality rolls.
 
+## Structured industrial catalogues
+
+Directory collections:
+
+- `data/substances.json` — 75 industrial substance categories
+- `data/parts.json` — construction parts linked to substances and machines
+- `data/machines.json` — machines linked to parts and buildings
+- `data/buildings.json` — buildings linked to shell/fit-out substances and installed machines
+
+Re-import from Desktop design docs with:
+
+```text
+node scripts/import-industrial-catalogue.mjs
+```
+
+Directory tree grouping:
+
+- Substances → Archetype → Raw / Refined → substance
+- Parts → Category → SubCategory → part
+- Machines → Category → machine
+- Buildings → Category → building
+
 ## Precedence
 
 1. Expanded Backstory & Lore Bible — civilisation/history.

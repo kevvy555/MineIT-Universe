@@ -1,0 +1,410 @@
+[
+  {
+    "id": "building-collection-camp",
+    "name": "Collection Camp",
+    "entityType": "Building",
+    "category": "Resource Extraction",
+    "categories": [
+      "Resource Extraction"
+    ],
+    "buildingType": "Collection Building",
+    "sources": [
+      "Manufactured"
+    ],
+    "structuralShellSubstanceIds": [
+      "substance-stone-aggregate",
+      "substance-woody-plant"
+    ],
+    "fitOutSubstanceIds": [
+      "substance-refined-structural-metal"
+    ],
+    "machineIds": [],
+    "description": "Collection Camp is a Commonwealth frontier building.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "desktopPath": "Buildings/Collection/CollectionBuildings.md"
+    }
+  },
+  {
+    "id": "building-quarry",
+    "name": "Quarry",
+    "entityType": "Building",
+    "category": "Resource Extraction",
+    "categories": [
+      "Resource Extraction"
+    ],
+    "buildingType": "Collection Building",
+    "sources": [
+      "Manufactured"
+    ],
+    "structuralShellSubstanceIds": [
+      "substance-stone-aggregate",
+      "substance-clay-mineral"
+    ],
+    "fitOutSubstanceIds": [
+      "substance-refined-structural-metal",
+      "substance-refined-ceramic",
+      "substance-refined-lubricant"
+    ],
+    "machineIds": [],
+    "description": "Quarry is a Commonwealth frontier building.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "desktopPath": "Buildings/Collection/CollectionBuildings.md"
+    }
+  },
+  {
+    "id": "building-simple-pit-mine",
+    "name": "Simple Pit Mine",
+    "entityType": "Building",
+    "category": "Resource Extraction",
+    "categories": [
+      "Resource Extraction"
+    ],
+    "buildingType": "Collection Building",
+    "sources": [
+      "Manufactured"
+    ],
+    "structuralShellSubstanceIds": [
+      "substance-stone-aggregate",
+      "substance-clay-mineral"
+    ],
+    "fitOutSubstanceIds": [
+      "substance-refined-structural-metal",
+      "substance-refined-ceramic",
+      "substance-refined-lubricant",
+      "substance-refined-insulator"
+    ],
+    "machineIds": [],
+    "description": "Simple Pit Mine is a Commonwealth frontier building.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "desktopPath": "Buildings/Collection/CollectionBuildings.md"
+    }
+  },
+  {
+    "id": "building-water-collector",
+    "name": "Water Collector",
+    "entityType": "Building",
+    "category": "Resource Collection",
+    "categories": [
+      "Resource Collection"
+    ],
+    "buildingType": "WaterCollector",
+    "sources": [
+      "Manufactured"
+    ],
+    "structuralShellSubstanceIds": [
+      "substance-stone-aggregate",
+      "substance-clay-mineral"
+    ],
+    "fitOutSubstanceIds": [
+      "substance-refined-structural-metal",
+      "substance-refined-ceramic",
+      "substance-refined-insulator"
+    ],
+    "machineIds": [
+      "machine-pump-machine",
+      "machine-filtration-machine"
+    ],
+    "description": "Provides colony water supply; shortages block births and lower contentment.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "desktopPath": "Buildings/Collection/WaterCollector.md"
+    }
+  },
+  {
+    "id": "building-crashed-ship",
+    "name": "Crashed Ship",
+    "entityType": "Building",
+    "category": "Power",
+    "categories": [
+      "Power",
+      "Storage",
+      "Base"
+    ],
+    "buildingType": "CrashedShip",
+    "sources": [
+      "Crashed Ship"
+    ],
+    "structuralShellSubstanceIds": [],
+    "fitOutSubstanceIds": [],
+    "machineIds": [
+      "machine-ship-reactor",
+      "machine-ship-life-support",
+      "machine-ship-computer",
+      "machine-ship-refinery-unit",
+      "machine-ship-scanner",
+      "machine-substance-analyser",
+      "machine-exploration-vehicle"
+    ],
+    "description": "The player's starting base. Built from many machines and substances; the player can salvage machines from the ship at the cost of disabling the corresponding ship function.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "desktopPath": "Buildings/CrashedShip.md"
+    }
+  },
+  {
+    "id": "building-farm",
+    "name": "Farm",
+    "entityType": "Building",
+    "category": "Resource Production",
+    "categories": [
+      "Resource Production"
+    ],
+    "buildingType": "Farm",
+    "sources": [
+      "Manufactured"
+    ],
+    "structuralShellSubstanceIds": [
+      "substance-stone-aggregate",
+      "substance-woody-plant"
+    ],
+    "fitOutSubstanceIds": [
+      "substance-refined-structural-metal",
+      "substance-glass",
+      "substance-refined-insulator",
+      "substance-fresh-water"
+    ],
+    "machineIds": [
+      "machine-irrigation-system",
+      "machine-growth-management-system"
+    ],
+    "description": "Produces food to offset ship supplies and support population growth.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "desktopPath": "Buildings/Food/Farm.md"
+    }
+  },
+  {
+    "id": "building-accommodation-building",
+    "name": "Accommodation Building",
+    "entityType": "Building",
+    "category": "Housing",
+    "categories": [
+      "Housing"
+    ],
+    "buildingType": null,
+    "sources": [
+      "Manufactured"
+    ],
+    "structuralShellSubstanceIds": [
+      "substance-woody-plant",
+      "substance-stone-aggregate",
+      "substance-refined-structural-metal",
+      "substance-glass"
+    ],
+    "fitOutSubstanceIds": [],
+    "machineIds": [],
+    "description": "Accommodation Building is a Commonwealth frontier building.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "desktopPath": "Buildings/Housing/Accommodation.md"
+    }
+  },
+  {
+    "id": "building-habitat",
+    "name": "Habitat",
+    "entityType": "Building",
+    "category": "Housing",
+    "categories": [
+      "Housing"
+    ],
+    "buildingType": "Habitat",
+    "sources": [
+      "Manufactured"
+    ],
+    "structuralShellSubstanceIds": [
+      "substance-stone-aggregate",
+      "substance-woody-plant"
+    ],
+    "fitOutSubstanceIds": [
+      "substance-refined-structural-metal",
+      "substance-glass",
+      "substance-refined-insulator",
+      "substance-refined-ceramic"
+    ],
+    "machineIds": [
+      "machine-life-support-machine",
+      "machine-climate-control-machine"
+    ],
+    "description": "Provides housing berths to relieve overcrowding and enable household formation and births.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "desktopPath": "Buildings/Housing/Habitat.md"
+    }
+  },
+  {
+    "id": "building-power-plant",
+    "name": "Power Plant",
+    "entityType": "Building",
+    "category": "Power",
+    "categories": [
+      "Power"
+    ],
+    "buildingType": "PowerPlant",
+    "sources": [
+      "Manufactured"
+    ],
+    "structuralShellSubstanceIds": [
+      "substance-stone-aggregate"
+    ],
+    "fitOutSubstanceIds": [
+      "substance-refined-structural-metal",
+      "substance-refined-conductive-metal",
+      "substance-refined-insulator"
+    ],
+    "machineIds": [
+      "machine-power-distribution-system"
+    ],
+    "description": "Provides power to colony buildings; ends dependency on ship power.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "desktopPath": "Buildings/Power/PowerPlant.md"
+    }
+  },
+  {
+    "id": "building-basic-refinery",
+    "name": "Basic Refinery",
+    "entityType": "Building",
+    "category": "Processing",
+    "categories": [
+      "Processing"
+    ],
+    "buildingType": "Refinery",
+    "sources": [
+      "Manufactured"
+    ],
+    "structuralShellSubstanceIds": [
+      "substance-stone-aggregate",
+      "substance-clay-mineral"
+    ],
+    "fitOutSubstanceIds": [
+      "substance-refined-structural-metal",
+      "substance-refined-ceramic",
+      "substance-glass",
+      "substance-refined-insulator",
+      "substance-refined-graphite"
+    ],
+    "machineIds": [
+      "machine-crusher-machine",
+      "machine-smelter-machine"
+    ],
+    "description": "Converts raw ore into refined stock via crushing and smelting.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "desktopPath": "Buildings/Refining/BasicRefinery.md"
+    }
+  },
+  {
+    "id": "building-research-building",
+    "name": "Research Building",
+    "entityType": "Building",
+    "category": "Research",
+    "categories": [
+      "Research"
+    ],
+    "buildingType": "ResearchBuilding",
+    "sources": [
+      "Manufactured"
+    ],
+    "structuralShellSubstanceIds": [
+      "substance-stone-aggregate",
+      "substance-clay-mineral"
+    ],
+    "fitOutSubstanceIds": [
+      "substance-refined-structural-metal",
+      "substance-refined-conductive-metal",
+      "substance-glass",
+      "substance-refined-insulator"
+    ],
+    "machineIds": [
+      "machine-research-computer"
+    ],
+    "description": "Primary research facility; multiple can be built for increased output.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "desktopPath": "Buildings/Research/ResearchBuilding.md"
+    }
+  },
+  {
+    "id": "building-shipyard-bay",
+    "name": "Shipyard Bay",
+    "entityType": "Building",
+    "category": "Ship Production",
+    "categories": [
+      "Ship Production"
+    ],
+    "buildingType": "Shipyard",
+    "sources": [
+      "Manufactured"
+    ],
+    "structuralShellSubstanceIds": [
+      "substance-stone-aggregate"
+    ],
+    "fitOutSubstanceIds": [
+      "substance-refined-structural-metal",
+      "substance-refined-conductive-metal",
+      "substance-refined-lubricant",
+      "substance-glass",
+      "substance-refined-ceramic"
+    ],
+    "machineIds": [
+      "machine-fabrication-machine",
+      "machine-assembly-crane",
+      "machine-welding-machine"
+    ],
+    "description": "Produces ship parts for escape vessel; multi-year progress sink.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "desktopPath": "Buildings/Shipyard/ShipyardBay.md"
+    }
+  },
+  {
+    "id": "building-stockpile",
+    "name": "Stockpile",
+    "entityType": "Building",
+    "category": "Storage",
+    "categories": [
+      "Storage"
+    ],
+    "buildingType": "Stockpile",
+    "sources": [
+      "Player placed or Automatically created"
+    ],
+    "structuralShellSubstanceIds": [],
+    "fitOutSubstanceIds": [],
+    "machineIds": [],
+    "description": "Stockpile is a Commonwealth frontier building.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "desktopPath": "Buildings/Storage/StockPile.md"
+    }
+  },
+  {
+    "id": "building-warehouse",
+    "name": "Warehouse",
+    "entityType": "Building",
+    "category": "Storage",
+    "categories": [
+      "Storage"
+    ],
+    "buildingType": null,
+    "sources": [
+      "Manufactured"
+    ],
+    "structuralShellSubstanceIds": [
+      "substance-woody-plant",
+      "substance-stone-aggregate",
+      "substance-refined-structural-metal",
+      "substance-glass"
+    ],
+    "fitOutSubstanceIds": [],
+    "machineIds": [],
+    "description": "Warehouse is a Commonwealth frontier building.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "desktopPath": "Buildings/Storage/Warehouse.md"
+    }
+  }
+]

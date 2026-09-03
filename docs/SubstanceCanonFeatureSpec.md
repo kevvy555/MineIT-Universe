@@ -1,6 +1,6 @@
 # Feature Spec — Publish Desktop Substance Design into MineIT Universe
 
-**Status:** In progress — materials lore + Directory substances collection published (Phase B/C/D)  
+**Status:** In progress — Directory industrial catalogues published (substances/parts/machines/buildings)  
 **Base branch:** `develop`  
 **Target repository:** MineIT-Universe  
 **Primary deliverable:** Lore bible materials chapter + website publication via Lore Explorer  
