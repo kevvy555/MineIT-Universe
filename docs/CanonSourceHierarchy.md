@@ -14,7 +14,13 @@ The MineIT Universe repository now contains both structured entity data and the 
 
 This is the highest-precedence current source for Koplin civilisation history, the three peoples, the Continental War and reconciliation, the AI Wars and Commonwealth Compact, the Koplin Commonwealth, Year-5300 civilisation, Veyrite, Vector Exchange travel, the KSV Meridian/Far Lantern Expedition and the Anchor Network designer truth.
 
-### 2. Scenario extensions
+### 2. Foundation materials companion
+
+`data/lore/Koplin_Universe_Materials_And_Substances.md`
+
+This is the foundation industrial substances companion: substance identity, types, thermal behaviour, archetypes, raw vs refined P0/P1 catalogue families, rarity vocabulary and labelled designer property rules. It must agree with the Expanded Lore Bible and does not replace civilisation history.
+
+### 3. Scenario extensions
 
 `data/lore/Koplin_Scenario_II_Deep_Reach_Mining_Charter.md`
 
@@ -22,13 +28,13 @@ This extends the foundation into Year 5326 and is authoritative for Koplin Deep 
 
 A scenario document cannot contradict the foundation lore unless an explicit canon revision says so.
 
-### 3. Structured canonical records
+### 4. Structured canonical records
 
 JSON under `data/` exists so the Directory and games can query stable entities. It is not an independent source of lore.
 
 When JSON and lore disagree, **the lore wins** and the JSON must be reconciled.
 
-### 4. Game state
+### 5. Game state
 
 Prices quoted to a particular player, production queues, ownership changes within a save, reputation, contracts, player colonies and other mutable gameplay values belong to the game.
 

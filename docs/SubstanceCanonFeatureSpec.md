@@ -1,6 +1,6 @@
 # Feature Spec — Publish Desktop Substance Design into MineIT Universe
 
-**Status:** Feature draft (ready for product review)  
+**Status:** In progress — materials lore chapter authored and registered (Phase B/C)  
 **Base branch:** `develop`  
 **Target repository:** MineIT-Universe  
 **Primary deliverable:** Lore bible materials chapter + website publication via Lore Explorer  
