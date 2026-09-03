@@ -10,6 +10,7 @@ const COLLECTION_LABELS = {
   facilities: 'Facility',
   operations: 'Operation',
   products: 'Product',
+  substances: 'Substance',
   species: 'Species / People Category',
   people: 'Person',
   economicSectors: 'Economic Sector',
@@ -43,7 +44,8 @@ const SCALAR_REFS = {
   ships: ['organisationId', 'shipClassId', 'homePortLocationId'],
   relationships: ['personAId', 'personBId'],
   currencies: ['sourceDocumentId'],
-  loreTopics: ['sourceDocumentId']
+  loreTopics: ['sourceDocumentId'],
+  substances: ['sourceDocumentId']
 };
 
 const ARRAY_REFS = {

@@ -27,6 +27,7 @@ const DIRECTORY = {
   facilities: 'Facilities',
   operations: 'Operations',
   products: 'Products',
+  substances: 'Substances',
   species: 'Species / People Categories',
   people: 'People',
   shipClasses: 'Ship Classes',
@@ -41,7 +42,7 @@ const DIRECTORY = {
 
 const ICONS = {
   regions: '◎', starSystems: '✦', planets: '●', settlements: '⬡', organisations: 'O',
-  organisationUnits: '▦', facilities: '⌂', operations: '⚙', products: '◆', species: 'S',
+  organisationUnits: '▦', facilities: '⌂', operations: '⚙', products: '◆', substances: '▣', species: 'S',
   people: 'P', shipClasses: '△', ships: '▲', projects: '◇', events: '◷', relationships: '↔',
   currencies: '¤', loreDocuments: '▤', loreTopics: 'i'
 };
@@ -233,6 +234,13 @@ function renderTree() {
         record.knowledgeScope,
         record.symbol,
         record.canonStatus,
+        record.dominantArchetype,
+        record.substanceType,
+        record.thermalBehaviour,
+        record.standardState,
+        record.tier,
+        record.industrialRole,
+        record.form,
         collectionName,
         record.id
       ].filter(Boolean).join(' ').toLowerCase();
@@ -267,6 +275,7 @@ function subtitle(collection, entity) {
     facilities: `${entity.facilityType || ''} • ${entity.status || ''}`,
     operations: `${entity.operationType || ''} • ${entity.status || ''}`,
     products: entity.productType,
+    substances: `${entity.dominantArchetype || ''} • ${entity.tier || ''}`.trim(),
     species: entity.speciesType,
     people: entity.role,
     shipClasses: entity.role,
@@ -327,6 +336,19 @@ function fieldsFor(collection, entity) {
   }
   if (collection === 'products') {
     fields.push(field('Type', esc(entity.productType)), field('Producers', links(entity.producerOrganisationIds)), field('Producing operations', links(relatedIds('operations', item => (item.productIds || []).includes(entity.id)))));
+  }
+  if (collection === 'substances') {
+    fields.push(
+      field('Archetype', esc(entity.dominantArchetype)),
+      field('Substance type', esc(entity.substanceType)),
+      field('Thermal behaviour', esc(entity.thermalBehaviour)),
+      field('Standard state', esc(entity.standardState)),
+      field('Form', esc(entity.form)),
+      field('Tier', esc(entity.tier)),
+      field('Refined', entity.refined ? 'Yes' : 'No'),
+      field('Industrial role', esc(entity.industrialRole)),
+      field('Open materials lore', loreOpenLink(entity.sourceDocumentId, entity.sourceSection))
+    );
   }
   if (collection === 'species') {
     if (entity.homeworldId) fields.push(field('Homeworld', link(entity.homeworldId)));
