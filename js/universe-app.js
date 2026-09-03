@@ -535,11 +535,24 @@ function installDivider() {
 async function start() {
   detailEl.innerHTML = '<div class="status loading">Loading canonical MineIT universe…</div>';
   try {
-    const root = new URLSearchParams(location.search).get('dataRoot') || './data/';
+    const params = new URLSearchParams(location.search);
+    const root = params.get('dataRoot') || './data/';
     const { catalogue, validation } = await loadUniverse(root);
     state.catalogue = catalogue;
     state.validation = validation;
-    state.selectedId = catalogue.collection('regions')[0]?.id || catalogue.allRecords()[0]?.record.id;
+
+    const requestedView = params.get('view');
+    if (['geography', 'organisation', 'directory'].includes(requestedView)) {
+      state.activeView = requestedView;
+      document.querySelectorAll('.perspective').forEach(button => button.classList.toggle('active', button.dataset.view === requestedView));
+    }
+
+    const focusCollection = params.get('focus');
+    const focusedRecords = focusCollection ? catalogue.collection(focusCollection) : [];
+    state.selectedId = focusedRecords[0]?.id
+      || catalogue.collection('regions')[0]?.id
+      || catalogue.allRecords()[0]?.record.id;
+
     versionEl.textContent = `Universe ${catalogue.manifest.contentVersion} • Y${catalogue.manifest.canonicalYear}`;
     revealSelected();
     renderTree();

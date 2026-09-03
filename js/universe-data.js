@@ -62,7 +62,7 @@ const ARRAY_REFS = {
   events: ['linkedEntityIds']
 };
 
-const IMAGE_STATUSES = new Set(['not-generated', 'generated', 'approved', 'needs-regeneration']);
+const IMAGE_STATUSES = new Set(['not-generated', 'in-progress', 'generated', 'approved', 'needs-regeneration']);
 
 export class UniverseCatalogue {
   constructor(manifest, collections, dataRoot, manifestUrl) {
