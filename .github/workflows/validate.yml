@@ -30,6 +30,8 @@ jobs:
         run: node validation/validate-industrial-catalogue.mjs
       - name: Validate ship procurement data
         run: node validation/validate-ship-procurement.mjs
+      - name: Syntax check industrial importer
+        run: node --check scripts/import-industrial-catalogue.mjs
       - name: Syntax check data loader
         run: node --check js/universe-data.js
       - name: Syntax check Directory app
