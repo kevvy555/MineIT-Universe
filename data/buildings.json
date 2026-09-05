@@ -4,53 +4,32 @@
     "name": "Collection Camp",
     "entityType": "Building",
     "category": "Resource Extraction",
-    "categories": [
-      "Resource Extraction"
-    ],
+    "categories": ["Resource Extraction"],
     "buildingType": "Collection Building",
-    "sources": [
-      "Manufactured"
-    ],
-    "structuralShellSubstanceIds": [
-      "substance-stone-aggregate",
-      "substance-woody-plant"
-    ],
-    "fitOutSubstanceIds": [
-      "substance-refined-structural-metal"
-    ],
+    "sources": ["Manufactured"],
+    "structuralShellSubstanceIds": ["substance-stone-aggregate", "substance-woody-plant"],
+    "fitOutSubstanceIds": ["substance-refined-structural-metal"],
     "machineIds": [],
-    "description": "Collection Camp is a Commonwealth frontier building.",
+    "description": "A lightweight frontier extraction camp that supports manual collection, sorting and temporary storage of accessible surface resources.",
     "canonStatus": "source-canonical",
-    "provenance": {
-      "desktopPath": "Buildings/Collection/CollectionBuildings.md"
-    }
+    "provenance": {"desktopPath": "Buildings/Collection/CollectionBuildings.md"}
   },
   {
     "id": "building-quarry",
     "name": "Quarry",
     "entityType": "Building",
     "category": "Resource Extraction",
-    "categories": [
-      "Resource Extraction"
-    ],
-    "buildingType": "Collection Building",
-    "sources": [
-      "Manufactured"
-    ],
-    "structuralShellSubstanceIds": [
-      "substance-stone-aggregate",
-      "substance-clay-mineral"
-    ],
-    "fitOutSubstanceIds": [
-      "substance-refined-structural-metal",
-      "substance-refined-ceramic",
-      "substance-refined-lubricant"
-    ],
-    "machineIds": [],
-    "description": "Quarry is a Commonwealth frontier building.",
+    "categories": ["Resource Extraction"],
+    "buildingType": "Quarry",
+    "sources": ["Manufactured"],
+    "structuralShellSubstanceIds": ["substance-stone-aggregate", "substance-clay-mineral"],
+    "fitOutSubstanceIds": ["substance-refined-structural-metal", "substance-refined-ceramic", "substance-refined-lubricant"],
+    "machineIds": ["machine-drill-machine", "machine-conveyor-machine"],
+    "description": "An open-surface extraction facility for stone, silicates and other bulk construction feedstock.",
     "canonStatus": "source-canonical",
     "provenance": {
-      "desktopPath": "Buildings/Collection/CollectionBuildings.md"
+      "desktopPath": "Buildings/Collection/CollectionBuildings.md",
+      "mobile": {"path": "js/domain/site-service.js", "kind": "quarry"}
     }
   },
   {
@@ -58,180 +37,173 @@
     "name": "Simple Pit Mine",
     "entityType": "Building",
     "category": "Resource Extraction",
-    "categories": [
-      "Resource Extraction"
-    ],
-    "buildingType": "Collection Building",
-    "sources": [
-      "Manufactured"
-    ],
-    "structuralShellSubstanceIds": [
-      "substance-stone-aggregate",
-      "substance-clay-mineral"
-    ],
-    "fitOutSubstanceIds": [
-      "substance-refined-structural-metal",
-      "substance-refined-ceramic",
-      "substance-refined-lubricant",
-      "substance-refined-insulator"
-    ],
-    "machineIds": [],
-    "description": "Simple Pit Mine is a Commonwealth frontier building.",
+    "categories": ["Resource Extraction"],
+    "buildingType": "Mine",
+    "sources": ["Manufactured"],
+    "structuralShellSubstanceIds": ["substance-stone-aggregate", "substance-clay-mineral"],
+    "fitOutSubstanceIds": ["substance-refined-structural-metal", "substance-refined-ceramic", "substance-refined-lubricant", "substance-refined-insulator"],
+    "machineIds": ["machine-drill-machine", "machine-conveyor-machine"],
+    "description": "A conventional frontier mine for accessible mineral and ore deposits, using powered drilling and material handling as the operation develops.",
     "canonStatus": "source-canonical",
     "provenance": {
-      "desktopPath": "Buildings/Collection/CollectionBuildings.md"
+      "desktopPath": "Buildings/Collection/CollectionBuildings.md",
+      "mobile": {"path": "js/domain/site-service.js", "kind": "mine", "displayName": "Mine"}
     }
+  },
+  {
+    "id": "building-deep-mine",
+    "name": "Deep Mine",
+    "entityType": "Building",
+    "category": "Resource Extraction",
+    "categories": ["Resource Extraction"],
+    "buildingType": "DeepMine",
+    "sources": ["Manufactured"],
+    "structuralShellSubstanceIds": ["substance-stone-aggregate", "substance-refined-structural-metal"],
+    "fitOutSubstanceIds": ["substance-refined-structural-metal", "substance-refined-ceramic", "substance-refined-lubricant", "substance-refined-insulator"],
+    "machineIds": ["machine-drill-machine", "machine-conveyor-machine", "machine-mine-ventilation"],
+    "description": "A reinforced underground extraction complex for deep, difficult or high-value deposits requiring extensive drilling, haulage and ventilation systems.",
+    "canonStatus": "source-canonical",
+    "provenance": {"mobile": {"path": "js/domain/site-service.js", "kind": "deep-mine"}}
+  },
+  {
+    "id": "building-extraction-rig",
+    "name": "Extraction Rig",
+    "entityType": "Building",
+    "category": "Resource Extraction",
+    "categories": ["Resource Extraction", "Fluid Extraction"],
+    "buildingType": "Rig",
+    "sources": ["Manufactured"],
+    "structuralShellSubstanceIds": ["substance-refined-structural-metal", "substance-stone-aggregate"],
+    "fitOutSubstanceIds": ["substance-refined-structural-metal", "substance-refined-lubricant", "substance-refined-insulator"],
+    "machineIds": ["machine-drill-machine", "machine-pump-machine"],
+    "description": "A drilling and pumping installation used to recover liquid, gaseous and brine-bearing resources from subsurface reservoirs.",
+    "canonStatus": "source-canonical",
+    "provenance": {"mobile": {"path": "js/domain/site-service.js", "kind": "rig"}}
   },
   {
     "id": "building-water-collector",
     "name": "Water Collector",
     "entityType": "Building",
     "category": "Resource Collection",
-    "categories": [
-      "Resource Collection"
-    ],
+    "categories": ["Resource Collection"],
     "buildingType": "WaterCollector",
-    "sources": [
-      "Manufactured"
-    ],
-    "structuralShellSubstanceIds": [
-      "substance-stone-aggregate",
-      "substance-clay-mineral"
-    ],
-    "fitOutSubstanceIds": [
-      "substance-refined-structural-metal",
-      "substance-refined-ceramic",
-      "substance-refined-insulator"
-    ],
-    "machineIds": [
-      "machine-pump-machine",
-      "machine-filtration-machine"
-    ],
-    "description": "Provides colony water supply; shortages block births and lower contentment.",
+    "sources": ["Manufactured"],
+    "structuralShellSubstanceIds": ["substance-stone-aggregate", "substance-clay-mineral"],
+    "fitOutSubstanceIds": ["substance-refined-structural-metal", "substance-refined-ceramic", "substance-refined-insulator"],
+    "machineIds": ["machine-pump-machine", "machine-filtration-machine"],
+    "description": "A colony water-recovery facility that pumps, filters and conditions local water sources for settlement use.",
     "canonStatus": "source-canonical",
-    "provenance": {
-      "desktopPath": "Buildings/Collection/WaterCollector.md"
-    }
+    "provenance": {"desktopPath": "Buildings/Collection/WaterCollector.md"}
   },
   {
     "id": "building-crashed-ship",
     "name": "Crashed Ship",
     "entityType": "Building",
-    "category": "Power",
-    "categories": [
-      "Power",
-      "Storage",
-      "Base"
-    ],
+    "category": "Scenario Infrastructure",
+    "categories": ["Scenario Infrastructure", "Power", "Storage", "Base"],
     "buildingType": "CrashedShip",
-    "sources": [
-      "Crashed Ship"
-    ],
+    "sources": ["Repurposed spacecraft"],
     "structuralShellSubstanceIds": [],
     "fitOutSubstanceIds": [],
-    "machineIds": [
-      "machine-ship-reactor",
-      "machine-ship-life-support",
-      "machine-ship-computer",
-      "machine-ship-refinery-unit",
-      "machine-ship-scanner",
-      "machine-substance-analyser",
-      "machine-exploration-vehicle"
-    ],
-    "description": "The player's starting base. Built from many machines and substances; the player can salvage machines from the ship at the cost of disabling the corresponding ship function.",
+    "machineIds": ["machine-ship-reactor", "machine-ship-life-support", "machine-ship-computer", "machine-ship-refinery-unit", "machine-ship-scanner", "machine-substance-analyser", "machine-exploration-vehicle"],
+    "description": "A grounded or wrecked colony vessel repurposed as temporary frontier infrastructure while enough onboard systems remain serviceable.",
     "canonStatus": "source-canonical",
-    "provenance": {
-      "desktopPath": "Buildings/CrashedShip.md"
-    }
+    "provenance": {"desktopPath": "Buildings/CrashedShip.md", "scope": "scenario-archetype"}
   },
   {
     "id": "building-farm",
     "name": "Farm",
     "entityType": "Building",
     "category": "Resource Production",
-    "categories": [
-      "Resource Production"
-    ],
+    "categories": ["Resource Production", "Agriculture"],
     "buildingType": "Farm",
-    "sources": [
-      "Manufactured"
-    ],
-    "structuralShellSubstanceIds": [
-      "substance-stone-aggregate",
-      "substance-woody-plant"
-    ],
-    "fitOutSubstanceIds": [
-      "substance-refined-structural-metal",
-      "substance-glass",
-      "substance-refined-insulator",
-      "substance-fresh-water"
-    ],
-    "machineIds": [
-      "machine-irrigation-system",
-      "machine-growth-management-system"
-    ],
-    "description": "Produces food to offset ship supplies and support population growth.",
+    "sources": ["Manufactured"],
+    "structuralShellSubstanceIds": ["substance-stone-aggregate", "substance-woody-plant"],
+    "fitOutSubstanceIds": ["substance-refined-structural-metal", "substance-glass", "substance-refined-insulator", "substance-fresh-water"],
+    "machineIds": ["machine-irrigation-system", "machine-growth-management-system"],
+    "description": "A managed agricultural facility producing food crops under local or controlled growing conditions.",
     "canonStatus": "source-canonical",
     "provenance": {
-      "desktopPath": "Buildings/Food/Farm.md"
+      "desktopPath": "Buildings/Food/Farm.md",
+      "mobile": {"path": "js/domain/site-service.js", "kind": "farm"}
     }
+  },
+  {
+    "id": "building-ranch",
+    "name": "Ranch",
+    "entityType": "Building",
+    "category": "Resource Production",
+    "categories": ["Resource Production", "Agriculture"],
+    "buildingType": "Ranch",
+    "sources": ["Manufactured"],
+    "structuralShellSubstanceIds": ["substance-stone-aggregate", "substance-woody-plant"],
+    "fitOutSubstanceIds": ["substance-refined-structural-metal", "substance-fresh-water"],
+    "machineIds": [],
+    "description": "A managed livestock and grazing facility for sustainable food production from suitable herd species.",
+    "canonStatus": "source-canonical",
+    "provenance": {"mobile": {"path": "js/domain/site-service.js", "kind": "ranch"}}
+  },
+  {
+    "id": "building-bio-harvester",
+    "name": "Bio Harvester",
+    "entityType": "Building",
+    "category": "Resource Production",
+    "categories": ["Resource Production", "Biological Harvesting"],
+    "buildingType": "BioHarvester",
+    "sources": ["Manufactured"],
+    "structuralShellSubstanceIds": ["substance-refined-structural-metal", "substance-woody-plant"],
+    "fitOutSubstanceIds": ["substance-refined-structural-metal", "substance-refined-insulator"],
+    "machineIds": [],
+    "description": "A controlled biological harvesting facility for renewable fungal, protein-rich and comparable native biomass resources.",
+    "canonStatus": "source-canonical",
+    "provenance": {"mobile": {"path": "js/domain/site-service.js", "kind": "bio"}}
+  },
+  {
+    "id": "building-algae-facility",
+    "name": "Algae Facility",
+    "entityType": "Building",
+    "category": "Resource Production",
+    "categories": ["Resource Production", "Aquaculture"],
+    "buildingType": "AlgaeFacility",
+    "sources": ["Manufactured"],
+    "structuralShellSubstanceIds": ["substance-refined-structural-metal", "substance-glass"],
+    "fitOutSubstanceIds": ["substance-refined-insulator", "substance-fresh-water"],
+    "machineIds": ["machine-growth-management-system", "machine-pump-machine"],
+    "description": "A controlled cultivation and harvesting facility for algae and comparable aquatic or thermal biological food sources.",
+    "canonStatus": "source-canonical",
+    "provenance": {"mobile": {"path": "js/domain/site-service.js", "kind": "algae"}}
   },
   {
     "id": "building-accommodation-building",
     "name": "Accommodation Building",
     "entityType": "Building",
     "category": "Housing",
-    "categories": [
-      "Housing"
-    ],
-    "buildingType": null,
-    "sources": [
-      "Manufactured"
-    ],
-    "structuralShellSubstanceIds": [
-      "substance-woody-plant",
-      "substance-stone-aggregate",
-      "substance-refined-structural-metal",
-      "substance-glass"
-    ],
+    "categories": ["Housing"],
+    "buildingType": "Accommodation",
+    "sources": ["Manufactured"],
+    "structuralShellSubstanceIds": ["substance-woody-plant", "substance-stone-aggregate", "substance-refined-structural-metal", "substance-glass"],
     "fitOutSubstanceIds": [],
     "machineIds": [],
-    "description": "Accommodation Building is a Commonwealth frontier building.",
+    "description": "A straightforward frontier accommodation block providing enclosed residential space for a growing settlement.",
     "canonStatus": "source-canonical",
-    "provenance": {
-      "desktopPath": "Buildings/Housing/Accommodation.md"
-    }
+    "provenance": {"desktopPath": "Buildings/Housing/Accommodation.md"}
   },
   {
     "id": "building-habitat",
     "name": "Habitat",
     "entityType": "Building",
     "category": "Housing",
-    "categories": [
-      "Housing"
-    ],
+    "categories": ["Housing"],
     "buildingType": "Habitat",
-    "sources": [
-      "Manufactured"
-    ],
-    "structuralShellSubstanceIds": [
-      "substance-stone-aggregate",
-      "substance-woody-plant"
-    ],
-    "fitOutSubstanceIds": [
-      "substance-refined-structural-metal",
-      "substance-glass",
-      "substance-refined-insulator",
-      "substance-refined-ceramic"
-    ],
-    "machineIds": [
-      "machine-life-support-machine",
-      "machine-climate-control-machine"
-    ],
-    "description": "Provides housing berths to relieve overcrowding and enable household formation and births.",
+    "sources": ["Manufactured"],
+    "structuralShellSubstanceIds": ["substance-stone-aggregate", "substance-woody-plant"],
+    "fitOutSubstanceIds": ["substance-refined-structural-metal", "substance-glass", "substance-refined-insulator", "substance-refined-ceramic"],
+    "machineIds": ["machine-life-support-machine", "machine-climate-control-machine"],
+    "description": "A serviced residential habitat providing protected living space and environmental support for colony residents.",
     "canonStatus": "source-canonical",
     "provenance": {
-      "desktopPath": "Buildings/Housing/Habitat.md"
+      "desktopPath": "Buildings/Housing/Habitat.md",
+      "mobile": {"path": "js/domain/building-model.js", "kind": "housing", "displayName": "Housing"}
     }
   },
   {
@@ -239,172 +211,137 @@
     "name": "Power Plant",
     "entityType": "Building",
     "category": "Power",
-    "categories": [
-      "Power"
-    ],
+    "categories": ["Power"],
     "buildingType": "PowerPlant",
-    "sources": [
-      "Manufactured"
-    ],
-    "structuralShellSubstanceIds": [
-      "substance-stone-aggregate"
-    ],
-    "fitOutSubstanceIds": [
-      "substance-refined-structural-metal",
-      "substance-refined-conductive-metal",
-      "substance-refined-insulator"
-    ],
-    "machineIds": [
-      "machine-power-distribution-system"
-    ],
-    "description": "Provides power to colony buildings; ends dependency on ship power.",
+    "sources": ["Manufactured"],
+    "structuralShellSubstanceIds": ["substance-stone-aggregate"],
+    "fitOutSubstanceIds": ["substance-refined-structural-metal", "substance-refined-conductive-metal", "substance-refined-insulator"],
+    "machineIds": ["machine-power-distribution-system"],
+    "description": "A colony-scale power generation and distribution facility supporting permanent surface infrastructure.",
     "canonStatus": "source-canonical",
     "provenance": {
-      "desktopPath": "Buildings/Power/PowerPlant.md"
+      "desktopPath": "Buildings/Power/PowerPlant.md",
+      "mobile": {"path": "js/domain/building-model.js", "kind": "power"}
     }
+  },
+  {
+    "id": "building-industry",
+    "name": "Industry",
+    "entityType": "Building",
+    "category": "Industry",
+    "categories": ["Industry", "Manufacturing"],
+    "buildingType": "Industry",
+    "sources": ["Manufactured"],
+    "structuralShellSubstanceIds": ["substance-stone-aggregate", "substance-refined-structural-metal"],
+    "fitOutSubstanceIds": ["substance-refined-structural-metal", "substance-refined-conductive-metal", "substance-refined-insulator", "substance-refined-lubricant"],
+    "machineIds": ["machine-fabrication-machine", "machine-assembly-crane", "machine-welding-machine"],
+    "description": "A general-purpose industrial complex providing fabrication, maintenance, assembly and engineering capacity to a colony.",
+    "canonStatus": "source-canonical",
+    "provenance": {"mobile": {"path": "js/domain/building-model.js", "kind": "industry"}}
   },
   {
     "id": "building-basic-refinery",
     "name": "Basic Refinery",
     "entityType": "Building",
     "category": "Processing",
-    "categories": [
-      "Processing"
-    ],
+    "categories": ["Processing"],
     "buildingType": "Refinery",
-    "sources": [
-      "Manufactured"
-    ],
-    "structuralShellSubstanceIds": [
-      "substance-stone-aggregate",
-      "substance-clay-mineral"
-    ],
-    "fitOutSubstanceIds": [
-      "substance-refined-structural-metal",
-      "substance-refined-ceramic",
-      "substance-glass",
-      "substance-refined-insulator",
-      "substance-refined-graphite"
-    ],
-    "machineIds": [
-      "machine-crusher-machine",
-      "machine-smelter-machine"
-    ],
-    "description": "Converts raw ore into refined stock via crushing and smelting.",
+    "sources": ["Manufactured"],
+    "structuralShellSubstanceIds": ["substance-stone-aggregate", "substance-clay-mineral"],
+    "fitOutSubstanceIds": ["substance-refined-structural-metal", "substance-refined-ceramic", "substance-glass", "substance-refined-insulator", "substance-refined-graphite"],
+    "machineIds": ["machine-crusher-machine", "machine-smelter-machine"],
+    "description": "A basic mineral-processing plant that crushes, separates and thermally refines raw ore into usable industrial stock.",
     "canonStatus": "source-canonical",
-    "provenance": {
-      "desktopPath": "Buildings/Refining/BasicRefinery.md"
-    }
+    "provenance": {"desktopPath": "Buildings/Refining/BasicRefinery.md"}
+  },
+  {
+    "id": "building-headquarters",
+    "name": "Headquarters",
+    "entityType": "Building",
+    "category": "Command",
+    "categories": ["Command", "Administration"],
+    "buildingType": "Headquarters",
+    "sources": ["Manufactured"],
+    "structuralShellSubstanceIds": ["substance-stone-aggregate", "substance-refined-structural-metal"],
+    "fitOutSubstanceIds": ["substance-refined-structural-metal", "substance-refined-conductive-metal", "substance-glass", "substance-refined-insulator"],
+    "machineIds": [],
+    "description": "The principal command and administrative centre of a colony, coordinating local infrastructure, workforce and operational control.",
+    "canonStatus": "source-canonical",
+    "provenance": {"mobile": {"path": "js/domain/building-model.js", "kind": "headquarters"}}
   },
   {
     "id": "building-research-building",
     "name": "Research Building",
     "entityType": "Building",
     "category": "Research",
-    "categories": [
-      "Research"
-    ],
+    "categories": ["Research"],
     "buildingType": "ResearchBuilding",
-    "sources": [
-      "Manufactured"
-    ],
-    "structuralShellSubstanceIds": [
-      "substance-stone-aggregate",
-      "substance-clay-mineral"
-    ],
-    "fitOutSubstanceIds": [
-      "substance-refined-structural-metal",
-      "substance-refined-conductive-metal",
-      "substance-glass",
-      "substance-refined-insulator"
-    ],
-    "machineIds": [
-      "machine-research-computer"
-    ],
-    "description": "Primary research facility; multiple can be built for increased output.",
+    "sources": ["Manufactured"],
+    "structuralShellSubstanceIds": ["substance-stone-aggregate", "substance-clay-mineral"],
+    "fitOutSubstanceIds": ["substance-refined-structural-metal", "substance-refined-conductive-metal", "substance-glass", "substance-refined-insulator"],
+    "machineIds": ["machine-research-computer"],
+    "description": "A dedicated research facility for analysis, modelling, experimentation and technical development.",
     "canonStatus": "source-canonical",
-    "provenance": {
-      "desktopPath": "Buildings/Research/ResearchBuilding.md"
-    }
+    "provenance": {"desktopPath": "Buildings/Research/ResearchBuilding.md"}
+  },
+  {
+    "id": "building-spaceport",
+    "name": "Spaceport",
+    "entityType": "Building",
+    "category": "Space Operations",
+    "categories": ["Space Operations", "Logistics"],
+    "buildingType": "Spaceport",
+    "sources": ["Manufactured or charter-provided"],
+    "structuralShellSubstanceIds": ["substance-stone-aggregate", "substance-refined-structural-metal"],
+    "fitOutSubstanceIds": ["substance-refined-structural-metal", "substance-refined-conductive-metal", "substance-refined-insulator"],
+    "machineIds": ["machine-assembly-crane"],
+    "description": "A colony surface port providing prepared berths, handling infrastructure and support for visiting or based spacecraft.",
+    "canonStatus": "source-canonical",
+    "provenance": {"mobile": {"path": "js/domain/spaceport-model.js", "kind": "spaceport"}}
   },
   {
     "id": "building-shipyard-bay",
     "name": "Shipyard Bay",
     "entityType": "Building",
     "category": "Ship Production",
-    "categories": [
-      "Ship Production"
-    ],
+    "categories": ["Ship Production"],
     "buildingType": "Shipyard",
-    "sources": [
-      "Manufactured"
-    ],
-    "structuralShellSubstanceIds": [
-      "substance-stone-aggregate"
-    ],
-    "fitOutSubstanceIds": [
-      "substance-refined-structural-metal",
-      "substance-refined-conductive-metal",
-      "substance-refined-lubricant",
-      "substance-glass",
-      "substance-refined-ceramic"
-    ],
-    "machineIds": [
-      "machine-fabrication-machine",
-      "machine-assembly-crane",
-      "machine-welding-machine"
-    ],
-    "description": "Produces ship parts for escape vessel; multi-year progress sink.",
+    "sources": ["Manufactured"],
+    "structuralShellSubstanceIds": ["substance-stone-aggregate"],
+    "fitOutSubstanceIds": ["substance-refined-structural-metal", "substance-refined-conductive-metal", "substance-refined-lubricant", "substance-glass", "substance-refined-ceramic"],
+    "machineIds": ["machine-fabrication-machine", "machine-assembly-crane", "machine-welding-machine"],
+    "description": "A heavy fabrication and assembly bay for constructing, refitting and repairing spacecraft structures and systems.",
     "canonStatus": "source-canonical",
-    "provenance": {
-      "desktopPath": "Buildings/Shipyard/ShipyardBay.md"
-    }
+    "provenance": {"desktopPath": "Buildings/Shipyard/ShipyardBay.md"}
   },
   {
     "id": "building-stockpile",
     "name": "Stockpile",
     "entityType": "Building",
     "category": "Storage",
-    "categories": [
-      "Storage"
-    ],
+    "categories": ["Storage"],
     "buildingType": "Stockpile",
-    "sources": [
-      "Player placed or Automatically created"
-    ],
+    "sources": ["Field-established storage"],
     "structuralShellSubstanceIds": [],
     "fitOutSubstanceIds": [],
     "machineIds": [],
-    "description": "Stockpile is a Commonwealth frontier building.",
+    "description": "An open or lightly protected storage area used for bulk raw materials and construction feedstock near active frontier works.",
     "canonStatus": "source-canonical",
-    "provenance": {
-      "desktopPath": "Buildings/Storage/StockPile.md"
-    }
+    "provenance": {"desktopPath": "Buildings/Storage/StockPile.md"}
   },
   {
     "id": "building-warehouse",
     "name": "Warehouse",
     "entityType": "Building",
     "category": "Storage",
-    "categories": [
-      "Storage"
-    ],
-    "buildingType": null,
-    "sources": [
-      "Manufactured"
-    ],
-    "structuralShellSubstanceIds": [
-      "substance-woody-plant",
-      "substance-stone-aggregate",
-      "substance-refined-structural-metal",
-      "substance-glass"
-    ],
+    "categories": ["Storage"],
+    "buildingType": "Warehouse",
+    "sources": ["Manufactured"],
+    "structuralShellSubstanceIds": ["substance-woody-plant", "substance-stone-aggregate", "substance-refined-structural-metal", "substance-glass"],
     "fitOutSubstanceIds": [],
     "machineIds": [],
-    "description": "Warehouse is a Commonwealth frontier building.",
+    "description": "An enclosed logistics building for protected storage, inventory handling and distribution of colony goods and industrial stock.",
     "canonStatus": "source-canonical",
-    "provenance": {
-      "desktopPath": "Buildings/Storage/Warehouse.md"
-    }
+    "provenance": {"desktopPath": "Buildings/Storage/Warehouse.md"}
   }
 ]
