@@ -5,29 +5,13 @@
     "entityType": "Part",
     "category": "Power",
     "subCategory": "Generator",
-    "subCategories": [
-      "Generator"
-    ],
-    "sources": [
-      "Crashed Ship",
-      "Manufactured"
-    ],
-    "substanceIds": [
-      "substance-refined-conductive-metal",
-      "substance-refined-magnetic-metal",
-      "substance-refined-structural-metal"
-    ],
+    "subCategories": ["Generator"],
+    "sources": ["Crashed Ship", "Manufactured"],
+    "substanceIds": ["substance-refined-conductive-metal", "substance-refined-magnetic-metal", "substance-refined-structural-metal"],
     "description": "Core components for converting mechanical motion into electrical output.",
     "canonStatus": "source-canonical",
-    "provenance": {
-      "desktopPath": "Machines & Buildings/Parts/Parts.md"
-    },
-    "machineIds": [
-      "machine-wind-generator",
-      "machine-water-wheel-generator",
-      "machine-solar-thermal-generator",
-      "machine-ship-reactor"
-    ]
+    "provenance": {"desktopPath": "Machines & Buildings/Parts/Parts.md"},
+    "machineIds": ["machine-wind-generator", "machine-water-wheel-generator", "machine-solar-thermal-generator", "machine-ship-reactor"]
   },
   {
     "id": "part-battery-parts",
@@ -35,29 +19,13 @@
     "entityType": "Part",
     "category": "Power",
     "subCategory": "Battery",
-    "subCategories": [
-      "Battery"
-    ],
-    "sources": [
-      "Crashed Ship",
-      "Manufactured"
-    ],
-    "substanceIds": [
-      "substance-refined-reactive-metal",
-      "substance-refined-conductive-metal",
-      "substance-refined-graphite",
-      "substance-electrolyte-solution"
-    ],
+    "subCategories": ["Battery"],
+    "sources": ["Crashed Ship", "Manufactured"],
+    "substanceIds": ["substance-refined-reactive-metal", "substance-refined-conductive-metal", "substance-refined-graphite", "substance-electrolyte-solution"],
     "description": "Components for storing and discharging electrical energy.",
     "canonStatus": "source-canonical",
-    "provenance": {
-      "desktopPath": "Machines & Buildings/Parts/Parts.md"
-    },
-    "machineIds": [
-      "machine-crude-chemical-battery",
-      "machine-thermoelectric-trickler",
-      "machine-ship-reactor"
-    ]
+    "provenance": {"desktopPath": "Machines & Buildings/Parts/Parts.md"},
+    "machineIds": ["machine-crude-chemical-battery", "machine-thermoelectric-trickler", "machine-ship-reactor"]
   },
   {
     "id": "part-power-electronics",
@@ -65,47 +33,18 @@
     "entityType": "Part",
     "category": "Power",
     "subCategory": "Electronics",
-    "subCategories": [
-      "Electronics"
-    ],
-    "sources": [
-      "Crashed Ship",
-      "Manufactured"
-    ],
-    "substanceIds": [
-      "substance-refined-conductive-metal",
-      "substance-glass",
-      "substance-refined-insulator"
-    ],
+    "subCategories": ["Electronics"],
+    "sources": ["Crashed Ship", "Manufactured"],
+    "substanceIds": ["substance-refined-conductive-metal", "substance-glass", "substance-refined-insulator"],
     "description": "Control circuits and inverters for managing electrical flow.",
     "canonStatus": "source-canonical",
-    "provenance": {
-      "desktopPath": "Machines & Buildings/Parts/Parts.md"
-    },
+    "provenance": {"desktopPath": "Machines & Buildings/Parts/Parts.md"},
     "machineIds": [
-      "machine-crude-chemical-battery",
-      "machine-wind-generator",
-      "machine-water-wheel-generator",
-      "machine-thermoelectric-trickler",
-      "machine-solar-thermal-generator",
-      "machine-drill-machine",
-      "machine-conveyor-machine",
-      "machine-mine-ventilation",
-      "machine-crusher-machine",
-      "machine-smelter-machine",
-      "machine-research-computer",
-      "machine-fabrication-machine",
-      "machine-assembly-crane",
-      "machine-welding-machine",
-      "machine-life-support-machine",
-      "machine-climate-control-machine",
-      "machine-irrigation-system",
-      "machine-growth-management-system",
-      "machine-pump-machine",
-      "machine-power-distribution-system",
-      "machine-ship-reactor",
-      "machine-ship-life-support",
-      "machine-ship-computer"
+      "machine-crude-chemical-battery", "machine-wind-generator", "machine-water-wheel-generator", "machine-thermoelectric-trickler", "machine-solar-thermal-generator",
+      "machine-drill-machine", "machine-conveyor-machine", "machine-mine-ventilation", "machine-crusher-machine", "machine-smelter-machine",
+      "machine-research-computer", "machine-fabrication-machine", "machine-assembly-crane", "machine-welding-machine", "machine-life-support-machine",
+      "machine-climate-control-machine", "machine-irrigation-system", "machine-growth-management-system", "machine-pump-machine", "machine-power-distribution-system",
+      "machine-exploration-vehicle", "machine-ship-scanner", "machine-substance-analyser", "machine-ship-reactor", "machine-ship-life-support", "machine-ship-computer", "machine-ship-refinery-unit"
     ]
   },
   {
@@ -114,38 +53,16 @@
     "entityType": "Part",
     "category": "Power",
     "subCategory": "Mechanical",
-    "subCategories": [
-      "Mechanical"
-    ],
-    "sources": [
-      "Crashed Ship",
-      "Manufactured"
-    ],
-    "substanceIds": [
-      "substance-refined-structural-metal",
-      "substance-refined-lubricant"
-    ],
+    "subCategories": ["Mechanical"],
+    "sources": ["Crashed Ship", "Manufactured"],
+    "substanceIds": ["substance-refined-structural-metal", "substance-refined-lubricant"],
     "description": "Bearings, gears, and shafts for transmitting mechanical power.",
     "canonStatus": "source-canonical",
-    "provenance": {
-      "desktopPath": "Machines & Buildings/Parts/Parts.md"
-    },
+    "provenance": {"desktopPath": "Machines & Buildings/Parts/Parts.md"},
     "machineIds": [
-      "machine-wind-generator",
-      "machine-water-wheel-generator",
-      "machine-solar-thermal-generator",
-      "machine-drill-machine",
-      "machine-conveyor-machine",
-      "machine-mine-ventilation",
-      "machine-crusher-machine",
-      "machine-fabrication-machine",
-      "machine-assembly-crane",
-      "machine-life-support-machine",
-      "machine-climate-control-machine",
-      "machine-irrigation-system",
-      "machine-pump-machine",
-      "machine-ship-life-support",
-      "machine-ship-refinery-unit"
+      "machine-wind-generator", "machine-water-wheel-generator", "machine-solar-thermal-generator", "machine-drill-machine", "machine-conveyor-machine",
+      "machine-mine-ventilation", "machine-crusher-machine", "machine-fabrication-machine", "machine-assembly-crane", "machine-life-support-machine",
+      "machine-climate-control-machine", "machine-irrigation-system", "machine-pump-machine", "machine-exploration-vehicle", "machine-ship-life-support", "machine-ship-refinery-unit"
     ]
   },
   {
@@ -154,36 +71,16 @@
     "entityType": "Part",
     "category": "Power",
     "subCategory": "Control",
-    "subCategories": [
-      "Control",
-      "Sensor"
-    ],
-    "sources": [
-      "Crashed Ship",
-      "Manufactured"
-    ],
-    "substanceIds": [
-      "substance-refined-conductive-metal",
-      "substance-refined-insulator"
-    ],
+    "subCategories": ["Control", "Sensor"],
+    "sources": ["Crashed Ship", "Manufactured"],
+    "substanceIds": ["substance-refined-conductive-metal", "substance-refined-insulator"],
     "description": "Automation components and monitoring instruments.",
     "canonStatus": "source-canonical",
-    "provenance": {
-      "desktopPath": "Machines & Buildings/Parts/Parts.md"
-    },
+    "provenance": {"desktopPath": "Machines & Buildings/Parts/Parts.md"},
     "machineIds": [
-      "machine-wind-generator",
-      "machine-water-wheel-generator",
-      "machine-solar-thermal-generator",
-      "machine-research-computer",
-      "machine-assembly-crane",
-      "machine-life-support-machine",
-      "machine-climate-control-machine",
-      "machine-growth-management-system",
-      "machine-power-distribution-system",
-      "machine-ship-reactor",
-      "machine-ship-life-support",
-      "machine-ship-computer"
+      "machine-wind-generator", "machine-water-wheel-generator", "machine-solar-thermal-generator", "machine-research-computer", "machine-assembly-crane",
+      "machine-life-support-machine", "machine-climate-control-machine", "machine-growth-management-system", "machine-power-distribution-system",
+      "machine-ship-scanner", "machine-substance-analyser", "machine-ship-reactor", "machine-ship-life-support", "machine-ship-computer"
     ]
   },
   {
@@ -192,35 +89,13 @@
     "entityType": "Part",
     "category": "Power",
     "subCategory": "Thermal",
-    "subCategories": [
-      "Thermal",
-      "Optical"
-    ],
-    "sources": [
-      "Crashed Ship",
-      "Manufactured"
-    ],
-    "substanceIds": [
-      "substance-glass",
-      "substance-refined-ceramic",
-      "substance-refined-insulator",
-      "substance-refined-structural-metal"
-    ],
+    "subCategories": ["Thermal", "Optical"],
+    "sources": ["Crashed Ship", "Manufactured"],
+    "substanceIds": ["substance-glass", "substance-refined-ceramic", "substance-refined-insulator", "substance-refined-structural-metal"],
     "description": "Heat exchangers, lenses, and mirrors for concentrating or transferring thermal energy.",
     "canonStatus": "source-canonical",
-    "provenance": {
-      "desktopPath": "Machines & Buildings/Parts/Parts.md"
-    },
-    "machineIds": [
-      "machine-thermoelectric-trickler",
-      "machine-solar-thermal-generator",
-      "machine-smelter-machine",
-      "machine-welding-machine",
-      "machine-climate-control-machine",
-      "machine-growth-management-system",
-      "machine-ship-reactor",
-      "machine-ship-refinery-unit"
-    ]
+    "provenance": {"desktopPath": "Machines & Buildings/Parts/Parts.md"},
+    "machineIds": ["machine-thermoelectric-trickler", "machine-solar-thermal-generator", "machine-smelter-machine", "machine-welding-machine", "machine-climate-control-machine", "machine-growth-management-system", "machine-ship-reactor", "machine-ship-refinery-unit"]
   },
   {
     "id": "part-structural-components",
@@ -228,37 +103,17 @@
     "entityType": "Part",
     "category": "Other",
     "subCategory": "Structural",
-    "subCategories": [
-      "Structural"
-    ],
-    "sources": [
-      "Crashed Ship",
-      "Manufactured"
-    ],
-    "substanceIds": [
-      "substance-refined-structural-metal"
-    ],
+    "subCategories": ["Structural"],
+    "sources": ["Crashed Ship", "Manufactured"],
+    "substanceIds": ["substance-refined-structural-metal"],
     "description": "Frames, panels, and fasteners providing physical integrity.",
     "canonStatus": "source-canonical",
-    "provenance": {
-      "desktopPath": "Machines & Buildings/Parts/Parts.md"
-    },
+    "provenance": {"desktopPath": "Machines & Buildings/Parts/Parts.md"},
     "machineIds": [
-      "machine-crude-chemical-battery",
-      "machine-wind-generator",
-      "machine-water-wheel-generator",
-      "machine-solar-thermal-generator",
-      "machine-drill-machine",
-      "machine-conveyor-machine",
-      "machine-crusher-machine",
-      "machine-smelter-machine",
-      "machine-fabrication-machine",
-      "machine-assembly-crane",
-      "machine-pump-machine",
-      "machine-filtration-machine",
-      "machine-power-distribution-system",
-      "machine-ship-reactor",
-      "machine-ship-refinery-unit"
+      "machine-crude-chemical-battery", "machine-wind-generator", "machine-water-wheel-generator", "machine-solar-thermal-generator", "machine-drill-machine",
+      "machine-conveyor-machine", "machine-crusher-machine", "machine-smelter-machine", "machine-fabrication-machine", "machine-assembly-crane",
+      "machine-pump-machine", "machine-filtration-machine", "machine-power-distribution-system", "machine-exploration-vehicle", "machine-ship-scanner",
+      "machine-substance-analyser", "machine-ship-reactor", "machine-ship-refinery-unit"
     ]
   },
   {
@@ -267,28 +122,13 @@
     "entityType": "Part",
     "category": "Mechanical",
     "subCategory": "Hydraulic",
-    "subCategories": [
-      "Hydraulic"
-    ],
-    "sources": [
-      "Crashed Ship",
-      "Manufactured"
-    ],
-    "substanceIds": [
-      "substance-refined-structural-metal",
-      "substance-refined-lubricant"
-    ],
+    "subCategories": ["Hydraulic"],
+    "sources": ["Crashed Ship", "Manufactured"],
+    "substanceIds": ["substance-refined-structural-metal", "substance-refined-lubricant"],
     "description": "Pistons, cylinders, and pressure systems for heavy-force applications.",
     "canonStatus": "source-canonical",
-    "provenance": {
-      "desktopPath": "Machines & Buildings/Parts/Parts.md"
-    },
-    "machineIds": [
-      "machine-drill-machine",
-      "machine-assembly-crane",
-      "machine-pump-machine",
-      "machine-ship-refinery-unit"
-    ]
+    "provenance": {"desktopPath": "Machines & Buildings/Parts/Parts.md"},
+    "machineIds": ["machine-drill-machine", "machine-assembly-crane", "machine-pump-machine", "machine-ship-refinery-unit"]
   },
   {
     "id": "part-extraction-parts",
@@ -296,26 +136,13 @@
     "entityType": "Part",
     "category": "Mining",
     "subCategory": "Extraction",
-    "subCategories": [
-      "Extraction"
-    ],
-    "sources": [
-      "Crashed Ship",
-      "Manufactured"
-    ],
-    "substanceIds": [
-      "substance-refined-structural-metal",
-      "substance-refined-ceramic"
-    ],
+    "subCategories": ["Extraction"],
+    "sources": ["Crashed Ship", "Manufactured"],
+    "substanceIds": ["substance-refined-structural-metal", "substance-refined-ceramic"],
     "description": "Cutting heads, drill bits, and boring tools for substance removal.",
     "canonStatus": "source-canonical",
-    "provenance": {
-      "desktopPath": "Machines & Buildings/Parts/Parts.md"
-    },
-    "machineIds": [
-      "machine-drill-machine",
-      "machine-substance-analyser"
-    ]
+    "provenance": {"desktopPath": "Machines & Buildings/Parts/Parts.md"},
+    "machineIds": ["machine-drill-machine", "machine-substance-analyser"]
   },
   {
     "id": "part-processing-parts",
@@ -323,29 +150,13 @@
     "entityType": "Part",
     "category": "Processing",
     "subCategory": "Processing",
-    "subCategories": [
-      "Processing"
-    ],
-    "sources": [
-      "Crashed Ship",
-      "Manufactured"
-    ],
-    "substanceIds": [
-      "substance-refined-ceramic",
-      "substance-refined-structural-metal",
-      "substance-glass"
-    ],
+    "subCategories": ["Processing"],
+    "sources": ["Crashed Ship", "Manufactured"],
+    "substanceIds": ["substance-refined-ceramic", "substance-refined-structural-metal", "substance-glass"],
     "description": "Crucibles, heating chambers, and separation elements for substance transformation.",
     "canonStatus": "source-canonical",
-    "provenance": {
-      "desktopPath": "Machines & Buildings/Parts/Parts.md"
-    },
-    "machineIds": [
-      "machine-crusher-machine",
-      "machine-smelter-machine",
-      "machine-filtration-machine",
-      "machine-ship-refinery-unit"
-    ]
+    "provenance": {"desktopPath": "Machines & Buildings/Parts/Parts.md"},
+    "machineIds": ["machine-crusher-machine", "machine-smelter-machine", "machine-filtration-machine", "machine-ship-refinery-unit"]
   },
   {
     "id": "part-computing-parts",
@@ -353,27 +164,13 @@
     "entityType": "Part",
     "category": "Electronics",
     "subCategory": "Computing",
-    "subCategories": [
-      "Computing"
-    ],
-    "sources": [
-      "Crashed Ship",
-      "Manufactured"
-    ],
-    "substanceIds": [
-      "substance-refined-conductive-metal",
-      "substance-glass",
-      "substance-refined-insulator"
-    ],
+    "subCategories": ["Computing"],
+    "sources": ["Crashed Ship", "Manufactured"],
+    "substanceIds": ["substance-refined-conductive-metal", "substance-glass", "substance-refined-insulator"],
     "description": "Logic circuits, data storage, and display components for data processing.",
     "canonStatus": "source-canonical",
-    "provenance": {
-      "desktopPath": "Machines & Buildings/Parts/Parts.md"
-    },
-    "machineIds": [
-      "machine-research-computer",
-      "machine-ship-computer"
-    ]
+    "provenance": {"desktopPath": "Machines & Buildings/Parts/Parts.md"},
+    "machineIds": ["machine-research-computer", "machine-ship-computer"]
   },
   {
     "id": "part-fabrication-parts",
@@ -381,27 +178,13 @@
     "entityType": "Part",
     "category": "Manufacturing",
     "subCategory": "Fabrication",
-    "subCategories": [
-      "Fabrication"
-    ],
-    "sources": [
-      "Crashed Ship",
-      "Manufactured"
-    ],
-    "substanceIds": [
-      "substance-refined-structural-metal",
-      "substance-refined-conductive-metal"
-    ],
+    "subCategories": ["Fabrication"],
+    "sources": ["Crashed Ship", "Manufactured"],
+    "substanceIds": ["substance-refined-structural-metal", "substance-refined-conductive-metal"],
     "description": "Welding heads, forming dies, and assembly tooling for construction work.",
     "canonStatus": "source-canonical",
-    "provenance": {
-      "desktopPath": "Machines & Buildings/Parts/Parts.md"
-    },
-    "machineIds": [
-      "machine-fabrication-machine",
-      "machine-welding-machine",
-      "machine-ship-reactor"
-    ]
+    "provenance": {"desktopPath": "Machines & Buildings/Parts/Parts.md"},
+    "machineIds": ["machine-fabrication-machine", "machine-welding-machine", "machine-ship-reactor"]
   },
   {
     "id": "part-fluid-handling-parts",
@@ -409,30 +192,12 @@
     "entityType": "Part",
     "category": "Fluid Systems",
     "subCategory": "Fluid Handling",
-    "subCategories": [
-      "Fluid Handling"
-    ],
-    "sources": [
-      "Crashed Ship",
-      "Manufactured"
-    ],
-    "substanceIds": [
-      "substance-refined-structural-metal",
-      "substance-refined-ceramic",
-      "substance-refined-insulator"
-    ],
+    "subCategories": ["Fluid Handling"],
+    "sources": ["Crashed Ship", "Manufactured"],
+    "substanceIds": ["substance-refined-structural-metal", "substance-refined-ceramic", "substance-refined-insulator"],
     "description": "Pipes, valves, seals, and filters for fluid transport and containment.",
     "canonStatus": "source-canonical",
-    "provenance": {
-      "desktopPath": "Machines & Buildings/Parts/Parts.md"
-    },
-    "machineIds": [
-      "machine-mine-ventilation",
-      "machine-smelter-machine",
-      "machine-life-support-machine",
-      "machine-irrigation-system",
-      "machine-filtration-machine",
-      "machine-ship-life-support"
-    ]
+    "provenance": {"desktopPath": "Machines & Buildings/Parts/Parts.md"},
+    "machineIds": ["machine-mine-ventilation", "machine-smelter-machine", "machine-life-support-machine", "machine-irrigation-system", "machine-filtration-machine", "machine-ship-life-support"]
   }
 ]
