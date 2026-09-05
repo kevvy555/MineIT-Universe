@@ -1,291 +1,246 @@
-# Feature Spec — Canonical Substance System for MineIT Universe
+# Feature Spec — Publish Substance and Industrial Design into MineIT Universe
 
-**Status:** Discovery draft (not approved for implementation)  
+**Status:** Complete — merge candidate pending final CI  
+**Base branch:** `develop`  
 **Target repository:** MineIT-Universe  
-**Consumers:** MineIT Mobile, MineIT Desktop, Commercial Network, Lore Explorer  
-**Related desktop source:** `MineIT/Documentation/design/Generation/SubstanceGeneration/`  
-**Related mobile backlog:** Stage 2 **B04a — Resource model audit**
+**Release:** Universe content `0.8.0`  
+**Primary deliverable:** Materials lore + structured substances, parts, machines and reconciled Desktop/Mobile building canon  
+**Related Desktop sources:** `MineIT/Documentation/design/Generation/SubstanceGeneration/` and `MineIT/Documentation/design/Machines & Buildings/`  
+**Related Mobile sources:** current building, extraction-site and spaceport domain models on `MineIT/develop`  
+**Out of scope here:** MineIT Mobile resource/inventory conversion and mutable game balancing
 
 ---
 
-## 1. Problem
+## 1. Intent
 
-MineIT currently has three incomplete and partially conflicting resource truths:
+Publish the shared materials and industrial vocabulary used by MineIT games into **MineIT Universe**, making Universe the authoritative authored source for stable substance, part, machine and building identities.
 
-| Owner | What it knows today | Gap |
-|-------|---------------------|-----|
-| **MineIT Desktop design** | Full substance schema: archetypes, composition, thermal behaviour, derived state, property ranges, P0/P1 catalogue (~75 categories) | Not published as Universe canon; Food is only a building output, not a substance catalogue |
-| **MineIT Mobile** | Four gameplay inventory categories (`food`, `build`, `fuel`, `ore`) with authored deposit rows in `js/data/resources.js` | Local authored catalogue; not Universe-owned; mixes named Earth metals/gems with desktop-style functional ores |
-| **MineIT Universe** | Operations reference `resourceType` + `resourceId` + `displayName`, largely copied from Mobile | No `substances` collection; no lore bible for materials; IDs are inconsistent (`reactive` vs `reactive-metal`, `ore:platinum` vs `precious:platinum`, `fuel:brine` vs `water:hydrogen-rich-brine`) |
+The feature:
 
-Players of Mobile and Desktop should see the **same materials universe**. Mobile may expose a **smaller gameplay projection** of that universe, but identity, naming and meaning must be shared.
+1. Reconciles the Desktop substance design into a canonical materials lore chapter.
+2. Publishes the structured 75-category P0/P1 substance catalogue.
+3. Publishes linked parts and machines from the Desktop industrial design.
+4. Reconciles the complete current Desktop + MineIT Mobile building vocabulary into one canonical building collection.
+5. Makes all four industrial collections browsable through the Universe Directory.
+6. Preserves source provenance while preventing game/save-state concepts from becoming persistent universe facts.
 
----
-
-## 2. Goals
-
-1. Make MineIT Universe the **single authored source of truth** for substances / mineable materials.
-2. Publish the desktop substance design (definition, archetypes, catalogue, property rules, rarity) into Universe lore + structured data.
-3. Define a **Food** substance/product family that Mobile already needs and Desktop is beginning to need (Farm → Food).
-4. Define a stable **Mobile projection** of the full catalogue into the four inventory buckets: `food`, `build`, `fuel`, `ore`.
-5. Reconcile commercial operation `resourceRequirements` to stable substance IDs (no free-floating display names as identity).
-6. Keep mutable gameplay values (prices, quantities, reserves, quality rolls, contracts) out of Universe.
+Desktop and Mobile source material remain engineering provenance. Once reconciled here, **Universe `data/` is authoritative**.
 
 ---
 
-## 3. Non-goals (this feature)
+## 2. Ownership boundary
 
-- Implementing Desktop procedural generation or survey micro-generation inside Universe.
-- Replacing Mobile simulation rules (rates, tech gates, sell prices) with Universe facts.
-- Authoring every refined alloy / propellant recipe as live Mobile gameplay in v1.
-- Plasma / stellar future types (`FutureSubstanceTypes.md`) beyond a deferred appendix.
-- Salvage / ship-component inventory (explicitly not substances in desktop design).
+Universe owns persistent authored identity and industrial meaning:
+
+- substance identities and classification;
+- part identities and substance composition links;
+- machine identities and part links;
+- building archetypes and their high-level substance/machine composition;
+- canonical descriptions and provenance.
+
+Games continue to own mutable or game-specific behaviour, including:
+
+- construction and upgrade costs;
+- building levels;
+- staffing and workforce requirements;
+- power generation/demand curves;
+- production throughput;
+- placement and terrain rules;
+- technology unlocks;
+- contract restrictions;
+- player ownership and save-state;
+- market prices, reserves, stock and quality rolls.
+
+This prevents Universe from becoming a duplicate gameplay configuration database.
 
 ---
 
-## 4. Canon ownership model
+## 3. Canonical materials publication
+
+The foundation materials companion is:
+
+- `data/lore/Koplin_Universe_Materials_And_Substances.md`
+
+It covers:
+
+1. purpose and industrial context;
+2. substance identity versus deposit instance/refined product;
+3. Element / Compound / Alloy / Composite / Mixture;
+4. thermal behaviour;
+5. standard state;
+6. Metal / Silicate / Carbon / Organic / Water / Salt / Volatile archetypes;
+7. raw versus refined classification;
+8. P0/P1 catalogue tiers;
+9. property vocabulary;
+10. rarity vocabulary;
+11. deferred runtime-generation concerns.
+
+Structured `data/substances.json` agrees with this higher-precedence lore source.
+
+---
+
+## 4. Structured industrial collections
+
+The feature publishes these manifest collections:
+
+- `data/substances.json` — 75 P0/P1 industrial substance categories;
+- `data/parts.json` — stable industrial part archetypes linked to substances;
+- `data/machines.json` — stable machine archetypes linked to parts;
+- `data/buildings.json` — stable building archetypes linked to shell/fit-out substances and installed machines.
+
+The graph is therefore:
 
 ```text
-Universe lore bible (substances chapter)
-        ↓ agrees with
-Universe structured substances collection (stable IDs)
-        ↓ referenced by
-Operations / economic demand (resourceRequirement.substanceId)
-        ↓ projected by
-Game catalogues (Mobile food/build/fuel/ore view; Desktop full substance view)
-        ↓ mutated by
-Save/game state (stock, quality, price, reserves, contracts)
+substances
+   ↓
+parts
+   ↓
+machines
+   ↓
+buildings
 ```
 
-### Precedence
-
-1. Foundation lore bible substance chapter (new / extended).
-2. Scenario lore only where era-specific commercial naming differs.
-3. Structured `substances` (+ optional `substanceCategories`) JSON.
-4. Game projections / caches derived from Universe.
-5. Save state.
-
-Desktop design docs remain the **engineering design provenance** for importing into Universe; once imported and reconciled, **Universe becomes authoritative** and Desktop/Mobile must not maintain a conflicting authored catalogue.
+Reverse views in the Directory are derived or validation-protected so these relationships cannot silently drift.
 
 ---
 
-## 5. Proposed Universe collections
+## 5. Desktop + Mobile building reconciliation
 
-### 5.1 `substances` (new)
+The completed catalogue contains **22 canonical building archetypes**. This is the union of all 14 current Desktop concepts and all 13 current MineIT Mobile building kinds, with overlap represented by one Universe record rather than duplicates.
 
-Stable persistent material identities.
+### Current Mobile mappings
 
-Suggested core fields (v1):
+| Mobile kind | Canonical Universe building |
+|---|---|
+| `housing` | `building-habitat` |
+| `power` | `building-power-plant` |
+| `industry` | `building-industry` |
+| `headquarters` | `building-headquarters` |
+| `farm` | `building-farm` |
+| `ranch` | `building-ranch` |
+| `bio` | `building-bio-harvester` |
+| `algae` | `building-algae-facility` |
+| `quarry` | `building-quarry` |
+| `rig` | `building-extraction-rig` |
+| `mine` | `building-simple-pit-mine` |
+| `deep-mine` | `building-deep-mine` |
+| `spaceport` | `building-spaceport` |
 
-| Field | Purpose |
-|-------|---------|
-| `id` | Stable ID, e.g. `substance-structural-metal-ore` |
-| `name` | Display name |
-| `substanceType` | `Element` \| `Compound` \| `Alloy` \| `Composite` \| `Mixture` |
-| `thermalBehaviour` | `ChangesState` \| `Decomposes` \| `Burns` |
-| `standardState` | `Solid` \| `Liquid` \| `Gas` |
-| `dominantArchetype` | `Metal` \| `Silicate` \| `Carbon` \| `Organic` \| `Water` \| `Salt` \| `Volatile` (+ proposed `Biological` for Food — see open questions) |
-| `tier` | `P0` \| `P1` \| later |
-| `form` | Ore / Mineral / Deposit / Liquid / Gas / Material / Refined / Foodstuff |
-| `refined` | Boolean baseline (raw vs refined class) |
-| `composition` | Optional authored default composition entries |
-| `propertyProfile` | Authored ranges or typical values for Density, BondStrength, Reactivity, Conductivity, ThermalConductivity, Toughness, EnergyContent, Purity, Toxicity, Corrosiveness, NuclearStability, Viscosity |
-| `gameplayRoles` | Short role strings (construction, fuel, electronics, nutrition, …) |
-| `mobileProjection` | Optional: `{ inventoryCategory, activeInMobileV1: true/false }` |
-| `lore` | Short in-universe description |
-| `canonStatus` | `source-canonical` / `authored-economic-expansion` / etc. |
-| `image` | Optional visual metadata following existing Universe image rules |
+Desktop-only concepts remain where they are meaningful industrial or scenario archetypes, including Collection Camp, Water Collector, Basic Refinery, Research Building, Shipyard Bay, Stockpile and Warehouse.
 
-### 5.2 `substanceCategories` (optional new)
-
-Catalogue groupings that match desktop P0/P1 category names (Reactive Metal Ore, Solid Fuel Deposit, …) when a category is the authoring unit and named instances are generated later.
-
-For Mobile v1, many “categories” **are** the playable substances (no per-planet procedural naming yet). Desktop may later instantiate named variants under the same category ID.
-
-### 5.3 Lore document / bible chapter (new)
-
-Recommended additions:
-
-1. **Lore bible chapter** (foundation): *Materials of the Commonwealth* — archetypes, why resources shaped Trondonian / Zoran / Blaxmar history (already partially present), industrial classification of substances, refined vs raw, fuels, construction materials, foodstuffs / nutrition cultures.
-2. **Design-facing appendix** (may be `knowledgeScope: designer truth`): property derivation rules, FuelThreshold, RefinementThreshold, Mobile projection rules.
-3. Structured records must agree with the chapter.
-
-Suggested new files:
-
-- `data/lore/` chapter section or sibling lore document, e.g. `Koplin_Universe_Materials_And_Substances.md`
-- `docs/SubstanceCanon.md` — architecture for consumers (this feature’s lasting design doc)
-- `data/substances.json` (+ shards if needed)
-- `data/manifest.json` — register `substances` collection
-- Validation rules for substance IDs and operation requirement references
+`building-crashed-ship` is retained as **scenario infrastructure**: a grounded/wrecked vessel that can be repurposed as temporary frontier infrastructure. Player-specific starting-base, salvage and progression wording is deliberately not canonical.
 
 ---
 
-## 6. Import scope from Desktop
+## 6. Reconciliation rules
 
-Author into Universe from:
-
-| Desktop document | Universe destination |
-|------------------|----------------------|
-| `SubstanceDefinition.md` | Schema + lore definitions |
-| `Substances.md` | Full P0/P1 catalogue rows |
-| `PropertyRules.md` | Category property ranges (designer truth / structured profiles) |
-| `ExpandedCoreSubstanceProperties.md` | Property glossary; Mobile subset selection |
-| `Rarity.md` | Shared rarity band vocabulary |
-| `SubstanceWorldLink.md` | Deferred generation notes (Desktop-owned runtime; Universe only records categories) |
-| `FutureSubstanceTypes.md` | Deferred appendix only |
-| Farm / food building notes | New Food substance family |
+1. **Same real-world function → one canonical Universe archetype.**
+2. **Genuinely distinct facility → separate stable building ID.**
+3. Source gameplay wording is rewritten into persistent Universe language before publication.
+4. Source paths are provenance, not authority after reconciliation.
+5. Stable IDs must not change merely because display wording evolves.
+6. No parallel Desktop/Mobile versions of the same production entity are created in Universe.
 
 ---
 
-## 7. Mobile projection (initial proposal)
+## 7. Import workflow
 
-Mobile keeps four **inventory / site categories**. These are **views**, not chemical truth.
+Desktop parts, machines and buildings may be refreshed with:
 
-| Mobile category | Universe meaning | Primary desktop archetypes |
-|-----------------|------------------|----------------------------|
-| **food** | Edible / nutrient biomass and cultures | Organic (+ new Biological / Food role); Water as input, not stock type |
-| **build** | Construction & ceramic feedstock | Silicate, Organic (fibre/wood), some Metal structural ores if stock is aggregated as Build |
-| **fuel** | Energy-bearing combustibles and nuclear/exotic fuels | Carbon, Volatile, Organic biomass, Radioactive ores used as fuel |
-| **ore** | Metallic / high-value industrial minerals | Metal (+ crystalline gems as special ore family if retained) |
-
-### Recommended Mobile v1 substance set
-
-Start from **Desktop P0 raw** + Mobile-needed Food + a small set of commercially important P0/P1 ores already demanded by Universe operations. Do **not** bring all 47 P1 categories into Mobile extraction yet.
-
-#### Food (Mobile-first; extend desktop)
-
-| Proposed substance ID | Name | Notes |
-|-----------------------|------|-------|
-| `substance-fungal-shelf` | Fungal Shelf | Renewable surface food |
-| `substance-edible-flora` | Edible Flora | Renewable |
-| `substance-grazing-herd` | Grazing Herd | Renewable; biological stock, not mined mineral |
-| `substance-nutrient-crop` | Nutrient Crop | Farm / field |
-| `substance-protein-bloom` | Protein Bloom | Higher tier culture |
-| `substance-thermal-algae` | Thermal Algae | Extreme environments |
-| `substance-synthetic-nutrient` | Synthetic Nutrient | Manufactured; not a deposit |
-
-#### Build (map from desktop Silicate / Organic construction)
-
-| Proposed substance ID | Name | Desktop analogue |
-|-----------------------|------|------------------|
-| `substance-construction-fibre` | Construction Fibre | Fibrous plant (simplified P0) |
-| `substance-woody-plant` | Woody Plant Material | Woody plant |
-| `substance-stone` | Stone Aggregate | Stone |
-| `substance-clay` | Clay Mineral | Clay |
-| `substance-silica` | Silica Mineral | Silica |
-| `substance-insulating-mineral` | Insulating Mineral | Insulating |
-| `substance-structural-metal-ore` | Structural Metal Ore | Structural metal ore *(see Q: Build vs Ore stock)* |
-
-#### Fuel (map from desktop Carbon / Volatile / Organic / nuclear)
-
-| Proposed substance ID | Name | Desktop analogue |
-|-----------------------|------|------------------|
-| `substance-biomass` | Organic Biomass / Woody fuel use | Woody / biomass |
-| `substance-solid-fuel` | Solid Fuel Deposit | Solid fuel (coal-like) |
-| `substance-liquid-fuel` | Liquid Fuel Deposit | Liquid fuel |
-| `substance-gas-fuel` | Gas Fuel Deposit | Gas fuel |
-| `substance-radioactive-ore` | Radioactive Ore | Radioactive (fuel use in Mobile) |
-| Keep or drop exotic Mobile fuels | Fissile / Brine / Exotic Crystal | Need lore justification (Veyrite-adjacent vs ordinary radioactive) |
-
-#### Ore (map from desktop Metal + selective valuables)
-
-| Proposed substance ID | Name | Desktop analogue |
-|-----------------------|------|------------------|
-| `substance-reactive-metal-ore` | Reactive Metal Ore | P0 |
-| `substance-conductive-metal-ore` | Conductive Metal Ore | P0 |
-| `substance-magnetic-metal-ore` | Magnetic Metal Ore | P0 |
-| `substance-structural-metal-ore` | Structural Metal Ore | P0 |
-| Optional named lore metals | Iron / Copper as common structural/conductive presentations | Prefer functional IDs long-term; Earth names may remain aliases |
-| Precious / gem rows | Platinum, Palladium, gems, diamond… | Either promote as rare Metal/Silicate crystalline substances or mark Mobile-only commercial specials pending desktop alignment |
-
-### Mobile attribute subset (recommended v1)
-
-Use a **small derived set** that already drives Mobile systems:
-
-| Attribute | Mobile use |
-|-----------|------------|
-| `inventoryCategory` | food / build / fuel / ore |
-| `rarityBand` | Spawn weight / progression |
-| `energyContent` (or derived `fuelValue`) | Fuel burn / power |
-| `structuralStrength` or `constructionValue` | Build efficiency (feeds A25b later) |
-| `purity` / quality linkage | Sale price, refining later |
-| `toxicity` | Optional survival pressure later |
-| `renewable` | Site behaviour |
-| `density` | Freight mass later |
-
-Defer for Mobile v1: BondStrength, full Reactivity matrix, Viscosity pumping sim, NuclearStability beyond a simple fissile flag, Flammability/Explosiveness, alloy recipe graphs.
-
-Desktop continues to use the full property set.
-
----
-
-## 8. ID and demand reconciliation
-
-### Current Universe problems to fix in the same programme
-
-- Duplicate IDs for the same material (`reactive` vs `reactive-metal`, `protein` vs `protein-bloom`).
-- Split type namespaces (`precious:platinum` vs `ore:platinum`, `water:…` vs `fuel:brine`, `mineral:structural` vs `build:structural`).
-- `displayName` used as if identity were reliable.
-
-### Target requirement shape
-
-```json
-{
-  "substanceId": "substance-reactive-metal-ore",
-  "importance": "critical",
-  "demandScale": "high",
-  "qualityPreference": "excellent",
-  "reason": "High-performance hull and drive-adjacent components."
-}
+```text
+node scripts/import-industrial-catalogue.mjs ../MineIT
 ```
 
-Games may still present Mobile category chips (`ore`) derived from `mobileProjection.inventoryCategory`.
+or:
+
+```text
+MINEIT_SOURCE_ROOT=../MineIT node scripts/import-industrial-catalogue.mjs
+```
+
+The importer accepts either the MineIT repository root or the direct `Machines & Buildings` directory.
+
+It:
+
+- resolves source substance/part/machine names to stable Universe IDs;
+- fails before writing if relationships cannot be resolved;
+- treats `machine.partIds` as authoritative and derives the reverse `part.machineIds` index;
+- checks source `Used In` declarations for contradictions;
+- preserves reviewed Universe descriptions/provenance rather than replacing them with raw gameplay wording;
+- preserves Mobile-only building archetypes already reconciled into Universe.
+
+The importer is a reconciliation aid, not an alternate source of truth.
 
 ---
 
-## 9. Acceptance criteria
+## 8. Website publication
 
-1. Universe contains a lore materials/substances chapter that documents archetypes, substance types, thermal behaviour, raw vs refined, and Food.
-2. Universe publishes a `substances` collection covering at least Desktop **P0** catalogue + Mobile Food set + agreed Mobile commercial ores.
-3. Manifest registers the collection; validation rejects unknown `substanceId` references on operations.
-4. Commercial operations are migrated to `substanceId` with no conflicting duplicate identities.
-5. Documented Mobile projection lists which substances appear in Mobile v1 and under which inventory category.
-6. Desktop and Mobile integration docs state that local authored resource catalogues must become derived caches, not competing canon.
-7. Rarity vocabulary is shared (map Mobile labels onto Universe bands).
-8. No mutable prices/reserves/contract terms stored on substance records.
+The Universe website publishes the feature from canonical `data/` only:
 
----
+- Lore Explorer reads the materials Markdown through lore-document metadata.
+- Directory loads `data/manifest.json` and exposes Substances, Parts, Machines and Buildings.
+- Substances are grouped by archetype and Raw/Refined.
+- Parts are grouped by category/sub-category.
+- Machines and buildings are grouped by category.
+- Entity detail views expose linked substances, parts, machines and buildings.
 
-## 10. Suggested delivery phases
-
-| Phase | Work |
-|-------|------|
-| **A — Canon foundation** | Lore chapter + schema doc + empty/partial `substances` for P0 + Food |
-| **B — Full desktop catalogue** | Import all P0/P1 category rows + property profiles |
-| **C — Commercial migrate** | Re-point operations; fix ID collisions |
-| **D — Mobile consumer** | Mobile reads Universe substances (or build-time artefact); retire conflicting local authorship |
-| **E — Desktop consumer** | Desktop generation keys off Universe category IDs |
+No shadow production dataset is embedded in JavaScript.
 
 ---
 
-## 11. Open product questions
+## 9. Validation
 
-See companion discovery note in the requesting chat; blockers for Approval:
+Automated validation is a publication requirement.
 
-1. Are Mobile inventory categories forever projections, or do they become Universe enum fields every substance must set?
-2. Should Structural Metal Ore contribute to Mobile **Build** stock, **Ore** stock, or both via refining?
-3. Keep Earth metal/gem names (Iron, Gold, Ruby) as canon identities, aliases, or Mobile-only market labels?
-4. Is Food a seventh archetype (`Biological`), an Organic subtype, or a separate non-substance `product`?
-5. How much of Desktop P1 enters Mobile Year-1 content?
-6. Are Veyrite / Exotic Fuel Crystal substances in the foundation bible or scenario-only / designer truth?
-7. Does Universe own only categories, or also every named procedural instance Desktop will generate later?
+`validation/validate-universe.mjs` validates the overall canonical graph, including IDs and cross-references for substances, parts, machines and buildings.
+
+`validation/validate-industrial-catalogue.mjs` additionally enforces:
+
+- presence of all current Desktop building concepts;
+- a canonical mapping for every current Mobile building kind;
+- explicit Mobile provenance on those mappings;
+- current combined building catalogue completeness;
+- reciprocal part↔machine relationship integrity;
+- required building descriptions/provenance;
+- rejection of player/save-state language in industrial canon.
+
+CI runs validation on `main`, `develop`, `feature/**`, and pull requests targeting `main` or `develop`. The importer itself is syntax-checked by CI.
 
 ---
 
-## 12. Definition of done (for this Universe feature)
+## 10. Acceptance criteria
 
-- Spec Approved by product owner.
-- Lore + structured data merged to `main` with validation green.
-- Consumer integration notes updated (`PublishingAndConsumers.md`, `MineitUniverseDatabaseIntegration.md`).
-- Content version bump in `manifest.json`.
-- Mobile/Desktop backlog items linked (Mobile **B04a**, Desktop substance implementation track).
+- [x] Materials lore is canonical under `data/lore/`.
+- [x] Lore Explorer can publish the materials chapter from canonical data.
+- [x] 75 P0/P1 substances are published with stable IDs.
+- [x] Parts are published and linked to substances.
+- [x] Machines are published and linked to parts.
+- [x] Complete current Desktop + Mobile building vocabulary is reconciled into one collection.
+- [x] Buildings are linked to appropriate substances and machines where defined.
+- [x] Game/player-specific descriptions have been reconciled into Universe language.
+- [x] Import tooling is portable and fail-fast.
+- [x] Part/machine reverse relationships cannot silently drift.
+- [x] Directory browses all four industrial collections.
+- [x] Documentation defines ownership and consumer boundaries.
+- [x] Automated validation covers the new industrial canon.
+- [ ] Final branch-head CI is green after completion metadata changes.
+
+---
+
+## 11. Follow-on work
+
+These are deliberately separate from this feature:
+
+1. Migrate commercial `resourceRequirements` to stable `substanceId` relationships where appropriate.
+2. Convert MineIT Mobile resource/inventory definitions to a projection of Universe substance IDs.
+3. Progressively key Desktop authored designs directly to Universe stable IDs.
+4. Define detailed manufacturing recipes when that gameplay system is designed.
+5. Define/refine ship fuel and propellant production as part of the broader resource/manufacturing programme.
+6. Add future building/machine archetypes to Universe when either game introduces genuinely new persistent concepts.
+
+---
+
+## 12. Definition of done
+
+This feature is complete when the current branch head passes the full automated validation suite and is merged into `develop`.
+
+The implementation is not required to migrate Mobile inventory, Desktop runtime generation, game balancing, manufacturing recipes or commercial demand references before merge.

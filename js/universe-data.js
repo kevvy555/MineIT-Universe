@@ -10,6 +10,10 @@ const COLLECTION_LABELS = {
   facilities: 'Facility',
   operations: 'Operation',
   products: 'Product',
+  substances: 'Substance',
+  parts: 'Part',
+  machines: 'Machine',
+  buildings: 'Building',
   species: 'Species / People Category',
   people: 'Person',
   economicSectors: 'Economic Sector',
@@ -43,7 +47,8 @@ const SCALAR_REFS = {
   ships: ['organisationId', 'shipClassId', 'homePortLocationId'],
   relationships: ['personAId', 'personBId'],
   currencies: ['sourceDocumentId'],
-  loreTopics: ['sourceDocumentId']
+  loreTopics: ['sourceDocumentId'],
+  substances: ['sourceDocumentId']
 };
 
 const ARRAY_REFS = {
@@ -53,6 +58,9 @@ const ARRAY_REFS = {
   operations: ['managerPersonIds', 'procurementPersonIds', 'shipIds', 'productIds', 'shipClassIds'],
   products: ['producerOrganisationIds'],
   people: ['operationIds', 'shipIds'],
+  parts: ['substanceIds', 'machineIds'],
+  machines: ['partIds'],
+  buildings: ['structuralShellSubstanceIds', 'fitOutSubstanceIds', 'machineIds'],
   shipLines: ['productionOperationIds'],
   shipClasses: ['designerOrganisationIds'],
   ships: ['operationIds', 'personIds'],
@@ -60,7 +68,7 @@ const ARRAY_REFS = {
   events: ['linkedEntityIds']
 };
 
-const IMAGE_STATUSES = new Set(['not-generated', 'generated', 'approved', 'needs-regeneration']);
+const IMAGE_STATUSES = new Set(['not-generated', 'in-progress', 'generated', 'approved', 'needs-regeneration']);
 
 export class UniverseCatalogue {
   constructor(manifest, collections, dataRoot, manifestUrl) {
