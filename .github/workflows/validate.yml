@@ -2,9 +2,14 @@ name: Validate MineIT Universe
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+      - develop
+      - 'feature/**'
   pull_request:
-    branches: [main]
+    branches:
+      - main
+      - develop
 
 permissions:
   contents: read
@@ -21,6 +26,8 @@ jobs:
           node-version: '22'
       - name: Validate canonical universe
         run: node validation/validate-universe.mjs
+      - name: Validate industrial catalogue
+        run: node validation/validate-industrial-catalogue.mjs
       - name: Validate ship procurement data
         run: node validation/validate-ship-procurement.mjs
       - name: Syntax check data loader
