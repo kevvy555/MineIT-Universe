@@ -174,7 +174,7 @@ for (const section of parsePartSections(partsMd)) {
     subCategories,
     sources: (section.fields.Source || '').split(',').map(value => value.trim()).filter(Boolean),
     substanceIds: substanceRefs.ids,
-    usedInMachineNames: (section.fields['Used In'] || '').split(',').map(value => value.replace(/\(optional\)/gi, '').trim()).filter(Boolean),
+    declaredMachineNames: (section.fields['Used In'] || '').split(',').map(value => value.replace(/\(optional\)/gi, '').trim()).filter(Boolean),
     description: section.summary || `${section.name} is an industrial part used in Commonwealth frontier construction.`,
     canonStatus: 'source-canonical',
     provenance: { desktopPath: 'Machines & Buildings/Parts/Parts.md' }
@@ -221,15 +221,23 @@ for (const block of machinesMd.split(/\n(?=\*\*[^*\n]+\*\*\n)/)) {
   machineIdByName.set(name.toLowerCase(), id);
 }
 
+// Machine construction declarations are authoritative. The reverse part.machineIds index is
+// derived from machine.partIds so the two directions cannot drift when source docs omit a
+// reciprocal "Used In" entry.
 for (const part of parts) {
-  const machineIds = [];
-  for (const name of part.usedInMachineNames || []) {
-    const id = machineIdByName.get(name.toLowerCase());
-    if (id) machineIds.push(id);
-    else partWarnings.push(`${part.name}: unresolved machine: ${name}`);
+  const derivedMachineIds = machines.filter(machine => (machine.partIds || []).includes(part.id)).map(machine => machine.id);
+  for (const declaredName of part.declaredMachineNames || []) {
+    const declaredId = machineIdByName.get(declaredName.toLowerCase());
+    if (!declaredId) {
+      partWarnings.push(`${part.name}: unresolved declared machine: ${declaredName}`);
+      continue;
+    }
+    if (!derivedMachineIds.includes(declaredId)) {
+      partWarnings.push(`${part.name}: source declares use in ${declaredName}, but that machine does not reference ${part.id}`);
+    }
   }
-  part.machineIds = uniq(machineIds);
-  delete part.usedInMachineNames;
+  part.machineIds = uniq(derivedMachineIds);
+  delete part.declaredMachineNames;
 }
 
 function walkMarkdown(dir, files = []) {
