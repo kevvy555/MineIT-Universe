@@ -1,8 +1,27 @@
-import { readFileSync, writeFileSync, readdirSync } from 'fs';
-import { join, relative } from 'path';
+import { existsSync, readFileSync, writeFileSync, readdirSync } from 'fs';
+import { join, relative, resolve } from 'path';
 
-const DESKTOP = 'C:/Users/Kevin/source/repos/MineIT/Documentation/design/Machines & Buildings';
+const sourceRoot = process.argv[2] || process.env.MINEIT_SOURCE_ROOT;
+if (!sourceRoot) {
+  throw new Error('Provide the MineIT repository root (or Machines & Buildings directory): node scripts/import-industrial-catalogue.mjs <path>');
+}
+
+const supplied = resolve(sourceRoot);
+const DESKTOP = existsSync(join(supplied, 'Parts', 'Parts.md'))
+  ? supplied
+  : join(supplied, 'Documentation', 'design', 'Machines & Buildings');
+if (!existsSync(join(DESKTOP, 'Parts', 'Parts.md')) || !existsSync(join(DESKTOP, 'Machines', 'Machines.md'))) {
+  throw new Error(`Could not find Desktop industrial design beneath ${supplied}.`);
+}
+
 const substances = JSON.parse(readFileSync('data/substances.json', 'utf8'));
+const existingParts = JSON.parse(readFileSync('data/parts.json', 'utf8'));
+const existingMachines = JSON.parse(readFileSync('data/machines.json', 'utf8'));
+const existingBuildings = JSON.parse(readFileSync('data/buildings.json', 'utf8'));
+const existingPartById = new Map(existingParts.map(record => [record.id, record]));
+const existingMachineById = new Map(existingMachines.map(record => [record.id, record]));
+const existingBuildingById = new Map(existingBuildings.map(record => [record.id, record]));
+const uniq = values => [...new Set((values || []).filter(Boolean))];
 
 function slug(text) {
   return String(text)
@@ -13,9 +32,7 @@ function slug(text) {
 }
 
 const substanceByName = new Map();
-for (const substance of substances) {
-  substanceByName.set(substance.name.toLowerCase(), substance.id);
-}
+for (const substance of substances) substanceByName.set(substance.name.toLowerCase(), substance.id);
 
 const aliases = {
   'reactive metal ore': 'substance-reactive-metal-ore',
@@ -72,14 +89,12 @@ function parseSubstanceList(raw) {
     if (id) ids.push(id);
     else unresolved.push(cleaned);
   }
-  return { ids: [...new Set(ids)], unresolved };
+  return { ids: uniq(ids), unresolved };
 }
 
 function parseFieldTable(block) {
   const fields = {};
-  for (const row of block.matchAll(/\|\s*\*\*(.+?)\*\*\s*\|\s*(.+?)\s*\|/g)) {
-    fields[row[1].trim()] = row[2].trim();
-  }
+  for (const row of block.matchAll(/\|\s*\*\*(.+?)\*\*\s*\|\s*(.+?)\s*\|/g)) fields[row[1].trim()] = row[2].trim();
   return fields;
 }
 
@@ -91,8 +106,7 @@ function parsePartSections(md) {
     const name = heading[1].trim().replace(/\s*\(P1\)\s*$/, '');
     const summary = block.match(/\n\*([^*]+)\*\n/)?.[1]?.trim() || '';
     const fields = parseFieldTable(block);
-    if (fields.Type !== 'Part') continue;
-    sections.push({ name, summary, fields });
+    if (fields.Type === 'Part') sections.push({ name, summary, fields });
   }
   return sections;
 }
@@ -100,9 +114,7 @@ function parsePartSections(md) {
 function resolvePartId(name, partIdByName) {
   const key = name.toLowerCase().replace(/\s*\(p1\)\s*$/, '').trim();
   if (partIdByName.has(key)) return partIdByName.get(key);
-  for (const [candidate, id] of partIdByName.entries()) {
-    if (candidate.includes(key) || key.includes(candidate)) return id;
-  }
+  for (const [candidate, id] of partIdByName.entries()) if (candidate.includes(key) || key.includes(candidate)) return id;
   return null;
 }
 
@@ -125,23 +137,35 @@ function parsePartLinks(raw, partIdByName) {
     if (id) ids.push(id);
     else unresolved.push(name);
   }
-  return { ids, unresolved };
+  return { ids: uniq(ids), unresolved };
+}
+
+function preserveApprovedText(record, approved) {
+  if (!approved) return record;
+  return {
+    ...record,
+    name: approved.name || record.name,
+    sources: approved.sources || record.sources,
+    description: approved.description || record.description,
+    canonStatus: approved.canonStatus || record.canonStatus,
+    provenance: { ...record.provenance, ...approved.provenance }
+  };
 }
 
 const partWarnings = [];
 const machineWarnings = [];
 const buildingWarnings = [];
 
-const partsMd = readFileSync(join(DESKTOP, 'Parts/Parts.md'), 'utf8').replace(/\r\n/g, '\n');
+const partsMd = readFileSync(join(DESKTOP, 'Parts', 'Parts.md'), 'utf8').replace(/\r\n/g, '\n');
 const parts = [];
 const partIdByName = new Map();
 for (const section of parsePartSections(partsMd)) {
   if (partIdByName.has(section.name.toLowerCase())) continue;
   const subCategories = (section.fields.SubCategory || 'General').split(',').map(value => value.trim()).filter(Boolean);
-  const substances = parseSubstanceList(section.fields.Substances);
-  if (substances.unresolved.length) partWarnings.push(`${section.name}: unresolved substances: ${substances.unresolved.join('; ')}`);
+  const substanceRefs = parseSubstanceList(section.fields.Substances);
+  if (substanceRefs.unresolved.length) partWarnings.push(`${section.name}: unresolved substances: ${substanceRefs.unresolved.join('; ')}`);
   const id = `part-${slug(section.name)}`;
-  const record = {
+  let record = {
     id,
     name: section.name,
     entityType: 'Part',
@@ -149,20 +173,18 @@ for (const section of parsePartSections(partsMd)) {
     subCategory: subCategories[0] || 'General',
     subCategories,
     sources: (section.fields.Source || '').split(',').map(value => value.trim()).filter(Boolean),
-    substanceIds: substances.ids,
-    usedInMachineNames: (section.fields['Used In'] || '')
-      .split(',')
-      .map(value => value.replace(/\(optional\)/gi, '').trim())
-      .filter(Boolean),
+    substanceIds: substanceRefs.ids,
+    usedInMachineNames: (section.fields['Used In'] || '').split(',').map(value => value.replace(/\(optional\)/gi, '').trim()).filter(Boolean),
     description: section.summary || `${section.name} is an industrial part used in Commonwealth frontier construction.`,
     canonStatus: 'source-canonical',
     provenance: { desktopPath: 'Machines & Buildings/Parts/Parts.md' }
   };
+  record = preserveApprovedText(record, existingPartById.get(id));
   parts.push(record);
   partIdByName.set(section.name.toLowerCase(), id);
 }
 
-const machinesMd = readFileSync(join(DESKTOP, 'Machines/Machines.md'), 'utf8').replace(/\r\n/g, '\n');
+const machinesMd = readFileSync(join(DESKTOP, 'Machines', 'Machines.md'), 'utf8').replace(/\r\n/g, '\n');
 const machines = [];
 const machineIdByName = new Map();
 for (const block of machinesMd.split(/\n(?=\*\*[^*\n]+\*\*\n)/)) {
@@ -175,7 +197,7 @@ for (const block of machinesMd.split(/\n(?=\*\*[^*\n]+\*\*\n)/)) {
   const partRefs = parsePartLinks(fields['Construction Parts'] || '', partIdByName);
   if (partRefs.unresolved.length) machineWarnings.push(`${name}: unresolved parts: ${partRefs.unresolved.join('; ')}`);
   const id = `machine-${slug(name)}`;
-  const record = {
+  let record = {
     id,
     name,
     entityType: 'Machine',
@@ -183,23 +205,30 @@ for (const block of machinesMd.split(/\n(?=\*\*[^*\n]+\*\*\n)/)) {
     subCategory: fields.SubCategory || 'General',
     sources: (fields.Source || '').split(',').map(value => value.trim()).filter(Boolean),
     partIds: partRefs.ids,
-    description: fields.Description
-      || block.match(/\n\*([^*\n]+)\*\n/)?.[1]?.trim()
-      || `${name} is an industrial machine used in Commonwealth frontier operations.`,
+    description: fields.Description || block.match(/\n\*([^*\n]+)\*\n/)?.[1]?.trim() || `${name} is an industrial machine used in Commonwealth frontier operations.`,
     canonStatus: 'source-canonical',
     provenance: { desktopPath: 'Machines & Buildings/Machines/Machines.md' }
   };
   if (fields.Input) record.inputSummary = fields.Input;
   if (fields.Output) record.outputSummary = fields.Output;
   if (fields['Fuel Type']) record.fuelType = fields['Fuel Type'];
+  record = preserveApprovedText(record, existingMachineById.get(id));
+  const approved = existingMachineById.get(id);
+  if (approved?.inputSummary) record.inputSummary = approved.inputSummary;
+  if (approved?.outputSummary) record.outputSummary = approved.outputSummary;
+  if (approved?.fuelType) record.fuelType = approved.fuelType;
   machines.push(record);
   machineIdByName.set(name.toLowerCase(), id);
 }
 
 for (const part of parts) {
-  part.machineIds = [...new Set(part.usedInMachineNames
-    .map(name => machineIdByName.get(name.toLowerCase()))
-    .filter(Boolean))];
+  const machineIds = [];
+  for (const name of part.usedInMachineNames || []) {
+    const id = machineIdByName.get(name.toLowerCase());
+    if (id) machineIds.push(id);
+    else partWarnings.push(`${part.name}: unresolved machine: ${name}`);
+  }
+  part.machineIds = uniq(machineIds);
   delete part.usedInMachineNames;
 }
 
@@ -207,11 +236,7 @@ function walkMarkdown(dir, files = []) {
   for (const entry of readdirSync(dir, { withFileTypes: true })) {
     const path = join(dir, entry.name);
     if (entry.isDirectory()) walkMarkdown(path, files);
-    else if (
-      entry.name.endsWith('.md')
-      && !/(Images|UI|Template|Definition|BuildingStorage)\.md$/i.test(entry.name)
-      && entry.name !== 'Buildings.md'
-    ) files.push(path);
+    else if (entry.name.endsWith('.md') && !/(Images|UI|Template|Definition|BuildingStorage)\.md$/i.test(entry.name) && entry.name !== 'Buildings.md') files.push(path);
   }
   return files;
 }
@@ -221,10 +246,7 @@ function extractSectionValues(chunk, headerPattern) {
   const values = [];
   let mode = false;
   for (const line of lines) {
-    if (headerPattern.test(line)) {
-      mode = true;
-      continue;
-    }
+    if (headerPattern.test(line)) { mode = true; continue; }
     if (!mode) continue;
     if (/Substances \(|Machines \(/i.test(line) && !headerPattern.test(line)) break;
     if (/^##\s+/.test(line) || /^---\s*$/.test(line)) break;
@@ -235,13 +257,8 @@ function extractSectionValues(chunk, headerPattern) {
     if (/\|\s*-[-| ]+\s*\|/.test(line)) continue;
     const cells = line.split('|').map(cell => cell.trim()).filter((_, index, array) => index > 0 && index < array.length - 1);
     if (!cells.length) continue;
-    let value = cells[0]
-      .replace(/\*\*/g, '')
-      .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
-      .trim();
-    if (!value || /^(role|n\/a|none|-)$/i.test(value)) continue;
-    if (/substances|machines/i.test(value)) continue;
-    if (value.startsWith('**')) break;
+    const value = cells[0].replace(/\*\*/g, '').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').trim();
+    if (!value || /^(role|n\/a|none|-)$/i.test(value) || /substances|machines/i.test(value)) continue;
     values.push(value);
   }
   return values;
@@ -265,14 +282,9 @@ for (const file of walkMarkdown(join(DESKTOP, 'Buildings'))) {
     if (!name || /\b(template|ui|images)\b/i.test(name)) continue;
     if (/specification$/i.test(name) && fields.BuildingType) name = fields.BuildingType;
     else name = name.replace(/\s+Specification$/i, '').trim();
-    if (fields.BuildingType === 'ResearchBuilding' && name === 'Research Building') {
-      // keep full display name
-    } else if (fields.BuildingType === 'Stockpile') {
-      name = 'Stockpile';
-    }
+    if (fields.BuildingType === 'Stockpile') name = 'Stockpile';
     if (fields.Type && fields.Type !== 'Building' && !fields.BuildingType && !isCollectionBundle) continue;
 
-    // Collection bundle rows use Property/Details tables without **Type**
     if (isCollectionBundle) {
       const detailsType = chunk.match(/\|\s*Building Type\s*\|\s*([^|]+)\|/i)?.[1]?.trim();
       if (detailsType) fields.BuildingType = detailsType;
@@ -282,32 +294,26 @@ for (const file of walkMarkdown(join(DESKTOP, 'Buildings'))) {
     }
 
     const categories = (fields.Category || 'Other').split(',').map(value => value.trim()).filter(Boolean);
-    const shellNames = [
+    const shell = parseSubstanceList([
       ...extractSectionValues(chunk, /Substances \(structural shell\)/i),
       ...extractSectionValues(chunk, /Substances \(construction\)/i)
-    ];
-    const fitNames = extractSectionValues(chunk, /Substances \(fit-out\)/i);
-    const shell = parseSubstanceList(shellNames.join(', '));
-    const fit = parseSubstanceList(fitNames.join(', '));
-    // ignore placeholder none markers
-    const cleanUnresolved = list => list.filter(item => !/^\*?none\*?$/i.test(item));
-    shell.unresolved = cleanUnresolved(shell.unresolved);
-    fit.unresolved = cleanUnresolved(fit.unresolved);
-    const machineNames = extractSectionValues(chunk, /Machines \(installed\)/i);
+    ].join(', '));
+    const fit = parseSubstanceList(extractSectionValues(chunk, /Substances \(fit-out\)/i).join(', '));
+    shell.unresolved = shell.unresolved.filter(item => !/^\*?none\*?$/i.test(item));
+    fit.unresolved = fit.unresolved.filter(item => !/^\*?none\*?$/i.test(item));
+
     const machineIds = [];
-    for (const machineName of machineNames) {
+    for (const machineName of extractSectionValues(chunk, /Machines \(installed\)/i)) {
       const id = machineIdByName.get(machineName.toLowerCase());
       if (id) machineIds.push(id);
-      else if (machineName && !/none|n\/a|manual|worker/i.test(machineName)) {
-        buildingWarnings.push(`${name}: unresolved machine ${machineName}`);
-      }
+      else if (machineName && !/none|n\/a|manual|worker/i.test(machineName)) buildingWarnings.push(`${name}: unresolved machine ${machineName}`);
     }
     if (shell.unresolved.length) buildingWarnings.push(`${name}: unresolved shell: ${shell.unresolved.join('; ')}`);
     if (fit.unresolved.length) buildingWarnings.push(`${name}: unresolved fit-out: ${fit.unresolved.join('; ')}`);
 
     const id = `building-${slug(name)}`;
     if (buildings.some(building => building.id === id)) continue;
-    buildings.push({
+    const imported = {
       id,
       name,
       entityType: 'Building',
@@ -317,14 +323,37 @@ for (const file of walkMarkdown(join(DESKTOP, 'Buildings'))) {
       sources: (fields.Source || '').split(',').map(value => value.trim()).filter(Boolean),
       structuralShellSubstanceIds: shell.ids,
       fitOutSubstanceIds: fit.ids,
-      machineIds: [...new Set(machineIds)],
-      description: chunk.match(/\n\*([^*\n]+)\*\n/)?.[1]?.trim()
-        || fields.Description
-        || `${name} is a Commonwealth frontier building.`,
+      machineIds: uniq(machineIds),
+      description: chunk.match(/\n\*([^*\n]+)\*\n/)?.[1]?.trim() || fields.Description || `${name} is a Commonwealth frontier building.`,
       canonStatus: 'source-canonical',
       provenance: { desktopPath: relative(DESKTOP, file).replace(/\\/g, '/') }
-    });
+    };
+    const approved = existingBuildingById.get(id);
+    let record = preserveApprovedText(imported, approved);
+    if (approved) {
+      record.category = approved.category || record.category;
+      record.categories = approved.categories || record.categories;
+      record.buildingType = approved.buildingType ?? record.buildingType;
+      record.structuralShellSubstanceIds = uniq([...record.structuralShellSubstanceIds, ...(approved.structuralShellSubstanceIds || [])]);
+      record.fitOutSubstanceIds = uniq([...record.fitOutSubstanceIds, ...(approved.fitOutSubstanceIds || [])]);
+      record.machineIds = uniq([...record.machineIds, ...(approved.machineIds || [])]);
+    }
+    buildings.push(record);
   }
+}
+
+// Mobile-only archetypes are reconciled into Universe once and retained here on subsequent
+// Desktop source imports. Universe is authoritative after reconciliation; this importer is not
+// a second production catalogue.
+for (const approved of existingBuildings) {
+  if (!approved.provenance?.mobile || buildings.some(building => building.id === approved.id)) continue;
+  buildings.push(approved);
+}
+
+const warnings = [...partWarnings, ...machineWarnings, ...buildingWarnings];
+if (warnings.length) {
+  console.error(JSON.stringify({ partWarnings, machineWarnings, buildingWarnings }, null, 2));
+  throw new Error(`Industrial catalogue import stopped with ${warnings.length} unresolved source relationship(s).`);
 }
 
 writeFileSync('data/parts.json', `${JSON.stringify(parts, null, 2)}\n`);
@@ -332,11 +361,10 @@ writeFileSync('data/machines.json', `${JSON.stringify(machines, null, 2)}\n`);
 writeFileSync('data/buildings.json', `${JSON.stringify(buildings, null, 2)}\n`);
 
 console.log(JSON.stringify({
+  source: DESKTOP,
   parts: parts.length,
   machines: machines.length,
   buildings: buildings.length,
-  partWarnings,
-  machineWarnings,
-  buildingWarnings,
-  buildingNames: buildings.map(building => building.name)
+  mobileBuildingArchetypes: buildings.filter(building => building.provenance?.mobile).length,
+  status: 'ok'
 }, null, 2));
