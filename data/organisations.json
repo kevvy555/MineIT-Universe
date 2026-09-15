@@ -429,12 +429,10 @@
     },
     "image": {
       "key": "assets/art/universe/organisations/organisation-damaris-security-command.webp",
-      "generated": false,
-      "status": "in-progress",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. A charcoal protective chevron over a pale-grey field with a single rescue-amber bar, joint security and rescue mark, no skulls, eagles, or rank stars. Colour palette: charcoal, rescue amber, pale grey. Design language: joint security-and-rescue identity, protective not imperial. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
-      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image.",
-      "generationBatchId": "organisation-logos-remaining-20260915",
-      "generationStartedAt": "2026-09-15T06:03:08Z"
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
     }
   },
   {
@@ -464,12 +462,10 @@
     },
     "image": {
       "key": "assets/art/universe/organisations/organisation-lattice-bank.webp",
-      "generated": false,
-      "status": "in-progress",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. An interlocking brass lattice of four diamonds on a deep-green disc, pale-marble highlights at the nodes, restrained banking geometry. Colour palette: deep green, pale marble, brass. Design language: restrained interstellar banking identity, quiet high-security geometry. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
-      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image.",
-      "generationBatchId": "organisation-logos-remaining-20260915",
-      "generationStartedAt": "2026-09-15T06:03:08Z"
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
     }
   },
   {
@@ -499,12 +495,10 @@
     },
     "image": {
       "key": "assets/art/universe/organisations/organisation-farline-news.webp",
-      "generated": false,
-      "status": "in-progress",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. A sharp signal-cyan transmission line crossing an ink-black square, breaking into a paper-white horizon bar, independent media mark, not a camera or microphone. Colour palette: ink black, paper white, signal cyan. Design language: independent media identity, spare signal geometry. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
-      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image.",
-      "generationBatchId": "organisation-logos-remaining-20260915",
-      "generationStartedAt": "2026-09-15T06:03:08Z"
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
     }
   },
   {
@@ -534,12 +528,10 @@
     },
     "image": {
       "key": "assets/art/universe/organisations/organisation-koplin-medical-trust.webp",
-      "generated": false,
-      "status": "in-progress",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. A clinical-white circular seal with two overlapping care-teal rounded bars forming an open diamond, warm-grey outer ring. Not a red cross, caduceus, or heart. Colour palette: clinical white, care teal, warm grey. Design language: public clinical identity, calm medical geometry. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
-      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image.",
-      "generationBatchId": "organisation-logos-remaining-20260915",
-      "generationStartedAt": "2026-09-15T06:03:08Z"
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
     }
   },
   {
@@ -569,12 +561,10 @@
     },
     "image": {
       "key": "assets/art/universe/organisations/organisation-dockworkers-guild.webp",
-      "generated": false,
-      "status": "in-progress",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. A navy disc bearing a safety-yellow gantry-arm chevron and a dock-rust counterweight block, labour-guild industrial mark. Colour palette: dock rust, safety yellow, navy. Design language: labour-cooperative industrial identity, working-dock geometry. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
-      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image.",
-      "generationBatchId": "organisation-logos-remaining-20260915",
-      "generationStartedAt": "2026-09-15T06:03:08Z"
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
     }
   },
   {
@@ -611,12 +601,10 @@
     "sourceSection": "4. Koplin Deep Reach Corporation",
     "image": {
       "key": "assets/art/universe/organisations/organisation-koplin-resource-charter.webp",
-      "generated": false,
-      "status": "in-progress",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. A steel ring around a vertical amber shaft dropping into a black field, a deep-reach mining-and-logistics core mark, practical not heraldic. Colour palette: black, amber, steel. Design language: practical corporate mining and logistics design. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
-      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image.",
-      "generationBatchId": "organisation-logos-remaining-20260915",
-      "generationStartedAt": "2026-09-15T06:03:08Z"
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
     }
   },
   {
@@ -684,12 +672,10 @@
     "shipbuildingSpecialisation": "speed, acceleration and rapid turnaround",
     "image": {
       "key": "assets/art/universe/organisations/organisation-kestrel-aerospace-systems.webp",
-      "generated": false,
-      "status": "in-progress",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. A swept silver kestrel-wing delta with an electric-cyan leading edge on deep navy, sleek high-performance aerospace mark. Colour palette: deep navy, silver, electric cyan. Design language: sleek narrow hulls, strong engine emphasis and precise aerodynamic-industrial surfaces. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
-      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image.",
-      "generationBatchId": "organisation-logos-remaining-20260915",
-      "generationStartedAt": "2026-09-15T06:03:08Z"
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
     }
   },
   {
@@ -721,12 +707,10 @@
     "shipbuildingSpecialisation": "modular cargo and network logistics",
     "image": {
       "key": "assets/art/universe/organisations/organisation-keystone-modular-fabrication.webp",
-      "generated": false,
-      "status": "in-progress",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. A steel-grey keystone arch built from three signal-orange modular blocks with white service gaps, interchangeable cargo-architecture mark. Colour palette: steel grey, white, signal orange. Design language: visible modular frames, interchangeable cargo blocks and highly standardised service interfaces. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
-      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image.",
-      "generationBatchId": "organisation-logos-remaining-20260915",
-      "generationStartedAt": "2026-09-15T06:03:08Z"
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
     }
   },
   {
@@ -758,12 +742,10 @@
     "shipbuildingSpecialisation": "range, fuel efficiency and reliability",
     "image": {
       "key": "assets/art/universe/organisations/organisation-longreach-engineering.webp",
-      "generated": false,
-      "status": "in-progress",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. A long dark-green horizon bar with a cream inset range-tick and gunmetal end-caps, frontier endurance mark, elongated and restrained. Colour palette: dark green, cream, gunmetal. Design language: long clean hulls, protected systems, redundant external structures and restrained frontier markings. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
-      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image.",
-      "generationBatchId": "organisation-logos-remaining-20260915",
-      "generationStartedAt": "2026-09-15T06:03:08Z"
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
     }
   },
   {
@@ -795,12 +777,10 @@
     "shipbuildingSpecialisation": "huge bulk carriers and megafreighters",
     "image": {
       "key": "assets/art/universe/organisations/organisation-crownline-heavy-works.webp",
-      "generated": false,
-      "status": "in-progress",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. A heavy industrial-yellow truss chevron on black alloy, oxide-red load-pin accent, slab-sided megafreighter-yard mark, massive and simple. Colour palette: black alloy, industrial yellow, oxide red. Design language: massive slab-sided structures, exposed cargo frames, oversized trusses and unmistakable industrial scale. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
-      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image.",
-      "generationBatchId": "organisation-logos-remaining-20260915",
-      "generationStartedAt": "2026-09-15T06:03:08Z"
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
     }
   }
 ]
