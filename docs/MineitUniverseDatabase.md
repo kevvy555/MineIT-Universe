@@ -111,7 +111,7 @@ The current calendar is the Standard Terran Calendar; the canonical universe dat
 
 ## Image-generation state
 
-People and named ships currently carry image metadata.
+People, named ships, purchasable ship classes, parts, machines and buildings may carry image metadata.
 
 Each image record explicitly stores:
 

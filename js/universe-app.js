@@ -552,11 +552,9 @@ function renderDetail() {
   const icon = ICONS[collection] || '?';
   const previewUrl = entity.image?.generated && entity.image?.key ? state.catalogue.assetUrl(entity.image.key) : null;
   const originalUrl = previewUrl ? (state.catalogue.assetUrl(state.catalogue.originalAssetKey(entity.image.key)) || previewUrl) : null;
-  const image = previewUrl && collection === 'people'
-    ? `<button type="button" class="portraitButton" data-original-image="${esc(originalUrl)}" data-preview-image="${esc(previewUrl)}" data-image-name="${esc(entity.name)}" aria-label="View original portrait of ${esc(entity.name)}"><img src="${esc(previewUrl)}" alt="${esc(entity.name)}"></button>`
-    : previewUrl
-      ? `<img src="${esc(previewUrl)}" alt="${esc(entity.name)}">`
-      : esc(collection === 'people' ? entity.name.split(/\s+/).map(part => part[0]).join('').slice(0, 2).toUpperCase() : icon);
+  const image = previewUrl
+    ? `<button type="button" class="portraitButton" data-original-image="${esc(originalUrl)}" data-preview-image="${esc(previewUrl)}" data-image-name="${esc(entity.name)}" aria-label="View original image of ${esc(entity.name)}"><img src="${esc(previewUrl)}" alt="${esc(entity.name)}"></button>`
+    : esc(collection === 'people' ? entity.name.split(/\s+/).map(part => part[0]).join('').slice(0, 2).toUpperCase() : icon);
 
   detailEl.innerHTML = `${validationStatus()}${canonWarning(entity, collection)}<div class="breadcrumbs">${breadcrumbs()}</div>
     <div class="hero"><div class="placeholder">${image}</div><div><div class="eyebrow">${esc(state.catalogue.typeLabelFor(entity.id))}</div><h1>${esc(entity.name)}</h1><div class="subtitle">${esc(subtitle(collection, entity))}</div></div></div>

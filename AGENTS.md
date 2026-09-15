@@ -95,7 +95,7 @@ Allowed statuses are `not-generated`, `in-progress`, `generated`, `approved`, an
 
 `not-generated` and `in-progress` require `generated: false`. An `in-progress` record must include `generationBatchId` and `generationStartedAt`. `generated` and `approved` require `generated: true`.
 
-People and named ships are current primary image-bearing types. Purchasable ship classes may also carry image metadata and prompts.
+People and named ships are current primary image-bearing types. Purchasable ship classes, parts, machines and buildings may also carry image metadata and prompts.
 
 Reusable visual assets are conceptually separate from the identity currently using them. Identity-neutral art intended for reuse must avoid baked-in personal names, company names, readable logos, registration numbers and universe-specific text. Reusable series are declared through `visualAssetSeries`.
 

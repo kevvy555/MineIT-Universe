@@ -5,13 +5,36 @@
     "entityType": "Part",
     "category": "Power",
     "subCategory": "Generator",
-    "subCategories": ["Generator"],
-    "sources": ["Crashed Ship", "Manufactured"],
-    "substanceIds": ["substance-refined-conductive-metal", "substance-refined-magnetic-metal", "substance-refined-structural-metal"],
+    "subCategories": [
+      "Generator"
+    ],
+    "sources": [
+      "Crashed Ship",
+      "Manufactured"
+    ],
+    "substanceIds": [
+      "substance-refined-conductive-metal",
+      "substance-refined-magnetic-metal",
+      "substance-refined-structural-metal"
+    ],
     "description": "Core components for converting mechanical motion into electrical output.",
     "canonStatus": "source-canonical",
-    "provenance": {"desktopPath": "Machines & Buildings/Parts/Parts.md"},
-    "machineIds": ["machine-wind-generator", "machine-water-wheel-generator", "machine-solar-thermal-generator", "machine-ship-reactor"]
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Parts/Parts.md"
+    },
+    "machineIds": [
+      "machine-ship-reactor",
+      "machine-wind-generator",
+      "machine-water-wheel-generator",
+      "machine-solar-thermal-generator"
+    ],
+    "image": {
+      "key": "assets/art/universe/parts/part-generator-parts.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Workshop kit photograph of generator parts: copper-wound stator segments, magnetic cores, structural metal housings and shaft couplings laid on a scarred metal bench. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Identity-neutral spare-part kit; not a complete machine."
+    }
   },
   {
     "id": "part-battery-parts",
@@ -19,13 +42,36 @@
     "entityType": "Part",
     "category": "Power",
     "subCategory": "Battery",
-    "subCategories": ["Battery"],
-    "sources": ["Crashed Ship", "Manufactured"],
-    "substanceIds": ["substance-refined-reactive-metal", "substance-refined-conductive-metal", "substance-refined-graphite", "substance-electrolyte-solution"],
+    "subCategories": [
+      "Battery"
+    ],
+    "sources": [
+      "Crashed Ship",
+      "Manufactured"
+    ],
+    "substanceIds": [
+      "substance-refined-reactive-metal",
+      "substance-refined-conductive-metal",
+      "substance-refined-graphite",
+      "substance-electrolyte-solution"
+    ],
     "description": "Components for storing and discharging electrical energy.",
     "canonStatus": "source-canonical",
-    "provenance": {"desktopPath": "Machines & Buildings/Parts/Parts.md"},
-    "machineIds": ["machine-crude-chemical-battery", "machine-thermoelectric-trickler", "machine-ship-reactor"]
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Parts/Parts.md"
+    },
+    "machineIds": [
+      "machine-ship-reactor",
+      "machine-crude-chemical-battery",
+      "machine-thermoelectric-trickler"
+    ],
+    "image": {
+      "key": "assets/art/universe/parts/part-battery-parts.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Workshop kit photograph of battery parts: graphite cell stacks, reactive-metal electrodes, insulated busbars and sealed electrolyte reservoirs grouped as a spare kit. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Identity-neutral spare-part kit; not a complete machine."
+    }
   },
   {
     "id": "part-power-electronics",
@@ -33,19 +79,62 @@
     "entityType": "Part",
     "category": "Power",
     "subCategory": "Electronics",
-    "subCategories": ["Electronics"],
-    "sources": ["Crashed Ship", "Manufactured"],
-    "substanceIds": ["substance-refined-conductive-metal", "substance-glass", "substance-refined-insulator"],
+    "subCategories": [
+      "Electronics"
+    ],
+    "sources": [
+      "Crashed Ship",
+      "Manufactured"
+    ],
+    "substanceIds": [
+      "substance-refined-conductive-metal",
+      "substance-glass",
+      "substance-refined-insulator"
+    ],
     "description": "Control circuits and inverters for managing electrical flow.",
     "canonStatus": "source-canonical",
-    "provenance": {"desktopPath": "Machines & Buildings/Parts/Parts.md"},
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Parts/Parts.md"
+    },
     "machineIds": [
-      "machine-crude-chemical-battery", "machine-wind-generator", "machine-water-wheel-generator", "machine-thermoelectric-trickler", "machine-solar-thermal-generator",
-      "machine-drill-machine", "machine-conveyor-machine", "machine-mine-ventilation", "machine-crusher-machine", "machine-smelter-machine",
-      "machine-research-computer", "machine-fabrication-machine", "machine-assembly-crane", "machine-welding-machine", "machine-life-support-machine",
-      "machine-climate-control-machine", "machine-irrigation-system", "machine-growth-management-system", "machine-pump-machine", "machine-power-distribution-system",
-      "machine-exploration-vehicle", "machine-ship-scanner", "machine-substance-analyser", "machine-ship-reactor", "machine-ship-life-support", "machine-ship-computer", "machine-ship-refinery-unit"
-    ]
+      "machine-exploration-vehicle",
+      "machine-ship-scanner",
+      "machine-substance-analyser",
+      "machine-ship-reactor",
+      "machine-ship-life-support",
+      "machine-ship-computer",
+      "machine-ship-refinery-unit",
+      "machine-drill-machine",
+      "machine-conveyor-machine",
+      "machine-mine-ventilation",
+      "machine-crusher-machine",
+      "machine-smelter-machine",
+      "machine-crude-chemical-battery",
+      "machine-wind-generator",
+      "machine-water-wheel-generator",
+      "machine-thermoelectric-trickler",
+      "machine-solar-thermal-generator",
+      "machine-power-distribution-system",
+      "machine-life-support-machine",
+      "machine-climate-control-machine",
+      "machine-irrigation-system",
+      "machine-growth-management-system",
+      "machine-pump-machine",
+      "machine-research-computer",
+      "machine-fabrication-machine",
+      "machine-assembly-crane",
+      "machine-welding-machine",
+      "machine-colony-operations-computer",
+      "machine-bulk-stacker",
+      "machine-warehouse-handler"
+    ],
+    "image": {
+      "key": "assets/art/universe/parts/part-power-electronics.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Workshop kit photograph of power electronics: glass-insulated inverter boards, conductive busbars and ceramic control modules, no readable labels. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Identity-neutral spare-part kit; not a complete machine."
+    }
   },
   {
     "id": "part-mechanical-parts",
@@ -53,17 +142,50 @@
     "entityType": "Part",
     "category": "Power",
     "subCategory": "Mechanical",
-    "subCategories": ["Mechanical"],
-    "sources": ["Crashed Ship", "Manufactured"],
-    "substanceIds": ["substance-refined-structural-metal", "substance-refined-lubricant"],
+    "subCategories": [
+      "Mechanical"
+    ],
+    "sources": [
+      "Crashed Ship",
+      "Manufactured"
+    ],
+    "substanceIds": [
+      "substance-refined-structural-metal",
+      "substance-refined-lubricant"
+    ],
     "description": "Bearings, gears, and shafts for transmitting mechanical power.",
     "canonStatus": "source-canonical",
-    "provenance": {"desktopPath": "Machines & Buildings/Parts/Parts.md"},
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Parts/Parts.md"
+    },
     "machineIds": [
-      "machine-wind-generator", "machine-water-wheel-generator", "machine-solar-thermal-generator", "machine-drill-machine", "machine-conveyor-machine",
-      "machine-mine-ventilation", "machine-crusher-machine", "machine-fabrication-machine", "machine-assembly-crane", "machine-life-support-machine",
-      "machine-climate-control-machine", "machine-irrigation-system", "machine-pump-machine", "machine-exploration-vehicle", "machine-ship-life-support", "machine-ship-refinery-unit"
-    ]
+      "machine-exploration-vehicle",
+      "machine-ship-life-support",
+      "machine-ship-refinery-unit",
+      "machine-drill-machine",
+      "machine-conveyor-machine",
+      "machine-mine-ventilation",
+      "machine-crusher-machine",
+      "machine-wind-generator",
+      "machine-water-wheel-generator",
+      "machine-solar-thermal-generator",
+      "machine-life-support-machine",
+      "machine-climate-control-machine",
+      "machine-irrigation-system",
+      "machine-pump-machine",
+      "machine-fabrication-machine",
+      "machine-assembly-crane",
+      "machine-livestock-handling-system",
+      "machine-bulk-stacker",
+      "machine-warehouse-handler"
+    ],
+    "image": {
+      "key": "assets/art/universe/parts/part-mechanical-parts.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Workshop kit photograph of mechanical parts: greased gears, bearings and shafts in charcoal structural metal, lubricant sheen, spare-kit layout. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Identity-neutral spare-part kit; not a complete machine."
+    }
   },
   {
     "id": "part-control-and-sensor-parts",
@@ -71,17 +193,49 @@
     "entityType": "Part",
     "category": "Power",
     "subCategory": "Control",
-    "subCategories": ["Control", "Sensor"],
-    "sources": ["Crashed Ship", "Manufactured"],
-    "substanceIds": ["substance-refined-conductive-metal", "substance-refined-insulator"],
+    "subCategories": [
+      "Control",
+      "Sensor"
+    ],
+    "sources": [
+      "Crashed Ship",
+      "Manufactured"
+    ],
+    "substanceIds": [
+      "substance-refined-conductive-metal",
+      "substance-refined-insulator"
+    ],
     "description": "Automation components and monitoring instruments.",
     "canonStatus": "source-canonical",
-    "provenance": {"desktopPath": "Machines & Buildings/Parts/Parts.md"},
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Parts/Parts.md"
+    },
     "machineIds": [
-      "machine-wind-generator", "machine-water-wheel-generator", "machine-solar-thermal-generator", "machine-research-computer", "machine-assembly-crane",
-      "machine-life-support-machine", "machine-climate-control-machine", "machine-growth-management-system", "machine-power-distribution-system",
-      "machine-ship-scanner", "machine-substance-analyser", "machine-ship-reactor", "machine-ship-life-support", "machine-ship-computer"
-    ]
+      "machine-ship-scanner",
+      "machine-substance-analyser",
+      "machine-ship-reactor",
+      "machine-ship-life-support",
+      "machine-ship-computer",
+      "machine-wind-generator",
+      "machine-water-wheel-generator",
+      "machine-solar-thermal-generator",
+      "machine-power-distribution-system",
+      "machine-life-support-machine",
+      "machine-climate-control-machine",
+      "machine-growth-management-system",
+      "machine-research-computer",
+      "machine-assembly-crane",
+      "machine-livestock-handling-system",
+      "machine-colony-operations-computer",
+      "machine-warehouse-handler"
+    ],
+    "image": {
+      "key": "assets/art/universe/parts/part-control-and-sensor-parts.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Workshop kit photograph of control and sensor parts: insulated instrument housings, sensor heads and compact automation modules without screens of readable text. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Identity-neutral spare-part kit; not a complete machine."
+    }
   },
   {
     "id": "part-thermal-optical-parts",
@@ -89,13 +243,42 @@
     "entityType": "Part",
     "category": "Power",
     "subCategory": "Thermal",
-    "subCategories": ["Thermal", "Optical"],
-    "sources": ["Crashed Ship", "Manufactured"],
-    "substanceIds": ["substance-glass", "substance-refined-ceramic", "substance-refined-insulator", "substance-refined-structural-metal"],
+    "subCategories": [
+      "Thermal",
+      "Optical"
+    ],
+    "sources": [
+      "Crashed Ship",
+      "Manufactured"
+    ],
+    "substanceIds": [
+      "substance-glass",
+      "substance-refined-ceramic",
+      "substance-refined-insulator",
+      "substance-refined-structural-metal"
+    ],
     "description": "Heat exchangers, lenses, and mirrors for concentrating or transferring thermal energy.",
     "canonStatus": "source-canonical",
-    "provenance": {"desktopPath": "Machines & Buildings/Parts/Parts.md"},
-    "machineIds": ["machine-thermoelectric-trickler", "machine-solar-thermal-generator", "machine-smelter-machine", "machine-welding-machine", "machine-climate-control-machine", "machine-growth-management-system", "machine-ship-reactor", "machine-ship-refinery-unit"]
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Parts/Parts.md"
+    },
+    "machineIds": [
+      "machine-ship-reactor",
+      "machine-ship-refinery-unit",
+      "machine-smelter-machine",
+      "machine-thermoelectric-trickler",
+      "machine-solar-thermal-generator",
+      "machine-climate-control-machine",
+      "machine-growth-management-system",
+      "machine-welding-machine"
+    ],
+    "image": {
+      "key": "assets/art/universe/parts/part-thermal-optical-parts.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Workshop kit photograph of thermal and optical parts: ceramic heat-exchanger plates, glass lenses and metal mirrors for concentrating or transferring heat. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Identity-neutral spare-part kit; not a complete machine."
+    }
   },
   {
     "id": "part-structural-components",
@@ -103,18 +286,51 @@
     "entityType": "Part",
     "category": "Other",
     "subCategory": "Structural",
-    "subCategories": ["Structural"],
-    "sources": ["Crashed Ship", "Manufactured"],
-    "substanceIds": ["substance-refined-structural-metal"],
+    "subCategories": [
+      "Structural"
+    ],
+    "sources": [
+      "Crashed Ship",
+      "Manufactured"
+    ],
+    "substanceIds": [
+      "substance-refined-structural-metal"
+    ],
     "description": "Frames, panels, and fasteners providing physical integrity.",
     "canonStatus": "source-canonical",
-    "provenance": {"desktopPath": "Machines & Buildings/Parts/Parts.md"},
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Parts/Parts.md"
+    },
     "machineIds": [
-      "machine-crude-chemical-battery", "machine-wind-generator", "machine-water-wheel-generator", "machine-solar-thermal-generator", "machine-drill-machine",
-      "machine-conveyor-machine", "machine-crusher-machine", "machine-smelter-machine", "machine-fabrication-machine", "machine-assembly-crane",
-      "machine-pump-machine", "machine-filtration-machine", "machine-power-distribution-system", "machine-exploration-vehicle", "machine-ship-scanner",
-      "machine-substance-analyser", "machine-ship-reactor", "machine-ship-refinery-unit"
-    ]
+      "machine-exploration-vehicle",
+      "machine-ship-scanner",
+      "machine-substance-analyser",
+      "machine-ship-reactor",
+      "machine-ship-refinery-unit",
+      "machine-drill-machine",
+      "machine-conveyor-machine",
+      "machine-crusher-machine",
+      "machine-smelter-machine",
+      "machine-crude-chemical-battery",
+      "machine-wind-generator",
+      "machine-water-wheel-generator",
+      "machine-solar-thermal-generator",
+      "machine-power-distribution-system",
+      "machine-pump-machine",
+      "machine-filtration-machine",
+      "machine-fabrication-machine",
+      "machine-assembly-crane",
+      "machine-livestock-handling-system",
+      "machine-bulk-stacker",
+      "machine-warehouse-handler"
+    ],
+    "image": {
+      "key": "assets/art/universe/parts/part-structural-components.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Workshop kit photograph of structural components: charcoal metal frames, panels and dark fasteners, the same kit used across Commonwealth machines. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Identity-neutral spare-part kit; not a complete machine."
+    }
   },
   {
     "id": "part-hydraulic-parts",
@@ -122,13 +338,37 @@
     "entityType": "Part",
     "category": "Mechanical",
     "subCategory": "Hydraulic",
-    "subCategories": ["Hydraulic"],
-    "sources": ["Crashed Ship", "Manufactured"],
-    "substanceIds": ["substance-refined-structural-metal", "substance-refined-lubricant"],
+    "subCategories": [
+      "Hydraulic"
+    ],
+    "sources": [
+      "Crashed Ship",
+      "Manufactured"
+    ],
+    "substanceIds": [
+      "substance-refined-structural-metal",
+      "substance-refined-lubricant"
+    ],
     "description": "Pistons, cylinders, and pressure systems for heavy-force applications.",
     "canonStatus": "source-canonical",
-    "provenance": {"desktopPath": "Machines & Buildings/Parts/Parts.md"},
-    "machineIds": ["machine-drill-machine", "machine-assembly-crane", "machine-pump-machine", "machine-ship-refinery-unit"]
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Parts/Parts.md"
+    },
+    "machineIds": [
+      "machine-ship-refinery-unit",
+      "machine-drill-machine",
+      "machine-pump-machine",
+      "machine-assembly-crane",
+      "machine-bulk-stacker",
+      "machine-warehouse-handler"
+    ],
+    "image": {
+      "key": "assets/art/universe/parts/part-hydraulic-parts.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Workshop kit photograph of hydraulic parts: pistons, cylinders and pressure fittings in structural metal with lubricant sheen for heavy-force work. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Identity-neutral spare-part kit; not a complete machine."
+    }
   },
   {
     "id": "part-extraction-parts",
@@ -136,13 +376,33 @@
     "entityType": "Part",
     "category": "Mining",
     "subCategory": "Extraction",
-    "subCategories": ["Extraction"],
-    "sources": ["Crashed Ship", "Manufactured"],
-    "substanceIds": ["substance-refined-structural-metal", "substance-refined-ceramic"],
+    "subCategories": [
+      "Extraction"
+    ],
+    "sources": [
+      "Crashed Ship",
+      "Manufactured"
+    ],
+    "substanceIds": [
+      "substance-refined-structural-metal",
+      "substance-refined-ceramic"
+    ],
     "description": "Cutting heads, drill bits, and boring tools for substance removal.",
     "canonStatus": "source-canonical",
-    "provenance": {"desktopPath": "Machines & Buildings/Parts/Parts.md"},
-    "machineIds": ["machine-drill-machine", "machine-substance-analyser"]
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Parts/Parts.md"
+    },
+    "machineIds": [
+      "machine-substance-analyser",
+      "machine-drill-machine"
+    ],
+    "image": {
+      "key": "assets/art/universe/parts/part-extraction-parts.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Workshop kit photograph of extraction parts: ceramic-tipped drill bits, cutting heads and boring tools with structural-metal collars. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Identity-neutral spare-part kit; not a complete machine."
+    }
   },
   {
     "id": "part-processing-parts",
@@ -150,13 +410,36 @@
     "entityType": "Part",
     "category": "Processing",
     "subCategory": "Processing",
-    "subCategories": ["Processing"],
-    "sources": ["Crashed Ship", "Manufactured"],
-    "substanceIds": ["substance-refined-ceramic", "substance-refined-structural-metal", "substance-glass"],
+    "subCategories": [
+      "Processing"
+    ],
+    "sources": [
+      "Crashed Ship",
+      "Manufactured"
+    ],
+    "substanceIds": [
+      "substance-refined-ceramic",
+      "substance-refined-structural-metal",
+      "substance-glass"
+    ],
     "description": "Crucibles, heating chambers, and separation elements for substance transformation.",
     "canonStatus": "source-canonical",
-    "provenance": {"desktopPath": "Machines & Buildings/Parts/Parts.md"},
-    "machineIds": ["machine-crusher-machine", "machine-smelter-machine", "machine-filtration-machine", "machine-ship-refinery-unit"]
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Parts/Parts.md"
+    },
+    "machineIds": [
+      "machine-ship-refinery-unit",
+      "machine-crusher-machine",
+      "machine-smelter-machine",
+      "machine-filtration-machine"
+    ],
+    "image": {
+      "key": "assets/art/universe/parts/part-processing-parts.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Workshop kit photograph of processing parts: ceramic crucibles, heating-chamber liners and glass separation elements. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Identity-neutral spare-part kit; not a complete machine."
+    }
   },
   {
     "id": "part-computing-parts",
@@ -164,13 +447,35 @@
     "entityType": "Part",
     "category": "Electronics",
     "subCategory": "Computing",
-    "subCategories": ["Computing"],
-    "sources": ["Crashed Ship", "Manufactured"],
-    "substanceIds": ["substance-refined-conductive-metal", "substance-glass", "substance-refined-insulator"],
+    "subCategories": [
+      "Computing"
+    ],
+    "sources": [
+      "Crashed Ship",
+      "Manufactured"
+    ],
+    "substanceIds": [
+      "substance-refined-conductive-metal",
+      "substance-glass",
+      "substance-refined-insulator"
+    ],
     "description": "Logic circuits, data storage, and display components for data processing.",
     "canonStatus": "source-canonical",
-    "provenance": {"desktopPath": "Machines & Buildings/Parts/Parts.md"},
-    "machineIds": ["machine-research-computer", "machine-ship-computer"]
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Parts/Parts.md"
+    },
+    "machineIds": [
+      "machine-ship-computer",
+      "machine-research-computer",
+      "machine-colony-operations-computer"
+    ],
+    "image": {
+      "key": "assets/art/universe/parts/part-computing-parts.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Workshop kit photograph of computing parts: logic boards, data-storage modules and dark glass display slabs with no readable UI text. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Identity-neutral spare-part kit; not a complete machine."
+    }
   },
   {
     "id": "part-fabrication-parts",
@@ -178,13 +483,34 @@
     "entityType": "Part",
     "category": "Manufacturing",
     "subCategory": "Fabrication",
-    "subCategories": ["Fabrication"],
-    "sources": ["Crashed Ship", "Manufactured"],
-    "substanceIds": ["substance-refined-structural-metal", "substance-refined-conductive-metal"],
+    "subCategories": [
+      "Fabrication"
+    ],
+    "sources": [
+      "Crashed Ship",
+      "Manufactured"
+    ],
+    "substanceIds": [
+      "substance-refined-structural-metal",
+      "substance-refined-conductive-metal"
+    ],
     "description": "Welding heads, forming dies, and assembly tooling for construction work.",
     "canonStatus": "source-canonical",
-    "provenance": {"desktopPath": "Machines & Buildings/Parts/Parts.md"},
-    "machineIds": ["machine-fabrication-machine", "machine-welding-machine", "machine-ship-reactor"]
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Parts/Parts.md"
+    },
+    "machineIds": [
+      "machine-ship-reactor",
+      "machine-fabrication-machine",
+      "machine-welding-machine"
+    ],
+    "image": {
+      "key": "assets/art/universe/parts/part-fabrication-parts.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Workshop kit photograph of fabrication parts: welding heads, forming dies and assembly tooling in structural and conductive metal. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Identity-neutral spare-part kit; not a complete machine."
+    }
   },
   {
     "id": "part-fluid-handling-parts",
@@ -192,12 +518,74 @@
     "entityType": "Part",
     "category": "Fluid Systems",
     "subCategory": "Fluid Handling",
-    "subCategories": ["Fluid Handling"],
-    "sources": ["Crashed Ship", "Manufactured"],
-    "substanceIds": ["substance-refined-structural-metal", "substance-refined-ceramic", "substance-refined-insulator"],
+    "subCategories": [
+      "Fluid Handling"
+    ],
+    "sources": [
+      "Crashed Ship",
+      "Manufactured"
+    ],
+    "substanceIds": [
+      "substance-refined-structural-metal",
+      "substance-refined-ceramic",
+      "substance-refined-insulator"
+    ],
     "description": "Pipes, valves, seals, and filters for fluid transport and containment.",
     "canonStatus": "source-canonical",
-    "provenance": {"desktopPath": "Machines & Buildings/Parts/Parts.md"},
-    "machineIds": ["machine-mine-ventilation", "machine-smelter-machine", "machine-life-support-machine", "machine-irrigation-system", "machine-filtration-machine", "machine-ship-life-support"]
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Parts/Parts.md"
+    },
+    "machineIds": [
+      "machine-ship-life-support",
+      "machine-mine-ventilation",
+      "machine-smelter-machine",
+      "machine-life-support-machine",
+      "machine-irrigation-system",
+      "machine-filtration-machine",
+      "machine-livestock-handling-system"
+    ],
+    "image": {
+      "key": "assets/art/universe/parts/part-fluid-handling-parts.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Workshop kit photograph of fluid-handling parts: pipes, valves, seals and ceramic-lined filters for water, brine and process fluids. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Identity-neutral spare-part kit; not a complete machine."
+    }
+  },
+  {
+    "id": "part-bulk-handling-parts",
+    "name": "Bulk Handling Parts",
+    "entityType": "Part",
+    "category": "Logistics",
+    "subCategory": "Bulk Handling",
+    "subCategories": [
+      "Bulk Handling"
+    ],
+    "sources": [
+      "Manufactured"
+    ],
+    "substanceIds": [
+      "substance-refined-structural-metal",
+      "substance-refined-ceramic"
+    ],
+    "description": "Hoppers, chutes, screens, grabs and pallet interfaces for moving loose bulk and unit loads.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "authoredFor": "industrial-catalog-gapfill"
+    },
+    "machineIds": [
+      "machine-conveyor-machine",
+      "machine-bulk-stacker",
+      "machine-warehouse-handler"
+    ],
+    "image": {
+      "key": "assets/art/universe/parts/part-bulk-handling-parts.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "Workshop kit photograph of bulk-handling parts: hoppers, chutes, screening decks, grabs and pallet forks in charcoal structural metal with ceramic wear lips. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Identity-neutral spare-part kit; not a complete machine.",
+      "generationBatchId": "industrial-linked-sample-20260915",
+      "generationStartedAt": "2026-09-15T07:16:58Z"
+    }
   }
 ]

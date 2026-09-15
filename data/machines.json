@@ -5,12 +5,27 @@
     "entityType": "Machine",
     "category": "Transport",
     "subCategory": "Wheeled Vehicle",
-    "sources": ["Shipboard or manufactured"],
-    "partIds": ["part-mechanical-parts", "part-power-electronics", "part-structural-components"],
+    "sources": [
+      "Shipboard or manufactured"
+    ],
+    "partIds": [
+      "part-mechanical-parts",
+      "part-power-electronics",
+      "part-structural-components"
+    ],
     "description": "A rugged six-wheeled all-terrain exploration rover equipped with geological sampling equipment, sensors and a pressurised cabin for frontier survey work.",
     "canonStatus": "source-canonical",
-    "provenance": {"desktopPath": "Machines & Buildings/Machines/Machines.md"},
-    "fuelType": "Liquid fuel"
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
+    "fuelType": "Liquid fuel",
+    "image": {
+      "key": "assets/art/universe/machines/machine-exploration-vehicle.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Three-quarter photograph of a rugged six-wheeled frontier exploration rover with a pressurised cabin, sampling arm and sensor mast, charcoal structural frame. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Transferable industrial machine assembled from canonical parts."
+    }
   },
   {
     "id": "machine-ship-scanner",
@@ -18,11 +33,26 @@
     "entityType": "Machine",
     "category": "Surveying",
     "subCategory": "Scanner",
-    "sources": ["Shipboard"],
-    "partIds": ["part-power-electronics", "part-control-and-sensor-parts", "part-structural-components"],
+    "sources": [
+      "Shipboard"
+    ],
+    "partIds": [
+      "part-power-electronics",
+      "part-control-and-sensor-parts",
+      "part-structural-components"
+    ],
     "description": "An integrated long-range ship sensor suite combining radar, seismic and thermal techniques to map planetary surfaces and shallow subsurface structures.",
     "canonStatus": "source-canonical",
-    "provenance": {"desktopPath": "Machines & Buildings/Machines/Machines.md"}
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
+    "image": {
+      "key": "assets/art/universe/machines/machine-ship-scanner.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Photograph of a shipboard long-range scanner suite: radar and seismic sensor clusters on a structural metal pallette, no readable displays. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Transferable industrial machine assembled from canonical parts."
+    }
   },
   {
     "id": "machine-substance-analyser",
@@ -30,11 +60,27 @@
     "entityType": "Machine",
     "category": "Surveying",
     "subCategory": "Analyser",
-    "sources": ["Shipboard or manufactured"],
-    "partIds": ["part-power-electronics", "part-control-and-sensor-parts", "part-extraction-parts", "part-structural-components"],
+    "sources": [
+      "Shipboard or manufactured"
+    ],
+    "partIds": [
+      "part-power-electronics",
+      "part-control-and-sensor-parts",
+      "part-extraction-parts",
+      "part-structural-components"
+    ],
     "description": "A close-range spectrographic and geological inspection system used to identify composition, density and structural properties of sampled deposits.",
     "canonStatus": "source-canonical",
-    "provenance": {"desktopPath": "Machines & Buildings/Machines/Machines.md"}
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
+    "image": {
+      "key": "assets/art/universe/machines/machine-substance-analyser.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Photograph of a close-range substance analyser: spectrographic head, ceramic sample stage and sensor housings on a compact structural frame. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Transferable industrial machine assembled from canonical parts."
+    }
   },
   {
     "id": "machine-ship-reactor",
@@ -42,12 +88,31 @@
     "entityType": "Machine",
     "category": "Power",
     "subCategory": "Reactor",
-    "sources": ["Shipboard"],
-    "partIds": ["part-generator-parts", "part-battery-parts", "part-power-electronics", "part-thermal-optical-parts", "part-control-and-sensor-parts", "part-fabrication-parts", "part-structural-components"],
+    "sources": [
+      "Shipboard"
+    ],
+    "partIds": [
+      "part-generator-parts",
+      "part-battery-parts",
+      "part-power-electronics",
+      "part-thermal-optical-parts",
+      "part-control-and-sensor-parts",
+      "part-fabrication-parts",
+      "part-structural-components"
+    ],
     "description": "A compact high-output fusion reactor designed to provide sustained electrical power for a spacecraft and, where connections permit, nearby surface infrastructure.",
     "canonStatus": "source-canonical",
-    "provenance": {"desktopPath": "Machines & Buildings/Machines/Machines.md"},
-    "outputSummary": "Shipboard electrical power"
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
+    "outputSummary": "Shipboard electrical power",
+    "image": {
+      "key": "assets/art/universe/machines/machine-ship-reactor.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Photograph of a compact shipboard fusion reactor module: shielded housing, thermal exchangers, battery banks and generator assemblies, unlabelled. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Transferable industrial machine assembled from canonical parts."
+    }
   },
   {
     "id": "machine-ship-life-support",
@@ -55,12 +120,28 @@
     "entityType": "Machine",
     "category": "Life Support",
     "subCategory": "Environmental",
-    "sources": ["Shipboard"],
-    "partIds": ["part-fluid-handling-parts", "part-mechanical-parts", "part-power-electronics", "part-control-and-sensor-parts"],
+    "sources": [
+      "Shipboard"
+    ],
+    "partIds": [
+      "part-fluid-handling-parts",
+      "part-mechanical-parts",
+      "part-power-electronics",
+      "part-control-and-sensor-parts"
+    ],
     "description": "A shipboard environmental management system controlling oxygen circulation, water recycling, humidity, temperature and atmospheric pressure.",
     "canonStatus": "source-canonical",
-    "provenance": {"desktopPath": "Machines & Buildings/Machines/Machines.md"},
-    "outputSummary": "Breathable air, climate regulation and water recycling"
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
+    "outputSummary": "Breathable air, climate regulation and water recycling",
+    "image": {
+      "key": "assets/art/universe/machines/machine-ship-life-support.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Photograph of a shipboard life-support plant: fluid loops, fans and sensor racks for air, water and pressure, no readable gauges. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Transferable industrial machine assembled from canonical parts."
+    }
   },
   {
     "id": "machine-ship-computer",
@@ -68,12 +149,27 @@
     "entityType": "Machine",
     "category": "Computing",
     "subCategory": "Data Processing",
-    "sources": ["Shipboard"],
-    "partIds": ["part-computing-parts", "part-power-electronics", "part-control-and-sensor-parts"],
+    "sources": [
+      "Shipboard"
+    ],
+    "partIds": [
+      "part-computing-parts",
+      "part-power-electronics",
+      "part-control-and-sensor-parts"
+    ],
     "description": "A spacecraft navigation, systems-control and data-processing mainframe capable of supporting engineering, scientific and operational workloads.",
     "canonStatus": "source-canonical",
-    "provenance": {"desktopPath": "Machines & Buildings/Machines/Machines.md"},
-    "outputSummary": "Navigation, operational data and system diagnostics"
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
+    "outputSummary": "Navigation, operational data and system diagnostics",
+    "image": {
+      "key": "assets/art/universe/machines/machine-ship-computer.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Photograph of a spacecraft mainframe: dark glass slabs, computing parts and power electronics in a structural rack, screens without readable text. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Transferable industrial machine assembled from canonical parts."
+    }
   },
   {
     "id": "machine-ship-refinery-unit",
@@ -81,13 +177,31 @@
     "entityType": "Machine",
     "category": "Processing",
     "subCategory": "Refinery",
-    "sources": ["Shipboard"],
-    "partIds": ["part-processing-parts", "part-mechanical-parts", "part-hydraulic-parts", "part-power-electronics", "part-thermal-optical-parts", "part-structural-components"],
+    "sources": [
+      "Shipboard"
+    ],
+    "partIds": [
+      "part-processing-parts",
+      "part-mechanical-parts",
+      "part-hydraulic-parts",
+      "part-power-electronics",
+      "part-thermal-optical-parts",
+      "part-structural-components"
+    ],
     "description": "A compact onboard materials-processing unit capable of basic thermal reduction, crushing and separation where full-scale refinery infrastructure is unavailable.",
     "canonStatus": "source-canonical",
-    "provenance": {"desktopPath": "Machines & Buildings/Machines/Machines.md"},
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
     "inputSummary": "Raw mineral feedstock",
-    "outputSummary": "Limited-throughput refined substances"
+    "outputSummary": "Limited-throughput refined substances",
+    "image": {
+      "key": "assets/art/universe/machines/machine-ship-refinery-unit.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Photograph of a compact ship refinery unit: small crusher, thermal chamber and hydraulic rams on a tight structural skid. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Transferable industrial machine assembled from canonical parts."
+    }
   },
   {
     "id": "machine-drill-machine",
@@ -95,13 +209,32 @@
     "entityType": "Machine",
     "category": "Extraction",
     "subCategory": "Drill",
-    "sources": ["Manufactured"],
-    "partIds": ["part-extraction-parts", "part-mechanical-parts", "part-hydraulic-parts", "part-power-electronics", "part-structural-components"],
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-extraction-parts",
+      "part-mechanical-parts",
+      "part-hydraulic-parts",
+      "part-power-electronics",
+      "part-structural-components"
+    ],
     "description": "A heavy rotary boring system using hardened cutting assemblies to break rock and access subsurface deposit seams.",
     "canonStatus": "source-canonical",
-    "provenance": {"desktopPath": "Machines & Buildings/Machines/Machines.md"},
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
     "inputSummary": "Power",
-    "outputSummary": "Extracted raw material"
+    "outputSummary": "Extracted raw material",
+    "image": {
+      "key": "assets/art/universe/machines/machine-drill-machine.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "Yard photograph of a heavy rotary drill machine: ceramic-tipped cutting head, hydraulic rams, mechanical gearbox and charcoal structural mast. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Transferable industrial machine assembled from canonical parts.",
+      "generationBatchId": "industrial-linked-sample-20260915",
+      "generationStartedAt": "2026-09-15T07:16:58Z"
+    }
   },
   {
     "id": "machine-conveyor-machine",
@@ -109,13 +242,31 @@
     "entityType": "Machine",
     "category": "Transport",
     "subCategory": "Conveyor",
-    "sources": ["Manufactured"],
-    "partIds": ["part-mechanical-parts", "part-power-electronics", "part-structural-components"],
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-bulk-handling-parts",
+      "part-mechanical-parts",
+      "part-power-electronics",
+      "part-structural-components"
+    ],
     "description": "An automated heavy-duty material transport system for moving loose minerals and industrial feedstock between extraction, processing and storage areas.",
     "canonStatus": "source-canonical",
-    "provenance": {"desktopPath": "Machines & Buildings/Machines/Machines.md"},
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
     "inputSummary": "Power",
-    "outputSummary": "Bulk material movement"
+    "outputSummary": "Bulk material movement",
+    "image": {
+      "key": "assets/art/universe/machines/machine-conveyor-machine.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "Yard photograph of a heavy-duty conveyor: charcoal structural truss, mechanical rollers, bulk-handling hopper and chute, power-electronics cabinet. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Transferable industrial machine assembled from canonical parts.",
+      "generationBatchId": "industrial-linked-sample-20260915",
+      "generationStartedAt": "2026-09-15T07:16:58Z"
+    }
   },
   {
     "id": "machine-mine-ventilation",
@@ -123,13 +274,28 @@
     "entityType": "Machine",
     "category": "Safety",
     "subCategory": "Ventilation",
-    "sources": ["Manufactured"],
-    "partIds": ["part-mechanical-parts", "part-fluid-handling-parts", "part-power-electronics"],
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-mechanical-parts",
+      "part-fluid-handling-parts",
+      "part-power-electronics"
+    ],
     "description": "A high-capacity fan, filtration and duct system that circulates breathable air and controls dust, contaminants and heat in underground workings.",
     "canonStatus": "source-canonical",
-    "provenance": {"desktopPath": "Machines & Buildings/Machines/Machines.md"},
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
     "inputSummary": "Power",
-    "outputSummary": "Ventilation and filtered air circulation"
+    "outputSummary": "Ventilation and filtered air circulation",
+    "image": {
+      "key": "assets/art/universe/machines/machine-mine-ventilation.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Yard photograph of mine ventilation plant: large fan, ducting and filtration housings in structural metal with sensor packs. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Transferable industrial machine assembled from canonical parts."
+    }
   },
   {
     "id": "machine-crusher-machine",
@@ -137,13 +303,29 @@
     "entityType": "Machine",
     "category": "Processing",
     "subCategory": "Crushing",
-    "sources": ["Manufactured"],
-    "partIds": ["part-mechanical-parts", "part-processing-parts", "part-structural-components", "part-power-electronics"],
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-mechanical-parts",
+      "part-processing-parts",
+      "part-structural-components",
+      "part-power-electronics"
+    ],
     "description": "A heavy mechanical crusher that reduces mined rock and mineral feedstock to controlled particle sizes for downstream processing.",
     "canonStatus": "source-canonical",
-    "provenance": {"desktopPath": "Machines & Buildings/Machines/Machines.md"},
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
     "inputSummary": "Raw ore and power",
-    "outputSummary": "Crushed mineral feedstock"
+    "outputSummary": "Crushed mineral feedstock",
+    "image": {
+      "key": "assets/art/universe/machines/machine-crusher-machine.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Yard photograph of a mineral crusher: processing chamber, mechanical drive and structural frame reducing rock to feedstock. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Transferable industrial machine assembled from canonical parts."
+    }
   },
   {
     "id": "machine-smelter-machine",
@@ -151,13 +333,30 @@
     "entityType": "Machine",
     "category": "Processing",
     "subCategory": "Smelting",
-    "sources": ["Manufactured"],
-    "partIds": ["part-processing-parts", "part-thermal-optical-parts", "part-structural-components", "part-power-electronics", "part-fluid-handling-parts"],
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-processing-parts",
+      "part-thermal-optical-parts",
+      "part-structural-components",
+      "part-power-electronics",
+      "part-fluid-handling-parts"
+    ],
     "description": "An industrial high-temperature furnace with refractory lining, controlled heating and cooling systems for reducing and refining mineral feedstock.",
     "canonStatus": "source-canonical",
-    "provenance": {"desktopPath": "Machines & Buildings/Machines/Machines.md"},
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
     "inputSummary": "Prepared mineral feedstock and heat energy",
-    "outputSummary": "Refined substances"
+    "outputSummary": "Refined substances",
+    "image": {
+      "key": "assets/art/universe/machines/machine-smelter-machine.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Yard photograph of an industrial smelter: ceramic-lined furnace, thermal stacks, fluid cooling loops and structural housing. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Transferable industrial machine assembled from canonical parts."
+    }
   },
   {
     "id": "machine-crude-chemical-battery",
@@ -165,13 +364,28 @@
     "entityType": "Machine",
     "category": "Power",
     "subCategory": "General",
-    "sources": ["Manufactured"],
-    "partIds": ["part-battery-parts", "part-power-electronics", "part-structural-components"],
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-battery-parts",
+      "part-power-electronics",
+      "part-structural-components"
+    ],
     "description": "A modular industrial electrochemical storage bank assembled from robust battery cells, conductive busbars and protected electrolyte reservoirs.",
     "canonStatus": "source-canonical",
-    "provenance": {"desktopPath": "Machines & Buildings/Machines/Machines.md"},
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
     "inputSummary": "Electrolyte solution and refined reactive metal",
-    "outputSummary": "Stored electrical power"
+    "outputSummary": "Stored electrical power",
+    "image": {
+      "key": "assets/art/universe/machines/machine-crude-chemical-battery.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Yard photograph of a modular chemical battery bank: cell stacks, busbars and protected electrolyte reservoirs in a structural rack. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Transferable industrial machine assembled from canonical parts."
+    }
   },
   {
     "id": "machine-wind-generator",
@@ -179,13 +393,30 @@
     "entityType": "Machine",
     "category": "Power",
     "subCategory": "General",
-    "sources": ["Manufactured"],
-    "partIds": ["part-generator-parts", "part-mechanical-parts", "part-power-electronics", "part-structural-components", "part-control-and-sensor-parts"],
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-generator-parts",
+      "part-mechanical-parts",
+      "part-power-electronics",
+      "part-structural-components",
+      "part-control-and-sensor-parts"
+    ],
     "description": "A tall atmospheric turbine with aerodynamic blades, structural tower and integrated generator equipment for converting local wind into electrical power.",
     "canonStatus": "source-canonical",
-    "provenance": {"desktopPath": "Machines & Buildings/Machines/Machines.md"},
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
     "inputSummary": "Ambient wind",
-    "outputSummary": "Power"
+    "outputSummary": "Power",
+    "image": {
+      "key": "assets/art/universe/machines/machine-wind-generator.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Yard photograph of a tall atmospheric wind generator: aerodynamic blades, structural tower, generator housing and sensor pack. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Transferable industrial machine assembled from canonical parts."
+    }
   },
   {
     "id": "machine-water-wheel-generator",
@@ -193,13 +424,30 @@
     "entityType": "Machine",
     "category": "Power",
     "subCategory": "General",
-    "sources": ["Manufactured"],
-    "partIds": ["part-generator-parts", "part-mechanical-parts", "part-power-electronics", "part-structural-components", "part-control-and-sensor-parts"],
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-generator-parts",
+      "part-mechanical-parts",
+      "part-power-electronics",
+      "part-structural-components",
+      "part-control-and-sensor-parts"
+    ],
     "description": "A hydro-mechanical generator that converts the movement of suitable flowing water into electrical power through a reinforced wheel and generator assembly.",
     "canonStatus": "source-canonical",
-    "provenance": {"desktopPath": "Machines & Buildings/Machines/Machines.md"},
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
     "inputSummary": "Flowing water",
-    "outputSummary": "Power"
+    "outputSummary": "Power",
+    "image": {
+      "key": "assets/art/universe/machines/machine-water-wheel-generator.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Yard photograph of a hydro-mechanical water-wheel generator: reinforced wheel, mechanical drive and generator housing on a race. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Transferable industrial machine assembled from canonical parts."
+    }
   },
   {
     "id": "machine-thermoelectric-trickler",
@@ -207,13 +455,28 @@
     "entityType": "Machine",
     "category": "Power",
     "subCategory": "General",
-    "sources": ["Manufactured"],
-    "partIds": ["part-thermal-optical-parts", "part-power-electronics", "part-battery-parts"],
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-thermal-optical-parts",
+      "part-power-electronics",
+      "part-battery-parts"
+    ],
     "description": "A compact thermoelectric generator that turns a maintained temperature differential into low-output electrical power.",
     "canonStatus": "source-canonical",
-    "provenance": {"desktopPath": "Machines & Buildings/Machines/Machines.md"},
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
     "inputSummary": "Heat source from suitable solid, liquid or gaseous fuel",
-    "outputSummary": "Power"
+    "outputSummary": "Power",
+    "image": {
+      "key": "assets/art/universe/machines/machine-thermoelectric-trickler.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Close photograph of a compact thermoelectric trickler: ceramic heat plates, power electronics and a small battery pack on a portable pad. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Transferable industrial machine assembled from canonical parts."
+    }
   },
   {
     "id": "machine-solar-thermal-generator",
@@ -221,13 +484,31 @@
     "entityType": "Machine",
     "category": "Power",
     "subCategory": "General",
-    "sources": ["Manufactured"],
-    "partIds": ["part-generator-parts", "part-mechanical-parts", "part-power-electronics", "part-thermal-optical-parts", "part-control-and-sensor-parts", "part-structural-components"],
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-generator-parts",
+      "part-mechanical-parts",
+      "part-power-electronics",
+      "part-thermal-optical-parts",
+      "part-control-and-sensor-parts",
+      "part-structural-components"
+    ],
     "description": "A solar-thermal generation system using tracked reflectors and a central receiver to heat working fluid and produce electrical power.",
     "canonStatus": "source-canonical",
-    "provenance": {"desktopPath": "Machines & Buildings/Machines/Machines.md"},
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
     "inputSummary": "Sunlight and working fluid",
-    "outputSummary": "Power"
+    "outputSummary": "Power",
+    "image": {
+      "key": "assets/art/universe/machines/machine-solar-thermal-generator.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Yard photograph of a solar-thermal generator: tracked mirrors, central receiver, thermal plumbing and generator housing. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Transferable industrial machine assembled from canonical parts."
+    }
   },
   {
     "id": "machine-power-distribution-system",
@@ -235,13 +516,28 @@
     "entityType": "Machine",
     "category": "Power",
     "subCategory": "Distribution",
-    "sources": ["Manufactured"],
-    "partIds": ["part-power-electronics", "part-control-and-sensor-parts", "part-structural-components"],
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-power-electronics",
+      "part-control-and-sensor-parts",
+      "part-structural-components"
+    ],
     "description": "A switchyard, transformer and control system that safely routes electrical power between generation sources, storage and colony facilities.",
     "canonStatus": "source-canonical",
-    "provenance": {"desktopPath": "Machines & Buildings/Machines/Machines.md"},
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
     "inputSummary": "Electrical power from connected sources",
-    "outputSummary": "Distributed facility power"
+    "outputSummary": "Distributed facility power",
+    "image": {
+      "key": "assets/art/universe/machines/machine-power-distribution-system.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Yard photograph of a power distribution switchyard: transformers, buswork and control cabinets, no readable signage. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Transferable industrial machine assembled from canonical parts."
+    }
   },
   {
     "id": "machine-life-support-machine",
@@ -249,13 +545,29 @@
     "entityType": "Machine",
     "category": "Life Support",
     "subCategory": "Environmental",
-    "sources": ["Manufactured"],
-    "partIds": ["part-fluid-handling-parts", "part-mechanical-parts", "part-power-electronics", "part-control-and-sensor-parts"],
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-fluid-handling-parts",
+      "part-mechanical-parts",
+      "part-power-electronics",
+      "part-control-and-sensor-parts"
+    ],
     "description": "A modular habitat environmental system providing air recycling, carbon-dioxide removal and water-management support.",
     "canonStatus": "source-canonical",
-    "provenance": {"desktopPath": "Machines & Buildings/Machines/Machines.md"},
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
     "inputSummary": "Power",
-    "outputSummary": "Breathable air and environmental recycling"
+    "outputSummary": "Breathable air and environmental recycling",
+    "image": {
+      "key": "assets/art/universe/machines/machine-life-support-machine.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Photograph of a modular habitat life-support machine: air-recycling stacks, fluid loops and sensor racks. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Transferable industrial machine assembled from canonical parts."
+    }
   },
   {
     "id": "machine-climate-control-machine",
@@ -263,13 +575,29 @@
     "entityType": "Machine",
     "category": "Life Support",
     "subCategory": "Climate",
-    "sources": ["Manufactured"],
-    "partIds": ["part-thermal-optical-parts", "part-mechanical-parts", "part-power-electronics", "part-control-and-sensor-parts"],
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-thermal-optical-parts",
+      "part-mechanical-parts",
+      "part-power-electronics",
+      "part-control-and-sensor-parts"
+    ],
     "description": "A local environmental-control unit providing heating, cooling, ventilation, humidity management and particulate filtration in occupied structures.",
     "canonStatus": "source-canonical",
-    "provenance": {"desktopPath": "Machines & Buildings/Machines/Machines.md"},
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
     "inputSummary": "Power",
-    "outputSummary": "Temperature and humidity regulation"
+    "outputSummary": "Temperature and humidity regulation",
+    "image": {
+      "key": "assets/art/universe/machines/machine-climate-control-machine.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Photograph of a wall-mountable climate-control machine: thermal exchanger, fans and sensor pack for heating, cooling and filtration. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Transferable industrial machine assembled from canonical parts."
+    }
   },
   {
     "id": "machine-irrigation-system",
@@ -277,13 +605,28 @@
     "entityType": "Machine",
     "category": "Agriculture",
     "subCategory": "Irrigation",
-    "sources": ["Manufactured"],
-    "partIds": ["part-fluid-handling-parts", "part-mechanical-parts", "part-power-electronics"],
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-fluid-handling-parts",
+      "part-mechanical-parts",
+      "part-power-electronics"
+    ],
     "description": "An automated water-distribution network equipped with moisture monitoring and nutrient-dosing controls for managed cultivation.",
     "canonStatus": "source-canonical",
-    "provenance": {"desktopPath": "Machines & Buildings/Machines/Machines.md"},
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
     "inputSummary": "Fresh water and power",
-    "outputSummary": "Controlled crop irrigation"
+    "outputSummary": "Controlled crop irrigation",
+    "image": {
+      "key": "assets/art/universe/machines/machine-irrigation-system.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Yard photograph of an irrigation system: pipes, valves, pumps and dosing controls laid out as a farm/ranch watering network. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Transferable industrial machine assembled from canonical parts."
+    }
   },
   {
     "id": "machine-growth-management-system",
@@ -291,13 +634,28 @@
     "entityType": "Machine",
     "category": "Agriculture",
     "subCategory": "Growth Control",
-    "sources": ["Manufactured"],
-    "partIds": ["part-thermal-optical-parts", "part-control-and-sensor-parts", "part-power-electronics"],
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-thermal-optical-parts",
+      "part-control-and-sensor-parts",
+      "part-power-electronics"
+    ],
     "description": "A cultivation-control system coordinating grow lighting, atmospheric conditions and biological monitoring to maintain productive growing environments.",
     "canonStatus": "source-canonical",
-    "provenance": {"desktopPath": "Machines & Buildings/Machines/Machines.md"},
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
     "inputSummary": "Power",
-    "outputSummary": "Managed growing conditions"
+    "outputSummary": "Managed growing conditions",
+    "image": {
+      "key": "assets/art/universe/machines/machine-growth-management-system.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Photograph of a growth-management system: grow-lighting bars, atmospheric sensors and thermal-optical housings over cultivation trays. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Transferable industrial machine assembled from canonical parts."
+    }
   },
   {
     "id": "machine-pump-machine",
@@ -305,13 +663,29 @@
     "entityType": "Machine",
     "category": "Fluid",
     "subCategory": "Pump",
-    "sources": ["Manufactured"],
-    "partIds": ["part-hydraulic-parts", "part-mechanical-parts", "part-power-electronics", "part-structural-components"],
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-hydraulic-parts",
+      "part-mechanical-parts",
+      "part-power-electronics",
+      "part-structural-components"
+    ],
     "description": "A high-pressure industrial pump for recovering and transferring water, brines, liquids or suitable gases between deposits, processing systems and storage.",
     "canonStatus": "source-canonical",
-    "provenance": {"desktopPath": "Machines & Buildings/Machines/Machines.md"},
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
     "inputSummary": "Power",
-    "outputSummary": "Pressurised fluid flow"
+    "outputSummary": "Pressurised fluid flow",
+    "image": {
+      "key": "assets/art/universe/machines/machine-pump-machine.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Yard photograph of a high-pressure industrial pump: hydraulic drive, mechanical body and structural skid for water, brine or gas. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Transferable industrial machine assembled from canonical parts."
+    }
   },
   {
     "id": "machine-filtration-machine",
@@ -319,13 +693,28 @@
     "entityType": "Machine",
     "category": "Fluid",
     "subCategory": "Filtration",
-    "sources": ["Manufactured"],
-    "partIds": ["part-fluid-handling-parts", "part-processing-parts", "part-structural-components"],
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-fluid-handling-parts",
+      "part-processing-parts",
+      "part-structural-components"
+    ],
     "description": "A modular mechanical and chemical filtration bank for separating salts, particulates and other contaminants from raw fluid streams.",
     "canonStatus": "source-canonical",
-    "provenance": {"desktopPath": "Machines & Buildings/Machines/Machines.md"},
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
     "inputSummary": "Raw fluid and power",
-    "outputSummary": "Conditioned or purified fluid"
+    "outputSummary": "Conditioned or purified fluid",
+    "image": {
+      "key": "assets/art/universe/machines/machine-filtration-machine.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Yard photograph of a filtration bank: ceramic-lined vessels, pipes and processing cartridges on a structural frame. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Transferable industrial machine assembled from canonical parts."
+    }
   },
   {
     "id": "machine-research-computer",
@@ -333,13 +722,28 @@
     "entityType": "Machine",
     "category": "Research",
     "subCategory": "Data Processing",
-    "sources": ["Manufactured"],
-    "partIds": ["part-computing-parts", "part-power-electronics", "part-control-and-sensor-parts"],
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-computing-parts",
+      "part-power-electronics",
+      "part-control-and-sensor-parts"
+    ],
     "description": "An advanced scientific workstation for processing samples, running engineering models and compiling technical analyses and designs.",
     "canonStatus": "source-canonical",
-    "provenance": {"desktopPath": "Machines & Buildings/Machines/Machines.md"},
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
     "inputSummary": "Power and research data",
-    "outputSummary": "Scientific analysis and technical data"
+    "outputSummary": "Scientific analysis and technical data",
+    "image": {
+      "key": "assets/art/universe/machines/machine-research-computer.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Photograph of a scientific research computer: dark glass workstations and computing racks without readable UI text. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Transferable industrial machine assembled from canonical parts."
+    }
   },
   {
     "id": "machine-fabrication-machine",
@@ -347,13 +751,29 @@
     "entityType": "Machine",
     "category": "Manufacturing",
     "subCategory": "Fabrication",
-    "sources": ["Manufactured"],
-    "partIds": ["part-fabrication-parts", "part-mechanical-parts", "part-power-electronics", "part-structural-components"],
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-fabrication-parts",
+      "part-mechanical-parts",
+      "part-power-electronics",
+      "part-structural-components"
+    ],
     "description": "A precision industrial machining and forming system that shapes refined metals, ceramics and composites into standardised parts and components.",
     "canonStatus": "source-canonical",
-    "provenance": {"desktopPath": "Machines & Buildings/Machines/Machines.md"},
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
     "inputSummary": "Refined substances and power",
-    "outputSummary": "Fabricated components"
+    "outputSummary": "Fabricated components",
+    "image": {
+      "key": "assets/art/universe/machines/machine-fabrication-machine.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Yard photograph of a fabrication machine: forming dies, mechanical axes and structural enclosure for machining parts. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Transferable industrial machine assembled from canonical parts."
+    }
   },
   {
     "id": "machine-assembly-crane",
@@ -361,13 +781,30 @@
     "entityType": "Machine",
     "category": "Manufacturing",
     "subCategory": "Assembly",
-    "sources": ["Manufactured"],
-    "partIds": ["part-hydraulic-parts", "part-mechanical-parts", "part-power-electronics", "part-structural-components", "part-control-and-sensor-parts"],
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-hydraulic-parts",
+      "part-mechanical-parts",
+      "part-power-electronics",
+      "part-structural-components",
+      "part-control-and-sensor-parts"
+    ],
     "description": "A heavy gantry crane and powered manipulator used in industrial, shipyard and port facilities to position structural sections, machinery and cargo.",
     "canonStatus": "source-canonical",
-    "provenance": {"desktopPath": "Machines & Buildings/Machines/Machines.md"},
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
     "inputSummary": "Power",
-    "outputSummary": "Heavy lifting and assembly capability"
+    "outputSummary": "Heavy lifting and assembly capability",
+    "image": {
+      "key": "assets/art/universe/machines/machine-assembly-crane.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Yard photograph of a heavy assembly gantry crane: hydraulic hoist, structural span and sensor-guided manipulator, not a warehouse fork system. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Transferable industrial machine assembled from canonical parts."
+    }
   },
   {
     "id": "machine-welding-machine",
@@ -375,12 +812,153 @@
     "entityType": "Machine",
     "category": "Manufacturing",
     "subCategory": "Welding",
-    "sources": ["Manufactured"],
-    "partIds": ["part-fabrication-parts", "part-power-electronics", "part-thermal-optical-parts"],
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-fabrication-parts",
+      "part-power-electronics",
+      "part-thermal-optical-parts"
+    ],
     "description": "A heavy industrial welding system using high-current arc and directed-energy emitters to form durable structural joints.",
     "canonStatus": "source-canonical",
-    "provenance": {"desktopPath": "Machines & Buildings/Machines/Machines.md"},
+    "provenance": {
+      "desktopPath": "Machines & Buildings/Machines/Machines.md"
+    },
     "inputSummary": "Power and appropriate joining consumables",
-    "outputSummary": "Welded structural joints"
+    "outputSummary": "Welded structural joints",
+    "image": {
+      "key": "assets/art/universe/machines/machine-welding-machine.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Yard photograph of a heavy welding machine: directed-energy head, fabrication tooling and thermal shielding on a structural cart. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Transferable industrial machine assembled from canonical parts."
+    }
+  },
+  {
+    "id": "machine-livestock-handling-system",
+    "name": "Livestock Handling System",
+    "entityType": "Machine",
+    "category": "Agriculture",
+    "subCategory": "Livestock",
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-mechanical-parts",
+      "part-structural-components",
+      "part-fluid-handling-parts",
+      "part-control-and-sensor-parts"
+    ],
+    "description": "A transferable yard system of crushes, gates, watering points and sensors used to breed and harvest local colony herd animals for food.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "authoredFor": "industrial-catalog-gapfill"
+    },
+    "inputSummary": "Power, water and local herd animals",
+    "outputSummary": "Managed breeding and food harvest from local livestock",
+    "image": {
+      "key": "assets/art/universe/machines/machine-livestock-handling-system.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Yard photograph of a livestock handling system: charcoal metal crush, gates, watering troughs and sensor tags for breeding and harvesting local colony herd animals, no Earth brand marks. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Transferable industrial machine assembled from canonical parts."
+    }
+  },
+  {
+    "id": "machine-colony-operations-computer",
+    "name": "Colony Operations Computer",
+    "entityType": "Machine",
+    "category": "Computing",
+    "subCategory": "Colony Operations",
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-computing-parts",
+      "part-power-electronics",
+      "part-control-and-sensor-parts"
+    ],
+    "description": "A transferable colony coordination computer that runs mining-settlement operations, staffing and efficiency control from assembled computing parts.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "authoredFor": "industrial-catalog-gapfill"
+    },
+    "inputSummary": "Power and operational data",
+    "outputSummary": "Colony coordination and operating efficiency",
+    "image": {
+      "key": "assets/art/universe/machines/machine-colony-operations-computer.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Photograph of a colony operations computer: clustered computing racks, dark glass coordination boards and sensor links for running a mining colony efficiently, screens without readable text. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Transferable industrial machine assembled from canonical parts."
+    }
+  },
+  {
+    "id": "machine-bulk-stacker",
+    "name": "Bulk Stacker",
+    "entityType": "Machine",
+    "category": "Transport",
+    "subCategory": "Stacker",
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-bulk-handling-parts",
+      "part-hydraulic-parts",
+      "part-mechanical-parts",
+      "part-structural-components",
+      "part-power-electronics"
+    ],
+    "description": "A transferable open-yard stacker-reclaimer that loads, stacks and reclaims loose bulk at a stockpile, wearing with use and movable to another yard.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "authoredFor": "industrial-catalog-gapfill"
+    },
+    "inputSummary": "Power and loose bulk material",
+    "outputSummary": "Stacked or reclaimed bulk at stockpile throughput",
+    "image": {
+      "key": "assets/art/universe/machines/machine-bulk-stacker.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "Yard photograph of a bulk stacker-reclaimer: long structural boom, hydraulic luffing, conveyor belt and bulk-handling hopper stacking loose aggregate in an open yard. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Transferable industrial machine assembled from canonical parts.",
+      "generationBatchId": "industrial-linked-sample-20260915",
+      "generationStartedAt": "2026-09-15T07:16:58Z"
+    }
+  },
+  {
+    "id": "machine-warehouse-handler",
+    "name": "Warehouse Handler",
+    "entityType": "Machine",
+    "category": "Transport",
+    "subCategory": "Warehouse Handling",
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-bulk-handling-parts",
+      "part-hydraulic-parts",
+      "part-mechanical-parts",
+      "part-structural-components",
+      "part-power-electronics",
+      "part-control-and-sensor-parts"
+    ],
+    "description": "A transferable enclosed-aisle handler for loading, inventory movement and dispatch inside a warehouse, lighter than a shipyard assembly crane.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "authoredFor": "industrial-catalog-gapfill"
+    },
+    "inputSummary": "Power and unitised or palletised goods",
+    "outputSummary": "Warehouse loading, inventory handling and dispatch throughput",
+    "image": {
+      "key": "assets/art/universe/machines/machine-warehouse-handler.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "Interior photograph of a warehouse handler: enclosed-aisle gantry with pallet forks and bulk-handling grabs, lighter than a shipyard assembly crane. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Transferable industrial machine assembled from canonical parts.",
+      "generationBatchId": "industrial-linked-sample-20260915",
+      "generationStartedAt": "2026-09-15T07:16:58Z"
+    }
   }
 ]
