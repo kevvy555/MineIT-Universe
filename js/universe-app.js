@@ -623,7 +623,7 @@ function fieldsFor(collection, entity) {
       field('Landforms', links(entity.landformIds)),
       field('Biomes', links(entity.biomeIds)),
       field('Water', links(entity.hydrosphereIds)),
-      field('Tiles', links(relatedIds('landscapeTiles', item => item.tilesetId === entity.id))),
+      field('Tile count', esc(related('landscapeTiles', item => item.tilesetId === entity.id).length)),
       field('Open land lore', loreOpenLink(entity.sourceDocumentId, entity.sourceSection))
     );
   }
@@ -825,8 +825,9 @@ function renderDetail() {
   detailEl.innerHTML = `${validationStatus()}${canonWarning(entity, collection)}<div class="breadcrumbs">${breadcrumbs()}</div>
     <div class="hero${heroClass}"><div class="placeholder${placeholderClass}">${image}</div><div><div class="eyebrow">${esc(state.catalogue.typeLabelFor(entity.id))}</div><h1>${esc(entity.name)}</h1><div class="subtitle">${esc(subtitle(collection, entity))}</div></div></div>
     <div class="description">${esc(entity.description || '')}</div>
+    ${landscapeSections(collection, entity)}
     <section class="section"><h2>Details</h2><div class="fieldRows">${fieldsFor(collection, entity)}</div></section>
-    ${landscapeSections(collection, entity)}${resourceSection(entity)}${extraSections(entity)}${imageSection(entity)}
+    ${resourceSection(entity)}${extraSections(entity)}${imageSection(entity)}
     <section class="section"><h2>Development details</h2><div class="longText"><div class="dev"><span>ID</span><code>${esc(entity.id)}</code><span>Collection</span><code>${esc(collection)}</code><span>Perspective</span><code>${esc(state.activeView)}</code><span>Content version</span><code>${esc(state.catalogue.manifest.contentVersion)}</code></div><pre class="rawBlock">${esc(JSON.stringify(entity, null, 2))}</pre></div></section>`;
 
   detailEl.querySelectorAll('[data-ref]').forEach(button => button.onclick = () => selectEntity(button.dataset.ref));
