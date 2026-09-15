@@ -111,7 +111,7 @@ The current calendar is the Standard Terran Calendar; the canonical universe dat
 
 ## Image-generation state
 
-People, named ships and star systems currently carry image metadata. Purchasable ship classes may also. Star-system vistas are identity-bearing 16:9 art under `assets/art/universe/systems/`.
+People, named ships and star systems currently carry image metadata. Purchasable ship classes may also. Star-system vistas are identity-bearing 16:9 art under `assets/art/universe/systems/`. Substances may carry optional catalog-still image metadata; only records with an `image` object are in the generation process.
 
 Each image record explicitly stores:
 
