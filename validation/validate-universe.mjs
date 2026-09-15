@@ -44,7 +44,7 @@ for (const [collectionName, records] of Object.entries(collections)) {
     byId.set(record.id, { collectionName, record });
     if (!record.name) warnings.push(`${record.id}: missing display name.`);
 
-    if (['people', 'ships'].includes(collectionName) && !record.image) errors.push(`${record.id}: ${collectionName} records require image-generation metadata.`);
+    if (['people', 'ships', 'starSystems'].includes(collectionName) && !record.image) errors.push(`${record.id}: ${collectionName} records require image-generation metadata.`);
     if (record.image) {
       if (typeof record.image.generated !== 'boolean') errors.push(`${record.id}.image.generated must be boolean.`);
       if (!imageStatuses.has(record.image.status)) errors.push(`${record.id}.image.status invalid.`);

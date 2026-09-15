@@ -330,7 +330,8 @@ Future shared-universe player effects would require a separate explicit design.
 Current artwork priority is:
 
 1. people;
-2. named ships.
+2. named ships;
+3. star-system vistas.
 
 Purchasable ship classes and industrial substance categories may also carry optional image metadata. Other entity artwork may be introduced later.
 
