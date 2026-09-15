@@ -9,6 +9,7 @@ people/
 ships/
 ship-classes/
 organisations/
+substances/
 systems/
 planets/
 settlements/
