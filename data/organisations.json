@@ -62,12 +62,10 @@
     "canonStatus": "generated-expansion",
     "image": {
       "key": "assets/art/universe/organisations/organisation-helix-industrial-group.webp",
-      "generated": false,
-      "status": "in-progress",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. A bronze helical coil wrapping a graphite angular core, one clean structural turn, industrial and disciplined, like a propulsion-alloy maker's mark. Colour palette: graphite, bronze. Design language: angular disciplined industrial design. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
-      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image.",
-      "generationBatchId": "organisation-logos-remaining-20260915",
-      "generationStartedAt": "2026-09-15T06:03:08Z"
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
     }
   },
   {
@@ -96,12 +94,10 @@
     "canonStatus": "generated-expansion",
     "image": {
       "key": "assets/art/universe/organisations/organisation-verdant-horizon.webp",
-      "generated": false,
-      "status": "in-progress",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. A white circular laboratory seal with a single botanical-green horizon leaf-arc rising across the lower third, clean and rounded, biotech rather than agricultural-folk. Colour palette: white, botanical green. Design language: clean rounded laboratory design. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
-      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image.",
-      "generationBatchId": "organisation-logos-remaining-20260915",
-      "generationStartedAt": "2026-09-15T06:03:08Z"
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
     }
   },
   {
@@ -131,12 +127,10 @@
     },
     "image": {
       "key": "assets/art/universe/organisations/organisation-meridian-exchange-authority.webp",
-      "generated": false,
-      "status": "in-progress",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. A bronze meridian arc crossing a harbour-grey disc, balanced like an exchange scale but made of orbital-trade geometry, white negative space, civic-commercial not royal. Colour palette: harbour grey, bronze, white. Design language: freeport civic-commercial identity, orderly exchange geometry. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
-      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image.",
-      "generationBatchId": "organisation-logos-remaining-20260915",
-      "generationStartedAt": "2026-09-15T06:03:08Z"
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
     }
   },
   {
@@ -166,12 +160,10 @@
     },
     "image": {
       "key": "assets/art/universe/organisations/organisation-meridian-logistics.webp",
-      "generated": false,
-      "status": "in-progress",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. Three stacked container-teal chevrons forming a freight-block glyph on steel, with a thin hazard-white registration notch that is geometric only, not a letter. Colour palette: container teal, steel, hazard white. Design language: cooperative freight identity, stacked container geometry. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
-      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image.",
-      "generationBatchId": "organisation-logos-remaining-20260915",
-      "generationStartedAt": "2026-09-15T06:03:08Z"
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
     }
   },
   {
@@ -238,12 +230,10 @@
     },
     "image": {
       "key": "assets/art/universe/organisations/organisation-orison-cognition-institute.webp",
-      "generated": false,
-      "status": "in-progress",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. A cool-teal bounded cognition ring around a pale-grey open core, one incomplete circuit suggesting auditability rather than an all-seeing eye or humanoid face. Colour palette: pale grey, cool teal, white. Design language: bounded research identity, glazed laboratory minimalism. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
-      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image.",
-      "generationBatchId": "organisation-logos-remaining-20260915",
-      "generationStartedAt": "2026-09-15T06:03:08Z"
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
     }
   },
   {
@@ -273,12 +263,10 @@
     },
     "image": {
       "key": "assets/art/universe/organisations/organisation-orison-cognition-assembly.webp",
-      "generated": false,
-      "status": "in-progress",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. Two overlapping slate oversight rings offset on a white field, audit-blue inner gap, austere regulatory geometry, no masks or faces. Colour palette: slate, audit blue, white. Design language: austere civic-regulatory identity, clear oversight geometry. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
-      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image.",
-      "generationBatchId": "organisation-logos-remaining-20260915",
-      "generationStartedAt": "2026-09-15T06:03:08Z"
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
     }
   },
   {
@@ -308,12 +296,10 @@
     },
     "image": {
       "key": "assets/art/universe/organisations/organisation-caldera-materials.webp",
-      "generated": false,
-      "status": "in-progress",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. A furnace-orange caldera ring with a ceramic-white inner disc set in slag-black, suggesting a high-temperature crucible seen from above. Colour palette: slag black, furnace orange, ceramic white. Design language: high-temperature materials identity, crucible and stack geometry. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
-      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image.",
-      "generationBatchId": "organisation-logos-remaining-20260915",
-      "generationStartedAt": "2026-09-15T06:03:08Z"
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
     }
   },
   {
@@ -343,12 +329,10 @@
     },
     "image": {
       "key": "assets/art/universe/organisations/organisation-halcyon-habitat-group.webp",
-      "generated": false,
-      "status": "in-progress",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. Stacked pearl habitat rings forming a shallow crown of pressurised decks, habitat-teal inner band, structural-silver joints, residential construction not royalty. Colour palette: pearl, habitat teal, structural silver. Design language: pressurised habitat-construction identity, stacked deck geometry. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
-      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image.",
-      "generationBatchId": "organisation-logos-remaining-20260915",
-      "generationStartedAt": "2026-09-15T06:03:08Z"
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
     }
   },
   {
@@ -378,12 +362,10 @@
     },
     "image": {
       "key": "assets/art/universe/organisations/organisation-nacre-biosystems.webp",
-      "generated": false,
-      "status": "in-progress",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. A nacre-white shell spiral with a deep-teal inner fold and a soft biolume-green highlight, marine-laboratory rather than decorative seashell kitsch. Colour palette: nacre white, deep teal, soft biolume green. Design language: marine-laboratory identity, pearlescent biochemical geometry. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
-      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image.",
-      "generationBatchId": "organisation-logos-remaining-20260915",
-      "generationStartedAt": "2026-09-15T06:03:08Z"
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
     }
   },
   {
@@ -413,12 +395,10 @@
     },
     "image": {
       "key": "assets/art/universe/organisations/organisation-damaris-frontier-authority.webp",
-      "generated": false,
-      "status": "in-progress",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. A bastion-grey civic shield with a frontier-ochre survey notch cut from one corner and a white open court in the centre, government not military-imperial. Colour palette: bastion grey, frontier ochre, white. Design language: fortified civic-government identity, practical frontier geometry. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
-      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image.",
-      "generationBatchId": "organisation-logos-remaining-20260915",
-      "generationStartedAt": "2026-09-15T06:03:08Z"
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
     }
   },
   {
