@@ -580,12 +580,10 @@
     ],
     "image": {
       "key": "assets/art/universe/parts/part-bulk-handling-parts.webp",
-      "generated": false,
-      "status": "in-progress",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "Workshop kit photograph of bulk-handling parts: hoppers, chutes, screening decks, grabs and pallet forks in charcoal structural metal with ceramic wear lips. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Identity-neutral spare-part kit; not a complete machine.",
-      "generationBatchId": "industrial-linked-sample-20260915",
-      "generationStartedAt": "2026-09-15T07:16:58Z"
+      "notes": "Identity-neutral spare-part kit; not a complete machine."
     }
   }
 ]

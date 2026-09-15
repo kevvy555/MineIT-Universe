@@ -158,12 +158,10 @@
     },
     "image": {
       "key": "assets/art/universe/buildings/building-deep-mine.webp",
-      "generated": false,
-      "status": "in-progress",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "Exterior of a reinforced deep mine: structural-metal headframe, the same drill machine, conveyor into the adit, and mine ventilation fans on the collar. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records.",
-      "generationBatchId": "industrial-linked-sample-20260915",
-      "generationStartedAt": "2026-09-15T07:16:58Z"
+      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records."
     }
   },
   {
@@ -846,12 +844,10 @@
     },
     "image": {
       "key": "assets/art/universe/buildings/building-stockpile.webp",
-      "generated": false,
-      "status": "in-progress",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "Open frontier stockpile yard: the same conveyor feeding a bulk stacker-reclaimer over loose aggregate piles, no walls, no warehouse gantry. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records.",
-      "generationBatchId": "industrial-linked-sample-20260915",
-      "generationStartedAt": "2026-09-15T07:16:58Z"
+      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records."
     }
   },
   {
@@ -883,12 +879,10 @@
     },
     "image": {
       "key": "assets/art/universe/buildings/building-warehouse.webp",
-      "generated": false,
-      "status": "in-progress",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "Exterior and open-door view of an enclosed warehouse: wood-stone-metal hall with the warehouse handler moving pallets inside, not the shipyard crane and not an open stacker. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records.",
-      "generationBatchId": "industrial-linked-sample-20260915",
-      "generationStartedAt": "2026-09-15T07:16:58Z"
+      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records."
     }
   }
 ]
