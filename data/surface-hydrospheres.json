@@ -1,0 +1,92 @@
+[
+  {
+    "id": "hydrosphere-none",
+    "name": "Dry land",
+    "layer": "hydrosphere",
+    "description": "No standing or flowing water at the square.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "hydrosphere-ocean",
+    "name": "Ocean",
+    "layer": "hydrosphere",
+    "description": "Sea-level ocean body.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "hydrosphere-lake",
+    "name": "Lake",
+    "layer": "hydrosphere",
+    "description": "Standing inland water.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "hydrosphere-river",
+    "name": "River",
+    "layer": "hydrosphere",
+    "description": "Flowing surface water.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "hydrosphere-fresh-water",
+    "name": "Fresh water",
+    "layer": "hydrosphere",
+    "description": "Fresh liquid water at the sample.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "hydrosphere-saltwater",
+    "name": "Saltwater",
+    "layer": "hydrosphere",
+    "description": "Saline water.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "hydrosphere-brine",
+    "name": "Brine",
+    "layer": "hydrosphere",
+    "description": "High-salinity brine.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "hydrosphere-mineral-rich-water",
+    "name": "Mineral-rich water",
+    "layer": "hydrosphere",
+    "description": "Hydrothermal or mineral-loaded liquid.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "hydrosphere-frozen-water",
+    "name": "Frozen water",
+    "layer": "hydrosphere",
+    "description": "Ice as the water phase.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "hydrosphere-subsurface-aquifer",
+    "name": "Subsurface aquifer",
+    "layer": "hydrosphere",
+    "description": "Water below the surface contact plane.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  }
+]

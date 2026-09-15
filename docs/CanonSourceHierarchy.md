@@ -20,7 +20,13 @@ This is the highest-precedence current source for Koplin civilisation history, t
 
 This is the foundation industrial substances companion: substance identity, types, thermal behaviour, archetypes, raw vs refined P0/P1 catalogue families, rarity vocabulary and labelled designer property rules. It must agree with the Expanded Lore Bible and does not replace civilisation history.
 
-### 3. Scenario extensions
+### 3. Foundation world-surface companion
+
+`data/lore/Koplin_Universe_World_Surface.md`
+
+This is the foundation land and world companion: celestial body kinds, world-type labels, atmospheres, land squares (landform, biome, hydrosphere, feature), geology provinces, P0 find sites, named-world assignment rules, and how Desktop, Mobile and Single Mine consume that language. Desktop celestial-body generation is provenance, not a parallel planet catalogue. It must agree with the Expanded Lore Bible.
+
+### 4. Scenario extensions
 
 `data/lore/Koplin_Scenario_II_Deep_Reach_Mining_Charter.md`
 
@@ -28,13 +34,13 @@ This extends the foundation into Year 5326 and is authoritative for Koplin Deep 
 
 A scenario document cannot contradict the foundation lore unless an explicit canon revision says so.
 
-### 4. Structured canonical records
+### 5. Structured canonical records
 
 JSON under `data/` exists so the Directory and games can query stable entities. It is not an independent source of lore.
 
 When JSON and lore disagree, **the lore wins** and the JSON must be reconciled.
 
-### 5. Game state
+### 6. Game state
 
 Prices quoted to a particular player, production queues, ownership changes within a save, reputation, contracts, player colonies and other mutable gameplay values belong to the game.
 

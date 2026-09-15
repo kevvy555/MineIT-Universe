@@ -1,0 +1,273 @@
+[
+  {
+    "id": "find-site-surface-rock-fields",
+    "name": "Surface rock fields",
+    "catalogTier": "P0",
+    "depthBand": "Surface",
+    "landformIds": [
+      "landform-plains"
+    ],
+    "biomeIds": [
+      "biome-grassland"
+    ],
+    "hydrosphereIds": [
+      "hydrosphere-none"
+    ],
+    "surfaceFeatureIds": [],
+    "geologyProvinceIds": [
+      "geology-province-sedimentary-basin"
+    ],
+    "substanceIds": [
+      "substance-stone-aggregate"
+    ],
+    "description": "Low-relief dry grassland plains where loose stone aggregate is the bootstrap surface encounter.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "8. Find sites",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "find-site-surface-mud-flats",
+    "name": "Surface mud flats",
+    "catalogTier": "P0",
+    "depthBand": "Surface",
+    "landformIds": [
+      "landform-lowland"
+    ],
+    "biomeIds": [
+      "biome-wetland"
+    ],
+    "hydrosphereIds": [
+      "hydrosphere-fresh-water"
+    ],
+    "surfaceFeatureIds": [
+      "feature-peat-layer"
+    ],
+    "geologyProvinceIds": [
+      "geology-province-sedimentary-basin"
+    ],
+    "substanceIds": [
+      "substance-clay-mineral"
+    ],
+    "description": "Wet lowland flats where clay mineral is collected at the surface.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "8. Find sites",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "find-site-forests",
+    "name": "Forests",
+    "catalogTier": "P0",
+    "depthBand": "Surface",
+    "landformIds": [
+      "landform-plains"
+    ],
+    "biomeIds": [
+      "biome-forest"
+    ],
+    "hydrosphereIds": [
+      "hydrosphere-fresh-water",
+      "hydrosphere-none"
+    ],
+    "surfaceFeatureIds": [],
+    "geologyProvinceIds": [],
+    "substanceIds": [
+      "substance-woody-plant"
+    ],
+    "description": "Forested dry land where woody plant material is the bootstrap collection class.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "8. Find sites",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "find-site-surface-outcrops",
+    "name": "Surface outcrops",
+    "catalogTier": "P0",
+    "depthBand": "Surface",
+    "landformIds": [
+      "landform-highland",
+      "landform-mountains"
+    ],
+    "biomeIds": [
+      "biome-barren-rock"
+    ],
+    "hydrosphereIds": [
+      "hydrosphere-none"
+    ],
+    "surfaceFeatureIds": [
+      "feature-rock-exposure"
+    ],
+    "geologyProvinceIds": [
+      "geology-province-metal-rich"
+    ],
+    "substanceIds": [
+      "substance-structural-metal-ore"
+    ],
+    "description": "Highland or mountain rock exposures where structural metal ore is visible at the surface.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "8. Find sites",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "find-site-exposed-cliff-faces",
+    "name": "Exposed cliff faces",
+    "catalogTier": "P0",
+    "depthBand": "Surface",
+    "landformIds": [
+      "landform-cliff",
+      "landform-canyon"
+    ],
+    "biomeIds": [
+      "biome-barren-rock"
+    ],
+    "hydrosphereIds": [
+      "hydrosphere-river"
+    ],
+    "surfaceFeatureIds": [
+      "feature-exposed-seams"
+    ],
+    "geologyProvinceIds": [
+      "geology-province-fault-zone"
+    ],
+    "substanceIds": [
+      "substance-conductive-metal-ore"
+    ],
+    "description": "Steep cliff or canyon faces with exposed conductive-metal seams.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "8. Find sites",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "find-site-surface-lakes",
+    "name": "Surface lakes",
+    "catalogTier": "P0",
+    "depthBand": "Surface",
+    "landformIds": [
+      "landform-basin"
+    ],
+    "biomeIds": [],
+    "hydrosphereIds": [
+      "hydrosphere-lake"
+    ],
+    "surfaceFeatureIds": [],
+    "geologyProvinceIds": [],
+    "substanceIds": [
+      "substance-fresh-water"
+    ],
+    "description": "Standing lake water in a basin, collected as fresh water.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "8. Find sites",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "find-site-surface-sand-dunes",
+    "name": "Surface sand dunes",
+    "catalogTier": "P0",
+    "depthBand": "Surface",
+    "landformIds": [
+      "landform-plains"
+    ],
+    "biomeIds": [
+      "biome-desert"
+    ],
+    "hydrosphereIds": [
+      "hydrosphere-none"
+    ],
+    "surfaceFeatureIds": [
+      "feature-dune-sea"
+    ],
+    "geologyProvinceIds": [
+      "geology-province-silica-rich"
+    ],
+    "substanceIds": [
+      "substance-silica-mineral"
+    ],
+    "description": "Arid dune seas where silica mineral is the surface encounter.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "8. Find sites",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "find-site-saltwater-surface-bodies",
+    "name": "Saltwater surface bodies",
+    "catalogTier": "P0",
+    "depthBand": "Surface",
+    "landformIds": [
+      "landform-basin"
+    ],
+    "biomeIds": [],
+    "hydrosphereIds": [
+      "hydrosphere-ocean",
+      "hydrosphere-brine",
+      "hydrosphere-lake"
+    ],
+    "surfaceFeatureIds": [
+      "feature-salt-flat"
+    ],
+    "geologyProvinceIds": [
+      "geology-province-salt-rich"
+    ],
+    "substanceIds": [
+      "substance-saltwater"
+    ],
+    "description": "Ocean, brine or salt-lake water collected as saltwater.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "8. Find sites",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "find-site-peat-like-surface-bogs",
+    "name": "Peat-like surface bogs",
+    "catalogTier": "P0",
+    "depthBand": "Surface",
+    "landformIds": [
+      "landform-lowland"
+    ],
+    "biomeIds": [
+      "biome-wetland"
+    ],
+    "hydrosphereIds": [
+      "hydrosphere-fresh-water"
+    ],
+    "surfaceFeatureIds": [
+      "feature-peat-layer"
+    ],
+    "geologyProvinceIds": [
+      "geology-province-sedimentary-basin"
+    ],
+    "substanceIds": [
+      "substance-solid-fuel-deposit"
+    ],
+    "description": "Wetland peat bogs where solid fuel is the bootstrap carbon encounter.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "8. Find sites",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "find-site-dry-mineral-beds",
+    "name": "Dry mineral beds",
+    "catalogTier": "P0",
+    "depthBand": "Surface",
+    "landformIds": [
+      "landform-plains"
+    ],
+    "biomeIds": [
+      "biome-desert"
+    ],
+    "hydrosphereIds": [
+      "hydrosphere-none"
+    ],
+    "surfaceFeatureIds": [
+      "feature-dune-sea"
+    ],
+    "geologyProvinceIds": [
+      "geology-province-silica-rich"
+    ],
+    "substanceIds": [
+      "substance-insulating-mineral"
+    ],
+    "description": "Dry desert mineral beds where insulating mineral is collected at the surface.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "8. Find sites",
+    "canonStatus": "working canon"
+  }
+]

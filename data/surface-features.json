@@ -1,0 +1,137 @@
+[
+  {
+    "id": "feature-coast",
+    "name": "Coast",
+    "layer": "surface-feature",
+    "description": "Dry shoreline adjacent to a sea-level water body.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "feature-river-channel",
+    "name": "River channel",
+    "layer": "surface-feature",
+    "description": "Incised flowing-water channel.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "feature-dune-sea",
+    "name": "Dune sea",
+    "layer": "surface-feature",
+    "description": "Wind-worked sand field.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "feature-salt-flat",
+    "name": "Salt flat",
+    "layer": "surface-feature",
+    "description": "Evaporite pan or salt crust.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "feature-dry-lake-bed",
+    "name": "Dry lake bed",
+    "layer": "surface-feature",
+    "description": "Desiccated basin floor.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "feature-crater-field",
+    "name": "Crater field",
+    "layer": "surface-feature",
+    "description": "Clustered impact decoration.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "feature-rock-exposure",
+    "name": "Rock exposure",
+    "layer": "surface-feature",
+    "description": "Bedrock standing above cover.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "feature-exposed-seams",
+    "name": "Exposed seams",
+    "layer": "surface-feature",
+    "description": "Visible mineral or ore seams in steep ground.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "feature-ice-cover",
+    "name": "Ice cover",
+    "layer": "surface-feature",
+    "description": "Surface ice decoration.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "feature-lava-flow",
+    "name": "Lava flow",
+    "layer": "surface-feature",
+    "description": "Flow lobe or channel of lava.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "feature-ash-cover",
+    "name": "Ash cover",
+    "layer": "surface-feature",
+    "description": "Volcanic ash blanket.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "feature-sulphur-plain",
+    "name": "Sulphur plain",
+    "layer": "surface-feature",
+    "description": "Sulphur-stained volcanic flat.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "feature-toxic-gas-field",
+    "name": "Toxic gas field",
+    "layer": "surface-feature",
+    "description": "Surface toxic-gas seep.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "feature-peat-layer",
+    "name": "Peat layer",
+    "layer": "surface-feature",
+    "description": "Peat or similar organic bog layer.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "feature-mineral-crust",
+    "name": "Mineral crust",
+    "layer": "surface-feature",
+    "description": "Hard chemical crust on dry or evaporite ground.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  }
+]

@@ -1,0 +1,53 @@
+[
+  {
+    "id": "game-mineit-desktop",
+    "name": "MineIT Desktop",
+    "shortName": "Desktop",
+    "form": "full 3D desktop mining game",
+    "playPattern": "standard ship scenario",
+    "platform": "desktop",
+    "status": "active",
+    "knowledgeScope": "designer truth",
+    "description": "The original MineIT game: a full 3D mining simulation on the standard ship scenario. Players walk and mine a generated surface, process substances, and operate from a crashed or landed expedition ship.",
+    "sharedLandUse": "Generates a walkable 3D surface from the shared body-kind, world-type, atmosphere, landform, biome, hydrosphere and find-site vocabulary. Seeds, elevation, cell maps and deposit instances remain Desktop runtime and are not Universe canon.",
+    "sharedSubstanceUse": "Consumes the Universe substance, part, machine and building catalogues. Desktop celestial-body generation is provenance for the land vocabulary, not a parallel planet list.",
+    "scenarioNotes": "Default narrative frame is the Deep Reach / standard-ship restart. Named Universe worlds may be used as destinations; a generated crash-world map is per-save.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "10. How the three games use this language",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "game-mineit-mobile",
+    "name": "MineIT Mobile",
+    "shortName": "Mobile",
+    "form": "mobile corporation builder",
+    "playPattern": "build a mining corporation",
+    "platform": "mobile",
+    "status": "active",
+    "knowledgeScope": "designer truth",
+    "description": "The mobile game: build and run a mining corporation across Commonwealth space. Landscapes display as a grid of squares on a named world.",
+    "sharedLandUse": "Each landscape square names a landform (shape) and biome (cover), and may name hydrosphere, surface feature and find-site class. The grid is Mobile session state on a Directory world. Do not store a second canonical map in the mobile app.",
+    "sharedSubstanceUse": "Buyers, substances, buildings and ships come from Universe. Collection logistics, contract prices and square ownership remain save state.",
+    "scenarioNotes": "Operates in the Year-5326 commercial present. Worlds in the Directory are the same worlds shown on the map; generated-expansion worlds stay labelled as such.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "10. How the three games use this language",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "game-mineit-single-mine",
+    "name": "MineIT Single Mine",
+    "shortName": "Single Mine",
+    "form": "small single-mine simulator",
+    "playPattern": "operate one mine",
+    "platform": "small simulator",
+    "status": "active",
+    "knowledgeScope": "designer truth",
+    "description": "A small simulator in which the player operates one mine. The session is a single site, not a corporation map and not a full 3D world walk.",
+    "sharedLandUse": "A play session is one site on a named world: one landform/biome context, optional hydrosphere and surface feature, and one find-site class. The site layout is session state. The site is not a new canonical world.",
+    "sharedSubstanceUse": "Extracts Universe substance categories through the same find-site language. Stock, machine placement and depletion are save state.",
+    "scenarioNotes": "May be set on any Directory world that has a kind and at least a landform/biome context. Prefer worlds with inferred or source-canonical surface assignment over kind-only moons.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "10. How the three games use this language",
+    "canonStatus": "working canon"
+  }
+]

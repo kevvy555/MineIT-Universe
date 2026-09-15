@@ -28,12 +28,26 @@ The universe is a graph represented by these canonical collections:
 regions
 starSystems
 planets
+celestialBodyKinds
+worldTypes
+atmosphereTypes
+surfaceLandforms
+surfaceBiomes
+surfaceFeatures
+surfaceHydrospheres
+geologyProvinces
+findSites
 settlements
 organisations
 organisationUnits
 facilities
 operations
 products
+substances
+parts
+machines
+buildings
+games
 species
 people
 shipClasses
@@ -42,6 +56,8 @@ projects
 events
 relationships
 ```
+
+Schema 8 adds the shared land/world vocabulary and a designer `games` catalogue so Desktop, Mobile and Single Mine consume the same body-kind, world-type, land-square and find-site IDs. Per-save maps remain game state.
 
 The old company-only model is superseded by the generic `organisations` collection. Commercial companies, governments, authorities, universities, research institutes, banks, media organisations, hospital trusts, guilds, security/military bodies and synthetic polities can all use the same organisation graph.
 

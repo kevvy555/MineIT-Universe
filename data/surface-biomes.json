@@ -1,0 +1,92 @@
+[
+  {
+    "id": "biome-barren-rock",
+    "name": "Barren rock",
+    "layer": "biome",
+    "description": "Bare rock cover with little or no soil or vegetation.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "biome-desert",
+    "name": "Desert",
+    "layer": "biome",
+    "description": "Arid sand, dust or evaporite cover.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "biome-grassland",
+    "name": "Grassland",
+    "layer": "biome",
+    "description": "Open photosynthetic cover: grass, reed and shrub.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "biome-forest",
+    "name": "Forest",
+    "layer": "biome",
+    "description": "Woody photosynthetic cover.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "biome-wetland",
+    "name": "Wetland",
+    "layer": "biome",
+    "description": "Saturated soil and shallow water vegetation.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "biome-tundra",
+    "name": "Tundra",
+    "layer": "biome",
+    "description": "Cold sparse cover.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "biome-ice-sheet",
+    "name": "Ice sheet",
+    "layer": "biome",
+    "description": "Persistent ice cover.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "biome-volcanic-field",
+    "name": "Volcanic field",
+    "layer": "biome",
+    "description": "Ash, fumaroles and volcanic ground cover.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "biome-lava-field",
+    "name": "Lava field",
+    "layer": "biome",
+    "description": "Fresh or cooled lava cover.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "biome-toxic-wasteland",
+    "name": "Toxic wasteland",
+    "layer": "biome",
+    "description": "Chemically hostile surface cover.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  }
+]

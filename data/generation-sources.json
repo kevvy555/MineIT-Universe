@@ -1,1 +1,31 @@
-[{"id":"generation-source-legacy-buyer-directory","name":"Legacy Stage 8 Buyer & Collection Ship Directory","sourceType":"deterministic design source","sourceRepository":"kevvy555/MineIT","sourcePath":"docs/Progression Stages/Stage 8/BuyerAndShipImageDirectory.html","companionPath":"js/data/buyer-content.js","seed":8302026,"generatorVersion":"legacy-stage-8","deterministic":true,"reusableElements":["person name generation","company-name vocabulary","ship-name vocabulary","commercial sector taxonomy","procurement role taxonomy","resource affinity design","portrait visual trait generation"],"discardedAssumptions":["one buyer equals one company","one buyer permanently owns one collection ship","legacy home strings are canonical locations","buyer tier and minimum reputation are universe facts","per-buyer resource fallback selections are canonical"],"description":"Legacy deterministic source retained as generation provenance and design material. It is not itself canonical Universe truth; records become canon only when materialised and reconciled into the Universe graph."}]
+[
+  {
+    "id": "generation-source-legacy-buyer-directory",
+    "name": "Legacy Stage 8 Buyer & Collection Ship Directory",
+    "sourceType": "deterministic design source",
+    "sourceRepository": "kevvy555/MineIT",
+    "sourcePath": "docs/Progression Stages/Stage 8/BuyerAndShipImageDirectory.html",
+    "companionPath": "js/data/buyer-content.js",
+    "seed": 8302026,
+    "generatorVersion": "legacy-stage-8",
+    "deterministic": true,
+    "reusableElements": ["person name generation", "company-name vocabulary", "ship-name vocabulary", "commercial sector taxonomy", "procurement role taxonomy", "resource affinity design", "portrait visual trait generation"],
+    "discardedAssumptions": ["one buyer equals one company", "one buyer permanently owns one collection ship", "legacy home strings are canonical locations", "buyer tier and minimum reputation are universe facts", "per-buyer resource fallback selections are canonical"],
+    "description": "Legacy deterministic source retained as generation provenance and design material. It is not itself canonical Universe truth; records become canon only when materialised and reconciled into the Universe graph."
+  },
+  {
+    "id": "generation-source-desktop-celestial-body-generation",
+    "name": "Desktop Celestial Body Generation",
+    "sourceType": "engineering design source",
+    "sourceRepository": "kevvy555/MineIT",
+    "sourcePath": "Documentation/design/CelestialBodyGeneration",
+    "companionPath": null,
+    "seed": null,
+    "generatorVersion": "celestial-body-generation-v2-design",
+    "deterministic": false,
+    "reusableElements": ["celestial body kinds", "rocky planet type labels", "moon asteroid and gas-giant type labels", "atmosphere type labels", "surface landforms", "surface biomes", "surface features", "hydrosphere labels", "geology provinces", "P0 surface find-site classes"],
+    "discardedAssumptions": ["per-cell or per-square maps are canonical universe facts", "body seeds and noise functions are universe facts", "elevation amplitudes and TerrainTuning are universe facts", "rowRarity and spawn hashes are universe facts", "Water World is a Stage 1.0 procedural planet type", "Terraformed World and Colony World are assigned by procedural rolls", "Desktop runtime enums are a second planet catalogue"],
+    "description": "Desktop world-generation design retained as engineering provenance. Shared classification labels were materialised into Universe land/world collections. Seeds, cell pipelines and spawn rarity remain Desktop runtime and are not canonical Universe truth."
+  }
+]
+
