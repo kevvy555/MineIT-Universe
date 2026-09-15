@@ -8,7 +8,8 @@ Expected categories:
 people/
 ships/
 ship-classes/
-companies/logos/
+organisations/
+substances/
 systems/
 planets/
 settlements/

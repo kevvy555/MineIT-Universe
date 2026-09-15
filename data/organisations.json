@@ -1,25 +1,786 @@
 [
-  {"id":"organisation-koplin-compact","name":"Koplin Commonwealth","legalName":"Koplin Commonwealth","organisationType":"federal commonwealth government","scale":"civilisation","commercial":false,"headquartersLocationId":"settlement-koplin-arcology","industries":["governance","Commonwealth rights","high-risk regulation","off-world affairs"],"description":"Federal civilisation created from the post-AI-war settlement. Power is deliberately distributed; local governments retain everyday authority while Commonwealth institutions protect rights, coordinate off-world affairs and constrain high-risk technologies and corporate power.","parentOrganisationId":null,"canonStatus":"source-canonical","legacyStableIdNote":"Stable ID predates the foundation-lore import; display identity corrected from the generated Koplin Compact placeholder.","sourceDocumentId":"lore-koplin-expanded-backstory","sourceSection":"9.4 and 13.1"},
-  {"id":"organisation-helix-industrial-group","name":"Helix Industrial Group","legalName":"Helix Industrial Group PLC","organisationType":"industrial conglomerate","scale":"major","commercial":true,"headquartersLocationId":"station-solace-commercial-ring","industries":["aerospace","heavy engineering","advanced materials"],"description":"Generated expansion company producing propulsion systems, advanced alloys and spacecraft components.","visualIdentity":{"palette":["graphite","bronze"],"style":"angular disciplined industrial design"},"parentOrganisationId":null,"canonStatus":"generated-expansion"},
-  {"id":"organisation-verdant-horizon","name":"Verdant Horizon Biotech","legalName":"Verdant Horizon Biotech Cooperative","organisationType":"biotechnology company","scale":"regional specialist","commercial":true,"headquartersLocationId":"settlement-varda-biosphere","industries":["biotechnology","agriculture","life support"],"description":"Generated expansion specialist in closed-habitat crops, nutritional cultures and biological support systems.","visualIdentity":{"palette":["white","botanical green"],"style":"clean rounded laboratory design"},"parentOrganisationId":null,"canonStatus":"generated-expansion"},
-  {"id":"organisation-meridian-exchange-authority","name":"Meridian Exchange Authority","legalName":"Meridian Freeport Exchange Authority","organisationType":"trade authority","scale":"system","commercial":false,"headquartersLocationId":"settlement-meridian-freeport","industries":["customs","trade regulation","freeport administration"],"description":"Generated expansion authority governing Meridian freeport zones and commodity exchange rules under Commonwealth law.","parentOrganisationId":null,"canonStatus":"generated-expansion"},
-  {"id":"organisation-meridian-logistics","name":"Meridian Logistics Cooperative","legalName":"Meridian Logistics Cooperative","organisationType":"logistics cooperative","scale":"major","commercial":true,"headquartersLocationId":"station-meridian-spindle","industries":["freight","warehousing","container transport"],"description":"Generated expansion carrier and warehousing cooperative.","parentOrganisationId":null,"canonStatus":"generated-expansion"},
-  {"id":"organisation-asterion-shipworks","name":"Asterion Shipworks","legalName":"Asterion Orbital Shipworks Ltd","organisationType":"shipbuilder","scale":"major","commercial":true,"headquartersLocationId":"station-aster-orbital-yards","industries":["shipbuilding","naval architecture","specialist spacecraft","frontier vessels","heavy fabrication"],"description":"Major independent shipbuilder known for versatile specialist craft, frontier utility vessels and adaptable commercial hulls. Asterion competes on mission flexibility rather than dominating a single tonnage class.","visualIdentity":{"palette":["charcoal","copper","white"],"style":"exposed structural ribs, practical modular hulls and clean shipyard markings"},"parentOrganisationId":null,"canonStatus":"generated-expansion-compatible-with-lore","shipbuildingSpecialisation":"versatile specialist, frontier and adaptable commercial vessels"},
-  {"id":"organisation-orison-cognition-institute","name":"Orison Institute for Machine Cognition","legalName":"Orison Institute for Machine Cognition","organisationType":"research institute","scale":"regional","commercial":false,"headquartersLocationId":"settlement-orison-cognition-campus","industries":["bounded AI research","cognitive systems","robotics","auditability"],"description":"Generated expansion public research institute studying machine cognition and automation within Commonwealth rules requiring bounded purpose, auditability and accountable biological authority.","parentOrganisationId":null,"canonStatus":"generated-expansion-compatible-with-lore"},
-  {"id":"organisation-orison-cognition-assembly","name":"Orison Cognition Oversight Assembly","legalName":"Orison Cognition Oversight Assembly","organisationType":"AI oversight and standards authority","scale":"system","commercial":false,"headquartersLocationId":"settlement-orison-cognition-campus","industries":["AI compliance","audit standards","cognitive-system licensing"],"description":"Generated expansion oversight body for high-capability cognitive systems. It is not a sovereign synthetic polity: Commonwealth law prohibits artificial systems from holding sovereign authority or public office.","parentOrganisationId":null,"canonStatus":"reconciled-generated-expansion"},
-  {"id":"organisation-caldera-materials","name":"Caldera Materials Consortium","legalName":"Caldera Materials Consortium SA","organisationType":"materials consortium","scale":"major","commercial":true,"headquartersLocationId":"settlement-caldera-refinery-belt","industries":["refining","reactive metals","technical ceramics"],"description":"Generated expansion consortium of high-temperature refiners and advanced-material producers.","parentOrganisationId":null,"canonStatus":"generated-expansion"},
-  {"id":"organisation-halcyon-habitat-group","name":"Halcyon Habitat Group","legalName":"Halcyon Habitat Group","organisationType":"construction and habitat company","scale":"major","commercial":true,"headquartersLocationId":"station-halcyon-crown","industries":["habitat construction","life support","residential infrastructure"],"description":"Generated expansion habitat developer and infrastructure company.","parentOrganisationId":null,"canonStatus":"generated-expansion"},
-  {"id":"organisation-nacre-biosystems","name":"Nacre Biosystems","legalName":"Nacre Biosystems Corporation","organisationType":"biochemical company","scale":"regional","commercial":true,"headquartersLocationId":"settlement-nacre-pelagic","industries":["marine biotechnology","pharmaceuticals","biochemicals"],"description":"Generated expansion marine-bioscience company.","parentOrganisationId":null,"canonStatus":"generated-expansion"},
-  {"id":"organisation-damaris-frontier-authority","name":"Damaris Frontier Authority","legalName":"Damaris Frontier Administrative Authority","organisationType":"frontier government","scale":"system","commercial":false,"headquartersLocationId":"settlement-damaris-bastion","industries":["frontier administration","licensing","survey coordination"],"description":"Generated expansion civilian authority operating within Commonwealth frontier law.","parentOrganisationId":null,"canonStatus":"generated-expansion"},
-  {"id":"organisation-damaris-security-command","name":"Damaris Security Command","legalName":"Damaris Joint Security Command","organisationType":"military and security organisation","scale":"regional","commercial":false,"headquartersLocationId":"settlement-damaris-bastion","industries":["security","patrol","rescue","convoy protection"],"description":"Generated expansion joint security and rescue force operating under Commonwealth authority.","parentOrganisationId":null,"canonStatus":"generated-expansion"},
-  {"id":"organisation-lattice-bank","name":"Lattice Interstellar Bank","legalName":"Lattice Interstellar Banking Corporation","organisationType":"bank","scale":"major","commercial":true,"headquartersLocationId":"settlement-meridian-freeport","industries":["banking","trade finance","project finance"],"description":"Generated expansion bank financing infrastructure, ship construction and commodity contracts.","parentOrganisationId":null,"canonStatus":"generated-expansion"},
-  {"id":"organisation-farline-news","name":"Farline News Network","legalName":"Farline Media Network","organisationType":"media organisation","scale":"regional","commercial":true,"headquartersLocationId":"settlement-koplin-arcology","industries":["news","investigative media","data publishing"],"description":"Generated expansion independent news network.","parentOrganisationId":null,"canonStatus":"generated-expansion"},
-  {"id":"organisation-koplin-medical-trust","name":"Koplin General Medical Trust","legalName":"Koplin General Medical Trust","organisationType":"hospital trust","scale":"system","commercial":false,"headquartersLocationId":"settlement-koplin-arcology","industries":["healthcare","medical research","emergency medicine"],"description":"Generated expansion public medical trust.","parentOrganisationId":null,"canonStatus":"generated-expansion"},
-  {"id":"organisation-dockworkers-guild","name":"Inter-System Dockworkers Guild","legalName":"Inter-System Dockworkers Guild","organisationType":"trade guild","scale":"regional","commercial":false,"headquartersLocationId":"station-koplin-transfer-ring","industries":["labour representation","dock standards","training"],"description":"Generated expansion guild representing dock and freight-handling workers.","parentOrganisationId":null,"canonStatus":"generated-expansion"},
-  {"id":"organisation-koplin-resource-charter","name":"Koplin Deep Reach Corporation","legalName":"Koplin Deep Reach Corporation","organisationType":"mining, logistics and industrial conglomerate","scale":"major","commercial":true,"headquartersLocationId":"settlement-koplin-arcology","industries":["prospecting","extraction","logistics","industrial manufacturing","biochemicals","frontier services","strategic materials"],"description":"One of the largest industrial organisations in Commonwealth space. Deep Reach operates across extraction, processing, logistics and industrial infrastructure and runs the Deep Reach Charter Programme for independent frontier mining settlements.","visualIdentity":{"palette":["black","amber","steel"],"style":"practical corporate mining and logistics design"},"parentOrganisationId":null,"canonStatus":"source-canonical","legacyStableIdNote":"Stable ID retained from the pre-lore charter-company placeholder; identity corrected to Koplin Deep Reach Corporation.","sourceDocumentId":"lore-deep-reach-mining-charter","sourceSection":"4. Koplin Deep Reach Corporation"},
-  {"id":"organisation-koplin-commonwealth-exploration-service","name":"Koplin Commonwealth Exploration Service","legalName":"Koplin Commonwealth Exploration Service","organisationType":"Commonwealth exploration service","scale":"Commonwealth","commercial":false,"headquartersLocationId":null,"industries":["interstellar exploration","surveying","scientific expeditions","outpost support"],"description":"Commonwealth exploration organisation that operates the KSV Meridian and the Far Lantern Expedition.","parentOrganisationId":"organisation-koplin-compact","canonStatus":"source-canonical","sourceDocumentId":"lore-koplin-expanded-backstory","sourceSection":"14.1 Ship Identity"},
-  {"id":"organisation-kestrel-aerospace-systems","name":"Kestrel Aerospace Systems","legalName":"Kestrel Aerospace Systems Ltd","organisationType":"shipbuilder","scale":"major","commercial":true,"headquartersLocationId":"station-solace-commercial-ring","industries":["shipbuilding","high-performance propulsion integration","fast freight","courier spacecraft"],"description":"Performance-focused shipbuilder specialising in fast couriers, packet ships and time-critical freight hulls. Kestrel accepts higher fuel consumption and acquisition cost in exchange for acceleration and schedule performance.","visualIdentity":{"palette":["deep navy","silver","electric cyan"],"style":"sleek narrow hulls, strong engine emphasis and precise aerodynamic-industrial surfaces"},"parentOrganisationId":null,"canonStatus":"generated-expansion-compatible-with-lore","shipbuildingSpecialisation":"speed, acceleration and rapid turnaround"},
-  {"id":"organisation-keystone-modular-fabrication","name":"Keystone Modular Fabrication","legalName":"Keystone Modular Fabrication Cooperative","organisationType":"shipbuilder","scale":"major","commercial":true,"headquartersLocationId":"station-meridian-spindle","industries":["shipbuilding","modular freight systems","container logistics","commercial fabrication"],"description":"Large commercial shipbuilder built around standardised modular cargo architecture. Keystone ships favour flexible payload configuration, common parts and efficient port handling across freight networks.","visualIdentity":{"palette":["steel grey","white","signal orange"],"style":"visible modular frames, interchangeable cargo blocks and highly standardised service interfaces"},"parentOrganisationId":null,"canonStatus":"generated-expansion-compatible-with-lore","shipbuildingSpecialisation":"modular cargo and network logistics"},
-  {"id":"organisation-longreach-engineering","name":"Longreach Engineering","legalName":"Longreach Interstellar Engineering PLC","organisationType":"shipbuilder","scale":"major","commercial":true,"headquartersLocationId":"station-damaris-frontier-port","industries":["shipbuilding","long-range freight","reliability engineering","frontier logistics"],"description":"Frontier-oriented shipbuilder specialising in long-range, fuel-efficient and highly redundant vessels. Longreach ships cost more up front but are designed to reduce dependency on dense repair and resupply networks.","visualIdentity":{"palette":["dark green","cream","gunmetal"],"style":"long clean hulls, protected systems, redundant external structures and restrained frontier markings"},"parentOrganisationId":null,"canonStatus":"generated-expansion-compatible-with-lore","shipbuildingSpecialisation":"range, fuel efficiency and reliability"},
-  {"id":"organisation-crownline-heavy-works","name":"Crownline Heavy Works","legalName":"Crownline Heavy Works Corporation","organisationType":"shipbuilder","scale":"major","commercial":true,"headquartersLocationId":"settlement-caldera-refinery-belt","industries":["shipbuilding","megafreighters","heavy fabrication","bulk logistics"],"description":"Heavy-industrial shipbuilder whose enormous carriers prioritise cargo volume, structural simplicity and low acquisition cost per unit of freight capacity over speed or elegance.","visualIdentity":{"palette":["black alloy","industrial yellow","oxide red"],"style":"massive slab-sided structures, exposed cargo frames, oversized trusses and unmistakable industrial scale"},"parentOrganisationId":null,"canonStatus":"generated-expansion-compatible-with-lore","shipbuildingSpecialisation":"huge bulk carriers and megafreighters"}
+  {
+    "id": "organisation-koplin-compact",
+    "name": "Koplin Commonwealth",
+    "legalName": "Koplin Commonwealth",
+    "organisationType": "federal commonwealth government",
+    "scale": "civilisation",
+    "commercial": false,
+    "headquartersLocationId": "settlement-koplin-arcology",
+    "industries": [
+      "governance",
+      "Commonwealth rights",
+      "high-risk regulation",
+      "off-world affairs"
+    ],
+    "description": "Federal civilisation created from the post-AI-war settlement. Power is deliberately distributed; local governments retain everyday authority while Commonwealth institutions protect rights, coordinate off-world affairs and constrain high-risk technologies and corporate power.",
+    "parentOrganisationId": null,
+    "canonStatus": "source-canonical",
+    "legacyStableIdNote": "Stable ID predates the foundation-lore import; display identity corrected from the generated Koplin Compact placeholder.",
+    "sourceDocumentId": "lore-koplin-expanded-backstory",
+    "sourceSection": "9.4 and 13.1",
+    "visualIdentity": {
+      "palette": [
+        "pale stone",
+        "civic blue",
+        "restrained gold"
+      ],
+      "style": "distributed federal civic identity, measured and equal rather than imperial",
+      "mark": "A federal civic seal: three nested pale-stone arcs sharing one open centre, bound by a thin restrained-gold ring, with a civic-blue field in the void. The three arcs read as a compact of equal parts, not a crown, eagle, or imperial crest."
+    },
+    "image": {
+      "key": "assets/art/universe/organisations/organisation-koplin-compact.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. A federal civic seal: three nested pale-stone arcs sharing one open centre, bound by a thin restrained-gold ring, with a civic-blue field in the void. The three arcs read as a compact of equal parts, not a crown, eagle, or imperial crest. Colour palette: pale stone, civic blue, restrained gold. Design language: distributed federal civic identity, measured and equal rather than imperial. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
+    }
+  },
+  {
+    "id": "organisation-helix-industrial-group",
+    "name": "Helix Industrial Group",
+    "legalName": "Helix Industrial Group PLC",
+    "organisationType": "industrial conglomerate",
+    "scale": "major",
+    "commercial": true,
+    "headquartersLocationId": "station-solace-commercial-ring",
+    "industries": [
+      "aerospace",
+      "heavy engineering",
+      "advanced materials"
+    ],
+    "description": "Major industrial conglomerate producing propulsion systems, advanced alloys and spacecraft components from the Solace Commercial Ring.",
+    "visualIdentity": {
+      "palette": [
+        "graphite",
+        "bronze"
+      ],
+      "style": "angular disciplined industrial design",
+      "mark": "A bronze helical coil wrapping a graphite angular core, one clean structural turn, industrial and disciplined, like a propulsion-alloy maker's mark."
+    },
+    "parentOrganisationId": null,
+    "canonStatus": "generated-expansion",
+    "image": {
+      "key": "assets/art/universe/organisations/organisation-helix-industrial-group.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. A bronze helical coil wrapping a graphite angular core, one clean structural turn, industrial and disciplined, like a propulsion-alloy maker's mark. Colour palette: graphite, bronze. Design language: angular disciplined industrial design. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
+    }
+  },
+  {
+    "id": "organisation-verdant-horizon",
+    "name": "Verdant Horizon Biotech",
+    "legalName": "Verdant Horizon Biotech Cooperative",
+    "organisationType": "biotechnology company",
+    "scale": "regional specialist",
+    "commercial": true,
+    "headquartersLocationId": "settlement-varda-biosphere",
+    "industries": [
+      "biotechnology",
+      "agriculture",
+      "life support"
+    ],
+    "description": "Closed-habitat biotechnology cooperative specialising in crops, nutritional cultures and biological life-support systems at the Varda Biosphere Enclave.",
+    "visualIdentity": {
+      "palette": [
+        "white",
+        "botanical green"
+      ],
+      "style": "clean rounded laboratory design",
+      "mark": "A white circular laboratory seal with a single botanical-green horizon leaf-arc rising across the lower third, clean and rounded, biotech rather than agricultural-folk."
+    },
+    "parentOrganisationId": null,
+    "canonStatus": "generated-expansion",
+    "image": {
+      "key": "assets/art/universe/organisations/organisation-verdant-horizon.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. A white circular laboratory seal with a single botanical-green horizon leaf-arc rising across the lower third, clean and rounded, biotech rather than agricultural-folk. Colour palette: white, botanical green. Design language: clean rounded laboratory design. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
+    }
+  },
+  {
+    "id": "organisation-meridian-exchange-authority",
+    "name": "Meridian Exchange Authority",
+    "legalName": "Meridian Freeport Exchange Authority",
+    "organisationType": "trade authority",
+    "scale": "system",
+    "commercial": false,
+    "headquartersLocationId": "settlement-meridian-freeport",
+    "industries": [
+      "customs",
+      "trade regulation",
+      "freeport administration"
+    ],
+    "description": "Civic trade authority that governs Meridian freeport zones, customs and commodity-exchange rules under Commonwealth law.",
+    "parentOrganisationId": null,
+    "canonStatus": "generated-expansion",
+    "visualIdentity": {
+      "palette": [
+        "harbour grey",
+        "bronze",
+        "white"
+      ],
+      "style": "freeport civic-commercial identity, orderly exchange geometry",
+      "mark": "A bronze meridian arc crossing a harbour-grey disc, balanced like an exchange scale but made of orbital-trade geometry, white negative space, civic-commercial not royal."
+    },
+    "image": {
+      "key": "assets/art/universe/organisations/organisation-meridian-exchange-authority.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. A bronze meridian arc crossing a harbour-grey disc, balanced like an exchange scale but made of orbital-trade geometry, white negative space, civic-commercial not royal. Colour palette: harbour grey, bronze, white. Design language: freeport civic-commercial identity, orderly exchange geometry. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
+    }
+  },
+  {
+    "id": "organisation-meridian-logistics",
+    "name": "Meridian Logistics Cooperative",
+    "legalName": "Meridian Logistics Cooperative",
+    "organisationType": "logistics cooperative",
+    "scale": "major",
+    "commercial": true,
+    "headquartersLocationId": "station-meridian-spindle",
+    "industries": [
+      "freight",
+      "warehousing",
+      "container transport"
+    ],
+    "description": "Freight and warehousing cooperative handling container transport, orbital transfer and high-volume cargo through the Meridian Exchange Spindle.",
+    "parentOrganisationId": null,
+    "canonStatus": "generated-expansion",
+    "visualIdentity": {
+      "palette": [
+        "container teal",
+        "steel",
+        "hazard white"
+      ],
+      "style": "cooperative freight identity, stacked container geometry",
+      "mark": "Three stacked container-teal chevrons forming a freight-block glyph on steel, with a thin hazard-white registration notch that is geometric only, not a letter."
+    },
+    "image": {
+      "key": "assets/art/universe/organisations/organisation-meridian-logistics.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. Three stacked container-teal chevrons forming a freight-block glyph on steel, with a thin hazard-white registration notch that is geometric only, not a letter. Colour palette: container teal, steel, hazard white. Design language: cooperative freight identity, stacked container geometry. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
+    }
+  },
+  {
+    "id": "organisation-asterion-shipworks",
+    "name": "Asterion Shipworks",
+    "legalName": "Asterion Orbital Shipworks Ltd",
+    "organisationType": "shipbuilder",
+    "scale": "major",
+    "commercial": true,
+    "headquartersLocationId": "station-aster-orbital-yards",
+    "industries": [
+      "shipbuilding",
+      "naval architecture",
+      "specialist spacecraft",
+      "frontier vessels",
+      "heavy fabrication"
+    ],
+    "description": "Major independent shipbuilder known for versatile specialist craft, frontier utility vessels and adaptable commercial hulls. Asterion competes on mission flexibility rather than dominating a single tonnage class.",
+    "visualIdentity": {
+      "palette": [
+        "charcoal",
+        "copper",
+        "white"
+      ],
+      "style": "exposed structural ribs, practical modular hulls and clean shipyard markings",
+      "mark": "A copper six-point shipyard star assembled from exposed structural ribs on charcoal, white inset gaps like clean hull seams, practical modular construction mark."
+    },
+    "parentOrganisationId": null,
+    "canonStatus": "generated-expansion-compatible-with-lore",
+    "shipbuildingSpecialisation": "versatile specialist, frontier and adaptable commercial vessels",
+    "image": {
+      "key": "assets/art/universe/organisations/organisation-asterion-shipworks.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. A copper six-point shipyard star assembled from exposed structural ribs on charcoal, white inset gaps like clean hull seams, practical modular construction mark. Colour palette: charcoal, copper, white. Design language: exposed structural ribs, practical modular hulls and clean shipyard markings. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
+    }
+  },
+  {
+    "id": "organisation-orison-cognition-institute",
+    "name": "Orison Institute for Machine Cognition",
+    "legalName": "Orison Institute for Machine Cognition",
+    "organisationType": "research institute",
+    "scale": "regional",
+    "commercial": false,
+    "headquartersLocationId": "settlement-orison-cognition-campus",
+    "industries": [
+      "bounded AI research",
+      "cognitive systems",
+      "robotics",
+      "auditability"
+    ],
+    "description": "Public research institute studying machine cognition, robotics and bounded automation under Commonwealth rules that require auditability and accountable biological authority.",
+    "parentOrganisationId": null,
+    "canonStatus": "generated-expansion-compatible-with-lore",
+    "visualIdentity": {
+      "palette": [
+        "pale grey",
+        "cool teal",
+        "white"
+      ],
+      "style": "bounded research identity, glazed laboratory minimalism",
+      "mark": "A cool-teal bounded cognition ring around a pale-grey open core, one incomplete circuit suggesting auditability rather than an all-seeing eye or humanoid face."
+    },
+    "image": {
+      "key": "assets/art/universe/organisations/organisation-orison-cognition-institute.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. A cool-teal bounded cognition ring around a pale-grey open core, one incomplete circuit suggesting auditability rather than an all-seeing eye or humanoid face. Colour palette: pale grey, cool teal, white. Design language: bounded research identity, glazed laboratory minimalism. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
+    }
+  },
+  {
+    "id": "organisation-orison-cognition-assembly",
+    "name": "Orison Cognition Oversight Assembly",
+    "legalName": "Orison Cognition Oversight Assembly",
+    "organisationType": "AI oversight and standards authority",
+    "scale": "system",
+    "commercial": false,
+    "headquartersLocationId": "settlement-orison-cognition-campus",
+    "industries": [
+      "AI compliance",
+      "audit standards",
+      "cognitive-system licensing"
+    ],
+    "description": "Oversight and licensing body for high-capability cognitive systems. It is not a sovereign synthetic polity: Commonwealth law prohibits artificial systems from holding sovereign authority or public office.",
+    "parentOrganisationId": null,
+    "canonStatus": "reconciled-generated-expansion",
+    "visualIdentity": {
+      "palette": [
+        "slate",
+        "audit blue",
+        "white"
+      ],
+      "style": "austere civic-regulatory identity, clear oversight geometry",
+      "mark": "Two overlapping slate oversight rings offset on a white field, audit-blue inner gap, austere regulatory geometry, no masks or faces."
+    },
+    "image": {
+      "key": "assets/art/universe/organisations/organisation-orison-cognition-assembly.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. Two overlapping slate oversight rings offset on a white field, audit-blue inner gap, austere regulatory geometry, no masks or faces. Colour palette: slate, audit blue, white. Design language: austere civic-regulatory identity, clear oversight geometry. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
+    }
+  },
+  {
+    "id": "organisation-caldera-materials",
+    "name": "Caldera Materials Consortium",
+    "legalName": "Caldera Materials Consortium SA",
+    "organisationType": "materials consortium",
+    "scale": "major",
+    "commercial": true,
+    "headquartersLocationId": "settlement-caldera-refinery-belt",
+    "industries": [
+      "refining",
+      "reactive metals",
+      "technical ceramics"
+    ],
+    "description": "High-temperature refining consortium producing reactive metals and technical ceramics across the Caldera Refinery Belt.",
+    "parentOrganisationId": null,
+    "canonStatus": "generated-expansion",
+    "visualIdentity": {
+      "palette": [
+        "slag black",
+        "furnace orange",
+        "ceramic white"
+      ],
+      "style": "high-temperature materials identity, crucible and stack geometry",
+      "mark": "A furnace-orange caldera ring with a ceramic-white inner disc set in slag-black, suggesting a high-temperature crucible seen from above."
+    },
+    "image": {
+      "key": "assets/art/universe/organisations/organisation-caldera-materials.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. A furnace-orange caldera ring with a ceramic-white inner disc set in slag-black, suggesting a high-temperature crucible seen from above. Colour palette: slag black, furnace orange, ceramic white. Design language: high-temperature materials identity, crucible and stack geometry. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
+    }
+  },
+  {
+    "id": "organisation-halcyon-habitat-group",
+    "name": "Halcyon Habitat Group",
+    "legalName": "Halcyon Habitat Group",
+    "organisationType": "construction and habitat company",
+    "scale": "major",
+    "commercial": true,
+    "headquartersLocationId": "station-halcyon-crown",
+    "industries": [
+      "habitat construction",
+      "life support",
+      "residential infrastructure"
+    ],
+    "description": "Habitat developer and infrastructure company building pressurised residential decks, life-support fit-out and construction yards at Halcyon Crown Habitat.",
+    "parentOrganisationId": null,
+    "canonStatus": "generated-expansion",
+    "visualIdentity": {
+      "palette": [
+        "pearl",
+        "habitat teal",
+        "structural silver"
+      ],
+      "style": "pressurised habitat-construction identity, stacked deck geometry",
+      "mark": "Stacked pearl habitat rings forming a shallow crown of pressurised decks, habitat-teal inner band, structural-silver joints, residential construction not royalty."
+    },
+    "image": {
+      "key": "assets/art/universe/organisations/organisation-halcyon-habitat-group.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. Stacked pearl habitat rings forming a shallow crown of pressurised decks, habitat-teal inner band, structural-silver joints, residential construction not royalty. Colour palette: pearl, habitat teal, structural silver. Design language: pressurised habitat-construction identity, stacked deck geometry. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
+    }
+  },
+  {
+    "id": "organisation-nacre-biosystems",
+    "name": "Nacre Biosystems",
+    "legalName": "Nacre Biosystems Corporation",
+    "organisationType": "biochemical company",
+    "scale": "regional",
+    "commercial": true,
+    "headquartersLocationId": "settlement-nacre-pelagic",
+    "industries": [
+      "marine biotechnology",
+      "pharmaceuticals",
+      "biochemicals"
+    ],
+    "description": "Marine-bioscience company producing pharmaceuticals and biochemicals from the floating Nacre Pelagic Station.",
+    "parentOrganisationId": null,
+    "canonStatus": "generated-expansion",
+    "visualIdentity": {
+      "palette": [
+        "nacre white",
+        "deep teal",
+        "soft biolume green"
+      ],
+      "style": "marine-laboratory identity, pearlescent biochemical geometry",
+      "mark": "A nacre-white shell spiral with a deep-teal inner fold and a soft biolume-green highlight, marine-laboratory rather than decorative seashell kitsch."
+    },
+    "image": {
+      "key": "assets/art/universe/organisations/organisation-nacre-biosystems.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. A nacre-white shell spiral with a deep-teal inner fold and a soft biolume-green highlight, marine-laboratory rather than decorative seashell kitsch. Colour palette: nacre white, deep teal, soft biolume green. Design language: marine-laboratory identity, pearlescent biochemical geometry. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
+    }
+  },
+  {
+    "id": "organisation-damaris-frontier-authority",
+    "name": "Damaris Frontier Authority",
+    "legalName": "Damaris Frontier Administrative Authority",
+    "organisationType": "frontier government",
+    "scale": "system",
+    "commercial": false,
+    "headquartersLocationId": "settlement-damaris-bastion",
+    "industries": [
+      "frontier administration",
+      "licensing",
+      "survey coordination"
+    ],
+    "description": "Civilian frontier administration operating under Commonwealth frontier law from Damaris Bastion, covering licensing and survey coordination.",
+    "parentOrganisationId": null,
+    "canonStatus": "generated-expansion",
+    "visualIdentity": {
+      "palette": [
+        "bastion grey",
+        "frontier ochre",
+        "white"
+      ],
+      "style": "fortified civic-government identity, practical frontier geometry",
+      "mark": "A bastion-grey civic shield with a frontier-ochre survey notch cut from one corner and a white open court in the centre, government not military-imperial."
+    },
+    "image": {
+      "key": "assets/art/universe/organisations/organisation-damaris-frontier-authority.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. A bastion-grey civic shield with a frontier-ochre survey notch cut from one corner and a white open court in the centre, government not military-imperial. Colour palette: bastion grey, frontier ochre, white. Design language: fortified civic-government identity, practical frontier geometry. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
+    }
+  },
+  {
+    "id": "organisation-damaris-security-command",
+    "name": "Damaris Security Command",
+    "legalName": "Damaris Joint Security Command",
+    "organisationType": "military and security organisation",
+    "scale": "regional",
+    "commercial": false,
+    "headquartersLocationId": "settlement-damaris-bastion",
+    "industries": [
+      "security",
+      "patrol",
+      "rescue",
+      "convoy protection"
+    ],
+    "description": "Joint security, patrol, rescue and convoy-protection force operating under Commonwealth authority from Damaris Bastion.",
+    "parentOrganisationId": null,
+    "canonStatus": "generated-expansion",
+    "visualIdentity": {
+      "palette": [
+        "charcoal",
+        "rescue amber",
+        "pale grey"
+      ],
+      "style": "joint security-and-rescue identity, protective not imperial",
+      "mark": "A charcoal protective chevron over a pale-grey field with a single rescue-amber bar, joint security and rescue mark, no skulls, eagles, or rank stars."
+    },
+    "image": {
+      "key": "assets/art/universe/organisations/organisation-damaris-security-command.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. A charcoal protective chevron over a pale-grey field with a single rescue-amber bar, joint security and rescue mark, no skulls, eagles, or rank stars. Colour palette: charcoal, rescue amber, pale grey. Design language: joint security-and-rescue identity, protective not imperial. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
+    }
+  },
+  {
+    "id": "organisation-lattice-bank",
+    "name": "Lattice Interstellar Bank",
+    "legalName": "Lattice Interstellar Banking Corporation",
+    "organisationType": "bank",
+    "scale": "major",
+    "commercial": true,
+    "headquartersLocationId": "settlement-meridian-freeport",
+    "industries": [
+      "banking",
+      "trade finance",
+      "project finance"
+    ],
+    "description": "Interstellar bank financing infrastructure, ship construction and commodity contracts from Meridian Freeport.",
+    "parentOrganisationId": null,
+    "canonStatus": "generated-expansion",
+    "visualIdentity": {
+      "palette": [
+        "deep green",
+        "pale marble",
+        "brass"
+      ],
+      "style": "restrained interstellar banking identity, quiet high-security geometry",
+      "mark": "An interlocking brass lattice of four diamonds on a deep-green disc, pale-marble highlights at the nodes, restrained banking geometry."
+    },
+    "image": {
+      "key": "assets/art/universe/organisations/organisation-lattice-bank.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. An interlocking brass lattice of four diamonds on a deep-green disc, pale-marble highlights at the nodes, restrained banking geometry. Colour palette: deep green, pale marble, brass. Design language: restrained interstellar banking identity, quiet high-security geometry. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
+    }
+  },
+  {
+    "id": "organisation-farline-news",
+    "name": "Farline News Network",
+    "legalName": "Farline Media Network",
+    "organisationType": "media organisation",
+    "scale": "regional",
+    "commercial": true,
+    "headquartersLocationId": "settlement-koplin-arcology",
+    "industries": [
+      "news",
+      "investigative media",
+      "data publishing"
+    ],
+    "description": "Independent news and investigative media network publishing from the Koplin Corporate Arcology.",
+    "parentOrganisationId": null,
+    "canonStatus": "generated-expansion",
+    "visualIdentity": {
+      "palette": [
+        "ink black",
+        "paper white",
+        "signal cyan"
+      ],
+      "style": "independent media identity, spare signal geometry",
+      "mark": "A sharp signal-cyan transmission line crossing an ink-black square, breaking into a paper-white horizon bar, independent media mark, not a camera or microphone."
+    },
+    "image": {
+      "key": "assets/art/universe/organisations/organisation-farline-news.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. A sharp signal-cyan transmission line crossing an ink-black square, breaking into a paper-white horizon bar, independent media mark, not a camera or microphone. Colour palette: ink black, paper white, signal cyan. Design language: independent media identity, spare signal geometry. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
+    }
+  },
+  {
+    "id": "organisation-koplin-medical-trust",
+    "name": "Koplin General Medical Trust",
+    "legalName": "Koplin General Medical Trust",
+    "organisationType": "hospital trust",
+    "scale": "system",
+    "commercial": false,
+    "headquartersLocationId": "settlement-koplin-arcology",
+    "industries": [
+      "healthcare",
+      "medical research",
+      "emergency medicine"
+    ],
+    "description": "Public medical trust providing hospital care, medical research and emergency medicine in the Koplin Corporate Arcology.",
+    "parentOrganisationId": null,
+    "canonStatus": "generated-expansion",
+    "visualIdentity": {
+      "palette": [
+        "clinical white",
+        "care teal",
+        "warm grey"
+      ],
+      "style": "public clinical identity, calm medical geometry",
+      "mark": "A clinical-white circular seal with two overlapping care-teal rounded bars forming an open diamond, warm-grey outer ring. Not a red cross, caduceus, or heart."
+    },
+    "image": {
+      "key": "assets/art/universe/organisations/organisation-koplin-medical-trust.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. A clinical-white circular seal with two overlapping care-teal rounded bars forming an open diamond, warm-grey outer ring. Not a red cross, caduceus, or heart. Colour palette: clinical white, care teal, warm grey. Design language: public clinical identity, calm medical geometry. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
+    }
+  },
+  {
+    "id": "organisation-dockworkers-guild",
+    "name": "Inter-System Dockworkers Guild",
+    "legalName": "Inter-System Dockworkers Guild",
+    "organisationType": "trade guild",
+    "scale": "regional",
+    "commercial": false,
+    "headquartersLocationId": "station-koplin-transfer-ring",
+    "industries": [
+      "labour representation",
+      "dock standards",
+      "training"
+    ],
+    "description": "Labour guild representing dock and freight-handling workers, setting dock standards and training from the Koplin Transfer Ring.",
+    "parentOrganisationId": null,
+    "canonStatus": "generated-expansion",
+    "visualIdentity": {
+      "palette": [
+        "dock rust",
+        "safety yellow",
+        "navy"
+      ],
+      "style": "labour-cooperative industrial identity, working-dock geometry",
+      "mark": "A navy disc bearing a safety-yellow gantry-arm chevron and a dock-rust counterweight block, labour-guild industrial mark."
+    },
+    "image": {
+      "key": "assets/art/universe/organisations/organisation-dockworkers-guild.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. A navy disc bearing a safety-yellow gantry-arm chevron and a dock-rust counterweight block, labour-guild industrial mark. Colour palette: dock rust, safety yellow, navy. Design language: labour-cooperative industrial identity, working-dock geometry. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
+    }
+  },
+  {
+    "id": "organisation-koplin-resource-charter",
+    "name": "Koplin Deep Reach Corporation",
+    "legalName": "Koplin Deep Reach Corporation",
+    "organisationType": "mining, logistics and industrial conglomerate",
+    "scale": "major",
+    "commercial": true,
+    "headquartersLocationId": "settlement-koplin-arcology",
+    "industries": [
+      "prospecting",
+      "extraction",
+      "logistics",
+      "industrial manufacturing",
+      "biochemicals",
+      "frontier services",
+      "strategic materials"
+    ],
+    "description": "One of the largest industrial organisations in Commonwealth space. Deep Reach operates across extraction, processing, logistics and industrial infrastructure and runs the Deep Reach Charter Programme for independent frontier mining settlements.",
+    "visualIdentity": {
+      "palette": [
+        "black",
+        "amber",
+        "steel"
+      ],
+      "style": "practical corporate mining and logistics design",
+      "mark": "A steel ring around a vertical amber shaft dropping into a black field, a deep-reach mining-and-logistics core mark, practical not heraldic."
+    },
+    "parentOrganisationId": null,
+    "canonStatus": "source-canonical",
+    "legacyStableIdNote": "Stable ID retained from the pre-lore charter-company placeholder; identity corrected to Koplin Deep Reach Corporation.",
+    "sourceDocumentId": "lore-deep-reach-mining-charter",
+    "sourceSection": "4. Koplin Deep Reach Corporation",
+    "image": {
+      "key": "assets/art/universe/organisations/organisation-koplin-resource-charter.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. A steel ring around a vertical amber shaft dropping into a black field, a deep-reach mining-and-logistics core mark, practical not heraldic. Colour palette: black, amber, steel. Design language: practical corporate mining and logistics design. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
+    }
+  },
+  {
+    "id": "organisation-koplin-commonwealth-exploration-service",
+    "name": "Koplin Commonwealth Exploration Service",
+    "legalName": "Koplin Commonwealth Exploration Service",
+    "organisationType": "Commonwealth exploration service",
+    "scale": "Commonwealth",
+    "commercial": false,
+    "headquartersLocationId": null,
+    "industries": [
+      "interstellar exploration",
+      "surveying",
+      "scientific expeditions",
+      "outpost support"
+    ],
+    "description": "Commonwealth exploration service operating long-range survey and settlement-support expeditions, including the KSV Meridian on the Far Lantern Expedition.",
+    "parentOrganisationId": "organisation-koplin-compact",
+    "canonStatus": "source-canonical",
+    "sourceDocumentId": "lore-koplin-expanded-backstory",
+    "sourceSection": "14.1 Ship Identity",
+    "visualIdentity": {
+      "palette": [
+        "survey navy",
+        "lantern gold",
+        "hull grey"
+      ],
+      "style": "restrained Commonwealth exploration identity, practical survey markings",
+      "mark": "A survey-navy disc with a lantern-gold pathfinder spark inside a hull-grey compass ring, exploration-service mark without a ship silhouette crowded with detail."
+    },
+    "image": {
+      "key": "assets/art/universe/organisations/organisation-koplin-commonwealth-exploration-service.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. A survey-navy disc with a lantern-gold pathfinder spark inside a hull-grey compass ring, exploration-service mark without a ship silhouette crowded with detail. Colour palette: survey navy, lantern gold, hull grey. Design language: restrained Commonwealth exploration identity, practical survey markings. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
+    }
+  },
+  {
+    "id": "organisation-kestrel-aerospace-systems",
+    "name": "Kestrel Aerospace Systems",
+    "legalName": "Kestrel Aerospace Systems Ltd",
+    "organisationType": "shipbuilder",
+    "scale": "major",
+    "commercial": true,
+    "headquartersLocationId": "station-solace-commercial-ring",
+    "industries": [
+      "shipbuilding",
+      "high-performance propulsion integration",
+      "fast freight",
+      "courier spacecraft"
+    ],
+    "description": "Performance-focused shipbuilder specialising in fast couriers, packet ships and time-critical freight hulls. Kestrel accepts higher fuel consumption and acquisition cost in exchange for acceleration and schedule performance.",
+    "visualIdentity": {
+      "palette": [
+        "deep navy",
+        "silver",
+        "electric cyan"
+      ],
+      "style": "sleek narrow hulls, strong engine emphasis and precise aerodynamic-industrial surfaces",
+      "mark": "A swept silver kestrel-wing delta with an electric-cyan leading edge on deep navy, sleek high-performance aerospace mark."
+    },
+    "parentOrganisationId": null,
+    "canonStatus": "generated-expansion-compatible-with-lore",
+    "shipbuildingSpecialisation": "speed, acceleration and rapid turnaround",
+    "image": {
+      "key": "assets/art/universe/organisations/organisation-kestrel-aerospace-systems.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. A swept silver kestrel-wing delta with an electric-cyan leading edge on deep navy, sleek high-performance aerospace mark. Colour palette: deep navy, silver, electric cyan. Design language: sleek narrow hulls, strong engine emphasis and precise aerodynamic-industrial surfaces. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
+    }
+  },
+  {
+    "id": "organisation-keystone-modular-fabrication",
+    "name": "Keystone Modular Fabrication",
+    "legalName": "Keystone Modular Fabrication Cooperative",
+    "organisationType": "shipbuilder",
+    "scale": "major",
+    "commercial": true,
+    "headquartersLocationId": "station-meridian-spindle",
+    "industries": [
+      "shipbuilding",
+      "modular freight systems",
+      "container logistics",
+      "commercial fabrication"
+    ],
+    "description": "Large commercial shipbuilder built around standardised modular cargo architecture. Keystone ships favour flexible payload configuration, common parts and efficient port handling across freight networks.",
+    "visualIdentity": {
+      "palette": [
+        "steel grey",
+        "white",
+        "signal orange"
+      ],
+      "style": "visible modular frames, interchangeable cargo blocks and highly standardised service interfaces",
+      "mark": "A steel-grey keystone arch built from three signal-orange modular blocks with white service gaps, interchangeable cargo-architecture mark."
+    },
+    "parentOrganisationId": null,
+    "canonStatus": "generated-expansion-compatible-with-lore",
+    "shipbuildingSpecialisation": "modular cargo and network logistics",
+    "image": {
+      "key": "assets/art/universe/organisations/organisation-keystone-modular-fabrication.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. A steel-grey keystone arch built from three signal-orange modular blocks with white service gaps, interchangeable cargo-architecture mark. Colour palette: steel grey, white, signal orange. Design language: visible modular frames, interchangeable cargo blocks and highly standardised service interfaces. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
+    }
+  },
+  {
+    "id": "organisation-longreach-engineering",
+    "name": "Longreach Engineering",
+    "legalName": "Longreach Interstellar Engineering PLC",
+    "organisationType": "shipbuilder",
+    "scale": "major",
+    "commercial": true,
+    "headquartersLocationId": "station-damaris-frontier-port",
+    "industries": [
+      "shipbuilding",
+      "long-range freight",
+      "reliability engineering",
+      "frontier logistics"
+    ],
+    "description": "Frontier-oriented shipbuilder specialising in long-range, fuel-efficient and highly redundant vessels. Longreach ships cost more up front but are designed to reduce dependency on dense repair and resupply networks.",
+    "visualIdentity": {
+      "palette": [
+        "dark green",
+        "cream",
+        "gunmetal"
+      ],
+      "style": "long clean hulls, protected systems, redundant external structures and restrained frontier markings",
+      "mark": "A long dark-green horizon bar with a cream inset range-tick and gunmetal end-caps, frontier endurance mark, elongated and restrained."
+    },
+    "parentOrganisationId": null,
+    "canonStatus": "generated-expansion-compatible-with-lore",
+    "shipbuildingSpecialisation": "range, fuel efficiency and reliability",
+    "image": {
+      "key": "assets/art/universe/organisations/organisation-longreach-engineering.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. A long dark-green horizon bar with a cream inset range-tick and gunmetal end-caps, frontier endurance mark, elongated and restrained. Colour palette: dark green, cream, gunmetal. Design language: long clean hulls, protected systems, redundant external structures and restrained frontier markings. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
+    }
+  },
+  {
+    "id": "organisation-crownline-heavy-works",
+    "name": "Crownline Heavy Works",
+    "legalName": "Crownline Heavy Works Corporation",
+    "organisationType": "shipbuilder",
+    "scale": "major",
+    "commercial": true,
+    "headquartersLocationId": "settlement-caldera-refinery-belt",
+    "industries": [
+      "shipbuilding",
+      "megafreighters",
+      "heavy fabrication",
+      "bulk logistics"
+    ],
+    "description": "Heavy-industrial shipbuilder whose enormous carriers prioritise cargo volume, structural simplicity and low acquisition cost per unit of freight capacity over speed or elegance.",
+    "visualIdentity": {
+      "palette": [
+        "black alloy",
+        "industrial yellow",
+        "oxide red"
+      ],
+      "style": "massive slab-sided structures, exposed cargo frames, oversized trusses and unmistakable industrial scale",
+      "mark": "A heavy industrial-yellow truss chevron on black alloy, oxide-red load-pin accent, slab-sided megafreighter-yard mark, massive and simple."
+    },
+    "parentOrganisationId": null,
+    "canonStatus": "generated-expansion-compatible-with-lore",
+    "shipbuildingSpecialisation": "huge bulk carriers and megafreighters",
+    "image": {
+      "key": "assets/art/universe/organisations/organisation-crownline-heavy-works.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. A heavy industrial-yellow truss chevron on black alloy, oxide-red load-pin accent, slab-sided megafreighter-yard mark, massive and simple. Colour palette: black alloy, industrial yellow, oxide red. Design language: massive slab-sided structures, exposed cargo frames, oversized trusses and unmistakable industrial scale. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
+    }
+  }
 ]
