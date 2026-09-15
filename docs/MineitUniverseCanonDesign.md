@@ -332,7 +332,7 @@ Current artwork priority is:
 1. people;
 2. named ships.
 
-Other entity artwork may be introduced later.
+Purchasable ship classes and a first substance catalog-still batch may also carry optional image metadata. Other entity artwork may be introduced later.
 
 Any entity type may support an optional `image` object.
 

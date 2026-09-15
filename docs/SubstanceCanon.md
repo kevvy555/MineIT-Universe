@@ -46,8 +46,9 @@ Stable fields on each substance:
 - `dominantArchetype`, `form`, `refined`, `tier`
 - `industrialRole`
 - `sourceDocumentId`, `sourceSection`, `canonStatus`
+- optional `image` — catalog-still generation state (`generated`, `status`, `key`, `promptDescription`, `notes`) when the category has entered the image process
 
-No mutable prices, reserves, contract terms or quality rolls.
+No mutable prices, reserves, contract terms or quality rolls. Image prompts describe an identity-neutral industrial sample of the category, not a named local deposit, company brand or Veyrite.
 
 Parts, machines and buildings use the same stable-ID model. Relationships are expressed with IDs and are validation-protected. Provenance records where a canonical archetype came from Desktop, Mobile, or both.
 

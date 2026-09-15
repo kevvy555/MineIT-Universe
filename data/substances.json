@@ -13,7 +13,14 @@
     "description": "Reactive Metal Ore is a Commonwealth industrial substance category (Metal archetype, P0). Primary role: Batteries, chemical reactions.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.1 Metal",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-reactive-metal-ore.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 industrial catalog still of a raw reactive-metal ore sample: dense impure metallic rock with dull oxidised crust and fresh bright fracture faces, piled as unrefined mine stock on a plain dark tray. Grounded Year-5326 science-fiction materials photography, studio lighting, shallow depth of field. No readable labels, company names, logos, registration numbers or text.",
+      "notes": "Category sample still, not a named local deposit. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-reactive-metal-ore.png and a same-pixel-size catalog WebP at this key."
+    }
   },
   {
     "id": "substance-conductive-metal-ore",
@@ -157,7 +164,14 @@
     "description": "Refined Conductive Metal is a Commonwealth industrial substance category (Metal archetype, P0). Primary role: Wiring, electronics.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.1 Metal",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-refined-conductive-metal.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 industrial catalog still of refined conductive metal stock: high-purity bright metal billets or plates with a clean machined sheen, stacked as smelter output rather than raw rock. Dense, strongly conductive appearance, very low implied fuel value. Grounded Year-5326 science-fiction materials photography, studio lighting. No readable labels, company names, logos, stamps, registration numbers or text.",
+      "notes": "Refined P0 metal category, not a trademarked alloy. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-refined-conductive-metal.png and a same-pixel-size catalog WebP at this key."
+    }
   },
   {
     "id": "substance-refined-magnetic-metal",
@@ -365,7 +379,14 @@
     "description": "Silica Mineral is a Commonwealth industrial substance category (Silicate archetype, P0). Primary role: Glass, optics.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.2 Silicate",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-silica-mineral.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 industrial catalog still of raw silica mineral: hard translucent-to-milky silicate chunks and crushed grains suitable for glass and optics feedstock, heat-tolerant stone character, negligible fuel value. Unrefined mineral stock on a plain dark tray. Grounded Year-5326 science-fiction materials photography, studio lighting. No readable labels, company names, logos, registration numbers or text. Not Veyrite and not a named gemstone brand.",
+      "notes": "Ordinary P0 silicate mineral for glass/optics. Must not depict Veyrite. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-silica-mineral.png and a same-pixel-size catalog WebP at this key."
+    }
   },
   {
     "id": "substance-clay-mineral",
@@ -589,7 +610,14 @@
     "description": "Liquid Fuel Deposit is a Commonwealth industrial substance category (Carbon archetype, P0). Primary role: Combustion engines, generators.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.3 Carbon",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-liquid-fuel-deposit.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 industrial catalog still of a raw liquid-fuel deposit sample: dark amber-to-brown hydrocarbon liquid in a plain unlabelled glass sample vessel, viscous enough to read as unrefined combustion feedstock. Carbon-rich, burnable, moderate-to-high energy. Grounded Year-5326 science-fiction materials photography, studio lighting. No readable labels, company names, logos, registration numbers or text.",
+      "notes": "Raw P0 liquid fuel category. Vessel must stay identity-neutral. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-liquid-fuel-deposit.png and a same-pixel-size catalog WebP at this key."
+    }
   },
   {
     "id": "substance-high-density-solid-fuel",
@@ -765,7 +793,14 @@
     "description": "Woody Plant Material is a Commonwealth industrial substance category (Organic archetype, P0). Primary role: Construction, fuel.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.4 Organic",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-woody-plant.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 industrial catalog still of woody plant material: cut timber sections and bark-on biomass, low-density organic solid used for construction and fuel, dry fibrous grain, moderate energy, burnable. Raw harvested stock, not furniture and not a living tree portrait. Grounded Year-5326 science-fiction materials photography, studio lighting. No readable labels, company names, logos, registration numbers or text.",
+      "notes": "P0 Organic category. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-woody-plant.png and a same-pixel-size catalog WebP at this key."
+    }
   },
   {
     "id": "substance-organic-biomass",
@@ -797,7 +832,14 @@
     "description": "Fresh Water is a Commonwealth industrial substance category (Water archetype, P0). Primary role: Life support, coolant, steam generation.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.5 Water",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-fresh-water.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 industrial catalog still of refined fresh water: a clear colourless aqueous liquid in a plain unlabelled glass sample vessel, clean enough to read as life-support, coolant and steam feedstock rather than brine or process acid. Grounded Year-5326 science-fiction materials photography, studio lighting, subtle caustic highlights. No readable labels, company names, logos, registration numbers or text.",
+      "notes": "Refined P0 Water category. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-fresh-water.png and a same-pixel-size catalog WebP at this key."
+    }
   },
   {
     "id": "substance-saltwater",
@@ -973,7 +1015,14 @@
     "description": "Phosphate Mineral is a Commonwealth industrial substance category (Salt archetype, P1). Primary role: Fertilizers, chemical processes.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.6 Salt",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-phosphate-mineral.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 industrial catalog still of raw phosphate mineral: pale earthy-to-crystalline salt/evaporite chunks and powder used as fertilizer and chemical-process feedstock. Unrefined mineral stock on a plain dark tray. Grounded Year-5326 science-fiction materials photography, studio lighting. No readable labels, company names, logos, registration numbers or text.",
+      "notes": "P1 Salt-approximation category from the materials companion. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-phosphate-mineral.png and a same-pixel-size catalog WebP at this key."
+    }
   },
   {
     "id": "substance-fertilizer",
@@ -1005,7 +1054,14 @@
     "description": "Gas Fuel Deposit is a Commonwealth industrial substance category (Volatile archetype, P0). Primary role: Direct combustion, generators.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.7 Volatile",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-gas-fuel-deposit.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 industrial catalog still of a raw gas-fuel deposit sample: colourless-to-faint combustible gas implied by a plain unlabelled sealed metal sample cylinder with a small sight window or condensation, presented as unrefined generator fuel rather than a flame effect. Volatile, burns, ordinary-condition gas. Grounded Year-5326 science-fiction materials photography, studio lighting. No readable labels, company names, logos, valve stamps, registration numbers or text.",
+      "notes": "Raw P0 volatile gas category. Identity-neutral cylinder only. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-gas-fuel-deposit.png and a same-pixel-size catalog WebP at this key."
+    }
   },
   {
     "id": "substance-high-energy-combustible-gas",
