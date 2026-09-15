@@ -46,7 +46,7 @@ Stable fields on each substance:
 - `dominantArchetype`, `form`, `refined`, `tier`
 - `industrialRole`
 - `sourceDocumentId`, `sourceSection`, `canonStatus`
-- optional `image` — catalog-still generation state (`generated`, `status`, `key`, `promptDescription`, `notes`) when the category has entered the image process
+- optional `image` — catalog-still generation state (`generated`, `status`, `key`, `promptDescription`, `notes`). All 75 P0/P1 categories currently carry generated 1:1 full-bleed stills.
 
 No mutable prices, reserves, contract terms or quality rolls. Image prompts describe an identity-neutral full-bleed representation of the category itself, not objects on a background, a named local deposit, company brand or Veyrite.
 
