@@ -8,7 +8,7 @@
     "indexStart": 1,
     "indexEnd": 1000,
     "materialisedThroughIndex": 100,
-    "generatedAssetCount": 10,
+    "generatedAssetCount": 100,
     "status": "prompted-not-generated",
     "reusableAcrossUniverses": true,
     "identityNeutral": true,

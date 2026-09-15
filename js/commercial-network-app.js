@@ -1,4 +1,5 @@
 import { loadUniverse } from './universe-data.js';
+import { bindOriginalImageOpener } from './image-lightbox.js';
 
 const $ = id => document.getElementById(id);
 const escapeHtml = value => String(value ?? '').replace(/[&<>'"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
@@ -42,8 +43,11 @@ function matches(person){
 }
 
 function portrait(person){
-  if(person.image?.generated) return `<img class="portrait" src="${escapeHtml(state.catalogue.assetUrl(person.image.key))}" alt="${escapeHtml(person.name)}">`;
-  return `<div class="portrait">IMAGE<br>NOT<br>GENERATED</div>`;
+  if(!person.image?.generated) return `<div class="portrait">IMAGE<br>NOT<br>GENERATED</div>`;
+  const preview = state.catalogue.assetUrl(person.image.key);
+  const originalKey = state.catalogue.originalAssetKey(person.image.key);
+  const original = originalKey ? state.catalogue.assetUrl(originalKey) : preview;
+  return `<button type="button" class="portrait portraitButton" data-original-image="${escapeHtml(original)}" data-preview-image="${escapeHtml(preview)}" data-image-name="${escapeHtml(person.name)}" aria-label="View original portrait of ${escapeHtml(person.name)}"><img src="${escapeHtml(preview)}" alt=""></button>`;
 }
 
 function card(person){
@@ -90,7 +94,9 @@ try {
   state.operations = catalogue.collection('operations').filter(operation=>operation.operationType==='procurement and supply contracting');
   $('version').textContent = `v${catalogue.manifest.contentVersion}`;
   if(!validation.isValid) console.error('Universe validation errors',validation.errors);
-  summary(); fillFilters(); bind(); render();
+  summary(); fillFilters(); bind();
+  bindOriginalImageOpener($('cards'));
+  render();
 } catch(error) {
   console.error(error);
   $('cards').innerHTML = `<div class="empty">Failed to load the canonical commercial network: ${escapeHtml(error.message)}</div>`;

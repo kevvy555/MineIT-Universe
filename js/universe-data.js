@@ -112,6 +112,14 @@ export class UniverseCatalogue {
     if (!key) return null;
     return new URL(`../${key.replace(/^\.?\//, '')}`, this.manifestUrl).toString();
   }
+  originalAssetKey(key) {
+    if (!key || typeof key !== 'string') return null;
+    const normalized = key.replace(/^\.?\//, '');
+    const slash = normalized.lastIndexOf('/');
+    if (slash < 0) return null;
+    const file = normalized.slice(slash + 1).replace(/\.[^.]+$/, '.png');
+    return `${normalized.slice(0, slash)}/Originals/${file}`;
+  }
 }
 
 async function fetchJson(url) {
