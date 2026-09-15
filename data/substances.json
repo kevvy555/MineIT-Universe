@@ -36,7 +36,16 @@
     "description": "Conductive Metal Ore is a Commonwealth industrial substance category (Metal archetype, P0). Primary role: Electrical wiring, electronics.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.1 Metal",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-conductive-metal-ore.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed close-up of raw conductive-metal ore as a single continuous rock face filling the frame: impure host rock crossed by bright, highly conductive metallic veins and fracture shine. Unrefined wiring and electronics feedstock, not a pile of samples. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-conductive-metal-ore.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-magnetic-metal-ore",
@@ -52,7 +61,16 @@
     "description": "Magnetic Metal Ore is a Commonwealth industrial substance category (Metal archetype, P0). Primary role: Generators, motors.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.1 Metal",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-magnetic-metal-ore.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed close-up of raw magnetic-metal ore as a single continuous rock face filling the frame: dark dense metallic mineral with a dull ferromagnetic sheen in the fracture. Unrefined generator and motor feedstock. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-magnetic-metal-ore.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-structural-metal-ore",
@@ -68,7 +86,16 @@
     "description": "Structural Metal Ore is a Commonwealth industrial substance category (Metal archetype, P0). Primary role: Frames, hulls, machinery.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.1 Metal",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-structural-metal-ore.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed close-up of raw structural-metal ore as a single continuous rock face filling the frame: heavy grey metallic mineral, tough impure mix for frames, hulls and machinery. Unrefined mine stock. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-structural-metal-ore.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-light-metal-ore",
@@ -84,7 +111,16 @@
     "description": "Light Metal Ore is a Commonwealth industrial substance category (Metal archetype, P1). Primary role: Lightweight structures, vehicles.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.1 Metal",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-light-metal-ore.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed close-up of raw light-metal ore as a single continuous rock face filling the frame: paler, less massive metallic mineral with a lighter silicate-host look, unrefined lightweight-structure feedstock. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-light-metal-ore.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-heavy-metal-ore",
@@ -100,7 +136,16 @@
     "description": "Heavy Metal Ore is a Commonwealth industrial substance category (Metal archetype, P1). Primary role: Shielding, counterweights, ballast.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.1 Metal",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-heavy-metal-ore.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed close-up of raw heavy-metal ore as a single continuous rock face filling the frame: very dense dark metallic mineral, shielding and ballast character, unrefined and massive. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-heavy-metal-ore.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-rare-metal-ore",
@@ -116,7 +161,16 @@
     "description": "Rare Metal Ore is a Commonwealth industrial substance category (Metal archetype, P1). Primary role: Advanced electronics, catalysts.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.1 Metal",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-rare-metal-ore.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed close-up of raw rare-metal ore as a single continuous rock face filling the frame: dark host rock with sparse brilliant metallic specks and fine conductive traces, unrefined advanced-electronics feedstock. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-rare-metal-ore.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-radioactive-ore",
@@ -132,7 +186,16 @@
     "description": "Radioactive Ore is a Commonwealth industrial substance category (Metal archetype, P1). Primary role: Advanced power (late research).",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.1 Metal",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-radioactive-ore.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed close-up of raw radioactive ore as a single continuous rock face filling the frame: dense dark metallic mineral with a faint unnatural inner luminescence in the fracture, late-research power feedstock. No hazard symbols. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-radioactive-ore.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-refined-reactive-metal",
@@ -148,7 +211,16 @@
     "description": "Refined Reactive Metal is a Commonwealth industrial substance category (Metal archetype, P0). Primary role: Batteries, reactions.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.1 Metal",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-refined-reactive-metal.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed close-up of a single refined reactive-metal surface filling the frame: bright high-purity metal with a living tarnish bloom, battery and reaction stock, one continuous face. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-refined-reactive-metal.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-refined-conductive-metal",
@@ -187,7 +259,16 @@
     "description": "Refined Magnetic Metal is a Commonwealth industrial substance category (Metal archetype, P0). Primary role: Generators, motors.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.1 Metal",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-refined-magnetic-metal.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed close-up of a single refined magnetic-metal surface filling the frame: dark silvery high-purity ferromagnetic sheen, generator and motor stock, one continuous face. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-refined-magnetic-metal.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-refined-structural-metal",
@@ -203,7 +284,16 @@
     "description": "Refined Structural Metal is a Commonwealth industrial substance category (Metal archetype, P0). Primary role: Frames, hulls, machinery.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.1 Metal",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-refined-structural-metal.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed close-up of a single refined structural-metal surface filling the frame: matte-to-satin high-purity grey metal for frames and hulls, one continuous plate face. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-refined-structural-metal.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-refined-light-metal",
@@ -219,7 +309,16 @@
     "description": "Refined Light Metal is a Commonwealth industrial substance category (Metal archetype, P1). Primary role: Lightweight structures.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.1 Metal",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-refined-light-metal.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed close-up of a single refined light-metal surface filling the frame: pale silvery high-purity metal, low-mass structural stock, one continuous face. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-refined-light-metal.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-refined-heavy-metal",
@@ -235,7 +334,16 @@
     "description": "Refined Heavy Metal is a Commonwealth industrial substance category (Metal archetype, P1). Primary role: Shielding, ballast.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.1 Metal",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-refined-heavy-metal.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed close-up of a single refined heavy-metal surface filling the frame: very dense dark high-purity metal, shielding and ballast character, one continuous face. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-refined-heavy-metal.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-refined-rare-metal",
@@ -251,7 +359,16 @@
     "description": "Refined Rare Metal is a Commonwealth industrial substance category (Metal archetype, P1). Primary role: Advanced electronics, catalysts.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.1 Metal",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-refined-rare-metal.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed close-up of a single refined rare-metal surface filling the frame: highly reflective high-purity metal, advanced electronics and catalyst stock, one continuous face. Not a branded jewellery product. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-refined-rare-metal.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-structural-alloy",
@@ -267,7 +384,16 @@
     "description": "Structural Alloy is a Commonwealth industrial substance category (Metal archetype, P1). Primary role: High tensile strength.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.1 Metal",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-structural-alloy.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed close-up of a single structural-alloy surface filling the frame: engineered mixed-metal grain, high tensile character, impure-by-definition alloy rather than a pure element. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-structural-alloy.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-conductive-alloy",
@@ -283,7 +409,16 @@
     "description": "Conductive Alloy is a Commonwealth industrial substance category (Metal archetype, P1). Primary role: Optimised conductivity.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.1 Metal",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-conductive-alloy.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed close-up of a single conductive-alloy surface filling the frame: bright engineered mixed-metal grain optimised for conductivity, one continuous face. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-conductive-alloy.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-heat-resistant-alloy",
@@ -299,7 +434,16 @@
     "description": "Heat-Resistant Alloy is a Commonwealth industrial substance category (Metal archetype, P1). Primary role: High thermal tolerance.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.1 Metal",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-heat-resistant-alloy.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed close-up of a single heat-resistant-alloy surface filling the frame: dull heat-tinted mixed-metal grain, high thermal tolerance, one continuous face. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-heat-resistant-alloy.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-lightweight-alloy",
@@ -315,7 +459,16 @@
     "description": "Lightweight Alloy is a Commonwealth industrial substance category (Metal archetype, P1). Primary role: Low mass, structural.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.1 Metal",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-lightweight-alloy.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed close-up of a single lightweight-alloy surface filling the frame: pale open engineered grain, low-mass structural mixed metal, one continuous face. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-lightweight-alloy.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-magnetic-alloy",
@@ -331,7 +484,16 @@
     "description": "Magnetic Alloy is a Commonwealth industrial substance category (Metal archetype, P1). Primary role: Enhanced magnetic properties.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.1 Metal",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-magnetic-alloy.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed close-up of a single magnetic-alloy surface filling the frame: dark engineered mixed-metal grain with enhanced ferromagnetic character, one continuous face. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-magnetic-alloy.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-corrosion-resistant-alloy",
@@ -347,7 +509,16 @@
     "description": "Corrosion-Resistant Alloy is a Commonwealth industrial substance category (Metal archetype, P1). Primary role: Chemical and atmospheric durability.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.1 Metal",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-corrosion-resistant-alloy.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed close-up of a single corrosion-resistant-alloy surface filling the frame: passive stainless-like mixed-metal sheen, chemical and atmospheric durability, one continuous face. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-corrosion-resistant-alloy.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-catalytic-compound",
@@ -363,7 +534,16 @@
     "description": "Catalytic Compound is a Commonwealth industrial substance category (Metal archetype, P1). Primary role: Accelerates chemical reactions.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.1 Metal",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-catalytic-compound.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed close-up of refined catalytic compound as one continuous solid face filling the frame: porous matte metallic-compound texture that reads as reaction-accelerating stock, not a device. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-catalytic-compound.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-silica-mineral",
@@ -402,7 +582,16 @@
     "description": "Clay Mineral is a Commonwealth industrial substance category (Silicate archetype, P0). Primary role: Refractories, pipes, bricks.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.2 Silicate",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-clay-mineral.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed close-up of raw clay mineral as one continuous earthy silicate body filling the frame: dense plastic clay for refractories, pipes and bricks, unrefined. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-clay-mineral.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-stone-aggregate",
@@ -418,7 +607,16 @@
     "description": "Stone Aggregate is a Commonwealth industrial substance category (Silicate archetype, P0). Primary role: Construction, foundations.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.2 Silicate",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-stone-aggregate.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed close-up of raw stone aggregate as one continuous construction-stone face filling the frame: hard silicate rock for foundations, not a pile of gravel. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-stone-aggregate.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-insulating-mineral",
@@ -434,7 +632,16 @@
     "description": "Insulating Mineral is a Commonwealth industrial substance category (Silicate archetype, P0). Primary role: Electrical insulation, thermal barriers.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.2 Silicate",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-insulating-mineral.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed close-up of raw insulating mineral as one continuous pale silicate body filling the frame: soft fibrous-to-platy heat and electrical barrier mineral, unrefined. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-insulating-mineral.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-crystalline-mineral",
@@ -450,7 +657,16 @@
     "description": "Crystalline Mineral is a Commonwealth industrial substance category (Silicate archetype, P1). Primary role: Optics, sensors, precision instruments.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.2 Silicate",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-crystalline-mineral.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed close-up of raw crystalline mineral as one continuous optical silicate interior filling the frame: hard faceted clarity for sensors and instruments. Not Veyrite and not a gemstone brand. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-crystalline-mineral.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-abrasive-mineral",
@@ -466,7 +682,16 @@
     "description": "Abrasive Mineral is a Commonwealth industrial substance category (Silicate archetype, P1). Primary role: Cutting tools, grinding.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.2 Silicate",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-abrasive-mineral.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed close-up of raw abrasive mineral as one continuous hard grit silicate face filling the frame: cutting and grinding character, unrefined. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-abrasive-mineral.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-glass",
@@ -482,7 +707,16 @@
     "description": "Glass is a Commonwealth industrial substance category (Silicate archetype, P0). Primary role: Optics, windows, vessels.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.2 Silicate",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-glass.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed close-up looking into refined glass as one continuous transparent silicate volume filling the frame: optics, windows and vessels character, slight green-clear depth. No window frame, pane edge or object. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-glass.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-refined-ceramic",
@@ -498,7 +732,16 @@
     "description": "Refined Ceramic is a Commonwealth industrial substance category (Silicate archetype, P0). Primary role: Crucibles, insulators, pipes.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.2 Silicate",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-refined-ceramic.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed close-up of refined ceramic as one continuous fired silicate body filling the frame: dense crucible and pipe ceramic, not a finished vessel. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-refined-ceramic.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-refined-insulator",
@@ -514,7 +757,16 @@
     "description": "Refined Insulator is a Commonwealth industrial substance category (Silicate archetype, P0). Primary role: Electrical insulation.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.2 Silicate",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-refined-insulator.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed close-up of refined electrical insulator as one continuous pale dielectric silicate face filling the frame: porcelain-like insulation stock, not a component. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-refined-insulator.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-structural-composite",
@@ -530,7 +782,16 @@
     "description": "Structural Composite is a Commonwealth industrial substance category (Silicate archetype, P1). Primary role: High-performance structures.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.2 Silicate",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-structural-composite.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed close-up of structural composite as one continuous cut-face filling the frame: silicate matrix with metal or carbon reinforcement visible in the section, high-performance structure stock. Not a finished part. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-structural-composite.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-thermal-composite",
@@ -546,7 +807,16 @@
     "description": "Thermal Composite is a Commonwealth industrial substance category (Silicate archetype, P1). Primary role: Engine linings, heat resistance.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.2 Silicate",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-thermal-composite.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed close-up of thermal composite as one continuous heat-lining face filling the frame: silicate-and-metal heat-resistant matrix for engine linings, one continuous material. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-thermal-composite.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-carbon-rich-mineral",
@@ -562,7 +832,16 @@
     "description": "Carbon-Rich Mineral is a Commonwealth industrial substance category (Carbon archetype, P0). Primary role: Electrodes, filtration.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.3 Carbon",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-carbon-rich-mineral.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed close-up of raw carbon-rich mineral as one continuous dark sooty mineral face filling the frame: electrode and filtration feedstock, burnable carbon character. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-carbon-rich-mineral.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-solid-fuel-deposit",
@@ -578,7 +857,16 @@
     "description": "Solid Fuel Deposit is a Commonwealth industrial substance category (Carbon archetype, P0). Primary role: Direct combustion, power generation.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.3 Carbon",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-solid-fuel-deposit.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed close-up of raw solid fuel as one continuous combustible carbon deposit face filling the frame: coal-like unrefined power-generation stock, no flame. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-solid-fuel-deposit.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-lubricant-capable-liquid",
@@ -594,7 +882,16 @@
     "description": "Lubricant-Capable Liquid is a Commonwealth industrial substance category (Carbon archetype, P0). Primary role: Bearings, gears, machinery.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.3 Carbon",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-lubricant-capable-liquid.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed view looking into a volume of raw lubricant-capable liquid filling the frame: viscous oily hydrocarbon, bearings and machinery feedstock, surface tension and depth only. No container. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-lubricant-capable-liquid.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-liquid-fuel-deposit",
@@ -633,7 +930,16 @@
     "description": "High-Density Solid Fuel is a Commonwealth industrial substance category (Carbon archetype, P1). Primary role: Compressed / pre-refined combustion.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.3 Carbon",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-high-density-solid-fuel.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed close-up of high-density solid fuel as one continuous compressed combustible carbon face filling the frame: denser darker pre-refined combustion stock, no flame. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-high-density-solid-fuel.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-refined-graphite",
@@ -649,7 +955,16 @@
     "description": "Refined Graphite is a Commonwealth industrial substance category (Carbon archetype, P0). Primary role: Electrodes, dry lubricant.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.3 Carbon",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-refined-graphite.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed close-up of refined graphite as one continuous layered carbon face filling the frame: silvery-black electrode and dry-lubricant stock, one continuous material. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-refined-graphite.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-refined-lubricant",
@@ -665,7 +980,16 @@
     "description": "Refined Lubricant is a Commonwealth industrial substance category (Carbon archetype, P0). Primary role: Machinery.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.3 Carbon",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-refined-lubricant.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed view looking into a volume of refined lubricant filling the frame: cleaner viscous machinery oil, depth and sheen only. No bottle or drip on a surface. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-refined-lubricant.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-refined-liquid-fuel",
@@ -681,7 +1005,16 @@
     "description": "Refined Liquid Fuel is a Commonwealth industrial substance category (Carbon archetype, P1). Primary role: Clean combustion.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.3 Carbon",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-refined-liquid-fuel.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed view looking into a volume of refined liquid fuel filling the frame: clearer amber hydrocarbon for clean combustion, depth only, no container. Distinct from darker unrefined deposit fuel. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-refined-liquid-fuel.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-polymer",
@@ -697,7 +1030,16 @@
     "description": "Polymer is a Commonwealth industrial substance category (Carbon archetype, P1). Primary role: Seals, coatings.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.3 Carbon",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-polymer.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed close-up of refined polymer as one continuous synthetic carbon solid filling the frame: smooth seals-and-coatings plastic character, not a moulded product. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-polymer.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-adhesive",
@@ -713,7 +1055,16 @@
     "description": "Adhesive is a Commonwealth industrial substance category (Carbon archetype, P1). Primary role: Bonding, sealing.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.3 Carbon",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-adhesive.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed close-up of refined adhesive as one continuous tacky resinous carbon compound filling the frame: bonding and sealing stock, not a glue bottle. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-adhesive.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-explosive",
@@ -729,7 +1080,16 @@
     "description": "Explosive is a Commonwealth industrial substance category (Carbon archetype, P1). Primary role: Blasting, accelerated mining.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.3 Carbon",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-explosive.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed close-up of explosive compound as one continuous energetic crystalline carbon solid filling the frame: blasting feedstock, inert in the image, no flame, blast or hazard marks. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-explosive.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-chemical-solvent",
@@ -745,7 +1105,16 @@
     "description": "Chemical Solvent is a Commonwealth industrial substance category (Carbon archetype, P1). Primary role: Cleaning, dissolution.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.3 Carbon",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-chemical-solvent.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed view looking into a volume of refined chemical solvent filling the frame: clear volatile dissolving liquid, slightly different from water, depth only, no container. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-chemical-solvent.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-liquid-propellant",
@@ -761,7 +1130,16 @@
     "description": "Liquid Propellant is a Commonwealth industrial substance category (Carbon archetype, P1). Primary role: Rocket engines.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.3 Carbon",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-liquid-propellant.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed view looking into a volume of liquid propellant filling the frame: energetic carbon-volatile blend for rocket engines, restless clear-to-pale liquid depth, no tank or engine. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-liquid-propellant.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-fibrous-plant",
@@ -777,7 +1155,16 @@
     "description": "Fibrous Plant Material is a Commonwealth industrial substance category (Organic archetype, P1). Primary role: Textiles, rope, composite reinforcement.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.4 Organic",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-fibrous-plant.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed close-up of fibrous plant material as one continuous organic fibre mass filling the frame: dry textile and rope feedstock, not a finished rope or cloth. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-fibrous-plant.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-woody-plant",
@@ -816,7 +1203,16 @@
     "description": "Organic Biomass is a Commonwealth industrial substance category (Organic archetype, P1). Primary role: Fertilizer, biogas feedstock.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.4 Organic",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-organic-biomass.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed close-up of organic biomass as one continuous decomposing plant-matter face filling the frame: fertilizer and biogas feedstock, damp fibrous organic mix, not a landscape. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-organic-biomass.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-fresh-water",
@@ -855,7 +1251,16 @@
     "description": "Saltwater is a Commonwealth industrial substance category (Water archetype, P0). Primary role: Electrolytes, chemical feedstock.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.5 Water",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-saltwater.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed view looking into a volume of saltwater filling the frame: slightly grey-green brine, electrolyte and chemical feedstock, depth and faint particulates, no shoreline or glass. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-saltwater.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-acidic-liquid",
@@ -871,7 +1276,16 @@
     "description": "Acidic Liquid is a Commonwealth industrial substance category (Water archetype, P0). Primary role: Electrolytes, chemical processing.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.5 Water",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-acidic-liquid.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed view looking into a volume of acidic process liquid filling the frame: pale yellowish aqueous mixture, electrolyte character, depth only, no vessel. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-acidic-liquid.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-alkaline-liquid",
@@ -887,7 +1301,16 @@
     "description": "Alkaline Liquid is a Commonwealth industrial substance category (Water archetype, P0). Primary role: Electrolytes, chemical processing.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.5 Water",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-alkaline-liquid.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed view looking into a volume of alkaline process liquid filling the frame: faintly milky opalescent aqueous mixture, depth only, no vessel. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-alkaline-liquid.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-mineral-rich-water",
@@ -903,7 +1326,16 @@
     "description": "Mineral-Rich Water is a Commonwealth industrial substance category (Water archetype, P1). Primary role: Dissolved mineral extraction.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.5 Water",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-mineral-rich-water.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed view looking into a volume of mineral-rich water filling the frame: aqueous liquid with visible dissolved-mineral tint and faint suspended solids, extraction feedstock, no shoreline. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-mineral-rich-water.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-electrolyte-solution",
@@ -919,7 +1351,16 @@
     "description": "Electrolyte Solution is a Commonwealth industrial substance category (Water archetype, P0). Primary role: Batteries.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.5 Water",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-electrolyte-solution.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed view looking into a volume of electrolyte solution filling the frame: aqueous ionic liquid with a faint battery-feedstock tint, depth only, no cell or jar. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-electrolyte-solution.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-coolant",
@@ -935,7 +1376,16 @@
     "description": "Coolant is a Commonwealth industrial substance category (Water archetype, P1). Primary role: Thermal management.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.5 Water",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-coolant.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed view looking into a volume of refined coolant filling the frame: clear aqueous thermal-management liquid with a faint cool tint, depth and caustics, no radiator or bottle. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-coolant.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-chemical-reagent",
@@ -951,7 +1401,16 @@
     "description": "Chemical Reagent is a Commonwealth industrial substance category (Water archetype, P1). Primary role: Laboratory and manufacturing.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.5 Water",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-chemical-reagent.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed view looking into a volume of chemical reagent filling the frame: pale aqueous manufacturing liquid, depth only, no flask. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-chemical-reagent.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-concentrated-acid",
@@ -967,7 +1426,16 @@
     "description": "Concentrated Acid is a Commonwealth industrial substance category (Water archetype, P1). Primary role: Etching, processing.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.5 Water",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-concentrated-acid.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed view looking into a volume of concentrated acid filling the frame: stronger yellow-corrosive aqueous mixture for etching, depth only, no fumes as objects and no hazard marks. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-concentrated-acid.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-concentrated-alkali",
@@ -983,7 +1451,16 @@
     "description": "Concentrated Alkali is a Commonwealth industrial substance category (Water archetype, P1). Primary role: Processing.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.5 Water",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-concentrated-alkali.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed view looking into a volume of concentrated alkali filling the frame: cloudy caustic aqueous mixture, depth only, no vessel or hazard marks. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-concentrated-alkali.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-sulfurous-mineral",
@@ -999,7 +1476,16 @@
     "description": "Sulfurous Mineral is a Commonwealth industrial substance category (Salt archetype, P1). Primary role: Chemicals, fertilizers.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.6 Salt",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-sulfurous-mineral.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed close-up of raw sulfurous mineral as one continuous yellow-to-pale evaporite face filling the frame: chemical and fertilizer feedstock, unrefined. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-sulfurous-mineral.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-phosphate-mineral",
@@ -1038,7 +1524,16 @@
     "description": "Fertilizer is a Commonwealth industrial substance category (Salt archetype, P1). Primary role: Agriculture, food production.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.6 Salt",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-fertilizer.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed close-up of refined fertilizer as one continuous processed salt-compound face filling the frame: agricultural feedstock as a single material bed, not bags or pellets on a table. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-fertilizer.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-gas-fuel-deposit",
@@ -1077,7 +1572,16 @@
     "description": "High-Energy Combustible Gas is a Commonwealth industrial substance category (Volatile archetype, P1). Primary role: Propellant feedstock.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.7 Volatile",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-high-energy-combustible-gas.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed view of high-energy combustible gas filling the frame: denser warmer volumetric vapor, propellant-feedstock atmosphere, no flame, tank or hardware. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-high-energy-combustible-gas.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-inert-gas-deposit",
@@ -1093,7 +1597,16 @@
     "description": "Inert Gas Deposit is a Commonwealth industrial substance category (Volatile archetype, P1). Primary role: Pressurization, welding, cryogenic cooling.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.7 Volatile",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-inert-gas-deposit.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed view of raw inert gas filling the frame: still colourless-to-pale pressurization and cooling atmosphere, very little colour, no cylinder. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-inert-gas-deposit.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-breathable-atmospheric-gas",
@@ -1109,7 +1622,16 @@
     "description": "Breathable Atmospheric Gas is a Commonwealth industrial substance category (Volatile archetype, P1). Primary role: Life support supplement.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.7 Volatile",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-breathable-atmospheric-gas.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed view of breathable atmospheric gas filling the frame: faint clean air-like volume, life-support supplement, no sky landscape or mask. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-breathable-atmospheric-gas.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-oxidizer-gas-deposit",
@@ -1125,7 +1647,16 @@
     "description": "Oxidizer Gas Deposit is a Commonwealth industrial substance category (Volatile archetype, P1). Primary role: Combustion enhancement, propulsion.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.7 Volatile",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-oxidizer-gas-deposit.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed view of raw oxidizer gas filling the frame: pale cold sharp volumetric vapor for combustion enhancement, no cylinder or flame. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-oxidizer-gas-deposit.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-corrosive-gas-deposit",
@@ -1141,7 +1672,16 @@
     "description": "Corrosive Gas Deposit is a Commonwealth industrial substance category (Volatile archetype, P1). Primary role: Etching, chemical processing.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.7 Volatile",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-corrosive-gas-deposit.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed view of raw corrosive gas filling the frame: acrid yellowish-green volumetric vapor for etching, no hardware or hazard symbols. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-corrosive-gas-deposit.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-toxic-gas-deposit",
@@ -1157,7 +1697,16 @@
     "description": "Toxic Gas Deposit is a Commonwealth industrial substance category (Volatile archetype, P1). Primary role: Industrial hazard (advanced research).",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.7 Volatile",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-toxic-gas-deposit.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed view of raw toxic gas filling the frame: dull grey-green industrial-hazard atmosphere, no skull, label or cylinder. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-toxic-gas-deposit.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-reactive-liquid",
@@ -1173,7 +1722,16 @@
     "description": "Reactive Liquid is a Commonwealth industrial substance category (Volatile archetype, P1). Primary role: Volatile high-yield chemical feedstock.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.7 Volatile",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-reactive-liquid.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed view looking into a volume of reactive volatile liquid filling the frame: restless high-yield chemical feedstock, not water-like, depth only, no flask. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-reactive-liquid.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-gas-propellant",
@@ -1189,7 +1747,16 @@
     "description": "Gas Propellant is a Commonwealth industrial substance category (Volatile archetype, P1). Primary role: Rocket engines.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.7 Volatile",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-gas-propellant.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed view of gas propellant filling the frame: dense energetic combustible vapor for rocket engines, no nozzle, tank or flame. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-gas-propellant.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-breathable-air",
@@ -1205,7 +1772,16 @@
     "description": "Breathable Air is a Commonwealth industrial substance category (Volatile archetype, P1). Primary role: Life support.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.7 Volatile",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-breathable-air.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed view of breathable air filling the frame: clean faint atmospheric mix for life support, air itself, no landscape horizon. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-breathable-air.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-refined-combustible-gas",
@@ -1221,7 +1797,16 @@
     "description": "Refined Combustible Gas is a Commonwealth industrial substance category (Volatile archetype, P1). Primary role: Clean combustion.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.7 Volatile",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-refined-combustible-gas.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed view of refined combustible gas filling the frame: cleaner warmer volumetric vapor for clean combustion, distinct from dirtier raw gas-fuel haze, no cylinder or flame. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-refined-combustible-gas.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-compressed-inert-gas",
@@ -1237,7 +1822,16 @@
     "description": "Compressed Inert Gas is a Commonwealth industrial substance category (Volatile archetype, P1). Primary role: Pressurization, cooling.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.7 Volatile",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-compressed-inert-gas.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed view of compressed inert gas filling the frame: denser clearer pressurization atmosphere than a raw inert deposit, no cylinder. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-compressed-inert-gas.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   },
   {
     "id": "substance-refined-oxidizer",
@@ -1253,6 +1847,15 @@
     "description": "Refined Oxidizer is a Commonwealth industrial substance category (Volatile archetype, P1). Primary role: Propulsion, combustion.",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
     "sourceSection": "11.7 Volatile",
-    "canonStatus": "source-canonical"
+    "canonStatus": "source-canonical",
+    "image": {
+      "key": "assets/art/universe/substances/substance-refined-oxidizer.webp",
+      "generated": false,
+      "status": "in-progress",
+      "promptDescription": "1:1 full-bleed view of refined oxidizer filling the frame: pale sharp volumetric vapor for propulsion and combustion, cleaner than raw oxidizer deposit, no cylinder or flame. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-refined-oxidizer.png and a same-pixel-size catalog WebP at this key.",
+      "generationBatchId": "substance-fullbleed-remaining-20260915",
+      "generationStartedAt": "2026-09-15T06:08:45Z"
+    }
   }
 ]
