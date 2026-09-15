@@ -1,0 +1,110 @@
+[
+  {
+    "id": "landform-plains",
+    "name": "Plains",
+    "layer": "landform",
+    "description": "Low to moderate relief. Common Mobile grid square for open ground.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "landform-hills",
+    "name": "Hills",
+    "layer": "landform",
+    "description": "Rolling moderate relief.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "landform-mountains",
+    "name": "Mountains",
+    "layer": "landform",
+    "description": "High peaks and steep relief.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "landform-basin",
+    "name": "Basin",
+    "layer": "landform",
+    "description": "Depression or bowl. Dry or filled — hydrosphere says which.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "landform-lowland",
+    "name": "Lowland",
+    "layer": "landform",
+    "description": "Near sea level, gentle. Common wetland and coastal plain shape.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "landform-highland",
+    "name": "Highland",
+    "layer": "landform",
+    "description": "Moderate to high exposure without peak mountains.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "landform-plateau",
+    "name": "Plateau",
+    "layer": "landform",
+    "description": "Elevated flat cap.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "landform-valley",
+    "name": "Valley",
+    "layer": "landform",
+    "description": "Incised moderate relief.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "landform-cliff",
+    "name": "Cliff",
+    "layer": "landform",
+    "description": "Strong local steep relief.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "landform-canyon",
+    "name": "Canyon",
+    "layer": "landform",
+    "description": "Incised steep channel context.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "landform-ridge",
+    "name": "Ridge",
+    "layer": "landform",
+    "description": "Linear high relief.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "landform-crater",
+    "name": "Crater",
+    "layer": "landform",
+    "description": "Impact bowl and rim.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  }
+]

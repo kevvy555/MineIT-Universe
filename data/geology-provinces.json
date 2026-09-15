@@ -1,0 +1,106 @@
+[
+  {
+    "id": "geology-province-sedimentary-basin",
+    "name": "Sedimentary basin",
+    "description": "Layered sedimentary fill.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "7. Geology provinces",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "geology-province-old-seabed",
+    "name": "Old seabed",
+    "description": "Former marine sedimentary province.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "7. Geology provinces",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "geology-province-carbon-basin",
+    "name": "Carbon basin",
+    "description": "Carbon-rich sedimentary or hydrocarbon province.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "7. Geology provinces",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "geology-province-volcanic",
+    "name": "Volcanic province",
+    "description": "Volcanic crust and flows.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "7. Geology provinces",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "geology-province-hydrothermal",
+    "name": "Hydrothermal province",
+    "description": "Hydrothermal alteration and veining.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "7. Geology provinces",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "geology-province-impact",
+    "name": "Impact province",
+    "description": "Impact-shocked crust.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "7. Geology provinces",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "geology-province-metal-rich",
+    "name": "Metal-rich province",
+    "description": "Concentrated metal endowment.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "7. Geology provinces",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "geology-province-silica-rich",
+    "name": "Silica-rich province",
+    "description": "Silica-dominated crust or cover.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "7. Geology provinces",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "geology-province-salt-rich",
+    "name": "Salt-rich province",
+    "description": "Evaporite and brine province.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "7. Geology provinces",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "geology-province-sulphur-rich",
+    "name": "Sulphur-rich province",
+    "description": "Sulphur-dominated volcanic chemistry.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "7. Geology provinces",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "geology-province-ancient-crust",
+    "name": "Ancient crust",
+    "description": "Old, stable crystalline crust.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "7. Geology provinces",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "geology-province-fault-zone",
+    "name": "Fault zone",
+    "description": "Tectonic fracture province.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "7. Geology provinces",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "geology-province-toxic-chemical",
+    "name": "Toxic chemical province",
+    "description": "Chemically hostile crust.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "7. Geology provinces",
+    "canonStatus": "working canon"
+  }
+]
