@@ -16,12 +16,10 @@
     "canonStatus": "source-canonical",
     "image": {
       "key": "assets/art/universe/substances/substance-reactive-metal-ore.webp",
-      "generated": false,
-      "status": "in-progress",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "1:1 full-bleed close-up of raw reactive-metal ore as a single continuous rock face filling the frame: dull oxidised crust breaking into dense bright metallic fracture. Impure unrefined ore, not a pile of samples. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers or text.",
-      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-reactive-metal-ore.png and a same-pixel-size catalog WebP at this key.",
-      "generationBatchId": "substance-fullbleed-regen-20260915",
-      "generationStartedAt": "2026-09-15T05:57:26Z"
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-reactive-metal-ore.png and a same-pixel-size catalog WebP at this key."
     }
   },
   {
@@ -169,12 +167,10 @@
     "canonStatus": "source-canonical",
     "image": {
       "key": "assets/art/universe/substances/substance-refined-conductive-metal.webp",
-      "generated": false,
-      "status": "in-progress",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "1:1 full-bleed close-up of a single high-purity conductive-metal surface filling the frame: clean machined sheen, dense bright refined stock, one continuous plate or billet face. Not stacked objects. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers or text.",
-      "notes": "Full-bleed refined metal surface. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-refined-conductive-metal.png and a same-pixel-size catalog WebP at this key.",
-      "generationBatchId": "substance-fullbleed-regen-20260915",
-      "generationStartedAt": "2026-09-15T05:57:26Z"
+      "notes": "Full-bleed refined metal surface. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-refined-conductive-metal.png and a same-pixel-size catalog WebP at this key."
     }
   },
   {
@@ -386,12 +382,10 @@
     "canonStatus": "source-canonical",
     "image": {
       "key": "assets/art/universe/substances/substance-silica-mineral.webp",
-      "generated": false,
-      "status": "in-progress",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "1:1 full-bleed close-up of raw silica as one continuous mineral body filling the frame: hard translucent-to-milky silicate, glass and optics feedstock character, heat-tolerant stone. Not scattered chunks on a dish. Not Veyrite and not a gemstone. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers or text.",
-      "notes": "Full-bleed ordinary silica mineral. Must not depict Veyrite. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-silica-mineral.png and a same-pixel-size catalog WebP at this key.",
-      "generationBatchId": "substance-fullbleed-regen-20260915",
-      "generationStartedAt": "2026-09-15T05:57:26Z"
+      "notes": "Full-bleed ordinary silica mineral. Must not depict Veyrite. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-silica-mineral.png and a same-pixel-size catalog WebP at this key."
     }
   },
   {
@@ -619,12 +613,10 @@
     "canonStatus": "source-canonical",
     "image": {
       "key": "assets/art/universe/substances/substance-liquid-fuel-deposit.webp",
-      "generated": false,
-      "status": "in-progress",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "1:1 full-bleed view looking into a volume of raw liquid fuel filling the frame: dark amber-to-brown viscous hydrocarbon, unrefined combustion feedstock, surface tension and depth only. No container rim or vessel. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers or text.",
-      "notes": "Full-bleed liquid volume, no glass. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-liquid-fuel-deposit.png and a same-pixel-size catalog WebP at this key.",
-      "generationBatchId": "substance-fullbleed-regen-20260915",
-      "generationStartedAt": "2026-09-15T05:57:26Z"
+      "notes": "Full-bleed liquid volume, no glass. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-liquid-fuel-deposit.png and a same-pixel-size catalog WebP at this key."
     }
   },
   {
@@ -804,12 +796,10 @@
     "canonStatus": "source-canonical",
     "image": {
       "key": "assets/art/universe/substances/substance-woody-plant.webp",
-      "generated": false,
-      "status": "in-progress",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "1:1 full-bleed close-up of woody plant material as one continuous timber face filling the frame: dry fibrous grain and bark-to-heartwood character of harvested construction/fuel stock. Not a pile of logs and not furniture. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers or text.",
-      "notes": "Full-bleed wood face. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-woody-plant.png and a same-pixel-size catalog WebP at this key.",
-      "generationBatchId": "substance-fullbleed-regen-20260915",
-      "generationStartedAt": "2026-09-15T05:57:26Z"
+      "notes": "Full-bleed wood face. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-woody-plant.png and a same-pixel-size catalog WebP at this key."
     }
   },
   {
@@ -845,12 +835,10 @@
     "canonStatus": "source-canonical",
     "image": {
       "key": "assets/art/universe/substances/substance-fresh-water.webp",
-      "generated": false,
-      "status": "in-progress",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "1:1 full-bleed view looking into a volume of refined fresh water filling the frame: clear colourless aqueous liquid, life-support and coolant character, subtle caustics and depth. No glass, cup, or vessel rim. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers or text.",
-      "notes": "Full-bleed water volume, no drinking glass. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-fresh-water.png and a same-pixel-size catalog WebP at this key.",
-      "generationBatchId": "substance-fullbleed-regen-20260915",
-      "generationStartedAt": "2026-09-15T05:57:26Z"
+      "notes": "Full-bleed water volume, no drinking glass. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-fresh-water.png and a same-pixel-size catalog WebP at this key."
     }
   },
   {
@@ -1030,12 +1018,10 @@
     "canonStatus": "source-canonical",
     "image": {
       "key": "assets/art/universe/substances/substance-phosphate-mineral.webp",
-      "generated": false,
-      "status": "in-progress",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "1:1 full-bleed close-up of raw phosphate mineral as one continuous pale earthy-to-crystalline evaporite face filling the frame, fertilizer feedstock character. Not chunks of powder on a dish. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers or text.",
-      "notes": "Full-bleed phosphate mineral face. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-phosphate-mineral.png and a same-pixel-size catalog WebP at this key.",
-      "generationBatchId": "substance-fullbleed-regen-20260915",
-      "generationStartedAt": "2026-09-15T05:57:26Z"
+      "notes": "Full-bleed phosphate mineral face. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-phosphate-mineral.png and a same-pixel-size catalog WebP at this key."
     }
   },
   {
@@ -1071,12 +1057,10 @@
     "canonStatus": "source-canonical",
     "image": {
       "key": "assets/art/universe/substances/substance-gas-fuel-deposit.webp",
-      "generated": false,
-      "status": "in-progress",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "1:1 full-bleed view of raw combustible gas filling the frame: colourless-to-faint volumetric vapor, density and light through unrefined generator-fuel atmosphere, no flame. No cylinder, tank, window, or hardware. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers or text.",
-      "notes": "Full-bleed gas volume, no cylinder. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-gas-fuel-deposit.png and a same-pixel-size catalog WebP at this key.",
-      "generationBatchId": "substance-fullbleed-regen-20260915",
-      "generationStartedAt": "2026-09-15T05:57:26Z"
+      "notes": "Full-bleed gas volume, no cylinder. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-gas-fuel-deposit.png and a same-pixel-size catalog WebP at this key."
     }
   },
   {
