@@ -31,9 +31,11 @@
     "image": {
       "key": "assets/art/universe/organisations/organisation-koplin-compact.webp",
       "generated": false,
-      "status": "not-generated",
+      "status": "in-progress",
       "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. A federal civic seal: three nested pale-stone arcs sharing one open centre, bound by a thin restrained-gold ring, with a civic-blue field in the void. The three arcs read as a compact of equal parts, not a crown, eagle, or imperial crest. Colour palette: pale stone, civic blue, restrained gold. Design language: distributed federal civic identity, measured and equal rather than imperial. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
-      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image.",
+      "generationBatchId": "organisation-logos-sample-20260915",
+      "generationStartedAt": "2026-09-15T05:57:42Z"
     }
   },
   {
@@ -197,9 +199,11 @@
     "image": {
       "key": "assets/art/universe/organisations/organisation-asterion-shipworks.webp",
       "generated": false,
-      "status": "not-generated",
+      "status": "in-progress",
       "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. A copper six-point shipyard star assembled from exposed structural ribs on charcoal, white inset gaps like clean hull seams, practical modular construction mark. Colour palette: charcoal, copper, white. Design language: exposed structural ribs, practical modular hulls and clean shipyard markings. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
-      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image.",
+      "generationBatchId": "organisation-logos-sample-20260915",
+      "generationStartedAt": "2026-09-15T05:57:42Z"
     }
   },
   {
@@ -638,9 +642,11 @@
     "image": {
       "key": "assets/art/universe/organisations/organisation-koplin-commonwealth-exploration-service.webp",
       "generated": false,
-      "status": "not-generated",
+      "status": "in-progress",
       "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. A survey-navy disc with a lantern-gold pathfinder spark inside a hull-grey compass ring, exploration-service mark without a ship silhouette crowded with detail. Colour palette: survey navy, lantern gold, hull grey. Design language: restrained Commonwealth exploration identity, practical survey markings. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
-      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image.",
+      "generationBatchId": "organisation-logos-sample-20260915",
+      "generationStartedAt": "2026-09-15T05:57:42Z"
     }
   },
   {

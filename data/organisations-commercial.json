@@ -154,9 +154,11 @@
     "image": {
       "key": "assets/art/universe/organisations/organisation-petrocore-processing.webp",
       "generated": false,
-      "status": "not-generated",
+      "status": "in-progress",
       "promptDescription": "1:1 isolated company logo emblem centered on a plain dark charcoal field with generous margin. A charcoal hexagonal process cell with an amber liquid-core droplet, dense refinery-industrial mark. Colour palette: charcoal, amber. Design language: dense refinery-industrial. Premium brand identity, flat-to-subtle dimensional mark, crisp edges, no environment, no building, no landscape. No readable letters, numbers, mottos, company names, logos-as-text or other writing.",
-      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image."
+      "notes": "Identity-bearing organisation logo/emblem. Do not bake organisation names, letters or readable text into the image.",
+      "generationBatchId": "organisation-logos-sample-20260915",
+      "generationStartedAt": "2026-09-15T05:57:42Z"
     }
   },
   {
