@@ -89,7 +89,8 @@ const scalarRefs = {
   ships: ['organisationId', 'shipClassId', 'homePortLocationId'],
   relationships: ['personAId', 'personBId'],
   currencies: ['sourceDocumentId'],
-  loreTopics: ['sourceDocumentId']
+  loreTopics: ['sourceDocumentId'],
+  substances: ['sourceDocumentId']
 };
 const arrayRefs = {
   regions: ['administrativeOrganisationIds', 'systemIds'],
@@ -98,6 +99,9 @@ const arrayRefs = {
   operations: ['managerPersonIds', 'procurementPersonIds', 'shipIds', 'productIds', 'shipClassIds'],
   products: ['producerOrganisationIds'],
   people: ['operationIds', 'shipIds'],
+  parts: ['substanceIds', 'machineIds'],
+  machines: ['partIds'],
+  buildings: ['structuralShellSubstanceIds', 'fitOutSubstanceIds', 'machineIds'],
   shipLines: ['productionOperationIds'],
   shipClasses: ['designerOrganisationIds'],
   ships: ['operationIds', 'personIds'],
@@ -126,6 +130,39 @@ for (const planet of collections.planets ?? []) {
 }
 for (const relationship of collections.relationships ?? []) if (relationship.personAId === relationship.personBId) errors.push(`${relationship.id}: relationship self-reference.`);
 for (const operation of collections.operations ?? []) for (const requirement of operation.resourceRequirements ?? []) if (!requirement.resourceType || !requirement.resourceId || !requirement.reason) errors.push(`${operation.id}: incomplete resource requirement.`);
+
+const substanceTypes = new Set(['Element', 'Compound', 'Alloy', 'Composite', 'Mixture']);
+const thermalBehaviours = new Set(['ChangesState', 'Decomposes', 'Burns']);
+const standardStates = new Set(['Solid', 'Liquid', 'Gas']);
+const archetypes = new Set(['Metal', 'Silicate', 'Carbon', 'Organic', 'Water', 'Salt', 'Volatile']);
+const tiers = new Set(['P0', 'P1']);
+for (const substance of collections.substances ?? []) {
+  if (!substanceTypes.has(substance.substanceType)) errors.push(`${substance.id}: invalid substanceType.`);
+  if (!thermalBehaviours.has(substance.thermalBehaviour)) errors.push(`${substance.id}: invalid thermalBehaviour.`);
+  if (!standardStates.has(substance.standardState)) errors.push(`${substance.id}: invalid standardState.`);
+  if (!archetypes.has(substance.dominantArchetype)) errors.push(`${substance.id}: invalid dominantArchetype.`);
+  if (!tiers.has(substance.tier)) errors.push(`${substance.id}: invalid tier.`);
+  if (typeof substance.refined !== 'boolean') errors.push(`${substance.id}: refined must be boolean.`);
+  if (!substance.industrialRole) errors.push(`${substance.id}: industrialRole missing.`);
+  if (!substance.sourceDocumentId) errors.push(`${substance.id}: sourceDocumentId missing.`);
+}
+if ((collections.substances ?? []).length && (collections.substances ?? []).length !== 75) {
+  warnings.push(`Substance catalogue expected 75 P0/P1 categories; found ${(collections.substances ?? []).length}.`);
+}
+for (const part of collections.parts ?? []) {
+  if (!part.category) errors.push(`${part.id}: category missing.`);
+  if (!Array.isArray(part.substanceIds)) errors.push(`${part.id}: substanceIds must be an array.`);
+}
+for (const machine of collections.machines ?? []) {
+  if (!machine.category) errors.push(`${machine.id}: category missing.`);
+  if (!Array.isArray(machine.partIds)) errors.push(`${machine.id}: partIds must be an array.`);
+}
+for (const building of collections.buildings ?? []) {
+  if (!building.category) errors.push(`${building.id}: category missing.`);
+  if (!Array.isArray(building.structuralShellSubstanceIds)) errors.push(`${building.id}: structuralShellSubstanceIds must be an array.`);
+  if (!Array.isArray(building.fitOutSubstanceIds)) errors.push(`${building.id}: fitOutSubstanceIds must be an array.`);
+  if (!Array.isArray(building.machineIds)) errors.push(`${building.id}: machineIds must be an array.`);
+}
 
 for (const document of collections.loreDocuments ?? []) {
   if (!document.contentPath) { errors.push(`${document.id}: lore document contentPath missing.`); continue; }

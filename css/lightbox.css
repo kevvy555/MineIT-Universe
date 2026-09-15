@@ -1,0 +1,8 @@
+.imageLightbox{position:fixed;inset:0;z-index:80;display:grid;place-items:center;padding:max(12px,env(safe-area-inset-top)) 12px max(12px,env(safe-area-inset-bottom));background:rgba(4,8,11,.86);backdrop-filter:blur(8px)}
+.imageLightbox[hidden]{display:none}
+.imageLightboxPanel{position:relative;display:grid;justify-items:center;gap:10px;width:min(100%,720px);max-height:100%}
+.imageLightboxImage{display:block;width:auto;height:auto;max-width:100%;max-height:min(82dvh,920px);border:1px solid #35576a;border-radius:10px;background:#071015;object-fit:contain}
+.imageLightboxCaption{margin:0;color:#d7e2e7;font-size:13px;text-align:center}
+.imageLightboxClose{position:absolute;top:-6px;right:0;border:1px solid #35576a;background:#102633;color:#dff4ff;border-radius:7px;padding:7px 10px;font-size:11px;font-weight:800}
+body.lightboxOpen{overflow:hidden}
+@media(max-width:720px){.imageLightboxPanel{width:100%}.imageLightboxImage{max-height:min(74dvh,820px);border-radius:8px}}

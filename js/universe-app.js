@@ -1,4 +1,5 @@
 import { loadUniverse } from './universe-data.js';
+import { bindOriginalImageOpener } from './image-lightbox.js';
 
 const state = {
   catalogue: null,
@@ -41,7 +42,8 @@ const DIRECTORY = {
 
 const ICONS = {
   regions: '◎', starSystems: '✦', planets: '●', settlements: '⬡', organisations: 'O',
-  organisationUnits: '▦', facilities: '⌂', operations: '⚙', products: '◆', species: 'S',
+  organisationUnits: '▦', facilities: '⌂', operations: '⚙', products: '◆', substances: '▣',
+  parts: '⧉', machines: '⚒', buildings: '⌂', species: 'S',
   people: 'P', shipClasses: '△', ships: '▲', projects: '◇', events: '◷', relationships: '↔',
   currencies: '¤', loreDocuments: '▤', loreTopics: 'i'
 };
@@ -112,12 +114,65 @@ function buildOrganisationTree() {
   return { label: 'Organisations', children: state.catalogue.collection('organisations').map(organisationNode).sort(byName) };
 }
 
+function groupRecords(records, keyFn) {
+  const groups = new Map();
+  for (const record of records) {
+    const key = keyFn(record) || 'Other';
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(record);
+  }
+  return [...groups.entries()].sort((a, b) => a[0].localeCompare(b[0]));
+}
+
+function buildSubstancesDirectoryNode() {
+  const records = state.catalogue.collection('substances');
+  return category('Substances', groupRecords(records, record => record.dominantArchetype).map(([archetype, items]) => {
+    const raw = items.filter(item => !item.refined);
+    const refined = items.filter(item => item.refined);
+    return category(archetype, [
+      category('Raw', nodes(raw)),
+      category('Refined', nodes(refined))
+    ].filter(Boolean));
+  }));
+}
+
+function buildPartsDirectoryNode() {
+  const records = state.catalogue.collection('parts');
+  return category('Parts', groupRecords(records, record => record.category).map(([partCategory, items]) =>
+    category(partCategory, groupRecords(items, record => record.subCategory).map(([subCategory, subItems]) =>
+      category(subCategory, nodes(subItems))
+    ))
+  ));
+}
+
+function buildMachinesDirectoryNode() {
+  const records = state.catalogue.collection('machines');
+  return category('Machines', groupRecords(records, record => record.category).map(([machineCategory, items]) =>
+    category(machineCategory, nodes(items))
+  ));
+}
+
+function buildBuildingsDirectoryNode() {
+  const records = state.catalogue.collection('buildings');
+  return category('Buildings', groupRecords(records, record => record.category).map(([buildingCategory, items]) =>
+    category(buildingCategory, nodes(items))
+  ));
+}
+
 function buildDirectoryTree() {
+  const beforeProducts = ['regions', 'starSystems', 'planets', 'settlements', 'organisations', 'organisationUnits', 'facilities', 'operations', 'products'];
+  const afterIndustrial = ['species', 'people', 'shipClasses', 'ships', 'projects', 'events', 'relationships', 'currencies', 'loreDocuments', 'loreTopics'];
+  const flatNode = name => category(DIRECTORY[name], nodes(state.catalogue.collection(name)));
   return {
     label: 'Directory',
-    children: Object.entries(DIRECTORY)
-      .map(([name, label]) => category(label, nodes(state.catalogue.collection(name))))
-      .filter(Boolean)
+    children: [
+      ...beforeProducts.map(flatNode),
+      buildSubstancesDirectoryNode(),
+      buildPartsDirectoryNode(),
+      buildMachinesDirectoryNode(),
+      buildBuildingsDirectoryNode(),
+      ...afterIndustrial.map(flatNode)
+    ].filter(Boolean)
   };
 }
 
@@ -233,6 +288,17 @@ function renderTree() {
         record.knowledgeScope,
         record.symbol,
         record.canonStatus,
+        record.dominantArchetype,
+        record.substanceType,
+        record.thermalBehaviour,
+        record.standardState,
+        record.tier,
+        record.industrialRole,
+        record.form,
+        record.category,
+        record.subCategory,
+        record.buildingType,
+        record.entityType,
         collectionName,
         record.id
       ].filter(Boolean).join(' ').toLowerCase();
@@ -267,6 +333,10 @@ function subtitle(collection, entity) {
     facilities: `${entity.facilityType || ''} • ${entity.status || ''}`,
     operations: `${entity.operationType || ''} • ${entity.status || ''}`,
     products: entity.productType,
+    substances: `${entity.dominantArchetype || ''} • ${entity.refined ? 'Refined' : 'Raw'}`.trim(),
+    parts: `${entity.category || ''} • ${entity.subCategory || ''}`.trim(),
+    machines: `${entity.category || ''} • ${entity.subCategory || ''}`.trim(),
+    buildings: entity.category,
     species: entity.speciesType,
     people: entity.role,
     shipClasses: entity.role,
@@ -327,6 +397,54 @@ function fieldsFor(collection, entity) {
   }
   if (collection === 'products') {
     fields.push(field('Type', esc(entity.productType)), field('Producers', links(entity.producerOrganisationIds)), field('Producing operations', links(relatedIds('operations', item => (item.productIds || []).includes(entity.id)))));
+  }
+  if (collection === 'substances') {
+    fields.push(
+      field('Archetype', esc(entity.dominantArchetype)),
+      field('Substance type', esc(entity.substanceType)),
+      field('Thermal behaviour', esc(entity.thermalBehaviour)),
+      field('Standard state', esc(entity.standardState)),
+      field('Form', esc(entity.form)),
+      field('Tier', esc(entity.tier)),
+      field('Stock class', entity.refined ? 'Refined' : 'Raw'),
+      field('Industrial role', esc(entity.industrialRole)),
+      field('Used by parts', links(relatedIds('parts', part => (part.substanceIds || []).includes(entity.id)))),
+      field('Building shell uses', links(relatedIds('buildings', building => (building.structuralShellSubstanceIds || []).includes(entity.id)))),
+      field('Building fit-out uses', links(relatedIds('buildings', building => (building.fitOutSubstanceIds || []).includes(entity.id)))),
+      field('Open materials lore', loreOpenLink(entity.sourceDocumentId, entity.sourceSection))
+    );
+  }
+  if (collection === 'parts') {
+    fields.push(
+      field('Category', esc(entity.category)),
+      field('Sub-category', esc((entity.subCategories || [entity.subCategory]).filter(Boolean).join(', '))),
+      field('Sources', tags(entity.sources)),
+      field('Substances', links(entity.substanceIds)),
+      field('Used in machines', links(entity.machineIds))
+    );
+  }
+  if (collection === 'machines') {
+    fields.push(
+      field('Category', esc(entity.category)),
+      field('Sub-category', esc(entity.subCategory)),
+      field('Sources', tags(entity.sources)),
+      field('Construction parts', links(entity.partIds)),
+      field('Installed in buildings', links(relatedIds('buildings', building => (building.machineIds || []).includes(entity.id)))),
+      field('Input', esc(entity.inputSummary)),
+      field('Output', esc(entity.outputSummary)),
+      field('Fuel type', esc(entity.fuelType))
+    );
+  }
+  if (collection === 'buildings') {
+    fields.push(
+      field('Category', esc(entity.category)),
+      field('Categories', tags(entity.categories)),
+      field('Building type', esc(entity.buildingType)),
+      field('Sources', tags(entity.sources)),
+      field('Structural shell substances', links(entity.structuralShellSubstanceIds)),
+      field('Fit-out substances', links(entity.fitOutSubstanceIds)),
+      field('Installed machines', links(entity.machineIds))
+    );
   }
   if (collection === 'species') {
     if (entity.homeworldId) fields.push(field('Homeworld', link(entity.homeworldId)));
@@ -432,9 +550,13 @@ function renderDetail() {
   if (!entity) return;
   const collection = state.catalogue.collectionNameFor(entity.id);
   const icon = ICONS[collection] || '?';
-  const image = entity.image?.generated && entity.image?.key
-    ? `<img src="${esc(state.catalogue.assetUrl(entity.image.key))}" alt="${esc(entity.name)}">`
-    : esc(collection === 'people' ? entity.name.split(/\s+/).map(part => part[0]).join('').slice(0, 2).toUpperCase() : icon);
+  const previewUrl = entity.image?.generated && entity.image?.key ? state.catalogue.assetUrl(entity.image.key) : null;
+  const originalUrl = previewUrl ? (state.catalogue.assetUrl(state.catalogue.originalAssetKey(entity.image.key)) || previewUrl) : null;
+  const image = previewUrl && collection === 'people'
+    ? `<button type="button" class="portraitButton" data-original-image="${esc(originalUrl)}" data-preview-image="${esc(previewUrl)}" data-image-name="${esc(entity.name)}" aria-label="View original portrait of ${esc(entity.name)}"><img src="${esc(previewUrl)}" alt="${esc(entity.name)}"></button>`
+    : previewUrl
+      ? `<img src="${esc(previewUrl)}" alt="${esc(entity.name)}">`
+      : esc(collection === 'people' ? entity.name.split(/\s+/).map(part => part[0]).join('').slice(0, 2).toUpperCase() : icon);
 
   detailEl.innerHTML = `${validationStatus()}${canonWarning(entity, collection)}<div class="breadcrumbs">${breadcrumbs()}</div>
     <div class="hero"><div class="placeholder">${image}</div><div><div class="eyebrow">${esc(state.catalogue.typeLabelFor(entity.id))}</div><h1>${esc(entity.name)}</h1><div class="subtitle">${esc(subtitle(collection, entity))}</div></div></div>
@@ -513,11 +635,24 @@ function installDivider() {
 async function start() {
   detailEl.innerHTML = '<div class="status loading">Loading canonical MineIT universe…</div>';
   try {
-    const root = new URLSearchParams(location.search).get('dataRoot') || './data/';
+    const params = new URLSearchParams(location.search);
+    const root = params.get('dataRoot') || './data/';
     const { catalogue, validation } = await loadUniverse(root);
     state.catalogue = catalogue;
     state.validation = validation;
-    state.selectedId = catalogue.collection('regions')[0]?.id || catalogue.allRecords()[0]?.record.id;
+
+    const requestedView = params.get('view');
+    if (['geography', 'organisation', 'directory'].includes(requestedView)) {
+      state.activeView = requestedView;
+      document.querySelectorAll('.perspective').forEach(button => button.classList.toggle('active', button.dataset.view === requestedView));
+    }
+
+    const focusCollection = params.get('focus');
+    const focusedRecords = focusCollection ? catalogue.collection(focusCollection) : [];
+    state.selectedId = focusedRecords[0]?.id
+      || catalogue.collection('regions')[0]?.id
+      || catalogue.allRecords()[0]?.record.id;
+
     versionEl.textContent = `Universe ${catalogue.manifest.contentVersion} • Y${catalogue.manifest.canonicalYear}`;
     revealSelected();
     renderTree();
@@ -533,4 +668,5 @@ searchEl.oninput = renderTree;
 document.getElementById('collapseAll').onclick = collapseAll;
 document.getElementById('expandCurrent').onclick = expandCurrent;
 installDivider();
+bindOriginalImageOpener(detailEl);
 start();

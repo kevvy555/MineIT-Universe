@@ -13,12 +13,25 @@
     "description": "Highest-level current source for Koplin civilisation history, the three peoples, Commonwealth government, AI law, Veyrite, Vector Exchange travel, the Meridian expedition and the Anchor Network designer truth."
   },
   {
+    "id": "lore-koplin-materials-and-substances",
+    "name": "Koplin Universe — Materials of the Commonwealth",
+    "documentType": "foundation technical companion",
+    "canonStatus": "working canon",
+    "canonLevel": "foundation",
+    "precedence": 2,
+    "baselineYear": 5300,
+    "contentPath": "lore/Koplin_Universe_Materials_And_Substances.md",
+    "scope": "Industrial substance classification: types, thermal behaviour, archetypes, raw vs refined P0/P1 catalogue families, rarity vocabulary and designer property rules.",
+    "knowledgeScope": "mixed public canon and clearly labelled designer truth",
+    "description": "Foundation materials companion that publishes the Desktop-aligned Commonwealth substance model for Lore Explorer and later structured substances records. Does not replace civilisation history; must agree with the Expanded Lore Bible."
+  },
+  {
     "id": "lore-deep-reach-mining-charter",
     "name": "Koplin Scenario II — The Deep Reach Mining Charter",
     "documentType": "scenario design and narrative bible",
     "canonStatus": "working canon",
     "canonLevel": "scenario extension",
-    "precedence": 2,
+    "precedence": 3,
     "baselineYear": 5326,
     "contentPath": "lore/Koplin_Scenario_II_Deep_Reach_Mining_Charter.md",
     "scope": "Year-5326 commercial frontier, Deep Reach corporation, charter economy, logistics, resource trade and settlement progression.",
