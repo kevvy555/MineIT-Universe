@@ -6,12 +6,12 @@ This repository is the authoritative owner of persistent universe entities **and
 
 ## Current canon release
 
-Content version: **0.9.0**  
-Schema version: **8**  
+Content version: **0.10.0**  
+Schema version: **9**  
 Civilisation baseline: **Year 5300**  
 Current commercial/scenario era: **Year 5326**
 
-The canonical foundation is the **Koplin Universe — Expanded Backstory & Lore Bible**, with **Materials of the Commonwealth** as the foundation substances companion, **Worlds, Land and Surface Classification** as the foundation land companion, and **Scenario II: The Deep Reach Mining Charter** as a later Year-5326 scenario extension. Structured industrial catalogues (`substances`, `parts`, `machines`, `buildings`) and land catalogues (`celestialBodyKinds`, `worldTypes`, land squares, `findSites`) are browsable in the Directory, with a Games page for the three current MineIT consumers.
+The canonical foundation is the **Koplin Universe — Expanded Backstory & Lore Bible**, with **Materials of the Commonwealth** as the foundation substances companion, **Worlds, Land and Surface Classification** as the foundation land companion, and **Scenario II: The Deep Reach Mining Charter** as a later Year-5326 scenario extension. Structured industrial catalogues (`substances`, `parts`, `machines`, `buildings`) and land catalogues (`celestialBodyKinds`, `worldTypes`, land squares, `findSites`) are browsable in the Directory, with a Games page for the three current MineIT consumers. Schema 9 adds per-world Mobile landscape tilesets; Koplin 3 currently has a complete matching set.
 
 Release 0.5.0 future-proofs the materialised Universe for later deterministic generation and introduces the first canonical commercial-contact network: 20 economic sectors, 20 structural procurement operations, additional sector organisations and 100 persistent commercial contacts materialised from the useful parts of the legacy Stage 8 deterministic buyer source.
 

@@ -13,6 +13,8 @@ const COLLECTION_LABELS = {
   surfaceHydrospheres: 'Hydrosphere',
   geologyProvinces: 'Geology Province',
   findSites: 'Find Site',
+  landscapeTilesets: 'Landscape Tileset',
+  landscapeTiles: 'Landscape Tile',
   settlements: 'Settlement / Station',
   organisations: 'Organisation',
   organisationUnits: 'Organisation Unit',
@@ -42,7 +44,9 @@ const COLLECTION_LABELS = {
 
 const SCALAR_REFS = {
   starSystems: ['regionId', 'primaryAuthorityOrganisationId', 'homeworldId'],
-  planets: ['systemId', 'parentPlanetId', 'governingOrganisationId', 'celestialBodyKindId', 'worldTypeId', 'atmosphereTypeId'],
+  planets: ['systemId', 'parentPlanetId', 'governingOrganisationId', 'celestialBodyKindId', 'worldTypeId', 'atmosphereTypeId', 'landscapeTilesetId'],
+  landscapeTilesets: ['planetId', 'intendedGameId'],
+  landscapeTiles: ['tilesetId', 'planetId', 'landformId', 'biomeId', 'hydrosphereId'],
   worldTypes: ['appliesToKindId'],
   settlements: ['systemId', 'planetId', 'parentLocationId', 'governingOrganisationId'],
   organisations: ['headquartersLocationId', 'parentOrganisationId'],
@@ -65,6 +69,7 @@ const SCALAR_REFS = {
 const ARRAY_REFS = {
   regions: ['administrativeOrganisationIds', 'systemIds'],
   planets: ['dominantLandformIds', 'dominantBiomeIds', 'dominantHydrosphereIds'],
+  landscapeTilesets: ['landformIds', 'biomeIds', 'hydrosphereIds', 'adjacencyPreviewIds'],
   organisations: ['economicSectorIds'],
   facilities: ['partnerOrganisationIds'],
   operations: ['managerPersonIds', 'procurementPersonIds', 'shipIds', 'productIds', 'shipClassIds'],
@@ -132,6 +137,12 @@ export class UniverseCatalogue {
     if (slash < 0) return null;
     const file = normalized.slice(slash + 1).replace(/\.[^.]+$/, '.png');
     return `${normalized.slice(0, slash)}/Originals/${file}`;
+  }
+  landscapeTilesForPlanet(planetId) {
+    return this.collection('landscapeTiles').filter(tile => tile.planetId === planetId);
+  }
+  landscapeTilesForTileset(tilesetId) {
+    return this.collection('landscapeTiles').filter(tile => tile.tilesetId === tilesetId);
   }
 }
 

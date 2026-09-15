@@ -96,7 +96,7 @@ Allowed statuses are `not-generated`, `in-progress`, `generated`, `approved`, an
 
 `not-generated` and `in-progress` require `generated: false`. An `in-progress` record must include `generationBatchId` and `generationStartedAt`. `generated` and `approved` require `generated: true`.
 
-People, named ships and star systems are current primary image-bearing types. Purchasable ship classes may also carry image metadata and prompts. Star-system vistas are identity-bearing 16:9 art keyed by system ID. Substances may carry optional catalog-still image metadata; only records with an `image` object are in the generation process.
+People, named ships and star systems are current primary image-bearing types. Purchasable ship classes may also carry image metadata and prompts. Star-system vistas are identity-bearing 16:9 art keyed by system ID. Substances may carry optional catalog-still image metadata; only records with an `image` object are in the generation process. Named worlds may carry a matching `landscapeTileset` of 1:1 Mobile grid tiles keyed by planet ID; those tiles are world-specific and must not be stored as reusable visual-library assets.
 
 Reusable visual assets are conceptually separate from the identity currently using them. Identity-neutral art intended for reuse must avoid baked-in personal names, company names, readable logos, registration numbers and universe-specific text. Reusable series are declared through `visualAssetSeries`.
 
