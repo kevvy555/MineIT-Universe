@@ -6,12 +6,12 @@ This repository is the authoritative owner of persistent universe entities **and
 
 ## Current canon release
 
-Content version: **0.8.0**  
-Schema version: **7**  
+Content version: **0.9.0**  
+Schema version: **8**  
 Civilisation baseline: **Year 5300**  
 Current commercial/scenario era: **Year 5326**
 
-The canonical foundation is the **Koplin Universe — Expanded Backstory & Lore Bible**, with **Materials of the Commonwealth** as the foundation substances companion and **Scenario II: The Deep Reach Mining Charter** as a later Year-5326 scenario extension. Structured industrial catalogues (`substances`, `parts`, `machines`, `buildings`) are browsable in the Directory.
+The canonical foundation is the **Koplin Universe — Expanded Backstory & Lore Bible**, with **Materials of the Commonwealth** as the foundation substances companion, **Worlds, Land and Surface Classification** as the foundation land companion, and **Scenario II: The Deep Reach Mining Charter** as a later Year-5326 scenario extension. Structured industrial catalogues (`substances`, `parts`, `machines`, `buildings`) and land catalogues (`celestialBodyKinds`, `worldTypes`, land squares, `findSites`) are browsable in the Directory, with a Games page for the three current MineIT consumers.
 
 Release 0.5.0 future-proofs the materialised Universe for later deterministic generation and introduces the first canonical commercial-contact network: 20 economic sectors, 20 structural procurement operations, additional sector organisations and 100 persistent commercial contacts materialised from the useful parts of the legacy Stage 8 deterministic buyer source.
 
@@ -25,9 +25,10 @@ The source-canonical Pathfinder-class and Prospector-class remain reference clas
 
 1. `data/lore/Koplin_Universe_Expanded_Backstory_Lore_Bible.md` — foundation civilisation/history canon.
 2. `data/lore/Koplin_Universe_Materials_And_Substances.md` — foundation materials / substances companion.
-3. `data/lore/Koplin_Scenario_II_Deep_Reach_Mining_Charter.md` — Year-5326 Deep Reach scenario canon.
-4. Structured records under `data/` — searchable/game-consumable representation that must agree with the lore sources.
-5. Game save state — mutable gameplay state, never canonical universe truth.
+3. `data/lore/Koplin_Universe_World_Surface.md` — foundation worlds / land / surface companion.
+4. `data/lore/Koplin_Scenario_II_Deep_Reach_Mining_Charter.md` — Year-5326 Deep Reach scenario canon.
+5. Structured records under `data/` — searchable/game-consumable representation that must agree with the lore sources.
+6. Game save state — mutable gameplay state, never canonical universe truth.
 
 If a structured record conflicts with a higher-precedence lore source, the lore source wins and the structured record must be reconciled.
 
@@ -36,6 +37,7 @@ Generated expansion material that does not conflict with the source bibles may r
 ## Browse
 
 - `index.html` — entity Directory: Geography / Organisation / Directory.
+- `games.html` — the three current MineIT games and how they share Universe land, worlds and substances.
 - `commercial-network.html` — persistent commercial contacts and their canonical structural resource demand.
 - `ship-catalogue.html` — factory-new Year-5326 ship catalogue grouped by manufacturer and ship line.
 - `lore.html` — full canonical lore explorer with source switching, quick-reference topics and section navigation.
@@ -74,6 +76,7 @@ prototypes/                 Non-canonical design references only
 docs/                       Canon architecture and integration specifications
 validation/                 Canon validation
 index.html                  GitHub Pages Universe Directory
+games.html                  GitHub Pages games catalogue
 commercial-network.html     GitHub Pages commercial-contact browser
 ship-catalogue.html         GitHub Pages factory-new ship catalogue
 lore.html                   GitHub Pages full-lore explorer

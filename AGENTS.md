@@ -18,8 +18,9 @@ Current precedence:
 
 1. `data/lore/Koplin_Universe_Expanded_Backstory_Lore_Bible.md` — foundation civilisation/history canon.
 2. `data/lore/Koplin_Universe_Materials_And_Substances.md` — foundation materials / substances companion.
-3. `data/lore/Koplin_Scenario_II_Deep_Reach_Mining_Charter.md` — Year-5326 scenario extension.
-4. Structured JSON under `data/` — searchable/game-consumable representation.
+3. `data/lore/Koplin_Universe_World_Surface.md` — foundation worlds / land / surface companion.
+4. `data/lore/Koplin_Scenario_II_Deep_Reach_Mining_Charter.md` — Year-5326 scenario extension.
+5. Structured JSON under `data/` — searchable/game-consumable representation.
 
 Structured records must agree with higher-precedence lore. Never invent a conflicting structured fact merely because an older generated sample already contains it.
 
@@ -107,6 +108,8 @@ The Commercial Network browser must derive commercial contacts from the same `pe
 
 The Lore Explorer must load lore-document metadata and canonical Markdown from `data/`; it must not embed duplicate lore prose in JavaScript.
 
+The Games page must load the `games` collection from the same manifest. It is a designer catalogue of current MineIT consumers, not an in-universe organisation type.
+
 `prototypes/` may contain embedded sample data only when clearly marked as non-canonical design references.
 
 ## Architecture
@@ -121,7 +124,7 @@ The Lore Explorer must load lore-document metadata and canonical Markdown from `
 
 ## Mobile-first UI
 
-The Directory, Commercial Network and Lore Explorer must remain usable on a portrait phone.
+The Directory, Commercial Network, Lore Explorer and Games catalogue must remain usable on a portrait phone.
 
 ## Validation
 

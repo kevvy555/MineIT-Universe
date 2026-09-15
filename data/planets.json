@@ -1,27 +1,715 @@
 [
-  {"id":"planet-koplin-prime","name":"Koplin 3","systemId":"system-koplin","parentPlanetId":null,"worldType":"temperate Commonwealth homeworld","environment":"approximately half land and half water; three major inhabited continental masses","population":null,"description":"Homeworld of the Trondonians, Zorans and Blaxmars. Koplin 3 occupies a narrow temperate band in the eight-planet Koplin system and has two moons. Its history of separation, conquest, reconciliation and unification is central to Commonwealth identity.","economicProfile":["civilisation core","planetary services","advanced industry","government"],"governingOrganisationId":"organisation-koplin-compact","canonStatus":"source-canonical","sourceDocumentId":"lore-koplin-expanded-backstory","sourceSection":"2. The Koplin System and Koplin 3"},
-  {"id":"moon-koplin-3-a","name":"Koplin 3 Moon A","systemId":"system-koplin","parentPlanetId":"planet-koplin-prime","worldType":"canonical moon; proper name not yet authored","environment":"not yet authored","population":null,"description":"One of Koplin 3's two moons. The foundation lore establishes its existence and importance to long-term climate stability and the common calendar, but does not yet give it a canonical proper name.","economicProfile":[],"governingOrganisationId":"organisation-koplin-compact","canonStatus":"source-canonical-partially-specified","sourceDocumentId":"lore-koplin-expanded-backstory","sourceSection":"2.1 The Star System"},
-  {"id":"moon-koplin-3-b","name":"Koplin 3 Moon B","systemId":"system-koplin","parentPlanetId":"planet-koplin-prime","worldType":"canonical moon; proper name not yet authored","environment":"not yet authored","population":null,"description":"One of Koplin 3's two moons. The foundation lore establishes its existence and importance to long-term climate stability and the common calendar, but does not yet give it a canonical proper name.","economicProfile":[],"governingOrganisationId":"organisation-koplin-compact","canonStatus":"source-canonical-partially-specified","sourceDocumentId":"lore-koplin-expanded-backstory","sourceSection":"2.1 The Star System"},
-  {"id":"planet-koplin-ii","name":"Koplin 2","systemId":"system-koplin","parentPlanetId":null,"worldType":"generated expansion world","environment":"dry temperate","population":620000000,"description":"Generated pre-lore expansion record retained as a possible member of the eight-planet Koplin system. Details are not established by the foundation lore.","economicProfile":["manufacturing","bulk storage"],"governingOrganisationId":"organisation-koplin-compact","canonStatus":"generated-expansion"},
-  {"id":"moon-rook","name":"Rook","systemId":"system-koplin","parentPlanetId":"planet-koplin-ii","worldType":"generated industrial moon","environment":"airless","population":8200000,"description":"Generated expansion moon; not established by the foundation lore.","economicProfile":["industrial processing","freight"],"governingOrganisationId":"organisation-koplin-compact","canonStatus":"generated-expansion"},
-  {"id":"planet-solace-ii","name":"Solace II","systemId":"system-solace","parentPlanetId":null,"worldType":"Temperate industrial world","environment":"temperate heavily urbanised","population":2800000000,"description":"Generated expansion world in the Solace System.","economicProfile":["aerospace","advanced materials"],"governingOrganisationId":"organisation-koplin-compact","canonStatus":"generated-expansion"},
-  {"id":"planet-solace-iii","name":"Solace III","systemId":"system-solace","parentPlanetId":null,"worldType":"Cold mineral-processing world","environment":"cold dry thin atmosphere","population":19000000,"description":"Generated expansion world in the Solace System.","economicProfile":["mineral processing","storage"],"governingOrganisationId":"organisation-koplin-compact","canonStatus":"generated-expansion"},
-  {"id":"planet-varda-prime","name":"Varda Prime","systemId":"system-varda","parentPlanetId":null,"worldType":"Cool oceanic research world","environment":"cool oceanic","population":146000000,"description":"Generated expansion world in the Varda System.","economicProfile":["bioscience","agriculture"],"governingOrganisationId":"organisation-koplin-compact","canonStatus":"generated-expansion"},
-  {"id":"moon-varda-lyric","name":"Lyric","systemId":"system-varda","parentPlanetId":"planet-varda-prime","worldType":"Ice moon research reserve","environment":"icebound","population":410000,"description":"Generated expansion moon.","economicProfile":["cryobiology","water research"],"governingOrganisationId":"organisation-koplin-compact","canonStatus":"generated-expansion"},
-  {"id":"planet-meridian-prime","name":"Meridian Prime","systemId":"system-meridian","parentPlanetId":null,"worldType":"Dense commercial world","environment":"temperate urban","population":5200000000,"description":"Generated expansion world in the Meridian System.","economicProfile":["trade","finance","logistics"],"governingOrganisationId":"organisation-meridian-exchange-authority","canonStatus":"generated-expansion"},
-  {"id":"moon-meridian-gate","name":"Gate","systemId":"system-meridian","parentPlanetId":"planet-meridian-prime","worldType":"Orbital logistics moon","environment":"airless industrial","population":12000000,"description":"Generated expansion moon.","economicProfile":["warehousing","freight transfer"],"governingOrganisationId":"organisation-meridian-exchange-authority","canonStatus":"generated-expansion"},
-  {"id":"planet-aster-prime","name":"Aster Prime","systemId":"system-aster-vale","parentPlanetId":null,"worldType":"Rocky shipbuilding world","environment":"cool rocky","population":680000000,"description":"Generated expansion world in the Aster Vale System.","economicProfile":["shipbuilding","engineering"],"governingOrganisationId":"organisation-koplin-compact","canonStatus":"generated-expansion"},
-  {"id":"moon-forge","name":"Forge","systemId":"system-aster-vale","parentPlanetId":"planet-aster-prime","worldType":"Shipyard moon","environment":"airless industrial","population":31000000,"description":"Generated expansion shipyard moon.","economicProfile":["orbital shipyards","fabrication"],"governingOrganisationId":"organisation-koplin-compact","canonStatus":"generated-expansion"},
-  {"id":"moon-keel","name":"Keel","systemId":"system-aster-vale","parentPlanetId":"planet-aster-prime","worldType":"Materials and test-range moon","environment":"airless","population":2400000,"description":"Generated expansion test-range moon.","economicProfile":["materials testing","engine trials"],"governingOrganisationId":"organisation-koplin-compact","canonStatus":"generated-expansion"},
-  {"id":"planet-orison-prime","name":"Orison Prime","systemId":"system-orison","parentPlanetId":null,"worldType":"Temperate research world","environment":"temperate","population":730000000,"description":"Generated expansion research world operating under Commonwealth law.","economicProfile":["research","education","bounded AI systems"],"governingOrganisationId":"organisation-koplin-compact","canonStatus":"reconciled-generated-expansion"},
-  {"id":"planet-orison-ii","name":"Orison II","systemId":"system-orison","parentPlanetId":null,"worldType":"Cold computational infrastructure world","environment":"cold dry","population":43000000,"description":"Generated expansion computational world operating under Commonwealth law.","economicProfile":["computation","automation"],"governingOrganisationId":"organisation-koplin-compact","canonStatus":"reconciled-generated-expansion"},
-  {"id":"planet-caldera-prime","name":"Caldera Prime","systemId":"system-caldera","parentPlanetId":null,"worldType":"Hot volcanic industrial world","environment":"hot volcanic","population":214000000,"description":"Generated expansion world.","economicProfile":["refining","materials"],"governingOrganisationId":"organisation-koplin-compact","canonStatus":"generated-expansion"},
-  {"id":"moon-cinder","name":"Cinder","systemId":"system-caldera","parentPlanetId":"planet-caldera-prime","worldType":"Mining moon","environment":"airless volcanic","population":6100000,"description":"Generated expansion moon.","economicProfile":["mining","ore concentration"],"governingOrganisationId":"organisation-koplin-compact","canonStatus":"generated-expansion"},
-  {"id":"moon-talus","name":"Talus","systemId":"system-caldera","parentPlanetId":"planet-caldera-prime","worldType":"Bulk ore and slag storage moon","environment":"airless","population":880000,"description":"Generated expansion moon.","economicProfile":["bulk storage","waste processing"],"governingOrganisationId":"organisation-koplin-compact","canonStatus":"generated-expansion"},
-  {"id":"planet-halcyon-prime","name":"Halcyon Prime","systemId":"system-halcyon","parentPlanetId":null,"worldType":"Temperate high-population world","environment":"temperate","population":6700000000,"description":"Generated expansion world.","economicProfile":["habitats","services","construction"],"governingOrganisationId":"organisation-koplin-compact","canonStatus":"generated-expansion"},
-  {"id":"moon-haven","name":"Haven","systemId":"system-halcyon","parentPlanetId":"planet-halcyon-prime","worldType":"Habitat-dense moon","environment":"airless urbanised","population":910000000,"description":"Generated expansion moon.","economicProfile":["orbital habitats","consumer industry"],"governingOrganisationId":"organisation-koplin-compact","canonStatus":"generated-expansion"},
-  {"id":"planet-nacre-prime","name":"Nacre Prime","systemId":"system-nacre","parentPlanetId":null,"worldType":"Warm ocean world","environment":"warm oceanic","population":390000000,"description":"Generated expansion world.","economicProfile":["marine biotech","pharma"],"governingOrganisationId":"organisation-koplin-compact","canonStatus":"generated-expansion"},
-  {"id":"moon-pearl","name":"Pearl","systemId":"system-nacre","parentPlanetId":"planet-nacre-prime","worldType":"Oceanographic moon base","environment":"ice/ocean subsurface","population":1700000,"description":"Generated expansion moon.","economicProfile":["oceanography","research"],"governingOrganisationId":"organisation-koplin-compact","canonStatus":"generated-expansion"},
-  {"id":"planet-damaris-prime","name":"Damaris Prime","systemId":"system-damaris","parentPlanetId":null,"worldType":"Cold frontier world","environment":"cold rocky","population":92000000,"description":"Generated expansion frontier world.","economicProfile":["frontier logistics","security"],"governingOrganisationId":"organisation-damaris-frontier-authority","canonStatus":"generated-expansion"},
-  {"id":"planet-damaris-ii","name":"Damaris II","systemId":"system-damaris","parentPlanetId":null,"worldType":"Sparse survey and extraction world","environment":"dry cold","population":3800000,"description":"Generated expansion frontier world.","economicProfile":["surveying","extraction"],"governingOrganisationId":"organisation-damaris-frontier-authority","canonStatus":"generated-expansion"}
+  {
+    "id": "planet-koplin-prime",
+    "name": "Koplin 3",
+    "systemId": "system-koplin",
+    "parentPlanetId": null,
+    "worldType": "temperate Commonwealth homeworld",
+    "environment": "approximately half land and half water; three major inhabited continental masses",
+    "population": null,
+    "description": "Homeworld of the Trondonians, Zorans and Blaxmars. Koplin 3 occupies a narrow temperate band in the eight-planet Koplin system and has two moons. Its history of separation, conquest, reconciliation and unification is central to Commonwealth identity.",
+    "economicProfile": [
+      "civilisation core",
+      "planetary services",
+      "advanced industry",
+      "government"
+    ],
+    "governingOrganisationId": "organisation-koplin-compact",
+    "canonStatus": "source-canonical",
+    "sourceDocumentId": "lore-koplin-expanded-backstory",
+    "sourceSection": "2. The Koplin System and Koplin 3",
+    "celestialBodyKindId": "kind-rocky-planet",
+    "worldTypeId": "world-type-habitable-temperate",
+    "atmosphereTypeId": "atmosphere-breathable",
+    "dominantLandformIds": [
+      "landform-plains",
+      "landform-lowland",
+      "landform-mountains"
+    ],
+    "dominantBiomeIds": [
+      "biome-forest",
+      "biome-grassland",
+      "biome-wetland",
+      "biome-tundra"
+    ],
+    "dominantHydrosphereIds": [
+      "hydrosphere-ocean",
+      "hydrosphere-lake",
+      "hydrosphere-river"
+    ],
+    "surfaceAssignmentStatus": "source-canonical"
+  },
+  {
+    "id": "moon-koplin-3-a",
+    "name": "Koplin 3 Moon A",
+    "systemId": "system-koplin",
+    "parentPlanetId": "planet-koplin-prime",
+    "worldType": "canonical moon; proper name not yet authored",
+    "environment": "not yet authored",
+    "population": null,
+    "description": "One of Koplin 3's two moons. The foundation lore establishes its existence and importance to long-term climate stability and the common calendar, but does not yet give it a canonical proper name.",
+    "economicProfile": [],
+    "governingOrganisationId": "organisation-koplin-compact",
+    "canonStatus": "source-canonical-partially-specified",
+    "sourceDocumentId": "lore-koplin-expanded-backstory",
+    "sourceSection": "2.1 The Star System",
+    "celestialBodyKindId": "kind-rocky-moon",
+    "worldTypeId": null,
+    "atmosphereTypeId": null,
+    "dominantLandformIds": [],
+    "dominantBiomeIds": [],
+    "dominantHydrosphereIds": [],
+    "surfaceAssignmentStatus": "kind-only"
+  },
+  {
+    "id": "moon-koplin-3-b",
+    "name": "Koplin 3 Moon B",
+    "systemId": "system-koplin",
+    "parentPlanetId": "planet-koplin-prime",
+    "worldType": "canonical moon; proper name not yet authored",
+    "environment": "not yet authored",
+    "population": null,
+    "description": "One of Koplin 3's two moons. The foundation lore establishes its existence and importance to long-term climate stability and the common calendar, but does not yet give it a canonical proper name.",
+    "economicProfile": [],
+    "governingOrganisationId": "organisation-koplin-compact",
+    "canonStatus": "source-canonical-partially-specified",
+    "sourceDocumentId": "lore-koplin-expanded-backstory",
+    "sourceSection": "2.1 The Star System",
+    "celestialBodyKindId": "kind-rocky-moon",
+    "worldTypeId": null,
+    "atmosphereTypeId": null,
+    "dominantLandformIds": [],
+    "dominantBiomeIds": [],
+    "dominantHydrosphereIds": [],
+    "surfaceAssignmentStatus": "kind-only"
+  },
+  {
+    "id": "planet-koplin-ii",
+    "name": "Koplin 2",
+    "systemId": "system-koplin",
+    "parentPlanetId": null,
+    "worldType": "generated expansion world",
+    "environment": "dry temperate",
+    "population": 620000000,
+    "description": "Generated pre-lore expansion record retained as a possible member of the eight-planet Koplin system. Details are not established by the foundation lore.",
+    "economicProfile": [
+      "manufacturing",
+      "bulk storage"
+    ],
+    "governingOrganisationId": "organisation-koplin-compact",
+    "canonStatus": "generated-expansion",
+    "celestialBodyKindId": "kind-rocky-planet",
+    "worldTypeId": "world-type-dry-arid-rocky",
+    "atmosphereTypeId": "atmosphere-thin",
+    "dominantLandformIds": [
+      "landform-plains",
+      "landform-highland"
+    ],
+    "dominantBiomeIds": [
+      "biome-desert",
+      "biome-barren-rock"
+    ],
+    "dominantHydrosphereIds": [],
+    "surfaceAssignmentStatus": "inferred-from-existing-record"
+  },
+  {
+    "id": "moon-rook",
+    "name": "Rook",
+    "systemId": "system-koplin",
+    "parentPlanetId": "planet-koplin-ii",
+    "worldType": "generated industrial moon",
+    "environment": "airless",
+    "population": 8200000,
+    "description": "Generated expansion moon; not established by the foundation lore.",
+    "economicProfile": [
+      "industrial processing",
+      "freight"
+    ],
+    "governingOrganisationId": "organisation-koplin-compact",
+    "canonStatus": "generated-expansion",
+    "celestialBodyKindId": "kind-rocky-moon",
+    "worldTypeId": "world-type-barren-moon",
+    "atmosphereTypeId": "atmosphere-none",
+    "dominantLandformIds": [
+      "landform-highland"
+    ],
+    "dominantBiomeIds": [
+      "biome-barren-rock"
+    ],
+    "dominantHydrosphereIds": [],
+    "surfaceAssignmentStatus": "inferred-from-existing-record"
+  },
+  {
+    "id": "planet-solace-ii",
+    "name": "Solace II",
+    "systemId": "system-solace",
+    "parentPlanetId": null,
+    "worldType": "Temperate industrial world",
+    "environment": "temperate heavily urbanised",
+    "population": 2800000000,
+    "description": "Generated expansion world in the Solace System.",
+    "economicProfile": [
+      "aerospace",
+      "advanced materials"
+    ],
+    "governingOrganisationId": "organisation-koplin-compact",
+    "canonStatus": "generated-expansion",
+    "celestialBodyKindId": "kind-rocky-planet",
+    "worldTypeId": "world-type-habitable-temperate",
+    "atmosphereTypeId": "atmosphere-breathable",
+    "dominantLandformIds": [
+      "landform-plains",
+      "landform-lowland"
+    ],
+    "dominantBiomeIds": [
+      "biome-grassland",
+      "biome-forest"
+    ],
+    "dominantHydrosphereIds": [],
+    "surfaceAssignmentStatus": "inferred-from-existing-record"
+  },
+  {
+    "id": "planet-solace-iii",
+    "name": "Solace III",
+    "systemId": "system-solace",
+    "parentPlanetId": null,
+    "worldType": "Cold mineral-processing world",
+    "environment": "cold dry thin atmosphere",
+    "population": 19000000,
+    "description": "Generated expansion world in the Solace System.",
+    "economicProfile": [
+      "mineral processing",
+      "storage"
+    ],
+    "governingOrganisationId": "organisation-koplin-compact",
+    "canonStatus": "generated-expansion",
+    "celestialBodyKindId": "kind-rocky-planet",
+    "worldTypeId": "world-type-standard-rocky",
+    "atmosphereTypeId": "atmosphere-thin",
+    "dominantLandformIds": [
+      "landform-highland",
+      "landform-plains"
+    ],
+    "dominantBiomeIds": [
+      "biome-barren-rock",
+      "biome-tundra"
+    ],
+    "dominantHydrosphereIds": [],
+    "surfaceAssignmentStatus": "inferred-from-existing-record"
+  },
+  {
+    "id": "planet-varda-prime",
+    "name": "Varda Prime",
+    "systemId": "system-varda",
+    "parentPlanetId": null,
+    "worldType": "Cool oceanic research world",
+    "environment": "cool oceanic",
+    "population": 146000000,
+    "description": "Generated expansion world in the Varda System.",
+    "economicProfile": [
+      "bioscience",
+      "agriculture"
+    ],
+    "governingOrganisationId": "organisation-koplin-compact",
+    "canonStatus": "generated-expansion",
+    "celestialBodyKindId": "kind-rocky-planet",
+    "worldTypeId": "world-type-habitable-temperate",
+    "atmosphereTypeId": "atmosphere-breathable",
+    "dominantLandformIds": [
+      "landform-lowland",
+      "landform-basin"
+    ],
+    "dominantBiomeIds": [
+      "biome-wetland",
+      "biome-grassland"
+    ],
+    "dominantHydrosphereIds": [
+      "hydrosphere-ocean"
+    ],
+    "surfaceAssignmentStatus": "inferred-from-existing-record"
+  },
+  {
+    "id": "moon-varda-lyric",
+    "name": "Lyric",
+    "systemId": "system-varda",
+    "parentPlanetId": "planet-varda-prime",
+    "worldType": "Ice moon research reserve",
+    "environment": "icebound",
+    "population": 410000,
+    "description": "Generated expansion moon.",
+    "economicProfile": [
+      "cryobiology",
+      "water research"
+    ],
+    "governingOrganisationId": "organisation-koplin-compact",
+    "canonStatus": "generated-expansion",
+    "celestialBodyKindId": "kind-rocky-moon",
+    "worldTypeId": "world-type-ice-moon",
+    "atmosphereTypeId": "atmosphere-cryogenic",
+    "dominantLandformIds": [
+      "landform-highland"
+    ],
+    "dominantBiomeIds": [
+      "biome-ice-sheet"
+    ],
+    "dominantHydrosphereIds": [
+      "hydrosphere-frozen-water"
+    ],
+    "surfaceAssignmentStatus": "inferred-from-existing-record"
+  },
+  {
+    "id": "planet-meridian-prime",
+    "name": "Meridian Prime",
+    "systemId": "system-meridian",
+    "parentPlanetId": null,
+    "worldType": "Dense commercial world",
+    "environment": "temperate urban",
+    "population": 5200000000,
+    "description": "Generated expansion world in the Meridian System.",
+    "economicProfile": [
+      "trade",
+      "finance",
+      "logistics"
+    ],
+    "governingOrganisationId": "organisation-meridian-exchange-authority",
+    "canonStatus": "generated-expansion",
+    "celestialBodyKindId": "kind-rocky-planet",
+    "worldTypeId": "world-type-habitable-temperate",
+    "atmosphereTypeId": "atmosphere-breathable",
+    "dominantLandformIds": [
+      "landform-plains",
+      "landform-lowland"
+    ],
+    "dominantBiomeIds": [
+      "biome-grassland",
+      "biome-forest"
+    ],
+    "dominantHydrosphereIds": [],
+    "surfaceAssignmentStatus": "inferred-from-existing-record"
+  },
+  {
+    "id": "moon-meridian-gate",
+    "name": "Gate",
+    "systemId": "system-meridian",
+    "parentPlanetId": "planet-meridian-prime",
+    "worldType": "Orbital logistics moon",
+    "environment": "airless industrial",
+    "population": 12000000,
+    "description": "Generated expansion moon.",
+    "economicProfile": [
+      "warehousing",
+      "freight transfer"
+    ],
+    "governingOrganisationId": "organisation-meridian-exchange-authority",
+    "canonStatus": "generated-expansion",
+    "celestialBodyKindId": "kind-rocky-moon",
+    "worldTypeId": "world-type-barren-moon",
+    "atmosphereTypeId": "atmosphere-none",
+    "dominantLandformIds": [
+      "landform-highland"
+    ],
+    "dominantBiomeIds": [
+      "biome-barren-rock"
+    ],
+    "dominantHydrosphereIds": [],
+    "surfaceAssignmentStatus": "inferred-from-existing-record"
+  },
+  {
+    "id": "planet-aster-prime",
+    "name": "Aster Prime",
+    "systemId": "system-aster-vale",
+    "parentPlanetId": null,
+    "worldType": "Rocky shipbuilding world",
+    "environment": "cool rocky",
+    "population": 680000000,
+    "description": "Generated expansion world in the Aster Vale System.",
+    "economicProfile": [
+      "shipbuilding",
+      "engineering"
+    ],
+    "governingOrganisationId": "organisation-koplin-compact",
+    "canonStatus": "generated-expansion",
+    "celestialBodyKindId": "kind-rocky-planet",
+    "worldTypeId": "world-type-standard-rocky",
+    "atmosphereTypeId": "atmosphere-thin",
+    "dominantLandformIds": [
+      "landform-mountains",
+      "landform-highland"
+    ],
+    "dominantBiomeIds": [
+      "biome-barren-rock"
+    ],
+    "dominantHydrosphereIds": [],
+    "surfaceAssignmentStatus": "inferred-from-existing-record"
+  },
+  {
+    "id": "moon-forge",
+    "name": "Forge",
+    "systemId": "system-aster-vale",
+    "parentPlanetId": "planet-aster-prime",
+    "worldType": "Shipyard moon",
+    "environment": "airless industrial",
+    "population": 31000000,
+    "description": "Generated expansion shipyard moon.",
+    "economicProfile": [
+      "orbital shipyards",
+      "fabrication"
+    ],
+    "governingOrganisationId": "organisation-koplin-compact",
+    "canonStatus": "generated-expansion",
+    "celestialBodyKindId": "kind-rocky-moon",
+    "worldTypeId": "world-type-barren-moon",
+    "atmosphereTypeId": "atmosphere-none",
+    "dominantLandformIds": [
+      "landform-highland"
+    ],
+    "dominantBiomeIds": [
+      "biome-barren-rock"
+    ],
+    "dominantHydrosphereIds": [],
+    "surfaceAssignmentStatus": "inferred-from-existing-record"
+  },
+  {
+    "id": "moon-keel",
+    "name": "Keel",
+    "systemId": "system-aster-vale",
+    "parentPlanetId": "planet-aster-prime",
+    "worldType": "Materials and test-range moon",
+    "environment": "airless",
+    "population": 2400000,
+    "description": "Generated expansion test-range moon.",
+    "economicProfile": [
+      "materials testing",
+      "engine trials"
+    ],
+    "governingOrganisationId": "organisation-koplin-compact",
+    "canonStatus": "generated-expansion",
+    "celestialBodyKindId": "kind-rocky-moon",
+    "worldTypeId": "world-type-barren-moon",
+    "atmosphereTypeId": "atmosphere-none",
+    "dominantLandformIds": [
+      "landform-highland"
+    ],
+    "dominantBiomeIds": [
+      "biome-barren-rock"
+    ],
+    "dominantHydrosphereIds": [],
+    "surfaceAssignmentStatus": "inferred-from-existing-record"
+  },
+  {
+    "id": "planet-orison-prime",
+    "name": "Orison Prime",
+    "systemId": "system-orison",
+    "parentPlanetId": null,
+    "worldType": "Temperate research world",
+    "environment": "temperate",
+    "population": 730000000,
+    "description": "Generated expansion research world operating under Commonwealth law.",
+    "economicProfile": [
+      "research",
+      "education",
+      "bounded AI systems"
+    ],
+    "governingOrganisationId": "organisation-koplin-compact",
+    "canonStatus": "reconciled-generated-expansion",
+    "celestialBodyKindId": "kind-rocky-planet",
+    "worldTypeId": "world-type-habitable-temperate",
+    "atmosphereTypeId": "atmosphere-breathable",
+    "dominantLandformIds": [
+      "landform-plains"
+    ],
+    "dominantBiomeIds": [
+      "biome-grassland",
+      "biome-forest"
+    ],
+    "dominantHydrosphereIds": [],
+    "surfaceAssignmentStatus": "inferred-from-existing-record"
+  },
+  {
+    "id": "planet-orison-ii",
+    "name": "Orison II",
+    "systemId": "system-orison",
+    "parentPlanetId": null,
+    "worldType": "Cold computational infrastructure world",
+    "environment": "cold dry",
+    "population": 43000000,
+    "description": "Generated expansion computational world operating under Commonwealth law.",
+    "economicProfile": [
+      "computation",
+      "automation"
+    ],
+    "governingOrganisationId": "organisation-koplin-compact",
+    "canonStatus": "reconciled-generated-expansion",
+    "celestialBodyKindId": "kind-rocky-planet",
+    "worldTypeId": "world-type-standard-rocky",
+    "atmosphereTypeId": "atmosphere-thin",
+    "dominantLandformIds": [
+      "landform-highland"
+    ],
+    "dominantBiomeIds": [
+      "biome-barren-rock",
+      "biome-tundra"
+    ],
+    "dominantHydrosphereIds": [],
+    "surfaceAssignmentStatus": "inferred-from-existing-record"
+  },
+  {
+    "id": "planet-caldera-prime",
+    "name": "Caldera Prime",
+    "systemId": "system-caldera",
+    "parentPlanetId": null,
+    "worldType": "Hot volcanic industrial world",
+    "environment": "hot volcanic",
+    "population": 214000000,
+    "description": "Generated expansion world.",
+    "economicProfile": [
+      "refining",
+      "materials"
+    ],
+    "governingOrganisationId": "organisation-koplin-compact",
+    "canonStatus": "generated-expansion",
+    "celestialBodyKindId": "kind-rocky-planet",
+    "worldTypeId": "world-type-volcanic-rocky",
+    "atmosphereTypeId": "atmosphere-dense",
+    "dominantLandformIds": [
+      "landform-mountains",
+      "landform-highland"
+    ],
+    "dominantBiomeIds": [
+      "biome-volcanic-field",
+      "biome-lava-field"
+    ],
+    "dominantHydrosphereIds": [],
+    "surfaceAssignmentStatus": "inferred-from-existing-record"
+  },
+  {
+    "id": "moon-cinder",
+    "name": "Cinder",
+    "systemId": "system-caldera",
+    "parentPlanetId": "planet-caldera-prime",
+    "worldType": "Mining moon",
+    "environment": "airless volcanic",
+    "population": 6100000,
+    "description": "Generated expansion moon.",
+    "economicProfile": [
+      "mining",
+      "ore concentration"
+    ],
+    "governingOrganisationId": "organisation-koplin-compact",
+    "canonStatus": "generated-expansion",
+    "celestialBodyKindId": "kind-rocky-moon",
+    "worldTypeId": "world-type-volcanic-moon",
+    "atmosphereTypeId": "atmosphere-none",
+    "dominantLandformIds": [
+      "landform-mountains"
+    ],
+    "dominantBiomeIds": [
+      "biome-volcanic-field"
+    ],
+    "dominantHydrosphereIds": [],
+    "surfaceAssignmentStatus": "inferred-from-existing-record"
+  },
+  {
+    "id": "moon-talus",
+    "name": "Talus",
+    "systemId": "system-caldera",
+    "parentPlanetId": "planet-caldera-prime",
+    "worldType": "Bulk ore and slag storage moon",
+    "environment": "airless",
+    "population": 880000,
+    "description": "Generated expansion moon.",
+    "economicProfile": [
+      "bulk storage",
+      "waste processing"
+    ],
+    "governingOrganisationId": "organisation-koplin-compact",
+    "canonStatus": "generated-expansion",
+    "celestialBodyKindId": "kind-rocky-moon",
+    "worldTypeId": "world-type-barren-moon",
+    "atmosphereTypeId": "atmosphere-none",
+    "dominantLandformIds": [
+      "landform-highland"
+    ],
+    "dominantBiomeIds": [
+      "biome-barren-rock"
+    ],
+    "dominantHydrosphereIds": [],
+    "surfaceAssignmentStatus": "inferred-from-existing-record"
+  },
+  {
+    "id": "planet-halcyon-prime",
+    "name": "Halcyon Prime",
+    "systemId": "system-halcyon",
+    "parentPlanetId": null,
+    "worldType": "Temperate high-population world",
+    "environment": "temperate",
+    "population": 6700000000,
+    "description": "Generated expansion world.",
+    "economicProfile": [
+      "habitats",
+      "services",
+      "construction"
+    ],
+    "governingOrganisationId": "organisation-koplin-compact",
+    "canonStatus": "generated-expansion",
+    "celestialBodyKindId": "kind-rocky-planet",
+    "worldTypeId": "world-type-habitable-temperate",
+    "atmosphereTypeId": "atmosphere-breathable",
+    "dominantLandformIds": [
+      "landform-plains",
+      "landform-lowland"
+    ],
+    "dominantBiomeIds": [
+      "biome-grassland",
+      "biome-forest"
+    ],
+    "dominantHydrosphereIds": [],
+    "surfaceAssignmentStatus": "inferred-from-existing-record"
+  },
+  {
+    "id": "moon-haven",
+    "name": "Haven",
+    "systemId": "system-halcyon",
+    "parentPlanetId": "planet-halcyon-prime",
+    "worldType": "Habitat-dense moon",
+    "environment": "airless urbanised",
+    "population": 910000000,
+    "description": "Generated expansion moon.",
+    "economicProfile": [
+      "orbital habitats",
+      "consumer industry"
+    ],
+    "governingOrganisationId": "organisation-koplin-compact",
+    "canonStatus": "generated-expansion",
+    "celestialBodyKindId": "kind-rocky-moon",
+    "worldTypeId": "world-type-barren-moon",
+    "atmosphereTypeId": "atmosphere-none",
+    "dominantLandformIds": [
+      "landform-highland"
+    ],
+    "dominantBiomeIds": [
+      "biome-barren-rock"
+    ],
+    "dominantHydrosphereIds": [],
+    "surfaceAssignmentStatus": "inferred-from-existing-record"
+  },
+  {
+    "id": "planet-nacre-prime",
+    "name": "Nacre Prime",
+    "systemId": "system-nacre",
+    "parentPlanetId": null,
+    "worldType": "Warm ocean world",
+    "environment": "warm oceanic",
+    "population": 390000000,
+    "description": "Generated expansion world.",
+    "economicProfile": [
+      "marine biotech",
+      "pharma"
+    ],
+    "governingOrganisationId": "organisation-koplin-compact",
+    "canonStatus": "generated-expansion",
+    "celestialBodyKindId": "kind-rocky-planet",
+    "worldTypeId": "world-type-habitable-temperate",
+    "atmosphereTypeId": "atmosphere-breathable",
+    "dominantLandformIds": [
+      "landform-basin",
+      "landform-lowland"
+    ],
+    "dominantBiomeIds": [
+      "biome-wetland",
+      "biome-grassland"
+    ],
+    "dominantHydrosphereIds": [
+      "hydrosphere-ocean"
+    ],
+    "surfaceAssignmentStatus": "inferred-from-existing-record"
+  },
+  {
+    "id": "moon-pearl",
+    "name": "Pearl",
+    "systemId": "system-nacre",
+    "parentPlanetId": "planet-nacre-prime",
+    "worldType": "Oceanographic moon base",
+    "environment": "ice/ocean subsurface",
+    "population": 1700000,
+    "description": "Generated expansion moon.",
+    "economicProfile": [
+      "oceanography",
+      "research"
+    ],
+    "governingOrganisationId": "organisation-koplin-compact",
+    "canonStatus": "generated-expansion",
+    "celestialBodyKindId": "kind-rocky-moon",
+    "worldTypeId": "world-type-ocean-moon",
+    "atmosphereTypeId": "atmosphere-thin",
+    "dominantLandformIds": [
+      "landform-basin"
+    ],
+    "dominantBiomeIds": [
+      "biome-ice-sheet",
+      "biome-wetland"
+    ],
+    "dominantHydrosphereIds": [
+      "hydrosphere-ocean",
+      "hydrosphere-frozen-water"
+    ],
+    "surfaceAssignmentStatus": "inferred-from-existing-record"
+  },
+  {
+    "id": "planet-damaris-prime",
+    "name": "Damaris Prime",
+    "systemId": "system-damaris",
+    "parentPlanetId": null,
+    "worldType": "Cold frontier world",
+    "environment": "cold rocky",
+    "population": 92000000,
+    "description": "Generated expansion frontier world.",
+    "economicProfile": [
+      "frontier logistics",
+      "security"
+    ],
+    "governingOrganisationId": "organisation-damaris-frontier-authority",
+    "canonStatus": "generated-expansion",
+    "celestialBodyKindId": "kind-rocky-planet",
+    "worldTypeId": "world-type-standard-rocky",
+    "atmosphereTypeId": "atmosphere-thin",
+    "dominantLandformIds": [
+      "landform-highland",
+      "landform-mountains"
+    ],
+    "dominantBiomeIds": [
+      "biome-barren-rock",
+      "biome-tundra"
+    ],
+    "dominantHydrosphereIds": [],
+    "surfaceAssignmentStatus": "inferred-from-existing-record"
+  },
+  {
+    "id": "planet-damaris-ii",
+    "name": "Damaris II",
+    "systemId": "system-damaris",
+    "parentPlanetId": null,
+    "worldType": "Sparse survey and extraction world",
+    "environment": "dry cold",
+    "population": 3800000,
+    "description": "Generated expansion frontier world.",
+    "economicProfile": [
+      "surveying",
+      "extraction"
+    ],
+    "governingOrganisationId": "organisation-damaris-frontier-authority",
+    "canonStatus": "generated-expansion",
+    "celestialBodyKindId": "kind-rocky-planet",
+    "worldTypeId": "world-type-dry-arid-rocky",
+    "atmosphereTypeId": "atmosphere-thin",
+    "dominantLandformIds": [
+      "landform-plains"
+    ],
+    "dominantBiomeIds": [
+      "biome-desert",
+      "biome-barren-rock"
+    ],
+    "dominantHydrosphereIds": [],
+    "surfaceAssignmentStatus": "inferred-from-existing-record"
+  }
 ]

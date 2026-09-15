@@ -74,7 +74,8 @@ for (const { record } of byId.values()) {
 
 const scalarRefs = {
   starSystems: ['regionId', 'primaryAuthorityOrganisationId', 'homeworldId'],
-  planets: ['systemId', 'parentPlanetId', 'governingOrganisationId'],
+  planets: ['systemId', 'parentPlanetId', 'governingOrganisationId', 'celestialBodyKindId', 'worldTypeId', 'atmosphereTypeId'],
+  worldTypes: ['appliesToKindId'],
   settlements: ['systemId', 'planetId', 'parentLocationId', 'governingOrganisationId'],
   organisations: ['headquartersLocationId', 'parentOrganisationId'],
   organisationUnits: ['organisationId', 'parentUnitId', 'primaryLocationId'],
@@ -94,6 +95,7 @@ const scalarRefs = {
 };
 const arrayRefs = {
   regions: ['administrativeOrganisationIds', 'systemIds'],
+  planets: ['dominantLandformIds', 'dominantBiomeIds', 'dominantHydrosphereIds'],
   organisations: ['economicSectorIds'],
   facilities: ['partnerOrganisationIds'],
   operations: ['managerPersonIds', 'procurementPersonIds', 'shipIds', 'productIds', 'shipClassIds'],
@@ -102,6 +104,7 @@ const arrayRefs = {
   parts: ['substanceIds', 'machineIds'],
   machines: ['partIds'],
   buildings: ['structuralShellSubstanceIds', 'fitOutSubstanceIds', 'machineIds'],
+  findSites: ['landformIds', 'biomeIds', 'hydrosphereIds', 'surfaceFeatureIds', 'geologyProvinceIds', 'substanceIds'],
   shipLines: ['productionOperationIds'],
   shipClasses: ['designerOrganisationIds'],
   ships: ['operationIds', 'personIds'],
@@ -128,6 +131,60 @@ for (const planet of collections.planets ?? []) {
   const parent = byId.get(planet.parentPlanetId)?.record;
   if (parent && parent.systemId !== planet.systemId) errors.push(`${planet.id}: parent world belongs to another system.`);
 }
+
+const assignmentStatuses = new Set(['source-canonical', 'inferred-from-existing-record', 'kind-only']);
+const assignmentModes = new Set(['procedural', 'authored-only', 'catalog-legacy']);
+for (const planet of collections.planets ?? []) {
+  if (!planet.celestialBodyKindId) errors.push(`${planet.id}: celestialBodyKindId missing.`);
+  if (!assignmentStatuses.has(planet.surfaceAssignmentStatus)) errors.push(`${planet.id}: invalid surfaceAssignmentStatus.`);
+  const kind = byId.get(planet.celestialBodyKindId)?.record;
+  if (planet.worldTypeId) {
+    const worldType = byId.get(planet.worldTypeId)?.record;
+    if (worldType && planet.celestialBodyKindId && worldType.appliesToKindId !== planet.celestialBodyKindId) {
+      errors.push(`${planet.id}: worldTypeId ${planet.worldTypeId} does not apply to ${planet.celestialBodyKindId}.`);
+    }
+  }
+  if (planet.atmosphereTypeId === 'atmosphere-gas-giant-envelope' && planet.celestialBodyKindId === 'kind-rocky-planet') {
+    errors.push(`${planet.id}: rocky planets cannot use gas-giant envelope atmosphere.`);
+  }
+  if (planet.surfaceAssignmentStatus === 'kind-only') {
+    if (planet.worldTypeId || planet.atmosphereTypeId) errors.push(`${planet.id}: kind-only worlds must not assign world type or atmosphere.`);
+    for (const field of ['dominantLandformIds', 'dominantBiomeIds', 'dominantHydrosphereIds']) {
+      if ((planet[field] ?? []).length) errors.push(`${planet.id}: kind-only worlds must not list ${field}.`);
+    }
+  }
+  if (['source-canonical', 'inferred-from-existing-record'].includes(planet.surfaceAssignmentStatus)) {
+    if (!planet.worldTypeId) errors.push(`${planet.id}: ${planet.surfaceAssignmentStatus} requires worldTypeId.`);
+    if (!planet.atmosphereTypeId) errors.push(`${planet.id}: ${planet.surfaceAssignmentStatus} requires atmosphereTypeId.`);
+  }
+  if (kind && kind.walkableSurface === false && (planet.dominantLandformIds ?? []).length) {
+    errors.push(`${planet.id}: non-walkable body kinds cannot list landforms.`);
+  }
+}
+for (const worldType of collections.worldTypes ?? []) {
+  if (!worldType.appliesToKindId) errors.push(`${worldType.id}: appliesToKindId missing.`);
+  if (!assignmentModes.has(worldType.assignmentMode)) errors.push(`${worldType.id}: invalid assignmentMode.`);
+}
+for (const site of collections.findSites ?? []) {
+  if (site.catalogTier !== 'P0') errors.push(`${site.id}: published find sites must be catalogTier P0.`);
+  if (site.depthBand !== 'Surface') errors.push(`${site.id}: P0 find sites must be Surface depth.`);
+  if (!(site.substanceIds ?? []).length) errors.push(`${site.id}: find site requires at least one substanceId.`);
+  for (const field of ['rowRarity', 'spawnHash', 'predicate']) {
+    if (Object.hasOwn(site, field)) errors.push(`${site.id}: gameplay spawn field ${field} must not be canonical.`);
+  }
+}
+if ((collections.findSites ?? []).length !== 10) errors.push(`World-surface P0 find-site catalogue must contain 10 rows; found ${(collections.findSites ?? []).length}.`);
+if ((collections.surfaceLandforms ?? []).length !== 12) errors.push(`Landform catalogue must contain 12 shapes; found ${(collections.surfaceLandforms ?? []).length}.`);
+if ((collections.surfaceBiomes ?? []).length !== 10) errors.push(`Biome catalogue must contain 10 covers; found ${(collections.surfaceBiomes ?? []).length}.`);
+const expectedGames = ['game-mineit-desktop', 'game-mineit-mobile', 'game-mineit-single-mine'];
+const gameIds = (collections.games ?? []).map(game => game.id);
+if (gameIds.length !== 3) errors.push(`Games catalogue must contain exactly 3 records; found ${gameIds.length}.`);
+for (const id of expectedGames) if (!gameIds.includes(id)) errors.push(`Games catalogue missing ${id}.`);
+for (const game of collections.games ?? []) {
+  if (!game.sharedLandUse || !game.sharedSubstanceUse) errors.push(`${game.id}: game record requires sharedLandUse and sharedSubstanceUse.`);
+  if (game.knowledgeScope !== 'designer truth') errors.push(`${game.id}: games are designer catalogue records, not in-universe organisations.`);
+}
+
 for (const relationship of collections.relationships ?? []) if (relationship.personAId === relationship.personBId) errors.push(`${relationship.id}: relationship self-reference.`);
 for (const operation of collections.operations ?? []) for (const requirement of operation.resourceRequirements ?? []) if (!requirement.resourceType || !requirement.resourceId || !requirement.reason) errors.push(`${operation.id}: incomplete resource requirement.`);
 
@@ -227,6 +284,11 @@ const koplinSystem = byId.get('system-koplin')?.record;
 if (!String(koplinSystem?.starType ?? '').toLowerCase().includes('white-dwarf')) errors.push('system-koplin must use the source-canonical white-dwarf remnant star type.');
 const koplin3 = byId.get('planet-koplin-prime')?.record;
 if (koplin3?.name !== 'Koplin 3') errors.push('planet-koplin-prime must resolve to source-canonical Koplin 3.');
+if (koplin3?.celestialBodyKindId !== 'kind-rocky-planet') errors.push('planet-koplin-prime must be a rocky planet.');
+if (koplin3?.worldTypeId !== 'world-type-habitable-temperate') errors.push('planet-koplin-prime must use Habitable Temperate World / Verdant World.');
+if (koplin3?.atmosphereTypeId !== 'atmosphere-breathable') errors.push('planet-koplin-prime must use breathable atmosphere.');
+if (koplin3?.surfaceAssignmentStatus !== 'source-canonical') errors.push('planet-koplin-prime surface assignment must be source-canonical.');
+if (!byId.has('generation-source-desktop-celestial-body-generation')) errors.push('Desktop celestial-body generation source missing.');
 if ((collections.organisations ?? []).some(org => String(org.organisationType).toLowerCase().includes('synthetic polity'))) errors.push('AI may not be represented as a sovereign synthetic polity under foundation canon.');
 
 const retiredSpecies = new Set((collections.species ?? []).filter(s => s.canonStatus === 'retired-pre-lore-placeholder').map(s => s.id));
@@ -237,6 +299,7 @@ console.log(`Canonical Year ${manifest.canonicalYear}; civilisation baseline Yea
 console.log(`${byId.size} entities across ${Object.keys(collections).length} logical collections and ${Object.values(collectionFiles).flat().length} JSON shards.`);
 console.log(`${retailClasses.length} factory-new ship classes across ${retailManufacturerIds.size} manufacturers.`);
 console.log(`${commercialContacts.length} commercial contacts across ${sectors.length} economic sectors and ${commercialOperations.length} procurement operations.`);
+console.log(`${(collections.games ?? []).length} games; ${(collections.surfaceLandforms ?? []).length} landforms; ${(collections.surfaceBiomes ?? []).length} biomes; ${(collections.findSites ?? []).length} P0 find sites.`);
 if (warnings.length) { console.log(`\nWarnings (${warnings.length}):`); warnings.forEach(w => console.log(`- ${w}`)); }
 if (errors.length) { console.error(`\nErrors (${errors.length}):`); errors.forEach(e => console.error(`- ${e}`)); process.exit(1); }
 console.log('\nValidation passed.');

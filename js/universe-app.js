@@ -41,7 +41,10 @@ const DIRECTORY = {
 };
 
 const ICONS = {
-  regions: '◎', starSystems: '✦', planets: '●', settlements: '⬡', organisations: 'O',
+  regions: '◎', starSystems: '✦', planets: '●', celestialBodyKinds: '◉', worldTypes: '◌',
+  atmosphereTypes: '☁', surfaceLandforms: '⛰', surfaceBiomes: '⚘', surfaceFeatures: '◻',
+  surfaceHydrospheres: '≈', geologyProvinces: '▣', findSites: '⌖', games: '▶',
+  settlements: '⬡', organisations: 'O',
   organisationUnits: '▦', facilities: '⌂', operations: '⚙', products: '◆', substances: '▣',
   parts: '⧉', machines: '⚒', buildings: '⌂', species: 'S',
   people: 'P', shipClasses: '△', ships: '▲', projects: '◇', events: '◷', relationships: '↔',
@@ -159,6 +162,27 @@ function buildBuildingsDirectoryNode() {
   ));
 }
 
+function buildGamesDirectoryNode() {
+  return category('Games', nodes(state.catalogue.collection('games')));
+}
+
+function buildLandDirectoryNode() {
+  const worldTypes = state.catalogue.collection('worldTypes');
+  return category('Land', [
+    category('Celestial Body Kinds', nodes(state.catalogue.collection('celestialBodyKinds'))),
+    category('World Types', groupRecords(worldTypes, record => state.catalogue.nameFor(record.appliesToKindId)).map(([kind, items]) =>
+      category(kind, nodes(items))
+    )),
+    category('Atmosphere Types', nodes(state.catalogue.collection('atmosphereTypes'))),
+    category('Landforms', nodes(state.catalogue.collection('surfaceLandforms'))),
+    category('Biomes', nodes(state.catalogue.collection('surfaceBiomes'))),
+    category('Surface Features', nodes(state.catalogue.collection('surfaceFeatures'))),
+    category('Hydrosphere', nodes(state.catalogue.collection('surfaceHydrospheres'))),
+    category('Geology Provinces', nodes(state.catalogue.collection('geologyProvinces'))),
+    category('Find Sites', nodes(state.catalogue.collection('findSites')))
+  ]);
+}
+
 function buildDirectoryTree() {
   const beforeProducts = ['regions', 'starSystems', 'planets', 'settlements', 'organisations', 'organisationUnits', 'facilities', 'operations', 'products'];
   const afterIndustrial = ['species', 'people', 'shipClasses', 'ships', 'projects', 'events', 'relationships', 'currencies', 'loreDocuments', 'loreTopics'];
@@ -166,7 +190,9 @@ function buildDirectoryTree() {
   return {
     label: 'Directory',
     children: [
+      buildGamesDirectoryNode(),
       ...beforeProducts.map(flatNode),
+      buildLandDirectoryNode(),
       buildSubstancesDirectoryNode(),
       buildPartsDirectoryNode(),
       buildMachinesDirectoryNode(),
@@ -299,6 +325,16 @@ function renderTree() {
         record.subCategory,
         record.buildingType,
         record.entityType,
+        record.gameName,
+        record.designName,
+        record.layer,
+        record.catalogTier,
+        record.depthBand,
+        record.shortName,
+        record.playPattern,
+        record.form,
+        record.platform,
+        record.surfaceAssignmentStatus,
         collectionName,
         record.id
       ].filter(Boolean).join(' ').toLowerCase();
@@ -327,6 +363,16 @@ function subtitle(collection, entity) {
     regions: entity.regionType,
     starSystems: entity.starType,
     planets: entity.worldType,
+    celestialBodyKinds: entity.codeName,
+    worldTypes: entity.gameName || entity.designName,
+    atmosphereTypes: entity.name,
+    surfaceLandforms: entity.layer,
+    surfaceBiomes: entity.layer,
+    surfaceFeatures: entity.layer,
+    surfaceHydrospheres: entity.layer,
+    geologyProvinces: entity.layer,
+    findSites: `${entity.catalogTier || ''} • ${entity.depthBand || ''}`.trim(),
+    games: `${entity.form || ''} • ${entity.playPattern || ''}`.trim(),
     settlements: entity.locationType,
     organisations: `${entity.scale || ''} ${entity.organisationType || ''}`.trim(),
     organisationUnits: entity.unitType,
@@ -378,7 +424,23 @@ function fieldsFor(collection, entity) {
     if (entity.homeworldId) fields.push(field('Homeworld', link(entity.homeworldId)));
   }
   if (collection === 'planets') {
-    fields.push(field('System', link(entity.systemId)), field('Parent world', entity.parentPlanetId ? link(entity.parentPlanetId) : '—'), field('Authority', link(entity.governingOrganisationId)), field('Environment', esc(entity.environment)), field('Population', population(entity.population)), field('Settlements', links(relatedIds('settlements', item => item.planetId === entity.id))), field('Moons', links(relatedIds('planets', item => item.parentPlanetId === entity.id))), field('Economic profile', tags(entity.economicProfile)));
+    fields.push(
+      field('System', link(entity.systemId)),
+      field('Parent world', entity.parentPlanetId ? link(entity.parentPlanetId) : '—'),
+      field('Authority', link(entity.governingOrganisationId)),
+      field('Body kind', link(entity.celestialBodyKindId)),
+      field('World type', entity.worldTypeId ? link(entity.worldTypeId) : '—'),
+      field('Atmosphere', entity.atmosphereTypeId ? link(entity.atmosphereTypeId) : '—'),
+      field('Dominant landforms', links(entity.dominantLandformIds)),
+      field('Dominant biomes', links(entity.dominantBiomeIds)),
+      field('Dominant water', links(entity.dominantHydrosphereIds)),
+      field('Surface assignment', esc(entity.surfaceAssignmentStatus)),
+      field('Environment', esc(entity.environment)),
+      field('Population', population(entity.population)),
+      field('Settlements', links(relatedIds('settlements', item => item.planetId === entity.id))),
+      field('Moons', links(relatedIds('planets', item => item.parentPlanetId === entity.id))),
+      field('Economic profile', tags(entity.economicProfile))
+    );
   }
   if (collection === 'settlements') {
     fields.push(field('System', link(entity.systemId)), field('World', link(entity.planetId)), field('Authority', link(entity.governingOrganisationId)), field('Population', population(entity.population)), field('Purpose', esc(entity.purpose)), field('Organisations', links(relatedIds('organisations', item => item.headquartersLocationId === entity.id))), field('Facilities', links(relatedIds('facilities', item => item.settlementId === entity.id))), field('People', links(relatedIds('people', item => item.workLocationId === entity.id || item.homeLocationId === entity.id))), field('Ships', links(relatedIds('ships', item => item.homePortLocationId === entity.id))));
@@ -411,6 +473,7 @@ function fieldsFor(collection, entity) {
       field('Used by parts', links(relatedIds('parts', part => (part.substanceIds || []).includes(entity.id)))),
       field('Building shell uses', links(relatedIds('buildings', building => (building.structuralShellSubstanceIds || []).includes(entity.id)))),
       field('Building fit-out uses', links(relatedIds('buildings', building => (building.fitOutSubstanceIds || []).includes(entity.id)))),
+      field('Find sites', links(relatedIds('findSites', site => (site.substanceIds || []).includes(entity.id)))),
       field('Open materials lore', loreOpenLink(entity.sourceDocumentId, entity.sourceSection))
     );
   }
@@ -444,6 +507,95 @@ function fieldsFor(collection, entity) {
       field('Structural shell substances', links(entity.structuralShellSubstanceIds)),
       field('Fit-out substances', links(entity.fitOutSubstanceIds)),
       field('Installed machines', links(entity.machineIds))
+    );
+  }
+  if (collection === 'games') {
+    fields.push(
+      field('Short name', esc(entity.shortName)),
+      field('Form', esc(entity.form)),
+      field('Play pattern', esc(entity.playPattern)),
+      field('Platform', esc(entity.platform)),
+      field('Status', esc(entity.status)),
+      field('Knowledge scope', esc(entity.knowledgeScope)),
+      field('Open land lore', loreOpenLink(entity.sourceDocumentId, entity.sourceSection))
+    );
+  }
+  if (collection === 'celestialBodyKinds') {
+    fields.push(
+      field('Code name', esc(entity.codeName)),
+      field('Walkable surface', entity.walkableSurface ? 'Yes' : 'No'),
+      field('Ordinary mining', entity.ordinaryMining ? 'Yes' : 'No'),
+      field('Radius band', esc(entity.radiusBand)),
+      field('World types', links(relatedIds('worldTypes', item => item.appliesToKindId === entity.id))),
+      field('Named bodies', links(relatedIds('planets', item => item.celestialBodyKindId === entity.id))),
+      field('Open land lore', loreOpenLink(entity.sourceDocumentId, entity.sourceSection))
+    );
+  }
+  if (collection === 'worldTypes') {
+    fields.push(
+      field('Design name', esc(entity.designName)),
+      field('Game name', esc(entity.gameName)),
+      field('Applies to kind', link(entity.appliesToKindId)),
+      field('Assignment mode', esc(entity.assignmentMode)),
+      field('Named worlds', links(relatedIds('planets', item => item.worldTypeId === entity.id))),
+      field('Open land lore', loreOpenLink(entity.sourceDocumentId, entity.sourceSection))
+    );
+  }
+  if (collection === 'atmosphereTypes') {
+    fields.push(
+      field('Legal on rocky planets', entity.rockyPlanetLegal === false ? 'No' : 'Yes'),
+      field('Named worlds', links(relatedIds('planets', item => item.atmosphereTypeId === entity.id))),
+      field('Open land lore', loreOpenLink(entity.sourceDocumentId, entity.sourceSection))
+    );
+  }
+  if (collection === 'surfaceLandforms') {
+    fields.push(
+      field('Layer', esc(entity.layer)),
+      field('Dominant on worlds', links(relatedIds('planets', item => (item.dominantLandformIds || []).includes(entity.id)))),
+      field('Find sites', links(relatedIds('findSites', item => (item.landformIds || []).includes(entity.id)))),
+      field('Open land lore', loreOpenLink(entity.sourceDocumentId, entity.sourceSection))
+    );
+  }
+  if (collection === 'surfaceBiomes') {
+    fields.push(
+      field('Layer', esc(entity.layer)),
+      field('Dominant on worlds', links(relatedIds('planets', item => (item.dominantBiomeIds || []).includes(entity.id)))),
+      field('Find sites', links(relatedIds('findSites', item => (item.biomeIds || []).includes(entity.id)))),
+      field('Open land lore', loreOpenLink(entity.sourceDocumentId, entity.sourceSection))
+    );
+  }
+  if (collection === 'surfaceFeatures') {
+    fields.push(
+      field('Layer', esc(entity.layer)),
+      field('Find sites', links(relatedIds('findSites', item => (item.surfaceFeatureIds || []).includes(entity.id)))),
+      field('Open land lore', loreOpenLink(entity.sourceDocumentId, entity.sourceSection))
+    );
+  }
+  if (collection === 'surfaceHydrospheres') {
+    fields.push(
+      field('Layer', esc(entity.layer)),
+      field('Dominant on worlds', links(relatedIds('planets', item => (item.dominantHydrosphereIds || []).includes(entity.id)))),
+      field('Find sites', links(relatedIds('findSites', item => (item.hydrosphereIds || []).includes(entity.id)))),
+      field('Open land lore', loreOpenLink(entity.sourceDocumentId, entity.sourceSection))
+    );
+  }
+  if (collection === 'geologyProvinces') {
+    fields.push(
+      field('Find sites', links(relatedIds('findSites', item => (item.geologyProvinceIds || []).includes(entity.id)))),
+      field('Open land lore', loreOpenLink(entity.sourceDocumentId, entity.sourceSection))
+    );
+  }
+  if (collection === 'findSites') {
+    fields.push(
+      field('Catalogue tier', esc(entity.catalogTier)),
+      field('Depth band', esc(entity.depthBand)),
+      field('Landforms', links(entity.landformIds)),
+      field('Biomes', links(entity.biomeIds)),
+      field('Hydrosphere', links(entity.hydrosphereIds)),
+      field('Surface features', links(entity.surfaceFeatureIds)),
+      field('Geology provinces', links(entity.geologyProvinceIds)),
+      field('Substances', links(entity.substanceIds)),
+      field('Open land lore', loreOpenLink(entity.sourceDocumentId, entity.sourceSection))
     );
   }
   if (collection === 'species') {
@@ -510,7 +662,7 @@ function imageSection(entity) {
 
 function extraSections(entity) {
   let html = '';
-  for (const [key, title] of [['biography', 'Biography'], ['personality', 'Personality'], ['history', 'History'], ['culture', 'Culture'], ['reputation', 'Reputation'], ['visualDescription', 'Visual description'], ['summary', 'Summary'], ['scope', 'Scope']]) {
+  for (const [key, title] of [['biography', 'Biography'], ['personality', 'Personality'], ['history', 'History'], ['culture', 'Culture'], ['reputation', 'Reputation'], ['visualDescription', 'Visual description'], ['summary', 'Summary'], ['scope', 'Scope'], ['sharedLandUse', 'Shared land use'], ['sharedSubstanceUse', 'Shared substance use'], ['scenarioNotes', 'Scenario notes']]) {
     if (entity[key]) html += `<section class="section"><h2>${title}</h2><div class="longText">${esc(entity[key])}</div></section>`;
   }
   if (entity.visualIdentity) html += `<section class="section"><h2>Visual identity</h2><div class="longText"><pre class="rawBlock">${esc(JSON.stringify(entity.visualIdentity, null, 2))}</pre></div></section>`;
@@ -541,6 +693,12 @@ function canonWarning(entity, collection) {
   }
   if (entity.canonStatus === 'generated-expansion') {
     return '<div class="status warning">Generated expansion content: compatible unless a higher-precedence lore source establishes otherwise.</div>';
+  }
+  if (entity.surfaceAssignmentStatus === 'kind-only') {
+    return '<div class="status warning">Surface not yet authored. Only the celestial-body kind is canonical; do not invent a land grid for this body.</div>';
+  }
+  if (entity.surfaceAssignmentStatus === 'inferred-from-existing-record') {
+    return '<div class="status warning">Land labels inferred from the existing Directory record. Not a source-canonical map; games may generate local squares from these dominant labels.</div>';
   }
   return '';
 }
@@ -649,7 +807,9 @@ async function start() {
 
     const focusCollection = params.get('focus');
     const focusedRecords = focusCollection ? catalogue.collection(focusCollection) : [];
-    state.selectedId = focusedRecords[0]?.id
+    const requestedId = params.get('id');
+    state.selectedId = (requestedId && catalogue.get(requestedId) ? requestedId : null)
+      || focusedRecords[0]?.id
       || catalogue.collection('regions')[0]?.id
       || catalogue.allRecords()[0]?.record.id;
 
