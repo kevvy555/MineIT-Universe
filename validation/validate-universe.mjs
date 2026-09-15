@@ -74,7 +74,9 @@ for (const { record } of byId.values()) {
 
 const scalarRefs = {
   starSystems: ['regionId', 'primaryAuthorityOrganisationId', 'homeworldId'],
-  planets: ['systemId', 'parentPlanetId', 'governingOrganisationId', 'celestialBodyKindId', 'worldTypeId', 'atmosphereTypeId'],
+  planets: ['systemId', 'parentPlanetId', 'governingOrganisationId', 'celestialBodyKindId', 'worldTypeId', 'atmosphereTypeId', 'landscapeTilesetId'],
+  landscapeTilesets: ['planetId', 'intendedGameId'],
+  landscapeTiles: ['tilesetId', 'planetId', 'landformId', 'biomeId', 'hydrosphereId'],
   worldTypes: ['appliesToKindId'],
   settlements: ['systemId', 'planetId', 'parentLocationId', 'governingOrganisationId'],
   organisations: ['headquartersLocationId', 'parentOrganisationId'],
@@ -96,6 +98,7 @@ const scalarRefs = {
 const arrayRefs = {
   regions: ['administrativeOrganisationIds', 'systemIds'],
   planets: ['dominantLandformIds', 'dominantBiomeIds', 'dominantHydrosphereIds'],
+  landscapeTilesets: ['landformIds', 'biomeIds', 'hydrosphereIds', 'adjacencyPreviewIds'],
   organisations: ['economicSectorIds'],
   facilities: ['partnerOrganisationIds'],
   operations: ['managerPersonIds', 'procurementPersonIds', 'shipIds', 'productIds', 'shipClassIds'],
@@ -183,6 +186,65 @@ for (const id of expectedGames) if (!gameIds.includes(id)) errors.push(`Games ca
 for (const game of collections.games ?? []) {
   if (!game.sharedLandUse || !game.sharedSubstanceUse) errors.push(`${game.id}: game record requires sharedLandUse and sharedSubstanceUse.`);
   if (game.knowledgeScope !== 'designer truth') errors.push(`${game.id}: games are designer catalogue records, not in-universe organisations.`);
+}
+
+for (const tileset of collections.landscapeTilesets ?? []) {
+  if (!tileset.planetId) errors.push(`${tileset.id}: landscape tileset requires planetId.`);
+  if (typeof tileset.coverageComplete !== 'boolean') errors.push(`${tileset.id}: coverageComplete must be boolean.`);
+  const tiles = (collections.landscapeTiles ?? []).filter(tile => tile.tilesetId === tileset.id);
+  if (!tiles.length) errors.push(`${tileset.id}: tileset has no landscape tiles.`);
+  if (tileset.coverageComplete) {
+    const landformIds = tileset.landformIds ?? [];
+    const biomeIds = tileset.biomeIds ?? [];
+    const hydrosphereIds = tileset.hydrosphereIds ?? [];
+    const covered = new Set(
+      tiles
+        .filter(tile => tile.landformId && tile.biomeId)
+        .map(tile => `${tile.landformId}|${tile.biomeId}`)
+    );
+    for (const landformId of landformIds) {
+      for (const biomeId of biomeIds) {
+        if (!covered.has(`${landformId}|${biomeId}`)) {
+          errors.push(`${tileset.id}: missing landform/biome tile for ${landformId} × ${biomeId}.`);
+        }
+      }
+    }
+    const water = new Set(tiles.filter(tile => tile.hydrosphereId && !tile.landformId).map(tile => tile.hydrosphereId));
+    for (const hydrosphereId of hydrosphereIds) {
+      if (!water.has(hydrosphereId)) errors.push(`${tileset.id}: missing hydrosphere tile for ${hydrosphereId}.`);
+    }
+  }
+  for (const previewId of tileset.adjacencyPreviewIds ?? []) {
+    const preview = byId.get(previewId)?.record;
+    if (preview && preview.tilesetId !== tileset.id) errors.push(`${tileset.id}: adjacency preview ${previewId} belongs to another tileset.`);
+  }
+  if ((tileset.adjacencyPreviewIds ?? []).length && (tileset.adjacencyPreviewIds ?? []).length !== 4) {
+    errors.push(`${tileset.id}: adjacencyPreviewIds must be exactly four tiles when present.`);
+  }
+}
+
+for (const tile of collections.landscapeTiles ?? []) {
+  if (!tile.tilesetId) errors.push(`${tile.id}: landscape tile requires tilesetId.`);
+  if (!tile.planetId) errors.push(`${tile.id}: landscape tile requires planetId.`);
+  if (!tile.image) errors.push(`${tile.id}: landscape tile requires image metadata.`);
+  const tileset = byId.get(tile.tilesetId)?.record;
+  if (tileset && tile.planetId !== tileset.planetId) errors.push(`${tile.id}: planetId does not match tileset planet.`);
+  const hasLand = Boolean(tile.landformId || tile.biomeId);
+  const hasWater = Boolean(tile.hydrosphereId) && !tile.landformId && !tile.biomeId;
+  if (hasLand && !(tile.landformId && tile.biomeId)) errors.push(`${tile.id}: land tiles require both landformId and biomeId.`);
+  if (!hasLand && !hasWater) errors.push(`${tile.id}: tile must be a landform/biome pair or a hydrosphere-only water tile.`);
+  if (tile.image?.key && !String(tile.image.key).startsWith('assets/art/universe/planets/')) {
+    errors.push(`${tile.id}: world landscape tiles must live under assets/art/universe/planets/, not the visual library.`);
+  }
+  if (tile.image?.key && tile.planetId && !String(tile.image.key).includes(`/${tile.planetId}/`)) {
+    errors.push(`${tile.id}: image key must be stored under the owning planet folder.`);
+  }
+}
+
+for (const planet of collections.planets ?? []) {
+  if (!planet.landscapeTilesetId) continue;
+  const tileset = byId.get(planet.landscapeTilesetId)?.record;
+  if (tileset && tileset.planetId !== planet.id) errors.push(`${planet.id}: landscapeTilesetId belongs to another world.`);
 }
 
 for (const relationship of collections.relationships ?? []) if (relationship.personAId === relationship.personBId) errors.push(`${relationship.id}: relationship self-reference.`);
@@ -288,6 +350,7 @@ if (koplin3?.celestialBodyKindId !== 'kind-rocky-planet') errors.push('planet-ko
 if (koplin3?.worldTypeId !== 'world-type-habitable-temperate') errors.push('planet-koplin-prime must use Habitable Temperate World / Verdant World.');
 if (koplin3?.atmosphereTypeId !== 'atmosphere-breathable') errors.push('planet-koplin-prime must use breathable atmosphere.');
 if (koplin3?.surfaceAssignmentStatus !== 'source-canonical') errors.push('planet-koplin-prime surface assignment must be source-canonical.');
+if (koplin3?.landscapeTilesetId !== 'landscape-tileset-koplin-3') errors.push('planet-koplin-prime must use the Koplin 3 landscape tileset.');
 if (!byId.has('generation-source-desktop-celestial-body-generation')) errors.push('Desktop celestial-body generation source missing.');
 if ((collections.organisations ?? []).some(org => String(org.organisationType).toLowerCase().includes('synthetic polity'))) errors.push('AI may not be represented as a sovereign synthetic polity under foundation canon.');
 
@@ -299,7 +362,7 @@ console.log(`Canonical Year ${manifest.canonicalYear}; civilisation baseline Yea
 console.log(`${byId.size} entities across ${Object.keys(collections).length} logical collections and ${Object.values(collectionFiles).flat().length} JSON shards.`);
 console.log(`${retailClasses.length} factory-new ship classes across ${retailManufacturerIds.size} manufacturers.`);
 console.log(`${commercialContacts.length} commercial contacts across ${sectors.length} economic sectors and ${commercialOperations.length} procurement operations.`);
-console.log(`${(collections.games ?? []).length} games; ${(collections.surfaceLandforms ?? []).length} landforms; ${(collections.surfaceBiomes ?? []).length} biomes; ${(collections.findSites ?? []).length} P0 find sites.`);
+console.log(`${(collections.games ?? []).length} games; ${(collections.surfaceLandforms ?? []).length} landforms; ${(collections.surfaceBiomes ?? []).length} biomes; ${(collections.findSites ?? []).length} P0 find sites; ${(collections.landscapeTilesets ?? []).length} landscape tilesets; ${(collections.landscapeTiles ?? []).length} landscape tiles.`);
 if (warnings.length) { console.log(`\nWarnings (${warnings.length}):`); warnings.forEach(w => console.log(`- ${w}`)); }
 if (errors.length) { console.error(`\nErrors (${errors.length}):`); errors.forEach(e => console.error(`- ${e}`)); process.exit(1); }
 console.log('\nValidation passed.');

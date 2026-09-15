@@ -2,7 +2,7 @@
 
 Status: **Published architecture**  
 Canonical lore: `data/lore/Koplin_Universe_World_Surface.md`  
-Structured collections: `games`, `celestialBodyKinds`, `worldTypes`, `atmosphereTypes`, `surfaceLandforms`, `surfaceBiomes`, `surfaceFeatures`, `surfaceHydrospheres`, `geologyProvinces`, `findSites`, plus land fields on `planets`
+Structured collections: `games`, `celestialBodyKinds`, `worldTypes`, `atmosphereTypes`, `surfaceLandforms`, `surfaceBiomes`, `surfaceFeatures`, `surfaceHydrospheres`, `geologyProvinces`, `findSites`, `landscapeTilesets`, `landscapeTiles`, plus land fields on `planets`
 
 ## Ownership
 
@@ -31,7 +31,9 @@ data/surface-features.json
 data/surface-hydrospheres.json
 data/geology-provinces.json
 data/find-sites.json
-data/planets.json  (kind / type / atmosphere / dominant land)
+data/landscape-tilesets.json
+data/landscape-tiles.json
+data/planets.json  (kind / type / atmosphere / dominant land / optional landscapeTilesetId)
         ↓ registered by
 data/manifest.json
         ↓ rendered by
@@ -72,6 +74,16 @@ Flattened onto each world record:
 
 Koplin 3 is source-canonical: rocky planet, Verdant World, breathable, mixed land and water. Its two moons are kind-only until proper names and surfaces are authored.
 
+## Landscape tilesets
+
+A landscape tileset is world-specific Mobile grid art. It is not a frozen map and not a reusable visual-library series.
+
+Each tile is one landform/biome pair (or a hydrosphere-only water tile) drawn with a shared camera, sun direction and palette so neighbouring squares look like one landscape. Mountain tiles must read as a continuous range, not an isolated centred peak.
+
+Koplin 3 currently has a complete set covering all twelve landforms in grassland, forest, wetland and tundra, plus ocean, lake and river tiles. Other named worlds get their own set when authored; they must not reuse Koplin 3 art.
+
+The grid a player sees in a Mobile save remains game state. Universe stores the matching tile art those squares can draw.
+
 Generated-expansion worlds receive conservative labels inferred from existing Directory `worldType` / `environment` text. That is not a new geography bible.
 
 ## Games
@@ -84,7 +96,7 @@ Current records:
 - `game-mineit-mobile` — corporation builder; landscapes as a grid of squares
 - `game-mineit-single-mine` — small single-mine simulator
 
-Mobile squares should name `surfaceLandforms` (shape) and `surfaceBiomes` (cover). Desktop walks the same labels in 3D. Single Mine uses one site / one find-site class.
+Mobile squares should name `surfaceLandforms` (shape) and `surfaceBiomes` (cover). When the named world has a `landscapeTilesetId`, Mobile should draw those matching tiles. Desktop walks the same labels in 3D. Single Mine uses one site / one find-site class.
 
 ## Record shape notes
 

@@ -37,7 +37,8 @@
       "hydrosphere-lake",
       "hydrosphere-river"
     ],
-    "surfaceAssignmentStatus": "source-canonical"
+    "surfaceAssignmentStatus": "source-canonical",
+    "landscapeTilesetId": "landscape-tileset-koplin-3"
   },
   {
     "id": "moon-koplin-3-a",
