@@ -1,0 +1,2092 @@
+[
+  {
+    "id": "research-ship-systems-analysis",
+    "name": "Ship Systems Analysis",
+    "category": "Salvage",
+    "prerequisiteTechnologyIds": [],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Enables all other salvage research",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P0",
+      "pointsRequired": 30
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Ship Systems Analysis. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-power-systems-salvage",
+    "name": "Power Systems Salvage",
+    "category": "Salvage",
+    "prerequisiteTechnologyIds": [
+      "research-ship-systems-analysis"
+    ],
+    "unlockedPartIds": [
+      "part-generator-parts",
+      "part-battery-parts",
+      "part-power-electronics"
+    ],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Salvage: Generator Parts, Battery Parts, Power Electronics",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P0",
+      "pointsRequired": 50
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Power Systems Salvage. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-mechanical-systems-salvage",
+    "name": "Mechanical Systems Salvage",
+    "category": "Salvage",
+    "prerequisiteTechnologyIds": [
+      "research-ship-systems-analysis"
+    ],
+    "unlockedPartIds": [
+      "part-mechanical-parts",
+      "part-structural-components",
+      "part-extraction-parts"
+    ],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Salvage: Mechanical Parts, Structural Components, Extraction Parts",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P0",
+      "pointsRequired": 50
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Mechanical Systems Salvage. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-thermal-systems-salvage",
+    "name": "Thermal Systems Salvage",
+    "category": "Salvage",
+    "prerequisiteTechnologyIds": [
+      "research-ship-systems-analysis"
+    ],
+    "unlockedPartIds": [
+      "part-thermal-optical-parts"
+    ],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Salvage: Thermal / Optical Parts",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P0",
+      "pointsRequired": 50
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Thermal Systems Salvage. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-processing-and-fabrication-salvage",
+    "name": "Processing and Fabrication Salvage",
+    "category": "Salvage",
+    "prerequisiteTechnologyIds": [
+      "research-ship-systems-analysis"
+    ],
+    "unlockedPartIds": [
+      "part-hydraulic-parts",
+      "part-processing-parts",
+      "part-fabrication-parts",
+      "part-fluid-handling-parts"
+    ],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Salvage: Processing Parts, Fluid Handling Parts, Fabrication Parts, Hydraulic Parts",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P0",
+      "pointsRequired": 60
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Processing and Fabrication Salvage. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-electronics-and-sensor-salvage",
+    "name": "Electronics and Sensor Salvage",
+    "category": "Salvage",
+    "prerequisiteTechnologyIds": [
+      "research-ship-systems-analysis"
+    ],
+    "unlockedPartIds": [
+      "part-computing-parts",
+      "part-control-and-sensor-parts"
+    ],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Salvage: Control and Sensor Parts, Computing Parts",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P1",
+      "pointsRequired": 60
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Electronics and Sensor Salvage. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-generator-parts-manufacturing",
+    "name": "Generator Parts Manufacturing",
+    "category": "PartManufacturing",
+    "prerequisiteTechnologyIds": [
+      "research-power-systems-salvage"
+    ],
+    "unlockedPartIds": [
+      "part-generator-parts"
+    ],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Manufacture: Generator Parts",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P0",
+      "pointsRequired": 60
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Generator Parts Manufacturing. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-battery-parts-manufacturing",
+    "name": "Battery Parts Manufacturing",
+    "category": "PartManufacturing",
+    "prerequisiteTechnologyIds": [
+      "research-power-systems-salvage"
+    ],
+    "unlockedPartIds": [
+      "part-battery-parts"
+    ],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Manufacture: Battery Parts",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P0",
+      "pointsRequired": 60
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Battery Parts Manufacturing. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-power-electronics-manufacturing",
+    "name": "Power Electronics Manufacturing",
+    "category": "PartManufacturing",
+    "prerequisiteTechnologyIds": [
+      "research-power-systems-salvage"
+    ],
+    "unlockedPartIds": [
+      "part-power-electronics"
+    ],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Manufacture: Power Electronics",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P0",
+      "pointsRequired": 50
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Power Electronics Manufacturing. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-mechanical-parts-manufacturing",
+    "name": "Mechanical Parts Manufacturing",
+    "category": "PartManufacturing",
+    "prerequisiteTechnologyIds": [
+      "research-mechanical-systems-salvage"
+    ],
+    "unlockedPartIds": [
+      "part-mechanical-parts"
+    ],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Manufacture: Mechanical Parts",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P0",
+      "pointsRequired": 60
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Mechanical Parts Manufacturing. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-structural-components-manufacturing",
+    "name": "Structural Components Manufacturing",
+    "category": "PartManufacturing",
+    "prerequisiteTechnologyIds": [
+      "research-mechanical-systems-salvage"
+    ],
+    "unlockedPartIds": [
+      "part-structural-components"
+    ],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Manufacture: Structural Components",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P0",
+      "pointsRequired": 40
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Structural Components Manufacturing. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-extraction-parts-manufacturing",
+    "name": "Extraction Parts Manufacturing",
+    "category": "PartManufacturing",
+    "prerequisiteTechnologyIds": [
+      "research-mechanical-systems-salvage"
+    ],
+    "unlockedPartIds": [
+      "part-extraction-parts"
+    ],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Manufacture: Extraction Parts",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P0",
+      "pointsRequired": 60
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Extraction Parts Manufacturing. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-hydraulic-parts-manufacturing",
+    "name": "Hydraulic Parts Manufacturing",
+    "category": "PartManufacturing",
+    "prerequisiteTechnologyIds": [
+      "research-processing-and-fabrication-salvage"
+    ],
+    "unlockedPartIds": [
+      "part-hydraulic-parts"
+    ],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Manufacture: Hydraulic Parts",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P0",
+      "pointsRequired": 60
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Hydraulic Parts Manufacturing. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-thermal-optical-parts-manufacturing",
+    "name": "Thermal / Optical Parts Manufacturing",
+    "category": "PartManufacturing",
+    "prerequisiteTechnologyIds": [
+      "research-thermal-systems-salvage"
+    ],
+    "unlockedPartIds": [
+      "part-thermal-optical-parts"
+    ],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Manufacture: Thermal / Optical Parts",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P0",
+      "pointsRequired": 60
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Thermal / Optical Parts Manufacturing. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-processing-parts-manufacturing",
+    "name": "Processing Parts Manufacturing",
+    "category": "PartManufacturing",
+    "prerequisiteTechnologyIds": [
+      "research-processing-and-fabrication-salvage"
+    ],
+    "unlockedPartIds": [
+      "part-processing-parts"
+    ],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Manufacture: Processing Parts",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P0",
+      "pointsRequired": 60
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Processing Parts Manufacturing. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-fluid-handling-parts-manufacturing",
+    "name": "Fluid Handling Parts Manufacturing",
+    "category": "PartManufacturing",
+    "prerequisiteTechnologyIds": [
+      "research-processing-and-fabrication-salvage"
+    ],
+    "unlockedPartIds": [
+      "part-fluid-handling-parts"
+    ],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Manufacture: Fluid Handling Parts",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P0",
+      "pointsRequired": 50
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Fluid Handling Parts Manufacturing. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-control-and-sensor-parts-manufacturing",
+    "name": "Control and Sensor Parts Manufacturing",
+    "category": "PartManufacturing",
+    "prerequisiteTechnologyIds": [
+      "research-electronics-and-sensor-salvage"
+    ],
+    "unlockedPartIds": [
+      "part-control-and-sensor-parts"
+    ],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Manufacture: Control and Sensor Parts",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P1",
+      "pointsRequired": 60
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Control and Sensor Parts Manufacturing. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-computing-parts-manufacturing",
+    "name": "Computing Parts Manufacturing",
+    "category": "PartManufacturing",
+    "prerequisiteTechnologyIds": [
+      "research-electronics-and-sensor-salvage"
+    ],
+    "unlockedPartIds": [
+      "part-computing-parts"
+    ],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Manufacture: Computing Parts",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P1",
+      "pointsRequired": 75
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Computing Parts Manufacturing. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-fabrication-parts-manufacturing",
+    "name": "Fabrication Parts Manufacturing",
+    "category": "PartManufacturing",
+    "prerequisiteTechnologyIds": [
+      "research-processing-and-fabrication-salvage"
+    ],
+    "unlockedPartIds": [
+      "part-fabrication-parts"
+    ],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Manufacture: Fabrication Parts",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P1",
+      "pointsRequired": 75
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Fabrication Parts Manufacturing. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-crude-chemical-battery",
+    "name": "Crude Chemical Battery",
+    "category": "Machine",
+    "prerequisiteTechnologyIds": [
+      "research-battery-parts-manufacturing",
+      "research-power-electronics-manufacturing"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [
+      "machine-crude-chemical-battery"
+    ],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Construction: Crude Chemical Battery",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P0",
+      "pointsRequired": 50
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Crude Chemical Battery. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-wind-generator",
+    "name": "Wind Generator",
+    "category": "Machine",
+    "prerequisiteTechnologyIds": [
+      "research-generator-parts-manufacturing",
+      "research-mechanical-parts-manufacturing",
+      "research-power-electronics-manufacturing",
+      "research-structural-components-manufacturing"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [
+      "machine-wind-generator"
+    ],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Construction: Wind Generator",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P0",
+      "pointsRequired": 75
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Wind Generator. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-water-wheel-generator",
+    "name": "Water Wheel Generator",
+    "category": "Machine",
+    "prerequisiteTechnologyIds": [
+      "research-generator-parts-manufacturing",
+      "research-mechanical-parts-manufacturing",
+      "research-power-electronics-manufacturing",
+      "research-structural-components-manufacturing"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [
+      "machine-water-wheel-generator"
+    ],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Construction: Water Wheel Generator",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P1",
+      "pointsRequired": 90
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Water Wheel Generator. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-thermoelectric-trickler",
+    "name": "Thermoelectric Trickler",
+    "category": "Machine",
+    "prerequisiteTechnologyIds": [
+      "research-thermal-optical-parts-manufacturing",
+      "research-power-electronics-manufacturing"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [
+      "machine-thermoelectric-trickler"
+    ],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Construction: Thermoelectric Trickler",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P1",
+      "pointsRequired": 90
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Thermoelectric Trickler. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-solar-thermal-generator",
+    "name": "Solar Thermal Generator",
+    "category": "Machine",
+    "prerequisiteTechnologyIds": [
+      "research-generator-parts-manufacturing",
+      "research-mechanical-parts-manufacturing",
+      "research-power-electronics-manufacturing",
+      "research-thermal-optical-parts-manufacturing",
+      "research-control-and-sensor-parts-manufacturing",
+      "research-structural-components-manufacturing"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [
+      "machine-solar-thermal-generator"
+    ],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Construction: Solar Thermal Generator",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P1",
+      "pointsRequired": 150
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Solar Thermal Generator. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-crude-steam-piston-generator",
+    "name": "Crude Steam Piston Generator",
+    "category": "Machine",
+    "prerequisiteTechnologyIds": [
+      "research-generator-parts-manufacturing",
+      "research-mechanical-parts-manufacturing",
+      "research-power-electronics-manufacturing",
+      "research-control-and-sensor-parts-manufacturing",
+      "research-structural-components-manufacturing"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [
+      "machine-crude-steam-piston-generator"
+    ],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Construction: Crude Steam Piston Generator",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P1",
+      "pointsRequired": 120
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Crude Steam Piston Generator. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-crude-combustion-generator",
+    "name": "Crude Combustion Generator",
+    "category": "Machine",
+    "prerequisiteTechnologyIds": [
+      "research-generator-parts-manufacturing",
+      "research-mechanical-parts-manufacturing",
+      "research-power-electronics-manufacturing",
+      "research-control-and-sensor-parts-manufacturing",
+      "research-structural-components-manufacturing"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [
+      "machine-crude-combustion-generator"
+    ],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Construction: Crude Combustion Generator",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P1",
+      "pointsRequired": 120
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Crude Combustion Generator. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-power-distribution-system",
+    "name": "Power Distribution System",
+    "category": "Machine",
+    "prerequisiteTechnologyIds": [
+      "research-power-electronics-manufacturing",
+      "research-control-and-sensor-parts-manufacturing",
+      "research-structural-components-manufacturing"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [
+      "machine-power-distribution-system"
+    ],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Construction: Power Distribution System",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P1",
+      "pointsRequired": 90
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Power Distribution System. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-drill-machine",
+    "name": "Drill Machine",
+    "category": "Machine",
+    "prerequisiteTechnologyIds": [
+      "research-extraction-parts-manufacturing",
+      "research-mechanical-parts-manufacturing",
+      "research-hydraulic-parts-manufacturing",
+      "research-power-electronics-manufacturing",
+      "research-structural-components-manufacturing"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [
+      "machine-drill-machine"
+    ],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Construction: Drill Machine",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P0",
+      "pointsRequired": 75
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Drill Machine. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-conveyor-machine",
+    "name": "Conveyor Machine",
+    "category": "Machine",
+    "prerequisiteTechnologyIds": [
+      "research-mechanical-parts-manufacturing",
+      "research-power-electronics-manufacturing",
+      "research-structural-components-manufacturing"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [
+      "machine-conveyor-machine"
+    ],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Construction: Conveyor Machine",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P0",
+      "pointsRequired": 60
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Conveyor Machine. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-mine-ventilation",
+    "name": "Mine Ventilation",
+    "category": "Machine",
+    "prerequisiteTechnologyIds": [
+      "research-mechanical-parts-manufacturing",
+      "research-fluid-handling-parts-manufacturing",
+      "research-power-electronics-manufacturing"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [
+      "machine-mine-ventilation"
+    ],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Construction: Mine Ventilation",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P0",
+      "pointsRequired": 60
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Mine Ventilation. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-crusher-machine",
+    "name": "Crusher Machine",
+    "category": "Machine",
+    "prerequisiteTechnologyIds": [
+      "research-mechanical-parts-manufacturing",
+      "research-processing-parts-manufacturing",
+      "research-structural-components-manufacturing",
+      "research-power-electronics-manufacturing"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [
+      "machine-crusher-machine"
+    ],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Construction: Crusher Machine",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P0",
+      "pointsRequired": 60
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Crusher Machine. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-smelter-machine",
+    "name": "Smelter Machine",
+    "category": "Machine",
+    "prerequisiteTechnologyIds": [
+      "research-processing-parts-manufacturing",
+      "research-thermal-optical-parts-manufacturing",
+      "research-structural-components-manufacturing",
+      "research-power-electronics-manufacturing",
+      "research-fluid-handling-parts-manufacturing"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [
+      "machine-smelter-machine"
+    ],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Construction: Smelter Machine",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P0",
+      "pointsRequired": 75
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Smelter Machine. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-research-computer",
+    "name": "Research Computer",
+    "category": "Machine",
+    "prerequisiteTechnologyIds": [
+      "research-computing-parts-manufacturing",
+      "research-power-electronics-manufacturing",
+      "research-control-and-sensor-parts-manufacturing"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [
+      "machine-research-computer"
+    ],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Construction: Research Computer",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P1",
+      "pointsRequired": 75
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Research Computer. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-fabrication-machine",
+    "name": "Fabrication Machine",
+    "category": "Machine",
+    "prerequisiteTechnologyIds": [
+      "research-fabrication-parts-manufacturing",
+      "research-mechanical-parts-manufacturing",
+      "research-power-electronics-manufacturing",
+      "research-structural-components-manufacturing"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [
+      "machine-fabrication-machine"
+    ],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Construction: Fabrication Machine",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P1",
+      "pointsRequired": 120
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Fabrication Machine. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-assembly-crane",
+    "name": "Assembly Crane",
+    "category": "Machine",
+    "prerequisiteTechnologyIds": [
+      "research-hydraulic-parts-manufacturing",
+      "research-mechanical-parts-manufacturing",
+      "research-power-electronics-manufacturing",
+      "research-structural-components-manufacturing",
+      "research-control-and-sensor-parts-manufacturing"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [
+      "machine-assembly-crane"
+    ],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Construction: Assembly Crane",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P1",
+      "pointsRequired": 110
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Assembly Crane. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-welding-machine",
+    "name": "Welding Machine",
+    "category": "Machine",
+    "prerequisiteTechnologyIds": [
+      "research-fabrication-parts-manufacturing",
+      "research-power-electronics-manufacturing",
+      "research-thermal-optical-parts-manufacturing"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [
+      "machine-welding-machine"
+    ],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Construction: Welding Machine",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P1",
+      "pointsRequired": 110
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Welding Machine. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-life-support-machine",
+    "name": "Life Support Machine",
+    "category": "Machine",
+    "prerequisiteTechnologyIds": [
+      "research-fluid-handling-parts-manufacturing",
+      "research-mechanical-parts-manufacturing",
+      "research-power-electronics-manufacturing",
+      "research-control-and-sensor-parts-manufacturing"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [
+      "machine-life-support-machine"
+    ],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Construction: Life Support Machine",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P1",
+      "pointsRequired": 90
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Life Support Machine. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-climate-control-machine",
+    "name": "Climate Control Machine",
+    "category": "Machine",
+    "prerequisiteTechnologyIds": [
+      "research-thermal-optical-parts-manufacturing",
+      "research-mechanical-parts-manufacturing",
+      "research-power-electronics-manufacturing",
+      "research-control-and-sensor-parts-manufacturing"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [
+      "machine-climate-control-machine"
+    ],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Construction: Climate Control Machine",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P1",
+      "pointsRequired": 90
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Climate Control Machine. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-irrigation-system",
+    "name": "Irrigation System",
+    "category": "Machine",
+    "prerequisiteTechnologyIds": [
+      "research-fluid-handling-parts-manufacturing",
+      "research-mechanical-parts-manufacturing",
+      "research-power-electronics-manufacturing"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [
+      "machine-irrigation-system"
+    ],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Construction: Irrigation System",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P1",
+      "pointsRequired": 75
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Irrigation System. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-growth-management-system",
+    "name": "Growth Management System",
+    "category": "Machine",
+    "prerequisiteTechnologyIds": [
+      "research-thermal-optical-parts-manufacturing",
+      "research-control-and-sensor-parts-manufacturing",
+      "research-power-electronics-manufacturing"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [
+      "machine-growth-management-system"
+    ],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Construction: Growth Management System",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P1",
+      "pointsRequired": 75
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Growth Management System. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-pump-machine",
+    "name": "Pump Machine",
+    "category": "Machine",
+    "prerequisiteTechnologyIds": [
+      "research-hydraulic-parts-manufacturing",
+      "research-mechanical-parts-manufacturing",
+      "research-power-electronics-manufacturing",
+      "research-structural-components-manufacturing"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [
+      "machine-pump-machine"
+    ],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Construction: Pump Machine",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P1",
+      "pointsRequired": 75
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Pump Machine. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-filtration-machine",
+    "name": "Filtration Machine",
+    "category": "Machine",
+    "prerequisiteTechnologyIds": [
+      "research-fluid-handling-parts-manufacturing",
+      "research-processing-parts-manufacturing",
+      "research-structural-components-manufacturing"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [
+      "machine-filtration-machine"
+    ],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Construction: Filtration Machine",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P1",
+      "pointsRequired": 60
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Filtration Machine. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-mine",
+    "name": "Mine",
+    "category": "Building",
+    "prerequisiteTechnologyIds": [
+      "research-drill-machine",
+      "research-conveyor-machine",
+      "research-mine-ventilation"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [
+      "building-simple-pit-mine"
+    ],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Construction: Mine building",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P0",
+      "pointsRequired": 90
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Mine. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-basic-refinery",
+    "name": "Basic Refinery",
+    "category": "Building",
+    "prerequisiteTechnologyIds": [
+      "research-crusher-machine",
+      "research-smelter-machine"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [
+      "building-basic-refinery"
+    ],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Construction: Basic Refinery building",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P0",
+      "pointsRequired": 90
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Basic Refinery. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-research-building",
+    "name": "Research Building",
+    "category": "Building",
+    "prerequisiteTechnologyIds": [
+      "research-research-computer"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [
+      "building-research-building"
+    ],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Construction: Research Building",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P1",
+      "pointsRequired": 75
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Research Building. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-power-plant",
+    "name": "Power Plant",
+    "category": "Building",
+    "prerequisiteTechnologyIds": [
+      "research-power-distribution-system"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [
+      "building-power-plant"
+    ],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Construction: Power Plant building",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P1",
+      "pointsRequired": 120
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Power Plant. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue",
+    "requirementNotes": "In addition to Power Distribution System, at least one power-generation machine technology must have been researched in the legacy Desktop progression."
+  },
+  {
+    "id": "research-water-collector",
+    "name": "Water Collector",
+    "category": "Building",
+    "prerequisiteTechnologyIds": [
+      "research-pump-machine",
+      "research-filtration-machine"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [
+      "building-water-collector"
+    ],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Construction: Water Collector building",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P1",
+      "pointsRequired": 90
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Water Collector. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-habitat",
+    "name": "Habitat",
+    "category": "Building",
+    "prerequisiteTechnologyIds": [
+      "research-life-support-machine",
+      "research-climate-control-machine"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [
+      "building-habitat"
+    ],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Construction: Habitat building",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P1",
+      "pointsRequired": 120
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Habitat. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-farm",
+    "name": "Farm",
+    "category": "Building",
+    "prerequisiteTechnologyIds": [
+      "research-irrigation-system",
+      "research-growth-management-system"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [
+      "building-farm"
+    ],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Construction: Farm building",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P1",
+      "pointsRequired": 110
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Farm. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-shipyard-bay",
+    "name": "Shipyard Bay",
+    "category": "Building",
+    "prerequisiteTechnologyIds": [
+      "research-fabrication-machine",
+      "research-assembly-crane",
+      "research-welding-machine"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [
+      "building-shipyard-bay"
+    ],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Construction: Shipyard Bay building",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P1",
+      "pointsRequired": 180
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Shipyard Bay. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-basic-fuel-refining",
+    "name": "Basic Fuel Refining",
+    "category": "SubstanceScience",
+    "prerequisiteTechnologyIds": [
+      "research-basic-refinery"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [
+      "substance-refined-liquid-fuel",
+      "substance-refined-combustible-gas"
+    ],
+    "unlockNotes": "Refined liquid fuel, Refined combustible gas production",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P0",
+      "pointsRequired": 75
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Basic Fuel Refining. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-advanced-metallurgy",
+    "name": "Advanced Metallurgy",
+    "category": "SubstanceScience",
+    "prerequisiteTechnologyIds": [
+      "research-basic-refinery"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [
+      "substance-light-metal-ore",
+      "substance-heavy-metal-ore",
+      "substance-rare-metal-ore",
+      "substance-refined-light-metal",
+      "substance-refined-heavy-metal",
+      "substance-refined-rare-metal",
+      "substance-catalytic-compound"
+    ],
+    "unlockNotes": "Mining and refining: Light metal ore, Heavy metal ore, Rare metal ore, Refined light metal, Refined heavy metal, Refined rare metal, Catalytic compound",
+    "discoveryGate": "Analyze any P1 metal ore (Light, Heavy, or Rare metal ore)",
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P1",
+      "pointsRequired": 120
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Advanced Metallurgy. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-alloy-smelting",
+    "name": "Alloy Smelting",
+    "category": "SubstanceScience",
+    "prerequisiteTechnologyIds": [
+      "research-advanced-metallurgy"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [
+      "substance-structural-alloy",
+      "substance-conductive-alloy",
+      "substance-heat-resistant-alloy",
+      "substance-lightweight-alloy",
+      "substance-magnetic-alloy",
+      "substance-corrosion-resistant-alloy"
+    ],
+    "unlockNotes": "All alloys: Structural alloy, Conductive alloy, Heat-resistant alloy, Lightweight alloy, Magnetic alloy, Corrosion-resistant alloy",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P1",
+      "pointsRequired": 150
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Alloy Smelting. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-nuclear-science",
+    "name": "Nuclear Science",
+    "category": "SubstanceScience",
+    "prerequisiteTechnologyIds": [
+      "research-advanced-metallurgy"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [
+      "substance-radioactive-ore"
+    ],
+    "unlockNotes": "Radioactive ore handling and processing",
+    "discoveryGate": "Analyze Radioactive ore deposit",
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P1",
+      "pointsRequired": 180
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Nuclear Science. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-advanced-mineralogy",
+    "name": "Advanced Mineralogy",
+    "category": "SubstanceScience",
+    "prerequisiteTechnologyIds": [
+      "research-basic-refinery"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [
+      "substance-crystalline-mineral",
+      "substance-abrasive-mineral"
+    ],
+    "unlockNotes": "Mining and processing: Crystalline mineral, Abrasive mineral",
+    "discoveryGate": "Analyze Crystalline mineral or Abrasive mineral deposit",
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P1",
+      "pointsRequired": 90
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Advanced Mineralogy. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-composite-engineering",
+    "name": "Composite Engineering",
+    "category": "SubstanceScience",
+    "prerequisiteTechnologyIds": [
+      "research-alloy-smelting",
+      "research-advanced-mineralogy"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [
+      "substance-structural-composite",
+      "substance-thermal-composite"
+    ],
+    "unlockNotes": "Structural composite, Thermal composite",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P1",
+      "pointsRequired": 150
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Composite Engineering. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-chemical-processing",
+    "name": "Chemical Processing",
+    "category": "SubstanceScience",
+    "prerequisiteTechnologyIds": [
+      "research-basic-refinery"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [
+      "substance-chemical-solvent",
+      "substance-coolant",
+      "substance-chemical-reagent",
+      "substance-concentrated-acid",
+      "substance-concentrated-alkali"
+    ],
+    "unlockNotes": "Chemical solvent, Chemical reagent, Concentrated acid, Concentrated alkali, Coolant",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P1",
+      "pointsRequired": 120
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Chemical Processing. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-polymer-science",
+    "name": "Polymer Science",
+    "category": "SubstanceScience",
+    "prerequisiteTechnologyIds": [
+      "research-chemical-processing"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [
+      "substance-polymer",
+      "substance-adhesive"
+    ],
+    "unlockNotes": "Polymer, Adhesive compound",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P1",
+      "pointsRequired": 120
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Polymer Science. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-explosive-substances",
+    "name": "Explosive Substances",
+    "category": "SubstanceScience",
+    "prerequisiteTechnologyIds": [
+      "research-chemical-processing"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [
+      "substance-explosive"
+    ],
+    "unlockNotes": "Explosive compound",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P1",
+      "pointsRequired": 150
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Explosive Substances. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-advanced-fuel-refining",
+    "name": "Advanced Fuel Refining",
+    "category": "SubstanceScience",
+    "prerequisiteTechnologyIds": [
+      "research-basic-fuel-refining"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [
+      "substance-high-density-solid-fuel",
+      "substance-high-energy-combustible-gas"
+    ],
+    "unlockNotes": "High-density solid fuel, High-energy combustible gas",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P1",
+      "pointsRequired": 120
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Advanced Fuel Refining. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-gas-science",
+    "name": "Gas Science",
+    "category": "SubstanceScience",
+    "prerequisiteTechnologyIds": [
+      "research-chemical-processing"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [
+      "substance-inert-gas-deposit",
+      "substance-breathable-atmospheric-gas",
+      "substance-oxidizer-gas-deposit",
+      "substance-corrosive-gas-deposit",
+      "substance-toxic-gas-deposit",
+      "substance-reactive-liquid"
+    ],
+    "unlockNotes": "All P1 raw gas deposits: Inert gas deposit, Breathable atmospheric gas, Oxidizer gas deposit, Corrosive gas deposit, Toxic gas deposit, Reactive liquid",
+    "discoveryGate": "Analyze any P1 gas deposit (Inert, Breathable, Oxidizer, Corrosive, or Toxic gas)",
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P1",
+      "pointsRequired": 120
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Gas Science. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-gas-refining",
+    "name": "Gas Refining",
+    "category": "SubstanceScience",
+    "prerequisiteTechnologyIds": [
+      "research-gas-science"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [
+      "substance-breathable-air",
+      "substance-compressed-inert-gas",
+      "substance-refined-oxidizer"
+    ],
+    "unlockNotes": "Compressed inert gas, Refined oxidizer gas, Breathable air mix",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P1",
+      "pointsRequired": 120
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Gas Refining. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-propulsion-chemistry",
+    "name": "Propulsion Chemistry",
+    "category": "SubstanceScience",
+    "prerequisiteTechnologyIds": [
+      "research-gas-refining",
+      "research-advanced-fuel-refining"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [
+      "substance-liquid-propellant",
+      "substance-gas-propellant"
+    ],
+    "unlockNotes": "Liquid propellant, Gas propellant",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P1",
+      "pointsRequired": 180
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Propulsion Chemistry. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-agricultural-chemistry",
+    "name": "Agricultural Chemistry",
+    "category": "SubstanceScience",
+    "prerequisiteTechnologyIds": [
+      "research-farm"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [
+      "substance-fibrous-plant",
+      "substance-woody-plant",
+      "substance-organic-biomass",
+      "substance-sulfurous-mineral",
+      "substance-phosphate-mineral",
+      "substance-fertilizer"
+    ],
+    "unlockNotes": "Fibrous plant material, Woody plant material, Organic biomass, Sulfurous mineral, Phosphate mineral, Fertilizer compound",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P1",
+      "pointsRequired": 90
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Agricultural Chemistry. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-advanced-water-processing",
+    "name": "Advanced Water Processing",
+    "category": "SubstanceScience",
+    "prerequisiteTechnologyIds": [
+      "research-water-collector"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [
+      "substance-mineral-rich-water",
+      "substance-coolant"
+    ],
+    "unlockNotes": "Mineral-rich water, Coolant manufacture",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P1",
+      "pointsRequired": 90
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Advanced Water Processing. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-advanced-refinery",
+    "name": "Advanced Refinery",
+    "category": "Processing",
+    "prerequisiteTechnologyIds": [
+      "research-alloy-smelting"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Facility to produce alloys and advanced refined metals; detailed machines remain TBD",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P1",
+      "pointsRequired": 150
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Advanced Refinery. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-chemical-laboratory",
+    "name": "Chemical Laboratory",
+    "category": "Processing",
+    "prerequisiteTechnologyIds": [
+      "research-chemical-processing"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Facility to produce polymers, solvents, reagents and explosives; detailed machines remain TBD",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P1",
+      "pointsRequired": 150
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Chemical Laboratory. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-gas-processing-plant",
+    "name": "Gas Processing Plant",
+    "category": "Processing",
+    "prerequisiteTechnologyIds": [
+      "research-gas-science"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Facility to compress, separate and mix gases; detailed machines remain TBD",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P1",
+      "pointsRequired": 150
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Gas Processing Plant. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-propulsion-laboratory",
+    "name": "Propulsion Laboratory",
+    "category": "Processing",
+    "prerequisiteTechnologyIds": [
+      "research-propulsion-chemistry",
+      "research-shipyard-bay"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Facility to produce rocket propellants; detailed machines remain TBD",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P1",
+      "pointsRequired": 180
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Propulsion Laboratory. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-explosives-workshop",
+    "name": "Explosives Workshop",
+    "category": "Processing",
+    "prerequisiteTechnologyIds": [
+      "research-explosive-substances"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Production of explosive compounds for mining; detailed machines remain TBD",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P1",
+      "pointsRequired": 120
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Explosives Workshop. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "research-agricultural-processing",
+    "name": "Agricultural Processing",
+    "category": "Processing",
+    "prerequisiteTechnologyIds": [
+      "research-agricultural-chemistry"
+    ],
+    "unlockedPartIds": [],
+    "unlockedMachineIds": [],
+    "unlockedBuildingIds": [],
+    "unlockedSubstanceIds": [],
+    "unlockNotes": "Fertilizer production and biomass processing; detailed machines remain TBD",
+    "discoveryGate": null,
+    "desktopProfile": {
+      "gameId": "game-mineit-desktop",
+      "legacyPriority": "P1",
+      "pointsRequired": 120
+    },
+    "knowledgeScope": "designer truth",
+    "description": "Technology catalogue entry for Agricultural Processing. Stable identity and dependency relationships are shared catalogue data; point cost, queue state and completion remain game-owned.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-research",
+      "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  }
+]

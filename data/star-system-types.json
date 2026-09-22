@@ -1,0 +1,202 @@
+[
+  {
+    "id": "star-system-type-single-star-system",
+    "name": "Single Star System",
+    "description": "Single Star System is a broad system-level structural or environmental classification.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/SolarSystemGeneration/Types/Systems.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "star-system-type-binary-star-system",
+    "name": "Binary Star System",
+    "description": "Binary Star System is a broad system-level structural or environmental classification.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/SolarSystemGeneration/Types/Systems.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "star-system-type-trinary-star-system",
+    "name": "Trinary Star System",
+    "description": "Trinary Star System is a broad system-level structural or environmental classification.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/SolarSystemGeneration/Types/Systems.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "star-system-type-compact-system",
+    "name": "Compact System",
+    "description": "Compact System is a broad system-level structural or environmental classification.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/SolarSystemGeneration/Types/Systems.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "star-system-type-wide-system",
+    "name": "Wide System",
+    "description": "Wide System is a broad system-level structural or environmental classification.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/SolarSystemGeneration/Types/Systems.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "star-system-type-rocky-inner-system",
+    "name": "Rocky Inner System",
+    "description": "Rocky Inner System is a broad system-level structural or environmental classification.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/SolarSystemGeneration/Types/Systems.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "star-system-type-gas-giant-dominated-system",
+    "name": "Gas Giant Dominated System",
+    "description": "Gas Giant Dominated System is a broad system-level structural or environmental classification.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/SolarSystemGeneration/Types/Systems.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "star-system-type-ice-giant-dominated-system",
+    "name": "Ice Giant Dominated System",
+    "description": "Ice Giant Dominated System is a broad system-level structural or environmental classification.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/SolarSystemGeneration/Types/Systems.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "star-system-type-asteroid-rich-system",
+    "name": "Asteroid-Rich System",
+    "description": "Asteroid-Rich System is a broad system-level structural or environmental classification.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/SolarSystemGeneration/Types/Systems.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "star-system-type-comet-rich-system",
+    "name": "Comet-Rich System",
+    "description": "Comet-Rich System is a broad system-level structural or environmental classification.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/SolarSystemGeneration/Types/Systems.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "star-system-type-young-protoplanetary-system",
+    "name": "Young Protoplanetary System",
+    "description": "Young Protoplanetary System is a broad system-level structural or environmental classification.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/SolarSystemGeneration/Types/Systems.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "star-system-type-mature-stable-system",
+    "name": "Mature Stable System",
+    "description": "Mature Stable System is a broad system-level structural or environmental classification.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/SolarSystemGeneration/Types/Systems.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "star-system-type-ancient-depleted-system",
+    "name": "Ancient Depleted System",
+    "description": "Ancient Depleted System is a broad system-level structural or environmental classification.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/SolarSystemGeneration/Types/Systems.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "star-system-type-dead-star-system",
+    "name": "Dead Star System",
+    "description": "Dead Star System is a broad system-level structural or environmental classification.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/SolarSystemGeneration/Types/Systems.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "star-system-type-high-radiation-system",
+    "name": "High-Radiation System",
+    "description": "High-Radiation System is a broad system-level structural or environmental classification.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/SolarSystemGeneration/Types/Systems.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "star-system-type-habitable-zone-rich-system",
+    "name": "Habitable-Zone Rich System",
+    "description": "Habitable-Zone Rich System is a broad system-level structural or environmental classification.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/SolarSystemGeneration/Types/Systems.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "star-system-type-resource-rich-system",
+    "name": "Resource-Rich System",
+    "description": "Resource-Rich System is a broad system-level structural or environmental classification.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/SolarSystemGeneration/Types/Systems.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "star-system-type-resource-poor-system",
+    "name": "Resource-Poor System",
+    "description": "Resource-Poor System is a broad system-level structural or environmental classification.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/SolarSystemGeneration/Types/Systems.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "star-system-type-chaotic-orbital-system",
+    "name": "Chaotic Orbital System",
+    "description": "Chaotic Orbital System is a broad system-level structural or environmental classification.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/SolarSystemGeneration/Types/Systems.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "star-system-type-anomalous-system",
+    "name": "Anomalous System",
+    "description": "Anomalous System is a broad system-level structural or environmental classification.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/SolarSystemGeneration/Types/Systems.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  }
+]

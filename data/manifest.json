@@ -1,12 +1,12 @@
 {
-  "schemaVersion": 9,
-  "contentVersion": "0.10.0",
+  "schemaVersion": 10,
+  "contentVersion": "0.11.0",
   "universeId": "mineit",
   "name": "MineIT Universe",
   "canonicalYear": 5326,
   "civilisationBaselineYear": 5300,
   "calendar": "Koplin Commonwealth Calendar",
-  "published": "2026-09-15",
+  "published": "2026-09-22",
   "generation": {
     "mode": "authored-materialised",
     "materialised": true,
@@ -93,6 +93,17 @@
     "relationships": "relationships.json",
     "currencies": "currencies.json",
     "loreDocuments": "lore-documents.json",
-    "loreTopics": "lore-topics.json"
+    "loreTopics": "lore-topics.json",
+    "researchTechnologies": "research-technologies.json",
+    "substanceArchetypes": "substance-archetypes.json",
+    "substanceProperties": "substance-properties.json",
+    "rarityBands": "rarity-bands.json",
+    "geologyProcesses": "geology-processes.json",
+    "depositShapes": "deposit-shapes.json",
+    "depositStates": "deposit-states.json",
+    "stellarTypes": "stellar-types.json",
+    "cometTypes": "comet-types.json",
+    "ringSystemTypes": "ring-system-types.json",
+    "starSystemTypes": "star-system-types.json"
   }
 }

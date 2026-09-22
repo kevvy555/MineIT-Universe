@@ -2,7 +2,7 @@
 
 Status: **Schema v2 implemented — first canonical region generated**  
 Repository: `kevvy555/MineIT-Universe`  
-Current content version: **0.2.0**
+Current content version: **0.11.0**
 
 ## Purpose
 
@@ -49,6 +49,17 @@ substances
 parts
 machines
 buildings
+researchTechnologies
+substanceArchetypes
+substanceProperties
+rarityBands
+geologyProcesses
+depositShapes
+depositStates
+stellarTypes
+cometTypes
+ringSystemTypes
+starSystemTypes
 games
 species
 people
@@ -59,7 +70,7 @@ events
 relationships
 ```
 
-Schema 9 adds per-world `landscapeTilesets` / `landscapeTiles` so Mobile can draw matching 1:1 grid art for a named world. Schema 8 added the shared land/world vocabulary and a designer `games` catalogue so Desktop, Mobile and Single Mine consume the same body-kind, world-type, land-square and find-site IDs. Per-save maps remain game state.
+Schema 10 publishes the remaining stable catalogue vocabulary recovered from the legacy design archive: research technologies, advanced P1 find sites, geological processes/shapes/states, materials-reference catalogues and extended celestial classifications. Mutable research progress, point tuning, procedural spawn predicates and generated deposit instances remain game state. Schema 9 adds per-world `landscapeTilesets` / `landscapeTiles` so Mobile can draw matching 1:1 grid art for a named world. Schema 8 added the shared land/world vocabulary and a designer `games` catalogue so Desktop, Mobile and Single Mine consume the same body-kind, world-type, land-square and find-site IDs. Per-save maps remain game state.
 
 The old company-only model is superseded by the generic `organisations` collection. Commercial companies, governments, authorities, universities, research institutes, banks, media organisations, hospital trusts, guilds, security/military bodies and synthetic polities can all use the same organisation graph.
 

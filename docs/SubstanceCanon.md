@@ -3,7 +3,7 @@
 Status: **Published architecture**  
 Related feature: `docs/SubstanceCanonFeatureSpec.md`  
 Canonical lore: `data/lore/Koplin_Universe_Materials_And_Substances.md`  
-Structured collection: `data/substances.json`
+Structured collections: `data/substances.json`, `data/substance-archetypes.json`, `data/substance-properties.json`, `data/rarity-bands.json`
 
 ## Ownership
 
@@ -57,6 +57,9 @@ Parts, machines and buildings use the same stable-ID model. Relationships are ex
 Directory collections:
 
 - `data/substances.json` — 75 industrial substance categories
+- `data/substance-archetypes.json` — seven dominant material archetypes
+- `data/substance-properties.json` — numeric property and classification vocabulary
+- `data/rarity-bands.json` — nine shared occurrence-rarity bands
 - `data/parts.json` — construction parts linked to substances and machines
 - `data/machines.json` — machines linked to construction parts and installed buildings
 - `data/buildings.json` — the reconciled Desktop + Mobile building vocabulary, linked to shell/fit-out substances and installed machines

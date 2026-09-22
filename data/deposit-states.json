@@ -1,0 +1,102 @@
+[
+  {
+    "id": "deposit-state-solid",
+    "name": "Solid",
+    "description": "Deposit physical-state category retained from the Desktop underground deposit model.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/DepositTypeInfo.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "deposit-state-liquid",
+    "name": "Liquid",
+    "description": "Deposit physical-state category retained from the Desktop underground deposit model.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/DepositTypeInfo.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "deposit-state-gas",
+    "name": "Gas",
+    "description": "Deposit physical-state category retained from the Desktop underground deposit model.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/DepositTypeInfo.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "deposit-state-plasma",
+    "name": "Plasma",
+    "description": "Deposit physical-state category retained from the Desktop underground deposit model.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/DepositTypeInfo.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "deposit-state-frozen",
+    "name": "Frozen",
+    "description": "Deposit physical-state category retained from the Desktop underground deposit model.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/DepositTypeInfo.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "deposit-state-molten",
+    "name": "Molten",
+    "description": "Deposit physical-state category retained from the Desktop underground deposit model.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/DepositTypeInfo.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "deposit-state-superheated",
+    "name": "Superheated",
+    "description": "Deposit physical-state category retained from the Desktop underground deposit model.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/DepositTypeInfo.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "deposit-state-supercritical",
+    "name": "Supercritical",
+    "description": "Deposit physical-state category retained from the Desktop underground deposit model.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/DepositTypeInfo.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "deposit-state-mixed",
+    "name": "Mixed",
+    "description": "Deposit physical-state category retained from the Desktop underground deposit model.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/DepositTypeInfo.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "deposit-state-trace",
+    "name": "Trace",
+    "description": "Deposit physical-state category retained from the Desktop underground deposit model.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/DepositTypeInfo.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  }
+]

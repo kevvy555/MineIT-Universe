@@ -47,7 +47,7 @@ const ICONS = {
   landscapeTilesets: '▦', landscapeTiles: '▪',
   settlements: '⬡', organisations: 'O',
   organisationUnits: '▦', facilities: '⌂', operations: '⚙', products: '◆', substances: '▣',
-  parts: '⧉', machines: '⚒', buildings: '⌂', species: 'S',
+  parts: '⧉', machines: '⚒', buildings: '⌂', researchTechnologies: '⌬', substanceArchetypes: '◈', substanceProperties: '≋', rarityBands: '⋄', geologyProcesses: '⌁', depositShapes: '⬢', depositStates: '◐', stellarTypes: '✶', cometTypes: '☄', ringSystemTypes: '◎', starSystemTypes: '✦', species: 'S',
   people: 'P', shipClasses: '△', ships: '▲', projects: '◇', events: '◷', relationships: '↔',
   currencies: '¤', loreDocuments: '▤', loreTopics: 'i'
 };
@@ -193,6 +193,27 @@ function buildLandDirectoryNode() {
   ]);
 }
 
+function buildResearchDirectoryNode() {
+  return category('Research / Technology', groupRecords(state.catalogue.collection('researchTechnologies'), record => record.category).map(([label, items]) =>
+    category(label, nodes(items))
+  ));
+}
+
+function buildReferenceCataloguesNode() {
+  return category('Reference Catalogues', [
+    category('Substance Archetypes', nodes(state.catalogue.collection('substanceArchetypes'))),
+    category('Substance Properties', groupRecords(state.catalogue.collection('substanceProperties'), record => record.propertyKind).map(([label, items]) => category(label, nodes(items)))),
+    category('Rarity Bands', nodes(state.catalogue.collection('rarityBands'))),
+    category('Geological Processes', groupRecords(state.catalogue.collection('geologyProcesses'), record => record.category).map(([label, items]) => category(label, nodes(items)))),
+    category('Deposit Shapes', nodes(state.catalogue.collection('depositShapes'))),
+    category('Deposit States', nodes(state.catalogue.collection('depositStates'))),
+    category('Stellar Types', nodes(state.catalogue.collection('stellarTypes'))),
+    category('Comet Types', nodes(state.catalogue.collection('cometTypes'))),
+    category('Ring-System Types', nodes(state.catalogue.collection('ringSystemTypes'))),
+    category('Star-System Types', nodes(state.catalogue.collection('starSystemTypes')))
+  ]);
+}
+
 function buildDirectoryTree() {
   const beforeProducts = ['regions', 'starSystems', 'planets', 'settlements', 'organisations', 'organisationUnits', 'facilities', 'operations', 'products'];
   const afterIndustrial = ['species', 'people', 'shipClasses', 'ships', 'projects', 'events', 'relationships', 'currencies', 'loreDocuments', 'loreTopics'];
@@ -203,6 +224,8 @@ function buildDirectoryTree() {
       buildGamesDirectoryNode(),
       ...beforeProducts.map(flatNode),
       buildLandDirectoryNode(),
+      buildResearchDirectoryNode(),
+      buildReferenceCataloguesNode(),
       buildSubstancesDirectoryNode(),
       buildPartsDirectoryNode(),
       buildMachinesDirectoryNode(),
@@ -340,6 +363,12 @@ function renderTree() {
         record.layer,
         record.catalogTier,
         record.depthBand,
+        record.propertyKind,
+        record.formationDriver,
+        record.typicalDepthRange,
+        record.unlockNotes,
+        record.discoveryGate,
+        record.requirementNotes,
         record.shortName,
         record.playPattern,
         record.form,
@@ -396,6 +425,17 @@ function subtitle(collection, entity) {
     parts: `${entity.category || ''} • ${entity.subCategory || ''}`.trim(),
     machines: `${entity.category || ''} • ${entity.subCategory || ''}`.trim(),
     buildings: entity.category,
+    researchTechnologies: entity.category,
+    substanceArchetypes: 'Materials reference',
+    substanceProperties: entity.propertyKind,
+    rarityBands: entity.rank ? `Rank ${entity.rank}` : '',
+    geologyProcesses: entity.category,
+    depositShapes: 'Geological geometry',
+    depositStates: 'Deposit state',
+    stellarTypes: 'Stellar classification',
+    cometTypes: 'Comet classification',
+    ringSystemTypes: 'Ring classification',
+    starSystemTypes: 'System classification',
     species: entity.speciesType,
     people: entity.role,
     shipClasses: entity.role,
@@ -640,6 +680,31 @@ function fieldsFor(collection, entity) {
       field('Open land lore', loreOpenLink(entity.sourceDocumentId, entity.sourceSection))
     );
   }
+  if (collection === 'researchTechnologies') {
+    fields.push(
+      field('Category', esc(entity.category)),
+      field('Prerequisites', links(entity.prerequisiteTechnologyIds)),
+      field('Unlocks parts', links(entity.unlockedPartIds)),
+      field('Unlocks machines', links(entity.unlockedMachineIds)),
+      field('Unlocks buildings', links(entity.unlockedBuildingIds)),
+      field('Unlocks substances', links(entity.unlockedSubstanceIds)),
+      field('Discovery gate', esc(entity.discoveryGate || 'None')),
+      field('Legacy Desktop priority', esc(entity.desktopProfile?.legacyPriority)),
+      field('Legacy Desktop points', esc(entity.desktopProfile?.pointsRequired)),
+      field('Unlock notes', esc(entity.unlockNotes)),
+      field('Additional requirement', esc(entity.requirementNotes || '—'))
+    );
+  }
+  if (collection === 'substanceProperties') {
+    fields.push(field('Property kind', esc(entity.propertyKind)), field('Scale', esc(entity.scale)), field('Knowledge scope', esc(entity.knowledgeScope)));
+  }
+  if (collection === 'rarityBands') fields.push(field('Rank', esc(entity.rank)));
+  if (collection === 'geologyProcesses') {
+    fields.push(field('Category', esc(entity.category)), field('Domain', esc(entity.domain)), field('Typical depth', esc(entity.typicalDepthRange)), field('Formation driver', esc(entity.formationDriver)), field('Common shapes', links(entity.depositShapeIds)));
+  }
+  if (collection === 'depositShapes') fields.push(field('Processes', links(relatedIds('geologyProcesses', item => (item.depositShapeIds || []).includes(entity.id)))));
+  if (collection === 'ringSystemTypes') fields.push(field('Rings present', entity.ringPresence ? 'Yes' : 'No'));
+
   if (collection === 'species') {
     if (entity.homeworldId) fields.push(field('Homeworld', link(entity.homeworldId)));
     fields.push(field('Type', esc(entity.speciesType)), field('People', links(relatedIds('people', item => item.speciesId === entity.id))));

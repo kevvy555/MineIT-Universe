@@ -25,6 +25,17 @@ const COLLECTION_LABELS = {
   parts: 'Part',
   machines: 'Machine',
   buildings: 'Building',
+  researchTechnologies: 'Research Technology',
+  substanceArchetypes: 'Substance Archetype',
+  substanceProperties: 'Substance Property',
+  rarityBands: 'Rarity Band',
+  geologyProcesses: 'Geology Process',
+  depositShapes: 'Deposit Shape',
+  depositStates: 'Deposit State',
+  stellarTypes: 'Stellar Type',
+  cometTypes: 'Comet Type',
+  ringSystemTypes: 'Ring-System Type',
+  starSystemTypes: 'Star-System Type',
   games: 'Game',
   species: 'Species / People Category',
   people: 'Person',
@@ -78,7 +89,9 @@ const ARRAY_REFS = {
   parts: ['substanceIds', 'machineIds'],
   machines: ['partIds'],
   buildings: ['structuralShellSubstanceIds', 'fitOutSubstanceIds', 'machineIds'],
-  findSites: ['landformIds', 'biomeIds', 'hydrosphereIds', 'surfaceFeatureIds', 'geologyProvinceIds', 'substanceIds'],
+  findSites: ['landformIds', 'biomeIds', 'hydrosphereIds', 'surfaceFeatureIds', 'geologyProvinceIds', 'substanceIds', 'geologyProcessIds', 'depositShapeIds'],
+  geologyProcesses: ['depositShapeIds'],
+  researchTechnologies: ['prerequisiteTechnologyIds', 'unlockedPartIds', 'unlockedMachineIds', 'unlockedBuildingIds', 'unlockedSubstanceIds'],
   shipLines: ['productionOperationIds'],
   shipClasses: ['designerOrganisationIds'],
   ships: ['operationIds', 'personIds'],
@@ -214,7 +227,11 @@ export function validateUniverse(catalogue) {
     if (!knownIds.has(value)) errors.push(`${sourceId}.${field} references missing entity ${value}.`);
   };
 
-  for (const { record } of catalogue.allRecords()) if (record.sourceDocumentId) ref(record.id, 'sourceDocumentId', record.sourceDocumentId);
+  for (const { record } of catalogue.allRecords()) {
+    if (record.sourceDocumentId) ref(record.id, 'sourceDocumentId', record.sourceDocumentId);
+    if (record.provenance?.sourceId) ref(record.id, 'provenance.sourceId', record.provenance.sourceId);
+    if (record.desktopProfile?.gameId) ref(record.id, 'desktopProfile.gameId', record.desktopProfile.gameId);
+  }
   for (const [collectionName, fields] of Object.entries(SCALAR_REFS)) {
     for (const record of catalogue.collection(collectionName)) fields.forEach(field => ref(record.id, field, record[field]));
   }

@@ -2,7 +2,7 @@
 
 Status: **Published architecture**  
 Canonical lore: `data/lore/Koplin_Universe_World_Surface.md`  
-Structured collections: `games`, `celestialBodyKinds`, `worldTypes`, `atmosphereTypes`, `surfaceLandforms`, `surfaceBiomes`, `surfaceFeatures`, `surfaceHydrospheres`, `geologyProvinces`, `findSites`, `landscapeTilesets`, `landscapeTiles`, plus land fields on `planets`
+Structured collections: `games`, `celestialBodyKinds`, `worldTypes`, `atmosphereTypes`, `surfaceLandforms`, `surfaceBiomes`, `surfaceFeatures`, `surfaceHydrospheres`, `geologyProvinces`, `geologyProcesses`, `depositShapes`, `depositStates`, `findSites`, `stellarTypes`, `cometTypes`, `ringSystemTypes`, `starSystemTypes`, `landscapeTilesets`, `landscapeTiles`, plus land fields on `planets`
 
 ## Ownership
 
@@ -54,6 +54,9 @@ Useful shared vocabulary:
 - ten biomes (cover of a grid square)
 - hydrosphere, surface feature and geology-province labels
 - ten P0 surface find sites linked to substance IDs
+- twenty-one P1 advanced surface/underground find sites
+- reusable geological process, deposit-shape and deposit-state catalogues
+- extended star, comet, ring-system and star-system classification vocabularies
 
 Explicitly **not** imported:
 
@@ -100,7 +103,7 @@ Mobile squares should name `surfaceLandforms` (shape) and `surfaceBiomes` (cover
 
 ## Record shape notes
 
-Find sites store landform, biome, hydrosphere, feature, geology-province and substance IDs. They do not store rarity or spawn procedures.
+Find sites store landform, biome, hydrosphere, feature, geology-province and substance IDs. P1 sites may also link reusable geology-process and deposit-shape IDs. The catalogue contains 10 P0 bootstrap surface sites and 21 P1 advanced surface/underground sites. It does not store spawn rarity, noise predicates or generated deposit instances.
 
 World types store `appliesToKindId` so a moon type cannot be attached to a rocky planet.
 

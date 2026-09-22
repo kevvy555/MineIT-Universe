@@ -70,6 +70,7 @@ function validateRef(sourceId, field, value) {
 for (const { record } of byId.values()) {
   if (record.sourceDocumentId) validateRef(record.id, 'sourceDocumentId', record.sourceDocumentId);
   if (record.provenance?.sourceId) validateRef(record.id, 'provenance.sourceId', record.provenance.sourceId);
+  if (record.desktopProfile?.gameId) validateRef(record.id, 'desktopProfile.gameId', record.desktopProfile.gameId);
 }
 
 const scalarRefs = {
@@ -107,7 +108,9 @@ const arrayRefs = {
   parts: ['substanceIds', 'machineIds'],
   machines: ['partIds'],
   buildings: ['structuralShellSubstanceIds', 'fitOutSubstanceIds', 'machineIds'],
-  findSites: ['landformIds', 'biomeIds', 'hydrosphereIds', 'surfaceFeatureIds', 'geologyProvinceIds', 'substanceIds'],
+  findSites: ['landformIds', 'biomeIds', 'hydrosphereIds', 'surfaceFeatureIds', 'geologyProvinceIds', 'substanceIds', 'geologyProcessIds', 'depositShapeIds'],
+  geologyProcesses: ['depositShapeIds'],
+  researchTechnologies: ['prerequisiteTechnologyIds', 'unlockedPartIds', 'unlockedMachineIds', 'unlockedBuildingIds', 'unlockedSubstanceIds'],
   shipLines: ['productionOperationIds'],
   shipClasses: ['designerOrganisationIds'],
   ships: ['operationIds', 'personIds'],
@@ -135,6 +138,54 @@ for (const planet of collections.planets ?? []) {
   if (parent && parent.systemId !== planet.systemId) errors.push(`${planet.id}: parent world belongs to another system.`);
 }
 
+const expectedCatalogueCounts = {
+  researchTechnologies: 71,
+  substanceArchetypes: 7,
+  substanceProperties: 25,
+  rarityBands: 9,
+  geologyProcesses: 29,
+  depositShapes: 36,
+  depositStates: 10,
+  stellarTypes: 16,
+  cometTypes: 14,
+  ringSystemTypes: 12,
+  starSystemTypes: 20
+};
+for (const [name, expected] of Object.entries(expectedCatalogueCounts)) {
+  const actual = (collections[name] ?? []).length;
+  if (actual !== expected) errors.push(`${name} catalogue must contain ${expected} rows; found ${actual}.`);
+}
+const researchCategories = new Set(['Salvage', 'PartManufacturing', 'Machine', 'Building', 'SubstanceScience', 'Processing']);
+for (const technology of collections.researchTechnologies ?? []) {
+  if (!researchCategories.has(technology.category)) errors.push(`${technology.id}: invalid research category.`);
+  if (technology.knowledgeScope !== 'designer truth') errors.push(`${technology.id}: research catalogue records must be designer truth.`);
+  if (!Number.isInteger(technology.desktopProfile?.pointsRequired) || technology.desktopProfile.pointsRequired <= 0) {
+    errors.push(`${technology.id}: legacy Desktop point cost must be a positive integer.`);
+  }
+  const structuredUnlockCount =
+    (technology.unlockedPartIds ?? []).length +
+    (technology.unlockedMachineIds ?? []).length +
+    (technology.unlockedBuildingIds ?? []).length +
+    (technology.unlockedSubstanceIds ?? []).length;
+  if (technology.category === 'PartManufacturing' && (technology.unlockedPartIds ?? []).length !== 1) {
+    errors.push(`${technology.id}: PartManufacturing technology must unlock exactly one canonical part.`);
+  }
+  if (technology.category === 'Machine' && (technology.unlockedMachineIds ?? []).length !== 1) {
+    errors.push(`${technology.id}: Machine technology must unlock exactly one canonical machine.`);
+  }
+  if (technology.category === 'Building' && (technology.unlockedBuildingIds ?? []).length !== 1) {
+    errors.push(`${technology.id}: Building technology must unlock exactly one canonical building.`);
+  }
+  if (technology.category !== 'Building' && (technology.unlockedBuildingIds ?? []).length) {
+    errors.push(`${technology.id}: non-Building technology must not unlock building IDs.`);
+  }
+  if (technology.category === 'Processing' && structuredUnlockCount !== 0) {
+    errors.push(`${technology.id}: Processing placeholder technology must retain source notes without inventing structured unlock entities.`);
+  }
+}
+for (const property of collections.substanceProperties ?? []) {
+  if (!['numeric', 'classification'].includes(property.propertyKind)) errors.push(`${property.id}: invalid substance property kind.`);
+}
 const assignmentStatuses = new Set(['source-canonical', 'inferred-from-existing-record', 'kind-only']);
 const assignmentModes = new Set(['procedural', 'authored-only', 'catalog-legacy']);
 for (const planet of collections.planets ?? []) {
@@ -169,14 +220,19 @@ for (const worldType of collections.worldTypes ?? []) {
   if (!assignmentModes.has(worldType.assignmentMode)) errors.push(`${worldType.id}: invalid assignmentMode.`);
 }
 for (const site of collections.findSites ?? []) {
-  if (site.catalogTier !== 'P0') errors.push(`${site.id}: published find sites must be catalogTier P0.`);
-  if (site.depthBand !== 'Surface') errors.push(`${site.id}: P0 find sites must be Surface depth.`);
+  if (!['P0', 'P1'].includes(site.catalogTier)) errors.push(`${site.id}: find-site catalogTier must be P0 or P1.`);
+  if (!['Surface', 'Shallow', 'Medium', 'Deep'].includes(site.depthBand)) errors.push(`${site.id}: invalid find-site depthBand.`);
+  if (site.catalogTier === 'P0' && site.depthBand !== 'Surface') errors.push(`${site.id}: P0 find sites must remain Surface depth.`);
   if (!(site.substanceIds ?? []).length) errors.push(`${site.id}: find site requires at least one substanceId.`);
   for (const field of ['rowRarity', 'spawnHash', 'predicate']) {
     if (Object.hasOwn(site, field)) errors.push(`${site.id}: gameplay spawn field ${field} must not be canonical.`);
   }
 }
-if ((collections.findSites ?? []).length !== 10) errors.push(`World-surface P0 find-site catalogue must contain 10 rows; found ${(collections.findSites ?? []).length}.`);
+const p0FindSites = (collections.findSites ?? []).filter(site => site.catalogTier === 'P0');
+const p1FindSites = (collections.findSites ?? []).filter(site => site.catalogTier === 'P1');
+if (p0FindSites.length !== 10) errors.push(`World-surface P0 find-site catalogue must contain 10 rows; found ${p0FindSites.length}.`);
+if (p1FindSites.length !== 21) errors.push(`Advanced P1 find-site catalogue must contain 21 rows; found ${p1FindSites.length}.`);
+if ((collections.findSites ?? []).length !== 31) errors.push(`Combined find-site catalogue must contain 31 rows; found ${(collections.findSites ?? []).length}.`);
 if ((collections.surfaceLandforms ?? []).length !== 12) errors.push(`Landform catalogue must contain 12 shapes; found ${(collections.surfaceLandforms ?? []).length}.`);
 if ((collections.surfaceBiomes ?? []).length !== 10) errors.push(`Biome catalogue must contain 10 covers; found ${(collections.surfaceBiomes ?? []).length}.`);
 const expectedGames = ['game-mineit-desktop', 'game-mineit-mobile', 'game-mineit-single-mine'];

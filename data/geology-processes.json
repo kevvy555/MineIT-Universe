@@ -1,0 +1,597 @@
+[
+  {
+    "id": "geology-process-sedimentary-deposition",
+    "name": "Sedimentary deposition",
+    "category": "Sedimentary",
+    "domain": "Surface + shallow underground",
+    "typicalDepthRange": "0m–5km",
+    "formationDriver": "Sediment settling and burial",
+    "depositShapeIds": [
+      "deposit-shape-sheet",
+      "deposit-shape-bed",
+      "deposit-shape-layer",
+      "deposit-shape-lens",
+      "deposit-shape-seam",
+      "deposit-shape-fan",
+      "deposit-shape-wedge",
+      "deposit-shape-channel",
+      "deposit-shape-basin-fill",
+      "deposit-shape-nodule-field"
+    ],
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "geology-process-marine-lake-deposition",
+    "name": "Marine / lake deposition",
+    "category": "Sedimentary",
+    "domain": "Surface + shallow underground",
+    "typicalDepthRange": "0m–4km",
+    "formationDriver": "Settling in water bodies",
+    "depositShapeIds": [
+      "deposit-shape-bed",
+      "deposit-shape-layer",
+      "deposit-shape-sheet",
+      "deposit-shape-lens",
+      "deposit-shape-basin-fill",
+      "deposit-shape-unconformity-layer"
+    ],
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "geology-process-river-delta-deposition",
+    "name": "River / delta deposition",
+    "category": "Sedimentary",
+    "domain": "Surface + shallow underground",
+    "typicalDepthRange": "0m–2km",
+    "formationDriver": "Flowing water depositing sediment",
+    "depositShapeIds": [
+      "deposit-shape-channel",
+      "deposit-shape-fan",
+      "deposit-shape-wedge",
+      "deposit-shape-lens",
+      "deposit-shape-sheet",
+      "deposit-shape-bed"
+    ],
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "geology-process-floodplain-swamp-deposition",
+    "name": "Floodplain / swamp deposition",
+    "category": "Sedimentary / organic",
+    "domain": "Surface + shallow underground",
+    "typicalDepthRange": "0m–2km",
+    "formationDriver": "Organic accumulation and fine sediment burial",
+    "depositShapeIds": [
+      "deposit-shape-seam",
+      "deposit-shape-bed",
+      "deposit-shape-layer",
+      "deposit-shape-lens"
+    ],
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "geology-process-evaporite-salt-deposition",
+    "name": "Evaporite / salt deposition",
+    "category": "Chemical sedimentary",
+    "domain": "Surface + shallow underground",
+    "typicalDepthRange": "0m–3km",
+    "formationDriver": "Evaporation of mineral-rich water",
+    "depositShapeIds": [
+      "deposit-shape-bed",
+      "deposit-shape-layer",
+      "deposit-shape-seam",
+      "deposit-shape-lens",
+      "deposit-shape-dome",
+      "deposit-shape-basin-fill"
+    ],
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "geology-process-erosion-non-deposition",
+    "name": "Erosion / non-deposition",
+    "category": "Erosional / stratigraphic",
+    "domain": "Surface + buried surface",
+    "typicalDepthRange": "0m–1km",
+    "formationDriver": "Erosion, exposure, missing deposition",
+    "depositShapeIds": [
+      "deposit-shape-erosion-surface",
+      "deposit-shape-unconformity-layer",
+      "deposit-shape-channel",
+      "deposit-shape-cavity"
+    ],
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "geology-process-igneous-intrusion",
+    "name": "Igneous intrusion",
+    "category": "Igneous intrusive",
+    "domain": "Underground",
+    "typicalDepthRange": "100m–50km",
+    "formationDriver": "Magma forcing into existing rock",
+    "depositShapeIds": [
+      "deposit-shape-intrusion",
+      "deposit-shape-dyke",
+      "deposit-shape-sill",
+      "deposit-shape-plug",
+      "deposit-shape-stock",
+      "deposit-shape-batholith",
+      "deposit-shape-blob",
+      "deposit-shape-pipe",
+      "deposit-shape-contact-halo"
+    ],
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "geology-process-volcanic-activity",
+    "name": "Volcanic activity",
+    "category": "Igneous volcanic",
+    "domain": "Surface + underground",
+    "typicalDepthRange": "Surface–20km",
+    "formationDriver": "Eruption, lava flow, magma movement",
+    "depositShapeIds": [
+      "deposit-shape-dyke",
+      "deposit-shape-sill",
+      "deposit-shape-plug",
+      "deposit-shape-pipe",
+      "deposit-shape-tube",
+      "deposit-shape-blob",
+      "deposit-shape-sheet",
+      "deposit-shape-layer",
+      "deposit-shape-breccia-zone"
+    ],
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "geology-process-lava-flow-volcanic-flow",
+    "name": "Lava flow / volcanic flow",
+    "category": "Igneous volcanic",
+    "domain": "Surface + shallow underground",
+    "typicalDepthRange": "Surface–500m",
+    "formationDriver": "Lava spreading and cooling",
+    "depositShapeIds": [
+      "deposit-shape-sheet",
+      "deposit-shape-layer",
+      "deposit-shape-tube",
+      "deposit-shape-channel"
+    ],
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "geology-process-magma-chamber-deep-intrusion",
+    "name": "Magma chamber / deep intrusion",
+    "category": "Igneous intrusive",
+    "domain": "Underground",
+    "typicalDepthRange": "1km–50km",
+    "formationDriver": "Magma pooling and cooling underground",
+    "depositShapeIds": [
+      "deposit-shape-stock",
+      "deposit-shape-batholith",
+      "deposit-shape-blob",
+      "deposit-shape-dome",
+      "deposit-shape-contact-halo"
+    ],
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "geology-process-hydrothermal-mineralisation",
+    "name": "Hydrothermal mineralisation",
+    "category": "Hydrothermal / ore-forming",
+    "domain": "Underground",
+    "typicalDepthRange": "100m–10km",
+    "formationDriver": "Hot mineral-rich fluids moving through rock",
+    "depositShapeIds": [
+      "deposit-shape-vein",
+      "deposit-shape-fracture-network",
+      "deposit-shape-breccia-zone",
+      "deposit-shape-disseminated-zone",
+      "deposit-shape-ore-body",
+      "deposit-shape-pocket",
+      "deposit-shape-blob",
+      "deposit-shape-pipe",
+      "deposit-shape-contact-halo"
+    ],
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "geology-process-faulting-tectonic-breaking",
+    "name": "Faulting / tectonic breaking",
+    "category": "Structural / tectonic",
+    "domain": "Surface + underground",
+    "typicalDepthRange": "Surface–50km",
+    "formationDriver": "Rock breaking under stress",
+    "depositShapeIds": [
+      "deposit-shape-fault-band",
+      "deposit-shape-fracture-network",
+      "deposit-shape-breccia-zone",
+      "deposit-shape-vein",
+      "deposit-shape-channel",
+      "deposit-shape-reservoir-trap"
+    ],
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "geology-process-compression-folding",
+    "name": "Compression / folding",
+    "category": "Structural / tectonic",
+    "domain": "Surface + underground",
+    "typicalDepthRange": "Surface–30km",
+    "formationDriver": "Crust pushed together",
+    "depositShapeIds": [
+      "deposit-shape-folded-band",
+      "deposit-shape-dome",
+      "deposit-shape-metamorphic-belt",
+      "deposit-shape-fault-band"
+    ],
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "geology-process-uplift-doming",
+    "name": "Uplift / doming",
+    "category": "Structural / tectonic",
+    "domain": "Surface + underground",
+    "typicalDepthRange": "Surface–20km",
+    "formationDriver": "Upward pressure or crustal uplift",
+    "depositShapeIds": [
+      "deposit-shape-dome",
+      "deposit-shape-erosion-surface",
+      "deposit-shape-unconformity-layer",
+      "deposit-shape-folded-band"
+    ],
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "geology-process-metamorphism",
+    "name": "Metamorphism",
+    "category": "Metamorphic",
+    "domain": "Underground",
+    "typicalDepthRange": "5km–50km",
+    "formationDriver": "Heat, pressure, deformation",
+    "depositShapeIds": [
+      "deposit-shape-metamorphic-belt",
+      "deposit-shape-folded-band",
+      "deposit-shape-contact-halo",
+      "deposit-shape-vein"
+    ],
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "geology-process-contact-metamorphism",
+    "name": "Contact metamorphism",
+    "category": "Metamorphic / igneous contact",
+    "domain": "Underground",
+    "typicalDepthRange": "500m–30km",
+    "formationDriver": "Heat from nearby magma intrusion",
+    "depositShapeIds": [
+      "deposit-shape-contact-halo",
+      "deposit-shape-metamorphic-belt",
+      "deposit-shape-blob",
+      "deposit-shape-ore-body"
+    ],
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "geology-process-chemical-replacement",
+    "name": "Chemical replacement",
+    "category": "Hydrothermal / alteration",
+    "domain": "Underground",
+    "typicalDepthRange": "100m–10km",
+    "formationDriver": "Fluids chemically replacing host rock",
+    "depositShapeIds": [
+      "deposit-shape-blob",
+      "deposit-shape-pocket",
+      "deposit-shape-ore-body",
+      "deposit-shape-disseminated-zone",
+      "deposit-shape-contact-halo"
+    ],
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "geology-process-groundwater-dissolution",
+    "name": "Groundwater dissolution",
+    "category": "Karst / dissolution",
+    "domain": "Surface + underground",
+    "typicalDepthRange": "Surface–2km",
+    "formationDriver": "Water dissolving soluble rock",
+    "depositShapeIds": [
+      "deposit-shape-cavity",
+      "deposit-shape-cavern-system",
+      "deposit-shape-tube",
+      "deposit-shape-channel",
+      "deposit-shape-pocket",
+      "deposit-shape-aquifer-body"
+    ],
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "geology-process-groundwater-storage-flow",
+    "name": "Groundwater storage / flow",
+    "category": "Hydrological",
+    "domain": "Underground",
+    "typicalDepthRange": "1m–5km",
+    "formationDriver": "Porosity, fractures, water movement",
+    "depositShapeIds": [
+      "deposit-shape-aquifer-body",
+      "deposit-shape-fracture-network",
+      "deposit-shape-channel",
+      "deposit-shape-cavity",
+      "deposit-shape-cavern-system"
+    ],
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "geology-process-oil-gas-migration-and-trapping",
+    "name": "Oil / gas migration and trapping",
+    "category": "Petroleum system",
+    "domain": "Underground",
+    "typicalDepthRange": "500m–6km",
+    "formationDriver": "Organic burial, fluid migration, sealing",
+    "depositShapeIds": [
+      "deposit-shape-reservoir-trap",
+      "deposit-shape-aquifer-body",
+      "deposit-shape-lens",
+      "deposit-shape-dome",
+      "deposit-shape-fault-band",
+      "deposit-shape-unconformity-layer"
+    ],
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "geology-process-ore-concentration",
+    "name": "Ore concentration",
+    "category": "Ore-forming",
+    "domain": "Underground",
+    "typicalDepthRange": "Surface–10km",
+    "formationDriver": "Mineral enrichment by fluids, magma, weathering, or sedimentation",
+    "depositShapeIds": [
+      "deposit-shape-ore-body",
+      "deposit-shape-vein",
+      "deposit-shape-disseminated-zone",
+      "deposit-shape-breccia-zone",
+      "deposit-shape-blob",
+      "deposit-shape-pocket",
+      "deposit-shape-pipe",
+      "deposit-shape-contact-halo"
+    ],
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "geology-process-impact-collapse-explosive-fragmentation",
+    "name": "Impact / collapse / explosive fragmentation",
+    "category": "Brecciation / disruption",
+    "domain": "Surface + underground",
+    "typicalDepthRange": "Surface–5km",
+    "formationDriver": "Impact, collapse, explosive pressure, fault crushing",
+    "depositShapeIds": [
+      "deposit-shape-breccia-zone",
+      "deposit-shape-cavity",
+      "deposit-shape-basin-fill",
+      "deposit-shape-fracture-network"
+    ],
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "geology-process-planetary-surface-weathering",
+    "name": "Planetary surface weathering",
+    "category": "Surface alteration",
+    "domain": "Surface + shallow underground",
+    "typicalDepthRange": "Surface–100m",
+    "formationDriver": "Wind, water, ice, chemical weathering",
+    "depositShapeIds": [
+      "deposit-shape-erosion-surface",
+      "deposit-shape-unconformity-layer",
+      "deposit-shape-nodule-field",
+      "deposit-shape-layer"
+    ],
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "geology-process-deep-crustal-deformation",
+    "name": "Deep crustal deformation",
+    "category": "Structural / metamorphic",
+    "domain": "Underground",
+    "typicalDepthRange": "5km–50km",
+    "formationDriver": "Pressure, heat, shearing, compression",
+    "depositShapeIds": [
+      "deposit-shape-metamorphic-belt",
+      "deposit-shape-folded-band",
+      "deposit-shape-fault-band",
+      "deposit-shape-fracture-network",
+      "deposit-shape-vein"
+    ],
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "geology-process-karst-formation",
+    "name": "Karst formation",
+    "category": "Dissolution / cave-forming",
+    "domain": "Surface + underground",
+    "typicalDepthRange": "Surface–2km",
+    "formationDriver": "Acidic groundwater dissolving rock",
+    "depositShapeIds": [
+      "deposit-shape-cavity",
+      "deposit-shape-cavern-system",
+      "deposit-shape-channel",
+      "deposit-shape-aquifer-body"
+    ],
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "geology-process-seafloor-mineral-precipitation",
+    "name": "Seafloor mineral precipitation",
+    "category": "Chemical / ocean-floor deposition",
+    "domain": "Surface seafloor + shallow burial",
+    "typicalDepthRange": "Seafloor–500m",
+    "formationDriver": "Slow chemical precipitation from seawater",
+    "depositShapeIds": [
+      "deposit-shape-nodule-field",
+      "deposit-shape-disseminated-zone",
+      "deposit-shape-layer",
+      "deposit-shape-sheet"
+    ],
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "geology-process-structural-trap-formation",
+    "name": "Structural trap formation",
+    "category": "Structural / petroleum trap",
+    "domain": "Underground",
+    "typicalDepthRange": "500m–6km",
+    "formationDriver": "Folding, faulting, sealing, uplift",
+    "depositShapeIds": [
+      "deposit-shape-reservoir-trap",
+      "deposit-shape-dome",
+      "deposit-shape-fault-band",
+      "deposit-shape-unconformity-layer",
+      "deposit-shape-lens"
+    ],
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "geology-process-pipe-conduit-formation",
+    "name": "Pipe / conduit formation",
+    "category": "Igneous / hydrothermal conduit",
+    "domain": "Surface + underground",
+    "typicalDepthRange": "Surface–50km",
+    "formationDriver": "Magma, gas, fluid, or explosive movement upward",
+    "depositShapeIds": [
+      "deposit-shape-pipe",
+      "deposit-shape-plug",
+      "deposit-shape-tube",
+      "deposit-shape-breccia-zone",
+      "deposit-shape-ore-body"
+    ],
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "geology-process-general-host-rock-alteration",
+    "name": "General host-rock alteration",
+    "category": "Alteration / metamorphic / hydrothermal",
+    "domain": "Underground",
+    "typicalDepthRange": "100m–20km",
+    "formationDriver": "Heat, fluids, pressure, chemical change",
+    "depositShapeIds": [
+      "deposit-shape-contact-halo",
+      "deposit-shape-disseminated-zone",
+      "deposit-shape-metamorphic-belt",
+      "deposit-shape-ore-body",
+      "deposit-shape-blob"
+    ],
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  }
+]
