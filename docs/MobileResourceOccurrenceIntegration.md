@@ -1,6 +1,6 @@
 # MineIT Mobile Resource Occurrence Integration
 
-**Status:** Approved design direction; structured occurrence catalogue still to be authored before Mobile implementation  
+**Status:** Structured canonical resource/environment layer authored and validation-protected on the Mobile resource branch  
 **Consumer:** MineIT Mobile  
 **Canonical branch:** `develop`  
 **Related canon:** `docs/SubstanceCanon.md`, `docs/WorldSurfaceCanon.md`
@@ -19,7 +19,7 @@ The game must not maintain an independently authored resource catalogue that can
 
 Universe `develop` currently provides:
 
-- 75 canonical P0/P1 substance categories;
+- 75 source-canonical P0/P1 substance categories plus 5 Mobile integration parent categories;
 - 7 material archetypes;
 - 25 substance property/classification definitions;
 - 9 rarity bands;
@@ -46,7 +46,7 @@ The Mobile legacy catalogue mixes several concepts:
 
 Universe `substances` is an industrial-material ontology. It deliberately separates raw/refined state, archetype and industrial role and does not treat a herd as a material substance.
 
-Mobile therefore must not perform a blind one-for-one replacement of its 40 resource IDs with the 75 Universe IDs.
+Mobile therefore must not perform a blind one-for-one replacement of its legacy resource IDs with the shared industrial substance ontology.
 
 ## Canonical ownership
 
@@ -75,19 +75,17 @@ Mobile owns:
 - technology/extraction gating where it is a Mobile balance rule;
 - legacy-save migration aliases.
 
-## Missing canonical layer: substance occurrence profiles
+## Structured canonical Mobile resource layer
 
-The current Universe catalogue can describe a substance and a find-site class, but it does not yet fully answer:
+The Universe now answers the Mobile physical-eligibility question through three manifest-backed collections:
 
-> Can this material naturally occur on this body/world/environment at all?
+- `mobileResourceDefinitions` -> `mobile-resource-definitions.json` — 42 stable familiar natural non-Food identities mapped to shared generic substance categories;
+- `mobileResourceOccurrenceProfiles` -> `mobile-resource-occurrence-profiles.json` — hard body/world/environment/geology/extraction-zone plausibility for those 42 identities;
+- `mobileBiologicalResources` -> `mobile-biological-resources.json` — Crops, Edible Flora, Herds, Aquatic Food, Fungi, Algae and Synthetic Nutrient with natural/open/controlled environmental rules.
 
-That question must be answered canonically before Mobile's new world generator is implemented.
+The shared `substances` ontology remains authoritative for generic industrial classification and has gained five Mobile integration parent categories: Carbonate Mineral, Sulfate Mineral, Frozen Volatile Deposit, Native Carbon Mineral and Precious Metal Ore.
 
-Add a manifest-backed structured collection tentatively named:
-
-`substanceOccurrenceProfiles` -> `substance-occurrence-profiles.json`
-
-A profile should reference stable Universe IDs and contain physical constraints, not game balance.
+Occurrence profiles reference stable Universe IDs and contain physical constraints, not game balance.
 
 Recommended record shape:
 
@@ -140,7 +138,7 @@ They are useful inputs, but they are not a complete global occurrence matrix. Ma
 
 The new occurrence profile is therefore the authoritative physical eligibility layer; find sites remain reusable local encounter/deposit contexts.
 
-## Required canon review before Mobile implementation
+## Resolved canon decisions for Mobile implementation
 
 The following Mobile legacy concepts need an explicit reconciliation decision:
 
@@ -728,3 +726,23 @@ Examples:
 - Gold on a barren moon = **possible** if geology supports it.
 
 Future unique/exotic resources may deliberately break familiar-resource expectations, but only through the separate unique-resource discovery system.
+
+
+## Phase 1 structured-canon completion
+
+As of 4 October 2026 the branch contains the full first-pass structured foundation required by MineIT Mobile:
+
+- 42 familiar natural non-Food resource definitions: 7 Build / 9 Fuel / 26 Ore-industrial;
+- one occurrence profile for every familiar natural resource;
+- the approved Surface/Shallow/Medium/Deep/Atmosphere extraction-zone profiles;
+- body/world/environment/geology affinities and hard restrictions;
+- stable Food identities and environmental suitability rules;
+- Crops and Synthetic Nutrient explicitly excluded from natural generation;
+- Aquatic Food and Algae explicitly tied to suitable hydrospheres;
+- Mountains explicitly excluded from natural/open Food production;
+- validator protection for all stable-ID references and catalogue counts;
+- validator rejection of Mobile-owned balance fields such as price, spawn weight, reserve, quality and scan/mining level.
+
+Universe manifest schema is now **11** and content version **0.12.0** for this boundary.
+
+The next consumer step is to validate/merge this Universe branch, then pin Android's unified Universe snapshot to the resulting immutable commit.
