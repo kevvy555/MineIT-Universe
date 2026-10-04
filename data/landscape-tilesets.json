@@ -1,0 +1,53 @@
+[
+  {
+    "id": "landscape-tileset-koplin-3",
+    "name": "Koplin 3 landscape tileset",
+    "planetId": "planet-koplin-prime",
+    "intendedGameId": "game-mineit-mobile",
+    "coverageComplete": true,
+    "landformIds": [
+      "landform-plains",
+      "landform-hills",
+      "landform-mountains",
+      "landform-basin",
+      "landform-lowland",
+      "landform-highland",
+      "landform-plateau",
+      "landform-valley",
+      "landform-cliff",
+      "landform-canyon",
+      "landform-ridge",
+      "landform-crater"
+    ],
+    "biomeIds": [
+      "biome-grassland",
+      "biome-forest",
+      "biome-wetland",
+      "biome-tundra"
+    ],
+    "hydrosphereIds": [
+      "hydrosphere-ocean",
+      "hydrosphere-lake",
+      "hydrosphere-river"
+    ],
+    "adjacencyPreviewIds": [
+      "landscape-tile-koplin-3-mountains-grassland-01",
+      "landscape-tile-koplin-3-mountains-grassland-02",
+      "landscape-tile-koplin-3-mountains-grassland-03",
+      "landscape-tile-koplin-3-mountains-forest-01"
+    ],
+    "styleLock": {
+      "camera": "orthographic-nadir",
+      "altitudeHint": "about 500 m",
+      "sun": "upper-left",
+      "shadows": "lower-right",
+      "aspectRatio": "1:1",
+      "palette": "moss/olive grass, cool blue-grey rock, peat-brown wet soil, pale straw tundra",
+      "joinRule": "Terrain continues off all four edges. Mountain tiles are continuous ranges, not isolated centred peaks."
+    },
+    "description": "Matching Mobile landscape tiles for Koplin 3. Every landform on this world is drawn in grassland, forest, wetland and tundra cover, plus ocean, lake and river water tiles. The set shares one camera, sun direction and temperate palette so neighbouring squares look like one landscape rather than unrelated stickers. This is world art for grid squares, not a frozen canonical map of Koplin 3.",
+    "canonStatus": "working canon",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "10. How the three games use this language"
+  }
+]

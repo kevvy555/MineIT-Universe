@@ -12,6 +12,7 @@ organisations/
 substances/
 systems/
 planets/
+  <planet-id>/landscape/   world-specific Mobile grid tiles
 settlements/
 facilities/
 ```

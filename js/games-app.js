@@ -30,6 +30,7 @@ function card(game) {
         <a href="${esc(recordHref)}">Open in Directory</a>
         <a href="${esc(directoryHref)}">All games</a>
         <a href="./index.html?view=directory&amp;focus=surfaceLandforms">Land vocabulary</a>
+        ${game.id === 'game-mineit-mobile' ? '<a href="./index.html?view=directory&amp;focus=landscapeTilesets">World landscape tiles</a>' : ''}
         <a href="./lore.html?doc=lore-koplin-world-surface&amp;section=${encodeURIComponent(game.sourceSection || '')}">Land lore</a>
       </div>
     </div>

@@ -2,7 +2,7 @@
 
 Status: **Schema v2 implemented — first canonical region generated**  
 Repository: `kevvy555/MineIT-Universe`  
-Current content version: **0.2.0**
+Current content version: **0.11.0**
 
 ## Purpose
 
@@ -37,6 +37,8 @@ surfaceFeatures
 surfaceHydrospheres
 geologyProvinces
 findSites
+landscapeTilesets
+landscapeTiles
 settlements
 organisations
 organisationUnits
@@ -47,6 +49,17 @@ substances
 parts
 machines
 buildings
+researchTechnologies
+substanceArchetypes
+substanceProperties
+rarityBands
+geologyProcesses
+depositShapes
+depositStates
+stellarTypes
+cometTypes
+ringSystemTypes
+starSystemTypes
 games
 species
 people
@@ -57,7 +70,7 @@ events
 relationships
 ```
 
-Schema 8 adds the shared land/world vocabulary and a designer `games` catalogue so Desktop, Mobile and Single Mine consume the same body-kind, world-type, land-square and find-site IDs. Per-save maps remain game state.
+Schema 10 publishes the remaining stable catalogue vocabulary recovered from the legacy design archive: research technologies, advanced P1 find sites, geological processes/shapes/states, materials-reference catalogues and extended celestial classifications. Mutable research progress, point tuning, procedural spawn predicates and generated deposit instances remain game state. Schema 9 adds per-world `landscapeTilesets` / `landscapeTiles` so Mobile can draw matching 1:1 grid art for a named world. Schema 8 added the shared land/world vocabulary and a designer `games` catalogue so Desktop, Mobile and Single Mine consume the same body-kind, world-type, land-square and find-site IDs. Per-save maps remain game state.
 
 The old company-only model is superseded by the generic `organisations` collection. Commercial companies, governments, authorities, universities, research institutes, banks, media organisations, hospital trusts, guilds, security/military bodies and synthetic polities can all use the same organisation graph.
 
@@ -127,7 +140,7 @@ The current calendar is the Standard Terran Calendar; the canonical universe dat
 
 ## Image-generation state
 
-People, named ships and star systems currently carry image metadata. Purchasable ship classes may also. Star-system vistas are identity-bearing 16:9 art under `assets/art/universe/systems/`. Substances may carry optional catalog-still image metadata; only records with an `image` object are in the generation process.
+People, named ships and star systems currently carry image metadata. Purchasable ship classes may also. Star-system vistas are identity-bearing 16:9 art under `assets/art/universe/systems/`. Substances may carry optional catalog-still image metadata; only records with an `image` object are in the generation process. Named worlds may carry a matching landscape tileset under `assets/art/universe/planets/<planet-id>/landscape/`.
 
 Each image record explicitly stores:
 

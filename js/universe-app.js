@@ -44,9 +44,10 @@ const ICONS = {
   regions: '◎', starSystems: '✦', planets: '●', celestialBodyKinds: '◉', worldTypes: '◌',
   atmosphereTypes: '☁', surfaceLandforms: '⛰', surfaceBiomes: '⚘', surfaceFeatures: '◻',
   surfaceHydrospheres: '≈', geologyProvinces: '▣', findSites: '⌖', games: '▶',
+  landscapeTilesets: '▦', landscapeTiles: '▪',
   settlements: '⬡', organisations: 'O',
   organisationUnits: '▦', facilities: '⌂', operations: '⚙', products: '◆', substances: '▣',
-  parts: '⧉', machines: '⚒', buildings: '⌂', species: 'S',
+  parts: '⧉', machines: '⚒', buildings: '⌂', researchTechnologies: '⌬', substanceArchetypes: '◈', substanceProperties: '≋', rarityBands: '⋄', geologyProcesses: '⌁', depositShapes: '⬢', depositStates: '◐', stellarTypes: '✶', cometTypes: '☄', ringSystemTypes: '◎', starSystemTypes: '✦', species: 'S',
   people: 'P', shipClasses: '△', ships: '▲', projects: '◇', events: '◷', relationships: '↔',
   currencies: '¤', loreDocuments: '▤', loreTopics: 'i'
 };
@@ -93,7 +94,8 @@ function worldNode(world) {
   return entityNode(world.id, [
     category('Moons', moons.map(worldNode).sort(byName)),
     category('Settlements / Stations', related('settlements', settlement => settlement.planetId === world.id).map(settlementNode).sort(byName)),
-    category('Facilities', nodes(related('facilities', facility => facility.planetId === world.id && !facility.settlementId)))
+    category('Facilities', nodes(related('facilities', facility => facility.planetId === world.id && !facility.settlementId))),
+    category('Landscape tileset', nodes(related('landscapeTilesets', tileset => tileset.planetId === world.id)))
   ]);
 }
 
@@ -179,7 +181,36 @@ function buildLandDirectoryNode() {
     category('Surface Features', nodes(state.catalogue.collection('surfaceFeatures'))),
     category('Hydrosphere', nodes(state.catalogue.collection('surfaceHydrospheres'))),
     category('Geology Provinces', nodes(state.catalogue.collection('geologyProvinces'))),
-    category('Find Sites', nodes(state.catalogue.collection('findSites')))
+    category('Find Sites', nodes(state.catalogue.collection('findSites'))),
+    category('Landscape Tilesets', state.catalogue.collection('landscapeTilesets').map(tileset =>
+      entityNode(tileset.id, groupRecords(
+        related('landscapeTiles', tile => tile.tilesetId === tileset.id),
+        tile => tile.biomeId
+          ? state.catalogue.nameFor(tile.biomeId)
+          : (tile.hydrosphereId ? state.catalogue.nameFor(tile.hydrosphereId) : 'Water')
+      ).map(([label, items]) => category(label, nodes(items))))
+    ))
+  ]);
+}
+
+function buildResearchDirectoryNode() {
+  return category('Research / Technology', groupRecords(state.catalogue.collection('researchTechnologies'), record => record.category).map(([label, items]) =>
+    category(label, nodes(items))
+  ));
+}
+
+function buildReferenceCataloguesNode() {
+  return category('Reference Catalogues', [
+    category('Substance Archetypes', nodes(state.catalogue.collection('substanceArchetypes'))),
+    category('Substance Properties', groupRecords(state.catalogue.collection('substanceProperties'), record => record.propertyKind).map(([label, items]) => category(label, nodes(items)))),
+    category('Rarity Bands', nodes(state.catalogue.collection('rarityBands'))),
+    category('Geological Processes', groupRecords(state.catalogue.collection('geologyProcesses'), record => record.category).map(([label, items]) => category(label, nodes(items)))),
+    category('Deposit Shapes', nodes(state.catalogue.collection('depositShapes'))),
+    category('Deposit States', nodes(state.catalogue.collection('depositStates'))),
+    category('Stellar Types', nodes(state.catalogue.collection('stellarTypes'))),
+    category('Comet Types', nodes(state.catalogue.collection('cometTypes'))),
+    category('Ring-System Types', nodes(state.catalogue.collection('ringSystemTypes'))),
+    category('Star-System Types', nodes(state.catalogue.collection('starSystemTypes')))
   ]);
 }
 
@@ -193,6 +224,8 @@ function buildDirectoryTree() {
       buildGamesDirectoryNode(),
       ...beforeProducts.map(flatNode),
       buildLandDirectoryNode(),
+      buildResearchDirectoryNode(),
+      buildReferenceCataloguesNode(),
       buildSubstancesDirectoryNode(),
       buildPartsDirectoryNode(),
       buildMachinesDirectoryNode(),
@@ -330,11 +363,18 @@ function renderTree() {
         record.layer,
         record.catalogTier,
         record.depthBand,
+        record.propertyKind,
+        record.formationDriver,
+        record.typicalDepthRange,
+        record.unlockNotes,
+        record.discoveryGate,
+        record.requirementNotes,
         record.shortName,
         record.playPattern,
         record.form,
         record.platform,
         record.surfaceAssignmentStatus,
+        record.adjacencyRole,
         collectionName,
         record.id
       ].filter(Boolean).join(' ').toLowerCase();
@@ -372,6 +412,8 @@ function subtitle(collection, entity) {
     surfaceHydrospheres: entity.layer,
     geologyProvinces: entity.layer,
     findSites: `${entity.catalogTier || ''} • ${entity.depthBand || ''}`.trim(),
+    landscapeTilesets: entity.planetId ? state.catalogue.nameFor(entity.planetId) : '',
+    landscapeTiles: [entity.landformId && state.catalogue.nameFor(entity.landformId), entity.biomeId && state.catalogue.nameFor(entity.biomeId), entity.hydrosphereId && state.catalogue.nameFor(entity.hydrosphereId)].filter(Boolean).join(' • '),
     games: `${entity.form || ''} • ${entity.playPattern || ''}`.trim(),
     settlements: entity.locationType,
     organisations: `${entity.scale || ''} ${entity.organisationType || ''}`.trim(),
@@ -383,6 +425,17 @@ function subtitle(collection, entity) {
     parts: `${entity.category || ''} • ${entity.subCategory || ''}`.trim(),
     machines: `${entity.category || ''} • ${entity.subCategory || ''}`.trim(),
     buildings: entity.category,
+    researchTechnologies: entity.category,
+    substanceArchetypes: 'Materials reference',
+    substanceProperties: entity.propertyKind,
+    rarityBands: entity.rank ? `Rank ${entity.rank}` : '',
+    geologyProcesses: entity.category,
+    depositShapes: 'Geological geometry',
+    depositStates: 'Deposit state',
+    stellarTypes: 'Stellar classification',
+    cometTypes: 'Comet classification',
+    ringSystemTypes: 'Ring classification',
+    starSystemTypes: 'System classification',
     species: entity.speciesType,
     people: entity.role,
     shipClasses: entity.role,
@@ -435,6 +488,7 @@ function fieldsFor(collection, entity) {
       field('Dominant biomes', links(entity.dominantBiomeIds)),
       field('Dominant water', links(entity.dominantHydrosphereIds)),
       field('Surface assignment', esc(entity.surfaceAssignmentStatus)),
+      field('Landscape tileset', entity.landscapeTilesetId ? link(entity.landscapeTilesetId) : '—'),
       field('Environment', esc(entity.environment)),
       field('Population', population(entity.population)),
       field('Settlements', links(relatedIds('settlements', item => item.planetId === entity.id))),
@@ -553,6 +607,7 @@ function fieldsFor(collection, entity) {
       field('Layer', esc(entity.layer)),
       field('Dominant on worlds', links(relatedIds('planets', item => (item.dominantLandformIds || []).includes(entity.id)))),
       field('Find sites', links(relatedIds('findSites', item => (item.landformIds || []).includes(entity.id)))),
+      field('Landscape tiles', links(relatedIds('landscapeTiles', item => item.landformId === entity.id))),
       field('Open land lore', loreOpenLink(entity.sourceDocumentId, entity.sourceSection))
     );
   }
@@ -561,6 +616,7 @@ function fieldsFor(collection, entity) {
       field('Layer', esc(entity.layer)),
       field('Dominant on worlds', links(relatedIds('planets', item => (item.dominantBiomeIds || []).includes(entity.id)))),
       field('Find sites', links(relatedIds('findSites', item => (item.biomeIds || []).includes(entity.id)))),
+      field('Landscape tiles', links(relatedIds('landscapeTiles', item => item.biomeId === entity.id))),
       field('Open land lore', loreOpenLink(entity.sourceDocumentId, entity.sourceSection))
     );
   }
@@ -576,6 +632,7 @@ function fieldsFor(collection, entity) {
       field('Layer', esc(entity.layer)),
       field('Dominant on worlds', links(relatedIds('planets', item => (item.dominantHydrosphereIds || []).includes(entity.id)))),
       field('Find sites', links(relatedIds('findSites', item => (item.hydrosphereIds || []).includes(entity.id)))),
+      field('Landscape tiles', links(relatedIds('landscapeTiles', item => item.hydrosphereId === entity.id))),
       field('Open land lore', loreOpenLink(entity.sourceDocumentId, entity.sourceSection))
     );
   }
@@ -598,6 +655,56 @@ function fieldsFor(collection, entity) {
       field('Open land lore', loreOpenLink(entity.sourceDocumentId, entity.sourceSection))
     );
   }
+  if (collection === 'landscapeTilesets') {
+    fields.push(
+      field('World', link(entity.planetId)),
+      field('Intended game', entity.intendedGameId ? link(entity.intendedGameId) : '—'),
+      field('Coverage complete', entity.coverageComplete ? 'Yes' : 'No'),
+      field('Landforms', links(entity.landformIds)),
+      field('Biomes', links(entity.biomeIds)),
+      field('Water', links(entity.hydrosphereIds)),
+      field('Tile count', esc(related('landscapeTiles', item => item.tilesetId === entity.id).length)),
+      field('Open land lore', loreOpenLink(entity.sourceDocumentId, entity.sourceSection))
+    );
+  }
+  if (collection === 'landscapeTiles') {
+    fields.push(
+      field('Tileset', link(entity.tilesetId)),
+      field('World', link(entity.planetId)),
+      field('Landform', entity.landformId ? link(entity.landformId) : '—'),
+      field('Biome', entity.biomeId ? link(entity.biomeId) : '—'),
+      field('Water', entity.hydrosphereId ? link(entity.hydrosphereId) : '—'),
+      field('Variant', esc(entity.variant)),
+      field('Adjacency role', esc(entity.adjacencyRole)),
+      field('Intended use', esc(entity.intendedUse)),
+      field('Open land lore', loreOpenLink(entity.sourceDocumentId, entity.sourceSection))
+    );
+  }
+  if (collection === 'researchTechnologies') {
+    fields.push(
+      field('Category', esc(entity.category)),
+      field('Prerequisites', links(entity.prerequisiteTechnologyIds)),
+      field('Unlocks parts', links(entity.unlockedPartIds)),
+      field('Unlocks machines', links(entity.unlockedMachineIds)),
+      field('Unlocks buildings', links(entity.unlockedBuildingIds)),
+      field('Unlocks substances', links(entity.unlockedSubstanceIds)),
+      field('Discovery gate', esc(entity.discoveryGate || 'None')),
+      field('Legacy Desktop priority', esc(entity.desktopProfile?.legacyPriority)),
+      field('Legacy Desktop points', esc(entity.desktopProfile?.pointsRequired)),
+      field('Unlock notes', esc(entity.unlockNotes)),
+      field('Additional requirement', esc(entity.requirementNotes || '—'))
+    );
+  }
+  if (collection === 'substanceProperties') {
+    fields.push(field('Property kind', esc(entity.propertyKind)), field('Scale', esc(entity.scale)), field('Knowledge scope', esc(entity.knowledgeScope)));
+  }
+  if (collection === 'rarityBands') fields.push(field('Rank', esc(entity.rank)));
+  if (collection === 'geologyProcesses') {
+    fields.push(field('Category', esc(entity.category)), field('Domain', esc(entity.domain)), field('Typical depth', esc(entity.typicalDepthRange)), field('Formation driver', esc(entity.formationDriver)), field('Common shapes', links(entity.depositShapeIds)));
+  }
+  if (collection === 'depositShapes') fields.push(field('Processes', links(relatedIds('geologyProcesses', item => (item.depositShapeIds || []).includes(entity.id)))));
+  if (collection === 'ringSystemTypes') fields.push(field('Rings present', entity.ringPresence ? 'Yes' : 'No'));
+
   if (collection === 'species') {
     if (entity.homeworldId) fields.push(field('Homeworld', link(entity.homeworldId)));
     fields.push(field('Type', esc(entity.speciesType)), field('People', links(relatedIds('people', item => item.speciesId === entity.id))));
@@ -666,6 +773,7 @@ function extraSections(entity) {
     if (entity[key]) html += `<section class="section"><h2>${title}</h2><div class="longText">${esc(entity[key])}</div></section>`;
   }
   if (entity.visualIdentity) html += `<section class="section"><h2>Visual identity</h2><div class="longText"><pre class="rawBlock">${esc(JSON.stringify(entity.visualIdentity, null, 2))}</pre></div></section>`;
+  if (entity.styleLock) html += `<section class="section"><h2>Style lock</h2><div class="longText"><pre class="rawBlock">${esc(JSON.stringify(entity.styleLock, null, 2))}</pre></div></section>`;
   return html;
 }
 
@@ -703,6 +811,67 @@ function canonWarning(entity, collection) {
   return '';
 }
 
+function tileCaption(tile) {
+  if (tile.hydrosphereId && !tile.landformId) {
+    const variant = tile.variant && tile.variant !== 1 ? ` ${String(tile.variant).padStart(2, '0')}` : '';
+    return `${state.catalogue.nameFor(tile.hydrosphereId)}${variant}`;
+  }
+  const parts = [tile.landformId && state.catalogue.nameFor(tile.landformId), tile.biomeId && state.catalogue.nameFor(tile.biomeId)].filter(Boolean);
+  if (tile.variant && tile.variant !== 1) parts.push(String(tile.variant).padStart(2, '0'));
+  return parts.join(' · ') || tile.name;
+}
+
+function landscapeGallerySection(tiles, heading) {
+  const ready = tiles.filter(tile => tile.image?.generated && tile.image?.key);
+  if (!ready.length) return '';
+  const groups = groupRecords(ready, tile => {
+    if (tile.biomeId) return state.catalogue.nameFor(tile.biomeId);
+    if (tile.hydrosphereId) return state.catalogue.nameFor(tile.hydrosphereId);
+    return 'Other';
+  });
+  return `<section class="section"><h2>${esc(heading)}</h2>${groups.map(([label, items]) => `
+    <div class="landscapeGroup"><h3>${esc(label)}</h3>
+      <div class="landscapeGallery">${items.map(tile => {
+        const previewUrl = state.catalogue.assetUrl(tile.image.key);
+        return `<button type="button" class="landscapeTile" data-ref="${esc(tile.id)}"><img src="${esc(previewUrl)}" alt="${esc(tile.name)}"><span>${esc(tileCaption(tile))}</span></button>`;
+      }).join('')}</div>
+    </div>`).join('')}</section>`;
+}
+
+function adjacencyPreviewSection(entity) {
+  const ids = entity.adjacencyPreviewIds || [];
+  if (ids.length !== 4) return '';
+  const tiles = ids.map(id => state.catalogue.get(id)).filter(tile => tile?.image?.generated && tile.image.key);
+  if (tiles.length !== 4) return '';
+  return `<section class="section"><h2>Adjacent mountain check</h2>
+    <p class="landscapeNote">Four mountain tiles from this set placed in a 2×2. They should read as one range, not four isolated peaks.</p>
+    <div class="landscapeAdjacency">${tiles.map(tile => {
+      const previewUrl = state.catalogue.assetUrl(tile.image.key);
+      const originalUrl = state.catalogue.assetUrl(state.catalogue.originalAssetKey(tile.image.key)) || previewUrl;
+      return `<button type="button" class="portraitButton" data-original-image="${esc(originalUrl)}" data-preview-image="${esc(previewUrl)}" data-image-name="${esc(tile.name)}" aria-label="${esc(tile.name)}"><img src="${esc(previewUrl)}" alt="${esc(tile.name)}"></button>`;
+    }).join('')}</div>
+  </section>`;
+}
+
+function landscapeSections(collection, entity) {
+  if (collection === 'planets') {
+    return landscapeGallerySection(state.catalogue.landscapeTilesForPlanet(entity.id), 'Landscape tiles');
+  }
+  if (collection === 'landscapeTilesets') {
+    return `${adjacencyPreviewSection(entity)}${landscapeGallerySection(state.catalogue.landscapeTilesForTileset(entity.id), 'Tiles')}`;
+  }
+  if (collection === 'surfaceLandforms') {
+    return landscapeGallerySection(related('landscapeTiles', tile => tile.landformId === entity.id), 'World tiles using this landform');
+  }
+  if (collection === 'surfaceBiomes') {
+    return landscapeGallerySection(related('landscapeTiles', tile => tile.biomeId === entity.id), 'World tiles using this biome');
+  }
+  if (collection === 'surfaceHydrospheres') {
+    return landscapeGallerySection(related('landscapeTiles', tile => tile.hydrosphereId === entity.id), 'World tiles using this water type');
+  }
+  return '';
+}
+
 function renderDetail() {
   const entity = state.catalogue.get(state.selectedId);
   if (!entity) return;
@@ -711,13 +880,17 @@ function renderDetail() {
   const previewUrl = entity.image?.generated && entity.image?.key ? state.catalogue.assetUrl(entity.image.key) : null;
   const originalUrl = previewUrl ? (state.catalogue.assetUrl(state.catalogue.originalAssetKey(entity.image.key)) || previewUrl) : null;
   const landscapeArt = collection === 'starSystems';
+  const squareArt = collection === 'landscapeTiles';
+  const heroClass = landscapeArt ? ' heroLandscape' : squareArt ? ' heroSquare' : '';
+  const placeholderClass = landscapeArt ? ' landscape' : squareArt ? ' square' : '';
   const image = previewUrl
     ? `<button type="button" class="portraitButton" data-original-image="${esc(originalUrl)}" data-preview-image="${esc(previewUrl)}" data-image-name="${esc(entity.name)}" aria-label="View original image of ${esc(entity.name)}"><img src="${esc(previewUrl)}" alt="${esc(entity.name)}"></button>`
     : esc(collection === 'people' ? entity.name.split(/\s+/).map(part => part[0]).join('').slice(0, 2).toUpperCase() : icon);
 
   detailEl.innerHTML = `${validationStatus()}${canonWarning(entity, collection)}<div class="breadcrumbs">${breadcrumbs()}</div>
-    <div class="hero${landscapeArt ? ' heroLandscape' : ''}"><div class="placeholder${landscapeArt ? ' landscape' : ''}">${image}</div><div><div class="eyebrow">${esc(state.catalogue.typeLabelFor(entity.id))}</div><h1>${esc(entity.name)}</h1><div class="subtitle">${esc(subtitle(collection, entity))}</div></div></div>
+    <div class="hero${heroClass}"><div class="placeholder${placeholderClass}">${image}</div><div><div class="eyebrow">${esc(state.catalogue.typeLabelFor(entity.id))}</div><h1>${esc(entity.name)}</h1><div class="subtitle">${esc(subtitle(collection, entity))}</div></div></div>
     <div class="description">${esc(entity.description || '')}</div>
+    ${landscapeSections(collection, entity)}
     <section class="section"><h2>Details</h2><div class="fieldRows">${fieldsFor(collection, entity)}</div></section>
     ${resourceSection(entity)}${extraSections(entity)}${imageSection(entity)}
     <section class="section"><h2>Development details</h2><div class="longText"><div class="dev"><span>ID</span><code>${esc(entity.id)}</code><span>Collection</span><code>${esc(collection)}</code><span>Perspective</span><code>${esc(state.activeView)}</code><span>Content version</span><code>${esc(state.catalogue.manifest.contentVersion)}</code></div><pre class="rawBlock">${esc(JSON.stringify(entity, null, 2))}</pre></div></section>`;

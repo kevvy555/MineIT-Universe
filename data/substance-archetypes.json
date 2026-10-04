@@ -1,0 +1,65 @@
+[
+  {
+    "id": "substance-archetype-metal",
+    "name": "Metal",
+    "description": "Dense, strong and often conductive industrial materials with very low fuel value.",
+    "examples": "Reactive, conductive, magnetic and structural metals.",
+    "sourceDocumentId": "lore-koplin-materials-and-substances",
+    "sourceSection": "7. Dominant archetypes",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "substance-archetype-silicate",
+    "name": "Silicate",
+    "description": "Stone, glass and ceramic mineral family; generally hard, heat tolerant and low in stored energy.",
+    "examples": "Silica, clay, stone, insulating minerals, glass and ceramics.",
+    "sourceDocumentId": "lore-koplin-materials-and-substances",
+    "sourceSection": "7. Dominant archetypes",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "substance-archetype-carbon",
+    "name": "Carbon",
+    "description": "Carbon-rich minerals, hydrocarbons and related synthetics with moderate-to-high stored energy.",
+    "examples": "Solid/liquid fuels, graphite, lubricants, polymers and solvents.",
+    "sourceDocumentId": "lore-koplin-materials-and-substances",
+    "sourceSection": "7. Dominant archetypes",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "substance-archetype-organic",
+    "name": "Organic",
+    "description": "Plant- and biomass-derived matter; generally low density and strength with moderate stored energy.",
+    "examples": "Woody plant, fibrous plant and organic biomass.",
+    "sourceDocumentId": "lore-koplin-materials-and-substances",
+    "sourceSection": "7. Dominant archetypes",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "substance-archetype-water",
+    "name": "Water",
+    "description": "Aqueous liquids and dissolved-component solutions.",
+    "examples": "Fresh water, brines, reactive process waters and coolants.",
+    "sourceDocumentId": "lore-koplin-materials-and-substances",
+    "sourceSection": "7. Dominant archetypes",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "substance-archetype-salt",
+    "name": "Salt",
+    "description": "Mineral salts and evaporites, including the catalogue approximation for some sulfate/phosphate minerals.",
+    "examples": "Sulfurous and phosphate minerals and fertilizers.",
+    "sourceDocumentId": "lore-koplin-materials-and-substances",
+    "sourceSection": "7. Dominant archetypes",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "substance-archetype-volatile",
+    "name": "Volatile",
+    "description": "Chemically volatile compounds that tend to exist as gas under ordinary conditions.",
+    "examples": "Gas fuels, inert gases, oxidizers and atmospheric mixes.",
+    "sourceDocumentId": "lore-koplin-materials-and-substances",
+    "sourceSection": "7. Dominant archetypes",
+    "canonStatus": "working canon"
+  }
+]

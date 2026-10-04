@@ -333,7 +333,7 @@ Current artwork priority is:
 2. named ships;
 3. star-system vistas.
 
-Purchasable ship classes and industrial substance categories may also carry optional image metadata. Other entity artwork may be introduced later.
+Purchasable ship classes and industrial substance categories may also carry optional image metadata. Named worlds may carry a matching landscape tileset for Mobile grid art. Other entity artwork may be introduced later.
 
 Any entity type may support an optional `image` object.
 

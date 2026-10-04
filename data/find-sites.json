@@ -269,5 +269,689 @@
     "sourceDocumentId": "lore-koplin-world-surface",
     "sourceSection": "8. Find sites",
     "canonStatus": "working canon"
+  },
+  {
+    "id": "find-site-fractured-crust",
+    "name": "Fractured crust",
+    "catalogTier": "P1",
+    "depthBand": "Surface",
+    "landformIds": [
+      "landform-mountains"
+    ],
+    "biomeIds": [
+      "biome-volcanic-field"
+    ],
+    "hydrosphereIds": [
+      "hydrosphere-mineral-rich-water"
+    ],
+    "surfaceFeatureIds": [
+      "feature-lava-flow",
+      "feature-ash-cover"
+    ],
+    "geologyProvinceIds": [
+      "geology-province-volcanic"
+    ],
+    "substanceIds": [
+      "substance-reactive-metal-ore"
+    ],
+    "geologyProcessIds": [
+      "geology-process-faulting-tectonic-breaking"
+    ],
+    "depositShapeIds": [
+      "deposit-shape-fracture-network",
+      "deposit-shape-breccia-zone"
+    ],
+    "description": "Advanced surface find-site archetype for Reactive Metal Ore, reconciled from the Desktop P1 survey/deposit catalogue. Spawn probability, procedural predicates and deposit instances remain game state.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 4 - Surface Deposit & Decoration Generation/FindSiteCatalog.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "find-site-old-lake-beds",
+    "name": "Old lake beds",
+    "catalogTier": "P1",
+    "depthBand": "Surface",
+    "landformIds": [
+      "landform-basin"
+    ],
+    "biomeIds": [
+      "biome-barren-rock"
+    ],
+    "hydrosphereIds": [
+      "hydrosphere-saltwater"
+    ],
+    "surfaceFeatureIds": [
+      "feature-mineral-crust"
+    ],
+    "geologyProvinceIds": [
+      "geology-province-old-seabed"
+    ],
+    "substanceIds": [
+      "substance-carbon-rich-mineral"
+    ],
+    "geologyProcessIds": [
+      "geology-process-marine-lake-deposition"
+    ],
+    "depositShapeIds": [
+      "deposit-shape-bed",
+      "deposit-shape-layer"
+    ],
+    "description": "Advanced surface find-site archetype for Carbon-Rich Mineral, reconciled from the Desktop P1 survey/deposit catalogue. Spawn probability, procedural predicates and deposit instances remain game state.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 4 - Surface Deposit & Decoration Generation/FindSiteCatalog.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "find-site-oil-seeps",
+    "name": "Oil seeps",
+    "catalogTier": "P1",
+    "depthBand": "Surface",
+    "landformIds": [
+      "landform-basin"
+    ],
+    "biomeIds": [
+      "biome-barren-rock"
+    ],
+    "hydrosphereIds": [],
+    "surfaceFeatureIds": [],
+    "geologyProvinceIds": [
+      "geology-province-carbon-basin"
+    ],
+    "substanceIds": [
+      "substance-lubricant-capable-liquid"
+    ],
+    "geologyProcessIds": [
+      "geology-process-oil-gas-migration-and-trapping"
+    ],
+    "depositShapeIds": [
+      "deposit-shape-reservoir-trap"
+    ],
+    "description": "Advanced surface find-site archetype for Lubricant-Capable Liquid, reconciled from the Desktop P1 survey/deposit catalogue. Spawn probability, procedural predicates and deposit instances remain game state.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 4 - Surface Deposit & Decoration Generation/FindSiteCatalog.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "find-site-underground-ore-seams",
+    "name": "Underground ore seams",
+    "catalogTier": "P1",
+    "depthBand": "Medium",
+    "landformIds": [
+      "landform-mountains"
+    ],
+    "biomeIds": [],
+    "hydrosphereIds": [
+      "hydrosphere-mineral-rich-water"
+    ],
+    "surfaceFeatureIds": [],
+    "geologyProvinceIds": [
+      "geology-province-hydrothermal"
+    ],
+    "substanceIds": [
+      "substance-conductive-metal-ore"
+    ],
+    "geologyProcessIds": [
+      "geology-process-hydrothermal-mineralisation",
+      "geology-process-ore-concentration"
+    ],
+    "depositShapeIds": [
+      "deposit-shape-vein",
+      "deposit-shape-ore-body"
+    ],
+    "description": "Advanced medium find-site archetype for Conductive Metal Ore, reconciled from the Desktop P1 survey/deposit catalogue. Spawn probability, procedural predicates and deposit instances remain game state.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 4 - Surface Deposit & Decoration Generation/FindSiteCatalog.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "find-site-coal-like-seams-underground",
+    "name": "Coal-like seams underground",
+    "catalogTier": "P1",
+    "depthBand": "Medium",
+    "landformIds": [
+      "landform-basin"
+    ],
+    "biomeIds": [],
+    "hydrosphereIds": [],
+    "surfaceFeatureIds": [],
+    "geologyProvinceIds": [
+      "geology-province-carbon-basin"
+    ],
+    "substanceIds": [
+      "substance-solid-fuel-deposit"
+    ],
+    "geologyProcessIds": [
+      "geology-process-floodplain-swamp-deposition"
+    ],
+    "depositShapeIds": [
+      "deposit-shape-seam"
+    ],
+    "description": "Advanced medium find-site archetype for Solid Fuel Deposit, reconciled from the Desktop P1 survey/deposit catalogue. Spawn probability, procedural predicates and deposit instances remain game state.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 4 - Surface Deposit & Decoration Generation/FindSiteCatalog.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "find-site-underground-aquifers",
+    "name": "Underground aquifers",
+    "catalogTier": "P1",
+    "depthBand": "Medium",
+    "landformIds": [
+      "landform-basin"
+    ],
+    "biomeIds": [],
+    "hydrosphereIds": [
+      "hydrosphere-subsurface-aquifer"
+    ],
+    "surfaceFeatureIds": [],
+    "geologyProvinceIds": [
+      "geology-province-sedimentary-basin"
+    ],
+    "substanceIds": [
+      "substance-fresh-water"
+    ],
+    "geologyProcessIds": [
+      "geology-process-groundwater-storage-flow"
+    ],
+    "depositShapeIds": [
+      "deposit-shape-aquifer-body"
+    ],
+    "description": "Advanced medium find-site archetype for Fresh Water, reconciled from the Desktop P1 survey/deposit catalogue. Spawn probability, procedural predicates and deposit instances remain game state.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 4 - Surface Deposit & Decoration Generation/FindSiteCatalog.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "find-site-shallow-sediment-layers",
+    "name": "Shallow sediment layers",
+    "catalogTier": "P1",
+    "depthBand": "Shallow",
+    "landformIds": [
+      "landform-plains"
+    ],
+    "biomeIds": [
+      "biome-grassland"
+    ],
+    "hydrosphereIds": [],
+    "surfaceFeatureIds": [],
+    "geologyProvinceIds": [
+      "geology-province-sedimentary-basin"
+    ],
+    "substanceIds": [
+      "substance-clay-mineral"
+    ],
+    "geologyProcessIds": [
+      "geology-process-sedimentary-deposition"
+    ],
+    "depositShapeIds": [
+      "deposit-shape-layer"
+    ],
+    "description": "Advanced shallow find-site archetype for Clay Mineral, reconciled from the Desktop P1 survey/deposit catalogue. Spawn probability, procedural predicates and deposit instances remain game state.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 4 - Surface Deposit & Decoration Generation/FindSiteCatalog.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "find-site-impact-crater-walls",
+    "name": "Impact crater walls",
+    "catalogTier": "P1",
+    "depthBand": "Surface",
+    "landformIds": [
+      "landform-crater"
+    ],
+    "biomeIds": [
+      "biome-barren-rock"
+    ],
+    "hydrosphereIds": [],
+    "surfaceFeatureIds": [
+      "feature-crater-field"
+    ],
+    "geologyProvinceIds": [
+      "geology-province-impact"
+    ],
+    "substanceIds": [
+      "substance-magnetic-metal-ore"
+    ],
+    "geologyProcessIds": [
+      "geology-process-impact-collapse-explosive-fragmentation"
+    ],
+    "depositShapeIds": [
+      "deposit-shape-breccia-zone"
+    ],
+    "description": "Advanced surface find-site archetype for Magnetic Metal Ore, reconciled from the Desktop P1 survey/deposit catalogue. Spawn probability, procedural predicates and deposit instances remain game state.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 4 - Surface Deposit & Decoration Generation/FindSiteCatalog.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "find-site-oil-lakes",
+    "name": "Oil lakes",
+    "catalogTier": "P1",
+    "depthBand": "Surface",
+    "landformIds": [
+      "landform-basin"
+    ],
+    "biomeIds": [
+      "biome-barren-rock"
+    ],
+    "hydrosphereIds": [],
+    "surfaceFeatureIds": [],
+    "geologyProvinceIds": [
+      "geology-province-carbon-basin"
+    ],
+    "substanceIds": [
+      "substance-liquid-fuel-deposit"
+    ],
+    "geologyProcessIds": [
+      "geology-process-oil-gas-migration-and-trapping"
+    ],
+    "depositShapeIds": [
+      "deposit-shape-reservoir-trap"
+    ],
+    "description": "Advanced surface find-site archetype for Liquid Fuel Deposit, reconciled from the Desktop P1 survey/deposit catalogue. Spawn probability, procedural predicates and deposit instances remain game state.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 4 - Surface Deposit & Decoration Generation/FindSiteCatalog.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "find-site-volcanic-crater-lakes",
+    "name": "Volcanic crater lakes",
+    "catalogTier": "P1",
+    "depthBand": "Surface",
+    "landformIds": [
+      "landform-mountains"
+    ],
+    "biomeIds": [
+      "biome-volcanic-field"
+    ],
+    "hydrosphereIds": [
+      "hydrosphere-mineral-rich-water"
+    ],
+    "surfaceFeatureIds": [
+      "feature-lava-flow",
+      "feature-ash-cover"
+    ],
+    "geologyProvinceIds": [
+      "geology-province-volcanic"
+    ],
+    "substanceIds": [
+      "substance-acidic-liquid"
+    ],
+    "geologyProcessIds": [
+      "geology-process-volcanic-activity"
+    ],
+    "depositShapeIds": [
+      "deposit-shape-basin-fill"
+    ],
+    "description": "Advanced surface find-site archetype for Acidic Liquid, reconciled from the Desktop P1 survey/deposit catalogue. Spawn probability, procedural predicates and deposit instances remain game state.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 4 - Surface Deposit & Decoration Generation/FindSiteCatalog.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "find-site-soda-lakes",
+    "name": "Soda lakes",
+    "catalogTier": "P1",
+    "depthBand": "Surface",
+    "landformIds": [
+      "landform-basin"
+    ],
+    "biomeIds": [
+      "biome-desert"
+    ],
+    "hydrosphereIds": [
+      "hydrosphere-brine"
+    ],
+    "surfaceFeatureIds": [
+      "feature-salt-flat"
+    ],
+    "geologyProvinceIds": [
+      "geology-province-salt-rich"
+    ],
+    "substanceIds": [
+      "substance-alkaline-liquid"
+    ],
+    "geologyProcessIds": [
+      "geology-process-evaporite-salt-deposition"
+    ],
+    "depositShapeIds": [
+      "deposit-shape-basin-fill"
+    ],
+    "description": "Advanced surface find-site archetype for Alkaline Liquid, reconciled from the Desktop P1 survey/deposit catalogue. Spawn probability, procedural predicates and deposit instances remain game state.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 4 - Surface Deposit & Decoration Generation/FindSiteCatalog.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "find-site-frozen-methane-vents",
+    "name": "Frozen methane vents",
+    "catalogTier": "P1",
+    "depthBand": "Surface",
+    "landformIds": [
+      "landform-plateau"
+    ],
+    "biomeIds": [
+      "biome-ice-sheet"
+    ],
+    "hydrosphereIds": [
+      "hydrosphere-frozen-water"
+    ],
+    "surfaceFeatureIds": [
+      "feature-ice-cover"
+    ],
+    "geologyProvinceIds": [],
+    "substanceIds": [
+      "substance-gas-fuel-deposit"
+    ],
+    "geologyProcessIds": [
+      "geology-process-pipe-conduit-formation"
+    ],
+    "depositShapeIds": [
+      "deposit-shape-pipe"
+    ],
+    "description": "Advanced surface find-site archetype for Gas Fuel Deposit, reconciled from the Desktop P1 survey/deposit catalogue. Spawn probability, procedural predicates and deposit instances remain game state.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 4 - Surface Deposit & Decoration Generation/FindSiteCatalog.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "find-site-subsurface-veins-near-volcanic-zones",
+    "name": "Subsurface veins near volcanic zones",
+    "catalogTier": "P1",
+    "depthBand": "Medium",
+    "landformIds": [
+      "landform-mountains"
+    ],
+    "biomeIds": [],
+    "hydrosphereIds": [
+      "hydrosphere-mineral-rich-water"
+    ],
+    "surfaceFeatureIds": [],
+    "geologyProvinceIds": [
+      "geology-province-hydrothermal"
+    ],
+    "substanceIds": [
+      "substance-reactive-metal-ore"
+    ],
+    "geologyProcessIds": [
+      "geology-process-hydrothermal-mineralisation"
+    ],
+    "depositShapeIds": [
+      "deposit-shape-vein"
+    ],
+    "description": "Advanced medium find-site archetype for Reactive Metal Ore, reconciled from the Desktop P1 survey/deposit catalogue. Spawn probability, procedural predicates and deposit instances remain game state.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 4 - Surface Deposit & Decoration Generation/FindSiteCatalog.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "find-site-deep-subsurface-reservoirs",
+    "name": "Deep subsurface reservoirs",
+    "catalogTier": "P1",
+    "depthBand": "Medium",
+    "landformIds": [
+      "landform-basin"
+    ],
+    "biomeIds": [],
+    "hydrosphereIds": [],
+    "surfaceFeatureIds": [],
+    "geologyProvinceIds": [
+      "geology-province-carbon-basin"
+    ],
+    "substanceIds": [
+      "substance-lubricant-capable-liquid"
+    ],
+    "geologyProcessIds": [
+      "geology-process-oil-gas-migration-and-trapping"
+    ],
+    "depositShapeIds": [
+      "deposit-shape-reservoir-trap"
+    ],
+    "description": "Advanced medium find-site archetype for Lubricant-Capable Liquid, reconciled from the Desktop P1 survey/deposit catalogue. Spawn probability, procedural predicates and deposit instances remain game state.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 4 - Surface Deposit & Decoration Generation/FindSiteCatalog.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "find-site-underground-hydrocarbon-reservoirs",
+    "name": "Underground hydrocarbon reservoirs",
+    "catalogTier": "P1",
+    "depthBand": "Medium",
+    "landformIds": [
+      "landform-basin"
+    ],
+    "biomeIds": [],
+    "hydrosphereIds": [],
+    "surfaceFeatureIds": [],
+    "geologyProvinceIds": [
+      "geology-province-carbon-basin"
+    ],
+    "substanceIds": [
+      "substance-liquid-fuel-deposit"
+    ],
+    "geologyProcessIds": [
+      "geology-process-oil-gas-migration-and-trapping"
+    ],
+    "depositShapeIds": [
+      "deposit-shape-reservoir-trap"
+    ],
+    "description": "Advanced medium find-site archetype for Liquid Fuel Deposit, reconciled from the Desktop P1 survey/deposit catalogue. Spawn probability, procedural predicates and deposit instances remain game state.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 4 - Surface Deposit & Decoration Generation/FindSiteCatalog.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "find-site-underground-brine-pockets",
+    "name": "Underground brine pockets",
+    "catalogTier": "P1",
+    "depthBand": "Medium",
+    "landformIds": [
+      "landform-basin"
+    ],
+    "biomeIds": [],
+    "hydrosphereIds": [
+      "hydrosphere-brine"
+    ],
+    "surfaceFeatureIds": [],
+    "geologyProvinceIds": [
+      "geology-province-salt-rich"
+    ],
+    "substanceIds": [
+      "substance-saltwater"
+    ],
+    "geologyProcessIds": [
+      "geology-process-groundwater-storage-flow"
+    ],
+    "depositShapeIds": [
+      "deposit-shape-pocket"
+    ],
+    "description": "Advanced medium find-site archetype for Saltwater, reconciled from the Desktop P1 survey/deposit catalogue. Spawn probability, procedural predicates and deposit instances remain game state.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 4 - Surface Deposit & Decoration Generation/FindSiteCatalog.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "find-site-acidic-springs",
+    "name": "Acidic springs",
+    "catalogTier": "P1",
+    "depthBand": "Medium",
+    "landformIds": [
+      "landform-mountains"
+    ],
+    "biomeIds": [],
+    "hydrosphereIds": [
+      "hydrosphere-mineral-rich-water"
+    ],
+    "surfaceFeatureIds": [],
+    "geologyProvinceIds": [
+      "geology-province-hydrothermal"
+    ],
+    "substanceIds": [
+      "substance-acidic-liquid"
+    ],
+    "geologyProcessIds": [
+      "geology-process-hydrothermal-mineralisation"
+    ],
+    "depositShapeIds": [
+      "deposit-shape-fracture-network",
+      "deposit-shape-channel"
+    ],
+    "description": "Advanced medium find-site archetype for Acidic Liquid, reconciled from the Desktop P1 survey/deposit catalogue. Spawn probability, procedural predicates and deposit instances remain game state.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 4 - Surface Deposit & Decoration Generation/FindSiteCatalog.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "find-site-underground-gas-pockets",
+    "name": "Underground gas pockets",
+    "catalogTier": "P1",
+    "depthBand": "Medium",
+    "landformIds": [
+      "landform-basin"
+    ],
+    "biomeIds": [],
+    "hydrosphereIds": [],
+    "surfaceFeatureIds": [],
+    "geologyProvinceIds": [
+      "geology-province-carbon-basin"
+    ],
+    "substanceIds": [
+      "substance-gas-fuel-deposit"
+    ],
+    "geologyProcessIds": [
+      "geology-process-oil-gas-migration-and-trapping"
+    ],
+    "depositShapeIds": [
+      "deposit-shape-cavern-system",
+      "deposit-shape-reservoir-trap"
+    ],
+    "description": "Advanced medium find-site archetype for Gas Fuel Deposit, reconciled from the Desktop P1 survey/deposit catalogue. Spawn probability, procedural predicates and deposit instances remain game state.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 4 - Surface Deposit & Decoration Generation/FindSiteCatalog.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "find-site-deep-underground-bands",
+    "name": "Deep underground bands",
+    "catalogTier": "P1",
+    "depthBand": "Deep",
+    "landformIds": [],
+    "biomeIds": [],
+    "hydrosphereIds": [],
+    "surfaceFeatureIds": [],
+    "geologyProvinceIds": [
+      "geology-province-ancient-crust"
+    ],
+    "substanceIds": [
+      "substance-magnetic-metal-ore"
+    ],
+    "geologyProcessIds": [
+      "geology-process-deep-crustal-deformation",
+      "geology-process-metamorphism"
+    ],
+    "depositShapeIds": [
+      "deposit-shape-folded-band",
+      "deposit-shape-layer"
+    ],
+    "description": "Advanced deep find-site archetype for Magnetic Metal Ore, reconciled from the Desktop P1 survey/deposit catalogue. Spawn probability, procedural predicates and deposit instances remain game state.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 4 - Surface Deposit & Decoration Generation/FindSiteCatalog.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "find-site-deep-underground-mines",
+    "name": "Deep underground mines",
+    "catalogTier": "P1",
+    "depthBand": "Deep",
+    "landformIds": [],
+    "biomeIds": [],
+    "hydrosphereIds": [],
+    "surfaceFeatureIds": [],
+    "geologyProvinceIds": [
+      "geology-province-ancient-crust"
+    ],
+    "substanceIds": [
+      "substance-structural-metal-ore"
+    ],
+    "geologyProcessIds": [
+      "geology-process-ore-concentration"
+    ],
+    "depositShapeIds": [
+      "deposit-shape-ore-body",
+      "deposit-shape-vein"
+    ],
+    "description": "Advanced deep find-site archetype for Structural Metal Ore, reconciled from the Desktop P1 survey/deposit catalogue. Spawn probability, procedural predicates and deposit instances remain game state.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 4 - Surface Deposit & Decoration Generation/FindSiteCatalog.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "find-site-mica-like-seams",
+    "name": "Mica-like seams",
+    "catalogTier": "P1",
+    "depthBand": "Deep",
+    "landformIds": [],
+    "biomeIds": [],
+    "hydrosphereIds": [],
+    "surfaceFeatureIds": [],
+    "geologyProvinceIds": [
+      "geology-province-ancient-crust"
+    ],
+    "substanceIds": [
+      "substance-insulating-mineral"
+    ],
+    "geologyProcessIds": [
+      "geology-process-metamorphism"
+    ],
+    "depositShapeIds": [
+      "deposit-shape-seam",
+      "deposit-shape-vein"
+    ],
+    "description": "Advanced deep find-site archetype for Insulating Mineral, reconciled from the Desktop P1 survey/deposit catalogue. Spawn probability, procedural predicates and deposit instances remain game state.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 4 - Surface Deposit & Decoration Generation/FindSiteCatalog.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
   }
 ]

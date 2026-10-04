@@ -192,7 +192,7 @@ The Universe Directory now records the three current MineIT games as consumer ca
 
 **MineIT Desktop** is the full 3D mining game on the standard ship scenario. It generates a walkable surface from this vocabulary. Seeds, elevation and deposit instances remain Desktop runtime.
 
-**MineIT Mobile** is the corporation-building game. Landscapes display as a grid of squares. Each square should name landform (shape) and biome (cover), and may name water, feature and find-site class. The grid itself is Mobile session state on top of a named world.
+**MineIT Mobile** is the corporation-building game. Landscapes display as a grid of squares. Each square should name landform (shape) and biome (cover), and may name water, feature and find-site class. The grid itself is Mobile session state on top of a named world. When that world has a matching landscape tileset, Mobile should draw those 1:1 tiles so neighbouring squares share lighting, palette and landform language. A tileset is world art, not a second canonical map.
 
 **MineIT Single Mine** is a small single-mine simulator. A play session is one site: one world, one landform/biome context, one find-site class, and local extraction state. The site is not a new canonical world.
 
@@ -213,7 +213,7 @@ All three games consume substances, parts, machines and buildings from the same 
 - Authored maps for Koplin 3's two moons
 - Per-continent land summaries for Koplin 3 beyond the three inhabited masses already in the Lore Bible
 - Ring, comet and star type catalogues as first-class Directory collections
-- Image prompts for landform/biome tiles
+- Landscape tilesets for remaining named worlds after Koplin 3
 
 # Appendix A — Designer truth: Desktop generation provenance
 

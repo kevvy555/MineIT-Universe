@@ -26,7 +26,7 @@
     "status": "active",
     "knowledgeScope": "designer truth",
     "description": "The mobile game: build and run a mining corporation across Commonwealth space. Landscapes display as a grid of squares on a named world.",
-    "sharedLandUse": "Each landscape square names a landform (shape) and biome (cover), and may name hydrosphere, surface feature and find-site class. The grid is Mobile session state on a Directory world. Do not store a second canonical map in the mobile app.",
+    "sharedLandUse": "Each landscape square names a landform (shape) and biome (cover), and may name hydrosphere, surface feature and find-site class. When a named world has a landscapeTileset, Mobile should use that world's matching tile art so adjacent squares share lighting and palette. The grid itself remains Mobile session state. Do not store a second canonical map in the mobile app.",
     "sharedSubstanceUse": "Buyers, substances, buildings and ships come from Universe. Collection logistics, contract prices and square ownership remain save state.",
     "scenarioNotes": "Operates in the Year-5326 commercial present. Worlds in the Directory are the same worlds shown on the map; generated-expansion worlds stay labelled as such.",
     "sourceDocumentId": "lore-koplin-world-surface",

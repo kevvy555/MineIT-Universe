@@ -13,6 +13,8 @@ const COLLECTION_LABELS = {
   surfaceHydrospheres: 'Hydrosphere',
   geologyProvinces: 'Geology Province',
   findSites: 'Find Site',
+  landscapeTilesets: 'Landscape Tileset',
+  landscapeTiles: 'Landscape Tile',
   settlements: 'Settlement / Station',
   organisations: 'Organisation',
   organisationUnits: 'Organisation Unit',
@@ -23,6 +25,17 @@ const COLLECTION_LABELS = {
   parts: 'Part',
   machines: 'Machine',
   buildings: 'Building',
+  researchTechnologies: 'Research Technology',
+  substanceArchetypes: 'Substance Archetype',
+  substanceProperties: 'Substance Property',
+  rarityBands: 'Rarity Band',
+  geologyProcesses: 'Geology Process',
+  depositShapes: 'Deposit Shape',
+  depositStates: 'Deposit State',
+  stellarTypes: 'Stellar Type',
+  cometTypes: 'Comet Type',
+  ringSystemTypes: 'Ring-System Type',
+  starSystemTypes: 'Star-System Type',
   games: 'Game',
   species: 'Species / People Category',
   people: 'Person',
@@ -42,7 +55,9 @@ const COLLECTION_LABELS = {
 
 const SCALAR_REFS = {
   starSystems: ['regionId', 'primaryAuthorityOrganisationId', 'homeworldId'],
-  planets: ['systemId', 'parentPlanetId', 'governingOrganisationId', 'celestialBodyKindId', 'worldTypeId', 'atmosphereTypeId'],
+  planets: ['systemId', 'parentPlanetId', 'governingOrganisationId', 'celestialBodyKindId', 'worldTypeId', 'atmosphereTypeId', 'landscapeTilesetId'],
+  landscapeTilesets: ['planetId', 'intendedGameId'],
+  landscapeTiles: ['tilesetId', 'planetId', 'landformId', 'biomeId', 'hydrosphereId'],
   worldTypes: ['appliesToKindId'],
   settlements: ['systemId', 'planetId', 'parentLocationId', 'governingOrganisationId'],
   organisations: ['headquartersLocationId', 'parentOrganisationId'],
@@ -65,6 +80,7 @@ const SCALAR_REFS = {
 const ARRAY_REFS = {
   regions: ['administrativeOrganisationIds', 'systemIds'],
   planets: ['dominantLandformIds', 'dominantBiomeIds', 'dominantHydrosphereIds'],
+  landscapeTilesets: ['landformIds', 'biomeIds', 'hydrosphereIds', 'adjacencyPreviewIds'],
   organisations: ['economicSectorIds'],
   facilities: ['partnerOrganisationIds'],
   operations: ['managerPersonIds', 'procurementPersonIds', 'shipIds', 'productIds', 'shipClassIds'],
@@ -73,7 +89,9 @@ const ARRAY_REFS = {
   parts: ['substanceIds', 'machineIds'],
   machines: ['partIds'],
   buildings: ['structuralShellSubstanceIds', 'fitOutSubstanceIds', 'machineIds'],
-  findSites: ['landformIds', 'biomeIds', 'hydrosphereIds', 'surfaceFeatureIds', 'geologyProvinceIds', 'substanceIds'],
+  findSites: ['landformIds', 'biomeIds', 'hydrosphereIds', 'surfaceFeatureIds', 'geologyProvinceIds', 'substanceIds', 'geologyProcessIds', 'depositShapeIds'],
+  geologyProcesses: ['depositShapeIds'],
+  researchTechnologies: ['prerequisiteTechnologyIds', 'unlockedPartIds', 'unlockedMachineIds', 'unlockedBuildingIds', 'unlockedSubstanceIds'],
   shipLines: ['productionOperationIds'],
   shipClasses: ['designerOrganisationIds'],
   ships: ['operationIds', 'personIds'],
@@ -132,6 +150,12 @@ export class UniverseCatalogue {
     if (slash < 0) return null;
     const file = normalized.slice(slash + 1).replace(/\.[^.]+$/, '.png');
     return `${normalized.slice(0, slash)}/Originals/${file}`;
+  }
+  landscapeTilesForPlanet(planetId) {
+    return this.collection('landscapeTiles').filter(tile => tile.planetId === planetId);
+  }
+  landscapeTilesForTileset(tilesetId) {
+    return this.collection('landscapeTiles').filter(tile => tile.tilesetId === tilesetId);
   }
 }
 
@@ -203,7 +227,11 @@ export function validateUniverse(catalogue) {
     if (!knownIds.has(value)) errors.push(`${sourceId}.${field} references missing entity ${value}.`);
   };
 
-  for (const { record } of catalogue.allRecords()) if (record.sourceDocumentId) ref(record.id, 'sourceDocumentId', record.sourceDocumentId);
+  for (const { record } of catalogue.allRecords()) {
+    if (record.sourceDocumentId) ref(record.id, 'sourceDocumentId', record.sourceDocumentId);
+    if (record.provenance?.sourceId) ref(record.id, 'provenance.sourceId', record.provenance.sourceId);
+    if (record.desktopProfile?.gameId) ref(record.id, 'desktopProfile.gameId', record.desktopProfile.gameId);
+  }
   for (const [collectionName, fields] of Object.entries(SCALAR_REFS)) {
     for (const record of catalogue.collection(collectionName)) fields.forEach(field => ref(record.id, field, record[field]));
   }

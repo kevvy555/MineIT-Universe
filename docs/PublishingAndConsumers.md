@@ -32,7 +32,7 @@ const manifest = await fetch(`${universeBase}manifest.json`).then(response => {
 const people = await fetch(`${universeBase}${manifest.collections.people}`).then(response => response.json());
 ```
 
-MineIT Mobile should wrap this behind a dedicated loader/catalogue rather than scattering network calls through gameplay services.
+MineIT Mobile should wrap this behind a dedicated loader/catalogue rather than scattering network calls through gameplay services. When a world has `landscapeTilesetId`, Mobile should load that tileset's 1:1 tiles by landform and biome ID rather than shipping a generic grass/mountain pair.
 
 ## Cross-origin browser access
 
