@@ -319,16 +319,15 @@ Key physical rules:
 
 Natural biological occurrence, open-agriculture suitability and immutable environmental constraints are canonical design facts. Current stock, carrying capacity, managed expansion, establishment time, feed use and player-created agriculture remain per-save Mobile state.
 
-### Build — 8
+### Build — 7
 
 1. Timber
 2. Plant Fibre
-3. Stone
+3. Stone *(Construction Stone / general aggregate role in Mobile)*
 4. Clay
 5. Silica Sand
 6. Limestone
 7. Gypsum
-8. Mica
 
 Build resources mix renewable biological construction feedstock with familiar bulk geological materials. Mobile may roll all of these into the Build gameplay role while retaining distinct stable resource identities.
 
@@ -350,7 +349,7 @@ In particular, spacecraft propulsion uses separate manufactured/refined fuel pro
 
 Environmental occurrence remains physically constrained. Biomass/Peat require suitable biological history; Methane Ice requires cold volatile retention; Uranium Ore is geological; Hydrogen/Helium-3 may use atmospheric or other explicitly supported occurrence routes.
 
-### Ore — 25
+### Ore / industrial minerals — 26
 
 1. Iron Ore
 2. Chromium Ore
@@ -369,18 +368,22 @@ Environmental occurrence remains physically constrained. Biomass/Peat require su
 15. Sulfur
 16. Phosphate Rock
 17. Quartz
-18. Silver
-19. Gold
-20. Platinum
-21. Palladium
-22. Diamond
-23. Ruby
-24. Sapphire
-25. Emerald
+18. Mica
+19. Silver
+20. Gold
+21. Platinum
+22. Palladium
+23. Diamond
+24. Ruby
+25. Sapphire
+26. Emerald
 
 The Ore gameplay category is intentionally broad. It contains common industrial metals, technology/strategic metals, precious metals, industrial minerals and gemstones, but their canonical identities remain distinct.
 
 ### Important modelling rules
+
+- Mica is intentionally classified as an Ore / industrial mineral in Mobile. Its specialist insulating/electrical/heat-resistant role is less direct than the bulk construction materials grouped under Build.
+- Stone retains its stable identity; Mobile may present it as Construction Stone to distinguish general aggregate/hard-rock construction material from Limestone and Gypsum.
 
 - Surface Iron Nodules are a **deposit/find-site expression of Iron Ore**, not a separate traded resource.
 - Generic legacy identities such as Reactive Ore, Conductive Ore and Magnetic Ore should migrate to familiar specific resources rather than remain player-facing Mobile canon.
@@ -396,9 +399,9 @@ The Ore gameplay category is intentionally broad. It contains common industrial 
 | Mobile category | Candidate resources |
 | --- | ---: |
 | Food | 6 biological/agricultural + Synthetic Nutrient manufactured |
-| Build | 8 |
+| Build | 7 |
 | Fuel | 9 natural feedstocks |
-| Ore | 25 |
+| Ore / industrial minerals | 26 |
 | **Natural non-Food total** | **42** |
 
 Food is modelled through the separate biological/agricultural layer. Fusion Fuel and Propellant are manufactured spacecraft consumables and are not counted among the 42 natural non-Food resources.
@@ -549,7 +552,7 @@ Legend:
 | Silica Sand | Build | Silica Mineral | — | **Primary** | **Secondary** | — | — | Dunes, beaches and buried sand beds |
 | Limestone | Build | Carbonate Mineral *(proposed generic type)* | — | **Primary** | **Primary** | **Secondary** | — | Sedimentary beds; deep extraction usually unnecessary |
 | Gypsum | Build | Sulfate Mineral *(proposed generic type)* | — | **Primary** | **Primary** | **Secondary** | — | Evaporite and sedimentary beds |
-| Mica | Build | Insulating Mineral | — | **Secondary** | **Primary** | **Primary** | **Secondary** | Surface exposure possible; commonly mined from seams |
+| Mica | Ore | Insulating Mineral | — | **Secondary** | **Primary** | **Primary** | **Secondary** | Surface exposure possible; commonly mined from seams |
 | Biomass | Fuel | Organic Biomass | — | **Primary** | — | — | — | Active/recent biological material |
 | Peat | Fuel | Solid Fuel Deposit | — | **Primary** | **Secondary** | — | — | Surface bogs and shallow organic layers |
 | Coal | Fuel | Solid Fuel Deposit | — | **Secondary** | **Primary** | **Primary** | **Secondary** | Surface exposure possible; commercial seams predominantly subsurface |
