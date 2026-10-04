@@ -360,8 +360,8 @@ for (const substance of collections.substances ?? []) {
   if (!substance.industrialRole) errors.push(`${substance.id}: industrialRole missing.`);
   if (!substance.sourceDocumentId) errors.push(`${substance.id}: sourceDocumentId missing.`);
 }
-if ((collections.substances ?? []).length && (collections.substances ?? []).length !== 75) {
-  warnings.push(`Substance catalogue expected 75 P0/P1 categories; found ${(collections.substances ?? []).length}.`);
+if ((collections.substances ?? []).length !== 80) {
+  errors.push(`Substance catalogue must contain 75 source categories plus 5 Mobile integration parent categories; found ${(collections.substances ?? []).length}.`);
 }
 for (const part of collections.parts ?? []) {
   if (!part.category) errors.push(`${part.id}: category missing.`);
