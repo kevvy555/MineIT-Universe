@@ -238,3 +238,23 @@ Before the Mobile galaxy/resource implementation begins:
 7. preserve legacy Mobile resource IDs only as migration aliases where required.
 
 Universe remains the source of truth; the Android repository must not hand-maintain a second physical-plausibility table that can drift.
+
+
+## Mobile uses familiar raw resources
+
+MineIT Mobile is set in the known Koplin-region commercial economy. Its player-facing raw resources should therefore use **familiar, stable names** such as Iron Ore, Copper Ore, Gold, Coal, Crude Oil and Limestone.
+
+The existing 75-substance industrial catalogue was designed partly to support other MineIT scenarios in which an expedition is stranded in an unknown galaxy and local substances may receive generated identities. That generic industrial catalogue remains useful and canonical, but it is **not the direct player-facing raw-resource list for MineIT Mobile**.
+
+Mobile therefore needs a canonical familiar raw-resource projection defined in Universe before gameplay implementation.
+
+Rules:
+
+- keep the 75-substance industrial catalogue intact for shared industrial classification and other scenarios;
+- define Mobile's familiar raw-resource identities canonically in Universe rather than only in Android;
+- map familiar resources to broader industrial substance classes where useful;
+- keep the current Mobile gameplay roll-ups Food / Build / Fuel / Ore;
+- future unique/exotic discoveries may extend the resource set later, but are out of scope for the current galaxy/charter implementation;
+- do not expose generated alien-material naming in ordinary Koplin-region Mobile contracts at this stage.
+
+The exact familiar raw-resource catalogue should be approved before structured records are added.
