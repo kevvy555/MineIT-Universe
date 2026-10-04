@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 10,
-  "contentVersion": "0.11.1",
+  "schemaVersion": 11,
+  "contentVersion": "0.12.0",
   "universeId": "mineit",
   "name": "MineIT Universe",
   "canonicalYear": 5326,
@@ -105,6 +105,9 @@
     "cometTypes": "comet-types.json",
     "ringSystemTypes": "ring-system-types.json",
     "starSystemTypes": "star-system-types.json",
-    "extractionZones": "extraction-zones.json"
+    "extractionZones": "extraction-zones.json",
+    "mobileResourceDefinitions": "mobile-resource-definitions.json",
+    "mobileResourceOccurrenceProfiles": "mobile-resource-occurrence-profiles.json",
+    "mobileBiologicalResources": "mobile-biological-resources.json"
   }
 }
