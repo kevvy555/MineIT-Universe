@@ -146,6 +146,7 @@ const expectedCatalogueCounts = {
   geologyProcesses: 29,
   depositShapes: 36,
   depositStates: 10,
+  extractionZones: 5,
   stellarTypes: 16,
   cometTypes: 14,
   ringSystemTypes: 12,
@@ -154,6 +155,21 @@ const expectedCatalogueCounts = {
 for (const [name, expected] of Object.entries(expectedCatalogueCounts)) {
   const actual = (collections[name] ?? []).length;
   if (actual !== expected) errors.push(`${name} catalogue must contain ${expected} rows; found ${actual}.`);
+}
+const expectedExtractionZones = [
+  'extraction-zone-atmosphere',
+  'extraction-zone-surface',
+  'extraction-zone-shallow',
+  'extraction-zone-medium',
+  'extraction-zone-deep'
+];
+const extractionZones = collections.extractionZones ?? [];
+for (let index = 0; index < expectedExtractionZones.length; index += 1) {
+  const zone = extractionZones[index];
+  const expectedId = expectedExtractionZones[index];
+  if (!zone || zone.id !== expectedId) errors.push(`extractionZones[${index}] must be ${expectedId}.`);
+  if (zone && zone.order !== index) errors.push(`${zone.id}: order must be ${index}.`);
+  if (zone && zone.knowledgeScope !== 'designer truth') errors.push(`${zone.id}: extraction zones must be designer truth.`);
 }
 const researchCategories = new Set(['Salvage', 'PartManufacturing', 'Machine', 'Building', 'SubstanceScience', 'Processing']);
 for (const technology of collections.researchTechnologies ?? []) {
