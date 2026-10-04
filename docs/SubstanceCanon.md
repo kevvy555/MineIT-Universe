@@ -138,6 +138,12 @@ This is a source-reconciliation tool, not a second production catalogue. `data/`
 
 CI runs these checks on `main`, `develop` and `feature/**` pushes, and on pull requests targeting `main` or `develop`.
 
+## Mobile resource occurrence integration
+
+MineIT Mobile's persistent-galaxy redesign requires a canonical physical-eligibility layer between substance identity and game-owned deposit generation. The approved consumer boundary and the required future `substanceOccurrenceProfiles` collection are defined in `docs/MobileResourceOccurrenceIntegration.md`.
+
+Mobile may project canonical substances into gameplay roles such as Food/Build/Fuel/Ore, but must not maintain a conflicting authored substance catalogue or independent hard physical-plausibility table.
+
 ## Follow-ons
 
 - Commercial `resourceRequirements` should migrate to stable `substanceId` references.
