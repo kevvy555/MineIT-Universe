@@ -1736,7 +1736,9 @@
     "tier": "P0",
     "industrialRole": "Carbonate rock, construction and chemical feedstock",
     "description": "Carbonate Mineral is a broad Commonwealth industrial category for naturally occurring carbonate-rich mineral material such as limestone feedstock.",
-    "canonStatus": "working canon"
+    "canonStatus": "working canon",
+    "sourceDocumentId": "lore-koplin-materials-and-substances",
+    "sourceSection": "Mobile familiar-resource integration"
   },
   {
     "id": "substance-sulfate-mineral",
@@ -1750,7 +1752,9 @@
     "tier": "P0",
     "industrialRole": "Construction, cement and chemical feedstock",
     "description": "Sulfate Mineral is a broad Commonwealth industrial category for naturally occurring sulfate-rich mineral material such as gypsum feedstock.",
-    "canonStatus": "working canon"
+    "canonStatus": "working canon",
+    "sourceDocumentId": "lore-koplin-materials-and-substances",
+    "sourceSection": "Mobile familiar-resource integration"
   },
   {
     "id": "substance-frozen-volatile-deposit",
@@ -1764,7 +1768,9 @@
     "tier": "P1",
     "industrialRole": "Cryogenic volatile and fuel feedstock",
     "description": "Frozen Volatile Deposit covers naturally trapped cryogenic volatile material such as methane-rich ice and clathrate-style deposits.",
-    "canonStatus": "working canon"
+    "canonStatus": "working canon",
+    "sourceDocumentId": "lore-koplin-materials-and-substances",
+    "sourceSection": "Mobile familiar-resource integration"
   },
   {
     "id": "substance-native-carbon-mineral",
@@ -1778,7 +1784,9 @@
     "tier": "P1",
     "industrialRole": "Hard carbon crystal, cutting and high-value industrial feedstock",
     "description": "Native Carbon Mineral covers naturally occurring elemental-carbon mineral material including diamond-bearing deposits.",
-    "canonStatus": "working canon"
+    "canonStatus": "working canon",
+    "sourceDocumentId": "lore-koplin-materials-and-substances",
+    "sourceSection": "Mobile familiar-resource integration"
   },
   {
     "id": "substance-precious-metal-ore",
@@ -1792,6 +1800,8 @@
     "tier": "P1",
     "industrialRole": "Precious-metal refining, advanced industry and high-value trade",
     "description": "Precious Metal Ore is a broad Commonwealth industrial category for naturally occurring silver-, gold-, platinum- and palladium-bearing ores.",
-    "canonStatus": "working canon"
+    "canonStatus": "working canon",
+    "sourceDocumentId": "lore-koplin-materials-and-substances",
+    "sourceSection": "Mobile familiar-resource integration"
   }
 ]
