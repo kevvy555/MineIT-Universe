@@ -319,7 +319,7 @@ Key physical rules:
 
 Natural biological occurrence, open-agriculture suitability and immutable environmental constraints are canonical design facts. Current stock, carrying capacity, managed expansion, establishment time, feed use and player-created agriculture remain per-save Mobile state.
 
-### Build — 7
+### Build — 8
 
 1. Timber
 2. Plant Fibre
@@ -328,47 +328,57 @@ Natural biological occurrence, open-agriculture suitability and immutable enviro
 5. Silica Sand
 6. Limestone
 7. Gypsum
+8. Mica
 
 Build resources mix renewable biological construction feedstock with familiar bulk geological materials. Mobile may roll all of these into the Build gameplay role while retaining distinct stable resource identities.
 
-### Fuel — 7
+### Fuel — 9 natural feedstocks
 
 1. Biomass
 2. Peat
 3. Coal
 4. Crude Oil
 5. Natural Gas
-6. Methane Ice
-7. Uranium Ore
+6. Hydrogen
+7. Methane Ice
+8. Uranium Ore
+9. Helium-3
 
-These are raw energy feedstocks, not interchangeable physical fuels. Mobile may initially project them into the Fuel gameplay role, while future power/refining technology can use explicit compatibility.
+These are natural raw energy feedstocks, **not universal interchangeable operational fuel**. Mobile owns end-use compatibility.
 
-Environmental occurrence must be physically constrained. For example, ordinary Biomass and Peat require biological history; Methane Ice is favoured by cold/volatile-rich environments; Uranium Ore is geological rather than biological.
+In particular, spacecraft propulsion uses separate manufactured/refined fuel products rather than accepting arbitrary members of this natural Fuel list. Fusion Fuel and Propellant are manufactured gameplay resources and therefore are not natural world-occurrence entries in this list.
 
-### Ore — 20
+Environmental occurrence remains physically constrained. Biomass/Peat require suitable biological history; Methane Ice requires cold volatile retention; Uranium Ore is geological; Hydrogen/Helium-3 may use atmospheric or other explicitly supported occurrence routes.
+
+### Ore — 25
 
 1. Iron Ore
-2. Copper Ore
-3. Bauxite (Aluminium Ore)
-4. Nickel Ore
-5. Tin Ore
-6. Zinc Ore
-7. Lead Ore
-8. Chromium Ore
-9. Cobalt Ore
-10. Titanium Ore
-11. Lithium Ore
-12. Rare Earth Ore
-13. Silver Ore
-14. Gold Ore
-15. Platinum Ore
-16. Palladium Ore
-17. Diamond
-18. Ruby
-19. Sapphire
-20. Emerald
+2. Chromium Ore
+3. Copper Ore
+4. Tin Ore
+5. Bauxite
+6. Titanium Ore
+7. Nickel Ore
+8. Cobalt Ore
+9. Lithium Ore
+10. Zinc Ore
+11. Lead Ore
+12. Tungsten Ore
+13. Rare Earth Ore
+14. Graphite
+15. Sulfur
+16. Phosphate Rock
+17. Quartz
+18. Silver
+19. Gold
+20. Platinum
+21. Palladium
+22. Diamond
+23. Ruby
+24. Sapphire
+25. Emerald
 
-The Ore gameplay category is intentionally broad. It contains common industrial metals, technology/strategic metals, precious metals and gemstones, but their canonical identities remain distinct.
+The Ore gameplay category is intentionally broad. It contains common industrial metals, technology/strategic metals, precious metals, industrial minerals and gemstones, but their canonical identities remain distinct.
 
 ### Important modelling rules
 
@@ -386,11 +396,12 @@ The Ore gameplay category is intentionally broad. It contains common industrial 
 | Mobile category | Candidate resources |
 | --- | ---: |
 | Food | 6 biological/agricultural + Synthetic Nutrient manufactured |
-| Build | 7 |
-| Fuel | 7 |
-| Ore | 20 |
+| Build | 8 |
+| Fuel | 9 natural feedstocks |
+| Ore | 25 |
+| **Natural non-Food total** | **42** |
 
-Food is no longer provisional. It is intentionally modelled through the separate biological/agricultural layer described above rather than forced into the substance-count total.
+Food is modelled through the separate biological/agricultural layer. Fusion Fuel and Propellant are manufactured spacecraft consumables and are not counted among the 42 natural non-Food resources.
 
 
 
