@@ -452,3 +452,79 @@ Examples:
   - surface gas is exceptional seep/vent expression rather than the default deposit form.
 
 This prevents the generic category from forcing every familiar resource to use identical geology.
+
+
+## Individual familiar-resource extraction profiles
+
+**Status:** proposed Mobile occurrence model for review. These profiles narrow the generic-category envelope; they do not define spawn probabilities.
+
+Legend:
+
+- **Primary** — normal/characteristic extraction zone for this resource.
+- **Secondary** — physically plausible but less typical/less commercially important occurrence.
+- **None** — do not generate this resource at that zone without a specific authored exception.
+
+| Mobile resource | Mobile category | Generic mapping | Atmosphere | Surface | Shallow | Medium | Deep | Notes |
+| --- | --- | --- | :---: | :---: | :---: | :---: | :---: | --- |
+| Timber | Build | Woody Plant Material | — | **Primary** | — | — | — | Harvested biological construction material |
+| Plant Fibre | Build | Fibrous Plant Material | — | **Primary** | — | — | — | Harvested from surface vegetation |
+| Stone | Build | Stone Aggregate | — | **Primary** | **Secondary** | — | — | Surface rock fields and shallow quarry faces |
+| Clay | Build | Clay Mineral | — | **Primary** | **Primary** | — | — | Mud flats and shallow sediment layers |
+| Silica Sand | Build | Silica Mineral | — | **Primary** | **Secondary** | — | — | Dunes, beaches and buried sand beds |
+| Limestone | Build | Carbonate Mineral *(proposed generic type)* | — | **Primary** | **Primary** | **Secondary** | — | Sedimentary beds; deep extraction usually unnecessary |
+| Gypsum | Build | Sulfate Mineral *(proposed generic type)* | — | **Primary** | **Primary** | **Secondary** | — | Evaporite and sedimentary beds |
+| Mica | Build | Insulating Mineral | — | **Secondary** | **Primary** | **Primary** | **Secondary** | Surface exposure possible; commonly mined from seams |
+| Biomass | Fuel | Organic Biomass | — | **Primary** | — | — | — | Active/recent biological material |
+| Peat | Fuel | Solid Fuel Deposit | — | **Primary** | **Secondary** | — | — | Surface bogs and shallow organic layers |
+| Coal | Fuel | Solid Fuel Deposit | — | **Secondary** | **Primary** | **Primary** | **Secondary** | Surface exposure possible; commercial seams predominantly subsurface |
+| Crude Oil | Fuel | Liquid Fuel Deposit | — | **Secondary** | **Secondary** | **Primary** | **Primary** | Surface seeps/lakes exceptional; reservoirs normally buried |
+| Natural Gas | Fuel | Gas Fuel Deposit | — | **Secondary** | **Secondary** | **Primary** | **Primary** | Surface vents possible; commercial pockets predominantly buried |
+| Hydrogen | Fuel | High-Energy Combustible Gas | **Primary** | — | **Secondary** | **Primary** | **Primary** | Atmospheric harvesting or trapped subsurface gas |
+| Methane Ice | Fuel | Frozen Volatile Deposit *(proposed generic type)* | — | **Primary** | **Primary** | **Secondary** | — | Cold-world surface/permafrost/clathrate deposits |
+| Uranium Ore | Fuel | Radioactive Ore | — | **Secondary** | **Primary** | **Primary** | **Secondary** | Exposed occurrences possible; useful ore bodies generally subsurface |
+| Helium-3 | Fuel | Inert Gas Deposit | **Primary** | **Primary** | — | — | — | Atmospheric extraction or regolith implantation/collection |
+| Iron Ore | Ore | Structural Metal Ore | — | **Primary** | **Primary** | **Primary** | **Secondary** | Broad occurrence from outcrops to deep bodies |
+| Chromium Ore | Ore | Structural Metal Ore | — | **Secondary** | **Primary** | **Primary** | **Primary** | Favours deeper/igneous ultramafic bodies |
+| Copper Ore | Ore | Conductive Metal Ore | — | **Secondary** | **Primary** | **Primary** | **Secondary** | Surface exposures plus hydrothermal/subsurface ore bodies |
+| Tin Ore | Ore | Conductive Metal Ore | — | **Secondary** | **Primary** | **Primary** | **Secondary** | Veins and granitic/hydrothermal settings |
+| Bauxite | Ore | Light Metal Ore | — | **Primary** | **Primary** | — | — | Weathering-derived near-surface aluminium ore |
+| Titanium Ore | Ore | Light Metal Ore | — | **Primary** | **Primary** | **Primary** | **Secondary** | Heavy-mineral sands and igneous bodies |
+| Nickel Ore | Ore | Magnetic Metal Ore | — | **Secondary** | **Primary** | **Primary** | **Primary** | Sulfide/laterite/impact-linked occurrences |
+| Cobalt Ore | Ore | Magnetic Metal Ore | — | **Secondary** | **Primary** | **Primary** | **Secondary** | Often associated with nickel/copper mineralisation |
+| Lithium Ore | Ore | Reactive Metal Ore | — | **Primary** | **Primary** | **Primary** | — | Familiar Mobile identity covering brine/pegmatite-style sources |
+| Zinc Ore | Ore | Reactive Metal Ore | — | **Secondary** | **Primary** | **Primary** | **Secondary** | Commonly hydrothermal/sedimentary subsurface ore |
+| Lead Ore | Ore | Heavy Metal Ore | — | **Secondary** | **Primary** | **Primary** | **Secondary** | Vein and sediment-hosted deposits |
+| Tungsten Ore | Ore | Heavy Metal Ore | — | **Secondary** | **Primary** | **Primary** | **Primary** | Hydrothermal/skarn deposits often favour depth |
+| Rare Earth Ore | Ore | Rare Metal Ore | — | **Secondary** | **Primary** | **Primary** | **Secondary** | Weathered and hard-rock deposits |
+| Graphite | Ore | Carbon-Rich Mineral | — | **Secondary** | **Primary** | **Primary** | **Primary** | Sedimentary/metamorphic carbon deposits |
+| Sulfur | Ore | Sulfurous Mineral | — | **Primary** | **Primary** | **Secondary** | — | Volcanic and evaporitic deposits |
+| Phosphate Rock | Ore | Phosphate Mineral | — | **Primary** | **Primary** | **Secondary** | — | Sedimentary/biogenic mineral beds |
+| Quartz | Ore | Crystalline Mineral | — | **Primary** | **Primary** | **Primary** | **Secondary** | Broad occurrence; only useful concentrations become deposits |
+| Silver | Ore | Precious Metal Ore *(proposed generic type)* | — | **Secondary** | **Primary** | **Primary** | **Secondary** | Veins, polymetallic ores and surface exposures |
+| Gold | Ore | Precious Metal Ore *(proposed generic type)* | — | **Primary** | **Primary** | **Primary** | **Secondary** | Surface placer plus hard-rock veins |
+| Platinum | Ore | Precious Metal Ore *(proposed generic type)* | — | **Secondary** | **Primary** | **Primary** | **Primary** | Igneous/mafic bodies; placer occurrences possible |
+| Palladium | Ore | Precious Metal Ore *(proposed generic type)* | — | **Secondary** | **Primary** | **Primary** | **Primary** | Commonly associated with platinum/nickel systems |
+| Diamond | Ore | Native Carbon Mineral *(proposed generic type)* | — | **Primary** | **Primary** | **Secondary** | **Secondary** | Deep formation but surface placer/near-surface pipe extraction possible |
+| Ruby | Ore | Abrasive Mineral | — | **Primary** | **Primary** | **Secondary** | — | Metamorphic/placer occurrences |
+| Sapphire | Ore | Abrasive Mineral | — | **Primary** | **Primary** | **Secondary** | — | Igneous/metamorphic/placer occurrences |
+| Emerald | Ore | Crystalline Mineral | — | **Secondary** | **Primary** | **Primary** | **Secondary** | Vein/metamorphic deposits with occasional exposure |
+
+### Generator interpretation
+
+A future Mobile generator should:
+
+1. establish whether a resource is physically eligible on the world;
+2. select only from that resource's non-empty extraction zones;
+3. strongly favour **Primary** zones over **Secondary** zones;
+4. use world geology, terrain and find-site compatibility to choose the actual local deposit expression;
+5. never infer a resource merely because another resource shares the same generic category.
+
+The exact Primary/Secondary weighting is deliberately not canonical. That remains Mobile balance.
+
+### Important examples
+
+- **Diamond:** deep geological formation does not prohibit Surface extraction through placer deposits or exposed pipes.
+- **Bauxite:** deliberately Surface/Shallow because it is fundamentally a weathering product.
+- **Coal vs Peat:** both map to Solid Fuel Deposit, but Peat is overwhelmingly Surface while Coal favours Shallow/Medium.
+- **Hydrogen and Helium-3:** justify Atmosphere as a first-class extraction zone.
+- **Gold vs Platinum:** Gold has a strong Surface route through placer deposits; Platinum/Palladium should favour subsurface igneous contexts.
