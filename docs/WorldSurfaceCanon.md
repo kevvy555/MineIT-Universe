@@ -108,3 +108,12 @@ Find sites store landform, biome, hydrosphere, feature, geology-province and sub
 World types store `appliesToKindId` so a moon type cannot be attached to a rocky planet.
 
 Games store prose about shared land/substance use. They do not store collection-name strings as entity ID references.
+
+
+## Resource occurrence boundary
+
+World/body/surface vocabulary constrains what physical resource categories are plausible, but Universe does not own a Mobile save's deposit positions, abundance, reserves, quality or spawn probability.
+
+The persistent-galaxy Mobile design requires a manifest-backed canonical substance-occurrence eligibility layer linking substances to body/world/environment/geology contexts. See `docs/MobileResourceOccurrenceIntegration.md`.
+
+Find sites remain reusable encounter/deposit contexts. They are not, by themselves, a complete substance-to-world occurrence matrix.
