@@ -352,3 +352,103 @@ The Ore gameplay category is intentionally broad. It contains common industrial 
 | **Total** | **40** |
 
 The Food six are the only part of this list intentionally held open for the next design review.
+
+
+## Extraction zones and depth profile preview
+
+Universe now defines a reusable extraction-zone vocabulary in `data/extraction-zones.json`:
+
+1. **Atmosphere** — atmospheric/envelope harvesting rather than ground extraction.
+2. **Surface** — exposed collection, quarrying or very shallow excavation.
+3. **Shallow** — early subsurface pits, trenches or shallow drilling.
+4. **Medium** — established underground mining or drilling.
+5. **Deep** — advanced deep-crustal mining or deep drilling.
+
+These are **gameplay-facing extraction/access zones**, not literal geological formation depths.
+
+Where the source geology catalogue provides a physical formation/process range, retain that separately as formation-depth guidance. For example, hydrothermal mineralisation is currently catalogued at roughly `100m–10km`, while metamorphism is catalogued at roughly `5km–50km`.
+
+A resource can therefore form very deep but still have an accessible surface occurrence through uplift, erosion, impact, placer concentration or other geological processes.
+
+### Proposed non-food generic resource depth map
+
+This table is the review model for MineIT Mobile. Rows marked **Universe evidence** already have matching find-site/depth information in the current catalogue. Rows marked **proposed** fill gaps required by the familiar Mobile resource set and should become structured occurrence profiles only after approval.
+
+| Generic mapping | Familiar Mobile resources | Allowed extraction zones | Current Universe evidence / note |
+| --- | --- | --- | --- |
+| Abrasive Mineral | Ruby, Sapphire | Surface, Shallow, Medium | **Proposed** — no current find-site depth |
+| Carbon-Rich Mineral | Graphite | Surface, Shallow, Medium, Deep | **Universe evidence:** Surface old lake beds; broader depths proposed |
+| Carbonate Mineral *(new)* | Limestone | Surface, Shallow | **Proposed** |
+| Clay Mineral | Clay | Surface, Shallow | **Universe evidence:** Surface mud flats; Shallow sediment layers |
+| Conductive Metal Ore | Copper Ore, Tin Ore | Surface, Shallow, Medium | **Universe evidence:** Surface exposed seams; Medium underground ore seams |
+| Crystalline Mineral | Quartz, Emerald | Surface, Shallow, Medium, Deep | **Proposed** — no current find-site depth |
+| Fibrous Plant Material | Plant Fibre | Surface | **Proposed**, biologically surface-bound |
+| Frozen Volatile Deposit *(new)* | Methane Ice | Surface, Shallow | **Proposed**; current frozen-methane find site is Surface under Gas Fuel Deposit |
+| Gas Fuel Deposit | Natural Gas | Surface, Medium, Deep | **Universe evidence:** Surface frozen vents; Medium underground gas pockets; Deep added for buried reservoirs |
+| Heavy Metal Ore | Lead Ore, Tungsten Ore | Shallow, Medium, Deep | **Proposed** — no current find-site depth |
+| High-Energy Combustible Gas | Hydrogen | Atmosphere, Medium, Deep | **Proposed**; distinguish atmospheric harvesting from trapped subsurface gas |
+| Inert Gas Deposit | Helium-3 | Atmosphere, Surface | **Proposed**; atmospheric/regolith harvesting model |
+| Insulating Mineral | Mica | Surface, Shallow, Medium, Deep | **Universe evidence:** Surface dry mineral beds; Deep mica-like seams |
+| Light Metal Ore | Bauxite, Titanium Ore | Surface, Shallow, Medium | **Proposed** — no current find-site depth |
+| Liquid Fuel Deposit | Crude Oil | Surface, Medium, Deep | **Universe evidence:** Surface oil lakes; Medium underground hydrocarbon reservoirs |
+| Lubricant-Capable Liquid | Crude Oil | Surface, Medium, Deep | **Universe evidence:** Surface oil seeps; Medium subsurface reservoirs |
+| Magnetic Metal Ore | Nickel Ore, Cobalt Ore | Surface, Medium, Deep | **Universe evidence:** Surface impact crater walls; Deep underground bands |
+| Native Carbon Mineral *(new)* | Diamond | Surface, Shallow, Medium, Deep | **Proposed** — extraction depth is distinct from deep formation origin |
+| Organic Biomass | Biomass | Surface | **Proposed**, biologically surface-bound |
+| Phosphate Mineral | Phosphate Rock | Surface, Shallow | **Proposed** — no current find-site depth |
+| Precious Metal Ore *(new)* | Silver, Gold, Platinum, Palladium | Surface, Shallow, Medium, Deep | **Proposed** |
+| Radioactive Ore | Uranium Ore | Surface, Shallow, Medium, Deep | **Proposed** — no current find-site depth |
+| Rare Metal Ore | Rare Earth Ore | Surface, Shallow, Medium | **Proposed** — no current find-site depth |
+| Reactive Metal Ore | Lithium Ore, Zinc Ore | Surface, Shallow, Medium | **Universe evidence:** Surface fractured crust; Medium subsurface volcanic veins |
+| Silica Mineral | Silica Sand | Surface, Shallow | **Universe evidence:** Surface sand dunes; Shallow added for buried sediment |
+| Solid Fuel Deposit | Peat, Coal | Surface, Shallow, Medium, Deep | **Universe evidence:** Surface peat bogs; Medium coal-like seams; Shallow/Deep broadened for familiar fuel deposits |
+| Stone Aggregate | Stone | Surface, Shallow | **Universe evidence:** Surface rock fields; Shallow added for quarrying |
+| Structural Metal Ore | Iron Ore, Chromium Ore | Surface, Shallow, Medium, Deep | **Universe evidence:** Surface outcrops; Deep underground mines |
+| Sulfate Mineral *(new)* | Gypsum | Surface, Shallow | **Proposed** |
+| Sulfurous Mineral | Sulfur | Surface, Shallow, Medium | **Proposed** — no current find-site depth |
+| Woody Plant Material | Timber | Surface | **Universe evidence:** Surface forests |
+
+### Intended occurrence-profile shape
+
+After the familiar resource list and the five proposed generic categories are approved, the structured occurrence layer should resolve stable IDs rather than names.
+
+A typical record would look conceptually like:
+
+```json
+{
+  "id": "occurrence-structural-metal-ore",
+  "genericSubstanceId": "substance-structural-metal-ore",
+  "extractionZoneIds": [
+    "extraction-zone-surface",
+    "extraction-zone-shallow",
+    "extraction-zone-medium",
+    "extraction-zone-deep"
+  ],
+  "formationDepthGuidance": "Surface–10km+ depending on process",
+  "findSiteIds": [
+    "find-site-surface-outcrops",
+    "find-site-deep-underground-mines"
+  ],
+  "physicalEligibilityOnly": true
+}
+```
+
+The occurrence profile must not contain spawn probability, reserves, quality, prices or tile coordinates. Those remain Mobile-owned.
+
+### Generic profile vs familiar-resource profile
+
+The generic profile supplies the **widest physically reasonable envelope**. A familiar Mobile resource may narrow it.
+
+Examples:
+
+- Solid Fuel Deposit → Surface / Shallow / Medium / Deep.
+  - Peat → Surface.
+  - Coal → Shallow / Medium / Deep.
+- Precious Metal Ore → Surface / Shallow / Medium / Deep.
+  - Gold may occur across all four due to placer and hard-rock deposits.
+  - Platinum may be weighted more strongly to subsurface/igneous contexts.
+- Gas Fuel Deposit → Surface / Medium / Deep.
+  - Natural Gas normally favours subsurface reservoirs.
+  - surface gas is exceptional seep/vent expression rather than the default deposit form.
+
+This prevents the generic category from forcing every familiar resource to use identical geology.
