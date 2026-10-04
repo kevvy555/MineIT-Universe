@@ -144,19 +144,44 @@ The new occurrence profile is therefore the authoritative physical eligibility l
 
 The following Mobile legacy concepts need an explicit reconciliation decision:
 
-### Biological / Food resources
+### Biological / Food resources — resolved design direction
 
-Mobile currently includes Fungal Shelf, Edible Flora, Grazing Herd, Nutrient Crop, Protein Bloom and Thermal Algae.
+**Approved:** 4 October 2026.
 
-Universe currently has Organic Biomass, Woody Plant Material and Fibrous Plant Material but no dedicated edible biological-resource model. A herd is not naturally a `substance`.
+Food is not to be forced into the geological `substances` model. A herd, crop system, fungal ecology or aquatic food population is not a mineral deposit.
 
-Before replacing the Mobile catalogue, decide canonically whether edible natural sources are represented as:
+MineIT Mobile uses a high-level biological/agricultural Food layer with these player-facing identities:
 
-- additional canonical substance categories;
-- biological-resource/species/site records whose harvesting yields a game Food stock;
-- or a deliberate combination of both.
+- **Crops**;
+- **Edible Flora**;
+- **Herds**;
+- **Aquatic Food**;
+- **Fungi**;
+- **Algae**;
+- **Synthetic Nutrient** as a manufactured, non-natural Food output.
 
-Do not silently convert every biological source into generic Organic Biomass if gameplay meaning would be lost.
+Universe should provide stable canonical identity/environmental meaning for the six biological/agricultural types without pretending they are ordinary geological substances. The implementation may use a dedicated biological/agricultural resource collection or another clean graph representation that follows the repository's stable-ID and canonical-ownership rules.
+
+The canonical/environmental layer distinguishes:
+
+- whether useful native biology is naturally established;
+- whether open agriculture of each broad type is environmentally viable;
+- aquatic dependence for Aquatic Food and Algae;
+- hard terrain/environment exclusions such as mountains having no commercially usable natural Food;
+- external environmental suitability versus controlled-environment production.
+
+Mutable per-save facts remain Mobile state and must **not** be canonised here, including:
+
+- current herd/fish/fungal/algal population;
+- player-established Crops;
+- managed carrying capacity;
+- harvest intensity;
+- overharvest damage;
+- introduced livestock/cultures;
+- agricultural-dome contents;
+- player-created farm-world transformation.
+
+The same biological identity is used whether a source is native, managed or introduced. Those are mutable site/state properties, not separate canonical Food identities.
 
 ### Precious metals and gemstones
 
@@ -266,18 +291,33 @@ The exact familiar raw-resource catalogue should be approved before structured r
 **Decision:** retain the four current Mobile gameplay categories.  
 **Scope:** familiar raw/natural resources for the known Koplin-region economy. Future unique/exotic discoveries are deferred.
 
-The target remains deliberately close to the current Mobile catalogue size: **40 familiar resources**.
+The familiar Mobile catalogue remains deliberately compact. The geological/non-food catalogue is reviewed separately from the Food biological/agricultural layer; Food no longer needs to be counted as if it were another geological-substance set.
 
-### Food — 6 (provisional; dedicated review required)
+### Food — 6 biological/agricultural types + 1 manufactured output
 
-1. Edible Fungi
+1. Crops
 2. Edible Flora
-3. Grain Crops
-4. Grazing Livestock
-5. Aquatic Protein
+3. Herds
+4. Aquatic Food
+5. Fungi
 6. Algae
+7. Synthetic Nutrient *(manufactured; never naturally generated)*
 
-Food is intentionally provisional. The next design pass must decide how natural food sources, managed agriculture, livestock and harvested biological resources should be represented canonically and in gameplay. These must not automatically be treated as geological substances.
+Food is now a separate biological/agricultural occurrence model rather than a geological-substance occurrence model.
+
+Key physical rules:
+
+- **Crops** represent deliberate cultivated agriculture and are never generated as a pre-existing natural crop deposit.
+- **Edible Flora** may occur naturally on suitable productive biological land.
+- **Herds** may occur naturally where a complex productive land ecosystem can support them, or be introduced later by the player.
+- **Aquatic Food** requires a genuine suitable water/lake/aquatic environment plus compatible biology.
+- **Algae** also requires a suitable water/lake/aquatic environment when naturally occurring.
+- **Fungi** requires a suitable moist/organic biological context; naturally Vast commercial fungal ecosystems are not the normal case.
+- **Mountains provide no commercially usable natural Food source and do not support ordinary open agriculture in the first Mobile implementation.**
+- Airless, cryogenic, excessively hot or otherwise hostile environments may still support player-created Food through controlled agricultural infrastructure; this is mutable Mobile gameplay, not natural occurrence.
+- Synthetic Nutrient belongs to manufacturing/technology gameplay and never enters natural world generation.
+
+Natural biological occurrence, open-agriculture suitability and immutable environmental constraints are canonical design facts. Current stock, carrying capacity, managed expansion, establishment time, feed use and player-created agriculture remain per-save Mobile state.
 
 ### Build — 7
 
@@ -345,14 +385,39 @@ The Ore gameplay category is intentionally broad. It contains common industrial 
 
 | Mobile category | Candidate resources |
 | --- | ---: |
-| Food | 6 |
+| Food | 6 biological/agricultural + Synthetic Nutrient manufactured |
 | Build | 7 |
 | Fuel | 7 |
 | Ore | 20 |
-| **Total** | **40** |
 
-The Food six are the only part of this list intentionally held open for the next design review.
+Food is no longer provisional. It is intentionally modelled through the separate biological/agricultural layer described above rather than forced into the substance-count total.
 
+
+
+### Mobile biological Food lifecycle
+
+Mobile's approved biological Food gameplay consumes these canonical environmental facts using four routes:
+
+1. **Wild harvest** — exploit an already-established native source immediately.
+2. **Managed expansion** — improve an existing source over years, raising sustainable capacity.
+3. **Introduced agriculture** — establish seeds, herds or cultures on environmentally suitable empty land/water over a longer period.
+4. **Controlled agriculture** — use powered Agricultural Domes where the external environment is unsuitable.
+
+Natural reproduction may recover Herds/Aquatic Food toward natural carrying capacity without colony feed. Deliberately raising animal/aquaculture production beyond the natural baseline requires feed in Mobile gameplay: Herds primarily consume Crops; intensive Aquatic Food may consume Crops and/or Algae. These feed ratios are Mobile balance, not Universe canon.
+
+Aquaculture is a distinct Mobile development family for Aquatic Food. Algae remains aquatic when naturally occurring. Open-air biological expansion is constrained by local suitability; controlled domes replace the outside environmental constraint with infrastructure/Power cost.
+
+The stable/mutable split is therefore:
+
+```text
+Universe/world environmental truth
+    -> native biological occurrence + agricultural suitability
+    -> Deep Reach/player knowledge
+    -> Mobile mutable biological population/capacity/management
+    -> Food inventory
+```
+
+This biological state is deliberately allowed to change over decades without violating persistent geological truth.
 
 ## Extraction zones and depth profile preview
 
