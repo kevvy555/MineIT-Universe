@@ -1,0 +1,1980 @@
+[
+  {
+    "id": "mobile-occurrence-timber",
+    "resourceId": "mobile-resource-timber",
+    "occurrenceClass": "biological",
+    "naturalOccurrence": true,
+    "allowedCelestialBodyKindIds": [
+      "kind-rocky-planet"
+    ],
+    "worldTypeEligibility": "restricted",
+    "eligibleWorldTypeIds": [
+      "world-type-habitable-temperate",
+      "world-type-biological",
+      "world-type-terraformed",
+      "world-type-colony"
+    ],
+    "preferredWorldTypeIds": [],
+    "excludedWorldTypeIds": [
+      "world-type-anomalous-moon",
+      "world-type-exotic-substance-asteroid",
+      "world-type-anomalous-asteroid",
+      "world-type-anomalous-giant"
+    ],
+    "primaryExtractionZoneIds": [
+      "extraction-zone-surface"
+    ],
+    "secondaryExtractionZoneIds": [],
+    "preferredGeologyProvinceIds": [],
+    "requiredBiomeIds": [
+      "biome-forest"
+    ],
+    "requiredHydrosphereIds": [],
+    "excludedAtmosphereTypeIds": [
+      "atmosphere-none",
+      "atmosphere-trace",
+      "atmosphere-hot-greenhouse",
+      "atmosphere-cryogenic"
+    ],
+    "notes": "Requires established macroscopic woody biology.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "mobile-occurrence-plant-fibre",
+    "resourceId": "mobile-resource-plant-fibre",
+    "occurrenceClass": "biological",
+    "naturalOccurrence": true,
+    "allowedCelestialBodyKindIds": [
+      "kind-rocky-planet"
+    ],
+    "worldTypeEligibility": "restricted",
+    "eligibleWorldTypeIds": [
+      "world-type-habitable-temperate",
+      "world-type-biological",
+      "world-type-terraformed",
+      "world-type-colony"
+    ],
+    "preferredWorldTypeIds": [],
+    "excludedWorldTypeIds": [
+      "world-type-anomalous-moon",
+      "world-type-exotic-substance-asteroid",
+      "world-type-anomalous-asteroid",
+      "world-type-anomalous-giant"
+    ],
+    "primaryExtractionZoneIds": [
+      "extraction-zone-surface"
+    ],
+    "secondaryExtractionZoneIds": [],
+    "preferredGeologyProvinceIds": [],
+    "requiredBiomeIds": [
+      "biome-grassland",
+      "biome-forest",
+      "biome-wetland"
+    ],
+    "requiredHydrosphereIds": [],
+    "excludedAtmosphereTypeIds": [
+      "atmosphere-none",
+      "atmosphere-trace",
+      "atmosphere-hot-greenhouse",
+      "atmosphere-cryogenic"
+    ],
+    "notes": "Requires established surface plant-like biology.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "mobile-occurrence-stone",
+    "resourceId": "mobile-resource-stone",
+    "occurrenceClass": "geological",
+    "naturalOccurrence": true,
+    "allowedCelestialBodyKindIds": [
+      "kind-rocky-planet",
+      "kind-rocky-moon",
+      "kind-asteroid"
+    ],
+    "worldTypeEligibility": "broad",
+    "eligibleWorldTypeIds": [],
+    "preferredWorldTypeIds": [
+      "world-type-standard-rocky",
+      "world-type-rocky-moon",
+      "world-type-barren-moon",
+      "world-type-metallic-moon",
+      "world-type-dust-moon",
+      "world-type-volcanic-moon",
+      "world-type-tidally-heated-moon",
+      "world-type-low-gravity-moon",
+      "world-type-fragmented-moon",
+      "world-type-resource-rich-moon",
+      "world-type-captured-asteroid-moon",
+      "world-type-rocky-asteroid",
+      "world-type-metallic-asteroid",
+      "world-type-solid-core-asteroid",
+      "world-type-rubble-pile-asteroid",
+      "world-type-fragmented-asteroid",
+      "world-type-captured-asteroid",
+      "world-type-resource-rich-asteroid",
+      "world-type-precious-metal-asteroid",
+      "world-type-radioactive-asteroid",
+      "world-type-depleted-asteroid"
+    ],
+    "excludedWorldTypeIds": [
+      "world-type-anomalous-moon",
+      "world-type-exotic-substance-asteroid",
+      "world-type-anomalous-asteroid",
+      "world-type-anomalous-giant"
+    ],
+    "primaryExtractionZoneIds": [
+      "extraction-zone-surface"
+    ],
+    "secondaryExtractionZoneIds": [
+      "extraction-zone-shallow"
+    ],
+    "preferredGeologyProvinceIds": [
+      "geology-province-ancient-crust",
+      "geology-province-impact",
+      "geology-province-volcanic"
+    ],
+    "requiredBiomeIds": [],
+    "requiredHydrosphereIds": [],
+    "excludedAtmosphereTypeIds": [],
+    "notes": "General construction stone/aggregate; not an atmospheric resource.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "mobile-occurrence-clay",
+    "resourceId": "mobile-resource-clay",
+    "occurrenceClass": "geological",
+    "naturalOccurrence": true,
+    "allowedCelestialBodyKindIds": [
+      "kind-rocky-planet",
+      "kind-rocky-moon"
+    ],
+    "worldTypeEligibility": "broad",
+    "eligibleWorldTypeIds": [],
+    "preferredWorldTypeIds": [
+      "world-type-water-altered-rocky",
+      "world-type-former-ocean",
+      "world-type-habitable-temperate",
+      "world-type-biological",
+      "world-type-dry-arid-rocky",
+      "world-type-alkaline-evaporite",
+      "world-type-ocean-moon"
+    ],
+    "excludedWorldTypeIds": [
+      "world-type-anomalous-moon",
+      "world-type-exotic-substance-asteroid",
+      "world-type-anomalous-asteroid",
+      "world-type-anomalous-giant"
+    ],
+    "primaryExtractionZoneIds": [
+      "extraction-zone-surface",
+      "extraction-zone-shallow"
+    ],
+    "secondaryExtractionZoneIds": [],
+    "preferredGeologyProvinceIds": [
+      "geology-province-sedimentary-basin",
+      "geology-province-old-seabed"
+    ],
+    "requiredBiomeIds": [],
+    "requiredHydrosphereIds": [],
+    "excludedAtmosphereTypeIds": [],
+    "notes": "Requires water alteration/weathering history where present on otherwise dry bodies.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "mobile-occurrence-silica-sand",
+    "resourceId": "mobile-resource-silica-sand",
+    "occurrenceClass": "geological",
+    "naturalOccurrence": true,
+    "allowedCelestialBodyKindIds": [
+      "kind-rocky-planet",
+      "kind-rocky-moon"
+    ],
+    "worldTypeEligibility": "broad",
+    "eligibleWorldTypeIds": [],
+    "preferredWorldTypeIds": [
+      "world-type-dry-arid-rocky",
+      "world-type-standard-rocky",
+      "world-type-stable-mineral-rich",
+      "world-type-former-ocean",
+      "world-type-alkaline-evaporite",
+      "world-type-rocky-moon",
+      "world-type-barren-moon",
+      "world-type-metallic-moon",
+      "world-type-dust-moon",
+      "world-type-volcanic-moon",
+      "world-type-tidally-heated-moon",
+      "world-type-low-gravity-moon",
+      "world-type-fragmented-moon",
+      "world-type-resource-rich-moon",
+      "world-type-captured-asteroid-moon"
+    ],
+    "excludedWorldTypeIds": [
+      "world-type-anomalous-moon",
+      "world-type-exotic-substance-asteroid",
+      "world-type-anomalous-asteroid",
+      "world-type-anomalous-giant"
+    ],
+    "primaryExtractionZoneIds": [
+      "extraction-zone-surface"
+    ],
+    "secondaryExtractionZoneIds": [
+      "extraction-zone-shallow"
+    ],
+    "preferredGeologyProvinceIds": [
+      "geology-province-silica-rich",
+      "geology-province-sedimentary-basin"
+    ],
+    "requiredBiomeIds": [],
+    "requiredHydrosphereIds": [],
+    "excludedAtmosphereTypeIds": [],
+    "notes": "Surface sediment/erosion expression of silica-rich material.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "mobile-occurrence-limestone",
+    "resourceId": "mobile-resource-limestone",
+    "occurrenceClass": "geological",
+    "naturalOccurrence": true,
+    "allowedCelestialBodyKindIds": [
+      "kind-rocky-planet",
+      "kind-rocky-moon"
+    ],
+    "worldTypeEligibility": "restricted",
+    "eligibleWorldTypeIds": [
+      "world-type-habitable-temperate",
+      "world-type-biological",
+      "world-type-former-ocean",
+      "world-type-water-altered-rocky",
+      "world-type-terraformed",
+      "world-type-colony",
+      "world-type-ocean-moon"
+    ],
+    "preferredWorldTypeIds": [],
+    "excludedWorldTypeIds": [
+      "world-type-anomalous-moon",
+      "world-type-exotic-substance-asteroid",
+      "world-type-anomalous-asteroid",
+      "world-type-anomalous-giant"
+    ],
+    "primaryExtractionZoneIds": [
+      "extraction-zone-surface",
+      "extraction-zone-shallow"
+    ],
+    "secondaryExtractionZoneIds": [
+      "extraction-zone-medium"
+    ],
+    "preferredGeologyProvinceIds": [
+      "geology-province-sedimentary-basin",
+      "geology-province-old-seabed"
+    ],
+    "requiredBiomeIds": [],
+    "requiredHydrosphereIds": [],
+    "excludedAtmosphereTypeIds": [],
+    "notes": "Requires carbonate-forming aqueous, biological or compatible geochemical history.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "mobile-occurrence-gypsum",
+    "resourceId": "mobile-resource-gypsum",
+    "occurrenceClass": "geological",
+    "naturalOccurrence": true,
+    "allowedCelestialBodyKindIds": [
+      "kind-rocky-planet"
+    ],
+    "worldTypeEligibility": "restricted",
+    "eligibleWorldTypeIds": [
+      "world-type-alkaline-evaporite",
+      "world-type-dry-arid-rocky",
+      "world-type-former-ocean",
+      "world-type-chemically-active",
+      "world-type-water-altered-rocky"
+    ],
+    "preferredWorldTypeIds": [],
+    "excludedWorldTypeIds": [
+      "world-type-anomalous-moon",
+      "world-type-exotic-substance-asteroid",
+      "world-type-anomalous-asteroid",
+      "world-type-anomalous-giant"
+    ],
+    "primaryExtractionZoneIds": [
+      "extraction-zone-surface",
+      "extraction-zone-shallow"
+    ],
+    "secondaryExtractionZoneIds": [
+      "extraction-zone-medium"
+    ],
+    "preferredGeologyProvinceIds": [
+      "geology-province-sedimentary-basin",
+      "geology-province-salt-rich",
+      "geology-province-sulphur-rich"
+    ],
+    "requiredBiomeIds": [],
+    "requiredHydrosphereIds": [],
+    "excludedAtmosphereTypeIds": [],
+    "notes": "Evaporite/sulfate sedimentary material.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "mobile-occurrence-biomass",
+    "resourceId": "mobile-resource-biomass",
+    "occurrenceClass": "biological",
+    "naturalOccurrence": true,
+    "allowedCelestialBodyKindIds": [
+      "kind-rocky-planet"
+    ],
+    "worldTypeEligibility": "restricted",
+    "eligibleWorldTypeIds": [
+      "world-type-habitable-temperate",
+      "world-type-biological",
+      "world-type-terraformed",
+      "world-type-colony"
+    ],
+    "preferredWorldTypeIds": [],
+    "excludedWorldTypeIds": [
+      "world-type-anomalous-moon",
+      "world-type-exotic-substance-asteroid",
+      "world-type-anomalous-asteroid",
+      "world-type-anomalous-giant"
+    ],
+    "primaryExtractionZoneIds": [
+      "extraction-zone-surface"
+    ],
+    "secondaryExtractionZoneIds": [],
+    "preferredGeologyProvinceIds": [],
+    "requiredBiomeIds": [
+      "biome-grassland",
+      "biome-forest",
+      "biome-wetland"
+    ],
+    "requiredHydrosphereIds": [],
+    "excludedAtmosphereTypeIds": [
+      "atmosphere-none",
+      "atmosphere-trace",
+      "atmosphere-hot-greenhouse",
+      "atmosphere-cryogenic"
+    ],
+    "notes": "Active/recent biological material.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "mobile-occurrence-peat",
+    "resourceId": "mobile-resource-peat",
+    "occurrenceClass": "biological-geological",
+    "naturalOccurrence": true,
+    "allowedCelestialBodyKindIds": [
+      "kind-rocky-planet"
+    ],
+    "worldTypeEligibility": "restricted",
+    "eligibleWorldTypeIds": [
+      "world-type-habitable-temperate",
+      "world-type-biological",
+      "world-type-terraformed",
+      "world-type-colony"
+    ],
+    "preferredWorldTypeIds": [],
+    "excludedWorldTypeIds": [
+      "world-type-anomalous-moon",
+      "world-type-exotic-substance-asteroid",
+      "world-type-anomalous-asteroid",
+      "world-type-anomalous-giant"
+    ],
+    "primaryExtractionZoneIds": [
+      "extraction-zone-surface"
+    ],
+    "secondaryExtractionZoneIds": [
+      "extraction-zone-shallow"
+    ],
+    "preferredGeologyProvinceIds": [
+      "geology-province-carbon-basin",
+      "geology-province-sedimentary-basin"
+    ],
+    "requiredBiomeIds": [
+      "biome-wetland"
+    ],
+    "requiredHydrosphereIds": [
+      "hydrosphere-lake",
+      "hydrosphere-river",
+      "hydrosphere-fresh-water"
+    ],
+    "excludedAtmosphereTypeIds": [],
+    "notes": "Biological wetland accumulation; sterile or airless worlds are excluded.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "mobile-occurrence-coal",
+    "resourceId": "mobile-resource-coal",
+    "occurrenceClass": "geological",
+    "naturalOccurrence": true,
+    "allowedCelestialBodyKindIds": [
+      "kind-rocky-planet"
+    ],
+    "worldTypeEligibility": "restricted",
+    "eligibleWorldTypeIds": [
+      "world-type-carbon-rich",
+      "world-type-habitable-temperate",
+      "world-type-biological",
+      "world-type-former-ocean",
+      "world-type-terraformed",
+      "world-type-colony"
+    ],
+    "preferredWorldTypeIds": [],
+    "excludedWorldTypeIds": [
+      "world-type-anomalous-moon",
+      "world-type-exotic-substance-asteroid",
+      "world-type-anomalous-asteroid",
+      "world-type-anomalous-giant"
+    ],
+    "primaryExtractionZoneIds": [
+      "extraction-zone-shallow",
+      "extraction-zone-medium"
+    ],
+    "secondaryExtractionZoneIds": [
+      "extraction-zone-surface",
+      "extraction-zone-deep"
+    ],
+    "preferredGeologyProvinceIds": [
+      "geology-province-carbon-basin",
+      "geology-province-sedimentary-basin"
+    ],
+    "requiredBiomeIds": [],
+    "requiredHydrosphereIds": [],
+    "excludedAtmosphereTypeIds": [],
+    "notes": "Requires ancient organic accumulation and burial.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "mobile-occurrence-crude-oil",
+    "resourceId": "mobile-resource-crude-oil",
+    "occurrenceClass": "geological",
+    "naturalOccurrence": true,
+    "allowedCelestialBodyKindIds": [
+      "kind-rocky-planet"
+    ],
+    "worldTypeEligibility": "restricted",
+    "eligibleWorldTypeIds": [
+      "world-type-carbon-rich",
+      "world-type-former-ocean",
+      "world-type-habitable-temperate",
+      "world-type-biological",
+      "world-type-terraformed",
+      "world-type-colony"
+    ],
+    "preferredWorldTypeIds": [],
+    "excludedWorldTypeIds": [
+      "world-type-anomalous-moon",
+      "world-type-exotic-substance-asteroid",
+      "world-type-anomalous-asteroid",
+      "world-type-anomalous-giant"
+    ],
+    "primaryExtractionZoneIds": [
+      "extraction-zone-medium",
+      "extraction-zone-deep"
+    ],
+    "secondaryExtractionZoneIds": [
+      "extraction-zone-surface",
+      "extraction-zone-shallow"
+    ],
+    "preferredGeologyProvinceIds": [
+      "geology-province-carbon-basin",
+      "geology-province-sedimentary-basin",
+      "geology-province-fault-zone"
+    ],
+    "requiredBiomeIds": [],
+    "requiredHydrosphereIds": [],
+    "excludedAtmosphereTypeIds": [],
+    "notes": "Requires suitable organic history, burial and reservoir geology.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "mobile-occurrence-natural-gas",
+    "resourceId": "mobile-resource-natural-gas",
+    "occurrenceClass": "geological",
+    "naturalOccurrence": true,
+    "allowedCelestialBodyKindIds": [
+      "kind-rocky-planet"
+    ],
+    "worldTypeEligibility": "restricted",
+    "eligibleWorldTypeIds": [
+      "world-type-carbon-rich",
+      "world-type-gas-rich",
+      "world-type-former-ocean",
+      "world-type-habitable-temperate",
+      "world-type-biological",
+      "world-type-terraformed",
+      "world-type-colony",
+      "world-type-cryogenic-hydrocarbon"
+    ],
+    "preferredWorldTypeIds": [],
+    "excludedWorldTypeIds": [
+      "world-type-anomalous-moon",
+      "world-type-exotic-substance-asteroid",
+      "world-type-anomalous-asteroid",
+      "world-type-anomalous-giant"
+    ],
+    "primaryExtractionZoneIds": [
+      "extraction-zone-medium",
+      "extraction-zone-deep"
+    ],
+    "secondaryExtractionZoneIds": [
+      "extraction-zone-surface",
+      "extraction-zone-shallow"
+    ],
+    "preferredGeologyProvinceIds": [
+      "geology-province-carbon-basin",
+      "geology-province-sedimentary-basin",
+      "geology-province-fault-zone"
+    ],
+    "requiredBiomeIds": [],
+    "requiredHydrosphereIds": [],
+    "excludedAtmosphereTypeIds": [],
+    "notes": "Familiar natural gas requires compatible carbon/volatile history.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "mobile-occurrence-hydrogen",
+    "resourceId": "mobile-resource-hydrogen",
+    "occurrenceClass": "atmospheric-geological",
+    "naturalOccurrence": true,
+    "allowedCelestialBodyKindIds": [
+      "kind-gas-giant",
+      "kind-rocky-planet",
+      "kind-rocky-moon"
+    ],
+    "worldTypeEligibility": "broad",
+    "eligibleWorldTypeIds": [],
+    "preferredWorldTypeIds": [
+      "world-type-hydrogen-giant",
+      "world-type-ice-giant",
+      "world-type-hot-jupiter",
+      "world-type-super-neptune",
+      "world-type-ringed-giant",
+      "world-type-storm-dominant-giant",
+      "world-type-gas-rich",
+      "world-type-cryogenic-hydrocarbon",
+      "world-type-cryogenic",
+      "world-type-ice-moon",
+      "world-type-frozen-moon"
+    ],
+    "excludedWorldTypeIds": [
+      "world-type-anomalous-moon",
+      "world-type-exotic-substance-asteroid",
+      "world-type-anomalous-asteroid",
+      "world-type-anomalous-giant"
+    ],
+    "primaryExtractionZoneIds": [
+      "extraction-zone-atmosphere",
+      "extraction-zone-medium",
+      "extraction-zone-deep"
+    ],
+    "secondaryExtractionZoneIds": [
+      "extraction-zone-shallow"
+    ],
+    "preferredGeologyProvinceIds": [],
+    "requiredBiomeIds": [],
+    "requiredHydrosphereIds": [],
+    "excludedAtmosphereTypeIds": [],
+    "notes": "Atmospheric harvesting or trapped subsurface volatile source.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "mobile-occurrence-methane-ice",
+    "resourceId": "mobile-resource-methane-ice",
+    "occurrenceClass": "geological",
+    "naturalOccurrence": true,
+    "allowedCelestialBodyKindIds": [
+      "kind-rocky-planet",
+      "kind-rocky-moon",
+      "kind-asteroid"
+    ],
+    "worldTypeEligibility": "restricted",
+    "eligibleWorldTypeIds": [
+      "world-type-cryogenic-hydrocarbon",
+      "world-type-cryogenic",
+      "world-type-ice-moon",
+      "world-type-frozen-moon",
+      "world-type-ocean-moon",
+      "world-type-icy-asteroid",
+      "world-type-carbonaceous-asteroid"
+    ],
+    "preferredWorldTypeIds": [],
+    "excludedWorldTypeIds": [
+      "world-type-volcanic-rocky",
+      "world-type-toxic-volcanic",
+      "world-type-hot-jupiter",
+      "world-type-anomalous-moon",
+      "world-type-exotic-substance-asteroid",
+      "world-type-anomalous-asteroid",
+      "world-type-anomalous-giant"
+    ],
+    "primaryExtractionZoneIds": [
+      "extraction-zone-surface",
+      "extraction-zone-shallow"
+    ],
+    "secondaryExtractionZoneIds": [
+      "extraction-zone-medium"
+    ],
+    "preferredGeologyProvinceIds": [],
+    "requiredBiomeIds": [],
+    "requiredHydrosphereIds": [],
+    "excludedAtmosphereTypeIds": [
+      "atmosphere-hot-greenhouse"
+    ],
+    "notes": "Requires cold volatile retention.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "mobile-occurrence-uranium-ore",
+    "resourceId": "mobile-resource-uranium-ore",
+    "occurrenceClass": "geological",
+    "naturalOccurrence": true,
+    "allowedCelestialBodyKindIds": [
+      "kind-rocky-planet",
+      "kind-rocky-moon",
+      "kind-asteroid"
+    ],
+    "worldTypeEligibility": "broad",
+    "eligibleWorldTypeIds": [],
+    "preferredWorldTypeIds": [
+      "world-type-ancient-radioactive",
+      "world-type-metallic-rocky",
+      "world-type-high-pressure-geological",
+      "world-type-geologically-complex",
+      "world-type-resource-rich-moon",
+      "world-type-metallic-moon",
+      "world-type-metallic-asteroid",
+      "world-type-radioactive-asteroid"
+    ],
+    "excludedWorldTypeIds": [
+      "world-type-anomalous-moon",
+      "world-type-exotic-substance-asteroid",
+      "world-type-anomalous-asteroid",
+      "world-type-anomalous-giant"
+    ],
+    "primaryExtractionZoneIds": [
+      "extraction-zone-shallow",
+      "extraction-zone-medium"
+    ],
+    "secondaryExtractionZoneIds": [
+      "extraction-zone-surface",
+      "extraction-zone-deep"
+    ],
+    "preferredGeologyProvinceIds": [
+      "geology-province-metal-rich",
+      "geology-province-ancient-crust",
+      "geology-province-hydrothermal"
+    ],
+    "requiredBiomeIds": [],
+    "requiredHydrosphereIds": [],
+    "excludedAtmosphereTypeIds": [],
+    "notes": "Geological/radiogenic source.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "mobile-occurrence-helium-3",
+    "resourceId": "mobile-resource-helium-3",
+    "occurrenceClass": "atmospheric-surface",
+    "naturalOccurrence": true,
+    "allowedCelestialBodyKindIds": [
+      "kind-gas-giant",
+      "kind-rocky-moon",
+      "kind-asteroid"
+    ],
+    "worldTypeEligibility": "broad",
+    "eligibleWorldTypeIds": [],
+    "preferredWorldTypeIds": [
+      "world-type-hydrogen-giant",
+      "world-type-ice-giant",
+      "world-type-hot-jupiter",
+      "world-type-super-neptune",
+      "world-type-ringed-giant",
+      "world-type-storm-dominant-giant",
+      "world-type-barren-moon",
+      "world-type-low-gravity-moon",
+      "world-type-metallic-moon",
+      "world-type-resource-rich-moon",
+      "world-type-metallic-asteroid",
+      "world-type-resource-rich-asteroid"
+    ],
+    "excludedWorldTypeIds": [
+      "world-type-anomalous-moon",
+      "world-type-exotic-substance-asteroid",
+      "world-type-anomalous-asteroid",
+      "world-type-anomalous-giant"
+    ],
+    "primaryExtractionZoneIds": [
+      "extraction-zone-atmosphere",
+      "extraction-zone-surface"
+    ],
+    "secondaryExtractionZoneIds": [],
+    "preferredGeologyProvinceIds": [],
+    "requiredBiomeIds": [],
+    "requiredHydrosphereIds": [],
+    "excludedAtmosphereTypeIds": [],
+    "notes": "Atmospheric extraction or solar-wind implanted regolith; not ordinary buried ore.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "mobile-occurrence-iron-ore",
+    "resourceId": "mobile-resource-iron-ore",
+    "occurrenceClass": "geological",
+    "naturalOccurrence": true,
+    "allowedCelestialBodyKindIds": [
+      "kind-rocky-planet",
+      "kind-rocky-moon",
+      "kind-asteroid"
+    ],
+    "worldTypeEligibility": "broad",
+    "eligibleWorldTypeIds": [],
+    "preferredWorldTypeIds": [
+      "world-type-metallic-rocky",
+      "world-type-oxidising",
+      "world-type-high-pressure-geological",
+      "world-type-metallic-moon",
+      "world-type-metallic-asteroid"
+    ],
+    "excludedWorldTypeIds": [
+      "world-type-anomalous-moon",
+      "world-type-exotic-substance-asteroid",
+      "world-type-anomalous-asteroid",
+      "world-type-anomalous-giant"
+    ],
+    "primaryExtractionZoneIds": [
+      "extraction-zone-surface",
+      "extraction-zone-shallow",
+      "extraction-zone-medium"
+    ],
+    "secondaryExtractionZoneIds": [
+      "extraction-zone-deep"
+    ],
+    "preferredGeologyProvinceIds": [
+      "geology-province-metal-rich",
+      "geology-province-volcanic",
+      "geology-province-impact"
+    ],
+    "requiredBiomeIds": [],
+    "requiredHydrosphereIds": [],
+    "excludedAtmosphereTypeIds": [],
+    "notes": "Broad rocky-body occurrence; commercial concentration remains local.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "mobile-occurrence-chromium-ore",
+    "resourceId": "mobile-resource-chromium-ore",
+    "occurrenceClass": "geological",
+    "naturalOccurrence": true,
+    "allowedCelestialBodyKindIds": [
+      "kind-rocky-planet",
+      "kind-rocky-moon",
+      "kind-asteroid"
+    ],
+    "worldTypeEligibility": "broad",
+    "eligibleWorldTypeIds": [],
+    "preferredWorldTypeIds": [
+      "world-type-high-pressure-geological",
+      "world-type-metallic-rocky",
+      "world-type-volcanic-rocky",
+      "world-type-volcanic-moon",
+      "world-type-metallic-moon",
+      "world-type-resource-rich-moon",
+      "world-type-metallic-asteroid",
+      "world-type-geologically-complex"
+    ],
+    "excludedWorldTypeIds": [
+      "world-type-anomalous-moon",
+      "world-type-exotic-substance-asteroid",
+      "world-type-anomalous-asteroid",
+      "world-type-anomalous-giant"
+    ],
+    "primaryExtractionZoneIds": [
+      "extraction-zone-shallow",
+      "extraction-zone-medium",
+      "extraction-zone-deep"
+    ],
+    "secondaryExtractionZoneIds": [
+      "extraction-zone-surface"
+    ],
+    "preferredGeologyProvinceIds": [
+      "geology-province-metal-rich",
+      "geology-province-volcanic"
+    ],
+    "requiredBiomeIds": [],
+    "requiredHydrosphereIds": [],
+    "excludedAtmosphereTypeIds": [],
+    "notes": "Mafic/ultramafic affinity.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "mobile-occurrence-copper-ore",
+    "resourceId": "mobile-resource-copper-ore",
+    "occurrenceClass": "geological",
+    "naturalOccurrence": true,
+    "allowedCelestialBodyKindIds": [
+      "kind-rocky-planet",
+      "kind-rocky-moon",
+      "kind-asteroid"
+    ],
+    "worldTypeEligibility": "broad",
+    "eligibleWorldTypeIds": [],
+    "preferredWorldTypeIds": [
+      "world-type-metallic-rocky",
+      "world-type-volcanic-rocky",
+      "world-type-geologically-complex",
+      "world-type-oxidising",
+      "world-type-chemically-active",
+      "world-type-rocky-moon",
+      "world-type-barren-moon",
+      "world-type-metallic-moon",
+      "world-type-dust-moon",
+      "world-type-volcanic-moon",
+      "world-type-tidally-heated-moon",
+      "world-type-low-gravity-moon",
+      "world-type-fragmented-moon",
+      "world-type-resource-rich-moon",
+      "world-type-captured-asteroid-moon",
+      "world-type-metallic-asteroid",
+      "world-type-resource-rich-asteroid"
+    ],
+    "excludedWorldTypeIds": [
+      "world-type-anomalous-moon",
+      "world-type-exotic-substance-asteroid",
+      "world-type-anomalous-asteroid",
+      "world-type-anomalous-giant"
+    ],
+    "primaryExtractionZoneIds": [
+      "extraction-zone-shallow",
+      "extraction-zone-medium"
+    ],
+    "secondaryExtractionZoneIds": [
+      "extraction-zone-surface",
+      "extraction-zone-deep"
+    ],
+    "preferredGeologyProvinceIds": [
+      "geology-province-hydrothermal",
+      "geology-province-volcanic",
+      "geology-province-metal-rich"
+    ],
+    "requiredBiomeIds": [],
+    "requiredHydrosphereIds": [],
+    "excludedAtmosphereTypeIds": [],
+    "notes": "Hydrothermal/volcanogenic affinity.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "mobile-occurrence-tin-ore",
+    "resourceId": "mobile-resource-tin-ore",
+    "occurrenceClass": "geological",
+    "naturalOccurrence": true,
+    "allowedCelestialBodyKindIds": [
+      "kind-rocky-planet",
+      "kind-rocky-moon"
+    ],
+    "worldTypeEligibility": "broad",
+    "eligibleWorldTypeIds": [],
+    "preferredWorldTypeIds": [
+      "world-type-geologically-complex",
+      "world-type-stable-mineral-rich",
+      "world-type-metallic-rocky",
+      "world-type-volcanic-rocky",
+      "world-type-rocky-moon",
+      "world-type-barren-moon",
+      "world-type-metallic-moon",
+      "world-type-dust-moon",
+      "world-type-volcanic-moon",
+      "world-type-tidally-heated-moon",
+      "world-type-low-gravity-moon",
+      "world-type-fragmented-moon",
+      "world-type-resource-rich-moon",
+      "world-type-captured-asteroid-moon"
+    ],
+    "excludedWorldTypeIds": [
+      "world-type-anomalous-moon",
+      "world-type-exotic-substance-asteroid",
+      "world-type-anomalous-asteroid",
+      "world-type-anomalous-giant"
+    ],
+    "primaryExtractionZoneIds": [
+      "extraction-zone-shallow",
+      "extraction-zone-medium"
+    ],
+    "secondaryExtractionZoneIds": [
+      "extraction-zone-surface",
+      "extraction-zone-deep"
+    ],
+    "preferredGeologyProvinceIds": [
+      "geology-province-hydrothermal",
+      "geology-province-silica-rich"
+    ],
+    "requiredBiomeIds": [],
+    "requiredHydrosphereIds": [],
+    "excludedAtmosphereTypeIds": [],
+    "notes": "Granitic/hydrothermal vein affinity.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "mobile-occurrence-bauxite",
+    "resourceId": "mobile-resource-bauxite",
+    "occurrenceClass": "geological",
+    "naturalOccurrence": true,
+    "allowedCelestialBodyKindIds": [
+      "kind-rocky-planet"
+    ],
+    "worldTypeEligibility": "restricted",
+    "eligibleWorldTypeIds": [
+      "world-type-habitable-temperate",
+      "world-type-biological",
+      "world-type-terraformed",
+      "world-type-colony"
+    ],
+    "preferredWorldTypeIds": [],
+    "excludedWorldTypeIds": [
+      "world-type-anomalous-moon",
+      "world-type-exotic-substance-asteroid",
+      "world-type-anomalous-asteroid",
+      "world-type-anomalous-giant"
+    ],
+    "primaryExtractionZoneIds": [
+      "extraction-zone-surface",
+      "extraction-zone-shallow"
+    ],
+    "secondaryExtractionZoneIds": [],
+    "preferredGeologyProvinceIds": [
+      "geology-province-sedimentary-basin"
+    ],
+    "requiredBiomeIds": [],
+    "requiredHydrosphereIds": [],
+    "excludedAtmosphereTypeIds": [
+      "atmosphere-none",
+      "atmosphere-trace",
+      "atmosphere-cryogenic"
+    ],
+    "notes": "Weathering-derived aluminium ore requiring prolonged surface weathering.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "mobile-occurrence-titanium-ore",
+    "resourceId": "mobile-resource-titanium-ore",
+    "occurrenceClass": "geological",
+    "naturalOccurrence": true,
+    "allowedCelestialBodyKindIds": [
+      "kind-rocky-planet",
+      "kind-rocky-moon",
+      "kind-asteroid"
+    ],
+    "worldTypeEligibility": "broad",
+    "eligibleWorldTypeIds": [],
+    "preferredWorldTypeIds": [
+      "world-type-metallic-rocky",
+      "world-type-high-pressure-geological",
+      "world-type-dry-arid-rocky",
+      "world-type-metallic-moon",
+      "world-type-metallic-asteroid",
+      "world-type-volcanic-rocky"
+    ],
+    "excludedWorldTypeIds": [
+      "world-type-anomalous-moon",
+      "world-type-exotic-substance-asteroid",
+      "world-type-anomalous-asteroid",
+      "world-type-anomalous-giant"
+    ],
+    "primaryExtractionZoneIds": [
+      "extraction-zone-surface",
+      "extraction-zone-shallow",
+      "extraction-zone-medium"
+    ],
+    "secondaryExtractionZoneIds": [
+      "extraction-zone-deep"
+    ],
+    "preferredGeologyProvinceIds": [
+      "geology-province-metal-rich",
+      "geology-province-volcanic",
+      "geology-province-sedimentary-basin"
+    ],
+    "requiredBiomeIds": [],
+    "requiredHydrosphereIds": [],
+    "excludedAtmosphereTypeIds": [],
+    "notes": "Igneous bodies or heavy-mineral sediment concentrations.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "mobile-occurrence-nickel-ore",
+    "resourceId": "mobile-resource-nickel-ore",
+    "occurrenceClass": "geological",
+    "naturalOccurrence": true,
+    "allowedCelestialBodyKindIds": [
+      "kind-rocky-planet",
+      "kind-rocky-moon",
+      "kind-asteroid"
+    ],
+    "worldTypeEligibility": "broad",
+    "eligibleWorldTypeIds": [],
+    "preferredWorldTypeIds": [
+      "world-type-metallic-rocky",
+      "world-type-high-pressure-geological",
+      "world-type-volcanic-rocky",
+      "world-type-metallic-moon",
+      "world-type-resource-rich-moon",
+      "world-type-metallic-asteroid",
+      "world-type-resource-rich-asteroid"
+    ],
+    "excludedWorldTypeIds": [
+      "world-type-anomalous-moon",
+      "world-type-exotic-substance-asteroid",
+      "world-type-anomalous-asteroid",
+      "world-type-anomalous-giant"
+    ],
+    "primaryExtractionZoneIds": [
+      "extraction-zone-shallow",
+      "extraction-zone-medium",
+      "extraction-zone-deep"
+    ],
+    "secondaryExtractionZoneIds": [
+      "extraction-zone-surface"
+    ],
+    "preferredGeologyProvinceIds": [
+      "geology-province-metal-rich",
+      "geology-province-volcanic",
+      "geology-province-impact"
+    ],
+    "requiredBiomeIds": [],
+    "requiredHydrosphereIds": [],
+    "excludedAtmosphereTypeIds": [],
+    "notes": "Mafic/ultramafic, sulfide and impact affinity.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "mobile-occurrence-cobalt-ore",
+    "resourceId": "mobile-resource-cobalt-ore",
+    "occurrenceClass": "geological",
+    "naturalOccurrence": true,
+    "allowedCelestialBodyKindIds": [
+      "kind-rocky-planet",
+      "kind-rocky-moon",
+      "kind-asteroid"
+    ],
+    "worldTypeEligibility": "broad",
+    "eligibleWorldTypeIds": [],
+    "preferredWorldTypeIds": [
+      "world-type-metallic-rocky",
+      "world-type-geologically-complex",
+      "world-type-volcanic-rocky",
+      "world-type-metallic-moon",
+      "world-type-resource-rich-moon",
+      "world-type-metallic-asteroid"
+    ],
+    "excludedWorldTypeIds": [
+      "world-type-anomalous-moon",
+      "world-type-exotic-substance-asteroid",
+      "world-type-anomalous-asteroid",
+      "world-type-anomalous-giant"
+    ],
+    "primaryExtractionZoneIds": [
+      "extraction-zone-shallow",
+      "extraction-zone-medium"
+    ],
+    "secondaryExtractionZoneIds": [
+      "extraction-zone-surface",
+      "extraction-zone-deep"
+    ],
+    "preferredGeologyProvinceIds": [
+      "geology-province-metal-rich",
+      "geology-province-hydrothermal",
+      "geology-province-volcanic"
+    ],
+    "requiredBiomeIds": [],
+    "requiredHydrosphereIds": [],
+    "excludedAtmosphereTypeIds": [],
+    "notes": "Often associated with nickel/copper mineralisation.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "mobile-occurrence-lithium-ore",
+    "resourceId": "mobile-resource-lithium-ore",
+    "occurrenceClass": "geological",
+    "naturalOccurrence": true,
+    "allowedCelestialBodyKindIds": [
+      "kind-rocky-planet",
+      "kind-rocky-moon"
+    ],
+    "worldTypeEligibility": "broad",
+    "eligibleWorldTypeIds": [],
+    "preferredWorldTypeIds": [
+      "world-type-alkaline-evaporite",
+      "world-type-water-altered-rocky",
+      "world-type-geologically-complex",
+      "world-type-dry-arid-rocky",
+      "world-type-volcanic-rocky"
+    ],
+    "excludedWorldTypeIds": [
+      "world-type-anomalous-moon",
+      "world-type-exotic-substance-asteroid",
+      "world-type-anomalous-asteroid",
+      "world-type-anomalous-giant"
+    ],
+    "primaryExtractionZoneIds": [
+      "extraction-zone-surface",
+      "extraction-zone-shallow",
+      "extraction-zone-medium"
+    ],
+    "secondaryExtractionZoneIds": [],
+    "preferredGeologyProvinceIds": [
+      "geology-province-salt-rich",
+      "geology-province-sedimentary-basin",
+      "geology-province-hydrothermal",
+      "geology-province-silica-rich"
+    ],
+    "requiredBiomeIds": [],
+    "requiredHydrosphereIds": [],
+    "excludedAtmosphereTypeIds": [],
+    "notes": "Covers brine-, clay- and pegmatite-style familiar sources.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "mobile-occurrence-zinc-ore",
+    "resourceId": "mobile-resource-zinc-ore",
+    "occurrenceClass": "geological",
+    "naturalOccurrence": true,
+    "allowedCelestialBodyKindIds": [
+      "kind-rocky-planet",
+      "kind-rocky-moon",
+      "kind-asteroid"
+    ],
+    "worldTypeEligibility": "broad",
+    "eligibleWorldTypeIds": [],
+    "preferredWorldTypeIds": [
+      "world-type-metallic-rocky",
+      "world-type-geologically-complex",
+      "world-type-volcanic-rocky",
+      "world-type-water-altered-rocky",
+      "world-type-former-ocean",
+      "world-type-resource-rich-moon",
+      "world-type-resource-rich-asteroid"
+    ],
+    "excludedWorldTypeIds": [
+      "world-type-anomalous-moon",
+      "world-type-exotic-substance-asteroid",
+      "world-type-anomalous-asteroid",
+      "world-type-anomalous-giant"
+    ],
+    "primaryExtractionZoneIds": [
+      "extraction-zone-shallow",
+      "extraction-zone-medium"
+    ],
+    "secondaryExtractionZoneIds": [
+      "extraction-zone-surface",
+      "extraction-zone-deep"
+    ],
+    "preferredGeologyProvinceIds": [
+      "geology-province-hydrothermal",
+      "geology-province-sedimentary-basin",
+      "geology-province-metal-rich"
+    ],
+    "requiredBiomeIds": [],
+    "requiredHydrosphereIds": [],
+    "excludedAtmosphereTypeIds": [],
+    "notes": "Hydrothermal and sediment-hosted occurrence.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "mobile-occurrence-lead-ore",
+    "resourceId": "mobile-resource-lead-ore",
+    "occurrenceClass": "geological",
+    "naturalOccurrence": true,
+    "allowedCelestialBodyKindIds": [
+      "kind-rocky-planet",
+      "kind-rocky-moon",
+      "kind-asteroid"
+    ],
+    "worldTypeEligibility": "broad",
+    "eligibleWorldTypeIds": [],
+    "preferredWorldTypeIds": [
+      "world-type-metallic-rocky",
+      "world-type-geologically-complex",
+      "world-type-former-ocean",
+      "world-type-water-altered-rocky",
+      "world-type-volcanic-rocky",
+      "world-type-resource-rich-moon",
+      "world-type-resource-rich-asteroid"
+    ],
+    "excludedWorldTypeIds": [
+      "world-type-anomalous-moon",
+      "world-type-exotic-substance-asteroid",
+      "world-type-anomalous-asteroid",
+      "world-type-anomalous-giant"
+    ],
+    "primaryExtractionZoneIds": [
+      "extraction-zone-shallow",
+      "extraction-zone-medium"
+    ],
+    "secondaryExtractionZoneIds": [
+      "extraction-zone-surface",
+      "extraction-zone-deep"
+    ],
+    "preferredGeologyProvinceIds": [
+      "geology-province-hydrothermal",
+      "geology-province-sedimentary-basin",
+      "geology-province-metal-rich"
+    ],
+    "requiredBiomeIds": [],
+    "requiredHydrosphereIds": [],
+    "excludedAtmosphereTypeIds": [],
+    "notes": "Vein and sediment-hosted deposits.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "mobile-occurrence-tungsten-ore",
+    "resourceId": "mobile-resource-tungsten-ore",
+    "occurrenceClass": "geological",
+    "naturalOccurrence": true,
+    "allowedCelestialBodyKindIds": [
+      "kind-rocky-planet",
+      "kind-rocky-moon",
+      "kind-asteroid"
+    ],
+    "worldTypeEligibility": "broad",
+    "eligibleWorldTypeIds": [],
+    "preferredWorldTypeIds": [
+      "world-type-high-pressure-geological",
+      "world-type-geologically-complex",
+      "world-type-volcanic-rocky",
+      "world-type-metallic-rocky",
+      "world-type-stable-mineral-rich",
+      "world-type-volcanic-moon",
+      "world-type-resource-rich-asteroid"
+    ],
+    "excludedWorldTypeIds": [
+      "world-type-anomalous-moon",
+      "world-type-exotic-substance-asteroid",
+      "world-type-anomalous-asteroid",
+      "world-type-anomalous-giant"
+    ],
+    "primaryExtractionZoneIds": [
+      "extraction-zone-shallow",
+      "extraction-zone-medium",
+      "extraction-zone-deep"
+    ],
+    "secondaryExtractionZoneIds": [
+      "extraction-zone-surface"
+    ],
+    "preferredGeologyProvinceIds": [
+      "geology-province-hydrothermal",
+      "geology-province-volcanic",
+      "geology-province-silica-rich"
+    ],
+    "requiredBiomeIds": [],
+    "requiredHydrosphereIds": [],
+    "excludedAtmosphereTypeIds": [],
+    "notes": "High-temperature hydrothermal/skarn/granitic affinity.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "mobile-occurrence-rare-earth-ore",
+    "resourceId": "mobile-resource-rare-earth-ore",
+    "occurrenceClass": "geological",
+    "naturalOccurrence": true,
+    "allowedCelestialBodyKindIds": [
+      "kind-rocky-planet",
+      "kind-rocky-moon",
+      "kind-asteroid"
+    ],
+    "worldTypeEligibility": "broad",
+    "eligibleWorldTypeIds": [],
+    "preferredWorldTypeIds": [
+      "world-type-stable-mineral-rich",
+      "world-type-geologically-complex",
+      "world-type-metallic-rocky",
+      "world-type-high-pressure-geological",
+      "world-type-ancient-radioactive",
+      "world-type-resource-rich-moon",
+      "world-type-metallic-moon",
+      "world-type-resource-rich-asteroid",
+      "world-type-metallic-asteroid"
+    ],
+    "excludedWorldTypeIds": [
+      "world-type-anomalous-moon",
+      "world-type-exotic-substance-asteroid",
+      "world-type-anomalous-asteroid",
+      "world-type-anomalous-giant"
+    ],
+    "primaryExtractionZoneIds": [
+      "extraction-zone-shallow",
+      "extraction-zone-medium"
+    ],
+    "secondaryExtractionZoneIds": [
+      "extraction-zone-surface",
+      "extraction-zone-deep"
+    ],
+    "preferredGeologyProvinceIds": [
+      "geology-province-silica-rich",
+      "geology-province-metal-rich",
+      "geology-province-ancient-crust"
+    ],
+    "requiredBiomeIds": [],
+    "requiredHydrosphereIds": [],
+    "excludedAtmosphereTypeIds": [],
+    "notes": "Specialised igneous/weathering concentration.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "mobile-occurrence-graphite",
+    "resourceId": "mobile-resource-graphite",
+    "occurrenceClass": "geological",
+    "naturalOccurrence": true,
+    "allowedCelestialBodyKindIds": [
+      "kind-rocky-planet",
+      "kind-rocky-moon",
+      "kind-asteroid"
+    ],
+    "worldTypeEligibility": "broad",
+    "eligibleWorldTypeIds": [],
+    "preferredWorldTypeIds": [
+      "world-type-carbon-rich",
+      "world-type-high-pressure-geological",
+      "world-type-geologically-complex",
+      "world-type-former-ocean",
+      "world-type-carbonaceous-asteroid"
+    ],
+    "excludedWorldTypeIds": [
+      "world-type-anomalous-moon",
+      "world-type-exotic-substance-asteroid",
+      "world-type-anomalous-asteroid",
+      "world-type-anomalous-giant"
+    ],
+    "primaryExtractionZoneIds": [
+      "extraction-zone-shallow",
+      "extraction-zone-medium",
+      "extraction-zone-deep"
+    ],
+    "secondaryExtractionZoneIds": [
+      "extraction-zone-surface"
+    ],
+    "preferredGeologyProvinceIds": [
+      "geology-province-carbon-basin",
+      "geology-province-ancient-crust",
+      "geology-province-sedimentary-basin"
+    ],
+    "requiredBiomeIds": [],
+    "requiredHydrosphereIds": [],
+    "excludedAtmosphereTypeIds": [],
+    "notes": "Carbon-rich sedimentary or metamorphic origin.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "mobile-occurrence-sulfur",
+    "resourceId": "mobile-resource-sulfur",
+    "occurrenceClass": "geological",
+    "naturalOccurrence": true,
+    "allowedCelestialBodyKindIds": [
+      "kind-rocky-planet",
+      "kind-rocky-moon"
+    ],
+    "worldTypeEligibility": "broad",
+    "eligibleWorldTypeIds": [],
+    "preferredWorldTypeIds": [
+      "world-type-volcanic-rocky",
+      "world-type-toxic-volcanic",
+      "world-type-chemically-active",
+      "world-type-volcanic-moon",
+      "world-type-tidally-heated-moon",
+      "world-type-alkaline-evaporite"
+    ],
+    "excludedWorldTypeIds": [
+      "world-type-anomalous-moon",
+      "world-type-exotic-substance-asteroid",
+      "world-type-anomalous-asteroid",
+      "world-type-anomalous-giant"
+    ],
+    "primaryExtractionZoneIds": [
+      "extraction-zone-surface",
+      "extraction-zone-shallow"
+    ],
+    "secondaryExtractionZoneIds": [
+      "extraction-zone-medium"
+    ],
+    "preferredGeologyProvinceIds": [
+      "geology-province-sulphur-rich",
+      "geology-province-volcanic",
+      "geology-province-toxic-chemical"
+    ],
+    "requiredBiomeIds": [],
+    "requiredHydrosphereIds": [],
+    "excludedAtmosphereTypeIds": [],
+    "notes": "Volcanic/sulphur-rich or evaporitic association.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "mobile-occurrence-phosphate-rock",
+    "resourceId": "mobile-resource-phosphate-rock",
+    "occurrenceClass": "geological",
+    "naturalOccurrence": true,
+    "allowedCelestialBodyKindIds": [
+      "kind-rocky-planet",
+      "kind-rocky-moon"
+    ],
+    "worldTypeEligibility": "restricted",
+    "eligibleWorldTypeIds": [
+      "world-type-habitable-temperate",
+      "world-type-biological",
+      "world-type-terraformed",
+      "world-type-colony",
+      "world-type-former-ocean",
+      "world-type-water-altered-rocky",
+      "world-type-ocean-moon"
+    ],
+    "preferredWorldTypeIds": [],
+    "excludedWorldTypeIds": [
+      "world-type-anomalous-moon",
+      "world-type-exotic-substance-asteroid",
+      "world-type-anomalous-asteroid",
+      "world-type-anomalous-giant"
+    ],
+    "primaryExtractionZoneIds": [
+      "extraction-zone-surface",
+      "extraction-zone-shallow"
+    ],
+    "secondaryExtractionZoneIds": [
+      "extraction-zone-medium"
+    ],
+    "preferredGeologyProvinceIds": [
+      "geology-province-sedimentary-basin",
+      "geology-province-old-seabed"
+    ],
+    "requiredBiomeIds": [],
+    "requiredHydrosphereIds": [],
+    "excludedAtmosphereTypeIds": [],
+    "notes": "Predominantly sedimentary/biogenic in the familiar Mobile model.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "mobile-occurrence-quartz",
+    "resourceId": "mobile-resource-quartz",
+    "occurrenceClass": "geological",
+    "naturalOccurrence": true,
+    "allowedCelestialBodyKindIds": [
+      "kind-rocky-planet",
+      "kind-rocky-moon",
+      "kind-asteroid"
+    ],
+    "worldTypeEligibility": "broad",
+    "eligibleWorldTypeIds": [],
+    "preferredWorldTypeIds": [
+      "world-type-stable-mineral-rich",
+      "world-type-dry-arid-rocky",
+      "world-type-standard-rocky",
+      "world-type-rocky-moon",
+      "world-type-barren-moon",
+      "world-type-metallic-moon",
+      "world-type-dust-moon",
+      "world-type-volcanic-moon",
+      "world-type-tidally-heated-moon",
+      "world-type-low-gravity-moon",
+      "world-type-fragmented-moon",
+      "world-type-resource-rich-moon",
+      "world-type-captured-asteroid-moon",
+      "world-type-rocky-asteroid",
+      "world-type-metallic-asteroid",
+      "world-type-solid-core-asteroid",
+      "world-type-rubble-pile-asteroid",
+      "world-type-fragmented-asteroid",
+      "world-type-captured-asteroid",
+      "world-type-resource-rich-asteroid",
+      "world-type-precious-metal-asteroid",
+      "world-type-radioactive-asteroid",
+      "world-type-depleted-asteroid"
+    ],
+    "excludedWorldTypeIds": [
+      "world-type-anomalous-moon",
+      "world-type-exotic-substance-asteroid",
+      "world-type-anomalous-asteroid",
+      "world-type-anomalous-giant"
+    ],
+    "primaryExtractionZoneIds": [
+      "extraction-zone-surface",
+      "extraction-zone-shallow",
+      "extraction-zone-medium"
+    ],
+    "secondaryExtractionZoneIds": [
+      "extraction-zone-deep"
+    ],
+    "preferredGeologyProvinceIds": [
+      "geology-province-silica-rich",
+      "geology-province-hydrothermal",
+      "geology-province-ancient-crust"
+    ],
+    "requiredBiomeIds": [],
+    "requiredHydrosphereIds": [],
+    "excludedAtmosphereTypeIds": [],
+    "notes": "Common mineral; only useful concentrations become resource occurrences.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "mobile-occurrence-mica",
+    "resourceId": "mobile-resource-mica",
+    "occurrenceClass": "geological",
+    "naturalOccurrence": true,
+    "allowedCelestialBodyKindIds": [
+      "kind-rocky-planet",
+      "kind-rocky-moon",
+      "kind-asteroid"
+    ],
+    "worldTypeEligibility": "broad",
+    "eligibleWorldTypeIds": [],
+    "preferredWorldTypeIds": [
+      "world-type-stable-mineral-rich",
+      "world-type-high-pressure-geological",
+      "world-type-geologically-complex",
+      "world-type-metallic-rocky",
+      "world-type-volcanic-rocky",
+      "world-type-rocky-moon",
+      "world-type-barren-moon",
+      "world-type-metallic-moon",
+      "world-type-dust-moon",
+      "world-type-volcanic-moon",
+      "world-type-tidally-heated-moon",
+      "world-type-low-gravity-moon",
+      "world-type-fragmented-moon",
+      "world-type-resource-rich-moon",
+      "world-type-captured-asteroid-moon"
+    ],
+    "excludedWorldTypeIds": [
+      "world-type-anomalous-moon",
+      "world-type-exotic-substance-asteroid",
+      "world-type-anomalous-asteroid",
+      "world-type-anomalous-giant"
+    ],
+    "primaryExtractionZoneIds": [
+      "extraction-zone-shallow",
+      "extraction-zone-medium"
+    ],
+    "secondaryExtractionZoneIds": [
+      "extraction-zone-surface",
+      "extraction-zone-deep"
+    ],
+    "preferredGeologyProvinceIds": [
+      "geology-province-silica-rich",
+      "geology-province-ancient-crust",
+      "geology-province-volcanic"
+    ],
+    "requiredBiomeIds": [],
+    "requiredHydrosphereIds": [],
+    "excludedAtmosphereTypeIds": [],
+    "notes": "Metamorphic/igneous mineralised crust.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "mobile-occurrence-silver",
+    "resourceId": "mobile-resource-silver",
+    "occurrenceClass": "geological",
+    "naturalOccurrence": true,
+    "allowedCelestialBodyKindIds": [
+      "kind-rocky-planet",
+      "kind-rocky-moon",
+      "kind-asteroid"
+    ],
+    "worldTypeEligibility": "broad",
+    "eligibleWorldTypeIds": [],
+    "preferredWorldTypeIds": [
+      "world-type-metallic-rocky",
+      "world-type-geologically-complex",
+      "world-type-volcanic-rocky",
+      "world-type-precious-metal-asteroid",
+      "world-type-metallic-asteroid",
+      "world-type-resource-rich-moon"
+    ],
+    "excludedWorldTypeIds": [
+      "world-type-anomalous-moon",
+      "world-type-exotic-substance-asteroid",
+      "world-type-anomalous-asteroid",
+      "world-type-anomalous-giant"
+    ],
+    "primaryExtractionZoneIds": [
+      "extraction-zone-shallow",
+      "extraction-zone-medium"
+    ],
+    "secondaryExtractionZoneIds": [
+      "extraction-zone-surface",
+      "extraction-zone-deep"
+    ],
+    "preferredGeologyProvinceIds": [
+      "geology-province-hydrothermal",
+      "geology-province-metal-rich"
+    ],
+    "requiredBiomeIds": [],
+    "requiredHydrosphereIds": [],
+    "excludedAtmosphereTypeIds": [],
+    "notes": "Hydrothermal/polymetallic affinity.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "mobile-occurrence-gold",
+    "resourceId": "mobile-resource-gold",
+    "occurrenceClass": "geological",
+    "naturalOccurrence": true,
+    "allowedCelestialBodyKindIds": [
+      "kind-rocky-planet",
+      "kind-rocky-moon",
+      "kind-asteroid"
+    ],
+    "worldTypeEligibility": "broad",
+    "eligibleWorldTypeIds": [],
+    "preferredWorldTypeIds": [
+      "world-type-metallic-rocky",
+      "world-type-geologically-complex",
+      "world-type-volcanic-rocky",
+      "world-type-habitable-temperate",
+      "world-type-biological",
+      "world-type-former-ocean",
+      "world-type-precious-metal-asteroid",
+      "world-type-resource-rich-moon"
+    ],
+    "excludedWorldTypeIds": [
+      "world-type-anomalous-moon",
+      "world-type-exotic-substance-asteroid",
+      "world-type-anomalous-asteroid",
+      "world-type-anomalous-giant"
+    ],
+    "primaryExtractionZoneIds": [
+      "extraction-zone-surface",
+      "extraction-zone-shallow",
+      "extraction-zone-medium"
+    ],
+    "secondaryExtractionZoneIds": [
+      "extraction-zone-deep"
+    ],
+    "preferredGeologyProvinceIds": [
+      "geology-province-hydrothermal",
+      "geology-province-metal-rich",
+      "geology-province-sedimentary-basin"
+    ],
+    "requiredBiomeIds": [],
+    "requiredHydrosphereIds": [],
+    "excludedAtmosphereTypeIds": [],
+    "notes": "Hard-rock hydrothermal and placer routes.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "mobile-occurrence-platinum",
+    "resourceId": "mobile-resource-platinum",
+    "occurrenceClass": "geological",
+    "naturalOccurrence": true,
+    "allowedCelestialBodyKindIds": [
+      "kind-rocky-planet",
+      "kind-rocky-moon",
+      "kind-asteroid"
+    ],
+    "worldTypeEligibility": "broad",
+    "eligibleWorldTypeIds": [],
+    "preferredWorldTypeIds": [
+      "world-type-high-pressure-geological",
+      "world-type-metallic-rocky",
+      "world-type-metallic-asteroid",
+      "world-type-precious-metal-asteroid",
+      "world-type-metallic-moon",
+      "world-type-resource-rich-moon",
+      "world-type-volcanic-rocky",
+      "world-type-geologically-complex"
+    ],
+    "excludedWorldTypeIds": [
+      "world-type-anomalous-moon",
+      "world-type-exotic-substance-asteroid",
+      "world-type-anomalous-asteroid",
+      "world-type-anomalous-giant"
+    ],
+    "primaryExtractionZoneIds": [
+      "extraction-zone-shallow",
+      "extraction-zone-medium",
+      "extraction-zone-deep"
+    ],
+    "secondaryExtractionZoneIds": [
+      "extraction-zone-surface"
+    ],
+    "preferredGeologyProvinceIds": [
+      "geology-province-metal-rich",
+      "geology-province-volcanic"
+    ],
+    "requiredBiomeIds": [],
+    "requiredHydrosphereIds": [],
+    "excludedAtmosphereTypeIds": [],
+    "notes": "Mafic/ultramafic igneous affinity.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "mobile-occurrence-palladium",
+    "resourceId": "mobile-resource-palladium",
+    "occurrenceClass": "geological",
+    "naturalOccurrence": true,
+    "allowedCelestialBodyKindIds": [
+      "kind-rocky-planet",
+      "kind-rocky-moon",
+      "kind-asteroid"
+    ],
+    "worldTypeEligibility": "broad",
+    "eligibleWorldTypeIds": [],
+    "preferredWorldTypeIds": [
+      "world-type-high-pressure-geological",
+      "world-type-metallic-rocky",
+      "world-type-metallic-asteroid",
+      "world-type-precious-metal-asteroid",
+      "world-type-metallic-moon",
+      "world-type-resource-rich-moon",
+      "world-type-volcanic-rocky",
+      "world-type-geologically-complex"
+    ],
+    "excludedWorldTypeIds": [
+      "world-type-anomalous-moon",
+      "world-type-exotic-substance-asteroid",
+      "world-type-anomalous-asteroid",
+      "world-type-anomalous-giant"
+    ],
+    "primaryExtractionZoneIds": [
+      "extraction-zone-shallow",
+      "extraction-zone-medium",
+      "extraction-zone-deep"
+    ],
+    "secondaryExtractionZoneIds": [
+      "extraction-zone-surface"
+    ],
+    "preferredGeologyProvinceIds": [
+      "geology-province-metal-rich",
+      "geology-province-volcanic"
+    ],
+    "requiredBiomeIds": [],
+    "requiredHydrosphereIds": [],
+    "excludedAtmosphereTypeIds": [],
+    "notes": "Associated with platinum/nickel mineral systems.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "mobile-occurrence-diamond",
+    "resourceId": "mobile-resource-diamond",
+    "occurrenceClass": "geological",
+    "naturalOccurrence": true,
+    "allowedCelestialBodyKindIds": [
+      "kind-rocky-planet",
+      "kind-rocky-moon",
+      "kind-asteroid"
+    ],
+    "worldTypeEligibility": "broad",
+    "eligibleWorldTypeIds": [],
+    "preferredWorldTypeIds": [
+      "world-type-high-pressure-geological",
+      "world-type-geologically-complex",
+      "world-type-carbonaceous-asteroid",
+      "world-type-habitable-temperate",
+      "world-type-biological",
+      "world-type-former-ocean"
+    ],
+    "excludedWorldTypeIds": [
+      "world-type-anomalous-moon",
+      "world-type-exotic-substance-asteroid",
+      "world-type-anomalous-asteroid",
+      "world-type-anomalous-giant"
+    ],
+    "primaryExtractionZoneIds": [
+      "extraction-zone-surface",
+      "extraction-zone-shallow"
+    ],
+    "secondaryExtractionZoneIds": [
+      "extraction-zone-medium",
+      "extraction-zone-deep"
+    ],
+    "preferredGeologyProvinceIds": [
+      "geology-province-ancient-crust",
+      "geology-province-impact",
+      "geology-province-volcanic",
+      "geology-province-sedimentary-basin"
+    ],
+    "requiredBiomeIds": [],
+    "requiredHydrosphereIds": [],
+    "excludedAtmosphereTypeIds": [],
+    "notes": "Deep formation can yield surface/near-surface extraction via pipes, uplift or placer concentration.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "mobile-occurrence-ruby",
+    "resourceId": "mobile-resource-ruby",
+    "occurrenceClass": "geological",
+    "naturalOccurrence": true,
+    "allowedCelestialBodyKindIds": [
+      "kind-rocky-planet",
+      "kind-rocky-moon"
+    ],
+    "worldTypeEligibility": "broad",
+    "eligibleWorldTypeIds": [],
+    "preferredWorldTypeIds": [
+      "world-type-stable-mineral-rich",
+      "world-type-high-pressure-geological",
+      "world-type-geologically-complex",
+      "world-type-habitable-temperate",
+      "world-type-biological",
+      "world-type-former-ocean",
+      "world-type-rocky-moon",
+      "world-type-barren-moon",
+      "world-type-metallic-moon",
+      "world-type-dust-moon",
+      "world-type-volcanic-moon",
+      "world-type-tidally-heated-moon",
+      "world-type-low-gravity-moon",
+      "world-type-fragmented-moon",
+      "world-type-resource-rich-moon",
+      "world-type-captured-asteroid-moon"
+    ],
+    "excludedWorldTypeIds": [
+      "world-type-anomalous-moon",
+      "world-type-exotic-substance-asteroid",
+      "world-type-anomalous-asteroid",
+      "world-type-anomalous-giant"
+    ],
+    "primaryExtractionZoneIds": [
+      "extraction-zone-surface",
+      "extraction-zone-shallow"
+    ],
+    "secondaryExtractionZoneIds": [
+      "extraction-zone-medium"
+    ],
+    "preferredGeologyProvinceIds": [
+      "geology-province-ancient-crust",
+      "geology-province-silica-rich",
+      "geology-province-sedimentary-basin"
+    ],
+    "requiredBiomeIds": [],
+    "requiredHydrosphereIds": [],
+    "excludedAtmosphereTypeIds": [],
+    "notes": "Aluminium-rich metamorphic/igneous and placer occurrence.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "mobile-occurrence-sapphire",
+    "resourceId": "mobile-resource-sapphire",
+    "occurrenceClass": "geological",
+    "naturalOccurrence": true,
+    "allowedCelestialBodyKindIds": [
+      "kind-rocky-planet",
+      "kind-rocky-moon"
+    ],
+    "worldTypeEligibility": "broad",
+    "eligibleWorldTypeIds": [],
+    "preferredWorldTypeIds": [
+      "world-type-stable-mineral-rich",
+      "world-type-high-pressure-geological",
+      "world-type-geologically-complex",
+      "world-type-former-ocean",
+      "world-type-rocky-moon",
+      "world-type-barren-moon",
+      "world-type-metallic-moon",
+      "world-type-dust-moon",
+      "world-type-volcanic-moon",
+      "world-type-tidally-heated-moon",
+      "world-type-low-gravity-moon",
+      "world-type-fragmented-moon",
+      "world-type-resource-rich-moon",
+      "world-type-captured-asteroid-moon"
+    ],
+    "excludedWorldTypeIds": [
+      "world-type-anomalous-moon",
+      "world-type-exotic-substance-asteroid",
+      "world-type-anomalous-asteroid",
+      "world-type-anomalous-giant"
+    ],
+    "primaryExtractionZoneIds": [
+      "extraction-zone-surface",
+      "extraction-zone-shallow"
+    ],
+    "secondaryExtractionZoneIds": [
+      "extraction-zone-medium"
+    ],
+    "preferredGeologyProvinceIds": [
+      "geology-province-ancient-crust",
+      "geology-province-silica-rich",
+      "geology-province-sedimentary-basin"
+    ],
+    "requiredBiomeIds": [],
+    "requiredHydrosphereIds": [],
+    "excludedAtmosphereTypeIds": [],
+    "notes": "Corundum-compatible igneous/metamorphic and placer occurrence.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "mobile-occurrence-emerald",
+    "resourceId": "mobile-resource-emerald",
+    "occurrenceClass": "geological",
+    "naturalOccurrence": true,
+    "allowedCelestialBodyKindIds": [
+      "kind-rocky-planet",
+      "kind-rocky-moon"
+    ],
+    "worldTypeEligibility": "broad",
+    "eligibleWorldTypeIds": [],
+    "preferredWorldTypeIds": [
+      "world-type-stable-mineral-rich",
+      "world-type-geologically-complex",
+      "world-type-high-pressure-geological",
+      "world-type-volcanic-rocky"
+    ],
+    "excludedWorldTypeIds": [
+      "world-type-anomalous-moon",
+      "world-type-exotic-substance-asteroid",
+      "world-type-anomalous-asteroid",
+      "world-type-anomalous-giant"
+    ],
+    "primaryExtractionZoneIds": [
+      "extraction-zone-shallow",
+      "extraction-zone-medium"
+    ],
+    "secondaryExtractionZoneIds": [
+      "extraction-zone-surface",
+      "extraction-zone-deep"
+    ],
+    "preferredGeologyProvinceIds": [
+      "geology-province-hydrothermal",
+      "geology-province-silica-rich",
+      "geology-province-ancient-crust"
+    ],
+    "requiredBiomeIds": [],
+    "requiredHydrosphereIds": [],
+    "excludedAtmosphereTypeIds": [],
+    "notes": "Uncommon beryllium/chromium/vanadium-bearing vein/metamorphic conditions.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  }
+]
