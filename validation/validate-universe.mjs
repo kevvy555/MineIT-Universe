@@ -94,7 +94,10 @@ const scalarRefs = {
   relationships: ['personAId', 'personBId'],
   currencies: ['sourceDocumentId'],
   loreTopics: ['sourceDocumentId'],
-  substances: ['sourceDocumentId']
+  substances: ['sourceDocumentId'],
+  mobileResourceDefinitions: ['gameId', 'genericSubstanceId'],
+  mobileResourceOccurrenceProfiles: ['resourceId'],
+  mobileBiologicalResources: ['gameId']
 };
 const arrayRefs = {
   regions: ['administrativeOrganisationIds', 'systemIds'],
@@ -115,7 +118,27 @@ const arrayRefs = {
   shipClasses: ['designerOrganisationIds'],
   ships: ['operationIds', 'personIds'],
   projects: ['organisationIds', 'locationIds', 'personIds', 'shipIds', 'operationIds'],
-  events: ['linkedEntityIds']
+  events: ['linkedEntityIds'],
+  mobileResourceOccurrenceProfiles: [
+    'allowedCelestialBodyKindIds',
+    'eligibleWorldTypeIds',
+    'preferredWorldTypeIds',
+    'excludedWorldTypeIds',
+    'primaryExtractionZoneIds',
+    'secondaryExtractionZoneIds',
+    'preferredGeologyProvinceIds',
+    'requiredBiomeIds',
+    'requiredHydrosphereIds',
+    'excludedAtmosphereTypeIds'
+  ],
+  mobileBiologicalResources: [
+    'allowedCelestialBodyKindIds',
+    'naturalWorldTypeIds',
+    'openAgricultureWorldTypeIds',
+    'requiredNaturalBiomeIds',
+    'requiredNaturalHydrosphereIds',
+    'excludedLandformIds'
+  ]
 };
 for (const [collectionName, fields] of Object.entries(scalarRefs)) for (const record of collections[collectionName] ?? []) fields.forEach(field => validateRef(record.id, field, record[field]));
 for (const [collectionName, fields] of Object.entries(arrayRefs)) {
@@ -146,6 +169,7 @@ const expectedCatalogueCounts = {
   geologyProcesses: 29,
   depositShapes: 36,
   depositStates: 10,
+  extractionZones: 5,
   stellarTypes: 16,
   cometTypes: 14,
   ringSystemTypes: 12,
@@ -154,6 +178,21 @@ const expectedCatalogueCounts = {
 for (const [name, expected] of Object.entries(expectedCatalogueCounts)) {
   const actual = (collections[name] ?? []).length;
   if (actual !== expected) errors.push(`${name} catalogue must contain ${expected} rows; found ${actual}.`);
+}
+const expectedExtractionZones = [
+  'extraction-zone-atmosphere',
+  'extraction-zone-surface',
+  'extraction-zone-shallow',
+  'extraction-zone-medium',
+  'extraction-zone-deep'
+];
+const extractionZones = collections.extractionZones ?? [];
+for (let index = 0; index < expectedExtractionZones.length; index += 1) {
+  const zone = extractionZones[index];
+  const expectedId = expectedExtractionZones[index];
+  if (!zone || zone.id !== expectedId) errors.push(`extractionZones[${index}] must be ${expectedId}.`);
+  if (zone && zone.order !== index) errors.push(`${zone.id}: order must be ${index}.`);
+  if (zone && zone.knowledgeScope !== 'designer truth') errors.push(`${zone.id}: extraction zones must be designer truth.`);
 }
 const researchCategories = new Set(['Salvage', 'PartManufacturing', 'Machine', 'Building', 'SubstanceScience', 'Processing']);
 for (const technology of collections.researchTechnologies ?? []) {
@@ -321,8 +360,8 @@ for (const substance of collections.substances ?? []) {
   if (!substance.industrialRole) errors.push(`${substance.id}: industrialRole missing.`);
   if (!substance.sourceDocumentId) errors.push(`${substance.id}: sourceDocumentId missing.`);
 }
-if ((collections.substances ?? []).length && (collections.substances ?? []).length !== 75) {
-  warnings.push(`Substance catalogue expected 75 P0/P1 categories; found ${(collections.substances ?? []).length}.`);
+if ((collections.substances ?? []).length !== 80) {
+  errors.push(`Substance catalogue must contain 75 source categories plus 5 Mobile integration parent categories; found ${(collections.substances ?? []).length}.`);
 }
 for (const part of collections.parts ?? []) {
   if (!part.category) errors.push(`${part.id}: category missing.`);
@@ -420,5 +459,92 @@ console.log(`${retailClasses.length} factory-new ship classes across ${retailMan
 console.log(`${commercialContacts.length} commercial contacts across ${sectors.length} economic sectors and ${commercialOperations.length} procurement operations.`);
 console.log(`${(collections.games ?? []).length} games; ${(collections.surfaceLandforms ?? []).length} landforms; ${(collections.surfaceBiomes ?? []).length} biomes; ${(collections.findSites ?? []).length} P0 find sites; ${(collections.landscapeTilesets ?? []).length} landscape tilesets; ${(collections.landscapeTiles ?? []).length} landscape tiles.`);
 if (warnings.length) { console.log(`\nWarnings (${warnings.length}):`); warnings.forEach(w => console.log(`- ${w}`)); }
+
+// MineIT Mobile canonical resource/environment boundary.
+const mobileResources = collections.mobileResourceDefinitions ?? [];
+const mobileOccurrences = collections.mobileResourceOccurrenceProfiles ?? [];
+const mobileBiology = collections.mobileBiologicalResources ?? [];
+const expectedMobileCategoryCounts = new Map([['Build', 7], ['Fuel', 9], ['Ore', 26]]);
+if (mobileResources.length !== 42) errors.push(`Mobile familiar natural-resource catalogue must contain 42 rows; found ${mobileResources.length}.`);
+for (const [category, expected] of expectedMobileCategoryCounts) {
+  const actual = mobileResources.filter(resource => resource.gameplayCategory === category).length;
+  if (actual !== expected) errors.push(`Mobile ${category} resource catalogue must contain ${expected} rows; found ${actual}.`);
+}
+const mobileKeys = mobileResources.map(resource => resource.mobileKey);
+if (new Set(mobileKeys).size !== mobileKeys.length) errors.push('Mobile familiar resource mobileKey values must be unique.');
+for (const resource of mobileResources) {
+  if (resource.gameId !== 'game-mineit-mobile') errors.push(`${resource.id}: Mobile resource must reference game-mineit-mobile.`);
+  if (!expectedMobileCategoryCounts.has(resource.gameplayCategory)) errors.push(`${resource.id}: invalid Mobile gameplayCategory.`);
+  if (resource.naturalOccurrence !== true) errors.push(`${resource.id}: familiar 42-resource rows must be natural occurrences.`);
+  if (typeof resource.renewable !== 'boolean') errors.push(`${resource.id}: renewable must be boolean.`);
+  for (const forbidden of ['price', 'sellPrice', 'weight', 'spawnWeight', 'rarity', 'reserve', 'quality', 'scanLevel', 'miningLevel']) {
+    if (Object.hasOwn(resource, forbidden)) errors.push(`${resource.id}: gameplay/balance field ${forbidden} must remain Mobile-owned.`);
+  }
+}
+
+if (mobileOccurrences.length !== mobileResources.length) {
+  errors.push(`Mobile occurrence profile count must match familiar resources; found ${mobileOccurrences.length} profiles for ${mobileResources.length} resources.`);
+}
+const occurrenceByResource = new Map();
+for (const profile of mobileOccurrences) {
+  if (occurrenceByResource.has(profile.resourceId)) errors.push(`${profile.id}: duplicate occurrence profile for ${profile.resourceId}.`);
+  occurrenceByResource.set(profile.resourceId, profile);
+  if (!['broad', 'restricted'].includes(profile.worldTypeEligibility)) errors.push(`${profile.id}: invalid worldTypeEligibility.`);
+  if (!(profile.allowedCelestialBodyKindIds ?? []).length) errors.push(`${profile.id}: occurrence profile requires at least one body kind.`);
+  if (!(profile.primaryExtractionZoneIds ?? []).length) errors.push(`${profile.id}: occurrence profile requires at least one primary extraction zone.`);
+  const primary = new Set(profile.primaryExtractionZoneIds ?? []);
+  for (const zone of profile.secondaryExtractionZoneIds ?? []) if (primary.has(zone)) errors.push(`${profile.id}: extraction zone ${zone} cannot be both primary and secondary.`);
+  if (profile.worldTypeEligibility === 'restricted' && !(profile.eligibleWorldTypeIds ?? []).length) {
+    errors.push(`${profile.id}: restricted occurrence profile requires eligibleWorldTypeIds.`);
+  }
+  for (const forbidden of ['price', 'sellPrice', 'weight', 'spawnWeight', 'rarity', 'reserve', 'quality', 'scanLevel', 'miningLevel', 'probability']) {
+    if (Object.hasOwn(profile, forbidden)) errors.push(`${profile.id}: gameplay/balance field ${forbidden} must remain Mobile-owned.`);
+  }
+}
+for (const resource of mobileResources) if (!occurrenceByResource.has(resource.id)) errors.push(`${resource.id}: missing Mobile occurrence profile.`);
+
+const expectedFoodIds = new Set([
+  'mobile-food-crops',
+  'mobile-food-edible-flora',
+  'mobile-food-herds',
+  'mobile-food-aquatic-food',
+  'mobile-food-fungi',
+  'mobile-food-algae',
+  'mobile-food-synthetic-nutrient'
+]);
+if (mobileBiology.length !== expectedFoodIds.size) errors.push(`Mobile biological Food catalogue must contain 7 rows; found ${mobileBiology.length}.`);
+for (const id of expectedFoodIds) if (!mobileBiology.some(resource => resource.id === id)) errors.push(`Mobile biological Food catalogue missing ${id}.`);
+for (const resource of mobileBiology) {
+  if (resource.gameId !== 'game-mineit-mobile') errors.push(`${resource.id}: biological Food record must reference game-mineit-mobile.`);
+  if (resource.gameplayCategory !== 'Food') errors.push(`${resource.id}: biological resource must use Food gameplayCategory.`);
+  for (const field of ['naturalOccurrenceAllowed', 'introducedAgricultureAllowed', 'controlledAgricultureAllowed', 'manufactured']) {
+    if (typeof resource[field] !== 'boolean') errors.push(`${resource.id}.${field} must be boolean.`);
+  }
+}
+const crops = mobileBiology.find(resource => resource.id === 'mobile-food-crops');
+if (crops?.naturalOccurrenceAllowed !== false) errors.push('Crops must never be a natural occurrence.');
+const synthetic = mobileBiology.find(resource => resource.id === 'mobile-food-synthetic-nutrient');
+if (!synthetic?.manufactured || synthetic?.naturalOccurrenceAllowed !== false) errors.push('Synthetic Nutrient must be manufactured and never natural.');
+const mountainExcluded = mobileBiology.filter(resource => resource.id !== 'mobile-food-synthetic-nutrient');
+for (const resource of mountainExcluded) {
+  if (!(resource.excludedLandformIds ?? []).includes('landform-mountains')) errors.push(`${resource.id}: natural/open Food model must exclude Mountains.`);
+}
+for (const id of ['mobile-food-aquatic-food', 'mobile-food-algae']) {
+  const resource = mobileBiology.find(row => row.id === id);
+  if (!(resource?.requiredNaturalHydrosphereIds ?? []).length) errors.push(`${id}: aquatic natural occurrence requires hydrosphere IDs.`);
+}
+if (mobileBiology.find(resource => resource.id === 'mobile-food-edible-flora')?.controlledAgricultureAllowed !== false) {
+  errors.push('Edible Flora must not be a controlled-dome production identity in the first Mobile model.');
+}
+
+const requiredMobileParentSubstances = [
+  'substance-carbonate-mineral',
+  'substance-sulfate-mineral',
+  'substance-frozen-volatile-deposit',
+  'substance-native-carbon-mineral',
+  'substance-precious-metal-ore'
+];
+for (const id of requiredMobileParentSubstances) if (!byId.has(id)) errors.push(`Mobile resource integration missing parent substance ${id}.`);
+
 if (errors.length) { console.error(`\nErrors (${errors.length}):`); errors.forEach(e => console.error(`- ${e}`)); process.exit(1); }
 console.log('\nValidation passed.');

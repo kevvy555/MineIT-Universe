@@ -22,7 +22,7 @@ data/lore-documents.json
         ↓ rendered by
 lore.html  (long-form materials chapter)
 
-data/substances.json  (75 P0/P1 industrial categories)
+data/substances.json  (75 source P0/P1 categories + 5 Mobile integration parent categories)
 data/parts.json
 data/machines.json
 data/buildings.json
@@ -46,7 +46,7 @@ Stable fields on each substance:
 - `dominantArchetype`, `form`, `refined`, `tier`
 - `industrialRole`
 - `sourceDocumentId`, `sourceSection`, `canonStatus`
-- optional `image` — catalog-still generation state (`generated`, `status`, `key`, `promptDescription`, `notes`). All 75 P0/P1 categories currently carry generated 1:1 full-bleed stills.
+- optional `image` — catalog-still generation state (`generated`, `status`, `key`, `promptDescription`, `notes`). The 75 source P0/P1 categories currently carry generated 1:1 full-bleed stills; the five Mobile integration parent categories are ontology records and do not require identity art.
 
 No mutable prices, reserves, contract terms or quality rolls. Image prompts describe an identity-neutral full-bleed representation of the category itself, not objects on a background, a named local deposit, company brand or Veyrite.
 
@@ -56,7 +56,7 @@ Parts, machines and buildings use the same stable-ID model. Relationships are ex
 
 Directory collections:
 
-- `data/substances.json` — 75 industrial substance categories
+- `data/substances.json` — 75 source industrial substance categories plus 5 Mobile integration parent categories
 - `data/substance-archetypes.json` — seven dominant material archetypes
 - `data/substance-properties.json` — numeric property and classification vocabulary
 - `data/rarity-bands.json` — nine shared occurrence-rarity bands
@@ -140,7 +140,7 @@ CI runs these checks on `main`, `develop` and `feature/**` pushes, and on pull r
 
 ## Mobile resource occurrence integration
 
-MineIT Mobile's persistent-galaxy redesign requires a canonical physical-eligibility layer between substance identity and game-owned deposit generation. The approved consumer boundary and the required future `substanceOccurrenceProfiles` collection are defined in `docs/MobileResourceOccurrenceIntegration.md`.
+MineIT Mobile's persistent-galaxy redesign now has a canonical physical-eligibility layer between shared substance identity and game-owned deposit generation. `mobileResourceDefinitions`, `mobileResourceOccurrenceProfiles` and `mobileBiologicalResources` are manifest-backed canonical collections defined by `docs/MobileResourceOccurrenceIntegration.md`.
 
 Mobile may project canonical substances into gameplay roles such as Food/Build/Fuel/Ore, but must not maintain a conflicting authored substance catalogue or independent hard physical-plausibility table.
 
