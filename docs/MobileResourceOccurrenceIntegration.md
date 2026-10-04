@@ -258,3 +258,97 @@ Rules:
 - do not expose generated alien-material naming in ordinary Koplin-region Mobile contracts at this stage.
 
 The exact familiar raw-resource catalogue should be approved before structured records are added.
+
+
+## Candidate MineIT Mobile familiar raw-resource catalogue
+
+**Status:** review catalogue; not yet structured canonical data.  
+**Decision:** retain the four current Mobile gameplay categories.  
+**Scope:** familiar raw/natural resources for the known Koplin-region economy. Future unique/exotic discoveries are deferred.
+
+The target remains deliberately close to the current Mobile catalogue size: **40 familiar resources**.
+
+### Food — 6 (provisional; dedicated review required)
+
+1. Edible Fungi
+2. Edible Flora
+3. Grain Crops
+4. Grazing Livestock
+5. Aquatic Protein
+6. Algae
+
+Food is intentionally provisional. The next design pass must decide how natural food sources, managed agriculture, livestock and harvested biological resources should be represented canonically and in gameplay. These must not automatically be treated as geological substances.
+
+### Build — 7
+
+1. Timber
+2. Plant Fibre
+3. Stone
+4. Clay
+5. Silica Sand
+6. Limestone
+7. Gypsum
+
+Build resources mix renewable biological construction feedstock with familiar bulk geological materials. Mobile may roll all of these into the Build gameplay role while retaining distinct stable resource identities.
+
+### Fuel — 7
+
+1. Biomass
+2. Peat
+3. Coal
+4. Crude Oil
+5. Natural Gas
+6. Methane Ice
+7. Uranium Ore
+
+These are raw energy feedstocks, not interchangeable physical fuels. Mobile may initially project them into the Fuel gameplay role, while future power/refining technology can use explicit compatibility.
+
+Environmental occurrence must be physically constrained. For example, ordinary Biomass and Peat require biological history; Methane Ice is favoured by cold/volatile-rich environments; Uranium Ore is geological rather than biological.
+
+### Ore — 20
+
+1. Iron Ore
+2. Copper Ore
+3. Bauxite (Aluminium Ore)
+4. Nickel Ore
+5. Tin Ore
+6. Zinc Ore
+7. Lead Ore
+8. Chromium Ore
+9. Cobalt Ore
+10. Titanium Ore
+11. Lithium Ore
+12. Rare Earth Ore
+13. Silver Ore
+14. Gold Ore
+15. Platinum Ore
+16. Palladium Ore
+17. Diamond
+18. Ruby
+19. Sapphire
+20. Emerald
+
+The Ore gameplay category is intentionally broad. It contains common industrial metals, technology/strategic metals, precious metals and gemstones, but their canonical identities remain distinct.
+
+### Important modelling rules
+
+- Surface Iron Nodules are a **deposit/find-site expression of Iron Ore**, not a separate traded resource.
+- Generic legacy identities such as Reactive Ore, Conductive Ore and Magnetic Ore should migrate to familiar specific resources rather than remain player-facing Mobile canon.
+- Synthetic Nutrient is manufactured and does not belong in the natural world-resource generator.
+- Advanced Ceramic Feedstock is processed/manufactured rather than a natural Build deposit.
+- Exotic Fuel Crystal, Exotic Industrial Mineral, Exotic Crystal and Advanced Element Deposit are deferred until unique-resource discovery is deliberately designed.
+- The generic 75-substance Universe industrial catalogue remains intact for classification and the other MineIT scenarios.
+- Familiar Mobile resources may map to one or more broad Universe industrial classifications, but their Mobile-facing stable identities should be canonical Universe data once this list is approved.
+- Prices, spawn weights, quality, reserve quantities and gameplay-category balance remain Mobile-owned.
+
+### Total
+
+| Mobile category | Candidate resources |
+| --- | ---: |
+| Food | 6 |
+| Build | 7 |
+| Fuel | 7 |
+| Ore | 20 |
+| **Total** | **40** |
+
+The Food six are the only part of this list intentionally held open for the next design review.
