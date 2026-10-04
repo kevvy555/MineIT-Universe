@@ -528,3 +528,124 @@ The exact Primary/Secondary weighting is deliberately not canonical. That remain
 - **Coal vs Peat:** both map to Solid Fuel Deposit, but Peat is overwhelmingly Surface while Coal favours Shallow/Medium.
 - **Hydrogen and Helium-3:** justify Atmosphere as a first-class extraction zone.
 - **Gold vs Platinum:** Gold has a strong Surface route through placer deposits; Platinum/Palladium should favour subsurface igneous contexts.
+
+
+## World and environment eligibility profiles
+
+**Status:** proposed Mobile occurrence model for review. This section extends the depth profiles with world/environment plausibility. It does not define spawn probabilities.
+
+The generator should evaluate physical eligibility in this order:
+
+1. celestial body kind;
+2. world type;
+3. atmosphere/hydrosphere where relevant;
+4. geology province/process;
+5. familiar resource extraction-zone profile;
+6. Mobile-owned occurrence weighting and deposit generation.
+
+A resource marked possible on a world type is not guaranteed to occur. It only enters the candidate pool.
+
+### World-type groups used below
+
+These aliases are documentation shorthand only. Structured occurrence profiles must store the actual stable Universe IDs.
+
+- **BIOLOGICAL:** Verdant World, Lifeworld, Terraformed World, Colony World.
+- **SEDIMENTARY/WATER-ALTERED:** Claystone World, Deadwater World, Dust World, Salt World, standard Barren World where local sedimentary geology permits it.
+- **METAL/MINERAL:** Ore World, Crystal World, Ironstone World, Exotic World, Rust World, Radiant World.
+- **VOLCANIC/CHEMICAL:** Scorched World, Hellworld, Corrosive World, Vent World.
+- **CARBON/VOLATILE:** Fossil World, Titan-Class World, Vent World.
+- **CRYOGENIC:** Frozen World, Titan-Class World.
+- **ROCKY MOONS:** Rocky Moon, Barren Moon, Metallic Moon, Dust Moon, Volcanic Moon, Tidally Heated Moon, Low-Gravity Moon, Fragmented Moon, Resource-Rich Moon and Captured Asteroid Moon.
+- **ICY MOONS:** Ice Moon, Frozen Moon, Ocean Moon.
+- **ROCK/METAL ASTEROIDS:** Rocky, Metallic, Solid-Core, Rubble-Pile, Fragmented, Captured, Resource-Rich, Precious-Metal, Radioactive and Depleted Asteroids.
+- **CARBON/ICE ASTEROIDS:** Carbonaceous and Icy Asteroids.
+- **GAS GIANTS:** Hydrogen Giant, Ice Giant, Hot Jupiter, Super-Neptune, Ringed Giant and Storm-Dominant Giant.
+
+Anomalous and Exotic-Substance asteroid/giant/moon types are intentionally **not** normal sources for familiar resources. They may be used by the future unique-resource system.
+
+### Individual non-food environment profiles
+
+| Resource | Primary world environments | Secondary / possible environments | Key hard constraints / geological notes |
+| --- | --- | --- | --- |
+| Timber | BIOLOGICAL | — | Requires established macroscopic woody biology; never on airless/barren/mineral-only worlds |
+| Plant Fibre | BIOLOGICAL | — | Requires established surface plant-like biology |
+| Stone | Most rocky planets; ROCKY MOONS | ROCK/METAL ASTEROIDS | Requires solid rocky material; not a gas-giant atmospheric resource |
+| Clay | Claystone, Deadwater, BIOLOGICAL | Dust World, Salt World, Ocean Moon | Requires water alteration/weathering history; airless dry bodies need explicit altered geology |
+| Silica Sand | Dust World, standard Barren World, Crystal World | BIOLOGICAL, Deadwater, Salt World, ROCKY MOONS | Surface sediment/erosion product; silica mineral itself may be broader than sand |
+| Limestone | BIOLOGICAL, Deadwater, Claystone | Ocean Moon, Terraformed/Colony sedimentary worlds | Requires carbonate-forming aqueous/biological/geochemical history |
+| Gypsum | Salt World, Dust World, Deadwater | Corrosive World, Claystone | Favours evaporite/sulfate sedimentary environments |
+| Mica | Crystal World, Ironstone World, Exotic World | Ore World, volcanic/high-pressure rocky worlds, ROCKY MOONS | Favours metamorphic/igneous mineralised crust |
+| Biomass | BIOLOGICAL | — | Requires active/recent biology; exclude airless and sterile mineral worlds |
+| Peat | Verdant World, Lifeworld | Terraformed/Colony worlds with wetlands | Requires biological wetland accumulation; never on sterile or airless worlds |
+| Coal | Fossil World, BIOLOGICAL worlds with long carbon history | Deadwater World where ancient biology is established | Requires ancient organic accumulation/burial; do not infer from generic carbon alone |
+| Crude Oil | Fossil World | Deadwater/BIOLOGICAL worlds with mature sedimentary carbon basins | Requires suitable organic history, burial and reservoir geology |
+| Natural Gas | Fossil World, Vent World | Deadwater/BIOLOGICAL mature carbon basins, Titan-Class where familiar hydrocarbon chemistry fits | Biogenic/thermogenic familiar natural gas requires appropriate carbon history |
+| Hydrogen | GAS GIANTS, Vent World | Titan-Class, Frozen World, volatile-rich moons | Atmosphere or trapped volatile source; not generic rock geology |
+| Methane Ice | Titan-Class, Frozen World, ICY MOONS, Icy Asteroid | Carbonaceous Asteroid | Requires cold volatile retention; strongly disfavoured on hot/volcanic worlds |
+| Uranium Ore | Radiant World, Ore World, Radioactive Asteroid | Ironstone/Exotic worlds, Resource-Rich/Metallic Moon, Metallic Asteroid | Geological/radiogenic source; no biological requirement |
+| Helium-3 | GAS GIANTS, airless ROCKY MOONS | metallic/resource-rich asteroids only as exceptional implanted inventory | Atmosphere or solar-wind implanted regolith; not ordinary buried ore |
+| Iron Ore | Ore World, Rust World, Ironstone World, Metallic Moon/Asteroid | Most rocky planets/moons/asteroids | Extremely broad geology, but concentration controls commercial deposits |
+| Chromium Ore | Ironstone World, Ore World, Scorched/volcanic worlds | Metallic/Resource-Rich Moon, Metallic Asteroid, Exotic World | Favours mafic/ultramafic igneous geology |
+| Copper Ore | Ore World, Scorched World, Exotic World | Rust/Corrosive worlds, ROCKY MOONS, Metallic/Resource-Rich Asteroids | Strong hydrothermal/volcanogenic affinity |
+| Tin Ore | Exotic World, Crystal World, Ore World | Scorched World, ROCKY MOONS | Favours granitic/hydrothermal systems |
+| Bauxite | Verdant World, Lifeworld, Terraformed World | warm/wet Colony World | Requires prolonged intense surface weathering; exclude airless/cold/mineral-only bodies |
+| Titanium Ore | Ore World, Ironstone World, Dust World | Metallic Moon/Asteroid, Scorched World | Igneous bodies or heavy-mineral sediment concentrations |
+| Nickel Ore | Metallic/Ore/Ironstone worlds | Volcanic worlds, Metallic/Resource-Rich moons and asteroids | Strong mafic/ultramafic, sulfide and impact affinity |
+| Cobalt Ore | Ore World, Metallic World contexts, Exotic World | Nickel/copper-rich volcanic/hydrothermal worlds, metallic asteroids/moons | Commonly associated with nickel/copper mineralisation |
+| Lithium Ore | Salt World, Claystone World, Exotic World | Dust World, Scorched/hydrothermal worlds | Brine, clay and pegmatite-style occurrence; requires compatible local hydrology/geology |
+| Zinc Ore | Ore World, Exotic World, Scorched World | Claystone/Deadwater hydrothermal-sedimentary settings | Hydrothermal and sediment-hosted occurrence |
+| Lead Ore | Ore World, Exotic World | Deadwater/Claystone sedimentary settings, volcanic worlds | Vein and sediment-hosted deposits |
+| Tungsten Ore | Ironstone World, Exotic World, Scorched World | Ore/Crystal worlds, volcanic moons | Favours high-temperature hydrothermal/skarn/granitic geology |
+| Rare Earth Ore | Crystal World, Exotic World, Ore World | Ironstone/Radiant worlds, Resource-Rich/Metallic asteroids and moons | Requires specialised igneous/weathering concentration |
+| Graphite | Fossil World, Ironstone/Exotic metamorphic worlds | Carbonaceous Asteroid, Deadwater World | Carbon-rich sedimentary or metamorphic origin |
+| Sulfur | Scorched World, Hellworld, Corrosive World | Volcanic/Tidally Heated Moon, Salt World | Strong volcanic/sulphur-rich or evaporitic association |
+| Phosphate Rock | BIOLOGICAL, Deadwater World | Claystone/Former-ocean contexts | Commonly sedimentary/biogenic; igneous exceptions possible |
+| Quartz | Crystal World, Dust World, standard Barren World | Most rocky planets/moons, ROCK/METAL ASTEROIDS | Very common mineral; only concentrated deposits count as resource sites |
+| Silver | Ore World, Exotic World | Scorched/hydrothermal worlds, Precious-Metal/Metallic Asteroids | Hydrothermal/polymetallic affinity |
+| Gold | Ore World, Exotic World, Scorched World | BIOLOGICAL/Deadwater placer-capable worlds, Precious-Metal Asteroid, Resource-Rich Moon | Hydrothermal hard-rock plus placer concentration where erosion/water history exists |
+| Platinum | Ironstone World, Ore World, Metallic/Precious-Metal Asteroid | Metallic/Resource-Rich Moon, Scorched/Exotic worlds | Favours mafic/ultramafic igneous systems |
+| Palladium | Ironstone World, Ore World, Metallic/Precious-Metal Asteroid | Metallic/Resource-Rich Moon, Scorched/Exotic worlds | Commonly associated with platinum/nickel systems |
+| Diamond | Ironstone World, Exotic World, Carbonaceous Asteroid | ancient stable rocky worlds with deep-crustal transport; placer-capable BIOLOGICAL/Deadwater worlds | Requires high-pressure formation or impact/carbonaceous route; surface occurrence does not imply surface formation |
+| Ruby | Crystal World, Ironstone/Exotic metamorphic worlds | placer-capable BIOLOGICAL/Deadwater worlds, ROCKY MOONS with suitable metamorphism | Requires aluminium-rich metamorphic/igneous mineralogy |
+| Sapphire | Crystal World, Ironstone/Exotic worlds | placer-capable sedimentary worlds, ROCKY MOONS | Corundum-compatible igneous/metamorphic source |
+| Emerald | Crystal World, Exotic World | Ironstone/hydrothermal worlds | Requires uncommon beryllium/chromium/vanadium-bearing vein/metamorphic conditions |
+
+### Atmosphere rules
+
+Atmosphere should act mainly as a **hard biological/volatile constraint**, not as a universal mineral filter.
+
+- Timber, Plant Fibre, Biomass and Peat require a world capable of supporting the relevant biology. Ordinary generation should require an atmosphere/hydrosphere combination compatible with that world's biological classification.
+- Bauxite requires active weathering and therefore an atmosphere/hydrological history, even though the extracted ore itself is geological.
+- Coal, Crude Oil and ordinary Natural Gas require biological/carbon history; an airless present-day atmosphere is acceptable only when the world type/history explicitly supports an ancient organic origin.
+- Methane Ice requires cold volatile retention and should be blocked by hot-greenhouse/strong volcanic surface conditions unless an authored exception exists.
+- Hydrogen and Helium-3 may use Atmosphere extraction on suitable giant/volatile worlds.
+- Most metal/mineral resources are not excluded merely because a world has no atmosphere.
+
+### Geology remains the local discriminator
+
+World type establishes broad plausibility; geology province/process determines whether a particular part of the world is suitable.
+
+Examples:
+
+- Gold on an Ore World still needs a compatible hydrothermal/placer/metal-rich local context.
+- Clay on a Claystone World still favours sedimentary/water-altered provinces.
+- Uranium on a Radiant World still requires a radioactive/mineralised deposit context.
+- Platinum on a Metallic Asteroid should arise from an appropriate metal-rich body/deposit, not every tile.
+- Coal on a Fossil World still requires a carbon basin/seam context.
+
+This prevents world type from becoming a direct spawn table.
+
+### Hard exclusions are first-class
+
+The occurrence system should explicitly store physical exclusions where useful rather than representing impossibility as a tiny probability.
+
+Examples:
+
+- Barren airless moon + Timber = **impossible**.
+- Scorched volcanic world + Peat = **impossible**.
+- Gas giant + Stone quarry = **impossible** for ordinary surface extraction.
+- Warm Hellworld + Methane Ice surface deposit = **impossible** without an authored exceptional environment.
+- Bauxite on an unweathered airless asteroid = **impossible**.
+- Gold on a barren moon = **possible** if geology supports it.
+
+Future unique/exotic resources may deliberately break familiar-resource expectations, but only through the separate unique-resource discovery system.
