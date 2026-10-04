@@ -1,12 +1,12 @@
 {
   "schemaVersion": 10,
-  "contentVersion": "0.11.0",
+  "contentVersion": "0.11.1",
   "universeId": "mineit",
   "name": "MineIT Universe",
   "canonicalYear": 5326,
   "civilisationBaselineYear": 5300,
   "calendar": "Koplin Commonwealth Calendar",
-  "published": "2026-09-22",
+  "published": "2026-10-04",
   "generation": {
     "mode": "authored-materialised",
     "materialised": true,
@@ -104,6 +104,7 @@
     "stellarTypes": "stellar-types.json",
     "cometTypes": "comet-types.json",
     "ringSystemTypes": "ring-system-types.json",
-    "starSystemTypes": "star-system-types.json"
+    "starSystemTypes": "star-system-types.json",
+    "extractionZones": "extraction-zones.json"
   }
 }
