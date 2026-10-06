@@ -112,6 +112,7 @@ const arrayRefs = {
   parts: ['substanceIds', 'machineIds'],
   machines: ['partIds'],
   buildings: ['structuralShellSubstanceIds', 'fitOutSubstanceIds', 'machineIds'],
+  buildingMobileLevelImages: [],
   findSites: ['landformIds', 'biomeIds', 'hydrosphereIds', 'surfaceFeatureIds', 'geologyProvinceIds', 'substanceIds', 'geologyProcessIds', 'depositShapeIds'],
   geologyProcesses: ['depositShapeIds'],
   researchTechnologies: ['prerequisiteTechnologyIds', 'unlockedPartIds', 'unlockedMachineIds', 'unlockedBuildingIds', 'unlockedSubstanceIds'],
@@ -377,7 +378,35 @@ for (const building of collections.buildings ?? []) {
   if (!Array.isArray(building.structuralShellSubstanceIds)) errors.push(`${building.id}: structuralShellSubstanceIds must be an array.`);
   if (!Array.isArray(building.fitOutSubstanceIds)) errors.push(`${building.id}: fitOutSubstanceIds must be an array.`);
   if (!Array.isArray(building.machineIds)) errors.push(`${building.id}: machineIds must be an array.`);
+  const atlas = building.mobileLevelAtlas;
+  if (!atlas?.key || typeof atlas.generated !== 'boolean' || !imageStatuses.has(atlas.status)) errors.push(`${building.id}: mobileLevelAtlas metadata is required.`);
+  if (atlas?.frameWidth !== 256 || atlas?.frameHeight !== 256 || JSON.stringify(atlas?.frameOrder) !== '[1,2,3,4,5]') errors.push(`${building.id}: mobileLevelAtlas must declare five ordered 256x256 frames.`);
+  if (atlas?.generated && atlas?.key) {
+    try { await access(resolve(repoRoot, atlas.key)); }
+    catch { errors.push(`${building.id}: mobileLevelAtlas is marked generated but missing at ${atlas.key}.`); }
+  }
 }
+
+const mobileBuildingLevelImages = collections.buildingMobileLevelImages ?? [];
+const mobileLevelsByBuilding = new Map();
+for (const levelImage of mobileBuildingLevelImages) {
+  validateRef(levelImage.id, 'buildingId', levelImage.buildingId);
+  validateRef(levelImage.id, 'intendedGameId', levelImage.intendedGameId);
+  if (levelImage.intendedGameId !== 'game-mineit-mobile') errors.push(`${levelImage.id}: building level image must target game-mineit-mobile.`);
+  if (levelImage.assetType !== 'mobile-building-level-image') errors.push(`${levelImage.id}: invalid assetType.`);
+  if (!Number.isInteger(levelImage.level) || levelImage.level < 1 || levelImage.level > 5) errors.push(`${levelImage.id}: level must be an integer from 1 to 5.`);
+  if (!String(levelImage.image?.key ?? '').startsWith('assets/art/universe/buildings/mobile-levels/')) errors.push(`${levelImage.id}: image key must use the Mobile building-level art root.`);
+  const levels = mobileLevelsByBuilding.get(levelImage.buildingId) ?? [];
+  levels.push(levelImage.level);
+  mobileLevelsByBuilding.set(levelImage.buildingId, levels);
+}
+for (const building of collections.buildings ?? []) {
+  const levels = mobileLevelsByBuilding.get(building.id) ?? [];
+  if (levels.length !== 5 || new Set(levels).size !== 5 || ![1, 2, 3, 4, 5].every(level => levels.includes(level))) {
+    errors.push(`${building.id}: MineIT Mobile exception requires exactly one linked image for each level L1-L5.`);
+  }
+}
+if (mobileBuildingLevelImages.length !== (collections.buildings ?? []).length * 5) errors.push(`Mobile building-level image catalogue must contain five images per building; found ${mobileBuildingLevelImages.length}.`);
 
 for (const document of collections.loreDocuments ?? []) {
   if (!document.contentPath) { errors.push(`${document.id}: lore document contentPath missing.`); continue; }
@@ -547,7 +576,8 @@ if (mobileBiology.find(resource => resource.id === 'mobile-food-edible-flora')?.
 
 
 const mobileLandscapeAssets = collections.visualAssets ?? [];
-const expectedGenericLandscapeCount = (collections.surfaceLandforms ?? []).length * (collections.surfaceBiomes ?? []).length + 8;
+const migratedVariantCount = 12;
+const expectedGenericLandscapeCount = (collections.surfaceLandforms ?? []).length * (collections.surfaceBiomes ?? []).length + 8 + migratedVariantCount;
 if (mobileLandscapeAssets.length !== expectedGenericLandscapeCount) {
   errors.push(`Generated-world Mobile landscape library must contain ${expectedGenericLandscapeCount} assets; found ${mobileLandscapeAssets.length}.`);
 }
@@ -558,7 +588,8 @@ if (!(collections.visualAssetSeries ?? []).some(series => series.id === mobileLa
 for (const landform of collections.surfaceLandforms ?? []) {
   for (const biome of collections.surfaceBiomes ?? []) {
     const matches = mobileLandscapeAssets.filter(asset => asset.landformId === landform.id && asset.biomeId === biome.id && !asset.hydrosphereId);
-    if (matches.length !== 1) errors.push(`Generated landscape library requires exactly one tile for ${landform.id} + ${biome.id}; found ${matches.length}.`);
+    const expected = ['landform-plains', 'landform-hills', 'landform-mountains'].includes(landform.id) && biome.id === 'biome-grassland' ? 4 : 1;
+    if (matches.length !== expected) errors.push(`Generated landscape library requires ${expected} tile(s) for ${landform.id} + ${biome.id}; found ${matches.length}.`);
   }
 }
 const visibleHydrosphereIds = new Set([
@@ -573,7 +604,8 @@ const visibleHydrosphereIds = new Set([
 ]);
 for (const hydrosphereId of visibleHydrosphereIds) {
   const matches = mobileLandscapeAssets.filter(asset => asset.hydrosphereId === hydrosphereId);
-  if (matches.length !== 1) errors.push(`Generated landscape library requires exactly one visible tile for ${hydrosphereId}; found ${matches.length}.`);
+  const expected = hydrosphereId === 'hydrosphere-lake' ? 4 : 1;
+  if (matches.length !== expected) errors.push(`Generated landscape library requires ${expected} visible tile(s) for ${hydrosphereId}; found ${matches.length}.`);
 }
 for (const asset of mobileLandscapeAssets) {
   if (asset.seriesId !== mobileLandscapeSeriesId) errors.push(`${asset.id}: generated landscape asset must use ${mobileLandscapeSeriesId}.`);

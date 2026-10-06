@@ -514,12 +514,24 @@ Artwork should read clearly as catalogue/reference art.
 For MineIT Mobile buildings:
 
 - use one canonical identity/catalogue image per building type;
+- additionally materialise one game-facing presentation image for each building level L1-L5 in `data/building-mobile-level-images.json`;
+- treat these five images as a narrow MineIT Mobile exception: they are linked visual progression states, not separate canonical building identities;
 - prefer a 1:1 composition that also reads cleanly on a small Mobile tile;
-- use the established Year-5326 Koplin Commonwealth frontier-industrial visual language;
+- use the established MineIT Mobile isometric building language: transparent background, elevated three-quarter view, clean white shells, charcoal structure, orange trim, restrained blue emissive details and warm windows;
 - keep the complete structure visually dominant;
 - no readable logos, company names, registration markings or UI;
-- do not encode a particular save's building level, staffing, damage, power state or output into canonical identity art;
-- Android may retain or derive game-specific L1-L5 presentation atlases separately from the canonical building identity image.
+- the canonical identity image must not encode a numbered level; the linked Mobile level-image collection intentionally depicts authored L1-L5 structural complexity;
+- do not encode staffing, damage, power state, output or other mutable save state into either identity or level art;
+- level images must evolve coherently from a compact L1 starter installation to a flagship L5 complex while preserving the same building identity and function.
+
+Storage:
+
+```text
+assets/art/universe/buildings/<building-id>.webp
+assets/art/universe/buildings/Originals/<building-id>.png
+assets/art/universe/buildings/mobile-levels/<building-id>-l<level>.webp
+assets/art/universe/buildings/mobile-levels/Originals/<building-id>-l<level>.png
+```
 
 Keep the target entity visually dominant and avoid unnecessary environmental clutter.
 

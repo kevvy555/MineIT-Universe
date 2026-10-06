@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 11,
-  "contentVersion": "0.13.1",
+  "schemaVersion": 12,
+  "contentVersion": "0.14.0",
   "universeId": "mineit",
   "name": "MineIT Universe",
   "canonicalYear": 5326,
@@ -50,6 +50,7 @@
     "parts": "parts.json",
     "machines": "machines.json",
     "buildings": "buildings.json",
+    "buildingMobileLevelImages": "building-mobile-level-images.json",
     "games": "games.json",
     "species": "species.json",
     "people": [

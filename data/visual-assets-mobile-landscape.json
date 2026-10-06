@@ -53,8 +53,8 @@
     "description": "Reusable generated-world Mobile landscape tile for plains with grassland cover.",
     "image": {
       "key": "assets/art/visual-library/landscape/mobile/visual-landscape-generated-plains-grassland-01.webp",
-      "generated": false,
-      "status": "not-generated",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "Perfect 1:1 full-bleed square for the MineIT Mobile generated-world landscape library. Straight-down orthographic/nadir aerial view, camera about 500 m altitude, no horizon and no sky. Sun from upper left, shadows lower right. Grounded semi-realistic planetary terrain with natural scale and texture, designed to remain immediately readable at 128×128 on an 8×8 colony grid. Terrain must continue naturally off all four edges so neighbouring tiles can join. No UI, text, border, buildings, roads, people, vehicles, machinery, colony objects or resource markers. Depict broad low-relief open ground with gentle natural variation, covered by open photosynthetic cover of grasses, reeds and low shrubs in natural green/olive tones. The landform must dominate the macro shape and the biome must read as surface cover rather than replacing the relief.",
       "notes": "Reusable identity-neutral generated-world tile. Store lossless PNG under assets/art/visual-library/landscape/mobile/Originals/<asset-id>.png. Do not substitute bespoke Koplin/world-specific art."
     }
@@ -253,8 +253,8 @@
     "description": "Reusable generated-world Mobile landscape tile for hills with grassland cover.",
     "image": {
       "key": "assets/art/visual-library/landscape/mobile/visual-landscape-generated-hills-grassland-01.webp",
-      "generated": false,
-      "status": "not-generated",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "Perfect 1:1 full-bleed square for the MineIT Mobile generated-world landscape library. Straight-down orthographic/nadir aerial view, camera about 500 m altitude, no horizon and no sky. Sun from upper left, shadows lower right. Grounded semi-realistic planetary terrain with natural scale and texture, designed to remain immediately readable at 128×128 on an 8×8 colony grid. Terrain must continue naturally off all four edges so neighbouring tiles can join. No UI, text, border, buildings, roads, people, vehicles, machinery, colony objects or resource markers. Depict rolling moderate relief with multiple connected rises and shallow saddles, covered by open photosynthetic cover of grasses, reeds and low shrubs in natural green/olive tones. The landform must dominate the macro shape and the biome must read as surface cover rather than replacing the relief.",
       "notes": "Reusable identity-neutral generated-world tile. Store lossless PNG under assets/art/visual-library/landscape/mobile/Originals/<asset-id>.png. Do not substitute bespoke Koplin/world-specific art."
     }
@@ -453,8 +453,8 @@
     "description": "Reusable generated-world Mobile landscape tile for mountains with grassland cover.",
     "image": {
       "key": "assets/art/visual-library/landscape/mobile/visual-landscape-generated-mountains-grassland-01.webp",
-      "generated": false,
-      "status": "not-generated",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "Perfect 1:1 full-bleed square for the MineIT Mobile generated-world landscape library. Straight-down orthographic/nadir aerial view, camera about 500 m altitude, no horizon and no sky. Sun from upper left, shadows lower right. Grounded semi-realistic planetary terrain with natural scale and texture, designed to remain immediately readable at 128×128 on an 8×8 colony grid. Terrain must continue naturally off all four edges so neighbouring tiles can join. No UI, text, border, buildings, roads, people, vehicles, machinery, colony objects or resource markers. Depict a continuous high mountain range with steep ridges and valleys running off the tile edges, never one isolated centred peak, covered by open photosynthetic cover of grasses, reeds and low shrubs in natural green/olive tones. The landform must dominate the macro shape and the biome must read as surface cover rather than replacing the relief.",
       "notes": "Reusable identity-neutral generated-world tile. Store lossless PNG under assets/art/visual-library/landscape/mobile/Originals/<asset-id>.png. Do not substitute bespoke Koplin/world-specific art."
     }
@@ -2435,8 +2435,8 @@
     "description": "Reusable generated-world Mobile landscape water tile for lake.",
     "image": {
       "key": "assets/art/visual-library/landscape/mobile/visual-landscape-generated-lake-01.webp",
-      "generated": false,
-      "status": "not-generated",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "Perfect 1:1 full-bleed square for the MineIT Mobile generated-world landscape library. Straight-down orthographic/nadir aerial view, camera about 500 m altitude, no horizon and no sky. Sun from upper left, shadows lower right. Grounded semi-realistic planetary terrain with natural scale and texture, designed to remain immediately readable at 128×128 on an 8×8 colony grid. Terrain must continue naturally off all four edges so neighbouring tiles can join. No UI, text, border, buildings, roads, people, vehicles, machinery, colony objects or resource markers. Depict an inland lake filling most of the square with a natural irregular shoreline continuing across tile edges; neutral rocky/soil margins, no named-world vegetation palette. Water or ice continues naturally off all relevant edges for grid adjacency.",
       "notes": "Reusable identity-neutral generated-world water tile. Store lossless PNG under assets/art/visual-library/landscape/mobile/Originals/<asset-id>.png. hydrosphere-none and subsurface-aquifer intentionally have no visible standalone water tile."
     }
@@ -2565,6 +2565,249 @@
       "status": "not-generated",
       "promptDescription": "Perfect 1:1 full-bleed square for the MineIT Mobile generated-world landscape library. Straight-down orthographic/nadir aerial view, camera about 500 m altitude, no horizon and no sky. Sun from upper left, shadows lower right. Grounded semi-realistic planetary terrain with natural scale and texture, designed to remain immediately readable at 128×128 on an 8×8 colony grid. Terrain must continue naturally off all four edges so neighbouring tiles can join. No UI, text, border, buildings, roads, people, vehicles, machinery, colony objects or resource markers. Depict a frozen water surface filling the square, blue-white ice with pressure cracks, wind-scoured snow and subtle translucent frozen patches; no land, buildings or vehicles. Water or ice continues naturally off all relevant edges for grid adjacency.",
       "notes": "Reusable identity-neutral generated-world water tile. Store lossless PNG under assets/art/visual-library/landscape/mobile/Originals/<asset-id>.png. hydrosphere-none and subsurface-aquifer intentionally have no visible standalone water tile."
+    }
+  },
+  {
+    "id": "visual-landscape-generated-plains-grassland-02",
+    "name": "Generated Landscape plains / grassland 02",
+    "seriesId": "visual-series-mobile-generated-landscape",
+    "assetType": "mobile-landscape-tile",
+    "intendedGameId": "game-mineit-mobile",
+    "identityNeutral": true,
+    "landformId": "landform-plains",
+    "biomeId": "biome-grassland",
+    "hydrosphereId": null,
+    "variant": 2,
+    "description": "Reusable generated-world Mobile landscape tile for plains with grassland cover.",
+    "image": {
+      "key": "assets/art/visual-library/landscape/mobile/visual-landscape-generated-plains-grassland-02.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 full-bleed square for the MineIT Mobile generated-world landscape library. Straight-down orthographic/nadir aerial view, camera about 500 m altitude, no horizon and no sky. Sun from upper left, shadows lower right. Grounded semi-realistic planetary terrain with natural scale and texture, designed to remain immediately readable at 128×128 on an 8×8 colony grid. Terrain must continue naturally off all four edges so neighbouring tiles can join. No UI, text, border, buildings, roads, people, vehicles, machinery, colony objects or resource markers. Depict broad low-relief open ground with gentle natural variation, covered by open photosynthetic cover of grasses, reeds and low shrubs in natural green/olive tones. The landform must dominate the macro shape and the biome must read as surface cover rather than replacing the relief.",
+      "notes": "Reusable identity-neutral generated-world tile. Store lossless PNG under assets/art/visual-library/landscape/mobile/Originals/<asset-id>.png. Do not substitute bespoke Koplin/world-specific art. Migrated variant 2 from the established MineIT Android terrain artwork."
+    }
+  },
+  {
+    "id": "visual-landscape-generated-plains-grassland-03",
+    "name": "Generated Landscape plains / grassland 03",
+    "seriesId": "visual-series-mobile-generated-landscape",
+    "assetType": "mobile-landscape-tile",
+    "intendedGameId": "game-mineit-mobile",
+    "identityNeutral": true,
+    "landformId": "landform-plains",
+    "biomeId": "biome-grassland",
+    "hydrosphereId": null,
+    "variant": 3,
+    "description": "Reusable generated-world Mobile landscape tile for plains with grassland cover.",
+    "image": {
+      "key": "assets/art/visual-library/landscape/mobile/visual-landscape-generated-plains-grassland-03.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 full-bleed square for the MineIT Mobile generated-world landscape library. Straight-down orthographic/nadir aerial view, camera about 500 m altitude, no horizon and no sky. Sun from upper left, shadows lower right. Grounded semi-realistic planetary terrain with natural scale and texture, designed to remain immediately readable at 128×128 on an 8×8 colony grid. Terrain must continue naturally off all four edges so neighbouring tiles can join. No UI, text, border, buildings, roads, people, vehicles, machinery, colony objects or resource markers. Depict broad low-relief open ground with gentle natural variation, covered by open photosynthetic cover of grasses, reeds and low shrubs in natural green/olive tones. The landform must dominate the macro shape and the biome must read as surface cover rather than replacing the relief.",
+      "notes": "Reusable identity-neutral generated-world tile. Store lossless PNG under assets/art/visual-library/landscape/mobile/Originals/<asset-id>.png. Do not substitute bespoke Koplin/world-specific art. Migrated variant 3 from the established MineIT Android terrain artwork."
+    }
+  },
+  {
+    "id": "visual-landscape-generated-plains-grassland-04",
+    "name": "Generated Landscape plains / grassland 04",
+    "seriesId": "visual-series-mobile-generated-landscape",
+    "assetType": "mobile-landscape-tile",
+    "intendedGameId": "game-mineit-mobile",
+    "identityNeutral": true,
+    "landformId": "landform-plains",
+    "biomeId": "biome-grassland",
+    "hydrosphereId": null,
+    "variant": 4,
+    "description": "Reusable generated-world Mobile landscape tile for plains with grassland cover.",
+    "image": {
+      "key": "assets/art/visual-library/landscape/mobile/visual-landscape-generated-plains-grassland-04.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 full-bleed square for the MineIT Mobile generated-world landscape library. Straight-down orthographic/nadir aerial view, camera about 500 m altitude, no horizon and no sky. Sun from upper left, shadows lower right. Grounded semi-realistic planetary terrain with natural scale and texture, designed to remain immediately readable at 128×128 on an 8×8 colony grid. Terrain must continue naturally off all four edges so neighbouring tiles can join. No UI, text, border, buildings, roads, people, vehicles, machinery, colony objects or resource markers. Depict broad low-relief open ground with gentle natural variation, covered by open photosynthetic cover of grasses, reeds and low shrubs in natural green/olive tones. The landform must dominate the macro shape and the biome must read as surface cover rather than replacing the relief.",
+      "notes": "Reusable identity-neutral generated-world tile. Store lossless PNG under assets/art/visual-library/landscape/mobile/Originals/<asset-id>.png. Do not substitute bespoke Koplin/world-specific art. Migrated variant 4 from the established MineIT Android terrain artwork."
+    }
+  },
+  {
+    "id": "visual-landscape-generated-hills-grassland-02",
+    "name": "Generated Landscape hills / grassland 02",
+    "seriesId": "visual-series-mobile-generated-landscape",
+    "assetType": "mobile-landscape-tile",
+    "intendedGameId": "game-mineit-mobile",
+    "identityNeutral": true,
+    "landformId": "landform-hills",
+    "biomeId": "biome-grassland",
+    "hydrosphereId": null,
+    "variant": 2,
+    "description": "Reusable generated-world Mobile landscape tile for hills with grassland cover.",
+    "image": {
+      "key": "assets/art/visual-library/landscape/mobile/visual-landscape-generated-hills-grassland-02.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 full-bleed square for the MineIT Mobile generated-world landscape library. Straight-down orthographic/nadir aerial view, camera about 500 m altitude, no horizon and no sky. Sun from upper left, shadows lower right. Grounded semi-realistic planetary terrain with natural scale and texture, designed to remain immediately readable at 128×128 on an 8×8 colony grid. Terrain must continue naturally off all four edges so neighbouring tiles can join. No UI, text, border, buildings, roads, people, vehicles, machinery, colony objects or resource markers. Depict rolling moderate relief with multiple connected rises and shallow saddles, covered by open photosynthetic cover of grasses, reeds and low shrubs in natural green/olive tones. The landform must dominate the macro shape and the biome must read as surface cover rather than replacing the relief.",
+      "notes": "Reusable identity-neutral generated-world tile. Store lossless PNG under assets/art/visual-library/landscape/mobile/Originals/<asset-id>.png. Do not substitute bespoke Koplin/world-specific art. Migrated variant 2 from the established MineIT Android terrain artwork."
+    }
+  },
+  {
+    "id": "visual-landscape-generated-hills-grassland-03",
+    "name": "Generated Landscape hills / grassland 03",
+    "seriesId": "visual-series-mobile-generated-landscape",
+    "assetType": "mobile-landscape-tile",
+    "intendedGameId": "game-mineit-mobile",
+    "identityNeutral": true,
+    "landformId": "landform-hills",
+    "biomeId": "biome-grassland",
+    "hydrosphereId": null,
+    "variant": 3,
+    "description": "Reusable generated-world Mobile landscape tile for hills with grassland cover.",
+    "image": {
+      "key": "assets/art/visual-library/landscape/mobile/visual-landscape-generated-hills-grassland-03.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 full-bleed square for the MineIT Mobile generated-world landscape library. Straight-down orthographic/nadir aerial view, camera about 500 m altitude, no horizon and no sky. Sun from upper left, shadows lower right. Grounded semi-realistic planetary terrain with natural scale and texture, designed to remain immediately readable at 128×128 on an 8×8 colony grid. Terrain must continue naturally off all four edges so neighbouring tiles can join. No UI, text, border, buildings, roads, people, vehicles, machinery, colony objects or resource markers. Depict rolling moderate relief with multiple connected rises and shallow saddles, covered by open photosynthetic cover of grasses, reeds and low shrubs in natural green/olive tones. The landform must dominate the macro shape and the biome must read as surface cover rather than replacing the relief.",
+      "notes": "Reusable identity-neutral generated-world tile. Store lossless PNG under assets/art/visual-library/landscape/mobile/Originals/<asset-id>.png. Do not substitute bespoke Koplin/world-specific art. Migrated variant 3 from the established MineIT Android terrain artwork."
+    }
+  },
+  {
+    "id": "visual-landscape-generated-hills-grassland-04",
+    "name": "Generated Landscape hills / grassland 04",
+    "seriesId": "visual-series-mobile-generated-landscape",
+    "assetType": "mobile-landscape-tile",
+    "intendedGameId": "game-mineit-mobile",
+    "identityNeutral": true,
+    "landformId": "landform-hills",
+    "biomeId": "biome-grassland",
+    "hydrosphereId": null,
+    "variant": 4,
+    "description": "Reusable generated-world Mobile landscape tile for hills with grassland cover.",
+    "image": {
+      "key": "assets/art/visual-library/landscape/mobile/visual-landscape-generated-hills-grassland-04.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 full-bleed square for the MineIT Mobile generated-world landscape library. Straight-down orthographic/nadir aerial view, camera about 500 m altitude, no horizon and no sky. Sun from upper left, shadows lower right. Grounded semi-realistic planetary terrain with natural scale and texture, designed to remain immediately readable at 128×128 on an 8×8 colony grid. Terrain must continue naturally off all four edges so neighbouring tiles can join. No UI, text, border, buildings, roads, people, vehicles, machinery, colony objects or resource markers. Depict rolling moderate relief with multiple connected rises and shallow saddles, covered by open photosynthetic cover of grasses, reeds and low shrubs in natural green/olive tones. The landform must dominate the macro shape and the biome must read as surface cover rather than replacing the relief.",
+      "notes": "Reusable identity-neutral generated-world tile. Store lossless PNG under assets/art/visual-library/landscape/mobile/Originals/<asset-id>.png. Do not substitute bespoke Koplin/world-specific art. Migrated variant 4 from the established MineIT Android terrain artwork."
+    }
+  },
+  {
+    "id": "visual-landscape-generated-mountains-grassland-02",
+    "name": "Generated Landscape mountains / grassland 02",
+    "seriesId": "visual-series-mobile-generated-landscape",
+    "assetType": "mobile-landscape-tile",
+    "intendedGameId": "game-mineit-mobile",
+    "identityNeutral": true,
+    "landformId": "landform-mountains",
+    "biomeId": "biome-grassland",
+    "hydrosphereId": null,
+    "variant": 2,
+    "description": "Reusable generated-world Mobile landscape tile for mountains with grassland cover.",
+    "image": {
+      "key": "assets/art/visual-library/landscape/mobile/visual-landscape-generated-mountains-grassland-02.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 full-bleed square for the MineIT Mobile generated-world landscape library. Straight-down orthographic/nadir aerial view, camera about 500 m altitude, no horizon and no sky. Sun from upper left, shadows lower right. Grounded semi-realistic planetary terrain with natural scale and texture, designed to remain immediately readable at 128×128 on an 8×8 colony grid. Terrain must continue naturally off all four edges so neighbouring tiles can join. No UI, text, border, buildings, roads, people, vehicles, machinery, colony objects or resource markers. Depict a continuous high mountain range with steep ridges and valleys running off the tile edges, never one isolated centred peak, covered by open photosynthetic cover of grasses, reeds and low shrubs in natural green/olive tones. The landform must dominate the macro shape and the biome must read as surface cover rather than replacing the relief.",
+      "notes": "Reusable identity-neutral generated-world tile. Store lossless PNG under assets/art/visual-library/landscape/mobile/Originals/<asset-id>.png. Do not substitute bespoke Koplin/world-specific art. Migrated variant 2 from the established MineIT Android terrain artwork."
+    }
+  },
+  {
+    "id": "visual-landscape-generated-mountains-grassland-03",
+    "name": "Generated Landscape mountains / grassland 03",
+    "seriesId": "visual-series-mobile-generated-landscape",
+    "assetType": "mobile-landscape-tile",
+    "intendedGameId": "game-mineit-mobile",
+    "identityNeutral": true,
+    "landformId": "landform-mountains",
+    "biomeId": "biome-grassland",
+    "hydrosphereId": null,
+    "variant": 3,
+    "description": "Reusable generated-world Mobile landscape tile for mountains with grassland cover.",
+    "image": {
+      "key": "assets/art/visual-library/landscape/mobile/visual-landscape-generated-mountains-grassland-03.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 full-bleed square for the MineIT Mobile generated-world landscape library. Straight-down orthographic/nadir aerial view, camera about 500 m altitude, no horizon and no sky. Sun from upper left, shadows lower right. Grounded semi-realistic planetary terrain with natural scale and texture, designed to remain immediately readable at 128×128 on an 8×8 colony grid. Terrain must continue naturally off all four edges so neighbouring tiles can join. No UI, text, border, buildings, roads, people, vehicles, machinery, colony objects or resource markers. Depict a continuous high mountain range with steep ridges and valleys running off the tile edges, never one isolated centred peak, covered by open photosynthetic cover of grasses, reeds and low shrubs in natural green/olive tones. The landform must dominate the macro shape and the biome must read as surface cover rather than replacing the relief.",
+      "notes": "Reusable identity-neutral generated-world tile. Store lossless PNG under assets/art/visual-library/landscape/mobile/Originals/<asset-id>.png. Do not substitute bespoke Koplin/world-specific art. Migrated variant 3 from the established MineIT Android terrain artwork."
+    }
+  },
+  {
+    "id": "visual-landscape-generated-mountains-grassland-04",
+    "name": "Generated Landscape mountains / grassland 04",
+    "seriesId": "visual-series-mobile-generated-landscape",
+    "assetType": "mobile-landscape-tile",
+    "intendedGameId": "game-mineit-mobile",
+    "identityNeutral": true,
+    "landformId": "landform-mountains",
+    "biomeId": "biome-grassland",
+    "hydrosphereId": null,
+    "variant": 4,
+    "description": "Reusable generated-world Mobile landscape tile for mountains with grassland cover.",
+    "image": {
+      "key": "assets/art/visual-library/landscape/mobile/visual-landscape-generated-mountains-grassland-04.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 full-bleed square for the MineIT Mobile generated-world landscape library. Straight-down orthographic/nadir aerial view, camera about 500 m altitude, no horizon and no sky. Sun from upper left, shadows lower right. Grounded semi-realistic planetary terrain with natural scale and texture, designed to remain immediately readable at 128×128 on an 8×8 colony grid. Terrain must continue naturally off all four edges so neighbouring tiles can join. No UI, text, border, buildings, roads, people, vehicles, machinery, colony objects or resource markers. Depict a continuous high mountain range with steep ridges and valleys running off the tile edges, never one isolated centred peak, covered by open photosynthetic cover of grasses, reeds and low shrubs in natural green/olive tones. The landform must dominate the macro shape and the biome must read as surface cover rather than replacing the relief.",
+      "notes": "Reusable identity-neutral generated-world tile. Store lossless PNG under assets/art/visual-library/landscape/mobile/Originals/<asset-id>.png. Do not substitute bespoke Koplin/world-specific art. Migrated variant 4 from the established MineIT Android terrain artwork."
+    }
+  },
+  {
+    "id": "visual-landscape-generated-lake-02",
+    "name": "Generated Landscape lake 02",
+    "seriesId": "visual-series-mobile-generated-landscape",
+    "assetType": "mobile-landscape-water-tile",
+    "intendedGameId": "game-mineit-mobile",
+    "identityNeutral": true,
+    "landformId": null,
+    "biomeId": null,
+    "hydrosphereId": "hydrosphere-lake",
+    "adjacencyRole": "standing-water",
+    "variant": 2,
+    "description": "Reusable generated-world Mobile landscape water tile for lake.",
+    "image": {
+      "key": "assets/art/visual-library/landscape/mobile/visual-landscape-generated-lake-02.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 full-bleed square for the MineIT Mobile generated-world landscape library. Straight-down orthographic/nadir aerial view, camera about 500 m altitude, no horizon and no sky. Sun from upper left, shadows lower right. Grounded semi-realistic planetary terrain with natural scale and texture, designed to remain immediately readable at 128×128 on an 8×8 colony grid. Terrain must continue naturally off all four edges so neighbouring tiles can join. No UI, text, border, buildings, roads, people, vehicles, machinery, colony objects or resource markers. Depict an inland lake filling most of the square with a natural irregular shoreline continuing across tile edges; neutral rocky/soil margins, no named-world vegetation palette. Water or ice continues naturally off all relevant edges for grid adjacency.",
+      "notes": "Reusable identity-neutral generated-world water tile. Store lossless PNG under assets/art/visual-library/landscape/mobile/Originals/<asset-id>.png. hydrosphere-none and subsurface-aquifer intentionally have no visible standalone water tile. Migrated variant 2 from the established MineIT Android terrain artwork."
+    }
+  },
+  {
+    "id": "visual-landscape-generated-lake-03",
+    "name": "Generated Landscape lake 03",
+    "seriesId": "visual-series-mobile-generated-landscape",
+    "assetType": "mobile-landscape-water-tile",
+    "intendedGameId": "game-mineit-mobile",
+    "identityNeutral": true,
+    "landformId": null,
+    "biomeId": null,
+    "hydrosphereId": "hydrosphere-lake",
+    "adjacencyRole": "standing-water",
+    "variant": 3,
+    "description": "Reusable generated-world Mobile landscape water tile for lake.",
+    "image": {
+      "key": "assets/art/visual-library/landscape/mobile/visual-landscape-generated-lake-03.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 full-bleed square for the MineIT Mobile generated-world landscape library. Straight-down orthographic/nadir aerial view, camera about 500 m altitude, no horizon and no sky. Sun from upper left, shadows lower right. Grounded semi-realistic planetary terrain with natural scale and texture, designed to remain immediately readable at 128×128 on an 8×8 colony grid. Terrain must continue naturally off all four edges so neighbouring tiles can join. No UI, text, border, buildings, roads, people, vehicles, machinery, colony objects or resource markers. Depict an inland lake filling most of the square with a natural irregular shoreline continuing across tile edges; neutral rocky/soil margins, no named-world vegetation palette. Water or ice continues naturally off all relevant edges for grid adjacency.",
+      "notes": "Reusable identity-neutral generated-world water tile. Store lossless PNG under assets/art/visual-library/landscape/mobile/Originals/<asset-id>.png. hydrosphere-none and subsurface-aquifer intentionally have no visible standalone water tile. Migrated variant 3 from the established MineIT Android terrain artwork."
+    }
+  },
+  {
+    "id": "visual-landscape-generated-lake-04",
+    "name": "Generated Landscape lake 04",
+    "seriesId": "visual-series-mobile-generated-landscape",
+    "assetType": "mobile-landscape-water-tile",
+    "intendedGameId": "game-mineit-mobile",
+    "identityNeutral": true,
+    "landformId": null,
+    "biomeId": null,
+    "hydrosphereId": "hydrosphere-lake",
+    "adjacencyRole": "standing-water",
+    "variant": 4,
+    "description": "Reusable generated-world Mobile landscape water tile for lake.",
+    "image": {
+      "key": "assets/art/visual-library/landscape/mobile/visual-landscape-generated-lake-04.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 full-bleed square for the MineIT Mobile generated-world landscape library. Straight-down orthographic/nadir aerial view, camera about 500 m altitude, no horizon and no sky. Sun from upper left, shadows lower right. Grounded semi-realistic planetary terrain with natural scale and texture, designed to remain immediately readable at 128×128 on an 8×8 colony grid. Terrain must continue naturally off all four edges so neighbouring tiles can join. No UI, text, border, buildings, roads, people, vehicles, machinery, colony objects or resource markers. Depict an inland lake filling most of the square with a natural irregular shoreline continuing across tile edges; neutral rocky/soil margins, no named-world vegetation palette. Water or ice continues naturally off all relevant edges for grid adjacency.",
+      "notes": "Reusable identity-neutral generated-world water tile. Store lossless PNG under assets/art/visual-library/landscape/mobile/Originals/<asset-id>.png. hydrosphere-none and subsurface-aquifer intentionally have no visible standalone water tile. Migrated variant 4 from the established MineIT Android terrain artwork."
     }
   }
 ]

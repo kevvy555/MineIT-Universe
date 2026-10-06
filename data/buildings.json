@@ -31,8 +31,23 @@
       "key": "assets/art/universe/buildings/building-collection-camp.webp",
       "generated": false,
       "status": "not-generated",
-      "promptDescription": "Grounded high-detail industrial science-fiction surface collection camp built from rough stone aggregate and heavy timber beams with corrugated metal lean-tos, a compact accommodation hut and open-air ground storage holding loose raw material piles; rugged modular frontier construction; exterior full-structure catalogue view; no readable logos or names.",
-      "notes": "Primary catalogue image normalized from the legacy multi-view building art specification at Documentation/design/Machines & Buildings/Buildings/Collection/CollectionCampImages.md. Legacy source images were marked unapproved and are not treated as canonical assets."
+      "promptDescription": "Perfect 1:1 square MineIT Mobile building tile on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent three-quarter elevated angle, matching the established Mobile development-building language: clean rounded white ceramic/composite shells, charcoal structural frames and platforms, vivid orange trim and safety rails, restrained electric-blue emissive details, warm amber windows, crisp bevels, compact modular construction and a strong readable silhouette at 128×128. Centre the complete structure with comfortable transparent margin. No terrain scene, sky, horizon, rectangular backdrop, people, readable text, logos, company marks, registration numbers, UI, border or watermark. Show a complete mature reference configuration that clearly communicates the building identity without representing a numbered gameplay level. Building identity and required functional content: surface collection camp built from rough stone aggregate and heavy timber beams with corrugated metal lean-tos, a compact accommodation hut and open-air ground storage holding loose raw material piles; rugged modular frontier construction; no readable logos or names.",
+      "notes": "Primary catalogue image normalized from the legacy multi-view building art specification at Documentation/design/Machines & Buildings/Buildings/Collection/CollectionCampImages.md. Legacy source images were marked unapproved and are not treated as canonical assets. Canonical identity art follows the MineIT Mobile isometric style; separate linked L1-L5 presentation images are materialised in building-mobile-level-images.json."
+    },
+    "mobileLevelAtlas": {
+      "key": "assets/art/universe/buildings/mobile-levels/atlases/building-collection-camp-levels-256.webp",
+      "generated": false,
+      "status": "not-generated",
+      "frameWidth": 256,
+      "frameHeight": 256,
+      "frameOrder": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
     }
   },
   {
@@ -71,10 +86,25 @@
     },
     "image": {
       "key": "assets/art/universe/buildings/building-quarry.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "Grounded high-detail industrial science-fiction open-pit quarry carved into rocky terrain; terraced excavation walls, reinforced retaining barriers, switchback vehicle ramps, powered drilling rigs along the working face, prefabricated industrial structures on the rim and heavy transport vehicles; exterior overview catalogue view; no readable logos or names.",
-      "notes": "Primary catalogue image normalized from the legacy multi-view building art specification at Documentation/design/Machines & Buildings/Buildings/Collection/QuarryImages.md. Legacy source images were marked unapproved and are not treated as canonical assets."
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile building tile on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent three-quarter elevated angle, matching the established Mobile development-building language: clean rounded white ceramic/composite shells, charcoal structural frames and platforms, vivid orange trim and safety rails, restrained electric-blue emissive details, warm amber windows, crisp bevels, compact modular construction and a strong readable silhouette at 128×128. Centre the complete structure with comfortable transparent margin. No terrain scene, sky, horizon, rectangular backdrop, people, readable text, logos, company marks, registration numbers, UI, border or watermark. Show a complete mature reference configuration that clearly communicates the building identity without representing a numbered gameplay level. Building identity and required functional content: open-pit quarry carved into rocky terrain; terraced excavation walls, reinforced retaining barriers, switchback vehicle ramps, powered drilling rigs along the working face, prefabricated industrial structures on the rim and heavy transport vehicles; no readable logos or names.",
+      "notes": "Primary catalogue image normalized from the legacy multi-view building art specification at Documentation/design/Machines & Buildings/Buildings/Collection/QuarryImages.md. Legacy source images were marked unapproved and are not treated as canonical assets. Canonical identity art follows the MineIT Mobile isometric style; separate linked L1-L5 presentation images are materialised in building-mobile-level-images.json. Migrated from the established MineIT Android L3 source image as the representative canonical catalogue view."
+    },
+    "mobileLevelAtlas": {
+      "key": "assets/art/universe/buildings/mobile-levels/atlases/building-quarry-levels-256.webp",
+      "generated": true,
+      "status": "generated",
+      "frameWidth": 256,
+      "frameHeight": 256,
+      "frameOrder": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
     }
   },
   {
@@ -115,10 +145,25 @@
     },
     "image": {
       "key": "assets/art/universe/buildings/building-simple-pit-mine.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "Grounded high-detail industrial science-fiction mine surface complex with heavy steel head-frame over a deep shaft entrance, winding gear, reinforced administrative structures, conveyor outlet carrying raw ore, surface storage, industrial piping and ventilation ducts; exterior full-structure catalogue view; no readable logos or names.",
-      "notes": "Primary catalogue image normalized from the legacy multi-view building art specification at Documentation/design/Machines & Buildings/Buildings/Collection/SimplePitMineImages.md. Legacy source images were marked unapproved and are not treated as canonical assets."
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile building tile on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent three-quarter elevated angle, matching the established Mobile development-building language: clean rounded white ceramic/composite shells, charcoal structural frames and platforms, vivid orange trim and safety rails, restrained electric-blue emissive details, warm amber windows, crisp bevels, compact modular construction and a strong readable silhouette at 128×128. Centre the complete structure with comfortable transparent margin. No terrain scene, sky, horizon, rectangular backdrop, people, readable text, logos, company marks, registration numbers, UI, border or watermark. Show a complete mature reference configuration that clearly communicates the building identity without representing a numbered gameplay level. Building identity and required functional content: mine surface complex with heavy steel head-frame over a deep shaft entrance, winding gear, reinforced administrative structures, conveyor outlet carrying raw ore, surface storage, industrial piping and ventilation ducts; no readable logos or names.",
+      "notes": "Primary catalogue image normalized from the legacy multi-view building art specification at Documentation/design/Machines & Buildings/Buildings/Collection/SimplePitMineImages.md. Legacy source images were marked unapproved and are not treated as canonical assets. Canonical identity art follows the MineIT Mobile isometric style; separate linked L1-L5 presentation images are materialised in building-mobile-level-images.json. Migrated from the established MineIT Android L3 source image as the representative canonical catalogue view."
+    },
+    "mobileLevelAtlas": {
+      "key": "assets/art/universe/buildings/mobile-levels/atlases/building-simple-pit-mine-levels-256.webp",
+      "generated": true,
+      "status": "generated",
+      "frameWidth": 256,
+      "frameHeight": 256,
+      "frameOrder": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
     }
   },
   {
@@ -160,8 +205,23 @@
       "key": "assets/art/universe/buildings/building-deep-mine.webp",
       "generated": true,
       "status": "generated",
-      "promptDescription": "Exterior of a reinforced deep mine: structural-metal headframe, the same drill machine, conveyor into the adit, and mine ventilation fans on the collar. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records."
+      "promptDescription": "Perfect 1:1 square MineIT Mobile building tile on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent three-quarter elevated angle, matching the established Mobile development-building language: clean rounded white ceramic/composite shells, charcoal structural frames and platforms, vivid orange trim and safety rails, restrained electric-blue emissive details, warm amber windows, crisp bevels, compact modular construction and a strong readable silhouette at 128×128. Centre the complete structure with comfortable transparent margin. No terrain scene, sky, horizon, rectangular backdrop, people, readable text, logos, company marks, registration numbers, UI, border or watermark. Show a complete mature reference configuration that clearly communicates the building identity without representing a numbered gameplay level. Building identity and required functional content: Exterior of a reinforced deep mine: structural-metal headframe, the same drill machine, conveyor into the adit, and mine ventilation fans on the collar. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records. Canonical identity art follows the MineIT Mobile isometric style; separate linked L1-L5 presentation images are materialised in building-mobile-level-images.json. Migrated from the established MineIT Android L3 source image as the representative canonical catalogue view."
+    },
+    "mobileLevelAtlas": {
+      "key": "assets/art/universe/buildings/mobile-levels/atlases/building-deep-mine-levels-256.webp",
+      "generated": true,
+      "status": "generated",
+      "frameWidth": 256,
+      "frameHeight": 256,
+      "frameOrder": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
     }
   },
   {
@@ -200,10 +260,25 @@
     },
     "image": {
       "key": "assets/art/universe/buildings/building-extraction-rig.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "Exterior of a drilling-and-pumping rig: structural-metal derrick with the drill machine and a high-pressure pump on a stone pad. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records."
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile building tile on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent three-quarter elevated angle, matching the established Mobile development-building language: clean rounded white ceramic/composite shells, charcoal structural frames and platforms, vivid orange trim and safety rails, restrained electric-blue emissive details, warm amber windows, crisp bevels, compact modular construction and a strong readable silhouette at 128×128. Centre the complete structure with comfortable transparent margin. No terrain scene, sky, horizon, rectangular backdrop, people, readable text, logos, company marks, registration numbers, UI, border or watermark. Show a complete mature reference configuration that clearly communicates the building identity without representing a numbered gameplay level. Building identity and required functional content: Exterior of a drilling-and-pumping rig: structural-metal derrick with the drill machine and a high-pressure pump on a stone pad. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records. Canonical identity art follows the MineIT Mobile isometric style; separate linked L1-L5 presentation images are materialised in building-mobile-level-images.json. Migrated from the established MineIT Android L3 source image as the representative canonical catalogue view."
+    },
+    "mobileLevelAtlas": {
+      "key": "assets/art/universe/buildings/mobile-levels/atlases/building-extraction-rig-levels-256.webp",
+      "generated": true,
+      "status": "generated",
+      "frameWidth": 256,
+      "frameHeight": 256,
+      "frameOrder": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
     }
   },
   {
@@ -240,8 +315,23 @@
       "key": "assets/art/universe/buildings/building-water-collector.webp",
       "generated": false,
       "status": "not-generated",
-      "promptDescription": "Exterior of a water-collector: stone and clay pump house with the industrial pump and filtration bank conditioning local water. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records."
+      "promptDescription": "Perfect 1:1 square MineIT Mobile building tile on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent three-quarter elevated angle, matching the established Mobile development-building language: clean rounded white ceramic/composite shells, charcoal structural frames and platforms, vivid orange trim and safety rails, restrained electric-blue emissive details, warm amber windows, crisp bevels, compact modular construction and a strong readable silhouette at 128×128. Centre the complete structure with comfortable transparent margin. No terrain scene, sky, horizon, rectangular backdrop, people, readable text, logos, company marks, registration numbers, UI, border or watermark. Show a complete mature reference configuration that clearly communicates the building identity without representing a numbered gameplay level. Building identity and required functional content: Exterior of a water-collector: stone and clay pump house with the industrial pump and filtration bank conditioning local water. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records. Canonical identity art follows the MineIT Mobile isometric style; separate linked L1-L5 presentation images are materialised in building-mobile-level-images.json."
+    },
+    "mobileLevelAtlas": {
+      "key": "assets/art/universe/buildings/mobile-levels/atlases/building-water-collector-levels-256.webp",
+      "generated": false,
+      "status": "not-generated",
+      "frameWidth": 256,
+      "frameHeight": 256,
+      "frameOrder": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
     }
   },
   {
@@ -280,8 +370,23 @@
       "key": "assets/art/universe/buildings/building-crashed-ship.webp",
       "generated": false,
       "status": "not-generated",
-      "promptDescription": "Grounded high-detail industrial science-fiction crashed colony starship half-buried in rocky alien terrain after a violent landing; massive matte-white and dark-grey armoured hull torn open along one side, exposed internal decks, structural metal/ceramic/glass panels, operational amber and cyan warning lights visible through breaches, surrounding dust and debris field; exterior full-structure catalogue view; no readable logos, names or registration markings.",
-      "notes": "Primary catalogue image normalized from the legacy multi-view building art specification at Documentation/design/Machines & Buildings/Buildings/CrashedShipImages.md. Legacy source images were marked unapproved and are not treated as canonical assets."
+      "promptDescription": "Perfect 1:1 square MineIT Mobile building tile on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent three-quarter elevated angle, matching the established Mobile development-building language: clean rounded white ceramic/composite shells, charcoal structural frames and platforms, vivid orange trim and safety rails, restrained electric-blue emissive details, warm amber windows, crisp bevels, compact modular construction and a strong readable silhouette at 128×128. Centre the complete structure with comfortable transparent margin. No terrain scene, sky, horizon, rectangular backdrop, people, readable text, logos, company marks, registration numbers, UI, border or watermark. Show a complete mature reference configuration that clearly communicates the building identity without representing a numbered gameplay level. Building identity and required functional content: crashed colony starship half-buried in rocky alien terrain after a violent landing; massive matte-white and dark-grey armoured hull torn open along one side, exposed internal decks, structural metal/ceramic/glass panels, operational amber and cyan warning lights visible through breaches, surrounding dust and debris field; no readable logos, names or registration markings.",
+      "notes": "Primary catalogue image normalized from the legacy multi-view building art specification at Documentation/design/Machines & Buildings/Buildings/CrashedShipImages.md. Legacy source images were marked unapproved and are not treated as canonical assets. Canonical identity art follows the MineIT Mobile isometric style; separate linked L1-L5 presentation images are materialised in building-mobile-level-images.json."
+    },
+    "mobileLevelAtlas": {
+      "key": "assets/art/universe/buildings/mobile-levels/atlases/building-crashed-ship-levels-256.webp",
+      "generated": false,
+      "status": "not-generated",
+      "frameWidth": 256,
+      "frameHeight": 256,
+      "frameOrder": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
     }
   },
   {
@@ -322,10 +427,25 @@
     },
     "image": {
       "key": "assets/art/universe/buildings/building-farm.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "Exterior of a colony farm: woody-plant and stone plots with irrigation piping and a growth-management greenhouse of lighting bars and sensors. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records."
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile building tile on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent three-quarter elevated angle, matching the established Mobile development-building language: clean rounded white ceramic/composite shells, charcoal structural frames and platforms, vivid orange trim and safety rails, restrained electric-blue emissive details, warm amber windows, crisp bevels, compact modular construction and a strong readable silhouette at 128×128. Centre the complete structure with comfortable transparent margin. No terrain scene, sky, horizon, rectangular backdrop, people, readable text, logos, company marks, registration numbers, UI, border or watermark. Show a complete mature reference configuration that clearly communicates the building identity without representing a numbered gameplay level. Building identity and required functional content: Exterior of a colony farm: woody-plant and stone plots with irrigation piping and a growth-management greenhouse of lighting bars and sensors. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records. Canonical identity art follows the MineIT Mobile isometric style; separate linked L1-L5 presentation images are materialised in building-mobile-level-images.json. Migrated from the established MineIT Android L3 source image as the representative canonical catalogue view."
+    },
+    "mobileLevelAtlas": {
+      "key": "assets/art/universe/buildings/mobile-levels/atlases/building-farm-levels-256.webp",
+      "generated": true,
+      "status": "generated",
+      "frameWidth": 256,
+      "frameHeight": 256,
+      "frameOrder": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
     }
   },
   {
@@ -363,10 +483,25 @@
     },
     "image": {
       "key": "assets/art/universe/buildings/building-ranch.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "Exterior of a colony ranch: paddocks of local herd animals, irrigation watering lines, and a livestock handling crush with gates and troughs in the same charcoal metal kit. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records."
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile building tile on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent three-quarter elevated angle, matching the established Mobile development-building language: clean rounded white ceramic/composite shells, charcoal structural frames and platforms, vivid orange trim and safety rails, restrained electric-blue emissive details, warm amber windows, crisp bevels, compact modular construction and a strong readable silhouette at 128×128. Centre the complete structure with comfortable transparent margin. No terrain scene, sky, horizon, rectangular backdrop, people, readable text, logos, company marks, registration numbers, UI, border or watermark. Show a complete mature reference configuration that clearly communicates the building identity without representing a numbered gameplay level. Building identity and required functional content: Exterior of a colony ranch: paddocks of local herd animals, irrigation watering lines, and a livestock handling crush with gates and troughs in the same charcoal metal kit. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records. Canonical identity art follows the MineIT Mobile isometric style; separate linked L1-L5 presentation images are materialised in building-mobile-level-images.json. Migrated from the established MineIT Android L3 source image as the representative canonical catalogue view."
+    },
+    "mobileLevelAtlas": {
+      "key": "assets/art/universe/buildings/mobile-levels/atlases/building-ranch-levels-256.webp",
+      "generated": true,
+      "status": "generated",
+      "frameWidth": 256,
+      "frameHeight": 256,
+      "frameOrder": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
     }
   },
   {
@@ -404,10 +539,25 @@
     },
     "image": {
       "key": "assets/art/universe/buildings/building-bio-harvester.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "Exterior of a bio-harvester: sealed grow halls with growth-management lighting and a pump skid for wet fungal and protein biomass, no crop-picker clone of the ranch crush. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records."
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile building tile on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent three-quarter elevated angle, matching the established Mobile development-building language: clean rounded white ceramic/composite shells, charcoal structural frames and platforms, vivid orange trim and safety rails, restrained electric-blue emissive details, warm amber windows, crisp bevels, compact modular construction and a strong readable silhouette at 128×128. Centre the complete structure with comfortable transparent margin. No terrain scene, sky, horizon, rectangular backdrop, people, readable text, logos, company marks, registration numbers, UI, border or watermark. Show a complete mature reference configuration that clearly communicates the building identity without representing a numbered gameplay level. Building identity and required functional content: Exterior of a bio-harvester: sealed grow halls with growth-management lighting and a pump skid for wet fungal and protein biomass, no crop-picker clone of the ranch crush. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records. Canonical identity art follows the MineIT Mobile isometric style; separate linked L1-L5 presentation images are materialised in building-mobile-level-images.json. Migrated from the established MineIT Android L3 source image as the representative canonical catalogue view."
+    },
+    "mobileLevelAtlas": {
+      "key": "assets/art/universe/buildings/mobile-levels/atlases/building-bio-harvester-levels-256.webp",
+      "generated": true,
+      "status": "generated",
+      "frameWidth": 256,
+      "frameHeight": 256,
+      "frameOrder": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
     }
   },
   {
@@ -445,10 +595,25 @@
     },
     "image": {
       "key": "assets/art/universe/buildings/building-algae-facility.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "Exterior of an algae facility: glass tanks, growth-management lighting and pump plumbing on a structural-metal pad. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records."
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile building tile on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent three-quarter elevated angle, matching the established Mobile development-building language: clean rounded white ceramic/composite shells, charcoal structural frames and platforms, vivid orange trim and safety rails, restrained electric-blue emissive details, warm amber windows, crisp bevels, compact modular construction and a strong readable silhouette at 128×128. Centre the complete structure with comfortable transparent margin. No terrain scene, sky, horizon, rectangular backdrop, people, readable text, logos, company marks, registration numbers, UI, border or watermark. Show a complete mature reference configuration that clearly communicates the building identity without representing a numbered gameplay level. Building identity and required functional content: Exterior of an algae facility: glass tanks, growth-management lighting and pump plumbing on a structural-metal pad. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records. Canonical identity art follows the MineIT Mobile isometric style; separate linked L1-L5 presentation images are materialised in building-mobile-level-images.json. Migrated from the established MineIT Android L3 source image as the representative canonical catalogue view."
+    },
+    "mobileLevelAtlas": {
+      "key": "assets/art/universe/buildings/mobile-levels/atlases/building-algae-facility-levels-256.webp",
+      "generated": true,
+      "status": "generated",
+      "frameWidth": 256,
+      "frameHeight": 256,
+      "frameOrder": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
     }
   },
   {
@@ -480,10 +645,25 @@
     },
     "image": {
       "key": "assets/art/universe/buildings/building-accommodation-building.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "Exterior of a simple frontier accommodation block: wood, stone, metal and glass, wall climate-control units only, no full habitat life-support plant. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records."
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile building tile on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent three-quarter elevated angle, matching the established Mobile development-building language: clean rounded white ceramic/composite shells, charcoal structural frames and platforms, vivid orange trim and safety rails, restrained electric-blue emissive details, warm amber windows, crisp bevels, compact modular construction and a strong readable silhouette at 128×128. Centre the complete structure with comfortable transparent margin. No terrain scene, sky, horizon, rectangular backdrop, people, readable text, logos, company marks, registration numbers, UI, border or watermark. Show a complete mature reference configuration that clearly communicates the building identity without representing a numbered gameplay level. Building identity and required functional content: Exterior of a simple frontier accommodation block: wood, stone, metal and glass, wall climate-control units only, no full habitat life-support plant. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records. Canonical identity art follows the MineIT Mobile isometric style; separate linked L1-L5 presentation images are materialised in building-mobile-level-images.json. Migrated from the established MineIT Android L3 source image as the representative canonical catalogue view."
+    },
+    "mobileLevelAtlas": {
+      "key": "assets/art/universe/buildings/mobile-levels/atlases/building-accommodation-building-levels-256.webp",
+      "generated": true,
+      "status": "generated",
+      "frameWidth": 256,
+      "frameHeight": 256,
+      "frameOrder": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
     }
   },
   {
@@ -526,8 +706,23 @@
       "key": "assets/art/universe/buildings/building-habitat.webp",
       "generated": false,
       "status": "not-generated",
-      "promptDescription": "Exterior of a serviced habitat: sealed residential volume with a life-support plant and climate-control machines on the service wall. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records."
+      "promptDescription": "Perfect 1:1 square MineIT Mobile building tile on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent three-quarter elevated angle, matching the established Mobile development-building language: clean rounded white ceramic/composite shells, charcoal structural frames and platforms, vivid orange trim and safety rails, restrained electric-blue emissive details, warm amber windows, crisp bevels, compact modular construction and a strong readable silhouette at 128×128. Centre the complete structure with comfortable transparent margin. No terrain scene, sky, horizon, rectangular backdrop, people, readable text, logos, company marks, registration numbers, UI, border or watermark. Show a complete mature reference configuration that clearly communicates the building identity without representing a numbered gameplay level. Building identity and required functional content: Exterior of a serviced habitat: sealed residential volume with a life-support plant and climate-control machines on the service wall. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records. Canonical identity art follows the MineIT Mobile isometric style; separate linked L1-L5 presentation images are materialised in building-mobile-level-images.json."
+    },
+    "mobileLevelAtlas": {
+      "key": "assets/art/universe/buildings/mobile-levels/atlases/building-habitat-levels-256.webp",
+      "generated": false,
+      "status": "not-generated",
+      "frameWidth": 256,
+      "frameHeight": 256,
+      "frameOrder": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
     }
   },
   {
@@ -570,8 +765,23 @@
       "key": "assets/art/universe/buildings/building-power-plant.webp",
       "generated": false,
       "status": "not-generated",
-      "promptDescription": "Exterior of a colony power plant: switchyard distribution, wind generator, solar-thermal mirrors, chemical battery hall and a water-wheel on a short race, one generation compound. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records."
+      "promptDescription": "Perfect 1:1 square MineIT Mobile building tile on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent three-quarter elevated angle, matching the established Mobile development-building language: clean rounded white ceramic/composite shells, charcoal structural frames and platforms, vivid orange trim and safety rails, restrained electric-blue emissive details, warm amber windows, crisp bevels, compact modular construction and a strong readable silhouette at 128×128. Centre the complete structure with comfortable transparent margin. No terrain scene, sky, horizon, rectangular backdrop, people, readable text, logos, company marks, registration numbers, UI, border or watermark. Show a complete mature reference configuration that clearly communicates the building identity without representing a numbered gameplay level. Building identity and required functional content: Exterior of a colony power plant: switchyard distribution, wind generator, solar-thermal mirrors, chemical battery hall and a water-wheel on a short race, one generation compound. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records. Canonical identity art follows the MineIT Mobile isometric style; separate linked L1-L5 presentation images are materialised in building-mobile-level-images.json."
+    },
+    "mobileLevelAtlas": {
+      "key": "assets/art/universe/buildings/mobile-levels/atlases/building-power-plant-levels-256.webp",
+      "generated": false,
+      "status": "not-generated",
+      "frameWidth": 256,
+      "frameHeight": 256,
+      "frameOrder": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
     }
   },
   {
@@ -612,10 +822,25 @@
     },
     "image": {
       "key": "assets/art/universe/buildings/building-industry.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "Exterior of a colony industry hall: fabrication machine, heavy assembly crane and welding bays in stone and structural metal. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records."
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile building tile on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent three-quarter elevated angle, matching the established Mobile development-building language: clean rounded white ceramic/composite shells, charcoal structural frames and platforms, vivid orange trim and safety rails, restrained electric-blue emissive details, warm amber windows, crisp bevels, compact modular construction and a strong readable silhouette at 128×128. Centre the complete structure with comfortable transparent margin. No terrain scene, sky, horizon, rectangular backdrop, people, readable text, logos, company marks, registration numbers, UI, border or watermark. Show a complete mature reference configuration that clearly communicates the building identity without representing a numbered gameplay level. Building identity and required functional content: Exterior of a colony industry hall: fabrication machine, heavy assembly crane and welding bays in stone and structural metal. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records. Canonical identity art follows the MineIT Mobile isometric style; separate linked L1-L5 presentation images are materialised in building-mobile-level-images.json. Migrated from the established MineIT Android L3 source image as the representative canonical catalogue view."
+    },
+    "mobileLevelAtlas": {
+      "key": "assets/art/universe/buildings/mobile-levels/atlases/building-industry-levels-256.webp",
+      "generated": true,
+      "status": "generated",
+      "frameWidth": 256,
+      "frameHeight": 256,
+      "frameOrder": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
     }
   },
   {
@@ -654,8 +879,23 @@
       "key": "assets/art/universe/buildings/building-basic-refinery.webp",
       "generated": false,
       "status": "not-generated",
-      "promptDescription": "Exterior of a basic refinery: crusher hall and smelter stack in stone and clay, ceramic and graphite fit-out visible at the bays. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records."
+      "promptDescription": "Perfect 1:1 square MineIT Mobile building tile on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent three-quarter elevated angle, matching the established Mobile development-building language: clean rounded white ceramic/composite shells, charcoal structural frames and platforms, vivid orange trim and safety rails, restrained electric-blue emissive details, warm amber windows, crisp bevels, compact modular construction and a strong readable silhouette at 128×128. Centre the complete structure with comfortable transparent margin. No terrain scene, sky, horizon, rectangular backdrop, people, readable text, logos, company marks, registration numbers, UI, border or watermark. Show a complete mature reference configuration that clearly communicates the building identity without representing a numbered gameplay level. Building identity and required functional content: Exterior of a basic refinery: crusher hall and smelter stack in stone and clay, ceramic and graphite fit-out visible at the bays. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records. Canonical identity art follows the MineIT Mobile isometric style; separate linked L1-L5 presentation images are materialised in building-mobile-level-images.json."
+    },
+    "mobileLevelAtlas": {
+      "key": "assets/art/universe/buildings/mobile-levels/atlases/building-basic-refinery-levels-256.webp",
+      "generated": false,
+      "status": "not-generated",
+      "frameWidth": 256,
+      "frameHeight": 256,
+      "frameOrder": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
     }
   },
   {
@@ -696,8 +936,23 @@
       "key": "assets/art/universe/buildings/building-headquarters.webp",
       "generated": false,
       "status": "not-generated",
-      "promptDescription": "Exterior of colony headquarters: stone and metal admin block with a control annex of colony operations computers behind dark glass, no readable maps or logos. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records."
+      "promptDescription": "Perfect 1:1 square MineIT Mobile building tile on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent three-quarter elevated angle, matching the established Mobile development-building language: clean rounded white ceramic/composite shells, charcoal structural frames and platforms, vivid orange trim and safety rails, restrained electric-blue emissive details, warm amber windows, crisp bevels, compact modular construction and a strong readable silhouette at 128×128. Centre the complete structure with comfortable transparent margin. No terrain scene, sky, horizon, rectangular backdrop, people, readable text, logos, company marks, registration numbers, UI, border or watermark. Show a complete mature reference configuration that clearly communicates the building identity without representing a numbered gameplay level. Building identity and required functional content: Exterior of colony headquarters: stone and metal admin block with a control annex of colony operations computers behind dark glass, no readable maps or logos. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records. Canonical identity art follows the MineIT Mobile isometric style; separate linked L1-L5 presentation images are materialised in building-mobile-level-images.json."
+    },
+    "mobileLevelAtlas": {
+      "key": "assets/art/universe/buildings/mobile-levels/atlases/building-headquarters-levels-256.webp",
+      "generated": false,
+      "status": "not-generated",
+      "frameWidth": 256,
+      "frameHeight": 256,
+      "frameOrder": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
     }
   },
   {
@@ -734,8 +989,23 @@
       "key": "assets/art/universe/buildings/building-research-building.webp",
       "generated": false,
       "status": "not-generated",
-      "promptDescription": "Exterior of a research building: lab block with research-computer workstations visible through glass, clay and stone shell. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records."
+      "promptDescription": "Perfect 1:1 square MineIT Mobile building tile on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent three-quarter elevated angle, matching the established Mobile development-building language: clean rounded white ceramic/composite shells, charcoal structural frames and platforms, vivid orange trim and safety rails, restrained electric-blue emissive details, warm amber windows, crisp bevels, compact modular construction and a strong readable silhouette at 128×128. Centre the complete structure with comfortable transparent margin. No terrain scene, sky, horizon, rectangular backdrop, people, readable text, logos, company marks, registration numbers, UI, border or watermark. Show a complete mature reference configuration that clearly communicates the building identity without representing a numbered gameplay level. Building identity and required functional content: Exterior of a research building: lab block with research-computer workstations visible through glass, clay and stone shell. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records. Canonical identity art follows the MineIT Mobile isometric style; separate linked L1-L5 presentation images are materialised in building-mobile-level-images.json."
+    },
+    "mobileLevelAtlas": {
+      "key": "assets/art/universe/buildings/mobile-levels/atlases/building-research-building-levels-256.webp",
+      "generated": false,
+      "status": "not-generated",
+      "frameWidth": 256,
+      "frameHeight": 256,
+      "frameOrder": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
     }
   },
   {
@@ -775,8 +1045,23 @@
       "key": "assets/art/universe/buildings/building-spaceport.webp",
       "generated": false,
       "status": "not-generated",
-      "promptDescription": "Exterior of a surface spaceport: prepared pad and the heavy assembly crane for berthing and cargo, not a warehouse handler. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records."
+      "promptDescription": "Perfect 1:1 square MineIT Mobile building tile on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent three-quarter elevated angle, matching the established Mobile development-building language: clean rounded white ceramic/composite shells, charcoal structural frames and platforms, vivid orange trim and safety rails, restrained electric-blue emissive details, warm amber windows, crisp bevels, compact modular construction and a strong readable silhouette at 128×128. Centre the complete structure with comfortable transparent margin. No terrain scene, sky, horizon, rectangular backdrop, people, readable text, logos, company marks, registration numbers, UI, border or watermark. Show a complete mature reference configuration that clearly communicates the building identity without representing a numbered gameplay level. Building identity and required functional content: Exterior of a surface spaceport: prepared pad and the heavy assembly crane for berthing and cargo, not a warehouse handler. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records. Canonical identity art follows the MineIT Mobile isometric style; separate linked L1-L5 presentation images are materialised in building-mobile-level-images.json."
+    },
+    "mobileLevelAtlas": {
+      "key": "assets/art/universe/buildings/mobile-levels/atlases/building-spaceport-levels-256.webp",
+      "generated": false,
+      "status": "not-generated",
+      "frameWidth": 256,
+      "frameHeight": 256,
+      "frameOrder": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
     }
   },
   {
@@ -815,8 +1100,23 @@
       "key": "assets/art/universe/buildings/building-shipyard-bay.webp",
       "generated": false,
       "status": "not-generated",
-      "promptDescription": "Exterior of a shipyard bay: fabrication machine, assembly crane and welding systems around an unfinished unnamed hull section. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records."
+      "promptDescription": "Perfect 1:1 square MineIT Mobile building tile on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent three-quarter elevated angle, matching the established Mobile development-building language: clean rounded white ceramic/composite shells, charcoal structural frames and platforms, vivid orange trim and safety rails, restrained electric-blue emissive details, warm amber windows, crisp bevels, compact modular construction and a strong readable silhouette at 128×128. Centre the complete structure with comfortable transparent margin. No terrain scene, sky, horizon, rectangular backdrop, people, readable text, logos, company marks, registration numbers, UI, border or watermark. Show a complete mature reference configuration that clearly communicates the building identity without representing a numbered gameplay level. Building identity and required functional content: Exterior of a shipyard bay: fabrication machine, assembly crane and welding systems around an unfinished unnamed hull section. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records. Canonical identity art follows the MineIT Mobile isometric style; separate linked L1-L5 presentation images are materialised in building-mobile-level-images.json."
+    },
+    "mobileLevelAtlas": {
+      "key": "assets/art/universe/buildings/mobile-levels/atlases/building-shipyard-bay-levels-256.webp",
+      "generated": false,
+      "status": "not-generated",
+      "frameWidth": 256,
+      "frameHeight": 256,
+      "frameOrder": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
     }
   },
   {
@@ -845,9 +1145,24 @@
     "image": {
       "key": "assets/art/universe/buildings/building-stockpile.webp",
       "generated": true,
-      "status": "generated",
-      "promptDescription": "Open frontier stockpile yard: the same conveyor feeding a bulk stacker-reclaimer over loose aggregate piles, no walls, no warehouse gantry. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records."
+      "status": "needs-regeneration",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile building tile on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent three-quarter elevated angle, matching the established Mobile development-building language: clean rounded white ceramic/composite shells, charcoal structural frames and platforms, vivid orange trim and safety rails, restrained electric-blue emissive details, warm amber windows, crisp bevels, compact modular construction and a strong readable silhouette at 128×128. Centre the complete structure with comfortable transparent margin. No terrain scene, sky, horizon, rectangular backdrop, people, readable text, logos, company marks, registration numbers, UI, border or watermark. Show a complete mature reference configuration that clearly communicates the building identity without representing a numbered gameplay level. Building identity and required functional content: Open frontier stockpile yard: the same conveyor feeding a bulk stacker-reclaimer over loose aggregate piles, no walls, no warehouse gantry. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records. Canonical identity art follows the MineIT Mobile isometric style; separate linked L1-L5 presentation images are materialised in building-mobile-level-images.json."
+    },
+    "mobileLevelAtlas": {
+      "key": "assets/art/universe/buildings/mobile-levels/atlases/building-stockpile-levels-256.webp",
+      "generated": false,
+      "status": "not-generated",
+      "frameWidth": 256,
+      "frameHeight": 256,
+      "frameOrder": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
     }
   },
   {
@@ -880,9 +1195,24 @@
     "image": {
       "key": "assets/art/universe/buildings/building-warehouse.webp",
       "generated": true,
-      "status": "generated",
-      "promptDescription": "Exterior and open-door view of an enclosed warehouse: wood-stone-metal hall with the warehouse handler moving pallets inside, not the shipyard crane and not an open stacker. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records."
+      "status": "needs-regeneration",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile building tile on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent three-quarter elevated angle, matching the established Mobile development-building language: clean rounded white ceramic/composite shells, charcoal structural frames and platforms, vivid orange trim and safety rails, restrained electric-blue emissive details, warm amber windows, crisp bevels, compact modular construction and a strong readable silhouette at 128×128. Centre the complete structure with comfortable transparent margin. No terrain scene, sky, horizon, rectangular backdrop, people, readable text, logos, company marks, registration numbers, UI, border or watermark. Show a complete mature reference configuration that clearly communicates the building identity without representing a numbered gameplay level. Building identity and required functional content: Exterior and open-door view of an enclosed warehouse: wood-stone-metal hall with the warehouse handler moving pallets inside, not the shipyard crane and not an open stacker. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records. Canonical identity art follows the MineIT Mobile isometric style; separate linked L1-L5 presentation images are materialised in building-mobile-level-images.json."
+    },
+    "mobileLevelAtlas": {
+      "key": "assets/art/universe/buildings/mobile-levels/atlases/building-warehouse-levels-256.webp",
+      "generated": false,
+      "status": "not-generated",
+      "frameWidth": 256,
+      "frameHeight": 256,
+      "frameOrder": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
     }
   },
   {
@@ -925,8 +1255,23 @@
       "key": "assets/art/universe/buildings/building-aquaculture-facility.webp",
       "generated": false,
       "status": "not-generated",
-      "promptDescription": "Perfect 1:1 square catalogue art. Exterior of a dedicated Year-5326 Koplin Commonwealth frontier aquaculture facility built around lined water basins and controlled channels, with structural-metal walkways, a visible pump skid, filtration banks, feeding and biological-monitoring equipment; practical modular construction in charcoal weathered structural metal, pale ceramic wear surfaces, glass inspection sections, dark exposed fasteners and restrained colony lighting. The full facility is the dominant subject and reads clearly at small game-tile size. No open-ocean scene, people, readable text, logos, company marks or registration numbers.",
-      "notes": "Canonical building identity image, not a save-specific production state or upgrade level. Android may derive game-specific level presentation separately."
+      "promptDescription": "Perfect 1:1 square MineIT Mobile building tile on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent three-quarter elevated angle, matching the established Mobile development-building language: clean rounded white ceramic/composite shells, charcoal structural frames and platforms, vivid orange trim and safety rails, restrained electric-blue emissive details, warm amber windows, crisp bevels, compact modular construction and a strong readable silhouette at 128×128. Centre the complete structure with comfortable transparent margin. No terrain scene, sky, horizon, rectangular backdrop, people, readable text, logos, company marks, registration numbers, UI, border or watermark. Show a complete mature reference configuration that clearly communicates the building identity without representing a numbered gameplay level. Building identity and required functional content: Perfect 1:1 square catalogue art. Exterior of a dedicated Year-5326 Koplin Commonwealth frontier aquaculture facility built around lined water basins and controlled channels, with structural-metal walkways, a visible pump skid, filtration banks, feeding and biological-monitoring equipment; practical modular construction in charcoal weathered structural metal, pale ceramic wear surfaces, glass inspection sections, dark exposed fasteners and restrained colony lighting. The full facility is the dominant subject and reads clearly at small game-tile size. No open-ocean scene, people, readable text, logos, company marks or registration numbers.",
+      "notes": "Canonical building identity image, not a save-specific production state or upgrade level. Android may derive game-specific level presentation separately. Canonical identity art follows the MineIT Mobile isometric style; separate linked L1-L5 presentation images are materialised in building-mobile-level-images.json."
+    },
+    "mobileLevelAtlas": {
+      "key": "assets/art/universe/buildings/mobile-levels/atlases/building-aquaculture-facility-levels-256.webp",
+      "generated": false,
+      "status": "not-generated",
+      "frameWidth": 256,
+      "frameHeight": 256,
+      "frameOrder": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
     }
   },
   {
@@ -970,8 +1315,23 @@
       "key": "assets/art/universe/buildings/building-agricultural-dome.webp",
       "generated": false,
       "status": "not-generated",
-      "promptDescription": "Perfect 1:1 square catalogue art. Exterior of a large sealed Year-5326 Koplin Commonwealth agricultural dome on hostile barren terrain: reinforced charcoal structural-metal ribs, broad transparent or translucent glass panels, visible controlled crop beds and growth lighting inside, attached life-support and climate-control plant, irrigation and service conduits, pale ceramic wear surfaces and practical colony lighting. It must read as specialised powered agriculture, not a residential habitat. Full structure dominant, clear at small game-tile size. No people, readable text, logos, company marks or registration numbers.",
-      "notes": "Canonical building identity image, not a save-specific crop choice, output, condition or upgrade level. Android may derive game-specific level presentation separately."
+      "promptDescription": "Perfect 1:1 square MineIT Mobile building tile on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent three-quarter elevated angle, matching the established Mobile development-building language: clean rounded white ceramic/composite shells, charcoal structural frames and platforms, vivid orange trim and safety rails, restrained electric-blue emissive details, warm amber windows, crisp bevels, compact modular construction and a strong readable silhouette at 128×128. Centre the complete structure with comfortable transparent margin. No terrain scene, sky, horizon, rectangular backdrop, people, readable text, logos, company marks, registration numbers, UI, border or watermark. Show a complete mature reference configuration that clearly communicates the building identity without representing a numbered gameplay level. Building identity and required functional content: Perfect 1:1 square catalogue art. Exterior of a large sealed Year-5326 Koplin Commonwealth agricultural dome on hostile barren terrain: reinforced charcoal structural-metal ribs, broad transparent or translucent glass panels, visible controlled crop beds and growth lighting inside, attached life-support and climate-control plant, irrigation and service conduits, pale ceramic wear surfaces and practical colony lighting. It must read as specialised powered agriculture, not a residential habitat. Full structure dominant, clear at small game-tile size. No people, readable text, logos, company marks or registration numbers.",
+      "notes": "Canonical building identity image, not a save-specific crop choice, output, condition or upgrade level. Android may derive game-specific level presentation separately. Canonical identity art follows the MineIT Mobile isometric style; separate linked L1-L5 presentation images are materialised in building-mobile-level-images.json."
+    },
+    "mobileLevelAtlas": {
+      "key": "assets/art/universe/buildings/mobile-levels/atlases/building-agricultural-dome-levels-256.webp",
+      "generated": false,
+      "status": "not-generated",
+      "frameWidth": 256,
+      "frameHeight": 256,
+      "frameOrder": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
     }
   }
 ]

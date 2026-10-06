@@ -11,12 +11,13 @@ The Mobile overhaul art boundary has four relevant groups:
 | Group | Existing complete | New generation queue | Result after queue |
 | --- | ---: | ---: | --- |
 | Natural non-Food resources | 42 | 0 | Complete |
-| Biological/Food resources | 0 | 7 | Complete after generation |
-| Canonical building identity art | 3 | 21 | Complete after generation |
+| Biological/Food resources | 7 | 0 | Complete |
+| Canonical building identity art | 12 | 12 | Complete after generation |
+| MineIT Mobile building level art | 50 migrated | 70 | Complete after generation |
 | Koplin 3 bespoke landscape tiles | 55 | 0 | Complete |
-| Generic generated-world landscape library | 0 | 128 | Complete after generation |
+| Generic generated-world landscape library | 16 migrated | 124 | Complete after generation |
 
-Total new images to generate: **156**.
+Revised total for the overhaul art phase: **291 images** (7 Food, 24 canonical building images, 120 Mobile L1-L5 building images and 140 generic landscape variants). Android migration completed 76 of these images; **206 images remain to generate**.
 
 ## 1. Resources
 
@@ -38,13 +39,7 @@ These should be generated rather than mapped permanently to legacy Android Food 
 
 `data/buildings.json` now contains 24 canonical building identities.
 
-Already generated:
-
-- `building-deep-mine`
-- `building-stockpile`
-- `building-warehouse`
-
-Generation queue (21):
+Canonical building queue (24, including migrated and generated records):
 
 - `building-collection-camp` -> `assets/art/universe/buildings/building-collection-camp.webp`
 - `building-quarry` -> `assets/art/universe/buildings/building-quarry.webp`
@@ -67,13 +62,20 @@ Generation queue (21):
 - `building-shipyard-bay` -> `assets/art/universe/buildings/building-shipyard-bay.webp`
 - `building-aquaculture-facility` -> `assets/art/universe/buildings/building-aquaculture-facility.webp`
 - `building-agricultural-dome` -> `assets/art/universe/buildings/building-agricultural-dome.webp`
+- `building-deep-mine` -> `assets/art/universe/buildings/building-deep-mine.webp`
+- `building-stockpile` -> `assets/art/universe/buildings/building-stockpile.webp`
+- `building-warehouse` -> `assets/art/universe/buildings/building-warehouse.webp`
 
 The audit added the two Mobile-overhaul facilities that were missing from Universe:
 
 - `building-aquaculture-facility`
 - `building-agricultural-dome`
 
-**Ownership rule:** Universe owns one canonical building identity/catalogue image. Android's existing L1-L5 development atlases are game-specific presentation and do not need to become canonical Universe identities.
+**Ownership rule:** Universe owns one canonical building identity/catalogue image per building type. As a MineIT Mobile-specific exception, Universe also owns five linked L1-L5 presentation images per building in `data/building-mobile-level-images.json`. These are authored progression views, not separate building identities and not mutable save state. Android consumes derived/bundled copies.
+
+The Android development-art source supplied 10 complete five-level families and their current 1280×256 runtime atlases: accommodation/housing, algae facility, bio-harvester, deep mine, extraction rig, farm, industry, simple pit mine, quarry and ranch. Their native PNGs, derived individual WebPs and atlases are migrated into Universe; only missing families require generation.
+
+The Android housing L1-L5 sequence is the approved style/progression reference: transparent-background, polished isometric 3D game art with white rounded shells, charcoal framing, orange trim, restrained blue emissive details and increasing module count, capacity, density and verticality from L1 through L5.
 
 ## 3. Landscapes
 
@@ -81,9 +83,10 @@ Koplin 3 already has a complete bespoke authored tileset with 55 generated image
 
 Generated worlds need a separate reusable, identity-neutral fallback. The new queue `data/visual-assets-mobile-landscape.json` contains:
 
-- 120 land tiles = 12 landforms x 10 biomes;
-- 8 visible surface-water tiles;
-- **128 total generic landscape images**.
+- 120 base land tiles = 12 landforms x 10 biomes;
+- 8 base visible surface-water tiles;
+- 12 additional migrated variants: plains/grassland, hills/grassland, mountains/grassland and lake variants 02-04;
+- **140 total generic landscape images**.
 
 Landforms:
 
@@ -148,7 +151,7 @@ Generation should follow `docs/ImageGenerationProcess.md`.
 
 This art phase is complete when:
 
-- all 156 queued images have lossless PNG originals and published WebPs;
+- all 291 overhaul images have lossless PNG originals and published WebPs;
 - each corresponding `image.generated` is `true`;
 - each corresponding `image.status` is `generated` or `approved`;
 - repository validation passes;
