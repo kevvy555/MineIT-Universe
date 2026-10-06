@@ -465,16 +465,22 @@ assets/art/universe/resources/Originals/<resource-id>.png
 
 Rules:
 
-- 1:1;
-- full-bleed;
-- resource/material itself is the subject;
-- no tray, crate, storage bin, room, machinery or people;
-- no readable labels or UI;
+- 1:1 square resource icon;
+- match the established MineIT Android resource-art language rather than photorealistic material photography;
+- use one centred, isolated, instantly recognisable resource symbol/specimen;
+- use polished semi-realistic 3D/digital game art with simplified sculpted/faceted forms and a strong silhouette;
+- subject should occupy roughly 65–75% of the frame;
+- use a dark navy-to-black radial vignette with a soft electric-blue/cyan halo behind the subject;
+- use cool rim lighting, crisp highlights and a restrained luminous edge;
+- design for clear recognition at 128×128;
+- do not show a geological scene, embedded rock face, landscape, tray, crate, room, machinery or people;
+- no readable labels, UI, logos or decorative border;
 - do not encode a particular save's quality, reserve, rarity or price;
-- use physically grounded natural material/resource imagery;
-- gases or otherwise visually difficult materials may use a physically grounded visualisation described by the approved prompt;
-- gems remain raw/unprocessed unless explicitly stated otherwise;
-- ore should look like natural ore, not refined metal.
+- gems should read as iconic raw/faceted resource symbols rather than jewellery or gems embedded in host rock;
+- ores/minerals should use a compact representative chunk/crystal/resource form rather than a full rock face;
+- gases, liquids and diffuse resources should be translated into a compact iconic visual form without placing them in a bottle or container.
+
+When an existing approved MineIT Android resource image already matches this style, prefer **migrating that existing source art into Universe** over regenerating it. Preserve the Android source image as migration provenance, move the canonical source of truth to Universe, and let Android consume a derived/bundled copy thereafter.
 
 The current 42 natural non-Food resources are already prepared as an image queue in `data/mobile-resource-definitions.json`.
 
