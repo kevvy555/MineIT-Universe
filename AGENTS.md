@@ -98,6 +98,8 @@ Allowed statuses are `not-generated`, `in-progress`, `generated`, `approved`, an
 
 People, named ships and star systems are current primary image-bearing types. Purchasable ship classes may also carry image metadata and prompts. Parts, machines and buildings may also carry image metadata and prompts. MineIT Mobile resource definitions may carry 1:1 catalogue/tile art under `assets/art/universe/resources/`; these images represent the natural resource identity and must not encode mutable rarity, quality, reserve or price. Star-system vistas are identity-bearing 16:9 art keyed by system ID. Substances may carry optional catalog-still image metadata; only records with an `image` object are in the generation process. Named worlds may carry a matching `landscapeTileset` of 1:1 Mobile grid tiles keyed by planet ID; those tiles are world-specific and must not be stored as reusable visual-library assets.
 
+The exact repository image-generation workflow is defined in `docs/ImageGenerationProcess.md`; image-generation agents must read it before starting a batch.
+
 Reusable visual assets are conceptually separate from the identity currently using them. Identity-neutral art intended for reuse must avoid baked-in personal names, company names, readable logos, registration numbers and universe-specific text. Reusable series are declared through `visualAssetSeries`.
 
 ## Directory, Commercial Network and Lore applications

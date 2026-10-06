@@ -9,6 +9,7 @@ people/
 ships/
 ship-classes/
 organisations/
+resources/              MineIT Mobile resource identity art
 substances/
 systems/
 planets/
@@ -16,6 +17,8 @@ planets/
 settlements/
 facilities/
 ```
+
+For the exact generation, status, original-PNG, WebP, validation and regeneration workflow, read `docs/ImageGenerationProcess.md`.
 
 The JSON record owns the canonical asset path. Missing artwork is valid; the Universe Directory shows a placeholder and exposes the authored image prompt until an approved asset exists.
 
