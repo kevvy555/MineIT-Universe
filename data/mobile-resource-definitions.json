@@ -1007,10 +1007,10 @@
     },
     "image": {
       "key": "assets/art/universe/resources/mobile-resource-diamond.webp",
-      "generated": false,
-      "status": "not-generated",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "1:1 MineIT Mobile resource icon for Diamond. Translate this resource's physical identity into a compact, instantly recognisable game inventory/resource icon: raw uncut diamond crystals embedded in dark kimberlite-like host rock, translucent octahedral faces, no jewellery. Match the established MineIT Android resource-art style: a single centred resource symbol or specimen, polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms, strong clean silhouette, object filling roughly 65-75% of the square, dark navy-to-black radial vignette background, soft electric-blue/cyan halo behind the subject, cool blue rim lighting, crisp white/specular highlights and a restrained luminous edge. Keep it highly readable at 128x128. This is stylised game icon art, not photorealism. Do not show a geological scene, embedded rock face, landscape, table, tray, crate, bottle, jar, machinery, people, UI, text, logo or border. Do not scatter multiple loose samples around the frame. For gases, liquids or diffuse resources, create a compact iconic visual form without using a container.",
-      "notes": "MineIT Mobile resource icon art. Match the established Android resource icon language: centred isolated subject, strong silhouette, dark navy vignette, blue/cyan halo and cool rim glow; readable at 128x128. Generate/store a 1:1 native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-diamond.png and a same-composition WebP at this key."
+      "notes": "Existing MineIT Android resource art migrated into Universe as the canonical source. Source: MineIT-Android/app/src/main/assets/art/resources/precious-metals/diamond.webp and precious-metals/Originals/diamond.png. Canonical lossless PNG: assets/art/universe/resources/Originals/mobile-resource-diamond.png. Canonical WebP: assets/art/universe/resources/mobile-resource-diamond.webp. Future Android copies should be derived/bundled from Universe."
     }
   },
   {
