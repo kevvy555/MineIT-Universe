@@ -25,7 +25,14 @@
     ],
     "notes": "Deliberately cultivated agriculture. Crops are never generated as a pre-existing natural Food source.",
     "knowledgeScope": "designer truth",
-    "canonStatus": "working canon"
+    "canonStatus": "working canon",
+    "image": {
+      "key": "assets/art/universe/resources/mobile-food-crops.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile resource icon. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms and a strong silhouette. Dark navy-to-black radial vignette with a soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and restrained luminous edge. Designed to remain clear at 128×128. No geological scene, landscape, tray, crate, room, machinery, people, readable labels, UI, logos or decorative border. Depict a compact iconic bundle of cultivated cereal-like stalks, broad edible leaves and seed heads, clearly reading as deliberate staple crops rather than wild vegetation; natural green and warm grain tones.",
+      "notes": "Canonical MineIT Mobile Food resource identity art. Store the lossless PNG under assets/art/universe/resources/Originals/<resource-id>.png and the published WebP at image.key. Do not encode save-specific abundance, quality, reserve, price or production state."
+    }
   },
   {
     "id": "mobile-food-edible-flora",
@@ -62,7 +69,14 @@
     ],
     "notes": "Naturally useful edible macroscopic flora on productive biological land; may be managed in place.",
     "knowledgeScope": "designer truth",
-    "canonStatus": "working canon"
+    "canonStatus": "working canon",
+    "image": {
+      "key": "assets/art/universe/resources/mobile-food-edible-flora.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile resource icon. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms and a strong silhouette. Dark navy-to-black radial vignette with a soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and restrained luminous edge. Designed to remain clear at 128×128. No geological scene, landscape, tray, crate, room, machinery, people, readable labels, UI, logos or decorative border. Depict a compact cluster of plausible edible wild flora: broad nutritious leaves with a few small fruiting pods or berries, clearly botanical and harvestable but not a farm scene or bouquet.",
+      "notes": "Canonical MineIT Mobile Food resource identity art. Store the lossless PNG under assets/art/universe/resources/Originals/<resource-id>.png and the published WebP at image.key. Do not encode save-specific abundance, quality, reserve, price or production state."
+    }
   },
   {
     "id": "mobile-food-herds",
@@ -99,7 +113,14 @@
     ],
     "notes": "Native or introduced grazing/animal food populations require a productive land ecosystem; intensive management/feed remains Mobile state.",
     "knowledgeScope": "designer truth",
-    "canonStatus": "working canon"
+    "canonStatus": "working canon",
+    "image": {
+      "key": "assets/art/universe/resources/mobile-food-herds.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile resource icon. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms and a strong silhouette. Dark navy-to-black radial vignette with a soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and restrained luminous edge. Designed to remain clear at 128×128. No geological scene, landscape, tray, crate, room, machinery, people, readable labels, UI, logos or decorative border. Depict three compact, sturdy herd-animal forms grouped tightly as one resource symbol, plausible frontier livestock or native grazing animals with clear quadruped silhouettes; no fence, paddock, people or landscape.",
+      "notes": "Canonical MineIT Mobile Food resource identity art. Store the lossless PNG under assets/art/universe/resources/Originals/<resource-id>.png and the published WebP at image.key. Do not encode save-specific abundance, quality, reserve, price or production state."
+    }
   },
   {
     "id": "mobile-food-aquatic-food",
@@ -143,7 +164,14 @@
     ],
     "notes": "Natural or introduced aquatic food requires a genuine suitable liquid-water environment outside controlled infrastructure.",
     "knowledgeScope": "designer truth",
-    "canonStatus": "working canon"
+    "canonStatus": "working canon",
+    "image": {
+      "key": "assets/art/universe/resources/mobile-food-aquatic-food.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile resource icon. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms and a strong silhouette. Dark navy-to-black radial vignette with a soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and restrained luminous edge. Designed to remain clear at 128×128. No geological scene, landscape, tray, crate, room, machinery, people, readable labels, UI, logos or decorative border. Depict a compact school of three robust fish-like or aquatic food organisms arranged as one clean resource symbol, metallic-blue and natural silver accents; no water scene, bowl, tank, net or fishing gear.",
+      "notes": "Canonical MineIT Mobile Food resource identity art. Store the lossless PNG under assets/art/universe/resources/Originals/<resource-id>.png and the published WebP at image.key. Do not encode save-specific abundance, quality, reserve, price or production state."
+    }
   },
   {
     "id": "mobile-food-fungi",
@@ -179,7 +207,14 @@
     ],
     "notes": "Natural commercial fungi require moist/organic biological context; vast wild fungal systems are intentionally not assumed.",
     "knowledgeScope": "designer truth",
-    "canonStatus": "working canon"
+    "canonStatus": "working canon",
+    "image": {
+      "key": "assets/art/universe/resources/mobile-food-fungi.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile resource icon. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms and a strong silhouette. Dark navy-to-black radial vignette with a soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and restrained luminous edge. Designed to remain clear at 128×128. No geological scene, landscape, tray, crate, room, machinery, people, readable labels, UI, logos or decorative border. Depict a compact layered cluster of edible shelf fungi and mushroom forms with strong rounded silhouettes and earthy cream/brown tones; no forest floor, logs, basket or environment.",
+      "notes": "Canonical MineIT Mobile Food resource identity art. Store the lossless PNG under assets/art/universe/resources/Originals/<resource-id>.png and the published WebP at image.key. Do not encode save-specific abundance, quality, reserve, price or production state."
+    }
   },
   {
     "id": "mobile-food-algae",
@@ -223,7 +258,14 @@
     ],
     "notes": "Natural algae requires suitable liquid-water/aquatic environment; controlled production may bypass external hydrosphere constraints.",
     "knowledgeScope": "designer truth",
-    "canonStatus": "working canon"
+    "canonStatus": "working canon",
+    "image": {
+      "key": "assets/art/universe/resources/mobile-food-algae.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile resource icon. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms and a strong silhouette. Dark navy-to-black radial vignette with a soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and restrained luminous edge. Designed to remain clear at 128×128. No geological scene, landscape, tray, crate, room, machinery, people, readable labels, UI, logos or decorative border. Depict a compact iconic mass of ribbon-like and clustered green-blue algae forms, clearly biological biomass with fluid organic curves; no pond, tank, bottle or laboratory setting.",
+      "notes": "Canonical MineIT Mobile Food resource identity art. Store the lossless PNG under assets/art/universe/resources/Originals/<resource-id>.png and the published WebP at image.key. Do not encode save-specific abundance, quality, reserve, price or production state."
+    }
   },
   {
     "id": "mobile-food-synthetic-nutrient",
@@ -242,6 +284,13 @@
     "excludedLandformIds": [],
     "notes": "Manufactured Food output only; never participates in natural world generation.",
     "knowledgeScope": "designer truth",
-    "canonStatus": "working canon"
+    "canonStatus": "working canon",
+    "image": {
+      "key": "assets/art/universe/resources/mobile-food-synthetic-nutrient.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile resource icon. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms and a strong silhouette. Dark navy-to-black radial vignette with a soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and restrained luminous edge. Designed to remain clear at 128×128. No geological scene, landscape, tray, crate, room, machinery, people, readable labels, UI, logos or decorative border. Depict a compact stack and scatter of clean manufactured nutrient wafers/pellets with pale cream and subtle cyan accents, engineered food concentrate rather than medicine; no packaging, container, text or utensils.",
+      "notes": "Canonical MineIT Mobile Food resource identity art. Store the lossless PNG under assets/art/universe/resources/Originals/<resource-id>.png and the published WebP at image.key. Do not encode save-specific abundance, quality, reserve, price or production state."
+    }
   }
 ]

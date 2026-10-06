@@ -13,3 +13,18 @@ Reusable assets are not themselves the canonical identity of the person, ship, c
 - Image generation state remains explicit; an asset must not be marked generated until the corresponding binary file exists.
 
 The first declared series is `visual-series-commercial-portraits`, using keys such as `people/portrait-0001.webp` and stable visual identities such as `visual-person-portrait-0001`.
+
+
+## MineIT Mobile generated-world landscapes
+
+`visual-series-mobile-generated-landscape` is the reusable identity-neutral fallback library for procedurally generated Mobile worlds that do not have a bespoke authored planet tileset.
+
+Queue:
+
+`data/visual-assets-mobile-landscape.json`
+
+Assets:
+
+`assets/art/visual-library/landscape/mobile/`
+
+This library is deliberately separate from authored world-specific sets such as Koplin 3. A generated world may use the reusable library without pretending that Koplin-specific terrain belongs to that world.

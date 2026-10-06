@@ -1,6 +1,6 @@
 {
   "schemaVersion": 11,
-  "contentVersion": "0.13.0",
+  "contentVersion": "0.13.1",
   "universeId": "mineit",
   "name": "MineIT Universe",
   "canonicalYear": 5326,
@@ -108,6 +108,7 @@
     "extractionZones": "extraction-zones.json",
     "mobileResourceDefinitions": "mobile-resource-definitions.json",
     "mobileResourceOccurrenceProfiles": "mobile-resource-occurrence-profiles.json",
-    "mobileBiologicalResources": "mobile-biological-resources.json"
+    "mobileBiologicalResources": "mobile-biological-resources.json",
+    "visualAssets": "visual-assets-mobile-landscape.json"
   }
 }

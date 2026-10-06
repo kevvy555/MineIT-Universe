@@ -884,5 +884,94 @@
       "promptDescription": "Exterior and open-door view of an enclosed warehouse: wood-stone-metal hall with the warehouse handler moving pallets inside, not the shipyard crane and not an open stacker. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
       "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records."
     }
+  },
+  {
+    "id": "building-aquaculture-facility",
+    "name": "Aquaculture Facility",
+    "entityType": "Building",
+    "category": "Resource Production",
+    "categories": [
+      "Resource Production",
+      "Agriculture"
+    ],
+    "buildingType": "AquacultureFacility",
+    "sources": [
+      "Manufactured"
+    ],
+    "structuralShellSubstanceIds": [
+      "substance-stone-aggregate",
+      "substance-refined-structural-metal"
+    ],
+    "fitOutSubstanceIds": [
+      "substance-refined-structural-metal",
+      "substance-refined-ceramic",
+      "substance-refined-insulator",
+      "substance-glass"
+    ],
+    "machineIds": [
+      "machine-pump-machine",
+      "machine-filtration-machine",
+      "machine-growth-management-system"
+    ],
+    "description": "A dedicated colony aquaculture installation for managing aquatic food populations in suitable lake or water sites, with pumping, filtration, feeding and biological monitoring.",
+    "canonStatus": "working canon",
+    "provenance": {
+      "mobile": {
+        "path": "docs/migration/Overhaulv0.1/RESOURCE_ARCHITECTURE_DIRECTION.md",
+        "kind": "aquaculture-facility"
+      }
+    },
+    "image": {
+      "key": "assets/art/universe/buildings/building-aquaculture-facility.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Perfect 1:1 square catalogue art. Exterior of a dedicated Year-5326 Koplin Commonwealth frontier aquaculture facility built around lined water basins and controlled channels, with structural-metal walkways, a visible pump skid, filtration banks, feeding and biological-monitoring equipment; practical modular construction in charcoal weathered structural metal, pale ceramic wear surfaces, glass inspection sections, dark exposed fasteners and restrained colony lighting. The full facility is the dominant subject and reads clearly at small game-tile size. No open-ocean scene, people, readable text, logos, company marks or registration numbers.",
+      "notes": "Canonical building identity image, not a save-specific production state or upgrade level. Android may derive game-specific level presentation separately."
+    }
+  },
+  {
+    "id": "building-agricultural-dome",
+    "name": "Agricultural Dome",
+    "entityType": "Building",
+    "category": "Resource Production",
+    "categories": [
+      "Resource Production",
+      "Agriculture",
+      "Controlled Environment"
+    ],
+    "buildingType": "AgriculturalDome",
+    "sources": [
+      "Manufactured"
+    ],
+    "structuralShellSubstanceIds": [
+      "substance-refined-structural-metal",
+      "substance-glass"
+    ],
+    "fitOutSubstanceIds": [
+      "substance-refined-structural-metal",
+      "substance-refined-ceramic",
+      "substance-refined-insulator"
+    ],
+    "machineIds": [
+      "machine-life-support-machine",
+      "machine-climate-control-machine",
+      "machine-irrigation-system",
+      "machine-growth-management-system"
+    ],
+    "description": "A powered sealed agricultural environment that provides the atmospheric, thermal and water-control conditions needed for selected Food production on otherwise hostile worlds.",
+    "canonStatus": "working canon",
+    "provenance": {
+      "mobile": {
+        "path": "docs/migration/Overhaulv0.1/RESOURCE_ARCHITECTURE_DIRECTION.md",
+        "kind": "agricultural-dome"
+      }
+    },
+    "image": {
+      "key": "assets/art/universe/buildings/building-agricultural-dome.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Perfect 1:1 square catalogue art. Exterior of a large sealed Year-5326 Koplin Commonwealth agricultural dome on hostile barren terrain: reinforced charcoal structural-metal ribs, broad transparent or translucent glass panels, visible controlled crop beds and growth lighting inside, attached life-support and climate-control plant, irrigation and service conduits, pale ceramic wear surfaces and practical colony lighting. It must read as specialised powered agriculture, not a residential habitat. Full structure dominant, clear at small game-tile size. No people, readable text, logos, company marks or registration numbers.",
+      "notes": "Canonical building identity image, not a save-specific crop choice, output, condition or upgrade level. Android may derive game-specific level presentation separately."
+    }
   }
 ]

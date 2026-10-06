@@ -20,5 +20,35 @@
       "Do not bake registration numbers or universe-specific text into the image.",
       "The stored per-person image prompt is the current materialisation prompt for the corresponding visual asset index."
     ]
+  },
+  {
+    "id": "visual-series-mobile-generated-landscape",
+    "name": "MineIT Mobile Generated-World Landscape Library",
+    "assetType": "mobile-landscape-tile-series",
+    "assetIdPattern": "visual-landscape-generated-{landform-or-water}-{biome-if-land}-01",
+    "assetKeyPattern": "assets/art/visual-library/landscape/mobile/{asset-id}.webp",
+    "plannedAssetCount": 128,
+    "generatedAssetCount": 0,
+    "status": "not-generated",
+    "reusableAcrossUniverses": true,
+    "identityNeutral": true,
+    "intendedGameId": "game-mineit-mobile",
+    "description": "Identity-neutral 1:1 landscape tiles used by MineIT Mobile for procedurally generated worlds that do not have a bespoke authored planet landscape tileset. The library covers the full 12-landform by 10-biome cross-product plus eight visible surface-water families. It is presentation-only and never changes generated world truth.",
+    "styleLock": {
+      "camera": "orthographic-nadir",
+      "altitudeHint": "about 500 m",
+      "sun": "upper-left",
+      "shadows": "lower-right",
+      "aspectRatio": "1:1",
+      "joinRule": "Terrain continues naturally off all four edges. Relief crosses tile edges rather than forming a centred sticker object.",
+      "readability": "Must remain distinct and readable at 128x128 on an 8x8 Mobile colony grid."
+    },
+    "constraints": [
+      "No baked-in world, system, organisation or colony identity.",
+      "No readable text, UI, buildings, roads, people, vehicles or resource markers.",
+      "Do not reuse Koplin-specific landscape tiles as generic generated-world art.",
+      "Land tiles must cover the complete canonical landform/biome cross-product so presentation never needs to invent a tile.",
+      "Subsurface aquifers and hydrosphere-none do not receive visible water tiles."
+    ]
   }
 ]

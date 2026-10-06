@@ -87,7 +87,8 @@ const scalarRefs = {
   species: ['homeworldId'],
   people: ['speciesId', 'organisationId', 'organisationUnitId', 'workLocationId', 'homeLocationId'],
   economicSectors: ['anchorOrganisationId'],
-  visualAssetSeries: ['generationSourceId'],
+  visualAssetSeries: ['generationSourceId', 'intendedGameId'],
+  visualAssets: ['seriesId', 'intendedGameId', 'landformId', 'biomeId', 'hydrosphereId'],
   shipLines: ['manufacturerOrganisationId', 'flagshipYardFacilityId'],
   shipClasses: ['manufacturerOrganisationId', 'shipLineId'],
   ships: ['organisationId', 'shipClassId', 'homePortLocationId'],
@@ -457,7 +458,7 @@ console.log(`Canonical Year ${manifest.canonicalYear}; civilisation baseline Yea
 console.log(`${byId.size} entities across ${Object.keys(collections).length} logical collections and ${Object.values(collectionFiles).flat().length} JSON shards.`);
 console.log(`${retailClasses.length} factory-new ship classes across ${retailManufacturerIds.size} manufacturers.`);
 console.log(`${commercialContacts.length} commercial contacts across ${sectors.length} economic sectors and ${commercialOperations.length} procurement operations.`);
-console.log(`${(collections.games ?? []).length} games; ${(collections.surfaceLandforms ?? []).length} landforms; ${(collections.surfaceBiomes ?? []).length} biomes; ${(collections.findSites ?? []).length} P0 find sites; ${(collections.landscapeTilesets ?? []).length} landscape tilesets; ${(collections.landscapeTiles ?? []).length} landscape tiles.`);
+console.log(`${(collections.games ?? []).length} games; ${(collections.surfaceLandforms ?? []).length} landforms; ${(collections.surfaceBiomes ?? []).length} biomes; ${(collections.findSites ?? []).length} P0 find sites; ${(collections.landscapeTilesets ?? []).length} authored landscape tilesets; ${(collections.landscapeTiles ?? []).length} authored landscape tiles; ${(collections.visualAssets ?? []).length} reusable visual assets.`);
 if (warnings.length) { console.log(`\nWarnings (${warnings.length}):`); warnings.forEach(w => console.log(`- ${w}`)); }
 
 // MineIT Mobile canonical resource/environment boundary.
@@ -522,6 +523,8 @@ for (const id of expectedFoodIds) if (!mobileBiology.some(resource => resource.i
 for (const resource of mobileBiology) {
   if (resource.gameId !== 'game-mineit-mobile') errors.push(`${resource.id}: biological Food record must reference game-mineit-mobile.`);
   if (resource.gameplayCategory !== 'Food') errors.push(`${resource.id}: biological resource must use Food gameplayCategory.`);
+  if (!resource.image) errors.push(`${resource.id}: biological Food resource requires image-generation metadata.`);
+  if (resource.image?.key !== `assets/art/universe/resources/${resource.id}.webp`) errors.push(`${resource.id}: biological Food image must use assets/art/universe/resources/<resource-id>.webp.`);
   for (const field of ['naturalOccurrenceAllowed', 'introducedAgricultureAllowed', 'controlledAgricultureAllowed', 'manufactured']) {
     if (typeof resource[field] !== 'boolean') errors.push(`${resource.id}.${field} must be boolean.`);
   }
@@ -540,6 +543,44 @@ for (const id of ['mobile-food-aquatic-food', 'mobile-food-algae']) {
 }
 if (mobileBiology.find(resource => resource.id === 'mobile-food-edible-flora')?.controlledAgricultureAllowed !== false) {
   errors.push('Edible Flora must not be a controlled-dome production identity in the first Mobile model.');
+}
+
+
+const mobileLandscapeAssets = collections.visualAssets ?? [];
+const expectedGenericLandscapeCount = (collections.surfaceLandforms ?? []).length * (collections.surfaceBiomes ?? []).length + 8;
+if (mobileLandscapeAssets.length !== expectedGenericLandscapeCount) {
+  errors.push(`Generated-world Mobile landscape library must contain ${expectedGenericLandscapeCount} assets; found ${mobileLandscapeAssets.length}.`);
+}
+const mobileLandscapeSeriesId = 'visual-series-mobile-generated-landscape';
+if (!(collections.visualAssetSeries ?? []).some(series => series.id === mobileLandscapeSeriesId)) {
+  errors.push(`Missing ${mobileLandscapeSeriesId}.`);
+}
+for (const landform of collections.surfaceLandforms ?? []) {
+  for (const biome of collections.surfaceBiomes ?? []) {
+    const matches = mobileLandscapeAssets.filter(asset => asset.landformId === landform.id && asset.biomeId === biome.id && !asset.hydrosphereId);
+    if (matches.length !== 1) errors.push(`Generated landscape library requires exactly one tile for ${landform.id} + ${biome.id}; found ${matches.length}.`);
+  }
+}
+const visibleHydrosphereIds = new Set([
+  'hydrosphere-ocean',
+  'hydrosphere-lake',
+  'hydrosphere-river',
+  'hydrosphere-fresh-water',
+  'hydrosphere-saltwater',
+  'hydrosphere-brine',
+  'hydrosphere-mineral-rich-water',
+  'hydrosphere-frozen-water'
+]);
+for (const hydrosphereId of visibleHydrosphereIds) {
+  const matches = mobileLandscapeAssets.filter(asset => asset.hydrosphereId === hydrosphereId);
+  if (matches.length !== 1) errors.push(`Generated landscape library requires exactly one visible tile for ${hydrosphereId}; found ${matches.length}.`);
+}
+for (const asset of mobileLandscapeAssets) {
+  if (asset.seriesId !== mobileLandscapeSeriesId) errors.push(`${asset.id}: generated landscape asset must use ${mobileLandscapeSeriesId}.`);
+  if (asset.intendedGameId !== 'game-mineit-mobile') errors.push(`${asset.id}: generated landscape asset must target game-mineit-mobile.`);
+  if (asset.identityNeutral !== true) errors.push(`${asset.id}: generated landscape asset must be identity-neutral.`);
+  if (!asset.image) errors.push(`${asset.id}: generated landscape asset requires image metadata.`);
+  if (!asset.image?.key?.startsWith('assets/art/visual-library/landscape/mobile/')) errors.push(`${asset.id}: generated landscape asset must live under assets/art/visual-library/landscape/mobile/.`);
 }
 
 const requiredMobileParentSubstances = [

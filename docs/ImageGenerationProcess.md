@@ -482,7 +482,7 @@ Rules:
 
 When an existing approved MineIT Android resource image already matches this style, prefer **migrating that existing source art into Universe** over regenerating it. Preserve the Android source image as migration provenance, move the canonical source of truth to Universe, and let Android consume a derived/bundled copy thereafter.
 
-The current 42 natural non-Food resources are already prepared as an image queue in `data/mobile-resource-definitions.json`.
+The current 42 natural non-Food resources are prepared in `data/mobile-resource-definitions.json`. The seven biological/Food identities are prepared in `data/mobile-biological-resources.json` and use the same MineIT Mobile resource-icon visual language.
 
 ### 8.2 Substances
 
@@ -510,6 +510,16 @@ Primary queues:
 - `data/buildings.json`
 
 Artwork should read clearly as catalogue/reference art.
+
+For MineIT Mobile buildings:
+
+- use one canonical identity/catalogue image per building type;
+- prefer a 1:1 composition that also reads cleanly on a small Mobile tile;
+- use the established Year-5326 Koplin Commonwealth frontier-industrial visual language;
+- keep the complete structure visually dominant;
+- no readable logos, company names, registration markings or UI;
+- do not encode a particular save's building level, staffing, damage, power state or output into canonical identity art;
+- Android may retain or derive game-specific L1-L5 presentation atlases separately from the canonical building identity image.
 
 Keep the target entity visually dominant and avoid unnecessary environmental clutter.
 
@@ -543,11 +553,32 @@ Star-system vistas are identity-bearing 16:9 canonical art keyed to the system I
 
 They are not map UI screenshots.
 
-### 8.9 World landscape tiles
+### 8.9 World landscape tiles and generated-world fallback
 
-Landscape tiles are world-specific Mobile assets, not reusable generic visual-library art.
+**Authored named-world landscape tiles** are world-specific Mobile assets.
 
 Keep them under the owning planet path and follow the relevant world-surface/tile rules.
+
+For procedurally generated worlds that do not have bespoke authored art, MineIT Mobile uses the identity-neutral series `visual-series-mobile-generated-landscape` and the queue in:
+
+`data/visual-assets-mobile-landscape.json`
+
+Those reusable tiles live under:
+
+`assets/art/visual-library/landscape/mobile/`
+
+Rules for the generated-world library:
+
+- 1:1 full-bleed straight-down orthographic/nadir landscape tiles;
+- one complete 12-landform x 10-biome matrix plus visible surface-water families;
+- camera about 500 m altitude;
+- sun upper-left, shadows lower-right;
+- terrain continues naturally off all four edges;
+- macro landform remains readable beneath biome cover;
+- no world-specific identity, UI, text, buildings, roads, people, vehicles or resource markers;
+- designed to remain distinct at 128x128 on the Mobile 8x8 grid;
+- never copy/relabel Koplin-specific tiles as generic assets;
+- hydrosphere-none and subsurface aquifers do not require standalone visible water tiles.
 
 ## 9. Reusable visual-library rule
 
