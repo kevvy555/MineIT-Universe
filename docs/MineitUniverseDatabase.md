@@ -2,7 +2,7 @@
 
 Status: **Schema v2 implemented — first canonical region generated**  
 Repository: `kevvy555/MineIT-Universe`  
-Current content version: **0.11.0**
+Current content version: **0.13.0**
 
 ## Purpose
 
@@ -138,9 +138,15 @@ Major multi-organisation projects and dated historical events are first-class en
 
 The current calendar is the Standard Terran Calendar; the canonical universe date is declared by `manifest.json`.
 
+## MineIT Mobile resource catalogue
+
+The manifest publishes 42 natural non-Food MineIT Mobile resource identities through `mobileResourceDefinitions`, with physical eligibility separated into `mobileResourceOccurrenceProfiles`. The Directory groups the resource identities by Build, Fuel and Ore and nests each physical occurrence profile beneath its resource. Mobile-owned price, rarity weight, scan requirement, extraction balance, quality and generated reserve remain outside Universe canon.
+
+The separate `mobileBiologicalResources` collection exposes the approved Food-source model without pretending biological herds or cultivated crops are industrial substances.
+
 ## Image-generation state
 
-People, named ships and star systems currently carry image metadata. Purchasable ship classes, parts, machines and buildings may also. Star-system vistas are identity-bearing 16:9 art under `assets/art/universe/systems/`. Substances may carry optional catalog-still image metadata; only records with an `image` object are in the generation process. Named worlds may carry a matching landscape tileset under `assets/art/universe/planets/<planet-id>/landscape/`.
+People, named ships and star systems currently carry image metadata. Purchasable ship classes, parts, machines, buildings and MineIT Mobile resource definitions may also. Mobile resource art is 1:1 full-bleed catalogue/tile imagery under `assets/art/universe/resources/` and represents stable resource identity rather than per-save quality, rarity or reserve. Star-system vistas are identity-bearing 16:9 art under `assets/art/universe/systems/`. Substances may carry optional catalog-still image metadata; only records with an `image` object are in the generation process. Named worlds may carry a matching landscape tileset under `assets/art/universe/planets/<planet-id>/landscape/`.
 
 Each image record explicitly stores:
 
