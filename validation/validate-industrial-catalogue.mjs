@@ -43,7 +43,9 @@ const expectedMobileBuildings = new Map([
   ['rig', 'building-extraction-rig'],
   ['mine', 'building-simple-pit-mine'],
   ['deep-mine', 'building-deep-mine'],
-  ['spaceport', 'building-spaceport']
+  ['spaceport', 'building-spaceport'],
+  ['aquaculture-facility', 'building-aquaculture-facility'],
+  ['agricultural-dome', 'building-agricultural-dome']
 ]);
 
 for (const id of expectedDesktopBuildings) {
@@ -97,8 +99,8 @@ for (const building of buildings) {
   }
 }
 
-if (buildings.length !== 22) {
-  errors.push(`Combined Desktop/Mobile building catalogue must currently contain 22 reconciled archetypes; found ${buildings.length}.`);
+if (buildings.length !== 24) {
+  errors.push(`Combined Desktop/Mobile building catalogue must currently contain 24 reconciled archetypes; found ${buildings.length}.`);
 }
 if (parts.length < 13) errors.push(`Industrial parts catalogue unexpectedly small: ${parts.length}.`);
 if (machines.length < 28) errors.push(`Industrial machines catalogue unexpectedly small: ${machines.length}.`);
