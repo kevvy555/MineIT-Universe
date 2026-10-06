@@ -29,15 +29,15 @@
     },
     "image": {
       "key": "assets/art/universe/buildings/building-collection-camp.webp",
-      "generated": false,
-      "status": "not-generated",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile building tile on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent three-quarter elevated angle, matching the established Mobile development-building language: clean rounded white ceramic/composite shells, charcoal structural frames and platforms, vivid orange trim and safety rails, restrained electric-blue emissive details, warm amber windows, crisp bevels, compact modular construction and a strong readable silhouette at 128×128. Centre the complete structure with comfortable transparent margin. No terrain scene, sky, horizon, rectangular backdrop, people, readable text, logos, company marks, registration numbers, UI, border or watermark. Show a complete mature reference configuration that clearly communicates the building identity without representing a numbered gameplay level. Building identity and required functional content: surface collection camp built from rough stone aggregate and heavy timber beams with corrugated metal lean-tos, a compact accommodation hut and open-air ground storage holding loose raw material piles; rugged modular frontier construction; no readable logos or names.",
       "notes": "Primary catalogue image normalized from the legacy multi-view building art specification at Documentation/design/Machines & Buildings/Buildings/Collection/CollectionCampImages.md. Legacy source images were marked unapproved and are not treated as canonical assets. Canonical identity art follows the MineIT Mobile isometric style; separate linked L1-L5 presentation images are materialised in building-mobile-level-images.json."
     },
     "mobileLevelAtlas": {
       "key": "assets/art/universe/buildings/mobile-levels/atlases/building-collection-camp-levels-256.webp",
-      "generated": false,
-      "status": "not-generated",
+      "generated": true,
+      "status": "generated",
       "frameWidth": 256,
       "frameHeight": 256,
       "frameOrder": [
