@@ -746,3 +746,32 @@ As of 4 October 2026 the branch contains the full first-pass structured foundati
 Universe manifest schema is now **11** and content version **0.12.0** for this boundary.
 
 The next consumer step is to validate/merge this Universe branch, then pin Android's unified Universe snapshot to the resulting immutable commit.
+
+
+## Directory and resource-art catalogue
+
+The 42 approved natural non-Food Mobile resource identities are published as first-class Directory records rather than hidden generator configuration.
+
+Each `mobileResourceDefinitions` record owns:
+
+- stable resource ID and Mobile key;
+- player-facing resource name;
+- Build / Fuel / Ore projection;
+- generic canonical parent substance;
+- renewable/finite identity;
+- concise canonical description;
+- provenance back to the approved Mobile Overhaul v0.1 resource matrix;
+- 1:1 resource image-generation metadata.
+
+The corresponding `mobileResourceOccurrenceProfiles` record owns physical occurrence plausibility and is shown beneath the resource in the Directory.
+
+The following remain intentionally Mobile-owned and must not be copied into Universe resource records:
+
+- rarity/occurrence weight after physical filtering;
+- base price;
+- scan/prospecting level;
+- extraction balance/cost/power;
+- generated quality;
+- generated quantity/reserve.
+
+Resource catalogue art lives at `assets/art/universe/resources/<resource-id>.webp`, with lossless originals under `assets/art/universe/resources/Originals/`. Resource art is a stable identity asset suitable for the Universe Directory and derived Android resource tiles; it must not visually encode a particular save's deposit quality or reserve size.
