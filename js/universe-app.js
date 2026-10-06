@@ -49,7 +49,7 @@ const ICONS = {
   organisationUnits: '▦', facilities: '⌂', operations: '⚙', products: '◆', substances: '▣',
   parts: '⧉', machines: '⚒', buildings: '⌂', researchTechnologies: '⌬', substanceArchetypes: '◈', substanceProperties: '≋', rarityBands: '⋄', geologyProcesses: '⌁', depositShapes: '⬢', depositStates: '◐', stellarTypes: '✶', cometTypes: '☄', ringSystemTypes: '◎', starSystemTypes: '✦', species: 'S',
   people: 'P', shipClasses: '△', ships: '▲', projects: '◇', events: '◷', relationships: '↔',
-  currencies: '¤', loreDocuments: '▤', loreTopics: 'i'
+  currencies: '¤', loreDocuments: '▤', loreTopics: 'i', mobileResourceDefinitions: '◈', mobileResourceOccurrenceProfiles: '⌖', mobileBiologicalResources: '⚘'
 };
 
 const nodeKey = node => node.id || `label:${node.label}`;
@@ -164,6 +164,21 @@ function buildBuildingsDirectoryNode() {
   ));
 }
 
+function buildMobileResourcesDirectoryNode() {
+  const resources = state.catalogue.collection('mobileResourceDefinitions');
+  const resourceGroups = ['Build', 'Fuel', 'Ore'].map(group =>
+    category(group, resources.filter(resource => resource.gameplayCategory === group).map(resource =>
+      entityNode(resource.id, [
+        category('Physical occurrence', nodes(related('mobileResourceOccurrenceProfiles', profile => profile.resourceId === resource.id)))
+      ])
+    ).sort(byName))
+  );
+  return category('MineIT Mobile Resources', [
+    ...resourceGroups,
+    category('Food Sources', nodes(state.catalogue.collection('mobileBiologicalResources')))
+  ]);
+}
+
 function buildGamesDirectoryNode() {
   return category('Games', nodes(state.catalogue.collection('games')));
 }
@@ -226,6 +241,7 @@ function buildDirectoryTree() {
       buildLandDirectoryNode(),
       buildResearchDirectoryNode(),
       buildReferenceCataloguesNode(),
+      buildMobileResourcesDirectoryNode(),
       buildSubstancesDirectoryNode(),
       buildPartsDirectoryNode(),
       buildMachinesDirectoryNode(),
@@ -358,6 +374,10 @@ function renderTree() {
         record.subCategory,
         record.buildingType,
         record.entityType,
+        record.mobileKey,
+        record.gameplayCategory,
+        record.occurrenceClass,
+        record.worldTypeEligibility,
         record.gameName,
         record.designName,
         record.layer,
@@ -445,7 +465,10 @@ function subtitle(collection, entity) {
     relationships: entity.relationshipType,
     currencies: entity.symbol ? `${entity.symbol} • ${entity.currencyType || 'Currency'}` : entity.currencyType,
     loreDocuments: `${entity.canonLevel || ''} • ${entity.canonStatus || ''}`,
-    loreTopics: `${entity.topicType || ''} • ${entity.knowledgeScope || ''}`
+    loreTopics: `${entity.topicType || ''} • ${entity.knowledgeScope || ''}`,
+    mobileResourceDefinitions: `${entity.gameplayCategory || ''} • ${entity.renewable ? 'Renewable' : 'Finite'}`.trim(),
+    mobileResourceOccurrenceProfiles: `${entity.occurrenceClass || ''} • ${entity.worldTypeEligibility || ''}`.trim(),
+    mobileBiologicalResources: `Food • ${entity.naturalOccurrenceAllowed ? 'Natural source' : (entity.manufactured ? 'Manufactured' : 'Cultivated source')}`
   };
   return map[collection] || '';
 }
@@ -513,6 +536,56 @@ function fieldsFor(collection, entity) {
   }
   if (collection === 'products') {
     fields.push(field('Type', esc(entity.productType)), field('Producers', links(entity.producerOrganisationIds)), field('Producing operations', links(relatedIds('operations', item => (item.productIds || []).includes(entity.id)))));
+  }
+  if (collection === 'mobileResourceDefinitions') {
+    const profiles = relatedIds('mobileResourceOccurrenceProfiles', profile => profile.resourceId === entity.id);
+    fields.push(
+      field('Mobile key', `<code>${esc(entity.mobileKey)}</code>`),
+      field('Game', link(entity.gameId)),
+      field('Gameplay category', esc(entity.gameplayCategory)),
+      field('Parent substance', link(entity.genericSubstanceId)),
+      field('Natural occurrence', entity.naturalOccurrence ? 'Yes' : 'No'),
+      field('Renewable', entity.renewable ? 'Yes' : 'No'),
+      field('Physical occurrence', links(profiles)),
+      field('Knowledge scope', esc(entity.knowledgeScope))
+    );
+  }
+  if (collection === 'mobileResourceOccurrenceProfiles') {
+    fields.push(
+      field('Resource', link(entity.resourceId)),
+      field('Occurrence class', esc(entity.occurrenceClass)),
+      field('World eligibility', esc(entity.worldTypeEligibility)),
+      field('Allowed body kinds', links(entity.allowedCelestialBodyKindIds)),
+      field('Eligible world types', links(entity.eligibleWorldTypeIds)),
+      field('Preferred world types', links(entity.preferredWorldTypeIds)),
+      field('Excluded world types', links(entity.excludedWorldTypeIds)),
+      field('Primary extraction zones', links(entity.primaryExtractionZoneIds)),
+      field('Secondary extraction zones', links(entity.secondaryExtractionZoneIds)),
+      field('Preferred geology', links(entity.preferredGeologyProvinceIds)),
+      field('Required biomes', links(entity.requiredBiomeIds)),
+      field('Required hydrosphere', links(entity.requiredHydrosphereIds)),
+      field('Excluded atmospheres', links(entity.excludedAtmosphereTypeIds)),
+      field('Knowledge scope', esc(entity.knowledgeScope)),
+      field('Notes', esc(entity.notes))
+    );
+  }
+  if (collection === 'mobileBiologicalResources') {
+    fields.push(
+      field('Game', link(entity.gameId)),
+      field('Gameplay category', esc(entity.gameplayCategory)),
+      field('Natural occurrence', entity.naturalOccurrenceAllowed ? 'Yes' : 'No'),
+      field('Introduced agriculture', entity.introducedAgricultureAllowed ? 'Yes' : 'No'),
+      field('Controlled agriculture', entity.controlledAgricultureAllowed ? 'Yes' : 'No'),
+      field('Manufactured', entity.manufactured ? 'Yes' : 'No'),
+      field('Allowed body kinds', links(entity.allowedCelestialBodyKindIds)),
+      field('Natural world types', links(entity.naturalWorldTypeIds)),
+      field('Open agriculture worlds', links(entity.openAgricultureWorldTypeIds)),
+      field('Required biomes', links(entity.requiredNaturalBiomeIds)),
+      field('Required hydrosphere', links(entity.requiredNaturalHydrosphereIds)),
+      field('Excluded landforms', links(entity.excludedLandformIds)),
+      field('Knowledge scope', esc(entity.knowledgeScope)),
+      field('Notes', esc(entity.notes))
+    );
   }
   if (collection === 'substances') {
     fields.push(
