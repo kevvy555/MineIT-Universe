@@ -477,6 +477,11 @@ for (const resource of mobileResources) {
   if (!expectedMobileCategoryCounts.has(resource.gameplayCategory)) errors.push(`${resource.id}: invalid Mobile gameplayCategory.`);
   if (resource.naturalOccurrence !== true) errors.push(`${resource.id}: familiar 42-resource rows must be natural occurrences.`);
   if (typeof resource.renewable !== 'boolean') errors.push(`${resource.id}: renewable must be boolean.`);
+  if (!resource.description) errors.push(`${resource.id}: Mobile resource requires a canonical description.`);
+  if (!resource.image) errors.push(`${resource.id}: Mobile resource requires image-generation metadata.`);
+  if (resource.image?.key !== `assets/art/universe/resources/${resource.id}.webp`) errors.push(`${resource.id}: Mobile resource image must use assets/art/universe/resources/<resource-id>.webp.`);
+  if (!resource.image?.promptDescription) errors.push(`${resource.id}: Mobile resource requires an image-generation prompt.`);
+  if (resource.provenance?.sourcePath !== 'docs/migration/Overhaulv0.1/RESOURCE_BALANCE_MATRIX.md') errors.push(`${resource.id}: Mobile resource provenance must reference the Overhaul v0.1 balance matrix.`);
   for (const forbidden of ['price', 'sellPrice', 'weight', 'spawnWeight', 'rarity', 'reserve', 'quality', 'scanLevel', 'miningLevel']) {
     if (Object.hasOwn(resource, forbidden)) errors.push(`${resource.id}: gameplay/balance field ${forbidden} must remain Mobile-owned.`);
   }
