@@ -18,7 +18,10 @@
     "fitOutSubstanceIds": [
       "substance-refined-structural-metal"
     ],
-    "machineIds": [],
+    "machineIds": [
+      "machine-thermoelectric-trickler",
+      "machine-climate-control-machine"
+    ],
     "description": "A lightweight frontier extraction camp that supports manual collection, sorting and temporary storage of accessible surface resources.",
     "canonStatus": "source-canonical",
     "provenance": {
@@ -152,6 +155,13 @@
         "path": "js/domain/site-service.js",
         "kind": "deep-mine"
       }
+    },
+    "image": {
+      "key": "assets/art/universe/buildings/building-deep-mine.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Exterior of a reinforced deep mine: structural-metal headframe, the same drill machine, conveyor into the adit, and mine ventilation fans on the collar. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records."
     }
   },
   {
@@ -187,6 +197,13 @@
         "path": "js/domain/site-service.js",
         "kind": "rig"
       }
+    },
+    "image": {
+      "key": "assets/art/universe/buildings/building-extraction-rig.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Exterior of a drilling-and-pumping rig: structural-metal derrick with the drill machine and a high-pressure pump on a stone pad. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records."
     }
   },
   {
@@ -218,6 +235,13 @@
     "canonStatus": "source-canonical",
     "provenance": {
       "desktopPath": "Buildings/Collection/WaterCollector.md"
+    },
+    "image": {
+      "key": "assets/art/universe/buildings/building-water-collector.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Exterior of a water-collector: stone and clay pump house with the industrial pump and filtration bank conditioning local water. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records."
     }
   },
   {
@@ -295,6 +319,13 @@
         "path": "js/domain/site-service.js",
         "kind": "farm"
       }
+    },
+    "image": {
+      "key": "assets/art/universe/buildings/building-farm.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Exterior of a colony farm: woody-plant and stone plots with irrigation piping and a growth-management greenhouse of lighting bars and sensors. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records."
     }
   },
   {
@@ -318,7 +349,10 @@
       "substance-refined-structural-metal",
       "substance-fresh-water"
     ],
-    "machineIds": [],
+    "machineIds": [
+      "machine-irrigation-system",
+      "machine-livestock-handling-system"
+    ],
     "description": "A managed livestock and grazing facility for sustainable food production from suitable herd species.",
     "canonStatus": "source-canonical",
     "provenance": {
@@ -326,6 +360,13 @@
         "path": "js/domain/site-service.js",
         "kind": "ranch"
       }
+    },
+    "image": {
+      "key": "assets/art/universe/buildings/building-ranch.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Exterior of a colony ranch: paddocks of local herd animals, irrigation watering lines, and a livestock handling crush with gates and troughs in the same charcoal metal kit. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records."
     }
   },
   {
@@ -349,7 +390,10 @@
       "substance-refined-structural-metal",
       "substance-refined-insulator"
     ],
-    "machineIds": [],
+    "machineIds": [
+      "machine-growth-management-system",
+      "machine-pump-machine"
+    ],
     "description": "A controlled biological harvesting facility for renewable fungal, protein-rich and comparable native biomass resources.",
     "canonStatus": "source-canonical",
     "provenance": {
@@ -357,6 +401,13 @@
         "path": "js/domain/site-service.js",
         "kind": "bio"
       }
+    },
+    "image": {
+      "key": "assets/art/universe/buildings/building-bio-harvester.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Exterior of a bio-harvester: sealed grow halls with growth-management lighting and a pump skid for wet fungal and protein biomass, no crop-picker clone of the ranch crush. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records."
     }
   },
   {
@@ -391,6 +442,13 @@
         "path": "js/domain/site-service.js",
         "kind": "algae"
       }
+    },
+    "image": {
+      "key": "assets/art/universe/buildings/building-algae-facility.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Exterior of an algae facility: glass tanks, growth-management lighting and pump plumbing on a structural-metal pad. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records."
     }
   },
   {
@@ -412,11 +470,20 @@
       "substance-glass"
     ],
     "fitOutSubstanceIds": [],
-    "machineIds": [],
+    "machineIds": [
+      "machine-climate-control-machine"
+    ],
     "description": "A straightforward frontier accommodation block providing enclosed residential space for a growing settlement.",
     "canonStatus": "source-canonical",
     "provenance": {
       "desktopPath": "Buildings/Housing/Accommodation.md"
+    },
+    "image": {
+      "key": "assets/art/universe/buildings/building-accommodation-building.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Exterior of a simple frontier accommodation block: wood, stone, metal and glass, wall climate-control units only, no full habitat life-support plant. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records."
     }
   },
   {
@@ -454,6 +521,13 @@
         "kind": "housing",
         "displayName": "Housing"
       }
+    },
+    "image": {
+      "key": "assets/art/universe/buildings/building-habitat.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Exterior of a serviced habitat: sealed residential volume with a life-support plant and climate-control machines on the service wall. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records."
     }
   },
   {
@@ -477,7 +551,11 @@
       "substance-refined-insulator"
     ],
     "machineIds": [
-      "machine-power-distribution-system"
+      "machine-power-distribution-system",
+      "machine-wind-generator",
+      "machine-water-wheel-generator",
+      "machine-solar-thermal-generator",
+      "machine-crude-chemical-battery"
     ],
     "description": "A colony-scale power generation and distribution facility supporting permanent surface infrastructure.",
     "canonStatus": "source-canonical",
@@ -487,6 +565,13 @@
         "path": "js/domain/building-model.js",
         "kind": "power"
       }
+    },
+    "image": {
+      "key": "assets/art/universe/buildings/building-power-plant.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Exterior of a colony power plant: switchyard distribution, wind generator, solar-thermal mirrors, chemical battery hall and a water-wheel on a short race, one generation compound. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records."
     }
   },
   {
@@ -524,6 +609,13 @@
         "path": "js/domain/building-model.js",
         "kind": "industry"
       }
+    },
+    "image": {
+      "key": "assets/art/universe/buildings/building-industry.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Exterior of a colony industry hall: fabrication machine, heavy assembly crane and welding bays in stone and structural metal. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records."
     }
   },
   {
@@ -557,6 +649,13 @@
     "canonStatus": "source-canonical",
     "provenance": {
       "desktopPath": "Buildings/Refining/BasicRefinery.md"
+    },
+    "image": {
+      "key": "assets/art/universe/buildings/building-basic-refinery.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Exterior of a basic refinery: crusher hall and smelter stack in stone and clay, ceramic and graphite fit-out visible at the bays. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records."
     }
   },
   {
@@ -582,7 +681,9 @@
       "substance-glass",
       "substance-refined-insulator"
     ],
-    "machineIds": [],
+    "machineIds": [
+      "machine-colony-operations-computer"
+    ],
     "description": "The principal command and administrative centre of a colony, coordinating local infrastructure, workforce and operational control.",
     "canonStatus": "source-canonical",
     "provenance": {
@@ -590,6 +691,13 @@
         "path": "js/domain/building-model.js",
         "kind": "headquarters"
       }
+    },
+    "image": {
+      "key": "assets/art/universe/buildings/building-headquarters.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Exterior of colony headquarters: stone and metal admin block with a control annex of colony operations computers behind dark glass, no readable maps or logos. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records."
     }
   },
   {
@@ -621,6 +729,13 @@
     "canonStatus": "source-canonical",
     "provenance": {
       "desktopPath": "Buildings/Research/ResearchBuilding.md"
+    },
+    "image": {
+      "key": "assets/art/universe/buildings/building-research-building.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Exterior of a research building: lab block with research-computer workstations visible through glass, clay and stone shell. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records."
     }
   },
   {
@@ -655,6 +770,13 @@
         "path": "js/domain/spaceport-model.js",
         "kind": "spaceport"
       }
+    },
+    "image": {
+      "key": "assets/art/universe/buildings/building-spaceport.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Exterior of a surface spaceport: prepared pad and the heavy assembly crane for berthing and cargo, not a warehouse handler. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records."
     }
   },
   {
@@ -688,6 +810,13 @@
     "canonStatus": "source-canonical",
     "provenance": {
       "desktopPath": "Buildings/Shipyard/ShipyardBay.md"
+    },
+    "image": {
+      "key": "assets/art/universe/buildings/building-shipyard-bay.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Exterior of a shipyard bay: fabrication machine, assembly crane and welding systems around an unfinished unnamed hull section. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records."
     }
   },
   {
@@ -704,7 +833,10 @@
     ],
     "structuralShellSubstanceIds": [],
     "fitOutSubstanceIds": [],
-    "machineIds": [],
+    "machineIds": [
+      "machine-conveyor-machine",
+      "machine-bulk-stacker"
+    ],
     "description": "An open or lightly protected storage area used for bulk raw materials and construction feedstock near active frontier works.",
     "canonStatus": "source-canonical",
     "provenance": {
@@ -712,10 +844,10 @@
     },
     "image": {
       "key": "assets/art/universe/buildings/building-stockpile.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "Grounded high-detail industrial science-fiction open-air raw-material stockpile: heavy piles of rough ore and rock fragments on flattened ground within low reinforced metal containment barriers, dust and debris around the base, no roof or enclosure; exterior full-structure catalogue view; no readable logos or names.",
-      "notes": "Primary catalogue image normalized from the legacy multi-view building art specification at Documentation/design/Machines & Buildings/Buildings/Storage/StockPileImages.md. Legacy source images were marked unapproved and are not treated as canonical assets."
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Open frontier stockpile yard: the same conveyor feeding a bulk stacker-reclaimer over loose aggregate piles, no walls, no warehouse gantry. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records."
     }
   },
   {
@@ -737,11 +869,20 @@
       "substance-glass"
     ],
     "fitOutSubstanceIds": [],
-    "machineIds": [],
+    "machineIds": [
+      "machine-warehouse-handler"
+    ],
     "description": "An enclosed logistics building for protected storage, inventory handling and distribution of colony goods and industrial stock.",
     "canonStatus": "source-canonical",
     "provenance": {
       "desktopPath": "Buildings/Storage/Warehouse.md"
+    },
+    "image": {
+      "key": "assets/art/universe/buildings/building-warehouse.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Exterior and open-door view of an enclosed warehouse: wood-stone-metal hall with the warehouse handler moving pallets inside, not the shipyard crane and not an open stacker. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records."
     }
   }
 ]
