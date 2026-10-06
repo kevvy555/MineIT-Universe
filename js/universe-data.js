@@ -50,7 +50,11 @@ const COLLECTION_LABELS = {
   relationships: 'Relationship',
   currencies: 'Currency',
   loreDocuments: 'Canon Source',
-  loreTopics: 'Lore Topic'
+  loreTopics: 'Lore Topic',
+  extractionZones: 'Extraction Zone',
+  mobileResourceDefinitions: 'MineIT Mobile Resource',
+  mobileResourceOccurrenceProfiles: 'Mobile Resource Occurrence Profile',
+  mobileBiologicalResources: 'MineIT Mobile Food Source'
 };
 
 const SCALAR_REFS = {
@@ -74,7 +78,10 @@ const SCALAR_REFS = {
   relationships: ['personAId', 'personBId'],
   currencies: ['sourceDocumentId'],
   loreTopics: ['sourceDocumentId'],
-  substances: ['sourceDocumentId']
+  substances: ['sourceDocumentId'],
+  mobileResourceDefinitions: ['gameId', 'genericSubstanceId'],
+  mobileResourceOccurrenceProfiles: ['resourceId'],
+  mobileBiologicalResources: ['gameId']
 };
 
 const ARRAY_REFS = {
@@ -96,7 +103,9 @@ const ARRAY_REFS = {
   shipClasses: ['designerOrganisationIds'],
   ships: ['operationIds', 'personIds'],
   projects: ['organisationIds', 'locationIds', 'personIds', 'shipIds', 'operationIds'],
-  events: ['linkedEntityIds']
+  events: ['linkedEntityIds'],
+  mobileResourceOccurrenceProfiles: ['allowedCelestialBodyKindIds', 'eligibleWorldTypeIds', 'preferredWorldTypeIds', 'excludedWorldTypeIds', 'primaryExtractionZoneIds', 'secondaryExtractionZoneIds', 'preferredGeologyProvinceIds', 'requiredBiomeIds', 'requiredHydrosphereIds', 'excludedAtmosphereTypeIds'],
+  mobileBiologicalResources: ['allowedCelestialBodyKindIds', 'naturalWorldTypeIds', 'openAgricultureWorldTypeIds', 'requiredNaturalBiomeIds', 'requiredNaturalHydrosphereIds', 'excludedLandformIds']
 };
 
 const IMAGE_STATUSES = new Set(['not-generated', 'in-progress', 'generated', 'approved', 'needs-regeneration']);
