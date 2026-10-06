@@ -1,0 +1,13 @@
+[
+  {
+    "id": "region-koplin-reach",
+    "name": "Koplin Reach",
+    "regionType": "working commercial-frontier region",
+    "canonStatus": "generated-expansion-compatible-with-lore",
+    "description": "A working Directory grouping for Koplin and nearby systems participating in the young Commonwealth interstellar frontier. The foundation lore establishes a small frontier of survey stations and resource outposts beyond Koplin by Year 5300; the named secondary systems in this grouping are generated expansion content unless separately source-linked.",
+    "administrativeOrganisationIds": ["organisation-koplin-compact"],
+    "systemIds": ["system-koplin", "system-solace", "system-varda", "system-meridian", "system-aster-vale", "system-orison", "system-caldera", "system-halcyon", "system-nacre", "system-damaris"],
+    "economicProfile": ["interstellar trade", "resource expansion", "shipbuilding", "research", "frontier logistics"],
+    "history": "Commonwealth interstellar expansion is still young in Year 5326. Nearby commercial and survey infrastructure has begun to form around routes made practical by the Vector Exchange Drive, while most off-world industry remains inside the Koplin system."
+  }
+]

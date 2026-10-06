@@ -1,0 +1,1094 @@
+[
+  {
+    "id": "mobile-resource-timber",
+    "name": "Timber",
+    "mobileKey": "timber",
+    "gameId": "game-mineit-mobile",
+    "gameplayCategory": "Build",
+    "genericSubstanceId": "substance-woody-plant",
+    "naturalOccurrence": true,
+    "renewable": true,
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon",
+    "description": "Timber is harvested woody biological material used as a durable natural construction feedstock on worlds with established macroscopic plant life.",
+    "visualDescription": "cut natural timber grain and rough woody fibre, warm brown growth rings, bark edge and dense structural grain",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/migration/Overhaulv0.1/RESOURCE_BALANCE_MATRIX.md",
+      "approvedDate": "2026-10-04"
+    },
+    "image": {
+      "key": "assets/art/universe/resources/mobile-resource-timber.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of cut natural timber grain and rough woody fibre, warm brown growth rings, bark edge and dense structural grain. Fill the entire 1:1 square edge-to-edge. The resource itself is the only subject: one continuous natural material or physically grounded resource visualisation, not objects arranged on a background. No tray, table, jar, bottle, storage bin, room, machinery, people, readable labels, logos, stamps, registration numbers or text. Photorealistic macro catalogue art, grounded MineIT industrial science-fiction realism.",
+      "notes": "MineIT Mobile resource tile/catalogue art. Generate 1:1. Store native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-timber.png and a same-pixel-size catalog WebP at this key."
+    }
+  },
+  {
+    "id": "mobile-resource-plant-fibre",
+    "name": "Plant Fibre",
+    "mobileKey": "plant-fibre",
+    "gameId": "game-mineit-mobile",
+    "gameplayCategory": "Build",
+    "genericSubstanceId": "substance-fibrous-plant",
+    "naturalOccurrence": true,
+    "renewable": true,
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon",
+    "description": "Plant Fibre is naturally harvested fibrous biological material from established surface vegetation, suitable as a lightweight raw construction and industrial feedstock.",
+    "visualDescription": "dense interwoven pale plant fibres and tough stalk material, dry natural strands filling the frame",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/migration/Overhaulv0.1/RESOURCE_BALANCE_MATRIX.md",
+      "approvedDate": "2026-10-04"
+    },
+    "image": {
+      "key": "assets/art/universe/resources/mobile-resource-plant-fibre.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of dense interwoven pale plant fibres and tough stalk material, dry natural strands filling the frame. Fill the entire 1:1 square edge-to-edge. The resource itself is the only subject: one continuous natural material or physically grounded resource visualisation, not objects arranged on a background. No tray, table, jar, bottle, storage bin, room, machinery, people, readable labels, logos, stamps, registration numbers or text. Photorealistic macro catalogue art, grounded MineIT industrial science-fiction realism.",
+      "notes": "MineIT Mobile resource tile/catalogue art. Generate 1:1. Store native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-plant-fibre.png and a same-pixel-size catalog WebP at this key."
+    }
+  },
+  {
+    "id": "mobile-resource-stone",
+    "name": "Construction Stone",
+    "mobileKey": "stone",
+    "gameId": "game-mineit-mobile",
+    "gameplayCategory": "Build",
+    "genericSubstanceId": "substance-stone-aggregate",
+    "naturalOccurrence": true,
+    "renewable": false,
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon",
+    "description": "Construction Stone is naturally occurring rock and aggregate suitable for bulk structural work; the stable Mobile key remains `stone`.",
+    "visualDescription": "rough grey construction-grade rock face and angular aggregate, dense mineral texture, no dressed masonry",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/migration/Overhaulv0.1/RESOURCE_BALANCE_MATRIX.md",
+      "approvedDate": "2026-10-04"
+    },
+    "image": {
+      "key": "assets/art/universe/resources/mobile-resource-stone.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of rough grey construction-grade rock face and angular aggregate, dense mineral texture, no dressed masonry. Fill the entire 1:1 square edge-to-edge. The resource itself is the only subject: one continuous natural material or physically grounded resource visualisation, not objects arranged on a background. No tray, table, jar, bottle, storage bin, room, machinery, people, readable labels, logos, stamps, registration numbers or text. Photorealistic macro catalogue art, grounded MineIT industrial science-fiction realism.",
+      "notes": "MineIT Mobile resource tile/catalogue art. Generate 1:1. Store native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-stone.png and a same-pixel-size catalog WebP at this key."
+    }
+  },
+  {
+    "id": "mobile-resource-clay",
+    "name": "Clay",
+    "mobileKey": "clay",
+    "gameId": "game-mineit-mobile",
+    "gameplayCategory": "Build",
+    "genericSubstanceId": "substance-clay-mineral",
+    "naturalOccurrence": true,
+    "renewable": false,
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon",
+    "description": "Clay is fine-grained mineral-rich sediment formed through alteration and weathering, used as a raw mineral construction feedstock.",
+    "visualDescription": "moist compact clay face with layered earthy red-brown and ochre mineral bands, fine-grained texture",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/migration/Overhaulv0.1/RESOURCE_BALANCE_MATRIX.md",
+      "approvedDate": "2026-10-04"
+    },
+    "image": {
+      "key": "assets/art/universe/resources/mobile-resource-clay.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of moist compact clay face with layered earthy red-brown and ochre mineral bands, fine-grained texture. Fill the entire 1:1 square edge-to-edge. The resource itself is the only subject: one continuous natural material or physically grounded resource visualisation, not objects arranged on a background. No tray, table, jar, bottle, storage bin, room, machinery, people, readable labels, logos, stamps, registration numbers or text. Photorealistic macro catalogue art, grounded MineIT industrial science-fiction realism.",
+      "notes": "MineIT Mobile resource tile/catalogue art. Generate 1:1. Store native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-clay.png and a same-pixel-size catalog WebP at this key."
+    }
+  },
+  {
+    "id": "mobile-resource-silica-sand",
+    "name": "Silica Sand",
+    "mobileKey": "silica-sand",
+    "gameId": "game-mineit-mobile",
+    "gameplayCategory": "Build",
+    "genericSubstanceId": "substance-silica-mineral",
+    "naturalOccurrence": true,
+    "renewable": false,
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon",
+    "description": "Silica Sand is quartz-rich granular silicate material occurring in suitable surface and shallow deposits.",
+    "visualDescription": "clean quartz-rich sand grains in a continuous pale granular field, translucent and milky grains with subtle sparkle",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/migration/Overhaulv0.1/RESOURCE_BALANCE_MATRIX.md",
+      "approvedDate": "2026-10-04"
+    },
+    "image": {
+      "key": "assets/art/universe/resources/mobile-resource-silica-sand.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of clean quartz-rich sand grains in a continuous pale granular field, translucent and milky grains with subtle sparkle. Fill the entire 1:1 square edge-to-edge. The resource itself is the only subject: one continuous natural material or physically grounded resource visualisation, not objects arranged on a background. No tray, table, jar, bottle, storage bin, room, machinery, people, readable labels, logos, stamps, registration numbers or text. Photorealistic macro catalogue art, grounded MineIT industrial science-fiction realism.",
+      "notes": "MineIT Mobile resource tile/catalogue art. Generate 1:1. Store native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-silica-sand.png and a same-pixel-size catalog WebP at this key."
+    }
+  },
+  {
+    "id": "mobile-resource-limestone",
+    "name": "Limestone",
+    "mobileKey": "limestone",
+    "gameId": "game-mineit-mobile",
+    "gameplayCategory": "Build",
+    "genericSubstanceId": "substance-carbonate-mineral",
+    "naturalOccurrence": true,
+    "renewable": false,
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon",
+    "description": "Limestone is carbonate-rich sedimentary stone occurring in suitable surface and subsurface formations.",
+    "visualDescription": "pale cream-grey limestone face with fine sedimentary bedding, fossil-like mineral texture kept subtle and generic",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/migration/Overhaulv0.1/RESOURCE_BALANCE_MATRIX.md",
+      "approvedDate": "2026-10-04"
+    },
+    "image": {
+      "key": "assets/art/universe/resources/mobile-resource-limestone.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of pale cream-grey limestone face with fine sedimentary bedding, fossil-like mineral texture kept subtle and generic. Fill the entire 1:1 square edge-to-edge. The resource itself is the only subject: one continuous natural material or physically grounded resource visualisation, not objects arranged on a background. No tray, table, jar, bottle, storage bin, room, machinery, people, readable labels, logos, stamps, registration numbers or text. Photorealistic macro catalogue art, grounded MineIT industrial science-fiction realism.",
+      "notes": "MineIT Mobile resource tile/catalogue art. Generate 1:1. Store native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-limestone.png and a same-pixel-size catalog WebP at this key."
+    }
+  },
+  {
+    "id": "mobile-resource-gypsum",
+    "name": "Gypsum",
+    "mobileKey": "gypsum",
+    "gameId": "game-mineit-mobile",
+    "gameplayCategory": "Build",
+    "genericSubstanceId": "substance-sulfate-mineral",
+    "naturalOccurrence": true,
+    "renewable": false,
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon",
+    "description": "Gypsum is a soft sulfate mineral occurring in evaporitic and sedimentary deposits and used as a natural construction feedstock.",
+    "visualDescription": "white to pale beige gypsum crystal mass and satin-spar mineral face, soft fibrous crystalline texture",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/migration/Overhaulv0.1/RESOURCE_BALANCE_MATRIX.md",
+      "approvedDate": "2026-10-04"
+    },
+    "image": {
+      "key": "assets/art/universe/resources/mobile-resource-gypsum.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of white to pale beige gypsum crystal mass and satin-spar mineral face, soft fibrous crystalline texture. Fill the entire 1:1 square edge-to-edge. The resource itself is the only subject: one continuous natural material or physically grounded resource visualisation, not objects arranged on a background. No tray, table, jar, bottle, storage bin, room, machinery, people, readable labels, logos, stamps, registration numbers or text. Photorealistic macro catalogue art, grounded MineIT industrial science-fiction realism.",
+      "notes": "MineIT Mobile resource tile/catalogue art. Generate 1:1. Store native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-gypsum.png and a same-pixel-size catalog WebP at this key."
+    }
+  },
+  {
+    "id": "mobile-resource-biomass",
+    "name": "Biomass",
+    "mobileKey": "biomass",
+    "gameId": "game-mineit-mobile",
+    "gameplayCategory": "Fuel",
+    "genericSubstanceId": "substance-organic-biomass",
+    "naturalOccurrence": true,
+    "renewable": true,
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon",
+    "description": "Biomass is harvestable organic matter used as a raw natural energy feedstock where productive biology exists.",
+    "visualDescription": "compressed mixed dry biological matter, woody fragments and plant material as one dense organic fuel texture",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/migration/Overhaulv0.1/RESOURCE_BALANCE_MATRIX.md",
+      "approvedDate": "2026-10-04"
+    },
+    "image": {
+      "key": "assets/art/universe/resources/mobile-resource-biomass.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of compressed mixed dry biological matter, woody fragments and plant material as one dense organic fuel texture. Fill the entire 1:1 square edge-to-edge. The resource itself is the only subject: one continuous natural material or physically grounded resource visualisation, not objects arranged on a background. No tray, table, jar, bottle, storage bin, room, machinery, people, readable labels, logos, stamps, registration numbers or text. Photorealistic macro catalogue art, grounded MineIT industrial science-fiction realism.",
+      "notes": "MineIT Mobile resource tile/catalogue art. Generate 1:1. Store native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-biomass.png and a same-pixel-size catalog WebP at this key."
+    }
+  },
+  {
+    "id": "mobile-resource-peat",
+    "name": "Peat",
+    "mobileKey": "peat",
+    "gameId": "game-mineit-mobile",
+    "gameplayCategory": "Fuel",
+    "genericSubstanceId": "substance-solid-fuel-deposit",
+    "naturalOccurrence": true,
+    "renewable": false,
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon",
+    "description": "Peat is partially decomposed waterlogged organic material accumulated in suitable biological environments and used as a low-grade natural fuel feedstock.",
+    "visualDescription": "dark brown fibrous peat face, compact wet decomposed vegetation with visible plant fibres",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/migration/Overhaulv0.1/RESOURCE_BALANCE_MATRIX.md",
+      "approvedDate": "2026-10-04"
+    },
+    "image": {
+      "key": "assets/art/universe/resources/mobile-resource-peat.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of dark brown fibrous peat face, compact wet decomposed vegetation with visible plant fibres. Fill the entire 1:1 square edge-to-edge. The resource itself is the only subject: one continuous natural material or physically grounded resource visualisation, not objects arranged on a background. No tray, table, jar, bottle, storage bin, room, machinery, people, readable labels, logos, stamps, registration numbers or text. Photorealistic macro catalogue art, grounded MineIT industrial science-fiction realism.",
+      "notes": "MineIT Mobile resource tile/catalogue art. Generate 1:1. Store native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-peat.png and a same-pixel-size catalog WebP at this key."
+    }
+  },
+  {
+    "id": "mobile-resource-coal",
+    "name": "Coal",
+    "mobileKey": "coal",
+    "gameId": "game-mineit-mobile",
+    "gameplayCategory": "Fuel",
+    "genericSubstanceId": "substance-solid-fuel-deposit",
+    "naturalOccurrence": true,
+    "renewable": false,
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon",
+    "description": "Coal is a carbon-rich solid geological fuel occurring in sedimentary deposits from shallow seams to deep formations.",
+    "visualDescription": "black coal seam face with matte carbon bands, fractured glossy edges and dark sedimentary layering",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/migration/Overhaulv0.1/RESOURCE_BALANCE_MATRIX.md",
+      "approvedDate": "2026-10-04"
+    },
+    "image": {
+      "key": "assets/art/universe/resources/mobile-resource-coal.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of black coal seam face with matte carbon bands, fractured glossy edges and dark sedimentary layering. Fill the entire 1:1 square edge-to-edge. The resource itself is the only subject: one continuous natural material or physically grounded resource visualisation, not objects arranged on a background. No tray, table, jar, bottle, storage bin, room, machinery, people, readable labels, logos, stamps, registration numbers or text. Photorealistic macro catalogue art, grounded MineIT industrial science-fiction realism.",
+      "notes": "MineIT Mobile resource tile/catalogue art. Generate 1:1. Store native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-coal.png and a same-pixel-size catalog WebP at this key."
+    }
+  },
+  {
+    "id": "mobile-resource-crude-oil",
+    "name": "Crude Oil",
+    "mobileKey": "crude-oil",
+    "gameId": "game-mineit-mobile",
+    "gameplayCategory": "Fuel",
+    "genericSubstanceId": "substance-liquid-fuel-deposit",
+    "naturalOccurrence": true,
+    "renewable": false,
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon",
+    "description": "Crude Oil is a naturally occurring liquid hydrocarbon feedstock held in suitable geological traps.",
+    "visualDescription": "full-bleed viscous black-brown crude oil surface, heavy iridescent hydrocarbon sheen and slow rippling texture",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/migration/Overhaulv0.1/RESOURCE_BALANCE_MATRIX.md",
+      "approvedDate": "2026-10-04"
+    },
+    "image": {
+      "key": "assets/art/universe/resources/mobile-resource-crude-oil.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of full-bleed viscous black-brown crude oil surface, heavy iridescent hydrocarbon sheen and slow rippling texture. Fill the entire 1:1 square edge-to-edge. The resource itself is the only subject: one continuous natural material or physically grounded resource visualisation, not objects arranged on a background. No tray, table, jar, bottle, storage bin, room, machinery, people, readable labels, logos, stamps, registration numbers or text. Photorealistic macro catalogue art, grounded MineIT industrial science-fiction realism.",
+      "notes": "MineIT Mobile resource tile/catalogue art. Generate 1:1. Store native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-crude-oil.png and a same-pixel-size catalog WebP at this key."
+    }
+  },
+  {
+    "id": "mobile-resource-natural-gas",
+    "name": "Natural Gas",
+    "mobileKey": "natural-gas",
+    "gameId": "game-mineit-mobile",
+    "gameplayCategory": "Fuel",
+    "genericSubstanceId": "substance-gas-fuel-deposit",
+    "naturalOccurrence": true,
+    "renewable": false,
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon",
+    "description": "Natural Gas is a naturally occurring gaseous hydrocarbon feedstock held in geological traps and porous formations.",
+    "visualDescription": "full-bleed turbulent transparent gas plume visualisation with subtle cool-grey density gradients, no flame, no vessel",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/migration/Overhaulv0.1/RESOURCE_BALANCE_MATRIX.md",
+      "approvedDate": "2026-10-04"
+    },
+    "image": {
+      "key": "assets/art/universe/resources/mobile-resource-natural-gas.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of full-bleed turbulent transparent gas plume visualisation with subtle cool-grey density gradients, no flame, no vessel. Fill the entire 1:1 square edge-to-edge. The resource itself is the only subject: one continuous natural material or physically grounded resource visualisation, not objects arranged on a background. No tray, table, jar, bottle, storage bin, room, machinery, people, readable labels, logos, stamps, registration numbers or text. Photorealistic macro catalogue art, grounded MineIT industrial science-fiction realism.",
+      "notes": "MineIT Mobile resource tile/catalogue art. Generate 1:1. Store native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-natural-gas.png and a same-pixel-size catalog WebP at this key."
+    }
+  },
+  {
+    "id": "mobile-resource-hydrogen",
+    "name": "Hydrogen",
+    "mobileKey": "hydrogen",
+    "gameId": "game-mineit-mobile",
+    "gameplayCategory": "Fuel",
+    "genericSubstanceId": "substance-high-energy-combustible-gas",
+    "naturalOccurrence": true,
+    "renewable": false,
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon",
+    "description": "Hydrogen is the Mobile natural-resource identity for accessible elemental hydrogen in atmospheric or trapped geological occurrences.",
+    "visualDescription": "full-bleed diffuse hydrogen gas visualisation, almost colourless with faint cool blue-white density gradients and wispy turbulence, no vessel",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/migration/Overhaulv0.1/RESOURCE_BALANCE_MATRIX.md",
+      "approvedDate": "2026-10-04"
+    },
+    "image": {
+      "key": "assets/art/universe/resources/mobile-resource-hydrogen.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of full-bleed diffuse hydrogen gas visualisation, almost colourless with faint cool blue-white density gradients and wispy turbulence, no vessel. Fill the entire 1:1 square edge-to-edge. The resource itself is the only subject: one continuous natural material or physically grounded resource visualisation, not objects arranged on a background. No tray, table, jar, bottle, storage bin, room, machinery, people, readable labels, logos, stamps, registration numbers or text. Photorealistic macro catalogue art, grounded MineIT industrial science-fiction realism.",
+      "notes": "MineIT Mobile resource tile/catalogue art. Generate 1:1. Store native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-hydrogen.png and a same-pixel-size catalog WebP at this key."
+    }
+  },
+  {
+    "id": "mobile-resource-methane-ice",
+    "name": "Methane Ice",
+    "mobileKey": "methane-ice",
+    "gameId": "game-mineit-mobile",
+    "gameplayCategory": "Fuel",
+    "genericSubstanceId": "substance-frozen-volatile-deposit",
+    "naturalOccurrence": true,
+    "renewable": false,
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon",
+    "description": "Methane Ice is frozen methane-rich volatile material occurring as surface, shallow or subsurface ice deposits on cold bodies.",
+    "visualDescription": "pale blue-white methane-rich ice face with crystalline frost, trapped translucent bubbles and brittle fractured texture",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/migration/Overhaulv0.1/RESOURCE_BALANCE_MATRIX.md",
+      "approvedDate": "2026-10-04"
+    },
+    "image": {
+      "key": "assets/art/universe/resources/mobile-resource-methane-ice.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of pale blue-white methane-rich ice face with crystalline frost, trapped translucent bubbles and brittle fractured texture. Fill the entire 1:1 square edge-to-edge. The resource itself is the only subject: one continuous natural material or physically grounded resource visualisation, not objects arranged on a background. No tray, table, jar, bottle, storage bin, room, machinery, people, readable labels, logos, stamps, registration numbers or text. Photorealistic macro catalogue art, grounded MineIT industrial science-fiction realism.",
+      "notes": "MineIT Mobile resource tile/catalogue art. Generate 1:1. Store native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-methane-ice.png and a same-pixel-size catalog WebP at this key."
+    }
+  },
+  {
+    "id": "mobile-resource-uranium-ore",
+    "name": "Uranium Ore",
+    "mobileKey": "uranium-ore",
+    "gameId": "game-mineit-mobile",
+    "gameplayCategory": "Fuel",
+    "genericSubstanceId": "substance-radioactive-ore",
+    "naturalOccurrence": true,
+    "renewable": false,
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon",
+    "description": "Uranium Ore is naturally occurring radioactive mineral ore used as a high-value energy feedstock after appropriate processing.",
+    "visualDescription": "dense dark uranium-bearing ore face with yellow-green uraninite mineral flecks, restrained natural mineral colour, no hazard symbols",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/migration/Overhaulv0.1/RESOURCE_BALANCE_MATRIX.md",
+      "approvedDate": "2026-10-04"
+    },
+    "image": {
+      "key": "assets/art/universe/resources/mobile-resource-uranium-ore.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of dense dark uranium-bearing ore face with yellow-green uraninite mineral flecks, restrained natural mineral colour, no hazard symbols. Fill the entire 1:1 square edge-to-edge. The resource itself is the only subject: one continuous natural material or physically grounded resource visualisation, not objects arranged on a background. No tray, table, jar, bottle, storage bin, room, machinery, people, readable labels, logos, stamps, registration numbers or text. Photorealistic macro catalogue art, grounded MineIT industrial science-fiction realism.",
+      "notes": "MineIT Mobile resource tile/catalogue art. Generate 1:1. Store native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-uranium-ore.png and a same-pixel-size catalog WebP at this key."
+    }
+  },
+  {
+    "id": "mobile-resource-helium-3",
+    "name": "Helium-3",
+    "mobileKey": "helium-3",
+    "gameId": "game-mineit-mobile",
+    "gameplayCategory": "Fuel",
+    "genericSubstanceId": "substance-inert-gas-deposit",
+    "naturalOccurrence": true,
+    "renewable": false,
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon",
+    "description": "Helium-3 is the Mobile natural-resource identity for accessible helium-3 concentrated in suitable atmospheres or implanted surface regolith.",
+    "visualDescription": "full-bleed helium gas or regolith-resource visualisation with fine pale lunar dust and subtle cool luminous particle impression, no container or text",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/migration/Overhaulv0.1/RESOURCE_BALANCE_MATRIX.md",
+      "approvedDate": "2026-10-04"
+    },
+    "image": {
+      "key": "assets/art/universe/resources/mobile-resource-helium-3.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of full-bleed helium gas or regolith-resource visualisation with fine pale lunar dust and subtle cool luminous particle impression, no container or text. Fill the entire 1:1 square edge-to-edge. The resource itself is the only subject: one continuous natural material or physically grounded resource visualisation, not objects arranged on a background. No tray, table, jar, bottle, storage bin, room, machinery, people, readable labels, logos, stamps, registration numbers or text. Photorealistic macro catalogue art, grounded MineIT industrial science-fiction realism.",
+      "notes": "MineIT Mobile resource tile/catalogue art. Generate 1:1. Store native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-helium-3.png and a same-pixel-size catalog WebP at this key."
+    }
+  },
+  {
+    "id": "mobile-resource-iron-ore",
+    "name": "Iron Ore",
+    "mobileKey": "iron-ore",
+    "gameId": "game-mineit-mobile",
+    "gameplayCategory": "Ore",
+    "genericSubstanceId": "substance-structural-metal-ore",
+    "naturalOccurrence": true,
+    "renewable": false,
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon",
+    "description": "Iron Ore is iron-bearing natural ore occurring across suitable rocky bodies and geological zones.",
+    "visualDescription": "rust-red and dark metallic iron ore face, hematite and magnetite-like bands in rough host rock",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/migration/Overhaulv0.1/RESOURCE_BALANCE_MATRIX.md",
+      "approvedDate": "2026-10-04"
+    },
+    "image": {
+      "key": "assets/art/universe/resources/mobile-resource-iron-ore.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of rust-red and dark metallic iron ore face, hematite and magnetite-like bands in rough host rock. Fill the entire 1:1 square edge-to-edge. The resource itself is the only subject: one continuous natural material or physically grounded resource visualisation, not objects arranged on a background. No tray, table, jar, bottle, storage bin, room, machinery, people, readable labels, logos, stamps, registration numbers or text. Photorealistic macro catalogue art, grounded MineIT industrial science-fiction realism.",
+      "notes": "MineIT Mobile resource tile/catalogue art. Generate 1:1. Store native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-iron-ore.png and a same-pixel-size catalog WebP at this key."
+    }
+  },
+  {
+    "id": "mobile-resource-chromium-ore",
+    "name": "Chromium Ore",
+    "mobileKey": "chromium-ore",
+    "gameId": "game-mineit-mobile",
+    "gameplayCategory": "Ore",
+    "genericSubstanceId": "substance-structural-metal-ore",
+    "naturalOccurrence": true,
+    "renewable": false,
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon",
+    "description": "Chromium Ore is chromium-bearing natural ore used as a specialist industrial metal feedstock.",
+    "visualDescription": "dark chromite-rich ore face with black metallic grains and subtle brown-green mineral host",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/migration/Overhaulv0.1/RESOURCE_BALANCE_MATRIX.md",
+      "approvedDate": "2026-10-04"
+    },
+    "image": {
+      "key": "assets/art/universe/resources/mobile-resource-chromium-ore.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of dark chromite-rich ore face with black metallic grains and subtle brown-green mineral host. Fill the entire 1:1 square edge-to-edge. The resource itself is the only subject: one continuous natural material or physically grounded resource visualisation, not objects arranged on a background. No tray, table, jar, bottle, storage bin, room, machinery, people, readable labels, logos, stamps, registration numbers or text. Photorealistic macro catalogue art, grounded MineIT industrial science-fiction realism.",
+      "notes": "MineIT Mobile resource tile/catalogue art. Generate 1:1. Store native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-chromium-ore.png and a same-pixel-size catalog WebP at this key."
+    }
+  },
+  {
+    "id": "mobile-resource-copper-ore",
+    "name": "Copper Ore",
+    "mobileKey": "copper-ore",
+    "gameId": "game-mineit-mobile",
+    "gameplayCategory": "Ore",
+    "genericSubstanceId": "substance-conductive-metal-ore",
+    "naturalOccurrence": true,
+    "renewable": false,
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon",
+    "description": "Copper Ore is copper-bearing natural ore occurring in suitable rocky geological formations.",
+    "visualDescription": "rough copper ore face with green-blue oxidised mineral staining and bright copper-bearing veins in dark host rock",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/migration/Overhaulv0.1/RESOURCE_BALANCE_MATRIX.md",
+      "approvedDate": "2026-10-04"
+    },
+    "image": {
+      "key": "assets/art/universe/resources/mobile-resource-copper-ore.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of rough copper ore face with green-blue oxidised mineral staining and bright copper-bearing veins in dark host rock. Fill the entire 1:1 square edge-to-edge. The resource itself is the only subject: one continuous natural material or physically grounded resource visualisation, not objects arranged on a background. No tray, table, jar, bottle, storage bin, room, machinery, people, readable labels, logos, stamps, registration numbers or text. Photorealistic macro catalogue art, grounded MineIT industrial science-fiction realism.",
+      "notes": "MineIT Mobile resource tile/catalogue art. Generate 1:1. Store native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-copper-ore.png and a same-pixel-size catalog WebP at this key."
+    }
+  },
+  {
+    "id": "mobile-resource-tin-ore",
+    "name": "Tin Ore",
+    "mobileKey": "tin-ore",
+    "gameId": "game-mineit-mobile",
+    "gameplayCategory": "Ore",
+    "genericSubstanceId": "substance-conductive-metal-ore",
+    "naturalOccurrence": true,
+    "renewable": false,
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon",
+    "description": "Tin Ore is tin-bearing natural ore used as an industrial metal feedstock.",
+    "visualDescription": "dark cassiterite-like tin ore crystals in coarse granite host, brown-black lustrous mineral grains",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/migration/Overhaulv0.1/RESOURCE_BALANCE_MATRIX.md",
+      "approvedDate": "2026-10-04"
+    },
+    "image": {
+      "key": "assets/art/universe/resources/mobile-resource-tin-ore.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of dark cassiterite-like tin ore crystals in coarse granite host, brown-black lustrous mineral grains. Fill the entire 1:1 square edge-to-edge. The resource itself is the only subject: one continuous natural material or physically grounded resource visualisation, not objects arranged on a background. No tray, table, jar, bottle, storage bin, room, machinery, people, readable labels, logos, stamps, registration numbers or text. Photorealistic macro catalogue art, grounded MineIT industrial science-fiction realism.",
+      "notes": "MineIT Mobile resource tile/catalogue art. Generate 1:1. Store native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-tin-ore.png and a same-pixel-size catalog WebP at this key."
+    }
+  },
+  {
+    "id": "mobile-resource-bauxite",
+    "name": "Bauxite",
+    "mobileKey": "bauxite",
+    "gameId": "game-mineit-mobile",
+    "gameplayCategory": "Ore",
+    "genericSubstanceId": "substance-light-metal-ore",
+    "naturalOccurrence": true,
+    "renewable": false,
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon",
+    "description": "Bauxite is an aluminium-rich weathered ore occurring mainly in suitable surface and shallow deposits.",
+    "visualDescription": "earthy red-orange bauxite face with pale aluminium-rich nodules and pisolitic texture",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/migration/Overhaulv0.1/RESOURCE_BALANCE_MATRIX.md",
+      "approvedDate": "2026-10-04"
+    },
+    "image": {
+      "key": "assets/art/universe/resources/mobile-resource-bauxite.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of earthy red-orange bauxite face with pale aluminium-rich nodules and pisolitic texture. Fill the entire 1:1 square edge-to-edge. The resource itself is the only subject: one continuous natural material or physically grounded resource visualisation, not objects arranged on a background. No tray, table, jar, bottle, storage bin, room, machinery, people, readable labels, logos, stamps, registration numbers or text. Photorealistic macro catalogue art, grounded MineIT industrial science-fiction realism.",
+      "notes": "MineIT Mobile resource tile/catalogue art. Generate 1:1. Store native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-bauxite.png and a same-pixel-size catalog WebP at this key."
+    }
+  },
+  {
+    "id": "mobile-resource-titanium-ore",
+    "name": "Titanium Ore",
+    "mobileKey": "titanium-ore",
+    "gameId": "game-mineit-mobile",
+    "gameplayCategory": "Ore",
+    "genericSubstanceId": "substance-light-metal-ore",
+    "naturalOccurrence": true,
+    "renewable": false,
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon",
+    "description": "Titanium Ore is titanium-bearing natural ore occurring in hard-rock and heavy-mineral settings.",
+    "visualDescription": "dark titanium-bearing mineral face with black ilmenite-like grains and pale host-rock contrast",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/migration/Overhaulv0.1/RESOURCE_BALANCE_MATRIX.md",
+      "approvedDate": "2026-10-04"
+    },
+    "image": {
+      "key": "assets/art/universe/resources/mobile-resource-titanium-ore.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of dark titanium-bearing mineral face with black ilmenite-like grains and pale host-rock contrast. Fill the entire 1:1 square edge-to-edge. The resource itself is the only subject: one continuous natural material or physically grounded resource visualisation, not objects arranged on a background. No tray, table, jar, bottle, storage bin, room, machinery, people, readable labels, logos, stamps, registration numbers or text. Photorealistic macro catalogue art, grounded MineIT industrial science-fiction realism.",
+      "notes": "MineIT Mobile resource tile/catalogue art. Generate 1:1. Store native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-titanium-ore.png and a same-pixel-size catalog WebP at this key."
+    }
+  },
+  {
+    "id": "mobile-resource-nickel-ore",
+    "name": "Nickel Ore",
+    "mobileKey": "nickel-ore",
+    "gameId": "game-mineit-mobile",
+    "gameplayCategory": "Ore",
+    "genericSubstanceId": "substance-magnetic-metal-ore",
+    "naturalOccurrence": true,
+    "renewable": false,
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon",
+    "description": "Nickel Ore is nickel-bearing natural ore occurring in suitable magmatic, altered and weathered deposits.",
+    "visualDescription": "green-brown nickel ore face with dark metallic sulphide grains and weathered mineral bands",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/migration/Overhaulv0.1/RESOURCE_BALANCE_MATRIX.md",
+      "approvedDate": "2026-10-04"
+    },
+    "image": {
+      "key": "assets/art/universe/resources/mobile-resource-nickel-ore.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of green-brown nickel ore face with dark metallic sulphide grains and weathered mineral bands. Fill the entire 1:1 square edge-to-edge. The resource itself is the only subject: one continuous natural material or physically grounded resource visualisation, not objects arranged on a background. No tray, table, jar, bottle, storage bin, room, machinery, people, readable labels, logos, stamps, registration numbers or text. Photorealistic macro catalogue art, grounded MineIT industrial science-fiction realism.",
+      "notes": "MineIT Mobile resource tile/catalogue art. Generate 1:1. Store native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-nickel-ore.png and a same-pixel-size catalog WebP at this key."
+    }
+  },
+  {
+    "id": "mobile-resource-cobalt-ore",
+    "name": "Cobalt Ore",
+    "mobileKey": "cobalt-ore",
+    "gameId": "game-mineit-mobile",
+    "gameplayCategory": "Ore",
+    "genericSubstanceId": "substance-magnetic-metal-ore",
+    "naturalOccurrence": true,
+    "renewable": false,
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon",
+    "description": "Cobalt Ore is cobalt-bearing natural ore occurring in specialised mineral deposits and used as a high-value industrial feedstock.",
+    "visualDescription": "dark cobalt-bearing ore with muted blue-violet mineral staining and metallic sulphide texture in host rock",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/migration/Overhaulv0.1/RESOURCE_BALANCE_MATRIX.md",
+      "approvedDate": "2026-10-04"
+    },
+    "image": {
+      "key": "assets/art/universe/resources/mobile-resource-cobalt-ore.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of dark cobalt-bearing ore with muted blue-violet mineral staining and metallic sulphide texture in host rock. Fill the entire 1:1 square edge-to-edge. The resource itself is the only subject: one continuous natural material or physically grounded resource visualisation, not objects arranged on a background. No tray, table, jar, bottle, storage bin, room, machinery, people, readable labels, logos, stamps, registration numbers or text. Photorealistic macro catalogue art, grounded MineIT industrial science-fiction realism.",
+      "notes": "MineIT Mobile resource tile/catalogue art. Generate 1:1. Store native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-cobalt-ore.png and a same-pixel-size catalog WebP at this key."
+    }
+  },
+  {
+    "id": "mobile-resource-lithium-ore",
+    "name": "Lithium Ore",
+    "mobileKey": "lithium-ore",
+    "gameId": "game-mineit-mobile",
+    "gameplayCategory": "Ore",
+    "genericSubstanceId": "substance-reactive-metal-ore",
+    "naturalOccurrence": true,
+    "renewable": false,
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon",
+    "description": "Lithium Ore is lithium-bearing natural material occurring in suitable hard-rock and brine-associated geological settings.",
+    "visualDescription": "pale pegmatite-like rock face with white quartz, mica and faint pink-lilac lithium mineral crystals",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/migration/Overhaulv0.1/RESOURCE_BALANCE_MATRIX.md",
+      "approvedDate": "2026-10-04"
+    },
+    "image": {
+      "key": "assets/art/universe/resources/mobile-resource-lithium-ore.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of pale pegmatite-like rock face with white quartz, mica and faint pink-lilac lithium mineral crystals. Fill the entire 1:1 square edge-to-edge. The resource itself is the only subject: one continuous natural material or physically grounded resource visualisation, not objects arranged on a background. No tray, table, jar, bottle, storage bin, room, machinery, people, readable labels, logos, stamps, registration numbers or text. Photorealistic macro catalogue art, grounded MineIT industrial science-fiction realism.",
+      "notes": "MineIT Mobile resource tile/catalogue art. Generate 1:1. Store native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-lithium-ore.png and a same-pixel-size catalog WebP at this key."
+    }
+  },
+  {
+    "id": "mobile-resource-zinc-ore",
+    "name": "Zinc Ore",
+    "mobileKey": "zinc-ore",
+    "gameId": "game-mineit-mobile",
+    "gameplayCategory": "Ore",
+    "genericSubstanceId": "substance-reactive-metal-ore",
+    "naturalOccurrence": true,
+    "renewable": false,
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon",
+    "description": "Zinc Ore is zinc-bearing natural ore used as a broad industrial metal feedstock.",
+    "visualDescription": "grey-brown zinc ore face with resinous sphalerite-like crystals and pale mineral gangue",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/migration/Overhaulv0.1/RESOURCE_BALANCE_MATRIX.md",
+      "approvedDate": "2026-10-04"
+    },
+    "image": {
+      "key": "assets/art/universe/resources/mobile-resource-zinc-ore.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of grey-brown zinc ore face with resinous sphalerite-like crystals and pale mineral gangue. Fill the entire 1:1 square edge-to-edge. The resource itself is the only subject: one continuous natural material or physically grounded resource visualisation, not objects arranged on a background. No tray, table, jar, bottle, storage bin, room, machinery, people, readable labels, logos, stamps, registration numbers or text. Photorealistic macro catalogue art, grounded MineIT industrial science-fiction realism.",
+      "notes": "MineIT Mobile resource tile/catalogue art. Generate 1:1. Store native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-zinc-ore.png and a same-pixel-size catalog WebP at this key."
+    }
+  },
+  {
+    "id": "mobile-resource-lead-ore",
+    "name": "Lead Ore",
+    "mobileKey": "lead-ore",
+    "gameId": "game-mineit-mobile",
+    "gameplayCategory": "Ore",
+    "genericSubstanceId": "substance-heavy-metal-ore",
+    "naturalOccurrence": true,
+    "renewable": false,
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon",
+    "description": "Lead Ore is dense lead-bearing natural ore occurring in suitable mineralised rock formations.",
+    "visualDescription": "heavy dark lead ore face with bright cubic galena-like metallic cleavage in grey host rock",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/migration/Overhaulv0.1/RESOURCE_BALANCE_MATRIX.md",
+      "approvedDate": "2026-10-04"
+    },
+    "image": {
+      "key": "assets/art/universe/resources/mobile-resource-lead-ore.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of heavy dark lead ore face with bright cubic galena-like metallic cleavage in grey host rock. Fill the entire 1:1 square edge-to-edge. The resource itself is the only subject: one continuous natural material or physically grounded resource visualisation, not objects arranged on a background. No tray, table, jar, bottle, storage bin, room, machinery, people, readable labels, logos, stamps, registration numbers or text. Photorealistic macro catalogue art, grounded MineIT industrial science-fiction realism.",
+      "notes": "MineIT Mobile resource tile/catalogue art. Generate 1:1. Store native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-lead-ore.png and a same-pixel-size catalog WebP at this key."
+    }
+  },
+  {
+    "id": "mobile-resource-tungsten-ore",
+    "name": "Tungsten Ore",
+    "mobileKey": "tungsten-ore",
+    "gameId": "game-mineit-mobile",
+    "gameplayCategory": "Ore",
+    "genericSubstanceId": "substance-heavy-metal-ore",
+    "naturalOccurrence": true,
+    "renewable": false,
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon",
+    "description": "Tungsten Ore is tungsten-bearing natural ore occurring in specialised hard-rock deposits.",
+    "visualDescription": "dense dark tungsten ore face with black-brown wolframite-like blades and pale quartz veins",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/migration/Overhaulv0.1/RESOURCE_BALANCE_MATRIX.md",
+      "approvedDate": "2026-10-04"
+    },
+    "image": {
+      "key": "assets/art/universe/resources/mobile-resource-tungsten-ore.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of dense dark tungsten ore face with black-brown wolframite-like blades and pale quartz veins. Fill the entire 1:1 square edge-to-edge. The resource itself is the only subject: one continuous natural material or physically grounded resource visualisation, not objects arranged on a background. No tray, table, jar, bottle, storage bin, room, machinery, people, readable labels, logos, stamps, registration numbers or text. Photorealistic macro catalogue art, grounded MineIT industrial science-fiction realism.",
+      "notes": "MineIT Mobile resource tile/catalogue art. Generate 1:1. Store native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-tungsten-ore.png and a same-pixel-size catalog WebP at this key."
+    }
+  },
+  {
+    "id": "mobile-resource-rare-earth-ore",
+    "name": "Rare Earth Ore",
+    "mobileKey": "rare-earth-ore",
+    "gameId": "game-mineit-mobile",
+    "gameplayCategory": "Ore",
+    "genericSubstanceId": "substance-rare-metal-ore",
+    "naturalOccurrence": true,
+    "renewable": false,
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon",
+    "description": "Rare Earth Ore is natural mineralisation enriched in rare-earth elements and used as a specialist advanced-industry feedstock.",
+    "visualDescription": "complex mottled rare-earth-bearing ore face with dark host rock, pale mineral bands and sparse reddish-brown crystalline grains",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/migration/Overhaulv0.1/RESOURCE_BALANCE_MATRIX.md",
+      "approvedDate": "2026-10-04"
+    },
+    "image": {
+      "key": "assets/art/universe/resources/mobile-resource-rare-earth-ore.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of complex mottled rare-earth-bearing ore face with dark host rock, pale mineral bands and sparse reddish-brown crystalline grains. Fill the entire 1:1 square edge-to-edge. The resource itself is the only subject: one continuous natural material or physically grounded resource visualisation, not objects arranged on a background. No tray, table, jar, bottle, storage bin, room, machinery, people, readable labels, logos, stamps, registration numbers or text. Photorealistic macro catalogue art, grounded MineIT industrial science-fiction realism.",
+      "notes": "MineIT Mobile resource tile/catalogue art. Generate 1:1. Store native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-rare-earth-ore.png and a same-pixel-size catalog WebP at this key."
+    }
+  },
+  {
+    "id": "mobile-resource-graphite",
+    "name": "Graphite",
+    "mobileKey": "graphite",
+    "gameId": "game-mineit-mobile",
+    "gameplayCategory": "Ore",
+    "genericSubstanceId": "substance-carbon-rich-mineral",
+    "naturalOccurrence": true,
+    "renewable": false,
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon",
+    "description": "Graphite is naturally occurring crystalline carbon used as an industrial mineral feedstock.",
+    "visualDescription": "dark graphite-rich mineral face with soft layered silvery-black sheen and flaky crystalline texture",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/migration/Overhaulv0.1/RESOURCE_BALANCE_MATRIX.md",
+      "approvedDate": "2026-10-04"
+    },
+    "image": {
+      "key": "assets/art/universe/resources/mobile-resource-graphite.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of dark graphite-rich mineral face with soft layered silvery-black sheen and flaky crystalline texture. Fill the entire 1:1 square edge-to-edge. The resource itself is the only subject: one continuous natural material or physically grounded resource visualisation, not objects arranged on a background. No tray, table, jar, bottle, storage bin, room, machinery, people, readable labels, logos, stamps, registration numbers or text. Photorealistic macro catalogue art, grounded MineIT industrial science-fiction realism.",
+      "notes": "MineIT Mobile resource tile/catalogue art. Generate 1:1. Store native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-graphite.png and a same-pixel-size catalog WebP at this key."
+    }
+  },
+  {
+    "id": "mobile-resource-sulfur",
+    "name": "Sulfur",
+    "mobileKey": "sulfur",
+    "gameId": "game-mineit-mobile",
+    "gameplayCategory": "Ore",
+    "genericSubstanceId": "substance-sulfurous-mineral",
+    "naturalOccurrence": true,
+    "renewable": false,
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon",
+    "description": "Sulfur is naturally occurring elemental or sulfur-rich mineral material found in suitable volcanic and sedimentary settings.",
+    "visualDescription": "bright natural yellow sulfur crystal crust filling the frame with rough volcanic mineral texture",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/migration/Overhaulv0.1/RESOURCE_BALANCE_MATRIX.md",
+      "approvedDate": "2026-10-04"
+    },
+    "image": {
+      "key": "assets/art/universe/resources/mobile-resource-sulfur.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of bright natural yellow sulfur crystal crust filling the frame with rough volcanic mineral texture. Fill the entire 1:1 square edge-to-edge. The resource itself is the only subject: one continuous natural material or physically grounded resource visualisation, not objects arranged on a background. No tray, table, jar, bottle, storage bin, room, machinery, people, readable labels, logos, stamps, registration numbers or text. Photorealistic macro catalogue art, grounded MineIT industrial science-fiction realism.",
+      "notes": "MineIT Mobile resource tile/catalogue art. Generate 1:1. Store native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-sulfur.png and a same-pixel-size catalog WebP at this key."
+    }
+  },
+  {
+    "id": "mobile-resource-phosphate-rock",
+    "name": "Phosphate Rock",
+    "mobileKey": "phosphate-rock",
+    "gameId": "game-mineit-mobile",
+    "gameplayCategory": "Ore",
+    "genericSubstanceId": "substance-phosphate-mineral",
+    "naturalOccurrence": true,
+    "renewable": false,
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon",
+    "description": "Phosphate Rock is naturally occurring phosphate-rich rock used as a bulk chemical and agricultural mineral feedstock.",
+    "visualDescription": "pale tan-grey phosphate rock face with granular nodules and sedimentary texture",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/migration/Overhaulv0.1/RESOURCE_BALANCE_MATRIX.md",
+      "approvedDate": "2026-10-04"
+    },
+    "image": {
+      "key": "assets/art/universe/resources/mobile-resource-phosphate-rock.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of pale tan-grey phosphate rock face with granular nodules and sedimentary texture. Fill the entire 1:1 square edge-to-edge. The resource itself is the only subject: one continuous natural material or physically grounded resource visualisation, not objects arranged on a background. No tray, table, jar, bottle, storage bin, room, machinery, people, readable labels, logos, stamps, registration numbers or text. Photorealistic macro catalogue art, grounded MineIT industrial science-fiction realism.",
+      "notes": "MineIT Mobile resource tile/catalogue art. Generate 1:1. Store native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-phosphate-rock.png and a same-pixel-size catalog WebP at this key."
+    }
+  },
+  {
+    "id": "mobile-resource-quartz",
+    "name": "Quartz",
+    "mobileKey": "quartz",
+    "gameId": "game-mineit-mobile",
+    "gameplayCategory": "Ore",
+    "genericSubstanceId": "substance-crystalline-mineral",
+    "naturalOccurrence": true,
+    "renewable": false,
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon",
+    "description": "Quartz is naturally occurring crystalline silica used as a broad industrial mineral feedstock.",
+    "visualDescription": "interlocking clear to milky quartz crystal mass filling the frame, raw uncut crystalline faces",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/migration/Overhaulv0.1/RESOURCE_BALANCE_MATRIX.md",
+      "approvedDate": "2026-10-04"
+    },
+    "image": {
+      "key": "assets/art/universe/resources/mobile-resource-quartz.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of interlocking clear to milky quartz crystal mass filling the frame, raw uncut crystalline faces. Fill the entire 1:1 square edge-to-edge. The resource itself is the only subject: one continuous natural material or physically grounded resource visualisation, not objects arranged on a background. No tray, table, jar, bottle, storage bin, room, machinery, people, readable labels, logos, stamps, registration numbers or text. Photorealistic macro catalogue art, grounded MineIT industrial science-fiction realism.",
+      "notes": "MineIT Mobile resource tile/catalogue art. Generate 1:1. Store native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-quartz.png and a same-pixel-size catalog WebP at this key."
+    }
+  },
+  {
+    "id": "mobile-resource-mica",
+    "name": "Mica",
+    "mobileKey": "mica",
+    "gameId": "game-mineit-mobile",
+    "gameplayCategory": "Ore",
+    "genericSubstanceId": "substance-insulating-mineral",
+    "naturalOccurrence": true,
+    "renewable": false,
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon",
+    "description": "Mica is a naturally occurring sheet-silicate mineral used as an industrial insulating and specialist mineral feedstock.",
+    "visualDescription": "layered mica mineral face with thin flaky translucent sheets, silver-brown pearly cleavage",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/migration/Overhaulv0.1/RESOURCE_BALANCE_MATRIX.md",
+      "approvedDate": "2026-10-04"
+    },
+    "image": {
+      "key": "assets/art/universe/resources/mobile-resource-mica.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of layered mica mineral face with thin flaky translucent sheets, silver-brown pearly cleavage. Fill the entire 1:1 square edge-to-edge. The resource itself is the only subject: one continuous natural material or physically grounded resource visualisation, not objects arranged on a background. No tray, table, jar, bottle, storage bin, room, machinery, people, readable labels, logos, stamps, registration numbers or text. Photorealistic macro catalogue art, grounded MineIT industrial science-fiction realism.",
+      "notes": "MineIT Mobile resource tile/catalogue art. Generate 1:1. Store native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-mica.png and a same-pixel-size catalog WebP at this key."
+    }
+  },
+  {
+    "id": "mobile-resource-silver",
+    "name": "Silver",
+    "mobileKey": "silver",
+    "gameId": "game-mineit-mobile",
+    "gameplayCategory": "Ore",
+    "genericSubstanceId": "substance-precious-metal-ore",
+    "naturalOccurrence": true,
+    "renewable": false,
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon",
+    "description": "Silver is naturally occurring silver-bearing material recovered from suitable mineralised deposits.",
+    "visualDescription": "raw silver-bearing ore face with bright native-silver threads and metallic patches through dark host rock",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/migration/Overhaulv0.1/RESOURCE_BALANCE_MATRIX.md",
+      "approvedDate": "2026-10-04"
+    },
+    "image": {
+      "key": "assets/art/universe/resources/mobile-resource-silver.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of raw silver-bearing ore face with bright native-silver threads and metallic patches through dark host rock. Fill the entire 1:1 square edge-to-edge. The resource itself is the only subject: one continuous natural material or physically grounded resource visualisation, not objects arranged on a background. No tray, table, jar, bottle, storage bin, room, machinery, people, readable labels, logos, stamps, registration numbers or text. Photorealistic macro catalogue art, grounded MineIT industrial science-fiction realism.",
+      "notes": "MineIT Mobile resource tile/catalogue art. Generate 1:1. Store native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-silver.png and a same-pixel-size catalog WebP at this key."
+    }
+  },
+  {
+    "id": "mobile-resource-gold",
+    "name": "Gold",
+    "mobileKey": "gold",
+    "gameId": "game-mineit-mobile",
+    "gameplayCategory": "Ore",
+    "genericSubstanceId": "substance-precious-metal-ore",
+    "naturalOccurrence": true,
+    "renewable": false,
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon",
+    "description": "Gold is naturally occurring gold-bearing material recovered from suitable lode or placer deposits.",
+    "visualDescription": "raw gold-bearing rock face with irregular native-gold veins and grains in quartz-rich dark host rock, unrefined",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/migration/Overhaulv0.1/RESOURCE_BALANCE_MATRIX.md",
+      "approvedDate": "2026-10-04"
+    },
+    "image": {
+      "key": "assets/art/universe/resources/mobile-resource-gold.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of raw gold-bearing rock face with irregular native-gold veins and grains in quartz-rich dark host rock, unrefined. Fill the entire 1:1 square edge-to-edge. The resource itself is the only subject: one continuous natural material or physically grounded resource visualisation, not objects arranged on a background. No tray, table, jar, bottle, storage bin, room, machinery, people, readable labels, logos, stamps, registration numbers or text. Photorealistic macro catalogue art, grounded MineIT industrial science-fiction realism.",
+      "notes": "MineIT Mobile resource tile/catalogue art. Generate 1:1. Store native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-gold.png and a same-pixel-size catalog WebP at this key."
+    }
+  },
+  {
+    "id": "mobile-resource-platinum",
+    "name": "Platinum",
+    "mobileKey": "platinum",
+    "gameId": "game-mineit-mobile",
+    "gameplayCategory": "Ore",
+    "genericSubstanceId": "substance-precious-metal-ore",
+    "naturalOccurrence": true,
+    "renewable": false,
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon",
+    "description": "Platinum is naturally occurring platinum-group mineral material recovered from rare specialised deposits.",
+    "visualDescription": "dense dark ore face with subtle bright platinum-group metallic grains and silvery inclusions, raw and unrefined",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/migration/Overhaulv0.1/RESOURCE_BALANCE_MATRIX.md",
+      "approvedDate": "2026-10-04"
+    },
+    "image": {
+      "key": "assets/art/universe/resources/mobile-resource-platinum.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of dense dark ore face with subtle bright platinum-group metallic grains and silvery inclusions, raw and unrefined. Fill the entire 1:1 square edge-to-edge. The resource itself is the only subject: one continuous natural material or physically grounded resource visualisation, not objects arranged on a background. No tray, table, jar, bottle, storage bin, room, machinery, people, readable labels, logos, stamps, registration numbers or text. Photorealistic macro catalogue art, grounded MineIT industrial science-fiction realism.",
+      "notes": "MineIT Mobile resource tile/catalogue art. Generate 1:1. Store native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-platinum.png and a same-pixel-size catalog WebP at this key."
+    }
+  },
+  {
+    "id": "mobile-resource-palladium",
+    "name": "Palladium",
+    "mobileKey": "palladium",
+    "gameId": "game-mineit-mobile",
+    "gameplayCategory": "Ore",
+    "genericSubstanceId": "substance-precious-metal-ore",
+    "naturalOccurrence": true,
+    "renewable": false,
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon",
+    "description": "Palladium is naturally occurring palladium-bearing mineral material recovered from rare specialised deposits.",
+    "visualDescription": "dark sulphide-rich ore face with sparse pale silver-grey palladium-bearing metallic grains, raw unrefined texture",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/migration/Overhaulv0.1/RESOURCE_BALANCE_MATRIX.md",
+      "approvedDate": "2026-10-04"
+    },
+    "image": {
+      "key": "assets/art/universe/resources/mobile-resource-palladium.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of dark sulphide-rich ore face with sparse pale silver-grey palladium-bearing metallic grains, raw unrefined texture. Fill the entire 1:1 square edge-to-edge. The resource itself is the only subject: one continuous natural material or physically grounded resource visualisation, not objects arranged on a background. No tray, table, jar, bottle, storage bin, room, machinery, people, readable labels, logos, stamps, registration numbers or text. Photorealistic macro catalogue art, grounded MineIT industrial science-fiction realism.",
+      "notes": "MineIT Mobile resource tile/catalogue art. Generate 1:1. Store native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-palladium.png and a same-pixel-size catalog WebP at this key."
+    }
+  },
+  {
+    "id": "mobile-resource-diamond",
+    "name": "Diamond",
+    "mobileKey": "diamond",
+    "gameId": "game-mineit-mobile",
+    "gameplayCategory": "Ore",
+    "genericSubstanceId": "substance-native-carbon-mineral",
+    "naturalOccurrence": true,
+    "renewable": false,
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon",
+    "description": "Diamond is naturally occurring crystalline carbon recovered from suitable high-pressure deposits.",
+    "visualDescription": "raw uncut diamond crystals embedded in dark kimberlite-like host rock, translucent octahedral faces, no jewellery",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/migration/Overhaulv0.1/RESOURCE_BALANCE_MATRIX.md",
+      "approvedDate": "2026-10-04"
+    },
+    "image": {
+      "key": "assets/art/universe/resources/mobile-resource-diamond.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of raw uncut diamond crystals embedded in dark kimberlite-like host rock, translucent octahedral faces, no jewellery. Fill the entire 1:1 square edge-to-edge. The resource itself is the only subject: one continuous natural material or physically grounded resource visualisation, not objects arranged on a background. No tray, table, jar, bottle, storage bin, room, machinery, people, readable labels, logos, stamps, registration numbers or text. Photorealistic macro catalogue art, grounded MineIT industrial science-fiction realism.",
+      "notes": "MineIT Mobile resource tile/catalogue art. Generate 1:1. Store native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-diamond.png and a same-pixel-size catalog WebP at this key."
+    }
+  },
+  {
+    "id": "mobile-resource-ruby",
+    "name": "Ruby",
+    "mobileKey": "ruby",
+    "gameId": "game-mineit-mobile",
+    "gameplayCategory": "Ore",
+    "genericSubstanceId": "substance-abrasive-mineral",
+    "naturalOccurrence": true,
+    "renewable": false,
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon",
+    "description": "Ruby is naturally occurring red corundum gemstone material recovered from suitable mineral deposits.",
+    "visualDescription": "raw uncut ruby crystals embedded in pale rough host rock, deep red corundum faces, no jewellery",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/migration/Overhaulv0.1/RESOURCE_BALANCE_MATRIX.md",
+      "approvedDate": "2026-10-04"
+    },
+    "image": {
+      "key": "assets/art/universe/resources/mobile-resource-ruby.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of raw uncut ruby crystals embedded in pale rough host rock, deep red corundum faces, no jewellery. Fill the entire 1:1 square edge-to-edge. The resource itself is the only subject: one continuous natural material or physically grounded resource visualisation, not objects arranged on a background. No tray, table, jar, bottle, storage bin, room, machinery, people, readable labels, logos, stamps, registration numbers or text. Photorealistic macro catalogue art, grounded MineIT industrial science-fiction realism.",
+      "notes": "MineIT Mobile resource tile/catalogue art. Generate 1:1. Store native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-ruby.png and a same-pixel-size catalog WebP at this key."
+    }
+  },
+  {
+    "id": "mobile-resource-sapphire",
+    "name": "Sapphire",
+    "mobileKey": "sapphire",
+    "gameId": "game-mineit-mobile",
+    "gameplayCategory": "Ore",
+    "genericSubstanceId": "substance-abrasive-mineral",
+    "naturalOccurrence": true,
+    "renewable": false,
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon",
+    "description": "Sapphire is naturally occurring blue corundum gemstone material recovered from suitable mineral deposits.",
+    "visualDescription": "raw uncut sapphire crystals embedded in rough host rock, deep blue corundum faces, no jewellery",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/migration/Overhaulv0.1/RESOURCE_BALANCE_MATRIX.md",
+      "approvedDate": "2026-10-04"
+    },
+    "image": {
+      "key": "assets/art/universe/resources/mobile-resource-sapphire.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of raw uncut sapphire crystals embedded in rough host rock, deep blue corundum faces, no jewellery. Fill the entire 1:1 square edge-to-edge. The resource itself is the only subject: one continuous natural material or physically grounded resource visualisation, not objects arranged on a background. No tray, table, jar, bottle, storage bin, room, machinery, people, readable labels, logos, stamps, registration numbers or text. Photorealistic macro catalogue art, grounded MineIT industrial science-fiction realism.",
+      "notes": "MineIT Mobile resource tile/catalogue art. Generate 1:1. Store native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-sapphire.png and a same-pixel-size catalog WebP at this key."
+    }
+  },
+  {
+    "id": "mobile-resource-emerald",
+    "name": "Emerald",
+    "mobileKey": "emerald",
+    "gameId": "game-mineit-mobile",
+    "gameplayCategory": "Ore",
+    "genericSubstanceId": "substance-crystalline-mineral",
+    "naturalOccurrence": true,
+    "renewable": false,
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon",
+    "description": "Emerald is naturally occurring green beryl gemstone material recovered from suitable mineralised deposits.",
+    "visualDescription": "raw uncut emerald crystals embedded in pale schist-like host rock, vivid green beryl prisms, no jewellery",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/migration/Overhaulv0.1/RESOURCE_BALANCE_MATRIX.md",
+      "approvedDate": "2026-10-04"
+    },
+    "image": {
+      "key": "assets/art/universe/resources/mobile-resource-emerald.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of raw uncut emerald crystals embedded in pale schist-like host rock, vivid green beryl prisms, no jewellery. Fill the entire 1:1 square edge-to-edge. The resource itself is the only subject: one continuous natural material or physically grounded resource visualisation, not objects arranged on a background. No tray, table, jar, bottle, storage bin, room, machinery, people, readable labels, logos, stamps, registration numbers or text. Photorealistic macro catalogue art, grounded MineIT industrial science-fiction realism.",
+      "notes": "MineIT Mobile resource tile/catalogue art. Generate 1:1. Store native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-emerald.png and a same-pixel-size catalog WebP at this key."
+    }
+  }
+]

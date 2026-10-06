@@ -1,0 +1,93 @@
+# MineIT Universe
+
+Canonical shared universe content, lore and browser for the MineIT family of games and tools.
+
+This repository is the authoritative owner of persistent universe entities **and the full canonical lore sources that define them**.
+
+## Current canon release
+
+Content version: **0.11.0**  
+Schema version: **10**  
+Civilisation baseline: **Year 5300**  
+Current commercial/scenario era: **Year 5326**
+
+The canonical foundation is the **Koplin Universe — Expanded Backstory & Lore Bible**, with **Materials of the Commonwealth** as the foundation substances companion, **Worlds, Land and Surface Classification** as the foundation land companion, and **Scenario II: The Deep Reach Mining Charter** as a later Year-5326 scenario extension. Structured industrial catalogues (`substances`, `parts`, `machines`, `buildings`) and land catalogues (`celestialBodyKinds`, `worldTypes`, land squares, `findSites`) are browsable in the Directory, with a Games page for the three current MineIT consumers. Schema 10 expands the shared catalogue with 71 research technologies, 31 find sites, geological process/shape/state vocabularies, structured substance archetype/property/rarity references, and star/comet/ring/system classifications. Schema 9 added per-world Mobile landscape tilesets; Koplin 3 currently has a complete matching set.
+
+Release 0.5.0 future-proofs the materialised Universe for later deterministic generation and introduces the first canonical commercial-contact network: 20 economic sectors, 20 structural procurement operations, additional sector organisations and 100 persistent commercial contacts materialised from the useful parts of the legacy Stage 8 deterministic buyer source.
+
+A `buyer` is deliberately not a second canonical entity type. Games derive buyer offers from persistent people, their organisations, linked procurement operations and canonical resource demand. Price, quantity, cadence, player reputation access, happiness, contract history and collection-vessel assignment remain mutable game/save state.
+
+Schema 5 also supports logical collection sharding so large future populations can be split across JSON files without changing the consumer API. The canonical Koplin Universe remains authored/materialised while the same schema can support future seeded/materialised universes.
+
+The source-canonical Pathfinder-class and Prospector-class remain reference classes outside the retail ship catalogue because their source lore does not establish a manufacturer.
+
+## Canon precedence
+
+1. `data/lore/Koplin_Universe_Expanded_Backstory_Lore_Bible.md` — foundation civilisation/history canon.
+2. `data/lore/Koplin_Universe_Materials_And_Substances.md` — foundation materials / substances companion.
+3. `data/lore/Koplin_Universe_World_Surface.md` — foundation worlds / land / surface companion.
+4. `data/lore/Koplin_Scenario_II_Deep_Reach_Mining_Charter.md` — Year-5326 Deep Reach scenario canon.
+5. Structured records under `data/` — searchable/game-consumable representation that must agree with the lore sources.
+6. Game save state — mutable gameplay state, never canonical universe truth.
+
+If a structured record conflicts with a higher-precedence lore source, the lore source wins and the structured record must be reconciled.
+
+Generated expansion material that does not conflict with the source bibles may remain, but it is explicitly labelled separately from source-derived canon.
+
+## Browse
+
+- `index.html` — entity Directory: Geography / Organisation / Directory.
+- `games.html` — the three current MineIT games and how they share Universe land, worlds and substances.
+- `commercial-network.html` — persistent commercial contacts and their canonical structural resource demand.
+- `ship-catalogue.html` — factory-new Year-5326 ship catalogue grouped by manufacturer and ship line.
+- `lore.html` — full canonical lore explorer with source switching, quick-reference topics and section navigation.
+
+## Principles
+
+- One canonical authored source of truth lives in `data/`.
+- Games consume universe content by stable IDs; they do not author duplicate copies.
+- The Universe Directory, Commercial Network, Ship Catalogue and Lore Explorer are read-only consumers.
+- Mutable per-save gameplay state remains inside each game.
+- Persistent IDs remain stable even when names, roles, descriptions or artwork evolve.
+- Manufacturer list prices may be canonical product facts; player-specific quotes remain game state.
+- Commercial resource demand may be canonical structural truth; buyer offer price/quantity/cadence remain game state.
+- Reusable visual assets are identity-neutral and must not bake personal/company names into artwork.
+- Every image-bearing entity records whether its artwork has actually been generated.
+- Lore documents may include designer-only truth; it must be clearly labelled rather than silently mixed with in-universe public knowledge.
+
+## Published data
+
+Consumers should begin with `data/manifest.json`.
+
+A collection entry may be a single JSON file or an array of shards. Consumers must merge shards into one logical collection before resolving stable-ID references.
+
+The manifest also records whether the current universe is authored-materialised or generated-materialised. A future generated universe must retain both its deterministic seed and generator version; AI enrichment is frozen into the resulting materialised JSON rather than regenerated by games at runtime.
+
+## Repository layout
+
+```text
+data/                       Canonical structured universe records and collection shards
+data/lore/                  Full canonical lore source documents
+assets/art/universe/        Bespoke canonical universe artwork
+assets/art/visual-library/  Identity-neutral reusable visual assets
+js/                         Read-only browser application code
+css/                        Browser application styles
+prototypes/                 Non-canonical design references only
+docs/                       Canon architecture and integration specifications
+validation/                 Canon validation
+index.html                  GitHub Pages Universe Directory
+games.html                  GitHub Pages games catalogue
+commercial-network.html     GitHub Pages commercial-contact browser
+ship-catalogue.html         GitHub Pages factory-new ship catalogue
+lore.html                   GitHub Pages full-lore explorer
+```
+
+Key documents:
+
+- `docs/MineitUniverseCanonDesign.md`
+- `docs/CanonSourceHierarchy.md`
+- `docs/UniverseGenerationArchitecture.md`
+- `docs/CommercialBuyerModel.md`
+- `docs/ShipbuildingSectorAndPurchaseCatalogue.md`
+
+See `AGENTS.md` before making architectural or content changes.

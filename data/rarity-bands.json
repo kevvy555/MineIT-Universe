@@ -1,0 +1,83 @@
+[
+  {
+    "id": "rarity-abundant",
+    "name": "Abundant",
+    "rank": 1,
+    "description": "Shared occurrence-rarity band 1 of 9; rarity describes how often an occurrence presents in a geology or market context and does not replace substance identity.",
+    "sourceDocumentId": "lore-koplin-materials-and-substances",
+    "sourceSection": "12. Rarity bands",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "rarity-common",
+    "name": "Common",
+    "rank": 2,
+    "description": "Shared occurrence-rarity band 2 of 9; rarity describes how often an occurrence presents in a geology or market context and does not replace substance identity.",
+    "sourceDocumentId": "lore-koplin-materials-and-substances",
+    "sourceSection": "12. Rarity bands",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "rarity-uncommon",
+    "name": "Uncommon",
+    "rank": 3,
+    "description": "Shared occurrence-rarity band 3 of 9; rarity describes how often an occurrence presents in a geology or market context and does not replace substance identity.",
+    "sourceDocumentId": "lore-koplin-materials-and-substances",
+    "sourceSection": "12. Rarity bands",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "rarity-rare",
+    "name": "Rare",
+    "rank": 4,
+    "description": "Shared occurrence-rarity band 4 of 9; rarity describes how often an occurrence presents in a geology or market context and does not replace substance identity.",
+    "sourceDocumentId": "lore-koplin-materials-and-substances",
+    "sourceSection": "12. Rarity bands",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "rarity-very-rare",
+    "name": "Very Rare",
+    "rank": 5,
+    "description": "Shared occurrence-rarity band 5 of 9; rarity describes how often an occurrence presents in a geology or market context and does not replace substance identity.",
+    "sourceDocumentId": "lore-koplin-materials-and-substances",
+    "sourceSection": "12. Rarity bands",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "rarity-ultra-rare",
+    "name": "Ultra Rare",
+    "rank": 6,
+    "description": "Shared occurrence-rarity band 6 of 9; rarity describes how often an occurrence presents in a geology or market context and does not replace substance identity.",
+    "sourceDocumentId": "lore-koplin-materials-and-substances",
+    "sourceSection": "12. Rarity bands",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "rarity-legendary",
+    "name": "Legendary",
+    "rank": 7,
+    "description": "Shared occurrence-rarity band 7 of 9; rarity describes how often an occurrence presents in a geology or market context and does not replace substance identity.",
+    "sourceDocumentId": "lore-koplin-materials-and-substances",
+    "sourceSection": "12. Rarity bands",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "rarity-anomalous",
+    "name": "Anomalous",
+    "rank": 8,
+    "description": "Shared occurrence-rarity band 8 of 9; rarity describes how often an occurrence presents in a geology or market context and does not replace substance identity.",
+    "sourceDocumentId": "lore-koplin-materials-and-substances",
+    "sourceSection": "12. Rarity bands",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "rarity-unique",
+    "name": "Unique",
+    "rank": 9,
+    "description": "Shared occurrence-rarity band 9 of 9; rarity describes how often an occurrence presents in a geology or market context and does not replace substance identity.",
+    "sourceDocumentId": "lore-koplin-materials-and-substances",
+    "sourceSection": "12. Rarity bands",
+    "canonStatus": "working canon"
+  }
+]

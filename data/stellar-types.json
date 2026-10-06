@@ -1,0 +1,162 @@
+[
+  {
+    "id": "stellar-type-red-dwarf",
+    "name": "Red Dwarf",
+    "description": "Red Dwarf is a broad stellar catalogue classification. Specific authored systems may retain more precise spectral and luminosity labels.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Types/Stars/TypesList.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "stellar-type-orange-dwarf",
+    "name": "Orange Dwarf",
+    "description": "Orange Dwarf is a broad stellar catalogue classification. Specific authored systems may retain more precise spectral and luminosity labels.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Types/Stars/TypesList.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "stellar-type-yellow-dwarf",
+    "name": "Yellow Dwarf",
+    "description": "Yellow Dwarf is a broad stellar catalogue classification. Specific authored systems may retain more precise spectral and luminosity labels.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Types/Stars/TypesList.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "stellar-type-white-main-sequence-star",
+    "name": "White Main Sequence Star",
+    "description": "White Main Sequence Star is a broad stellar catalogue classification. Specific authored systems may retain more precise spectral and luminosity labels.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Types/Stars/TypesList.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "stellar-type-blue-main-sequence-star",
+    "name": "Blue Main Sequence Star",
+    "description": "Blue Main Sequence Star is a broad stellar catalogue classification. Specific authored systems may retain more precise spectral and luminosity labels.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Types/Stars/TypesList.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "stellar-type-red-giant",
+    "name": "Red Giant",
+    "description": "Red Giant is a broad stellar catalogue classification. Specific authored systems may retain more precise spectral and luminosity labels.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Types/Stars/TypesList.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "stellar-type-blue-giant",
+    "name": "Blue Giant",
+    "description": "Blue Giant is a broad stellar catalogue classification. Specific authored systems may retain more precise spectral and luminosity labels.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Types/Stars/TypesList.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "stellar-type-white-dwarf",
+    "name": "White Dwarf",
+    "description": "White Dwarf is a broad stellar catalogue classification. Specific authored systems may retain more precise spectral and luminosity labels.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Types/Stars/TypesList.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "stellar-type-neutron-star",
+    "name": "Neutron Star",
+    "description": "Neutron Star is a broad stellar catalogue classification. Specific authored systems may retain more precise spectral and luminosity labels.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Types/Stars/TypesList.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "stellar-type-pulsar",
+    "name": "Pulsar",
+    "description": "Pulsar is a broad stellar catalogue classification. Specific authored systems may retain more precise spectral and luminosity labels.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Types/Stars/TypesList.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "stellar-type-black-hole",
+    "name": "Black Hole",
+    "description": "Black Hole is a broad stellar catalogue classification. Specific authored systems may retain more precise spectral and luminosity labels.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Types/Stars/TypesList.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "stellar-type-protostar",
+    "name": "Protostar",
+    "description": "Protostar is a broad stellar catalogue classification. Specific authored systems may retain more precise spectral and luminosity labels.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Types/Stars/TypesList.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "stellar-type-brown-dwarf",
+    "name": "Brown Dwarf",
+    "description": "Brown Dwarf is a broad stellar catalogue classification. Specific authored systems may retain more precise spectral and luminosity labels.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Types/Stars/TypesList.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "stellar-type-wolf-rayet-star",
+    "name": "Wolf-Rayet Star",
+    "description": "Wolf-Rayet Star is a broad stellar catalogue classification. Specific authored systems may retain more precise spectral and luminosity labels.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Types/Stars/TypesList.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "stellar-type-binary-pair",
+    "name": "Binary Pair",
+    "description": "Binary Pair is a broad stellar catalogue classification. Specific authored systems may retain more precise spectral and luminosity labels.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Types/Stars/TypesList.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "stellar-type-stellar-remnant",
+    "name": "Stellar Remnant",
+    "description": "Stellar Remnant is a broad stellar catalogue classification. Specific authored systems may retain more precise spectral and luminosity labels.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Types/Stars/TypesList.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  }
+]

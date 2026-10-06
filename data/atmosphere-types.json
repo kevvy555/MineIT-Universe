@@ -1,0 +1,83 @@
+[
+  {
+    "id": "atmosphere-none",
+    "name": "None",
+    "description": "Airless world.",
+    "rockyPlanetLegal": true,
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "5. Atmosphere types",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "atmosphere-trace",
+    "name": "Trace",
+    "description": "Almost no atmosphere.",
+    "rockyPlanetLegal": true,
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "5. Atmosphere types",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "atmosphere-thin",
+    "name": "Thin",
+    "description": "Low-pressure atmosphere.",
+    "rockyPlanetLegal": true,
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "5. Atmosphere types",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "atmosphere-breathable",
+    "name": "Breathable",
+    "description": "Earth-like or survivable mix. Koplin 3 uses this label.",
+    "rockyPlanetLegal": true,
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "5. Atmosphere types",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "atmosphere-dense",
+    "name": "Dense",
+    "description": "Thick atmosphere.",
+    "rockyPlanetLegal": true,
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "5. Atmosphere types",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "atmosphere-toxic",
+    "name": "Toxic",
+    "description": "Poisonous or corrosive atmosphere.",
+    "rockyPlanetLegal": true,
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "5. Atmosphere types",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "atmosphere-hot-greenhouse",
+    "name": "Hot greenhouse",
+    "description": "Heat-trapping envelope.",
+    "rockyPlanetLegal": true,
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "5. Atmosphere types",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "atmosphere-cryogenic",
+    "name": "Cryogenic",
+    "description": "Cold methane/nitrogen-rich envelope.",
+    "rockyPlanetLegal": true,
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "5. Atmosphere types",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "atmosphere-gas-giant-envelope",
+    "name": "Gas-giant envelope",
+    "description": "No solid surface. Not used on rocky worlds.",
+    "rockyPlanetLegal": false,
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "5. Atmosphere types",
+    "canonStatus": "working canon"
+  }
+]

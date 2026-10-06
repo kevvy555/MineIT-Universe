@@ -1,0 +1,142 @@
+[
+  {
+    "id": "comet-type-short-period-comet",
+    "name": "Short-Period Comet",
+    "description": "Short-Period Comet is a reusable comet classification.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Types/Comets/TypesList.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "comet-type-long-period-comet",
+    "name": "Long-Period Comet",
+    "description": "Long-Period Comet is a reusable comet classification.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Types/Comets/TypesList.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "comet-type-icy-comet",
+    "name": "Icy Comet",
+    "description": "Icy Comet is a reusable comet classification.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Types/Comets/TypesList.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "comet-type-dusty-comet",
+    "name": "Dusty Comet",
+    "description": "Dusty Comet is a reusable comet classification.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Types/Comets/TypesList.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "comet-type-methane-rich-comet",
+    "name": "Methane-Rich Comet",
+    "description": "Methane-Rich Comet is a reusable comet classification.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Types/Comets/TypesList.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "comet-type-ammonia-rich-comet",
+    "name": "Ammonia-Rich Comet",
+    "description": "Ammonia-Rich Comet is a reusable comet classification.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Types/Comets/TypesList.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "comet-type-organic-rich-comet",
+    "name": "Organic-Rich Comet",
+    "description": "Organic-Rich Comet is a reusable comet classification.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Types/Comets/TypesList.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "comet-type-fragmented-comet",
+    "name": "Fragmented Comet",
+    "description": "Fragmented Comet is a reusable comet classification.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Types/Comets/TypesList.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "comet-type-dormant-comet",
+    "name": "Dormant Comet",
+    "description": "Dormant Comet is a reusable comet classification.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Types/Comets/TypesList.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "comet-type-active-comet",
+    "name": "Active Comet",
+    "description": "Active Comet is a reusable comet classification.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Types/Comets/TypesList.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "comet-type-captured-comet",
+    "name": "Captured Comet",
+    "description": "Captured Comet is a reusable comet classification.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Types/Comets/TypesList.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "comet-type-ancient-comet",
+    "name": "Ancient Comet",
+    "description": "Ancient Comet is a reusable comet classification.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Types/Comets/TypesList.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "comet-type-volatile-rich-comet",
+    "name": "Volatile-Rich Comet",
+    "description": "Volatile-Rich Comet is a reusable comet classification.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Types/Comets/TypesList.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "comet-type-anomalous-comet",
+    "name": "Anomalous Comet",
+    "description": "Anomalous Comet is a reusable comet classification.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Types/Comets/TypesList.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  }
+]

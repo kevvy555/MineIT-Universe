@@ -1,0 +1,44 @@
+name: Validate MineIT Universe
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+      - 'feature/**'
+  pull_request:
+    branches:
+      - main
+      - develop
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate canonical universe
+        run: node validation/validate-universe.mjs
+      - name: Validate industrial catalogue
+        run: node validation/validate-industrial-catalogue.mjs
+      - name: Validate ship procurement data
+        run: node validation/validate-ship-procurement.mjs
+      - name: Syntax check industrial importer
+        run: node --check scripts/import-industrial-catalogue.mjs
+      - name: Syntax check data loader
+        run: node --check js/universe-data.js
+      - name: Syntax check Directory app
+        run: node --check js/universe-app.js
+      - name: Syntax check Commercial Network app
+        run: node --check js/commercial-network-app.js
+      - name: Syntax check Lore app
+        run: node --check js/lore-app.js
+      - name: Syntax check Ship Catalogue app
+        run: node --check js/ship-catalogue-app.js

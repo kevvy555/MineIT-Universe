@@ -1,0 +1,112 @@
+[
+  {
+    "id": "ship-line-asterion-dart",
+    "name": "Asterion Dart Line",
+    "manufacturerOrganisationId": "organisation-asterion-shipworks",
+    "flagshipYardFacilityId": "facility-asterion-deepdock",
+    "productionOperationIds": ["operation-asterion-dart-production", "operation-asterion-general-ship-production"],
+    "specialisation": "fast specialist and high-value transport",
+    "marketPosition": "premium specialist",
+    "description": "Compact Asterion hulls built around high acceleration, secure payloads and specialist mission packages rather than maximum bulk capacity.",
+    "canonStatus": "generated-expansion-compatible-with-lore"
+  },
+  {
+    "id": "ship-line-asterion-nomad",
+    "name": "Asterion Nomad Line",
+    "manufacturerOrganisationId": "organisation-asterion-shipworks",
+    "flagshipYardFacilityId": "facility-asterion-deepdock",
+    "productionOperationIds": ["operation-asterion-general-ship-production", "operation-asterion-atlas-production"],
+    "specialisation": "frontier utility, survey and adaptable heavy transport",
+    "marketPosition": "versatile industrial",
+    "description": "Rugged configurable ships intended for operators who need one hull family to survive remote survey, construction, rescue and freight work.",
+    "canonStatus": "generated-expansion-compatible-with-lore"
+  },
+  {
+    "id": "ship-line-kestrel-flight",
+    "name": "Kestrel Flight Line",
+    "manufacturerOrganisationId": "organisation-kestrel-aerospace-systems",
+    "flagshipYardFacilityId": "facility-kestrel-velocity-yard",
+    "productionOperationIds": ["operation-kestrel-flight-production"],
+    "specialisation": "speed, acceleration and rapid turnaround",
+    "marketPosition": "premium fast freight",
+    "description": "Kestrel's signature small and medium ships trade cargo efficiency for faster schedules, powerful drives and short port turnaround times.",
+    "canonStatus": "generated-expansion-compatible-with-lore"
+  },
+  {
+    "id": "ship-line-kestrel-vanguard",
+    "name": "Kestrel Vanguard Line",
+    "manufacturerOrganisationId": "organisation-kestrel-aerospace-systems",
+    "flagshipYardFacilityId": "facility-kestrel-velocity-yard",
+    "productionOperationIds": ["operation-kestrel-flight-production"],
+    "specialisation": "fast medium-heavy commercial hauling",
+    "marketPosition": "premium time-critical industrial",
+    "description": "Larger Kestrel freighters for operators whose contracts reward delivery speed enough to justify higher fuel and acquisition costs.",
+    "canonStatus": "generated-expansion-compatible-with-lore"
+  },
+  {
+    "id": "ship-line-keystone-caravan",
+    "name": "Keystone Caravan Line",
+    "manufacturerOrganisationId": "organisation-keystone-modular-fabrication",
+    "flagshipYardFacilityId": "facility-keystone-gateworks-yard",
+    "productionOperationIds": ["operation-keystone-modular-production"],
+    "specialisation": "modular freight and container flexibility",
+    "marketPosition": "mainstream logistics",
+    "description": "Standardised modular freighters that can exchange cargo sections and mission modules without redesigning the core vessel.",
+    "canonStatus": "generated-expansion-compatible-with-lore"
+  },
+  {
+    "id": "ship-line-keystone-network",
+    "name": "Keystone Network Line",
+    "manufacturerOrganisationId": "organisation-keystone-modular-fabrication",
+    "flagshipYardFacilityId": "facility-keystone-gateworks-yard",
+    "productionOperationIds": ["operation-keystone-modular-production"],
+    "specialisation": "network-scale modular logistics",
+    "marketPosition": "high-capacity logistics infrastructure",
+    "description": "Very large modular carriers designed as moving nodes in mature multi-system freight networks rather than isolated ships.",
+    "canonStatus": "generated-expansion-compatible-with-lore"
+  },
+  {
+    "id": "ship-line-longreach-reliant",
+    "name": "Longreach Reliant Line",
+    "manufacturerOrganisationId": "organisation-longreach-engineering",
+    "flagshipYardFacilityId": "facility-longreach-frontier-yard",
+    "productionOperationIds": ["operation-longreach-endurance-production"],
+    "specialisation": "range, reliability and fuel efficiency",
+    "marketPosition": "premium deep-route freight",
+    "description": "Long-endurance commercial ships designed to reduce the logistical penalty of operating far from dense Commonwealth infrastructure.",
+    "canonStatus": "generated-expansion-compatible-with-lore"
+  },
+  {
+    "id": "ship-line-longreach-horizon",
+    "name": "Longreach Horizon Line",
+    "manufacturerOrganisationId": "organisation-longreach-engineering",
+    "flagshipYardFacilityId": "facility-longreach-frontier-yard",
+    "productionOperationIds": ["operation-longreach-endurance-production"],
+    "specialisation": "strategic long-range superfreight",
+    "marketPosition": "premium strategic logistics",
+    "description": "Large long-range vessels with redundant systems, deep stores and efficient cruise performance for remote industrial supply chains.",
+    "canonStatus": "generated-expansion-compatible-with-lore"
+  },
+  {
+    "id": "ship-line-crownline-foundry",
+    "name": "Crownline Foundry Line",
+    "manufacturerOrganisationId": "organisation-crownline-heavy-works",
+    "flagshipYardFacilityId": "facility-crownline-talus-megayard",
+    "productionOperationIds": ["operation-crownline-heavy-production"],
+    "specialisation": "extreme bulk freight at low cost per cargo unit",
+    "marketPosition": "heavy industrial value",
+    "description": "Slow, structurally simple bulk carriers optimised for moving enormous dense industrial loads economically.",
+    "canonStatus": "generated-expansion-compatible-with-lore"
+  },
+  {
+    "id": "ship-line-crownline-worldline",
+    "name": "Crownline Worldline Line",
+    "manufacturerOrganisationId": "organisation-crownline-heavy-works",
+    "flagshipYardFacilityId": "facility-crownline-talus-megayard",
+    "productionOperationIds": ["operation-crownline-heavy-production"],
+    "specialisation": "megafreighters and mass commodity transport",
+    "marketPosition": "late-game industrial megacarrier",
+    "description": "The largest commercial hulls in the current catalogue, built for corporations and settlements moving material at planetary-industrial scale.",
+    "canonStatus": "generated-expansion-compatible-with-lore"
+  }
+]

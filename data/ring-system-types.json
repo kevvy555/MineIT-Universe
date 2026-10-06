@@ -1,0 +1,134 @@
+[
+  {
+    "id": "ring-system-type-no-rings",
+    "name": "No Rings",
+    "description": "No Rings is a reusable ring-system classification.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Types/Rings/Types.md"
+    },
+    "canonStatus": "source-derived designer catalogue",
+    "ringPresence": false
+  },
+  {
+    "id": "ring-system-type-dust-ring",
+    "name": "Dust Ring",
+    "description": "Dust Ring is a reusable ring-system classification.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Types/Rings/Types.md"
+    },
+    "canonStatus": "source-derived designer catalogue",
+    "ringPresence": true
+  },
+  {
+    "id": "ring-system-type-ice-ring",
+    "name": "Ice Ring",
+    "description": "Ice Ring is a reusable ring-system classification.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Types/Rings/Types.md"
+    },
+    "canonStatus": "source-derived designer catalogue",
+    "ringPresence": true
+  },
+  {
+    "id": "ring-system-type-rocky-ring",
+    "name": "Rocky Ring",
+    "description": "Rocky Ring is a reusable ring-system classification.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Types/Rings/Types.md"
+    },
+    "canonStatus": "source-derived designer catalogue",
+    "ringPresence": true
+  },
+  {
+    "id": "ring-system-type-metallic-ring",
+    "name": "Metallic Ring",
+    "description": "Metallic Ring is a reusable ring-system classification.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Types/Rings/Types.md"
+    },
+    "canonStatus": "source-derived designer catalogue",
+    "ringPresence": true
+  },
+  {
+    "id": "ring-system-type-thin-ring",
+    "name": "Thin Ring",
+    "description": "Thin Ring is a reusable ring-system classification.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Types/Rings/Types.md"
+    },
+    "canonStatus": "source-derived designer catalogue",
+    "ringPresence": true
+  },
+  {
+    "id": "ring-system-type-dense-ring",
+    "name": "Dense Ring",
+    "description": "Dense Ring is a reusable ring-system classification.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Types/Rings/Types.md"
+    },
+    "canonStatus": "source-derived designer catalogue",
+    "ringPresence": true
+  },
+  {
+    "id": "ring-system-type-fragmented-ring",
+    "name": "Fragmented Ring",
+    "description": "Fragmented Ring is a reusable ring-system classification.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Types/Rings/Types.md"
+    },
+    "canonStatus": "source-derived designer catalogue",
+    "ringPresence": true
+  },
+  {
+    "id": "ring-system-type-multiple-rings",
+    "name": "Multiple Rings",
+    "description": "Multiple Rings is a reusable ring-system classification.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Types/Rings/Types.md"
+    },
+    "canonStatus": "source-derived designer catalogue",
+    "ringPresence": true
+  },
+  {
+    "id": "ring-system-type-shepherd-moon-ring",
+    "name": "Shepherd Moon Ring",
+    "description": "Shepherd Moon Ring is a reusable ring-system classification.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Types/Rings/Types.md"
+    },
+    "canonStatus": "source-derived designer catalogue",
+    "ringPresence": true
+  },
+  {
+    "id": "ring-system-type-ancient-ring",
+    "name": "Ancient Ring",
+    "description": "Ancient Ring is a reusable ring-system classification.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Types/Rings/Types.md"
+    },
+    "canonStatus": "source-derived designer catalogue",
+    "ringPresence": true
+  },
+  {
+    "id": "ring-system-type-recent-impact-ring",
+    "name": "Recent Impact Ring",
+    "description": "Recent Impact Ring is a reusable ring-system classification.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Types/Rings/Types.md"
+    },
+    "canonStatus": "source-derived designer catalogue",
+    "ringPresence": true
+  }
+]

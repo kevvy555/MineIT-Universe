@@ -1,0 +1,86 @@
+[
+  {
+    "id": "kind-rocky-planet",
+    "name": "Rocky planet",
+    "codeName": "RockyPlanet",
+    "walkableSurface": true,
+    "ordinaryMining": true,
+    "description": "Solid rocky world with a walkable surface. Full land vocabulary applies: world type, atmosphere, landform, biome, hydrosphere and surface feature.",
+    "radiusBand": "500–12,000 km",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "3. Celestial body kinds",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "kind-gas-giant",
+    "name": "Gas giant",
+    "codeName": "GasGiant",
+    "walkableSurface": false,
+    "ordinaryMining": false,
+    "description": "Giant without a solid walkable surface. Atmosphere-envelope language applies; land squares do not.",
+    "radiusBand": "25,000–80,000 km",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "3. Celestial body kinds",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "kind-rocky-moon",
+    "name": "Rocky moon",
+    "codeName": "RockyMoon",
+    "walkableSurface": true,
+    "ordinaryMining": true,
+    "description": "Major moon with a solid surface. Uses the same land vocabulary as rocky planets, with moon world types.",
+    "radiusBand": "50–2,500 km",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "3. Celestial body kinds",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "kind-asteroid",
+    "name": "Asteroid",
+    "codeName": "Asteroid",
+    "walkableSurface": false,
+    "ordinaryMining": true,
+    "description": "Small body with lump geometry. Mineable, but not a full planetary land grid.",
+    "radiusBand": "0.05–500 km",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "3. Celestial body kinds",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "kind-comet",
+    "name": "Comet",
+    "codeName": "Comet",
+    "walkableSurface": false,
+    "ordinaryMining": false,
+    "description": "Icy nucleus with coma and tail. Not a land-grid body.",
+    "radiusBand": "0.1–50 km nucleus",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "3. Celestial body kinds",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "kind-star",
+    "name": "Star",
+    "codeName": "Star",
+    "walkableSurface": false,
+    "ordinaryMining": false,
+    "description": "Stellar body. Not land.",
+    "radiusBand": "stellar radii",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "3. Celestial body kinds",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "kind-ring-system",
+    "name": "Ring system",
+    "codeName": "RingSystem",
+    "walkableSurface": false,
+    "ordinaryMining": false,
+    "description": "Ring structure attached to a parent body. Not a standalone world.",
+    "radiusBand": "1.2×–3.5× parent equatorial radius",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "3. Celestial body kinds",
+    "canonStatus": "working canon"
+  }
+]

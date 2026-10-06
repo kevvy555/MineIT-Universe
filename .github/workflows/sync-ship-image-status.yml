@@ -1,0 +1,70 @@
+name: Sync Ship Image Status
+
+on:
+  push:
+    branches:
+      - develop
+      - feature/shipimages
+    paths:
+      - 'assets/art/universe/ship-classes/**'
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Mark uploaded ship-class artwork generated
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const file = 'data/ship-classes.json';
+          const original = fs.readFileSync(file, 'utf8');
+          let found = 0;
+          let changed = 0;
+
+          const updated = original.split('\n').map((line) => {
+            const match = line.match(/"image":\{"key":"([^"]+)"/);
+            if (!match || !match[1].startsWith('assets/art/universe/ship-classes/')) return line;
+            if (!fs.existsSync(match[1])) return line;
+            found += 1;
+
+            let next = line
+              .replace(/"generated":false,"status":"in-progress","generationBatchId":"[^"]+","generationStartedAt":"[^"]+",/, '"generated":true,"status":"generated",')
+              .replace(/"generated":false,"status":"not-generated",/, '"generated":true,"status":"generated",');
+
+            if (next !== line) changed += 1;
+            return next;
+          }).join('\n');
+
+          if (found !== 32) {
+            throw new Error(`Expected 32 uploaded ship-class assets but matched ${found}.`);
+          }
+
+          if (updated !== original) fs.writeFileSync(file, updated, 'utf8');
+          console.log(`Verified ${found} ship-class assets; updated ${changed} image records.`);
+          NODE
+
+      - name: Validate Universe
+        run: |
+          node validation/validate-universe.mjs
+          node validation/validate-industrial-catalogue.mjs
+          node validation/validate-ship-procurement.mjs
+
+      - name: Commit synced image state
+        run: |
+          if git diff --quiet -- data/ship-classes.json; then
+            echo "Ship image state already synchronized."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/ship-classes.json
+          git commit -m "Mark uploaded ship class artwork generated"
+          git push

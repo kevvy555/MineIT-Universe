@@ -1,0 +1,42 @@
+[
+  {
+    "id": "extraction-zone-atmosphere",
+    "name": "Atmosphere",
+    "order": 0,
+    "description": "Resource is harvested from a world's atmosphere or atmospheric envelope rather than mined from solid ground.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "extraction-zone-surface",
+    "name": "Surface",
+    "order": 1,
+    "description": "Resource is exposed at the surface or available with collection, quarrying or very shallow excavation.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "extraction-zone-shallow",
+    "name": "Shallow",
+    "order": 2,
+    "description": "Resource occurs below the immediate surface but remains accessible to early subsurface excavation, shallow pits, trenches or shallow drilling.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "extraction-zone-medium",
+    "name": "Medium",
+    "order": 3,
+    "description": "Resource requires established mining or drilling infrastructure to reach a significant subsurface deposit.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "extraction-zone-deep",
+    "name": "Deep",
+    "order": 4,
+    "description": "Resource occurs in deep crustal or deeply buried deposits requiring advanced deep-mining or deep-drilling infrastructure.",
+    "knowledgeScope": "designer truth",
+    "canonStatus": "working canon"
+  }
+]

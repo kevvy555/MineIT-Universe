@@ -1,0 +1,362 @@
+[
+  {
+    "id": "deposit-shape-sheet",
+    "name": "Sheet",
+    "description": "Reusable geological deposit or formation geometry reconciled from the Desktop underground-generation design.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "deposit-shape-bed",
+    "name": "Bed",
+    "description": "Reusable geological deposit or formation geometry reconciled from the Desktop underground-generation design.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "deposit-shape-layer",
+    "name": "Layer",
+    "description": "Reusable geological deposit or formation geometry reconciled from the Desktop underground-generation design.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "deposit-shape-lens",
+    "name": "Lens",
+    "description": "Reusable geological deposit or formation geometry reconciled from the Desktop underground-generation design.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "deposit-shape-seam",
+    "name": "Seam",
+    "description": "Reusable geological deposit or formation geometry reconciled from the Desktop underground-generation design.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "deposit-shape-fan",
+    "name": "Fan",
+    "description": "Reusable geological deposit or formation geometry reconciled from the Desktop underground-generation design.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "deposit-shape-wedge",
+    "name": "Wedge",
+    "description": "Reusable geological deposit or formation geometry reconciled from the Desktop underground-generation design.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "deposit-shape-channel",
+    "name": "Channel",
+    "description": "Reusable geological deposit or formation geometry reconciled from the Desktop underground-generation design.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "deposit-shape-basin-fill",
+    "name": "Basin Fill",
+    "description": "Reusable geological deposit or formation geometry reconciled from the Desktop underground-generation design.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "deposit-shape-nodule-field",
+    "name": "Nodule Field",
+    "description": "Reusable geological deposit or formation geometry reconciled from the Desktop underground-generation design.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "deposit-shape-unconformity-layer",
+    "name": "Unconformity Layer",
+    "description": "Reusable geological deposit or formation geometry reconciled from the Desktop underground-generation design.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "deposit-shape-dome",
+    "name": "Dome",
+    "description": "Reusable geological deposit or formation geometry reconciled from the Desktop underground-generation design.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "deposit-shape-erosion-surface",
+    "name": "Erosion Surface",
+    "description": "Reusable geological deposit or formation geometry reconciled from the Desktop underground-generation design.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "deposit-shape-cavity",
+    "name": "Cavity",
+    "description": "Reusable geological deposit or formation geometry reconciled from the Desktop underground-generation design.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "deposit-shape-intrusion",
+    "name": "Intrusion",
+    "description": "Reusable geological deposit or formation geometry reconciled from the Desktop underground-generation design.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "deposit-shape-dyke",
+    "name": "Dyke",
+    "description": "Reusable geological deposit or formation geometry reconciled from the Desktop underground-generation design.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "deposit-shape-sill",
+    "name": "Sill",
+    "description": "Reusable geological deposit or formation geometry reconciled from the Desktop underground-generation design.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "deposit-shape-plug",
+    "name": "Plug",
+    "description": "Reusable geological deposit or formation geometry reconciled from the Desktop underground-generation design.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "deposit-shape-stock",
+    "name": "Stock",
+    "description": "Reusable geological deposit or formation geometry reconciled from the Desktop underground-generation design.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "deposit-shape-batholith",
+    "name": "Batholith",
+    "description": "Reusable geological deposit or formation geometry reconciled from the Desktop underground-generation design.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "deposit-shape-blob",
+    "name": "Blob",
+    "description": "Reusable geological deposit or formation geometry reconciled from the Desktop underground-generation design.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "deposit-shape-pipe",
+    "name": "Pipe",
+    "description": "Reusable geological deposit or formation geometry reconciled from the Desktop underground-generation design.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "deposit-shape-contact-halo",
+    "name": "Contact Halo",
+    "description": "Reusable geological deposit or formation geometry reconciled from the Desktop underground-generation design.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "deposit-shape-tube",
+    "name": "Tube",
+    "description": "Reusable geological deposit or formation geometry reconciled from the Desktop underground-generation design.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "deposit-shape-breccia-zone",
+    "name": "Breccia Zone",
+    "description": "Reusable geological deposit or formation geometry reconciled from the Desktop underground-generation design.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "deposit-shape-vein",
+    "name": "Vein",
+    "description": "Reusable geological deposit or formation geometry reconciled from the Desktop underground-generation design.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "deposit-shape-fracture-network",
+    "name": "Fracture Network",
+    "description": "Reusable geological deposit or formation geometry reconciled from the Desktop underground-generation design.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "deposit-shape-disseminated-zone",
+    "name": "Disseminated Zone",
+    "description": "Reusable geological deposit or formation geometry reconciled from the Desktop underground-generation design.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "deposit-shape-ore-body",
+    "name": "Ore Body",
+    "description": "Reusable geological deposit or formation geometry reconciled from the Desktop underground-generation design.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "deposit-shape-pocket",
+    "name": "Pocket",
+    "description": "Reusable geological deposit or formation geometry reconciled from the Desktop underground-generation design.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "deposit-shape-fault-band",
+    "name": "Fault Band",
+    "description": "Reusable geological deposit or formation geometry reconciled from the Desktop underground-generation design.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "deposit-shape-reservoir-trap",
+    "name": "Reservoir Trap",
+    "description": "Reusable geological deposit or formation geometry reconciled from the Desktop underground-generation design.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "deposit-shape-folded-band",
+    "name": "Folded Band",
+    "description": "Reusable geological deposit or formation geometry reconciled from the Desktop underground-generation design.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "deposit-shape-metamorphic-belt",
+    "name": "Metamorphic Belt",
+    "description": "Reusable geological deposit or formation geometry reconciled from the Desktop underground-generation design.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "deposit-shape-cavern-system",
+    "name": "Cavern System",
+    "description": "Reusable geological deposit or formation geometry reconciled from the Desktop underground-generation design.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  },
+  {
+    "id": "deposit-shape-aquifer-body",
+    "name": "Aquifer Body",
+    "description": "Reusable geological deposit or formation geometry reconciled from the Desktop underground-generation design.",
+    "provenance": {
+      "sourceId": "generation-source-desktop-celestial-body-generation",
+      "sourcePath": "Documentation/design/CelestialBodyGeneration/Step 5 - Underground Deposit Generation/geology_formation_types_and_shapes.md"
+    },
+    "canonStatus": "source-derived designer catalogue"
+  }
+]
