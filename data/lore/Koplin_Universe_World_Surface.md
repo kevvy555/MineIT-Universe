@@ -133,7 +133,7 @@ Mobile shows a world as a grid of squares. Desktop walks a continuous surface. S
 |-------|----------|----------|
 | **Landform** | What *shape* is the ground? | Plains, Hills, Mountains, Basin, Lowland, Highland, Plateau, Valley, Cliff, Canyon, Ridge, Crater |
 | **Biome** | What *covers* that ground? | Barren rock, Desert, Grassland, Forest, Wetland, Tundra, Ice sheet, Volcanic field, Lava field, Toxic wasteland |
-| **Hydrosphere** | Is there water here, and of what kind? | None (dry land), Ocean, Lake, River, Fresh water, Saltwater, Brine, Mineral-rich water, Frozen water, Subsurface aquifer |
+| **Hydrosphere** | Is there visible surface liquid/ice here, and of what kind? | None (dry land), Ocean, Lake, River, Fresh water, Saltwater, Brine, Mineral-rich water, Frozen water, Hydrocarbon liquid, Corrosive liquid, Subsurface aquifer |
 | **Surface feature** | What is the primary decoration or exposure? | Coast, Dune sea, Salt flat, Rock exposure, Exposed seams, Ice cover, Lava flow, Peat layer |
 
 Landform is shape only. Coast, lake and ocean are **not** landforms. A basin may be dry or filled; hydrosphere says which.
