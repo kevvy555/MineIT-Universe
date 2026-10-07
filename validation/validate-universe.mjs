@@ -75,9 +75,11 @@ for (const { record } of byId.values()) {
 
 const scalarRefs = {
   starSystems: ['regionId', 'primaryAuthorityOrganisationId', 'homeworldId'],
-  planets: ['systemId', 'parentPlanetId', 'governingOrganisationId', 'celestialBodyKindId', 'worldTypeId', 'atmosphereTypeId', 'landscapeTilesetId'],
+  planets: ['systemId', 'parentPlanetId', 'governingOrganisationId', 'celestialBodyKindId', 'worldTypeId', 'atmosphereTypeId', 'landscapeTilesetId', 'capitalSettlementId', 'worldAtlasId'],
   landscapeTilesets: ['planetId', 'intendedGameId'],
   landscapeTiles: ['tilesetId', 'planetId', 'landformId', 'biomeId', 'hydrosphereId'],
+  worldAtlases: ['planetId', 'originSettlementId'],
+  worldAtlasTiles: ['atlasId', 'planetId'],
   worldTypes: ['appliesToKindId'],
   settlements: ['systemId', 'planetId', 'parentLocationId', 'governingOrganisationId'],
   organisations: ['headquartersLocationId', 'parentOrganisationId'],
@@ -103,6 +105,7 @@ const arrayRefs = {
   regions: ['administrativeOrganisationIds', 'systemIds'],
   planets: ['dominantLandformIds', 'dominantBiomeIds', 'dominantHydrosphereIds'],
   landscapeTilesets: ['landformIds', 'biomeIds', 'hydrosphereIds', 'adjacencyPreviewIds'],
+  worldAtlasTiles: ['neighborTileIds', 'referenceTileIds'],
   organisations: ['economicSectorIds'],
   facilities: ['partnerOrganisationIds'],
   operations: ['managerPersonIds', 'procurementPersonIds', 'shipIds', 'productIds', 'shipClassIds'],
@@ -334,6 +337,47 @@ for (const tile of collections.landscapeTiles ?? []) {
   if (tile.image?.key && tile.planetId && !String(tile.image.key).includes(`/${tile.planetId}/`)) {
     errors.push(`${tile.id}: image key must be stored under the owning planet folder.`);
   }
+}
+
+for (const atlas of collections.worldAtlases ?? []) {
+  if (!Number.isFinite(atlas.tileSizeKm) || atlas.tileSizeKm <= 0) errors.push(`${atlas.id}: tileSizeKm must be a positive number.`);
+  if (atlas.coordinateSystem?.generationOrder !== 'clockwise-square-spiral') errors.push(`${atlas.id}: generationOrder must be clockwise-square-spiral.`);
+  const atlasTiles = (collections.worldAtlasTiles ?? []).filter(tile => tile.atlasId === atlas.id);
+  if (!atlasTiles.length) errors.push(`${atlas.id}: atlas has no tiles.`);
+  if (Number.isInteger(atlas.phaseOne?.tileCount) && atlasTiles.length !== atlas.phaseOne.tileCount) {
+    errors.push(`${atlas.id}: phase-one tile count is ${atlas.phaseOne.tileCount} but ${atlasTiles.length} records exist.`);
+  }
+  const coordinates = new Set();
+  const sequences = new Set();
+  for (const tile of atlasTiles) {
+    const coordinateKey = `${tile.x},${tile.y}`;
+    if (coordinates.has(coordinateKey)) errors.push(`${atlas.id}: duplicate atlas coordinate ${coordinateKey}.`);
+    coordinates.add(coordinateKey);
+    if (!Number.isInteger(tile.sequence) || tile.sequence < 1) errors.push(`${tile.id}: sequence must be a positive integer.`);
+    if (sequences.has(tile.sequence)) errors.push(`${atlas.id}: duplicate atlas sequence ${tile.sequence}.`);
+    sequences.add(tile.sequence);
+    if (tile.batch !== Math.ceil(tile.sequence / (atlas.coordinateSystem?.batchSize || 10))) errors.push(`${tile.id}: batch does not match sequence/batchSize.`);
+    if (tile.ring !== Math.max(Math.abs(tile.x), Math.abs(tile.y))) errors.push(`${tile.id}: ring does not match coordinates.`);
+    if (!tile.image) errors.push(`${tile.id}: world atlas tile requires image metadata.`);
+    if (tile.image?.key && !String(tile.image.key).startsWith(`assets/art/universe/planets/${tile.planetId}/atlas/`)) {
+      errors.push(`${tile.id}: world atlas image must live under the owning planet atlas folder.`);
+    }
+    for (const edge of ['north','east','south','west']) {
+      if (!tile.edgeContinuity?.[edge]) errors.push(`${tile.id}: missing ${edge} edge continuity guidance.`);
+    }
+    for (const refId of tile.referenceTileIds ?? []) {
+      const ref = byId.get(refId)?.record;
+      if (ref && ref.sequence >= tile.sequence) errors.push(`${tile.id}: reference tile ${refId} must have an earlier sequence.`);
+    }
+  }
+  for (let sequence = 1; sequence <= atlasTiles.length; sequence += 1) {
+    if (!sequences.has(sequence)) errors.push(`${atlas.id}: missing atlas sequence ${sequence}.`);
+  }
+}
+for (const tile of collections.worldAtlasTiles ?? []) {
+  const atlas = byId.get(tile.atlasId)?.record;
+  if (atlas && atlas.planetId !== tile.planetId) errors.push(`${tile.id}: planetId does not match atlas planet.`);
+  if (tile.mappedAreaKm2 !== 1) errors.push(`${tile.id}: Koplin atlas tiles must represent 1 km².`);
 }
 
 for (const planet of collections.planets ?? []) {
