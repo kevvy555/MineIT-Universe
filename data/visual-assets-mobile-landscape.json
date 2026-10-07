@@ -1413,8 +1413,8 @@
     "description": "Reusable generated-world Mobile landscape tile for valley with barren rock cover.",
     "image": {
       "key": "assets/art/visual-library/landscape/mobile/visual-landscape-generated-valley-barren-rock-01.webp",
-      "generated": false,
-      "status": "not-generated",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "Perfect 1:1 full-bleed square for the MineIT Mobile generated-world landscape library. Straight-down orthographic/nadir aerial view, camera about 500 m altitude, no horizon and no sky. Sun from upper left, shadows lower right. Grounded semi-realistic planetary terrain with natural scale and texture, designed to remain immediately readable at 128×128 on an 8×8 colony grid. Terrain must continue naturally off all four edges so neighbouring tiles can join. No UI, text, border, buildings, roads, people, vehicles, machinery, colony objects or resource markers. Depict an incised valley floor with connected slopes entering and leaving the square, covered by bare exposed rock and regolith, cool grey/brown mineral tones, almost no soil or vegetation. The landform must dominate the macro shape and the biome must read as surface cover rather than replacing the relief.",
       "notes": "Reusable identity-neutral generated-world tile. Store lossless PNG under assets/art/visual-library/landscape/mobile/Originals/<asset-id>.png. Do not substitute bespoke Koplin/world-specific art."
     }
@@ -1433,8 +1433,8 @@
     "description": "Reusable generated-world Mobile landscape tile for valley with desert cover.",
     "image": {
       "key": "assets/art/visual-library/landscape/mobile/visual-landscape-generated-valley-desert-01.webp",
-      "generated": false,
-      "status": "not-generated",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "Perfect 1:1 full-bleed square for the MineIT Mobile generated-world landscape library. Straight-down orthographic/nadir aerial view, camera about 500 m altitude, no horizon and no sky. Sun from upper left, shadows lower right. Grounded semi-realistic planetary terrain with natural scale and texture, designed to remain immediately readable at 128×128 on an 8×8 colony grid. Terrain must continue naturally off all four edges so neighbouring tiles can join. No UI, text, border, buildings, roads, people, vehicles, machinery, colony objects or resource markers. Depict an incised valley floor with connected slopes entering and leaving the square, covered by arid sand, dust and evaporite cover in ochre, tan and muted rust tones, very sparse life. The landform must dominate the macro shape and the biome must read as surface cover rather than replacing the relief.",
       "notes": "Reusable identity-neutral generated-world tile. Store lossless PNG under assets/art/visual-library/landscape/mobile/Originals/<asset-id>.png. Do not substitute bespoke Koplin/world-specific art."
     }
@@ -1453,8 +1453,8 @@
     "description": "Reusable generated-world Mobile landscape tile for valley with grassland cover.",
     "image": {
       "key": "assets/art/visual-library/landscape/mobile/visual-landscape-generated-valley-grassland-01.webp",
-      "generated": false,
-      "status": "not-generated",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "Perfect 1:1 full-bleed square for the MineIT Mobile generated-world landscape library. Straight-down orthographic/nadir aerial view, camera about 500 m altitude, no horizon and no sky. Sun from upper left, shadows lower right. Grounded semi-realistic planetary terrain with natural scale and texture, designed to remain immediately readable at 128×128 on an 8×8 colony grid. Terrain must continue naturally off all four edges so neighbouring tiles can join. No UI, text, border, buildings, roads, people, vehicles, machinery, colony objects or resource markers. Depict an incised valley floor with connected slopes entering and leaving the square, covered by open photosynthetic cover of grasses, reeds and low shrubs in natural green/olive tones. The landform must dominate the macro shape and the biome must read as surface cover rather than replacing the relief.",
       "notes": "Reusable identity-neutral generated-world tile. Store lossless PNG under assets/art/visual-library/landscape/mobile/Originals/<asset-id>.png. Do not substitute bespoke Koplin/world-specific art."
     }
@@ -1473,8 +1473,8 @@
     "description": "Reusable generated-world Mobile landscape tile for valley with forest cover.",
     "image": {
       "key": "assets/art/visual-library/landscape/mobile/visual-landscape-generated-valley-forest-01.webp",
-      "generated": false,
-      "status": "not-generated",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "Perfect 1:1 full-bleed square for the MineIT Mobile generated-world landscape library. Straight-down orthographic/nadir aerial view, camera about 500 m altitude, no horizon and no sky. Sun from upper left, shadows lower right. Grounded semi-realistic planetary terrain with natural scale and texture, designed to remain immediately readable at 128×128 on an 8×8 colony grid. Terrain must continue naturally off all four edges so neighbouring tiles can join. No UI, text, border, buildings, roads, people, vehicles, machinery, colony objects or resource markers. Depict an incised valley floor with connected slopes entering and leaving the square, covered by dense woody canopy and darker green cover shaped by the underlying relief, with enough breaks to read the terrain. The landform must dominate the macro shape and the biome must read as surface cover rather than replacing the relief.",
       "notes": "Reusable identity-neutral generated-world tile. Store lossless PNG under assets/art/visual-library/landscape/mobile/Originals/<asset-id>.png. Do not substitute bespoke Koplin/world-specific art."
     }
@@ -1493,8 +1493,8 @@
     "description": "Reusable generated-world Mobile landscape tile for valley with wetland cover.",
     "image": {
       "key": "assets/art/visual-library/landscape/mobile/visual-landscape-generated-valley-wetland-01.webp",
-      "generated": false,
-      "status": "not-generated",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "Perfect 1:1 full-bleed square for the MineIT Mobile generated-world landscape library. Straight-down orthographic/nadir aerial view, camera about 500 m altitude, no horizon and no sky. Sun from upper left, shadows lower right. Grounded semi-realistic planetary terrain with natural scale and texture, designed to remain immediately readable at 128×128 on an 8×8 colony grid. Terrain must continue naturally off all four edges so neighbouring tiles can join. No UI, text, border, buildings, roads, people, vehicles, machinery, colony objects or resource markers. Depict an incised valley floor with connected slopes entering and leaving the square, covered by saturated dark soil, shallow reflective pools, reeds and marsh vegetation following the relief. The landform must dominate the macro shape and the biome must read as surface cover rather than replacing the relief.",
       "notes": "Reusable identity-neutral generated-world tile. Store lossless PNG under assets/art/visual-library/landscape/mobile/Originals/<asset-id>.png. Do not substitute bespoke Koplin/world-specific art."
     }
@@ -1513,8 +1513,8 @@
     "description": "Reusable generated-world Mobile landscape tile for valley with tundra cover.",
     "image": {
       "key": "assets/art/visual-library/landscape/mobile/visual-landscape-generated-valley-tundra-01.webp",
-      "generated": false,
-      "status": "not-generated",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "Perfect 1:1 full-bleed square for the MineIT Mobile generated-world landscape library. Straight-down orthographic/nadir aerial view, camera about 500 m altitude, no horizon and no sky. Sun from upper left, shadows lower right. Grounded semi-realistic planetary terrain with natural scale and texture, designed to remain immediately readable at 128×128 on an 8×8 colony grid. Terrain must continue naturally off all four edges so neighbouring tiles can join. No UI, text, border, buildings, roads, people, vehicles, machinery, colony objects or resource markers. Depict an incised valley floor with connected slopes entering and leaving the square, covered by cold sparse pale vegetation, lichen, frost patches and straw/grey-green ground. The landform must dominate the macro shape and the biome must read as surface cover rather than replacing the relief.",
       "notes": "Reusable identity-neutral generated-world tile. Store lossless PNG under assets/art/visual-library/landscape/mobile/Originals/<asset-id>.png. Do not substitute bespoke Koplin/world-specific art."
     }
@@ -1533,8 +1533,8 @@
     "description": "Reusable generated-world Mobile landscape tile for valley with ice sheet cover.",
     "image": {
       "key": "assets/art/visual-library/landscape/mobile/visual-landscape-generated-valley-ice-sheet-01.webp",
-      "generated": false,
-      "status": "not-generated",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "Perfect 1:1 full-bleed square for the MineIT Mobile generated-world landscape library. Straight-down orthographic/nadir aerial view, camera about 500 m altitude, no horizon and no sky. Sun from upper left, shadows lower right. Grounded semi-realistic planetary terrain with natural scale and texture, designed to remain immediately readable at 128×128 on an 8×8 colony grid. Terrain must continue naturally off all four edges so neighbouring tiles can join. No UI, text, border, buildings, roads, people, vehicles, machinery, colony objects or resource markers. Depict an incised valley floor with connected slopes entering and leaving the square, covered by persistent white and blue-grey ice cover with subtle crevasses, wind-scoured texture and snow accumulation shaped by relief. The landform must dominate the macro shape and the biome must read as surface cover rather than replacing the relief.",
       "notes": "Reusable identity-neutral generated-world tile. Store lossless PNG under assets/art/visual-library/landscape/mobile/Originals/<asset-id>.png. Do not substitute bespoke Koplin/world-specific art."
     }
@@ -1553,8 +1553,8 @@
     "description": "Reusable generated-world Mobile landscape tile for valley with volcanic field cover.",
     "image": {
       "key": "assets/art/visual-library/landscape/mobile/visual-landscape-generated-valley-volcanic-field-01.webp",
-      "generated": false,
-      "status": "not-generated",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "Perfect 1:1 full-bleed square for the MineIT Mobile generated-world landscape library. Straight-down orthographic/nadir aerial view, camera about 500 m altitude, no horizon and no sky. Sun from upper left, shadows lower right. Grounded semi-realistic planetary terrain with natural scale and texture, designed to remain immediately readable at 128×128 on an 8×8 colony grid. Terrain must continue naturally off all four edges so neighbouring tiles can join. No UI, text, border, buildings, roads, people, vehicles, machinery, colony objects or resource markers. Depict an incised valley floor with connected slopes entering and leaving the square, covered by dark ash, cinder, fumarolic staining and scattered volcanic vents over the landform, geologically active but without broad open lava sheets. The landform must dominate the macro shape and the biome must read as surface cover rather than replacing the relief.",
       "notes": "Reusable identity-neutral generated-world tile. Store lossless PNG under assets/art/visual-library/landscape/mobile/Originals/<asset-id>.png. Do not substitute bespoke Koplin/world-specific art."
     }
@@ -1573,8 +1573,8 @@
     "description": "Reusable generated-world Mobile landscape tile for valley with lava field cover.",
     "image": {
       "key": "assets/art/visual-library/landscape/mobile/visual-landscape-generated-valley-lava-field-01.webp",
-      "generated": false,
-      "status": "not-generated",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "Perfect 1:1 full-bleed square for the MineIT Mobile generated-world landscape library. Straight-down orthographic/nadir aerial view, camera about 500 m altitude, no horizon and no sky. Sun from upper left, shadows lower right. Grounded semi-realistic planetary terrain with natural scale and texture, designed to remain immediately readable at 128×128 on an 8×8 colony grid. Terrain must continue naturally off all four edges so neighbouring tiles can join. No UI, text, border, buildings, roads, people, vehicles, machinery, colony objects or resource markers. Depict an incised valley floor with connected slopes entering and leaving the square, covered by black basalt, cooled ropy lava and restrained glowing or heat-reddened fractures following the terrain, no giant central volcano. The landform must dominate the macro shape and the biome must read as surface cover rather than replacing the relief.",
       "notes": "Reusable identity-neutral generated-world tile. Store lossless PNG under assets/art/visual-library/landscape/mobile/Originals/<asset-id>.png. Do not substitute bespoke Koplin/world-specific art."
     }
@@ -1593,8 +1593,8 @@
     "description": "Reusable generated-world Mobile landscape tile for valley with toxic wasteland cover.",
     "image": {
       "key": "assets/art/visual-library/landscape/mobile/visual-landscape-generated-valley-toxic-wasteland-01.webp",
-      "generated": false,
-      "status": "not-generated",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "Perfect 1:1 full-bleed square for the MineIT Mobile generated-world landscape library. Straight-down orthographic/nadir aerial view, camera about 500 m altitude, no horizon and no sky. Sun from upper left, shadows lower right. Grounded semi-realistic planetary terrain with natural scale and texture, designed to remain immediately readable at 128×128 on an 8×8 colony grid. Terrain must continue naturally off all four edges so neighbouring tiles can join. No UI, text, border, buildings, roads, people, vehicles, machinery, colony objects or resource markers. Depict an incised valley floor with connected slopes entering and leaving the square, covered by chemically hostile mineral crusts and stained ground in muted sulfur yellow, oxidised orange and sickly green-grey, sparse or absent life, grounded rather than neon fantasy. The landform must dominate the macro shape and the biome must read as surface cover rather than replacing the relief.",
       "notes": "Reusable identity-neutral generated-world tile. Store lossless PNG under assets/art/visual-library/landscape/mobile/Originals/<asset-id>.png. Do not substitute bespoke Koplin/world-specific art."
     }
