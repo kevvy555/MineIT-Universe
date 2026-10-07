@@ -704,15 +704,15 @@
     },
     "image": {
       "key": "assets/art/universe/buildings/building-habitat.webp",
-      "generated": false,
-      "status": "not-generated",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile building tile on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent three-quarter elevated angle, matching the established Mobile development-building language: clean rounded white ceramic/composite shells, charcoal structural frames and platforms, vivid orange trim and safety rails, restrained electric-blue emissive details, warm amber windows, crisp bevels, compact modular construction and a strong readable silhouette at 128×128. Centre the complete structure with comfortable transparent margin. No terrain scene, sky, horizon, rectangular backdrop, people, readable text, logos, company marks, registration numbers, UI, border or watermark. Show a complete mature reference configuration that clearly communicates the building identity without representing a numbered gameplay level. Building identity and required functional content: Exterior of a serviced habitat: sealed residential volume with a life-support plant and climate-control machines on the service wall. No readable text, logos, names, company marks or registration numbers.",
       "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records. Canonical identity art follows the MineIT Mobile isometric style; separate linked L1-L5 presentation images are materialised in building-mobile-level-images.json."
     },
     "mobileLevelAtlas": {
       "key": "assets/art/universe/buildings/mobile-levels/atlases/building-habitat-levels-256.webp",
-      "generated": false,
-      "status": "not-generated",
+      "generated": true,
+      "status": "generated",
       "frameWidth": 256,
       "frameHeight": 256,
       "frameOrder": [
