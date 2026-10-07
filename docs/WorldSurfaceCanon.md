@@ -81,7 +81,7 @@ Koplin 3 is source-canonical: rocky planet, Verdant World, breathable, mixed lan
 
 A landscape tileset is world-specific Mobile grid art. It is not a frozen map and not a reusable visual-library series.
 
-Each tile is one landform/biome pair (or a hydrosphere-only water tile) drawn with a shared camera, sun direction and palette so neighbouring squares look like one landscape. Mountain tiles must read as a continuous range, not an isolated centred peak.
+Each tile is one landform/biome pair (or a hydrosphere-only visible liquid/ice tile) drawn with a shared camera, sun direction and palette so neighbouring squares look like one landscape. Mountain tiles must read as a continuous range, not an isolated centred peak.
 
 Koplin 3 currently has a complete set covering all twelve landforms in grassland, forest, wetland and tundra, plus ocean, lake and river tiles. Other named worlds get their own set when authored; they must not reuse Koplin 3 art.
 
