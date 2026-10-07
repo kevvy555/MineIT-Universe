@@ -15,9 +15,9 @@ The Mobile overhaul art boundary has four relevant groups:
 | Canonical building identity art | 12 | 12 | Complete after generation |
 | MineIT Mobile building level art | 50 migrated | 70 | Complete after generation |
 | Koplin 3 bespoke landscape tiles | 55 | 0 | Complete |
-| Generic generated-world landscape library | 16 migrated | 124 | Complete after generation |
+| Generic generated-world landscape library | 16 migrated | 126 | Complete after generation |
 
-Revised total for the overhaul art phase: **291 images** (7 Food, 24 canonical building images, 120 Mobile L1-L5 building images and 140 generic landscape variants). Android migration completed 76 of these images; **206 images remain to generate**.
+Revised total for the overhaul art phase: **293 images** (7 Food, 24 canonical building images, 120 Mobile L1-L5 building images and 142 generic landscape variants). Android migration completed 76 of these images at queue preparation; **208 images were queued for generation**, with live completion state tracked by each record's image metadata.
 
 ## 1. Resources
 
@@ -84,9 +84,9 @@ Koplin 3 already has a complete bespoke authored tileset with 55 generated image
 Generated worlds need a separate reusable, identity-neutral fallback. The new queue `data/visual-assets-mobile-landscape.json` contains:
 
 - 120 base land tiles = 12 landforms x 10 biomes;
-- 8 base visible surface-water tiles;
+- 10 base visible surface-liquid/water/ice tiles;
 - 12 additional migrated variants: plains/grassland, hills/grassland, mountains/grassland and lake variants 02-04;
-- **140 total generic landscape images**.
+- **142 total generic landscape images**.
 
 Landforms:
 
@@ -126,8 +126,12 @@ Visible water families:
 - `hydrosphere-brine`
 - `hydrosphere-mineral-rich-water`
 - `hydrosphere-frozen-water`
+- `hydrosphere-hydrocarbon-liquid`
+- `hydrosphere-corrosive-liquid`
 
-`hydrosphere-none` and `hydrosphere-subsurface-aquifer` intentionally have no standalone water image.
+`hydrosphere-none` and `hydrosphere-subsurface-aquifer` intentionally have no standalone visible-liquid image.
+
+The two additional hostile-world liquid tiles prevent Titan-Class methane/ethane lakes and Corrosive/Hellworld chemical pools from being rendered as ordinary blue water.
 
 Generic generated-world art lives under:
 
