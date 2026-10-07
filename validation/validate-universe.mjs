@@ -577,7 +577,7 @@ if (mobileBiology.find(resource => resource.id === 'mobile-food-edible-flora')?.
 
 const mobileLandscapeAssets = collections.visualAssets ?? [];
 const migratedVariantCount = 12;
-const expectedGenericLandscapeCount = (collections.surfaceLandforms ?? []).length * (collections.surfaceBiomes ?? []).length + 8 + migratedVariantCount;
+const expectedGenericLandscapeCount = (collections.surfaceLandforms ?? []).length * (collections.surfaceBiomes ?? []).length + 10 + migratedVariantCount;
 if (mobileLandscapeAssets.length !== expectedGenericLandscapeCount) {
   errors.push(`Generated-world Mobile landscape library must contain ${expectedGenericLandscapeCount} assets; found ${mobileLandscapeAssets.length}.`);
 }
