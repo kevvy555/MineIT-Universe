@@ -81,6 +81,24 @@
     "canonStatus": "working canon"
   },
   {
+    "id": "hydrosphere-hydrocarbon-liquid",
+    "name": "Hydrocarbon liquid",
+    "layer": "hydrosphere",
+    "description": "Surface methane/ethane or comparable hydrocarbon liquid on cryogenic worlds.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  },
+  {
+    "id": "hydrosphere-corrosive-liquid",
+    "name": "Corrosive liquid",
+    "layer": "hydrosphere",
+    "description": "Chemically hostile acidic, alkaline or otherwise corrosive standing surface liquid.",
+    "sourceDocumentId": "lore-koplin-world-surface",
+    "sourceSection": "6. Land squares: landform, biome, water, feature",
+    "canonStatus": "working canon"
+  },
+  {
     "id": "hydrosphere-subsurface-aquifer",
     "name": "Subsurface aquifer",
     "layer": "hydrosphere",
