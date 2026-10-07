@@ -1208,8 +1208,8 @@
     "level": 1,
     "image": {
       "key": "assets/art/universe/buildings/mobile-levels/building-headquarters-l1.webp",
-      "generated": false,
-      "status": "not-generated",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile building tile on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent three-quarter elevated angle, matching the established Mobile development-building language: clean rounded white ceramic/composite shells, charcoal structural frames and platforms, vivid orange trim and safety rails, restrained electric-blue emissive details, warm amber windows, crisp bevels, compact modular construction and a strong readable silhouette at 128×128. Centre the complete structure with comfortable transparent margin. No terrain scene, sky, horizon, rectangular backdrop, people, readable text, logos, company marks, registration numbers, UI, border or watermark. Level 1 progression: a compact starter installation with the minimum functional modules, one clear primary structure, sparse support equipment and the simplest readable silhouette. Preserve this building's identity and required functional content across the progression: The principal command and administrative centre of a colony, coordinating local infrastructure, workforce and operational control. Specific visual requirements: Exterior of colony headquarters: stone and metal admin block with a control annex of colony operations computers behind dark glass, no readable maps or logos. No readable text, logos, names, company marks or registration numbers.",
       "notes": "MineIT Mobile level-1 presentation for building-headquarters. Store the lossless PNG under assets/art/universe/buildings/mobile-levels/Originals/building-headquarters-l1.png and publish the WebP at image.key. This is a game-facing progression view linked to the canonical building identity, not a separate building entity."
     }
@@ -1223,8 +1223,8 @@
     "level": 2,
     "image": {
       "key": "assets/art/universe/buildings/mobile-levels/building-headquarters-l2.webp",
-      "generated": false,
-      "status": "not-generated",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile building tile on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent three-quarter elevated angle, matching the established Mobile development-building language: clean rounded white ceramic/composite shells, charcoal structural frames and platforms, vivid orange trim and safety rails, restrained electric-blue emissive details, warm amber windows, crisp bevels, compact modular construction and a strong readable silhouette at 128×128. Centre the complete structure with comfortable transparent margin. No terrain scene, sky, horizon, rectangular backdrop, people, readable text, logos, company marks, registration numbers, UI, border or watermark. Level 2 progression: retain the Level 1 design language and core layout, then add one meaningful functional module, reinforced platforms, extra utilities and modest capacity without becoming dense. Preserve this building's identity and required functional content across the progression: The principal command and administrative centre of a colony, coordinating local infrastructure, workforce and operational control. Specific visual requirements: Exterior of colony headquarters: stone and metal admin block with a control annex of colony operations computers behind dark glass, no readable maps or logos. No readable text, logos, names, company marks or registration numbers.",
       "notes": "MineIT Mobile level-2 presentation for building-headquarters. Store the lossless PNG under assets/art/universe/buildings/mobile-levels/Originals/building-headquarters-l2.png and publish the WebP at image.key. This is a game-facing progression view linked to the canonical building identity, not a separate building entity."
     }
@@ -1238,8 +1238,8 @@
     "level": 3,
     "image": {
       "key": "assets/art/universe/buildings/mobile-levels/building-headquarters-l3.webp",
-      "generated": false,
-      "status": "not-generated",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile building tile on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent three-quarter elevated angle, matching the established Mobile development-building language: clean rounded white ceramic/composite shells, charcoal structural frames and platforms, vivid orange trim and safety rails, restrained electric-blue emissive details, warm amber windows, crisp bevels, compact modular construction and a strong readable silhouette at 128×128. Centre the complete structure with comfortable transparent margin. No terrain scene, sky, horizon, rectangular backdrop, people, readable text, logos, company marks, registration numbers, UI, border or watermark. Level 3 progression: an established mid-tier compound evolved from the lower levels, with several connected modules, increased capacity, moderate verticality and balanced operational detail. Preserve this building's identity and required functional content across the progression: The principal command and administrative centre of a colony, coordinating local infrastructure, workforce and operational control. Specific visual requirements: Exterior of colony headquarters: stone and metal admin block with a control annex of colony operations computers behind dark glass, no readable maps or logos. No readable text, logos, names, company marks or registration numbers.",
       "notes": "MineIT Mobile level-3 presentation for building-headquarters. Store the lossless PNG under assets/art/universe/buildings/mobile-levels/Originals/building-headquarters-l3.png and publish the WebP at image.key. This is a game-facing progression view linked to the canonical building identity, not a separate building entity."
     }
@@ -1253,8 +1253,8 @@
     "level": 4,
     "image": {
       "key": "assets/art/universe/buildings/mobile-levels/building-headquarters-l4.webp",
-      "generated": false,
-      "status": "not-generated",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile building tile on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent three-quarter elevated angle, matching the established Mobile development-building language: clean rounded white ceramic/composite shells, charcoal structural frames and platforms, vivid orange trim and safety rails, restrained electric-blue emissive details, warm amber windows, crisp bevels, compact modular construction and a strong readable silhouette at 128×128. Centre the complete structure with comfortable transparent margin. No terrain scene, sky, horizon, rectangular backdrop, people, readable text, logos, company marks, registration numbers, UI, border or watermark. Level 4 progression: an advanced expanded complex evolved from Level 3, with multiple major modules, stronger vertical elements, sophisticated support infrastructure and a dense but readable silhouette. Preserve this building's identity and required functional content across the progression: The principal command and administrative centre of a colony, coordinating local infrastructure, workforce and operational control. Specific visual requirements: Exterior of colony headquarters: stone and metal admin block with a control annex of colony operations computers behind dark glass, no readable maps or logos. No readable text, logos, names, company marks or registration numbers.",
       "notes": "MineIT Mobile level-4 presentation for building-headquarters. Store the lossless PNG under assets/art/universe/buildings/mobile-levels/Originals/building-headquarters-l4.png and publish the WebP at image.key. This is a game-facing progression view linked to the canonical building identity, not a separate building entity."
     }
@@ -1268,8 +1268,8 @@
     "level": 5,
     "image": {
       "key": "assets/art/universe/buildings/mobile-levels/building-headquarters-l5.webp",
-      "generated": false,
-      "status": "not-generated",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile building tile on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent three-quarter elevated angle, matching the established Mobile development-building language: clean rounded white ceramic/composite shells, charcoal structural frames and platforms, vivid orange trim and safety rails, restrained electric-blue emissive details, warm amber windows, crisp bevels, compact modular construction and a strong readable silhouette at 128×128. Centre the complete structure with comfortable transparent margin. No terrain scene, sky, horizon, rectangular backdrop, people, readable text, logos, company marks, registration numbers, UI, border or watermark. Level 5 progression: the flagship maximum-development form evolved from Level 4, a large cohesive complex with multiple specialised modules, the greatest verticality and capacity, refined infrastructure and the richest readable detail. Preserve this building's identity and required functional content across the progression: The principal command and administrative centre of a colony, coordinating local infrastructure, workforce and operational control. Specific visual requirements: Exterior of colony headquarters: stone and metal admin block with a control annex of colony operations computers behind dark glass, no readable maps or logos. No readable text, logos, names, company marks or registration numbers.",
       "notes": "MineIT Mobile level-5 presentation for building-headquarters. Store the lossless PNG under assets/art/universe/buildings/mobile-levels/Originals/building-headquarters-l5.png and publish the WebP at image.key. This is a game-facing progression view linked to the canonical building identity, not a separate building entity."
     }
@@ -1283,8 +1283,8 @@
     "level": 1,
     "image": {
       "key": "assets/art/universe/buildings/mobile-levels/building-research-building-l1.webp",
-      "generated": false,
-      "status": "not-generated",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile building tile on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent three-quarter elevated angle, matching the established Mobile development-building language: clean rounded white ceramic/composite shells, charcoal structural frames and platforms, vivid orange trim and safety rails, restrained electric-blue emissive details, warm amber windows, crisp bevels, compact modular construction and a strong readable silhouette at 128×128. Centre the complete structure with comfortable transparent margin. No terrain scene, sky, horizon, rectangular backdrop, people, readable text, logos, company marks, registration numbers, UI, border or watermark. Level 1 progression: a compact starter installation with the minimum functional modules, one clear primary structure, sparse support equipment and the simplest readable silhouette. Preserve this building's identity and required functional content across the progression: A dedicated research facility for analysis, modelling, experimentation and technical development. Specific visual requirements: Exterior of a research building: lab block with research-computer workstations visible through glass, clay and stone shell. No readable text, logos, names, company marks or registration numbers.",
       "notes": "MineIT Mobile level-1 presentation for building-research-building. Store the lossless PNG under assets/art/universe/buildings/mobile-levels/Originals/building-research-building-l1.png and publish the WebP at image.key. This is a game-facing progression view linked to the canonical building identity, not a separate building entity."
     }
@@ -1298,8 +1298,8 @@
     "level": 2,
     "image": {
       "key": "assets/art/universe/buildings/mobile-levels/building-research-building-l2.webp",
-      "generated": false,
-      "status": "not-generated",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile building tile on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent three-quarter elevated angle, matching the established Mobile development-building language: clean rounded white ceramic/composite shells, charcoal structural frames and platforms, vivid orange trim and safety rails, restrained electric-blue emissive details, warm amber windows, crisp bevels, compact modular construction and a strong readable silhouette at 128×128. Centre the complete structure with comfortable transparent margin. No terrain scene, sky, horizon, rectangular backdrop, people, readable text, logos, company marks, registration numbers, UI, border or watermark. Level 2 progression: retain the Level 1 design language and core layout, then add one meaningful functional module, reinforced platforms, extra utilities and modest capacity without becoming dense. Preserve this building's identity and required functional content across the progression: A dedicated research facility for analysis, modelling, experimentation and technical development. Specific visual requirements: Exterior of a research building: lab block with research-computer workstations visible through glass, clay and stone shell. No readable text, logos, names, company marks or registration numbers.",
       "notes": "MineIT Mobile level-2 presentation for building-research-building. Store the lossless PNG under assets/art/universe/buildings/mobile-levels/Originals/building-research-building-l2.png and publish the WebP at image.key. This is a game-facing progression view linked to the canonical building identity, not a separate building entity."
     }
@@ -1313,8 +1313,8 @@
     "level": 3,
     "image": {
       "key": "assets/art/universe/buildings/mobile-levels/building-research-building-l3.webp",
-      "generated": false,
-      "status": "not-generated",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile building tile on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent three-quarter elevated angle, matching the established Mobile development-building language: clean rounded white ceramic/composite shells, charcoal structural frames and platforms, vivid orange trim and safety rails, restrained electric-blue emissive details, warm amber windows, crisp bevels, compact modular construction and a strong readable silhouette at 128×128. Centre the complete structure with comfortable transparent margin. No terrain scene, sky, horizon, rectangular backdrop, people, readable text, logos, company marks, registration numbers, UI, border or watermark. Level 3 progression: an established mid-tier compound evolved from the lower levels, with several connected modules, increased capacity, moderate verticality and balanced operational detail. Preserve this building's identity and required functional content across the progression: A dedicated research facility for analysis, modelling, experimentation and technical development. Specific visual requirements: Exterior of a research building: lab block with research-computer workstations visible through glass, clay and stone shell. No readable text, logos, names, company marks or registration numbers.",
       "notes": "MineIT Mobile level-3 presentation for building-research-building. Store the lossless PNG under assets/art/universe/buildings/mobile-levels/Originals/building-research-building-l3.png and publish the WebP at image.key. This is a game-facing progression view linked to the canonical building identity, not a separate building entity."
     }
@@ -1328,8 +1328,8 @@
     "level": 4,
     "image": {
       "key": "assets/art/universe/buildings/mobile-levels/building-research-building-l4.webp",
-      "generated": false,
-      "status": "not-generated",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile building tile on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent three-quarter elevated angle, matching the established Mobile development-building language: clean rounded white ceramic/composite shells, charcoal structural frames and platforms, vivid orange trim and safety rails, restrained electric-blue emissive details, warm amber windows, crisp bevels, compact modular construction and a strong readable silhouette at 128×128. Centre the complete structure with comfortable transparent margin. No terrain scene, sky, horizon, rectangular backdrop, people, readable text, logos, company marks, registration numbers, UI, border or watermark. Level 4 progression: an advanced expanded complex evolved from Level 3, with multiple major modules, stronger vertical elements, sophisticated support infrastructure and a dense but readable silhouette. Preserve this building's identity and required functional content across the progression: A dedicated research facility for analysis, modelling, experimentation and technical development. Specific visual requirements: Exterior of a research building: lab block with research-computer workstations visible through glass, clay and stone shell. No readable text, logos, names, company marks or registration numbers.",
       "notes": "MineIT Mobile level-4 presentation for building-research-building. Store the lossless PNG under assets/art/universe/buildings/mobile-levels/Originals/building-research-building-l4.png and publish the WebP at image.key. This is a game-facing progression view linked to the canonical building identity, not a separate building entity."
     }
@@ -1343,8 +1343,8 @@
     "level": 5,
     "image": {
       "key": "assets/art/universe/buildings/mobile-levels/building-research-building-l5.webp",
-      "generated": false,
-      "status": "not-generated",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile building tile on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent three-quarter elevated angle, matching the established Mobile development-building language: clean rounded white ceramic/composite shells, charcoal structural frames and platforms, vivid orange trim and safety rails, restrained electric-blue emissive details, warm amber windows, crisp bevels, compact modular construction and a strong readable silhouette at 128×128. Centre the complete structure with comfortable transparent margin. No terrain scene, sky, horizon, rectangular backdrop, people, readable text, logos, company marks, registration numbers, UI, border or watermark. Level 5 progression: the flagship maximum-development form evolved from Level 4, a large cohesive complex with multiple specialised modules, the greatest verticality and capacity, refined infrastructure and the richest readable detail. Preserve this building's identity and required functional content across the progression: A dedicated research facility for analysis, modelling, experimentation and technical development. Specific visual requirements: Exterior of a research building: lab block with research-computer workstations visible through glass, clay and stone shell. No readable text, logos, names, company marks or registration numbers.",
       "notes": "MineIT Mobile level-5 presentation for building-research-building. Store the lossless PNG under assets/art/universe/buildings/mobile-levels/Originals/building-research-building-l5.png and publish the WebP at image.key. This is a game-facing progression view linked to the canonical building identity, not a separate building entity."
     }
