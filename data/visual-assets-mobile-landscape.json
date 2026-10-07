@@ -193,8 +193,8 @@
     "description": "Reusable generated-world Mobile landscape tile for plains with toxic wasteland cover.",
     "image": {
       "key": "assets/art/visual-library/landscape/mobile/visual-landscape-generated-plains-toxic-wasteland-01.webp",
-      "generated": false,
-      "status": "not-generated",
+      "generated": true,
+      "status": "generated",
       "promptDescription": "Perfect 1:1 full-bleed square for the MineIT Mobile generated-world landscape library. Straight-down orthographic/nadir aerial view, camera about 500 m altitude, no horizon and no sky. Sun from upper left, shadows lower right. Grounded semi-realistic planetary terrain with natural scale and texture, designed to remain immediately readable at 128×128 on an 8×8 colony grid. Terrain must continue naturally off all four edges so neighbouring tiles can join. No UI, text, border, buildings, roads, people, vehicles, machinery, colony objects or resource markers. Depict broad low-relief open ground with gentle natural variation, covered by chemically hostile mineral crusts and stained ground in muted sulfur yellow, oxidised orange and sickly green-grey, sparse or absent life, grounded rather than neon fantasy. The landform must dominate the macro shape and the biome must read as surface cover rather than replacing the relief.",
       "notes": "Reusable identity-neutral generated-world tile. Store lossless PNG under assets/art/visual-library/landscape/mobile/Originals/<asset-id>.png. Do not substitute bespoke Koplin/world-specific art."
     }
