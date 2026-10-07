@@ -38,7 +38,9 @@
       "hydrosphere-river"
     ],
     "surfaceAssignmentStatus": "source-canonical",
-    "landscapeTilesetId": "landscape-tileset-koplin-3"
+    "landscapeTilesetId": "landscape-tileset-koplin-3",
+    "capitalSettlementId": "settlement-concordia",
+    "worldAtlasId": "world-atlas-koplin-3"
   },
   {
     "id": "moon-koplin-3-a",
