@@ -2809,5 +2809,47 @@
       "promptDescription": "Perfect 1:1 full-bleed square for the MineIT Mobile generated-world landscape library. Straight-down orthographic/nadir aerial view, camera about 500 m altitude, no horizon and no sky. Sun from upper left, shadows lower right. Grounded semi-realistic planetary terrain with natural scale and texture, designed to remain immediately readable at 128×128 on an 8×8 colony grid. Terrain must continue naturally off all four edges so neighbouring tiles can join. No UI, text, border, buildings, roads, people, vehicles, machinery, colony objects or resource markers. Depict an inland lake filling most of the square with a natural irregular shoreline continuing across tile edges; neutral rocky/soil margins, no named-world vegetation palette. Water or ice continues naturally off all relevant edges for grid adjacency.",
       "notes": "Reusable identity-neutral generated-world water tile. Store lossless PNG under assets/art/visual-library/landscape/mobile/Originals/<asset-id>.png. hydrosphere-none and subsurface-aquifer intentionally have no visible standalone water tile. Migrated variant 4 from the established MineIT Android terrain artwork."
     }
+  },
+  {
+    "id": "visual-landscape-generated-hydrocarbon-liquid-01",
+    "name": "Generated Landscape hydrocarbon liquid 01",
+    "seriesId": "visual-series-mobile-generated-landscape",
+    "assetType": "mobile-landscape-water-tile",
+    "intendedGameId": "game-mineit-mobile",
+    "identityNeutral": true,
+    "landformId": null,
+    "biomeId": null,
+    "hydrosphereId": "hydrosphere-hydrocarbon-liquid",
+    "adjacencyRole": "standing-water",
+    "variant": 1,
+    "description": "Reusable generated-world Mobile landscape liquid tile for cryogenic hydrocarbon lakes and pools.",
+    "image": {
+      "key": "assets/art/visual-library/landscape/mobile/visual-landscape-generated-hydrocarbon-liquid-01.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Perfect 1:1 full-bleed square for the MineIT Mobile generated-world landscape library. Straight-down orthographic/nadir aerial view, camera about 500 m altitude, no horizon and no sky. Sun from upper left, shadows lower right. Grounded semi-realistic planetary terrain with natural scale and texture, designed to remain immediately readable at 128×128 on an 8×8 colony grid. Terrain must continue naturally off all four edges so neighbouring tiles can join. No UI, text, border, buildings, roads, people, vehicles, machinery, colony objects or resource markers. Depict a broad cryogenic methane/ethane lake or connected hydrocarbon pool filling most of the tile, with dark charcoal-brown to near-black liquid, subdued oily specular reflections and pale frozen ice-rock or hydrocarbon-frost margins. It must read immediately as an alien cryogenic hydrocarbon liquid rather than ordinary blue water, while remaining physically grounded and not neon or fantasy-glowing. Liquid and shoreline continue naturally off relevant edges for grid adjacency.",
+      "notes": "Reusable identity-neutral generated-world liquid tile. Store lossless PNG under assets/art/visual-library/landscape/mobile/Originals/<asset-id>.png. Do not substitute bespoke Koplin/world-specific art."
+    }
+  },
+  {
+    "id": "visual-landscape-generated-corrosive-liquid-01",
+    "name": "Generated Landscape corrosive liquid 01",
+    "seriesId": "visual-series-mobile-generated-landscape",
+    "assetType": "mobile-landscape-water-tile",
+    "intendedGameId": "game-mineit-mobile",
+    "identityNeutral": true,
+    "landformId": null,
+    "biomeId": null,
+    "hydrosphereId": "hydrosphere-corrosive-liquid",
+    "adjacencyRole": "standing-water",
+    "variant": 1,
+    "description": "Reusable generated-world Mobile landscape liquid tile for chemically hostile corrosive pools.",
+    "image": {
+      "key": "assets/art/visual-library/landscape/mobile/visual-landscape-generated-corrosive-liquid-01.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Perfect 1:1 full-bleed square for the MineIT Mobile generated-world landscape library. Straight-down orthographic/nadir aerial view, camera about 500 m altitude, no horizon and no sky. Sun from upper left, shadows lower right. Grounded semi-realistic planetary terrain with natural scale and texture, designed to remain immediately readable at 128×128 on an 8×8 colony grid. Terrain must continue naturally off all four edges so neighbouring tiles can join. No UI, text, border, buildings, roads, people, vehicles, machinery, colony objects or resource markers. Depict a broad chemically hostile acidic or alkaline surface pool filling most of the tile, with murky yellow-green, sulphur-ochre and mineral-stained liquid, pale crusted deposits and corrosion-stained rocky margins. The liquid should look dangerous through believable chemistry and mineral colour rather than bright neon, magical glow or cartoon slime. Liquid and shoreline continue naturally off relevant edges for grid adjacency.",
+      "notes": "Reusable identity-neutral generated-world liquid tile. Store lossless PNG under assets/art/visual-library/landscape/mobile/Originals/<asset-id>.png. Do not substitute bespoke Koplin/world-specific art."
+    }
   }
 ]
