@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5,viewport-fit=cover">
+  <meta name="theme-color" content="#081015">
+  <title>MineIT Universe World Atlas</title>
+  <link rel="stylesheet" href="./css/universe.css">
+  <link rel="stylesheet" href="./css/world-atlas.css">
+</head>
+<body class="atlasPage">
+  <div class="atlasApp">
+    <header class="topbar atlasTopbar">
+      <div class="title">
+        <small>MINEIT UNIVERSE</small>
+        <strong>World Atlas</strong>
+      </div>
+      <a class="version" href="./index.html">DIRECTORY</a>
+      <a class="version" href="./commercial-network.html">BUYERS</a>
+      <a class="version" href="./ship-catalogue.html">SHIPS</a>
+      <a class="version" href="./lore.html">LORE</a>
+      <div class="version atlasVersion" id="atlasVersion">Loading…</div>
+    </header>
+
+    <section class="atlasBar">
+      <div class="atlasIdentity">
+        <div class="atlasEyebrow" id="atlasEyebrow">CANONICAL SURFACE ATLAS</div>
+        <h1 id="atlasTitle">Loading atlas…</h1>
+        <div class="atlasSummary" id="atlasSummary"></div>
+      </div>
+      <div class="atlasControls" aria-label="Atlas controls">
+        <select id="atlasSelect" class="atlasSelect" aria-label="Choose world atlas"></select>
+        <button type="button" id="zoomOut" aria-label="Zoom out">−</button>
+        <button type="button" id="zoomIn" aria-label="Zoom in">+</button>
+        <button type="button" id="fitMap">Fit</button>
+        <button type="button" id="homeMap">Centre</button>
+        <label class="atlasToggle"><input type="checkbox" id="showLabels"> Labels</label>
+      </div>
+    </section>
+
+    <main class="atlasWorkspace">
+      <section class="atlasViewport" id="atlasViewport" aria-label="Pan and zoom world atlas">
+        <div class="atlasStage" id="atlasStage">
+          <div class="atlasGrid" id="atlasGrid"></div>
+        </div>
+        <div class="atlasHint">Drag to pan • wheel or pinch to zoom • tap a tile for details</div>
+        <div class="atlasScale" id="atlasScale">1 tile = 1 km × 1 km</div>
+        <div class="atlasLoad" id="atlasLoad" aria-live="polite"></div>
+      </section>
+
+      <aside class="atlasInfo" id="atlasInfo" aria-live="polite">
+        <div class="atlasInfoEmpty">
+          <div class="atlasInfoKicker">KOPLIN 3</div>
+          <h2>Explore Concordia</h2>
+          <p>Pan across the joined 1 km surface tiles, zoom in for detail, and select any tile to inspect its canonical atlas metadata.</p>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script type="module" src="./js/world-atlas.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+:root{--atlas-control:#0d171d;--atlas-info:rgba(7,14,19,.96)}
+.atlasPage{overscroll-behavior:none}
+.atlasApp{height:100vh;height:100dvh;display:grid;grid-template-rows:auto auto minmax(0,1fr);overflow:hidden;background:#05090c}
+.atlasTopbar .version{text-decoration:none;color:var(--accent)}
+.atlasVersion{color:var(--muted)!important}
+.atlasBar{display:flex;align-items:center;gap:14px;padding:8px 10px;border-bottom:1px solid var(--line);background:#071016;min-width:0}
+.atlasIdentity{min-width:0;flex:1}
+.atlasEyebrow{font-size:8px;letter-spacing:.14em;color:var(--accent2);font-weight:900}
+.atlasIdentity h1{margin:1px 0 2px;font-size:16px;line-height:1.05;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.atlasSummary{color:var(--muted);font-size:9px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.atlasControls{display:flex;align-items:center;gap:5px;flex-wrap:wrap;justify-content:flex-end}
+.atlasControls button,.atlasSelect,.atlasToggle{min-height:34px;border:1px solid var(--line);background:var(--atlas-control);color:var(--text);border-radius:6px;font-size:10px;font-weight:800}
+.atlasControls button{min-width:38px;padding:0 10px}
+.atlasControls button:active{background:#183142}
+.atlasSelect{max-width:210px;padding:0 26px 0 8px}
+.atlasToggle{display:flex;align-items:center;gap:5px;padding:0 8px;white-space:nowrap}
+.atlasToggle input{accent-color:var(--accent)}
+.atlasWorkspace{min-height:0;display:grid;grid-template-columns:minmax(0,1fr) 310px;overflow:hidden}
+.atlasViewport{position:relative;min-width:0;min-height:0;overflow:hidden;background:radial-gradient(circle at 50% 50%,rgba(31,70,91,.18),transparent 42%),linear-gradient(45deg,#071015 25%,#081219 25%,#081219 50%,#071015 50%,#071015 75%,#081219 75%);background-size:auto,24px 24px;touch-action:none;cursor:grab;user-select:none}
+.atlasViewport.dragging{cursor:grabbing}
+.atlasStage{position:absolute;left:0;top:0;transform-origin:0 0;will-change:transform}
+.atlasGrid{position:relative;width:100%;height:100%}
+.atlasTile{position:absolute;width:513px;height:513px;margin:0;padding:0;border:0;background:#10202a;overflow:hidden;cursor:pointer}
+.atlasTile img{display:block;width:100%;height:100%;object-fit:cover;pointer-events:none;user-select:none}
+.atlasTile::after{content:"";position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 0 0 rgba(103,200,255,0);transition:box-shadow .12s ease}
+.atlasTile:hover::after{box-shadow:inset 0 0 0 4px rgba(103,200,255,.55)}
+.atlasTile.selected::after{box-shadow:inset 0 0 0 7px rgba(103,200,255,.95),inset 0 0 30px rgba(0,0,0,.35)}
+.atlasTile.origin::before{content:"CAPITAL CENTRE";position:absolute;z-index:2;left:10px;top:10px;padding:5px 7px;border-radius:5px;background:rgba(3,10,14,.84);color:#e7f8ff;font-size:10px;font-weight:900;letter-spacing:.07em;pointer-events:none}
+.atlasTile.missing{background:repeating-linear-gradient(45deg,#311,#311 16px,#1b1010 16px,#1b1010 32px)}
+.atlasTile.missing img{display:none}
+.atlasTileLabel{position:absolute;z-index:2;left:8px;right:8px;bottom:8px;display:none;padding:6px 7px;border-radius:5px;background:rgba(2,9,13,.82);color:white;text-align:left;pointer-events:none}
+.showLabels .atlasTileLabel{display:block}
+.atlasTileLabel strong{display:block;font-size:12px;line-height:1.1}
+.atlasTileLabel span{display:block;margin-top:2px;color:#c8d9e0;font-size:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.atlasHint,.atlasScale,.atlasLoad{position:absolute;z-index:5;border:1px solid rgba(64,92,108,.85);background:rgba(4,12,17,.83);backdrop-filter:blur(7px);border-radius:7px;color:#c7d6dc;font-size:9px;font-weight:800;pointer-events:none}
+.atlasHint{left:10px;bottom:10px;padding:6px 8px}
+.atlasScale{right:10px;bottom:10px;padding:6px 8px;color:#dff4ff}
+.atlasLoad{left:10px;top:10px;padding:6px 8px;opacity:0;transition:opacity .2s}
+.atlasLoad.visible{opacity:1}
+.atlasInfo{min-width:0;overflow:auto;border-left:1px solid var(--line);background:var(--atlas-info);padding:14px}
+.atlasInfoEmpty{margin:auto 0;padding:20px 4px}
+.atlasInfoKicker{color:var(--accent2);font-size:9px;font-weight:900;letter-spacing:.14em}
+.atlasInfo h2{margin:4px 0 7px;font-size:20px;line-height:1.05}
+.atlasInfo p{margin:0;color:#cbd9de;font-size:11px;line-height:1.5}
+.atlasInfoHeader{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.atlasCoord{display:inline-flex;align-items:center;border:1px solid #3b687f;border-radius:999px;padding:4px 7px;background:#102633;color:#dff4ff;font-size:9px;font-weight:900}
+.atlasFields{margin-top:8px;border:1px solid var(--line);border-radius:7px;overflow:hidden}
+.atlasField{display:grid;grid-template-columns:90px minmax(0,1fr);gap:8px;padding:7px 8px;border-top:1px solid #17252d;font-size:10px}
+.atlasField:first-child{border-top:0}
+.atlasField span:first-child{color:var(--muted)}
+.atlasField span:last-child{color:#e3edf1;overflow-wrap:anywhere}
+.atlasActions{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.atlasActions a,.atlasActions button{border:1px solid #35576a;background:#102633;color:#e7f7ff;border-radius:6px;padding:7px 9px;text-decoration:none;font-size:10px;font-weight:800}
+.atlasActions button{font:inherit;cursor:pointer}
+.atlasTileDescription{margin-top:10px!important}
+.atlasZoomReadout{color:var(--accent);font-variant-numeric:tabular-nums}
+@media (max-width:760px){
+  .atlasBar{align-items:flex-start;flex-direction:column;gap:6px;padding:7px 8px}
+  .atlasIdentity{width:100%}
+  .atlasControls{width:100%;justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;padding-bottom:1px}
+  .atlasControls button,.atlasSelect,.atlasToggle{min-height:38px;flex:0 0 auto}
+  .atlasSelect{max-width:150px}
+  .atlasWorkspace{display:block;position:relative}
+  .atlasViewport{position:absolute;inset:0}
+  .atlasInfo{position:absolute;z-index:10;left:8px;right:8px;bottom:8px;max-height:38%;border:1px solid var(--line);border-radius:9px;background:rgba(6,14,19,.94);box-shadow:0 12px 32px rgba(0,0,0,.45);padding:10px;transform:translateY(calc(100% + 12px));transition:transform .18s ease}
+  .atlasInfo.hasSelection{transform:translateY(0)}
+  .atlasInfoEmpty{display:none}
+  .atlasHint{left:8px;bottom:8px;max-width:62%;white-space:normal}
+  .atlasScale{right:8px;bottom:8px}
+  .atlasTile.origin::before{font-size:9px}
+}
