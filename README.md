@@ -40,7 +40,8 @@ Generated expansion material that does not conflict with the source bibles may r
 - `games.html` — the three current MineIT games and how they share Universe land, worlds and substances.
 - `commercial-network.html` — persistent commercial contacts and their canonical structural resource demand.
 - `ship-catalogue.html` — factory-new Year-5326 ship catalogue grouped by manufacturer and ship line.
-- `lore.html` — full canonical lore explorer with source switching, quick-reference topics and section navigation.\n- `atlas.html` — pan-and-zoom canonical world-atlas browser; currently materialises the generated Concordia / Koplin 3 surface tiles.
+- `lore.html` — full canonical lore explorer with source switching, quick-reference topics and section navigation.
+- `atlas.html` — pan-and-zoom canonical world-atlas browser; currently materialises the generated Concordia / Koplin 3 surface tiles.
 
 ## Principles
 
@@ -79,7 +80,8 @@ index.html                  GitHub Pages Universe Directory
 games.html                  GitHub Pages games catalogue
 commercial-network.html     GitHub Pages commercial-contact browser
 ship-catalogue.html         GitHub Pages factory-new ship catalogue
-lore.html                   GitHub Pages full-lore explorer\natlas.html                  GitHub Pages pan-and-zoom canonical world atlas
+lore.html                   GitHub Pages full-lore explorer
+atlas.html                  GitHub Pages pan-and-zoom canonical world atlas
 ```
 
 Key documents:

@@ -64,8 +64,10 @@ This lets the first 100 tiles show more than a wall-to-wall city while remaining
 - `assets/art/universe/planets/planet-koplin-prime/atlas/` — published atlas WebP assets.
 - `assets/art/universe/planets/planet-koplin-prime/atlas/Originals/` — lossless PNG originals.
 
-## Website plan
+## Website browser
 
-After a useful image area exists—targeting the first 100 tiles—add a portrait-phone-compatible atlas browser. It should pan and zoom the coordinate grid, display the images in their actual spatial positions, and open a tile panel showing coordinate, district, generation order and descriptive metadata.
+`atlas.html` is the read-only canonical atlas consumer. It loads `data/manifest.json` through the shared Universe loader, reads `worldAtlases` and `worldAtlasTiles`, and positions generated images directly from canonical `(x,y)` coordinates. It does not embed a second copy of atlas data.
 
-The browser must consume the manifest-declared atlas collections. It must not embed a second copy of the atlas data.
+The browser is pan-and-zoom, supports mouse wheel and touch pinch zoom, fits or centres the current map, and opens tile metadata on selection. Images are placed edge-to-edge with a one-pixel overlap to suppress browser sub-pixel seams. Planned tiles without generated artwork are not rendered as false map coverage.
+
+The implementation remains portrait-phone compatible: the map takes the full workspace and selected-tile metadata appears as a bottom sheet on small screens.
