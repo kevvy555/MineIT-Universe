@@ -1,23 +1,36 @@
 # MineIT Mobile Overhaul Art Audit
 
-**Status:** Generation queue prepared  
-**Audit date:** 6 October 2026  
-**Branch:** `feature/mobile-overhaul-art-completion`
+**Status:** Art generation in progress; **Phase 14.5 release lock blocked by 22 remaining images**  
+**Live audit:** 9 October 2026  
+**Branch:** `feature/mobile-overhaul-art-completion`  
+**Validated source before this report:** `7140b8a2b80d1d23844c14442606007d01640993` (matches Universe `main` and the provisional Android pin)
 
-## Result
+## Current release-art completion result
 
-The Mobile overhaul art boundary has four relevant groups:
-
-| Group | Existing complete | New generation queue | Result after queue |
+| Art family | Generated/usable | Remaining | Action |
 | --- | ---: | ---: | --- |
-| Natural non-Food resources | 42 | 0 | Complete |
-| Biological/Food resources | 7 | 0 | Complete |
-| Canonical building identity art | 12 | 12 | Complete after generation |
-| MineIT Mobile building level art | 50 migrated | 70 | Complete after generation |
-| Koplin 3 bespoke landscape tiles | 55 | 0 | Complete |
-| Generic generated-world landscape library | 16 migrated | 126 | Complete after generation |
+| 42 natural non-Food resource images | 42 | 0 | Retain |
+| 7 biological/Food images | 7 | 0 | Retain |
+| 24 canonical building images | 22 | **2** | Regenerate stockpile and warehouse; both marked `needs-regeneration` |
+| 120 MineIT Mobile L1–L5 building images | 110 | **10** | Generate stockpile L1–L5, warehouse L1–L5 |
+| 55 Koplin 3 bespoke landscapes | 55 | 0 | Retain |
+| 142 generic generated-world landscapes | 133 | **9** | Generate water/liquid set |
+| 31 bundled ship-class images | 30 | **1** | Generate Pioneer Colony Transport |
 
-Revised total for the overhaul art phase: **293 images** (7 Food, 24 canonical building images, 120 Mobile L1-L5 building images and 142 generic landscape variants). Android migration completed 76 of these images at queue preparation; **208 images were queued for generation**, with live completion state tracked by each record's image metadata.
+**22 outstanding image records:** 20 have no published WebP and are correctly `not-generated`; two (stockpile and warehouse canonical building images) already have WebPs but remain `needs-regeneration`. Do not mark them `generated` just to satisfy Android. For this overhaul's new 293-image art set (7 Food + 24 buildings + 120 Mobile building levels + 142 generated-world landscapes), **272 are usable and 21 remain**; the additional ship-class image accounts for the 22nd release blocker.
+
+### Exact remaining canonical records
+
+- `data/buildings.json`: `building-stockpile`, `building-warehouse`.
+- `data/building-mobile-level-images.json`: `mobile-building-stockpile-l1` through `-l5`; `mobile-building-warehouse-l1` through `-l5`.
+- `data/visual-assets-mobile-landscape.json`: `visual-landscape-generated-ocean-01`, `visual-landscape-generated-river-01`, `visual-landscape-generated-fresh-water-01`, `visual-landscape-generated-saltwater-01`, `visual-landscape-generated-brine-01`, `visual-landscape-generated-mineral-rich-water-01`, `visual-landscape-generated-frozen-water-01`, `visual-landscape-generated-hydrocarbon-liquid-01`, `visual-landscape-generated-corrosive-liquid-01`.
+- `data/ship-classes-game.json`: `ship-class-asterion-pioneer-colony-transport`.
+
+**Generation rules:** Follow `docs/ImageGenerationProcess.md` and each record's approved `image.promptDescription`. Generate the correct native lossless PNG under the paired `Originals/` path and the published WebP at `image.key`, review quality, then update truthful metadata in the same commit. Building L1–L5 variants must visibly progress in the approved white/charcoal/orange isometric style. No generic liquid art may be substituted for Koplin's bespoke tiles; hydrocarbon and corrosive surfaces must remain visually distinguishable from blue water. Do not re-render the already generated sets.
+
+**Ready-to-lock gate:** canonical Universe CI green at the final art commit, every image record `generated` or `approved` with both files, then exact immutable Android pin + full asset sync, no placeholders, complete checksum coverage and full emulator/signer CI. The provisional `development-art-incomplete` Android pin is not a production lock.
+
+---
 
 ## 1. Resources
 
@@ -155,12 +168,12 @@ Generation should follow `docs/ImageGenerationProcess.md`.
 
 This art phase is complete when:
 
-- all 291 overhaul images have lossless PNG originals and published WebPs;
+- all 293 overhaul images (plus the required Pioneer Colony Transport class art) have lossless PNG originals and published WebPs;
 - each corresponding `image.generated` is `true`;
 - each corresponding `image.status` is `generated` or `approved`;
 - repository validation passes;
 - no generated record points to a missing file;
 - Directory/catalogue rendering is checked where applicable;
-- the resulting exact Universe commit becomes the Android Phase-2 pin.
+- the resulting exact Universe commit becomes the Android Phase 14.5 production-art pin.
 
 Until then, Android should treat `3e128e6b3f48b4f8d0d8e6fe886786dfe2c57b46` as the previous validated baseline, not the final overhaul art pin.
