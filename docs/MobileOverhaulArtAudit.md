@@ -28,6 +28,8 @@
 
 **Generation rules:** Follow `docs/ImageGenerationProcess.md` and each record's approved `image.promptDescription`. Generate the correct native lossless PNG under the paired `Originals/` path and the published WebP at `image.key`, review quality, then update truthful metadata in the same commit. Building L1–L5 variants must visibly progress in the approved white/charcoal/orange isometric style. No generic liquid art may be substituted for Koplin's bespoke tiles; hydrocarbon and corrosive surfaces must remain visually distinguishable from blue water. Do not re-render the already generated sets.
 
+**Validator enforcement:** `validation/validate-universe.mjs` now verifies that every published/generated Mobile resource, Food, building, building level, authored/generic landscape and ship-class WebP has its matching `Originals/<same-stem>.png`; this is a source-side invariant, not an Android-local file replacement.
+
 **Ready-to-lock gate:** canonical Universe CI green at the final art commit, every image record `generated` or `approved` with both files, then exact immutable Android pin + full asset sync, no placeholders, complete checksum coverage and full emulator/signer CI. The provisional `development-art-incomplete` Android pin is not a production lock.
 
 ---

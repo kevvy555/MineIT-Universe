@@ -1,5 +1,5 @@
 import { readFile, access } from 'node:fs/promises';
-import { dirname, resolve } from 'node:path';
+import { basename, dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const here = dirname(fileURLToPath(import.meta.url));
@@ -26,6 +26,11 @@ const warnings = [];
 const byId = new Map();
 const idPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const imageStatuses = new Set(['not-generated', 'in-progress', 'generated', 'approved', 'needs-regeneration']);
+// Mobile canonical artwork must retain the original lossless PNG alongside its WebP.
+const mobileOriginalCollections = new Set([
+  'mobileResourceDefinitions', 'mobileBiologicalResources', 'buildings',
+  'buildingMobileLevelImages', 'landscapeTiles', 'visualAssets', 'shipClasses',
+]);
 
 if (!Number.isInteger(manifest.canonicalYear)) errors.push('manifest.canonicalYear must be an integer.');
 if (!Number.isInteger(manifest.civilisationBaselineYear)) errors.push('manifest.civilisationBaselineYear must be an integer.');
@@ -57,6 +62,16 @@ for (const [collectionName, records] of Object.entries(collections)) {
       if (record.image.generated && record.image.key) {
         try { await access(resolve(repoRoot, record.image.key)); }
         catch { errors.push(`${record.id}: image is marked generated but asset is missing at ${record.image.key}.`); }
+        if (mobileOriginalCollections.has(collectionName)) {
+          const imageKey = record.image.key;
+          if (!imageKey.endsWith('.webp')) {
+            errors.push(`${record.id}: published Mobile image must be a WebP at ${imageKey}.`);
+          } else {
+            const originalPath = resolve(repoRoot, dirname(imageKey), 'Originals', basename(imageKey, '.webp') + '.png');
+            try { await access(originalPath); }
+            catch { errors.push(`${record.id}: generated Mobile art is missing original PNG at ${originalPath}.`); }
+          }
+        }
       }
     }
   }
