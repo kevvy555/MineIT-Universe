@@ -23,8 +23,8 @@ This is the **shared mechanics and concepts** layer beneath [canonical lore/data
 | [Industrial economy](industrial-economy/README.md) | Common Parts/Machinery/assets, future processing/manufacturing, D00–D11 | Stage 1 deep discovery, taxonomy unresolved |
 | [Assets and logistics](assets-and-logistics/README.md) | Asset lifecycle, ships, stations, rigs, fleets | Initial synthesis |
 | [Commerce and corporations](commerce-and-corporations/README.md) | Corporate ownership, procurement and long-range economies | Initial synthesis |
-| Colonies and population | Shared needs/workforce/life-support principles | Planned — not written |
-| Technology and progression | Shared research and capability categories | Planned — not written |
+| [Colonies and population](colonies-and-population/README.md) | Survival, food/water/air safety, local power/maintenance dependencies | Initial synthesis |
+| [Technology and progression](technology-and-progression/README.md) | Knowledge versus deployed industrial capability and canon automation limits | Initial synthesis |
 | Decision register | Approved/open/superseded cross-game rules, with provenance | Industrial register exists; wider register planned |
 | Source register | All original source documents and reconciliation evidence | Complete path inventory; review in progress |
 
