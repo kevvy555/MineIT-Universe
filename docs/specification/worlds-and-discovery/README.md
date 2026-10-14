@@ -6,6 +6,7 @@
 
 1. [galaxy and celestial bodies](01-galaxy-and-celestial-bodies.md)
 2. [scanning and surveying](05-scanning-and-surveying.md)
+3. [world truth, provenance and depletion](06-world-truth-provenance-and-depletion.md)
 
 ## References
 
