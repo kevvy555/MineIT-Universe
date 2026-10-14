@@ -34,3 +34,23 @@ The early source correctly states that find-site labels alone are **insufficient
 ## Acceptance boundary
 
 Check current manifest collection references, published IDs, body-kind matching, surfaceAssignmentStatus provenance, landscape tile key combinations and image files, and no authored/game ownership leakage. Do not infer runtime acceptance from the legacy published-architecture heading. **The original WorldSurfaceCanon source is preserved unchanged; no lore/JSON/content edits were made in this batch.**
+
+
+## Foundation worlds companion fully reconciled — UNI-SRC-004, CANON retained
+
+Reviewed the entire [Worlds, Land and Surface Classification](../../../data/lore/Koplin_Universe_World_Surface.md) companion, **public §§1–12 and designer-truth appendices A/B**, on 14 October. The **higher-authority lore remains in place**; this chapter maps only platform-integration consequences rather than copying its world-type and P0 catalogue tables as a competing owner.
+
+Precise foundational body/terrain rules:
+
+- **Seven body kinds** differ physically: rocky planet (walkable full surface), rocky moon (walkable), asteroid (limited lump geometry), gas giant (envelope **no ground/ordinary quarry**), comet (nucleus/coma, not land-grid), star and ring system (no mining land squares). **One body kind per persistent body** is a hard world-identity constraint, not just its UI icon.
+- Rocky world-types include **20 source-era procedural names** (Barren/Scorched/Hell/Ore/Fossil/Titan-Class/Dust/Salt/Claystone/Deadwater/Verdant/Lifeworld/Corrosive/Rust/Exotic/Radiant/Crystal/Ironstone/Frozen/Vent). **Terraformed World** and **Colony World** are **authored-only civilisation statuses**, never generator random-roll kinds. Historical **Water World** is a demo/catalog label **not** a Stage-1.0 planet-type roll; liquid sea-level controls actual coverage.
+- **Nine broad atmosphere labels** including None, Trace, Thin, Breathable, Dense, Toxic, Hot greenhouse, Cryogenic and **Gas-giant envelope**, which does not apply to rocky bodies. This classification is a survivability/survey label, not a full weather/pressure/thermal fluid solver.
+- **Four independent land-square layers:** **Landform** (12 ground shapes incl plains/hills/mountains/basin/lowland/highland/plateau/valley/cliff/canyon/ridge/crater), **Biome** (10 vegetation/cover classes), **Hydrosphere** (visible or subsurface liquids/ice) and **Surface Feature** (coast/dunes/rock exposure/ice/peat/lava). A basin can be dry, a lake is *not* itself a landform, and dominant world labels are **summary** rather than complete tile-map truth.
+- A **geology province** describes crust context beneath a square, not a saved random occurrence. The companion supplies **10 specific P0 surface find-site categories** — rock fields, mud flats, forests, outcrops, exposed cliff, lakes, sand dunes, saltwater bodies, peat bogs and dry mineral beds — with material and terrain relations. Later 21 P1 advanced sites are separate catalogue evolution, not retroactively stated by this P0 lore text.
+- Authored `planets` require `celestialBodyKindId`; sufficiently known worlds also hold `worldTypeId`, `atmosphereTypeId`, dominant landform/biome/hydrosphere IDs and explicit `surfaceAssignmentStatus` of **source-canonical**, **inferred-from-existing-record**, or **kind-only**. Koplin 3 is an authored **Verdant/Temperate breathable half-land/half-water homeworld**, not a Water World preset. Its unnamed moons remain **kind-only** unless actual canon authors their surfaces.
+
+**Designer-truth Appendix A** says Desktop source algorithms such as constrained rolls, Stage 1 centroids, sea-level amplitude, 2–5 per-cell steps, spawn hashes and `TerrainTuning` are *engineering provenance only*. **Appendix B** supplies P0 find-site class references, not random rarity. The companion deliberately excludes map seeds/cells, generated deposits, resource quality/reserve, player-created colonies, weather scheduling and per-save mines.
+
+Shared vocabulary supports three distinct products: Desktop 3D walkable world, Mobile 8×8 square view using bespoke ID-keyed landscape tiles, Single Mine one local site. **`games` represents these consumer products for Directory, not an organisation**. This foundation specifically forbids a gas giant forest-grid, an inferred named planet map invented from a label, or a game-specific land taxonomy becoming a parallel universe canon.
+
+Full public world-type labels and the P0 find-site/planet assignment meanings remain controlled by the [original canonical companion](../../../data/lore/Koplin_Universe_World_Surface.md) and actual authored `data/`; **no canon rewrite or procedural world generator change was made.**
