@@ -23,3 +23,20 @@ The original source also states that a Mobile world with `landscapeTilesetId` sh
 ## Traceability and validation
 
 Before promoting any claim to `IMPLEMENTED`, check actual Pages routing, manifest/schema and shard loading, failure behavior, pinned build metadata/offline startup, ID resolution, asset keys, and save-version compatibility on a named commit/release. This chapter does not replace either game's data adapter, and does not approve runtime network fallback during gameplay.
+
+
+## Additional complete-source reconciliation: initial game integration plan (UNI-SRC-011)
+
+[MineIT Universe Integration](../../MineitUniverseDatabaseIntegration.md) was **reviewed in full on 14 October 2026**. Its source status is an **architecture plan** predating newer materialised and pinned Android integration, not a guarantee that every proposed read-only catalogue query is deployed.
+
+The historical plan established a **single read-only Universe catalogue** used by Directory and games with stable `personId`, `operationId`, `locationId`, `shipId` (and authored organisation/facility) references. Saves persist those IDs alongside **mutable** price, amount, reputation, timing, buyer satisfaction, collection ship assignment and colony facts. Do not duplicate biography, image keys, company history, logos or lore prose in save state.
+
+The plan's proposed game-side query surface included `person(id)`, `company(id)`, `operation(id)`, `facility(id)`, `location(id)`, `ship(id)`, `peopleForCompany(companyId)`, `operationsForResource(type,id)`, `procurementContactsForOperation(id)` and `shipsForCompany(id)`. These are **illustrative consuming-application API intentions**; `company` is **not** an independent canonical collection beside Universe `organisations`, and current Kotlin/desktop APIs need independent confirmation.
+
+Its buyer discovery chain is: compatible player resource → structurally needing **operation** → organisation/facility → procurement-responsible **person** → platform-derived saved offer/visit. It does **not** justify a second buyer catalogue, fixed offers in Universe or permanently assigning buyers to vessels. See [commercial identity spec](../commerce-and-corporations/02-commercial-contacts-and-offers.md).
+
+The older plan recommends a configurable GitHub Pages base URL, manifest/schema/content loading, local read-only indexes, a bundled/cached offline snapshot and incremental buyer integration, while keeping current web buyer mechanics. **Later Android build-pinned/offline Universe integration takes precedence** over optional live updates and the early 'future integration' status. Canonical civilisation exists independently of each save's procedurally generated frontier worlds/deposits/claims.
+
+The plan allows a **future shared mutable service/API** only if the wider universe itself genuinely acquires dynamic cross-game events (company promotions, wars, facility openings or player-world impacts). Even then retain two separate data concepts: immutable/reviewed canonical identity and mutable shared event/state; **GitHub Pages remains a static read-only publisher**, not a writable global simulation database.
+
+**Review status:** all original integration-plan boundaries and examples are mapped here and to linked commerce/materialisation chapters. The original's sequential implementation checklist, example identities/ship names, endpoint and read-model methods remain **historical proposals** until actual manifest, loader, consumer tests and save ID references are verified. The original source is preserved.
