@@ -29,3 +29,20 @@ The dated source's family totals say **293** images: `7 Food + 24 building ident
 Verify one-to-one resource/building IDs; distinct identity art versus level views; 1:1 landform/biome/hydrosphere keys; canonical prompt/state transitions; only permitted original/WebP paths; generated/approved file existence; authored-world priority versus reusable fallback; direct Directory rendering; and **Android's pinned snapshot**, rather than retroactively declaring an October 6 queue completed.
 
 **No PNG/WebP image, source queue, canon JSON, Kotlin mapping or historical document was modified in this documentation batch.**
+
+
+## Actual manifest/art status audit — 14 October 2026
+
+Unlike the inconsistent 6 October **source-era** queues, the present branch's manifest-backed JSON + complete Git tree can be counted directly (head `9cd760acdcb615aced82f7ccfcdc2ec8207949f2`, docs-only; `schemaVersion=12`, `contentVersion=0.14.0`):
+
+| Original 293-image scope | Total records | `generated` status | `needs-regeneration` | `not-generated` |
+| --- | ---: | ---: | ---: | ---: |
+| Seven Food identities | 7 | **7** | 0 | 0 |
+| Canonical building identities | 24 | **22** | **2** | 0 |
+| Mobile L1–L5 building views | 120 | **110** | 0 | **10** |
+| Generic generated-world landscapes | 142 | **133** | 0 | **9** |
+| **Total** | **293** | **272** | **2** | **19** |
+
+Thus **293 is a verified current *scope/record count***; **272 records are `generated` status**, **two have usable images but request regeneration**, and **19 still lack generated images**. **21 need work before complete approved art**, not 208. Do not equate `generated` with `approved`: none of these four collections carried `approved` status at the check, and **visual quality, Directory rendering, CI and Android pin parity remain unverified**.
+
+Additional separately counted source libraries: **42 natural non-Food resource identity images** and **55 Koplin-3 bespoke landscape tiles** are each marked **generated**. All six examined collections (293 + 42 + 55 = **390** records) passed a **repository path/metadata check**: no duplicate published image keys within each collection, no missing published WebP for records with `generated:true`, no missing paired PNG originals for `generated`/`approved` records, and no boolean/state mismatches. This is **not** an image-content quality review or execution of Universe validators; any broader canonical images outside these six collections were not checked.
