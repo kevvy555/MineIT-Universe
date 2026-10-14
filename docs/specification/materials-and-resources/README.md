@@ -6,6 +6,7 @@
 
 1. [material classification](01-material-classification.md)
 2. [substance canon and industrial provenance](02-substance-canon-and-industrial-provenance.md)
+3. [Mobile resource eligibility, extraction zones and biological suitability](03-mobile-occurrence-eligibility-and-depth.md)
 
 ## References
 
