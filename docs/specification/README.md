@@ -8,6 +8,8 @@ This is the **shared mechanics and concepts** layer beneath [canonical lore/data
 
 - [Design authority and repository ownership](DESIGN_AUTHORITY.md)
 - [Shared vocabulary](GLOSSARY.md)
+- [Cross-platform design ownership matrix](CROSS_PLATFORM_MATRIX.md)
+- [Standard chapter template](SPEC_TEMPLATE.md)
 - [Source inventory and reconciliation](source-register/README.md)
 - [Stage programme and open delivery](https://github.com/kevvy555/MineIT-Universe/issues/19)
 
