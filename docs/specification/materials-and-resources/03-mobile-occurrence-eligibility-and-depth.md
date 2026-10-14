@@ -75,3 +75,10 @@ Universe authored civilisation/world facts → Mobile save-seeded physical world
 Consumer should pin a **validated manifest snapshot**, never manually maintain parallel hard-eligibility lists. Names/aliases may be migration support in games but must not rewrite stable Universe identity. Visual resource art is 1:1 and identity-bearing, not a hidden quality/price signal.
 
 **Review finding:** initial source prose mixes earlier **proposed** individual extraction/world profile tables with later claims of first-pass structured completion, while actual manifest is now version 12. This chapter preserves that chronology; the **live JSON definitions/profiles/biological file and validators** decide what is materially published, not a proposal table heading. Complete source was read and reconciled as architecture/environmental model, but a full per-record current validator/consumer run remains to be completed.
+
+
+## Direct source-data consistency check — 14 October 2026
+
+Read the **live** four structured arrays under the documentation branch at source head `9cd760acdcb615aced82f7ccfcdc2ec8207949f2`: `mobile-resource-definitions.json` has **42 unique resource IDs and 42 unique Mobile keys** with group counts Build 7, Fuel 9, Ore 26; `mobile-resource-occurrence-profiles.json` has **42 unique resourceId links, all resolving one-to-one** to the definitions, with no orphan; `mobile-biological-resources.json` has **seven** Food source records; `buildings.json` has **24** building archetypes.
+
+The physical profiles were checked for accidental presence of explicit Mobile-owned key names `price`, `basePrice`, `rarityWeight`, `spawnWeight`, `reserve`, `quality`, `scanLevel`, `miningLevel`: **none** found. Every natural-resource definition examined had `genericSubstanceId` and gameplay category. This is a **bounded structural consistency check**, not a full schema validation, foreign-key audit of every world/geology reference, generator simulation or Kotlin consumer test. The full 42×zone and 42×world plausibility mapping remains owned in canonical structured records, cross-referenced to the source-era tables above.
