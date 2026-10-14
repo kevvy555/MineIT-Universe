@@ -23,7 +23,7 @@ Every source is **Indexed** until rule-level contents are reviewed. Suggested to
 | UNI-SRC-003 | [`data/lore/Koplin_Universe_Materials_And_Substances.md`](../../../data/lore/Koplin_Universe_Materials_And_Substances.md) | Lore canon (higher authority) | Indexed |
 | UNI-SRC-004 | [`data/lore/Koplin_Universe_World_Surface.md`](../../../data/lore/Koplin_Universe_World_Surface.md) | Lore canon (higher authority) | Indexed |
 | UNI-SRC-005 | [`docs/CanonSourceHierarchy.md`](../../CanonSourceHierarchy.md) | Canonical content / schema and integration | Indexed |
-| UNI-SRC-006 | [`docs/CommercialBuyerModel.md`](../../CommercialBuyerModel.md) | Canonical content / schema and integration | Indexed |
+| UNI-SRC-006 | [`docs/CommercialBuyerModel.md`](../../CommercialBuyerModel.md) | [Commercial identity and offer derivation](../commerce-and-corporations/02-commercial-contacts-and-offers.md) | **Reviewed (complete source; design mapped)**; current graph counts and game adapters unverified |
 | UNI-SRC-007 | [`docs/ImageGenerationProcess.md`](../../ImageGenerationProcess.md) | Publishing / assets | Indexed |
 | UNI-SRC-008 | [`docs/LegacyDesignCatalogueImport.md`](../../LegacyDesignCatalogueImport.md) | Historical authoring / integration | Indexed |
 | UNI-SRC-009 | [`docs/MineitUniverseCanonDesign.md`](../../MineitUniverseCanonDesign.md) | Canonical content / schema and integration | Indexed |
@@ -31,13 +31,20 @@ Every source is **Indexed** until rule-level contents are reviewed. Suggested to
 | UNI-SRC-011 | [`docs/MineitUniverseDatabaseIntegration.md`](../../MineitUniverseDatabaseIntegration.md) | Universe architecture | Indexed |
 | UNI-SRC-012 | [`docs/MobileOverhaulArtAudit.md`](../../MobileOverhaulArtAudit.md) | Historical authoring / integration | Indexed |
 | UNI-SRC-013 | [`docs/MobileResourceOccurrenceIntegration.md`](../../MobileResourceOccurrenceIntegration.md) | Canonical content / schema and integration | Indexed |
-| UNI-SRC-014 | [`docs/PublishingAndConsumers.md`](../../PublishingAndConsumers.md) | Publishing / assets | Indexed |
+| UNI-SRC-014 | [`docs/PublishingAndConsumers.md`](../../PublishingAndConsumers.md) | [Publication and consumer contract](../principles/02-publishing-and-consumer-contract.md) | **Reviewed (complete source; design mapped)**; Pages/consumer runtime unverified |
 | UNI-SRC-015 | [`docs/ShipClassRuntimeProfiles.md`](../../ShipClassRuntimeProfiles.md) | Canonical content / schema and integration | Indexed |
 | UNI-SRC-016 | [`docs/ShipbuildingSectorAndPurchaseCatalogue.md`](../../ShipbuildingSectorAndPurchaseCatalogue.md) | Canonical content / schema and integration | Indexed |
 | UNI-SRC-017 | [`docs/SubstanceCanon.md`](../../SubstanceCanon.md) | Canonical content / schema and integration | Indexed |
 | UNI-SRC-018 | [`docs/SubstanceCanonFeatureSpec.md`](../../SubstanceCanonFeatureSpec.md) | Canonical content / schema and integration | Indexed |
 | UNI-SRC-019 | [`docs/UniverseGenerationArchitecture.md`](../../UniverseGenerationArchitecture.md) | Universe architecture | Indexed |
 | UNI-SRC-020 | [`docs/WorldSurfaceCanon.md`](../../WorldSurfaceCanon.md) | Canonical content / schema and integration | Indexed |
+
+## Current reviewed slices — 14 October 2026
+
+- **UNI-SRC-006:** all original commercial model sections evaluated, including deterministic 1,000-candidate seed, first 100 materialisation, 20 sectors, offer ownership, logistics/portraits. New [commercial chapter](../commerce-and-corporations/02-commercial-contacts-and-offers.md) records source-reported counts as historic, not current published assertions; no new buyer IDs or collection are authored.
+- **UNI-SRC-014:** all original publication/manifest/version/offline/ID/Pages clauses evaluated. New [consumer chapter](../principles/02-publishing-and-consumer-contract.md) explicitly defers Android runtime cache/update to the later pinned-offline policy. No live deployment or adapter tests executed.
+
+Both entries remain **Reviewed**, rather than claiming validated canon data or full downstream migration. The other 18 source paths remain indexed.
 
 ## Reconciliation gate
 
