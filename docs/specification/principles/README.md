@@ -5,6 +5,7 @@
 ## Existing chapters
 
 1. [universe vision](01-universe-vision.md)
+2. [publication and game consumer boundary](02-publishing-and-consumer-contract.md)
 
 ## References
 
