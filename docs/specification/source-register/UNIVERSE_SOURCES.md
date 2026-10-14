@@ -32,8 +32,8 @@ Every source is **Indexed** until rule-level contents are reviewed. Suggested to
 | UNI-SRC-012 | [`docs/MobileOverhaulArtAudit.md`](../../MobileOverhaulArtAudit.md) | Historical authoring / integration | Indexed |
 | UNI-SRC-013 | [`docs/MobileResourceOccurrenceIntegration.md`](../../MobileResourceOccurrenceIntegration.md) | Canonical content / schema and integration | Indexed |
 | UNI-SRC-014 | [`docs/PublishingAndConsumers.md`](../../PublishingAndConsumers.md) | [Publication and consumer contract](../principles/02-publishing-and-consumer-contract.md) | **Reviewed (complete source; design mapped)**; Pages/consumer runtime unverified |
-| UNI-SRC-015 | [`docs/ShipClassRuntimeProfiles.md`](../../ShipClassRuntimeProfiles.md) | Canonical content / schema and integration | Indexed |
-| UNI-SRC-016 | [`docs/ShipbuildingSectorAndPurchaseCatalogue.md`](../../ShipbuildingSectorAndPurchaseCatalogue.md) | Canonical content / schema and integration | Indexed |
+| UNI-SRC-015 | [`docs/ShipClassRuntimeProfiles.md`](../../ShipClassRuntimeProfiles.md) | [Ship product/runtime profile semantics](../assets-and-logistics/02-ship-class-products-and-runtime.md) | **Reviewed (complete source; design mapped)**; current JSON/consumers unverified |
+| UNI-SRC-016 | [`docs/ShipbuildingSectorAndPurchaseCatalogue.md`](../../ShipbuildingSectorAndPurchaseCatalogue.md) | [Factory ship catalogue and purchase boundary](../assets-and-logistics/02-ship-class-products-and-runtime.md) | **Reviewed (complete source; design mapped)**; current ship-class art/counts unverified |
 | UNI-SRC-017 | [`docs/SubstanceCanon.md`](../../SubstanceCanon.md) | Canonical content / schema and integration | Indexed |
 | UNI-SRC-018 | [`docs/SubstanceCanonFeatureSpec.md`](../../SubstanceCanonFeatureSpec.md) | Canonical content / schema and integration | Indexed |
 | UNI-SRC-019 | [`docs/UniverseGenerationArchitecture.md`](../../UniverseGenerationArchitecture.md) | Universe architecture | Indexed |
@@ -44,7 +44,9 @@ Every source is **Indexed** until rule-level contents are reviewed. Suggested to
 - **UNI-SRC-006:** all original commercial model sections evaluated, including deterministic 1,000-candidate seed, first 100 materialisation, 20 sectors, offer ownership, logistics/portraits. New [commercial chapter](../commerce-and-corporations/02-commercial-contacts-and-offers.md) records source-reported counts as historic, not current published assertions; no new buyer IDs or collection are authored.
 - **UNI-SRC-014:** all original publication/manifest/version/offline/ID/Pages clauses evaluated. New [consumer chapter](../principles/02-publishing-and-consumer-contract.md) explicitly defers Android runtime cache/update to the later pinned-offline policy. No live deployment or adapter tests executed.
 
-Both entries remain **Reviewed**, rather than claiming validated canon data or full downstream migration. The other 18 source paths remain indexed.
+**UNI-SRC-015 / 016:** full ship runtime profile + shipbuilding sector sources reviewed and mapped to [UNI-ASSET-002](../assets-and-logistics/02-ship-class-products-and-runtime.md): manufacturer/line/class/product facts, factory list price vs live quote, ship class/runtime join, fractional-light-year fuel, charter-issued starter outside retail. Counts and numeric examples are expressly source-era until current `data/` reconciliation. Both remain **Reviewed**.
+
+These **four** entries remain **Reviewed**, rather than claiming validated canon data or full downstream migration. The other **16** source paths remain indexed.
 
 ## Reconciliation gate
 
