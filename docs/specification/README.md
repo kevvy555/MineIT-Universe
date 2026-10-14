@@ -6,6 +6,8 @@ This is the **shared mechanics and concepts** layer beneath [canonical lore/data
 
 ## Where to begin
 
+- **[Cross-chat handover and exact resume plan](HANDOVER.md)** — current branches, draft PRs, source inventories, verified vs proposed decisions, unresolved scope, traps and next batches.
+
 - [Design authority and repository ownership](DESIGN_AUTHORITY.md)
 - [Shared vocabulary](GLOSSARY.md)
 - [Cross-platform design ownership matrix](CROSS_PLATFORM_MATRIX.md)
