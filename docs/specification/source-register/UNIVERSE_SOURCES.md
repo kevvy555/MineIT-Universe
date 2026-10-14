@@ -28,8 +28,8 @@ Every source is **Indexed** until rule-level contents are reviewed. Suggested to
 | UNI-SRC-008 | [`docs/LegacyDesignCatalogueImport.md`](../../LegacyDesignCatalogueImport.md) | [Legacy catalogue and scope](../technology-and-progression/03-legacy-catalogue-import-boundaries.md) | **Reviewed (complete historic import source)**; latest manifest/relationships unverified |
 | UNI-SRC-009 | [`docs/MineitUniverseCanonDesign.md`](../../MineitUniverseCanonDesign.md) | Canonical content / schema and integration | Indexed |
 | UNI-SRC-010 | [`docs/MineitUniverseDatabase.md`](../../MineitUniverseDatabase.md) | Universe architecture | Indexed |
-| UNI-SRC-011 | [`docs/MineitUniverseDatabaseIntegration.md`](../../MineitUniverseDatabaseIntegration.md) | Universe architecture | Indexed |
-| UNI-SRC-012 | [`docs/MobileOverhaulArtAudit.md`](../../MobileOverhaulArtAudit.md) | Historical authoring / integration | Indexed |
+| UNI-SRC-011 | [`docs/MineitUniverseDatabaseIntegration.md`](../../MineitUniverseDatabaseIntegration.md) | [Consumer loader, IDs and saved-state split](../principles/02-publishing-and-consumer-contract.md#additional-complete-source-reconciliation-initial-game-integration-plan-uni-src-011) | **Reviewed entire historical architecture plan**; current Android/Directory integration unverified |
+| UNI-SRC-012 | [`docs/MobileOverhaulArtAudit.md`](../../MobileOverhaulArtAudit.md) | [Mobile art identity/level/landscape audit](../assets-and-logistics/03-mobile-art-identity-and-coverage.md) | **Reviewed entire historic queue**; 293/291/284 count mismatch unresolved, current art files unverified |
 | UNI-SRC-013 | [`docs/MobileResourceOccurrenceIntegration.md`](../../MobileResourceOccurrenceIntegration.md) | Canonical content / schema and integration | Indexed |
 | UNI-SRC-014 | [`docs/PublishingAndConsumers.md`](../../PublishingAndConsumers.md) | [Publication and consumer contract](../principles/02-publishing-and-consumer-contract.md) | **Reviewed (complete source; design mapped)**; Pages/consumer runtime unverified |
 | UNI-SRC-015 | [`docs/ShipClassRuntimeProfiles.md`](../../ShipClassRuntimeProfiles.md) | [Ship product/runtime profile semantics](../assets-and-logistics/02-ship-class-products-and-runtime.md) | **Reviewed (complete source; design mapped)**; current JSON/consumers unverified |
@@ -50,7 +50,11 @@ Every source is **Indexed** until rule-level contents are reviewed. Suggested to
 
 **UNI-SRC-008 / UNI-SRC-019:** both full original documents were reviewed on 14 October. The import's historic technology/geology/find-site/celestial counts and Desktop-only research points are recorded in [UNI-TECH-003](../technology-and-progression/03-legacy-catalogue-import-boundaries.md), while [UNI-PRN-003](../principles/03-materialised-universe-generation-and-provenance.md) captures one frozen graph per universe, seed/generator version, provenance, manifest sharding and neutral visuals. Their dated implementation/status claims are **not** live manifest or generator validation.
 
-**Seven** of 20 original sources now **Reviewed**; **13** remain Indexed. No historical document was deleted or marked Migrated without current authoritative data reconciliation.
+**UNI-SRC-011:** the full early [Universe consumer integration plan](../../MineitUniverseDatabaseIntegration.md) is now explicitly mapped to [publication/consumer rules](../principles/02-publishing-and-consumer-contract.md#additional-complete-source-reconciliation-initial-game-integration-plan-uni-src-011); example `company(id)` is a read-model alias, not an independently authored company collection, and the later offline mobile build pin overrides optional live-refresh advice.
+
+**UNI-SRC-012:** full [Mobile overhaul art audit](../../MobileOverhaulArtAudit.md) maps to [UNI-ASSET-003](../assets-and-logistics/03-mobile-art-identity-and-coverage.md), recording building-level presentation as **linked images, not new building IDs**, bespoke Koplin vs generic landscape priority, hostile liquids and the inconsistent historic **293 / 291 / 284** image counts. Current validated generation/asset state remains open.
+
+**Nine** of 20 original sources now **Reviewed**; **11** remain Indexed. No historical document was deleted or marked Migrated without current authoritative data reconciliation.
 
 ## Reconciliation gate
 
