@@ -5,6 +5,7 @@
 ## Existing chapters
 
 1. [asset types and lifecycle](01-asset-types-and-lifecycle.md)
+2. [ship class product, purchase and runtime profiles](02-ship-class-products-and-runtime.md)
 
 ## References
 
