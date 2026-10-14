@@ -5,6 +5,7 @@
 ## Existing chapters
 
 1. [corporations and ownership](01-corporations-and-ownership.md)
+2. [commercial contacts and game-generated offers](02-commercial-contacts-and-offers.md)
 
 ## References
 
