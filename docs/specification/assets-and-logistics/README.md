@@ -6,6 +6,7 @@
 
 1. [asset types and lifecycle](01-asset-types-and-lifecycle.md)
 2. [ship class product, purchase and runtime profiles](02-ship-class-products-and-runtime.md)
+3. [Mobile art identity, building levels and landscape coverage](03-mobile-art-identity-and-coverage.md)
 
 ## References
 
