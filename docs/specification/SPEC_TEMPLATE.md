@@ -9,8 +9,8 @@
 **Design status:** Canon | Approved | Proposed | Mixed | Open
 **Implementation status:** Implemented (evidence SHA/tests) | Partial | Not implemented | Not applicable
 **Last review:** YYYY-MM-DD
-**Sources:** [original exact document](...) / [issue](...) / [canon record](...)
-**Companions:** [shared chapter](...) / [other platform chapter](...)
+**Sources:** ORIGINAL_SOURCE_URL / ISSUE_URL / CANON_RECORD_URL
+**Companions:** SHARED_CHAPTER_URL / OTHER_PLATFORM_CHAPTER_URL
 
 ## Purpose and boundaries
 ...
