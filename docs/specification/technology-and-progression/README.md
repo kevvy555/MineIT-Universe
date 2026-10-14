@@ -6,6 +6,7 @@
 
 1. [01 knowledge and industrial capabilities](01-knowledge-and-industrial-capabilities.md)
 2. [02 ai and industrial automation](02-ai-and-industrial-automation.md)
+3. [03 legacy research/geology/celestial catalogue import boundaries](03-legacy-catalogue-import-boundaries.md)
 
 ## Scope and ownership
 
