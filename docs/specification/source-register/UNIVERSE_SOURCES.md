@@ -25,7 +25,7 @@ Every source is **Indexed** until rule-level contents are reviewed. Suggested to
 | UNI-SRC-005 | [`docs/CanonSourceHierarchy.md`](../../CanonSourceHierarchy.md) | [Governing ordered canon precedence](../DESIGN_AUTHORITY.md#exact-canon-source-hierarchy-uni-src-005-reviewed-in-full) | **Reviewed (complete authoritative policy mapped)**; four higher-precedence lore texts independently Indexed |
 | UNI-SRC-006 | [`docs/CommercialBuyerModel.md`](../../CommercialBuyerModel.md) | [Commercial identity and offer derivation](../commerce-and-corporations/02-commercial-contacts-and-offers.md) | **Reviewed (complete source; design mapped)**; current graph counts and game adapters unverified |
 | UNI-SRC-007 | [`docs/ImageGenerationProcess.md`](../../ImageGenerationProcess.md) | Publishing / assets | Indexed |
-| UNI-SRC-008 | [`docs/LegacyDesignCatalogueImport.md`](../../LegacyDesignCatalogueImport.md) | Historical authoring / integration | Indexed |
+| UNI-SRC-008 | [`docs/LegacyDesignCatalogueImport.md`](../../LegacyDesignCatalogueImport.md) | [Legacy catalogue and scope](../technology-and-progression/03-legacy-catalogue-import-boundaries.md) | **Reviewed (complete historic import source)**; latest manifest/relationships unverified |
 | UNI-SRC-009 | [`docs/MineitUniverseCanonDesign.md`](../../MineitUniverseCanonDesign.md) | Canonical content / schema and integration | Indexed |
 | UNI-SRC-010 | [`docs/MineitUniverseDatabase.md`](../../MineitUniverseDatabase.md) | Universe architecture | Indexed |
 | UNI-SRC-011 | [`docs/MineitUniverseDatabaseIntegration.md`](../../MineitUniverseDatabaseIntegration.md) | Universe architecture | Indexed |
@@ -36,7 +36,7 @@ Every source is **Indexed** until rule-level contents are reviewed. Suggested to
 | UNI-SRC-016 | [`docs/ShipbuildingSectorAndPurchaseCatalogue.md`](../../ShipbuildingSectorAndPurchaseCatalogue.md) | [Factory ship catalogue and purchase boundary](../assets-and-logistics/02-ship-class-products-and-runtime.md) | **Reviewed (complete source; design mapped)**; current ship-class art/counts unverified |
 | UNI-SRC-017 | [`docs/SubstanceCanon.md`](../../SubstanceCanon.md) | Canonical content / schema and integration | Indexed |
 | UNI-SRC-018 | [`docs/SubstanceCanonFeatureSpec.md`](../../SubstanceCanonFeatureSpec.md) | Canonical content / schema and integration | Indexed |
-| UNI-SRC-019 | [`docs/UniverseGenerationArchitecture.md`](../../UniverseGenerationArchitecture.md) | Universe architecture | Indexed |
+| UNI-SRC-019 | [`docs/UniverseGenerationArchitecture.md`](../../UniverseGenerationArchitecture.md) | [Materialised graph, provenance and sharding](../principles/03-materialised-universe-generation-and-provenance.md) | **Reviewed (complete architecture source)**; latest generator/schema/consumer unverified |
 | UNI-SRC-020 | [`docs/WorldSurfaceCanon.md`](../../WorldSurfaceCanon.md) | Canonical content / schema and integration | Indexed |
 
 ## Current reviewed slices — 14 October 2026
@@ -48,7 +48,9 @@ Every source is **Indexed** until rule-level contents are reviewed. Suggested to
 
 **UNI-SRC-005:** full [Canon Source Hierarchy](../../CanonSourceHierarchy.md) source reviewed; [governance](../DESIGN_AUTHORITY.md#exact-canon-source-hierarchy-uni-src-005-reviewed-in-full) now names exact order, Year-5300/5326 distinction, JSON/lore conflict rule, knowledgeScope and provisional pre-lore samples. Four actual lore sources are **not** thereby marked reviewed.
 
-These **five** entries remain **Reviewed**, rather than claiming validated canon data or full downstream migration. The other **15** source paths remain Indexed.
+**UNI-SRC-008 / UNI-SRC-019:** both full original documents were reviewed on 14 October. The import's historic technology/geology/find-site/celestial counts and Desktop-only research points are recorded in [UNI-TECH-003](../technology-and-progression/03-legacy-catalogue-import-boundaries.md), while [UNI-PRN-003](../principles/03-materialised-universe-generation-and-provenance.md) captures one frozen graph per universe, seed/generator version, provenance, manifest sharding and neutral visuals. Their dated implementation/status claims are **not** live manifest or generator validation.
+
+**Seven** of 20 original sources now **Reviewed**; **13** remain Indexed. No historical document was deleted or marked Migrated without current authoritative data reconciliation.
 
 ## Reconciliation gate
 
