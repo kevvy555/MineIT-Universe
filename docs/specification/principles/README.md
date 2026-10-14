@@ -7,6 +7,7 @@
 1. [universe vision](01-universe-vision.md)
 2. [publication and game consumer boundary](02-publishing-and-consumer-contract.md)
 3. [materialised-universe generation and provenance](03-materialised-universe-generation-and-provenance.md)
+4. [canonical entity graph and Directory projections](04-canonical-graph-and-directory-projections.md)
 
 ## References
 
