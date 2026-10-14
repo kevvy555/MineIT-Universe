@@ -5,6 +5,7 @@
 ## Existing chapters
 
 1. [galaxy and celestial bodies](01-galaxy-and-celestial-bodies.md)
+2. [shared world-surface vocabulary and tiles](02-world-surface-vocabulary-and-tiles.md)
 2. [scanning and surveying](05-scanning-and-surveying.md)
 3. [world truth, provenance and depletion](06-world-truth-provenance-and-depletion.md)
 
