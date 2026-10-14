@@ -5,6 +5,7 @@
 ## Existing chapters
 
 1. [material classification](01-material-classification.md)
+2. [substance canon and industrial provenance](02-substance-canon-and-industrial-provenance.md)
 
 ## References
 
