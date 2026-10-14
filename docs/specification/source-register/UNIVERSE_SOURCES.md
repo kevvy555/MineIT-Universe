@@ -27,17 +27,17 @@ Every source is **Indexed** until rule-level contents are reviewed. Suggested to
 | UNI-SRC-007 | [`docs/ImageGenerationProcess.md`](../../ImageGenerationProcess.md) | Publishing / assets | Indexed |
 | UNI-SRC-008 | [`docs/LegacyDesignCatalogueImport.md`](../../LegacyDesignCatalogueImport.md) | [Legacy catalogue and scope](../technology-and-progression/03-legacy-catalogue-import-boundaries.md) | **Reviewed (complete historic import source)**; latest manifest/relationships unverified |
 | UNI-SRC-009 | [`docs/MineitUniverseCanonDesign.md`](../../MineitUniverseCanonDesign.md) | Canonical content / schema and integration | Indexed |
-| UNI-SRC-010 | [`docs/MineitUniverseDatabase.md`](../../MineitUniverseDatabase.md) | Universe architecture | Indexed |
+| UNI-SRC-010 | [`docs/MineitUniverseDatabase.md`](../../MineitUniverseDatabase.md) | [Canonical graph, Directory projections and schema-era status](../principles/04-canonical-graph-and-directory-projections.md) | **Reviewed entire source**; latest manifest/schema validation open |
 | UNI-SRC-011 | [`docs/MineitUniverseDatabaseIntegration.md`](../../MineitUniverseDatabaseIntegration.md) | [Consumer loader, IDs and saved-state split](../principles/02-publishing-and-consumer-contract.md#additional-complete-source-reconciliation-initial-game-integration-plan-uni-src-011) | **Reviewed entire historical architecture plan**; current Android/Directory integration unverified |
 | UNI-SRC-012 | [`docs/MobileOverhaulArtAudit.md`](../../MobileOverhaulArtAudit.md) | [Mobile art identity/level/landscape audit](../assets-and-logistics/03-mobile-art-identity-and-coverage.md) | **Reviewed entire historic queue**; 293/291/284 count mismatch unresolved, current art files unverified |
 | UNI-SRC-013 | [`docs/MobileResourceOccurrenceIntegration.md`](../../MobileResourceOccurrenceIntegration.md) | Canonical content / schema and integration | Indexed |
 | UNI-SRC-014 | [`docs/PublishingAndConsumers.md`](../../PublishingAndConsumers.md) | [Publication and consumer contract](../principles/02-publishing-and-consumer-contract.md) | **Reviewed (complete source; design mapped)**; Pages/consumer runtime unverified |
 | UNI-SRC-015 | [`docs/ShipClassRuntimeProfiles.md`](../../ShipClassRuntimeProfiles.md) | [Ship product/runtime profile semantics](../assets-and-logistics/02-ship-class-products-and-runtime.md) | **Reviewed (complete source; design mapped)**; current JSON/consumers unverified |
 | UNI-SRC-016 | [`docs/ShipbuildingSectorAndPurchaseCatalogue.md`](../../ShipbuildingSectorAndPurchaseCatalogue.md) | [Factory ship catalogue and purchase boundary](../assets-and-logistics/02-ship-class-products-and-runtime.md) | **Reviewed (complete source; design mapped)**; current ship-class art/counts unverified |
-| UNI-SRC-017 | [`docs/SubstanceCanon.md`](../../SubstanceCanon.md) | Canonical content / schema and integration | Indexed |
+| UNI-SRC-017 | [`docs/SubstanceCanon.md`](../../SubstanceCanon.md) | [Substance architecture and industrial-source reconciliation](../materials-and-resources/02-substance-canon-and-industrial-provenance.md) | **Reviewed entire original architecture**; current counts/IDs unverified |
 | UNI-SRC-018 | [`docs/SubstanceCanonFeatureSpec.md`](../../SubstanceCanonFeatureSpec.md) | Canonical content / schema and integration | Indexed |
 | UNI-SRC-019 | [`docs/UniverseGenerationArchitecture.md`](../../UniverseGenerationArchitecture.md) | [Materialised graph, provenance and sharding](../principles/03-materialised-universe-generation-and-provenance.md) | **Reviewed (complete architecture source)**; latest generator/schema/consumer unverified |
-| UNI-SRC-020 | [`docs/WorldSurfaceCanon.md`](../../WorldSurfaceCanon.md) | Canonical content / schema and integration | Indexed |
+| UNI-SRC-020 | [`docs/WorldSurfaceCanon.md`](../../WorldSurfaceCanon.md) | [Body kinds, surface semantics and landscape tiles](../worlds-and-discovery/02-world-surface-vocabulary-and-tiles.md) | **Reviewed complete original**; live tiles/generator/device unverified |
 
 ## Current reviewed slices — 14 October 2026
 
@@ -54,7 +54,9 @@ Every source is **Indexed** until rule-level contents are reviewed. Suggested to
 
 **UNI-SRC-012:** full [Mobile overhaul art audit](../../MobileOverhaulArtAudit.md) maps to [UNI-ASSET-003](../assets-and-logistics/03-mobile-art-identity-and-coverage.md), recording building-level presentation as **linked images, not new building IDs**, bespoke Koplin vs generic landscape priority, hostile liquids and the inconsistent historic **293 / 291 / 284** image counts. Current validated generation/asset state remains open.
 
-**Nine** of 20 original sources now **Reviewed**; **11** remain Indexed. No historical document was deleted or marked Migrated without current authoritative data reconciliation.
+**Twelve** of 20 original sources now **Reviewed**; **eight** remain Indexed. 
+
+**UNI-SRC-010, 017 and 020:** full source-text pass: the published [canonical graph/Directory](../principles/04-canonical-graph-and-directory-projections.md), [material catalogue](../materials-and-resources/02-substance-canon-and-industrial-provenance.md) and [world-surface vocabulary/tiles](../worlds-and-discovery/02-world-surface-vocabulary-and-tiles.md) are mapped with explicit old schema/count provenance and no assumption that they override lore/current JSON. **No original was deleted or marked Migrated without current authoritative data reconciliation.**
 
 ## Reconciliation gate
 
