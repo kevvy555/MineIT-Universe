@@ -22,7 +22,7 @@ Every source is **Indexed** until rule-level contents are reviewed. Suggested to
 | UNI-SRC-002 | [`data/lore/Koplin_Universe_Expanded_Backstory_Lore_Bible.md`](../../../data/lore/Koplin_Universe_Expanded_Backstory_Lore_Bible.md) | Lore canon (higher authority) | Indexed |
 | UNI-SRC-003 | [`data/lore/Koplin_Universe_Materials_And_Substances.md`](../../../data/lore/Koplin_Universe_Materials_And_Substances.md) | Lore canon (higher authority) | Indexed |
 | UNI-SRC-004 | [`data/lore/Koplin_Universe_World_Surface.md`](../../../data/lore/Koplin_Universe_World_Surface.md) | Lore canon (higher authority) | Indexed |
-| UNI-SRC-005 | [`docs/CanonSourceHierarchy.md`](../../CanonSourceHierarchy.md) | Canonical content / schema and integration | Indexed |
+| UNI-SRC-005 | [`docs/CanonSourceHierarchy.md`](../../CanonSourceHierarchy.md) | [Governing ordered canon precedence](../DESIGN_AUTHORITY.md#exact-canon-source-hierarchy-uni-src-005-reviewed-in-full) | **Reviewed (complete authoritative policy mapped)**; four higher-precedence lore texts independently Indexed |
 | UNI-SRC-006 | [`docs/CommercialBuyerModel.md`](../../CommercialBuyerModel.md) | [Commercial identity and offer derivation](../commerce-and-corporations/02-commercial-contacts-and-offers.md) | **Reviewed (complete source; design mapped)**; current graph counts and game adapters unverified |
 | UNI-SRC-007 | [`docs/ImageGenerationProcess.md`](../../ImageGenerationProcess.md) | Publishing / assets | Indexed |
 | UNI-SRC-008 | [`docs/LegacyDesignCatalogueImport.md`](../../LegacyDesignCatalogueImport.md) | Historical authoring / integration | Indexed |
@@ -46,7 +46,9 @@ Every source is **Indexed** until rule-level contents are reviewed. Suggested to
 
 **UNI-SRC-015 / 016:** full ship runtime profile + shipbuilding sector sources reviewed and mapped to [UNI-ASSET-002](../assets-and-logistics/02-ship-class-products-and-runtime.md): manufacturer/line/class/product facts, factory list price vs live quote, ship class/runtime join, fractional-light-year fuel, charter-issued starter outside retail. Counts and numeric examples are expressly source-era until current `data/` reconciliation. Both remain **Reviewed**.
 
-These **four** entries remain **Reviewed**, rather than claiming validated canon data or full downstream migration. The other **16** source paths remain indexed.
+**UNI-SRC-005:** full [Canon Source Hierarchy](../../CanonSourceHierarchy.md) source reviewed; [governance](../DESIGN_AUTHORITY.md#exact-canon-source-hierarchy-uni-src-005-reviewed-in-full) now names exact order, Year-5300/5326 distinction, JSON/lore conflict rule, knowledgeScope and provisional pre-lore samples. Four actual lore sources are **not** thereby marked reviewed.
+
+These **five** entries remain **Reviewed**, rather than claiming validated canon data or full downstream migration. The other **15** source paths remain Indexed.
 
 ## Reconciliation gate
 
