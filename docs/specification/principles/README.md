@@ -8,6 +8,7 @@
 2. [publication and game consumer boundary](02-publishing-and-consumer-contract.md)
 3. [materialised-universe generation and provenance](03-materialised-universe-generation-and-provenance.md)
 4. [canonical entity graph and Directory projections](04-canonical-graph-and-directory-projections.md)
+5. [foundation lore, 5300 crash and 5326 charter scenario boundaries](05-foundation-lore-and-scenario-boundaries.md)
 
 ## References
 
