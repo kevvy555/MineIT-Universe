@@ -1,5 +1,8 @@
 # MineIT — Three-Repository Documentation Consolidation: Exact Cross-Chat Handover
 
+> **LATEST CONTINUATION (15 October 2026):** Section 9 below is the authoritative later state. Older §5–8 figures **99 Desktop Indexed** and “next read ElevationRules/TectonicPlateLayout” are retained as their dated starting snapshot, **not current instructions**. Live GitHub heads supersede this document if they move.
+
+
 **As checked:** Thursday **15 October 2026** (Europe/London), GitHub live state before committing this handover.  
 **Programme:** [MineIT-Universe tracking issue #19](https://github.com/kevvy555/MineIT-Universe/issues/19).  
 **Status:** **IN PROGRESS. DO NOT MERGE.** Complete Android original-source reading does **not** mean cross-repository documentation consolidation, code conformity, APK QA, or publication is complete.
@@ -113,3 +116,67 @@ Other read-only code files inspected: `BodySizeScaling.cs` confirms **horizontal
 
 ---
 **Snapshot created for a clean conversation handoff; live GitHub is authoritative for subsequent changes.**
+
+
+## 9. CONTINUATION COMPLETED 15 OCTOBER 2026 — supersedes older Desktop counts and next-read instructions
+
+**Branch/PR preservation:** continued on existing \`docs/industrial-design-spec-114\` branches only, without creating replacement branches, PRs, merging, forcing refs or changing original Markdown, C#, JSON, art, game canon or tests. At start live PRs all OPEN DRAFT:
+- **Universe #20 → main:** initial head \`91e6bb88f86d0dd5df1baeae8b9d65b0555be572\`, **98 ahead / 0 behind**.
+- **Desktop #1 → main:** initial head \`0a2af666814e9b6985e49ee365a148f7d7633ea5\`, **130 ahead / 0 behind**. Following **19 documentation-only commits**, Desktop head at snapshot **\`da4e859703651c5c160ce189ff11d7924b56c180\`**; PR OPEN DRAFT, **149 PR commits, 54 changed paths**.
+- **Android #115 → develop:** initial head \`bbfbde642161d29b2ffda977da9decf3998eb47d\`, **227 ahead / 9 behind**. No Android edits in this continuation; do not silently resolve the 9 upstream commits.
+
+**AGENTS.md:** Universe and Android root AGENTS instructions read completely before all edits; Desktop branch full recursive tree contained **no AGENTS.md**. Keep original sources, shared Universe ownership, and production code/canon separate. Long [HANDOVER](HANDOVER.md) and Universe issue #19 read in full before work.
+
+### Actual newly completed original-source review
+
+Three **new specification chapters**, all published to existing **Desktop draft PR #1**:
+
+- [DES-WORLD-017 — two full original Stage2 normative sources](https://github.com/kevvy555/MineIT-Desktop/blob/docs/industrial-design-spec-114/Documentation/specification/world-generation-and-survey/17-stage2-tectonic-elevation-rule-by-rule-reconciliation.md): **ElevationRules.md 1,161 lines** and **TectonicPlateLayout.md 401 lines** read in full. Reconciled P0 plate Count/Poisson/Voronoi/Lloyd/crust/boundary formation/strength, boundary arcs and mountains and geological provenance; 2a placement suitability, complete height Rule1–8/domain warp/noise/hills/ridge suppression/basins/placed uplift/ocean/macro shelf. Kept original Rule7 multi-zone **NOT REVIEWED**, P1 deferred and dated runtime claims separate. Direct C# config/code read-only comparison (not test). [DES-WORLD-017 commit](https://github.com/kevvy555/MineIT-Desktop/commit/9c90859b2e37c329ec91b03c2ac17b2ceefbc027).
+- [DES-WORLD-018 — six full original ocean and inland-water sources](https://github.com/kevvy555/MineIT-Desktop/blob/docs/industrial-design-spec-114/Documentation/specification/world-generation-and-survey/18-ocean-waterbody-depth-and-priority-source-reconciliation.md): **OceanBathymetryModel 299 lines**, **WaterbodyModel 139**, **ocean_sea_floor_generation_features 70**, **super_large_planet_ocean_depth_analysis 204**, **waterbody_types_landforms 50 (long table lines)** and **Step2 planet-terrain-maps-and-deposit-pipeline six-line redirect**. Retains one ocean datum versus independent inland water levels/ids; procedural basin versus accepted inland hydrology; 11 P0 seafloor taxonomy rows (not assumed implemented), P1–P3 reference gates; open depth-class ranges disagreement, pressure-ice/large-planet constraints, out-of-date "not implemented" bathymetry prose. [DES-WORLD-018 commit](https://github.com/kevvy555/MineIT-Desktop/commit/990efdd136b643a168afb6c7978cc500c6f52ab6).
+- [DES-IND-007 — nine full original Desktop facility/survival building recipes](https://github.com/kevvy555/MineIT-Desktop/blob/docs/industrial-design-spec-114/Documentation/specification/industrial-economy/07-original-building-families-and-survival-inputs.md): **Accommodation, Habitat, Warehouse, WaterCollector, Farm, PowerPlant, BasicRefinery, ResearchBuilding, ShipyardBay**, all source files read in full. Reconciles historical shell/fit-out, Power, jobs, fresh water/Food, raw ore/refined flow, research and ship progress as **historic design examples**, not approved Universe material IDs or asserted C# feature completeness. Distinguishes Accommodation **1 worker/50 residents** vs Habitat **0 workers/4 berths**, Warehouse finite volume/unlimited mass, research **3 pts/scientist/day** as OPEN code/owner checks. [DES-IND-007 commit](https://github.com/kevvy555/MineIT-Desktop/commit/b100f307101e1903d4e1699b6d0f52efacbff61f).
+
+**Exact new review progress:** **17 entire original files** this continuation: **8** original Generation stage files (2+6) and **9** historic industry/survival building files. [155-generation stage map](https://github.com/kevvy555/MineIT-Desktop/blob/docs/industrial-design-spec-114/Documentation/specification/world-generation-and-survey/SOURCE_STAGE_MAP.md) now **91 /155 \`Indexed / verify individual status\`** (was 99); other 64 stage rows have *various* Reviewed/partial/historical states, **not** 64 proven full migrations or tests. [343-file inventory](https://github.com/kevvy555/MineIT-Desktop/blob/docs/industrial-design-spec-114/Documentation/specification/source-register/DOCUMENT_INVENTORY.md) explicitly marks the 17 newly fully read paths, with many earlier approved-review accounts held in stage map/coverage rather than wholesale reclassification of 343. [MIGRATION_COVERAGE](https://github.com/kevvy555/MineIT-Desktop/blob/docs/industrial-design-spec-114/Documentation/specification/source-register/MIGRATION_COVERAGE.md), [CONFLICTS](https://github.com/kevvy555/MineIT-Desktop/blob/docs/industrial-design-spec-114/Documentation/specification/source-register/CONFLICTS.md), World-generation and Industrial indices and old overview now updated in same Desktop PR.
+
+### Important additional verified code and internal-source conflicts — ALL OPEN, no implementation edits
+
+- **Configured LandmassCoherence ninth draw:** actual Desktop \`MineIT.GenerationContent/planet-roll-tables.json\` has **9** random entries with \`Elevation.LandmassCoherence\` #5, but approved Stage1.0 fixed order lists **8 without it**. \`PlanetArchetypeRollExecutor\` advances \`random-flavor\` seed by prior property, so later random field output differs from hypothetical eight-draw stream. Actual \`GenerationVersion.Current=23\`. Requires golden saved-seed compatibility/owner; not resolved.
+- **Approved final sea pass missing from inspected creation method:** \`PlanetCreatePipeline\` calls \`SeaLevelCalibrator.CalibrateProvisional\`, builds layout/catalog/biome thresholds but no explicit frozen-catalog final **Stage1.5b** calibration in its inspected path. Must check transitive behaviour and actual fixture before accepting new code.
+- **Plate boundary stress floor:** original formula has \`motionStress\` (zero allowed), actual \`TectonicPlateLayoutBuilder\` uses \`max(motionStress, .25)\`; formation force enums single in code versus source composite/category names, rich context not proven. Approved original **internally conflicts on transform mountain placement**: transform arcs “no mountains/rifts” versus fault-block transform relief table.
+- **Height noise and routing:** original broad/rolling/local hill octaves **4/4/3** and rolling/local persistence/lacunarity differ from current C# **3/3/2**; current engine adds hill-country, rift carve, coastal talus/beach relief absent in old Rule1–7 diagram. Current multi-zone bathymetry code path with plates contradicts dated old statement “legacy-only until Phase4,” but **NOT REVIEWED Rule7 geometry remains unapproved**.
+- **Already known and still OPEN:** two competing approved continental wavelength definitions **28km versus 360km×pow18**, code aligns 360km; approved mountain amplitude **180–1350m** vs runtime **1000–6000m**, range frequency **.18–.42** vs **.22–.55**, fixed **28km** region vs runtime **22→10km**; absolute tier peak vs profile cap/stress. No value selected or changed.
+- **Depth class thresholds:** OceanBathymetry approved Extreme ≤**80km** / UltraDeep ≤**150km** vs separate analysis diagram **50km/100km** while its simple recommendation uses **80/150**. Preserve approved owner as candidate, verify versioned C# before change. Inland P0 model “ten types” has only eight explicit table rows; artificial “Reservoir” priority P0 **not procedurally P0**.
+
+### Exact new Desktop commits (chronological, all on PR #1)
+
+\`\`\`text
+9c90859b  Add DES-WORLD-017 complete 2-original Stage2 chapter
+133a848d  Update 155-source Stage2 map
+79376585  Mark first 2 original files in 343-source archive
+eda077fa  Link world chapter index
+96aafca4  Amend Stage2 overview
+f951e157  Update migration coverage for Stage2
+d4d0da6c  Register C# vs Stage2 design conflicts
+990efdd1  Add DES-WORLD-018 complete 6-original ocean/waterbody chapter
+71a77d1a  Mark six sources in Stage map
+3192d2b6  Mark six in full archive inventory
+2db998f4  Add world chapter index
+525bc6a2  Amend Stage2 overview for ocean/waterbody
+2b3855b2  Update migration coverage for ocean/waterbody
+d28fdfe6  Add ocean/ice class and waterbody conflicts
+b100f307  Add DES-IND-007 for nine historic building originals
+0f914a19  Mark nine in full archive inventory
+cad15ba7  Link industrial index
+a8f9dc5f  Add industrial coverage
+da4e8597  Add industrial/survival conflicts (current Desktop head as of snapshot)
+\`\`\`
+
+**Verification actually run:** exact 155-row stage map confirmed **91 Indexed**; exact 343 source rows checked; branch-tree relative Markdown *file-target* validation checked new Stage2 chapter and previously updated 155-map/343-inventory, **0 missing file paths**. **No heading-anchor, all-repo Markdown, external/cross-repo remote link, C# build/unit/integration, golden seed, saved-game, rendering/UI, device QA or Universe canonical data/art publishing test was run**. This is documentation-only and preserves all three draft PRs.
+
+### Next action for a clean new chat
+
+1. Read this complete updated standalone handover **§9 first for newest state**, full [HANDOVER](HANDOVER.md) including appended continuation, and issue #19. Recheck **live** heads/branch ancestry and AGENTS. Desktop latest from this section \`da4e859703651c5c160ce189ff11d7924b56c180\`, but new commits may exist. Android 9 behind develop as last known.
+2. Continue the remaining **91 Indexed** Stage-generation originals, preferably individual Step2 \`waterbody\` ancillary documents and Stage3/4 P0 maps, read originals *in full* and compare v23 source. Then review Desktop larger industrial Parts/Machines/Buildings and Phase5–8 proposals, practical survival formulas, scene specifications, keeping source approval vs proposal vs current code separate.
+3. Determine source owners/required author approval for RNG/change-to-\`GenerationVersion\`, landmass and mountain values, 1.5b wet fraction and Rule7 depth class. **No generation tuning changes without explicit approval and versioned seeded fixtures.**
+4. Maintain per-original map, 343 inventory, coverage, conflicts, indexes. Commit to existing branch, update this handover and issue #19 after each substantive batch. Safely address Android upstream divergence before any Kotlin CI check. Universe publication/data/art, Android v17 device/CI/visual and Desktop seeded generator tests still outstanding. Keep every PR **OPEN DRAFT**, no merges or original source overwrites.
+
+**This §9 supersedes the earlier sections' next priority and all \`99 Indexed\` references.**
