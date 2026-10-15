@@ -6,7 +6,8 @@ This is the **shared mechanics and concepts** layer beneath [canonical lore/data
 
 ## Where to begin
 
-- **[Cross-chat handover and exact resume plan](HANDOVER.md)** — current branches, draft PRs, source inventories, verified vs proposed decisions, unresolved scope, traps and next batches.
+- **[Current 15 October exact-state cross-chat handover](CURRENT_HANDOVER_2026-10-15.md)** — verified branch SHAs, full per-repo coverage, unresolved code-vs-spec conflicts, validation gates and copy-ready continuation prompt.
+- [Full chronological programme handover](HANDOVER.md) — earlier decisions, commit batches, detailed historical progress and unresolved scope.
 
 - [Design authority and repository ownership](DESIGN_AUTHORITY.md)
 - [Shared vocabulary](GLOSSARY.md)
