@@ -2,7 +2,7 @@
 
 **Checkpoint:** 14 October 2026 (Europe/London) · **Status:** IN PROGRESS, draft documentation PRs only · **Programme tracker:** [Universe #19](https://github.com/kevvy555/MineIT-Universe/issues/19) · **Industrial design decisions:** [Android #114](https://github.com/kevvy555/MineIT-Android/issues/114)
 
-> **Start here in another chat.** Read this file, then check GitHub's *live* issue/PR/branch status. This is the durable project handover, not evidence that documentation consolidation or product design is completed. Continue work from the existing three documentation branches; don't recreate the structure from the conversation.
+> **Start here in another chat.** The concise, most recently verified branch-and-source snapshot is **[CURRENT_HANDOVER_2026-10-15.md](CURRENT_HANDOVER_2026-10-15.md)**. Read it first, then use this chronological handover for detailed evidence. Check GitHub's *live* issue/PR/branch status. Neither document means the consolidation is fully completed. Continue work from the existing three documentation branches; don't recreate the structure from the conversation.
 
 ## 1. Why this programme exists and what the user explicitly approved
 
