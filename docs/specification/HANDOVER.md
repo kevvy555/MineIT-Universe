@@ -691,3 +691,8 @@ Four entire original DES-SRC-078–081 documents reconciled into [DES-PROD-041](
 ## 41. Bible phase source checkpoint — 16 October 2026
 
 Desktop DES-SRC-082–084 reviewed in DES-PROD-042. Historical statuses differ: Phase 1 Ready, Phase 1.1 Implemented, umbrella specification Draft. Current runtime QA pending. Desktop 275 of 343 originals non-Indexed, 68 Indexed. Standalone handover section 33 updated. All three PRs remain drafts, no code changes.
+
+
+## 42. 16 October 2026 — Desktop texture and height acceptance sources
+
+DES-SRC-241–242 entirely reviewed into [DES-WORLD-042](https://github.com/kevvy555/MineIT-Desktop/blob/docs/industrial-design-spec-114/Documentation/specification/world-generation-and-survey/42-terrain-texture-and-height-visual-gates.md). Desktop commits `b5f58238882b242ec21b5c9f2e640eef85e1da61`, `5f7516bc07c870c09561a416b43e8a8f97cff11e`, `15a664e56f227db8714254cf437f474fde2b60ad`, `c56f156c7fc38742d478f5239e01d35cd3d57d64`, `2e7c281e79e837da1bb849fb529564d5c19f0caf`. 343 Desktop original sources: **66 Indexed, 277 non-Indexed**. Phase 7b texture source's ToxicWasteland Ready versus create-summary contradiction requires asset check; Step 2 seed-1729 height proxy passes were v22, manual signoff Partial, current v23 not tested. Prior blocked chronological §41 Bible phase checkpoint was committed as `8b272e29f63c2a0d32d056445ff546643785c139`. All draft PRs preserved; Android docs 19 behind develop at preflight. No runtime/canon/assets/original or save changes; no tests.
