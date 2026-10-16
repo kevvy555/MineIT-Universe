@@ -746,3 +746,8 @@ Desktop DES-SRC-300 and DES-SRC-302 consolidated in [DES-PROD-045](https://githu
 ## 52. Solar overview and shared UI source batch — 16 October 2026
 
 DES-SRC-305–309 reconciled in [DES-UI-049](https://github.com/kevvy555/MineIT-Desktop/blob/docs/industrial-design-spec-114/Documentation/specification/presentation/49-solar-scene-surface-bar-and-ui-primitives.md): Solar System Overview proposed/not implemented; Surface Exploration nine-field information bar and neutral Badge, Busy Indicator and Choice Group UI contracts. Desktop tip `9f0db48453db9662c85819441625383e37746891`, 343 originals, **35 Indexed / 308 non-Indexed**. PRs remain draft. Preflight Desktop 395 ahead/0 behind main, Universe 168 ahead/0 behind main, Android 227 ahead/19 behind develop. No runtime, source-original, canon, asset or save changes; no current tests. Next DES-SRC-310 onwards plus deferred DES-SRC-085.
+
+
+## 53. UI controls checkpoint
+
+16 October 2026: Desktop DES-SRC-310 through 314 reconciled in DES-UI-050. DataGrid, Dialog, Disclosure, Dropdown and Icon contracts; source-era designs, unverified current UAT. Desktop 313 of 343 non-Indexed, 30 Indexed, commit e42f6c22f71aaff55f1095854e3c82f5bdd6551f. Existing three PRs remain drafts; no code changes or tests.
