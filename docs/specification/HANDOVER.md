@@ -726,3 +726,8 @@ DES-SRC-260–263 reviewed into [DES-WORLD-044](https://github.com/kevvy555/Mine
 ## 48. Biome and rock profile plans — 16 October 2026
 
 DES-SRC-264–266 reviewed into [DES-WORLD-045](https://github.com/kevvy555/MineIT-Desktop/blob/docs/industrial-design-spec-114/Documentation/specification/world-generation-and-survey/45-plains-biome-and-rock-performance-plan-history.md). The plains plan is superseded for strategy by FlatLandformDesign and Stage 1.4 tuning; map-driven biome classification remains with WorldGeneration, and rock 80ms/chunk/0.6s 30-chunk targets were never measured in their original worksheet. Desktop documentation tip `bf1683fc429c3b0ba33cc0bdf5604fc0aa4a614f`, 343 originals, **47 Indexed, 296 non-Indexed**. Preflight Desktop draft #1 373 ahead/0 behind main, Universe draft #20 160 ahead/0 behind main, Android draft #115 227 ahead/19 behind develop. All remain draft; no code, canon, originals, assets or save changes or runtime tests. Next DES-SRC-294 onward.
+
+
+## 49. FastNoise2 history — 16 October 2026
+
+DES-SRC-294–295 reviewed in [DES-WORLD-046](https://github.com/kevvy555/MineIT-Desktop/blob/docs/industrial-design-spec-114/Documentation/specification/world-generation-and-survey/46-fastnoise2-review.md). The plan recommends seams and batching before native migration; historical generator-v23 backend proposal must not redefine present v23 world compatibility. Standalone Debug benchmark is not whole-game gain. Desktop 343 originals, 45 Indexed, 298 non-Indexed; Desktop documentation head `0ff954bce71e6f905caca069775c08d02498774d`. Draft PRs unchanged, Android 19 behind develop at preflight. No code or canonical changes and no current CI tests.
