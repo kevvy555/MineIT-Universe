@@ -566,3 +566,8 @@ Desktop original DES-SRC-245, P0 Game Design Document v1.6, reviewed into [DES-P
 ## 37. Terrain implementation plans — 16 October 2026
 
 Desktop DES-SRC-247–250 reviewed in [DES-ARC-019](https://github.com/kevvy555/MineIT-Desktop/blob/docs/industrial-design-spec-114/Documentation/specification/architecture/19-terrain-ownership-migration-plans.md). Four original implementation documents preserved; historic move to Core was later separated into dedicated WorldGeneration through ADR-0004. Core retains authoritative building placement; Graphics only visualises. Historic June Core 104 and Graphics 150 test passes do not establish current CI. Desktop docs tip `69c859aacd57eac2f3d7ec35c2d332d1d601d20c`. 343 originals, **58 Indexed, 285 non-Indexed**. Preflight Desktop draft #1 358 ahead/0 behind main, Universe #20 154 ahead/0 behind main, Android #115 227 ahead/19 behind develop. All remain draft. No code, canon, original, assets or save changes and no tests. Next originals DES-SRC-251 onward.
+
+
+## 38. Climate map source plans — 16 October 2026
+
+DES-SRC-251–254 reviewed into [DES-WORLD-043](https://github.com/kevvy555/MineIT-Desktop/blob/docs/industrial-design-spec-114/Documentation/specification/world-generation-and-survey/43-temperature-and-moisture-map-plan-reconciliation.md). v1 Core location proposals are superseded by v2 WorldGeneration climate ownership; no duplicate liquid-state model. Desktop documentation tip `e06ef0605792bd43dedc76bf033b395378f694d7`, **343 original documents, 54 Indexed, 289 non-Indexed**. All three PRs remain draft; Android docs branch was 19 behind develop at preflight. No code, assets, canon, originals, save changes or current tests. Next DES-SRC-260 onward, plus 54 remaining Indexed.
