@@ -561,3 +561,8 @@ DES-SRC-243, 244 and 246 reviewed in [DES-PROD-043](https://github.com/kevvy555/
 ## 36. P0 game-design baseline source review — 16 October 2026
 
 Desktop original DES-SRC-245, P0 Game Design Document v1.6, reviewed into [DES-PROD-044](https://github.com/kevvy555/MineIT-Desktop/blob/docs/industrial-design-spec-114/Documentation/specification/product/44-p0-game-design-v16-historical-mechanical-baseline.md). Historic 500 crew launch minimum, 20–40-year generational campaign, four material properties, 25-item research scope and P1 deferrals are not current approved platform balancing. Desktop docs-only tip `cbcb16e25d4e13fb1425758fccc7df3bea7c2258`; 343 originals, 62 Indexed, 281 non-Indexed. Draft PRs unchanged; Android 19 behind develop at preflight. No code/canon/saves/original edits, no tests. Next remaining implementation-plan sources.
+
+
+## 37. Terrain implementation plans — 16 October 2026
+
+Desktop DES-SRC-247–250 reviewed in [DES-ARC-019](https://github.com/kevvy555/MineIT-Desktop/blob/docs/industrial-design-spec-114/Documentation/specification/architecture/19-terrain-ownership-migration-plans.md). Four original implementation documents preserved; historic move to Core was later separated into dedicated WorldGeneration through ADR-0004. Core retains authoritative building placement; Graphics only visualises. Historic June Core 104 and Graphics 150 test passes do not establish current CI. Desktop docs tip `69c859aacd57eac2f3d7ec35c2d332d1d601d20c`. 343 originals, **58 Indexed, 285 non-Indexed**. Preflight Desktop draft #1 358 ahead/0 behind main, Universe #20 154 ahead/0 behind main, Android #115 227 ahead/19 behind develop. All remain draft. No code, canon, original, assets or save changes and no tests. Next originals DES-SRC-251 onward.
