@@ -571,3 +571,8 @@ Desktop DES-SRC-247–250 reviewed in [DES-ARC-019](https://github.com/kevvy555/
 ## 38. Climate map source plans — 16 October 2026
 
 DES-SRC-251–254 reviewed into [DES-WORLD-043](https://github.com/kevvy555/MineIT-Desktop/blob/docs/industrial-design-spec-114/Documentation/specification/world-generation-and-survey/43-temperature-and-moisture-map-plan-reconciliation.md). v1 Core location proposals are superseded by v2 WorldGeneration climate ownership; no duplicate liquid-state model. Desktop documentation tip `e06ef0605792bd43dedc76bf033b395378f694d7`, **343 original documents, 54 Indexed, 289 non-Indexed**. All three PRs remain draft; Android docs branch was 19 behind develop at preflight. No code, assets, canon, originals, save changes or current tests. Next DES-SRC-260 onward, plus 54 remaining Indexed.
+
+
+## 39. Vegetation and material plan source review — 16 October 2026
+
+DES-SRC-260–263 reviewed into [DES-WORLD-044](https://github.com/kevvy555/MineIT-Desktop/blob/docs/industrial-design-spec-114/Documentation/specification/world-generation-and-survey/44-archetype-material-and-vegetation-performance-plans.md). Covers archetype mapping, historic forest sample profiling, prospective grass placement/attach limits, P5 material gameplay profiles. Forest times were source-era measurements; grass budget worksheet unfilled and targets not certified. Desktop tip `fd72add333c400224df72ff29042b78b1feb9b91`. Desktop **343 originals, 50 Indexed, 293 non-Indexed**. Preflight Desktop #1 368 ahead/0 behind main, Universe #20 158 ahead/0 behind main, Android #115 227 ahead/19 behind develop, all draft. No code, canon, original, save or assets changed; no current tests. Continue DES-SRC-264 onwards. Tracking issue #19 to be updated.
