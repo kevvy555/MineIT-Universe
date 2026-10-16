@@ -606,3 +606,8 @@ DES-SRC-305–309 reconciled in [DES-UI-049](https://github.com/kevvy555/MineIT-
 ## 45. UI controls checkpoint
 
 16 October 2026: Desktop DES-SRC-310 through 314 reconciled in DES-UI-050. DataGrid, Dialog, Disclosure, Dropdown and Icon contracts; source-era designs, unverified current UAT. Desktop 313 of 343 non-Indexed, 30 Indexed, commit e42f6c22f71aaff55f1095854e3c82f5bdd6551f. Existing three PRs remain drafts; no code changes or tests.
+
+
+## 46. Myra hosting and viewer presentation batch
+
+16 October 2026: DES-SRC-315–319 consolidated into [DES-UI-051](https://github.com/kevvy555/MineIT-Desktop/blob/docs/industrial-design-spec-114/Documentation/specification/presentation/51-myra-host-controls-and-universe-panel.md). Myra in-game host, TabSet, TextField, Toast Host and Draft Universe information panel; domain authority remains outside UI. Previous DES-UI-050 blocked handover checkpoint has also been committed (§45 standalone, §53 chronological). Desktop total 343 sources, 25 Indexed, 318 non-Indexed. Desktop tip `8bca57e5b10571a4ec4eb732fc0b01630fe280c5`. Preflight Desktop 405 ahead/0 behind main, Universe 170 ahead/0 behind main, Android 227 ahead/19 behind develop. All PRs draft; no code/canon/save/original changes, no runtime tests. Next source DES-SRC-320 onward, plus DES-SRC-085 future-scope.
