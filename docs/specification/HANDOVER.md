@@ -701,3 +701,8 @@ DES-SRC-241–242 entirely reviewed into [DES-WORLD-042](https://github.com/kevv
 ## 43. 16 October 2026 — Desktop early high-level gameplay originals
 
 DES-SRC-243, 244 and 246 reviewed in [DES-PROD-043](https://github.com/kevvy555/MineIT-Desktop/blob/docs/industrial-design-spec-114/Documentation/specification/product/43-gameplay-pillars-narrative-history.md). Core loop, nine creative pillars and multigenerational narrative preserved as concept-era historical intentions; later P0 deferrals and Universe lore authority take precedence. DES-SRC-245 game design source is still Indexed. Desktop coverage: **343 originals, 63 Indexed, 280 non-Indexed**; Desktop tip `9beedc6d3abf03006da7e070bac6aa48ca6662da`. No runtime/canon/original/save changes or tests. All 3 PRs drafts. Preflight Desktop 348 ahead/0 behind main, Universe 150/0 main, Android 227 ahead/19 behind develop. Continue full DES-SRC-245 and additional historical plan sources; update tracker #19.
+
+
+## 44. P0 game-design baseline source review — 16 October 2026
+
+Desktop original DES-SRC-245, P0 Game Design Document v1.6, reviewed into [DES-PROD-044](https://github.com/kevvy555/MineIT-Desktop/blob/docs/industrial-design-spec-114/Documentation/specification/product/44-p0-game-design-v16-historical-mechanical-baseline.md). Historic 500 crew launch minimum, 20–40-year generational campaign, four material properties, 25-item research scope and P1 deferrals are not current approved platform balancing. Desktop docs-only tip `cbcb16e25d4e13fb1425758fccc7df3bea7c2258`; 343 originals, 62 Indexed, 281 non-Indexed. Draft PRs unchanged; Android 19 behind develop at preflight. No code/canon/saves/original edits, no tests. Next remaining implementation-plan sources.
