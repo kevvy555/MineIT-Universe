@@ -791,3 +791,8 @@ Web chronology reconciles proposed extraction/first slice from early August with
 
 
 17 October 2026 audit correction: scanning/survey chapter given unique **DES-WORLD-047** ID (FastNoise2 retains DES-WORLD-046); original-source completeness unchanged. Existing Desktop documentation branch only; all draft PRs retained.
+
+
+## Documentation verification continuation — 17 October 2026
+
+Desktop draft PR #1 post-coverage inventory audited: Git tree was non-truncated; source register had 343 unique DES-SRC-001–343 rows, all original files present, zero Indexed. Existing FastNoise2 DES-WORLD-046 clashed with the new scanner source chapter; scanner chapter has been moved/reidentified as [DES-WORLD-047](https://github.com/kevvy555/MineIT-Desktop/blob/docs/industrial-design-spec-114/Documentation/specification/world-generation-and-survey/47-scanning-survey-domain-and-feature-linkage.md), affected source coverage/index links updated. Desktop landing page stale 'generation sources await review' language corrected. Audit record: [verification/01-original-source-inventory-audit-2026-10-17.md](https://github.com/kevvy555/MineIT-Desktop/blob/docs/industrial-design-spec-114/Documentation/specification/verification/01-original-source-inventory-audit-2026-10-17.md). A proposed exhaustive cross-document link sweep did not complete; do not claim link validation. Runtime/CI, golden, save, visual and device checks remain outstanding. Preflight: Universe 182 ahead/0 behind main, Desktop 430 ahead/0 behind main, Android 227 ahead/19 behind develop; all original PRs draft. No branch integrations.
