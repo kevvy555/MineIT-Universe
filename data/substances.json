@@ -1738,7 +1738,14 @@
     "description": "Carbonate Mineral is a broad Commonwealth industrial category for naturally occurring carbonate-rich mineral material such as limestone feedstock.",
     "canonStatus": "working canon",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
-    "sourceSection": "Mobile familiar-resource integration"
+    "sourceSection": "Mobile familiar-resource integration",
+    "image": {
+      "key": "assets/art/universe/substances/substance-carbonate-mineral.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of raw carbonate mineral as one continuous pale limestone-like rock face filling the frame: dense sedimentary carbonate for construction and chemical feedstock, unrefined. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-carbonate-mineral.png and a same-pixel-size catalog WebP at this key."
+    }
   },
   {
     "id": "substance-sulfate-mineral",
@@ -1754,7 +1761,14 @@
     "description": "Sulfate Mineral is a broad Commonwealth industrial category for naturally occurring sulfate-rich mineral material such as gypsum feedstock.",
     "canonStatus": "working canon",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
-    "sourceSection": "Mobile familiar-resource integration"
+    "sourceSection": "Mobile familiar-resource integration",
+    "image": {
+      "key": "assets/art/universe/substances/substance-sulfate-mineral.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of raw sulfate mineral as one continuous soft gypsum-like evaporite face filling the frame: pale crystalline sulfate for construction, cement and chemical feedstock, unrefined. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-sulfate-mineral.png and a same-pixel-size catalog WebP at this key."
+    }
   },
   {
     "id": "substance-frozen-volatile-deposit",
@@ -1770,7 +1784,14 @@
     "description": "Frozen Volatile Deposit covers naturally trapped cryogenic volatile material such as methane-rich ice and clathrate-style deposits.",
     "canonStatus": "working canon",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
-    "sourceSection": "Mobile familiar-resource integration"
+    "sourceSection": "Mobile familiar-resource integration",
+    "image": {
+      "key": "assets/art/universe/substances/substance-frozen-volatile-deposit.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of a frozen volatile deposit as one continuous cryogenic ice face filling the frame: cloudy methane-rich ice and clathrate texture, cold fuel feedstock, no flame and no container. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-frozen-volatile-deposit.png and a same-pixel-size catalog WebP at this key."
+    }
   },
   {
     "id": "substance-native-carbon-mineral",
@@ -1786,7 +1807,14 @@
     "description": "Native Carbon Mineral covers naturally occurring elemental-carbon mineral material including diamond-bearing deposits.",
     "canonStatus": "working canon",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
-    "sourceSection": "Mobile familiar-resource integration"
+    "sourceSection": "Mobile familiar-resource integration",
+    "image": {
+      "key": "assets/art/universe/substances/substance-native-carbon-mineral.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of native carbon mineral as one continuous hard carbon-bearing rock face filling the frame: dense host with embedded industrial diamond-grade carbon crystal character, cutting feedstock, not jewellery and not a gem on velvet. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-native-carbon-mineral.png and a same-pixel-size catalog WebP at this key."
+    }
   },
   {
     "id": "substance-precious-metal-ore",
@@ -1802,6 +1830,13 @@
     "description": "Precious Metal Ore is a broad Commonwealth industrial category for naturally occurring silver-, gold-, platinum- and palladium-bearing ores.",
     "canonStatus": "working canon",
     "sourceDocumentId": "lore-koplin-materials-and-substances",
-    "sourceSection": "Mobile familiar-resource integration"
+    "sourceSection": "Mobile familiar-resource integration",
+    "image": {
+      "key": "assets/art/universe/substances/substance-precious-metal-ore.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "1:1 full-bleed close-up of raw precious-metal ore as a single continuous rock face filling the frame: dark host rock with sparse bright gold, silver and platinum-group metallic flecks, unrefined high-value feedstock. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
+      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-precious-metal-ore.png and a same-pixel-size catalog WebP at this key."
+    }
   }
 ]
