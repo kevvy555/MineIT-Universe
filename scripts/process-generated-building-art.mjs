@@ -62,7 +62,7 @@ export function buildAtlas(levelPngs, dstAtlasWebp) {
   if (!existsSync(dir)) {
     execFileSync('powershell.exe', ['-NoProfile', '-Command', `New-Item -ItemType Directory -Path '${dir}' -Force | Out-Null`]);
   }
-  const tempAtlasPng = dstAtlasWebp.replace(/\\.webp$/, '_temp.png');
+  const tempAtlasPng = dstAtlasWebp.replace(/\.webp$/, '_temp.png');
   const pngList = levelPngs.map(p => `'${p.replace(/\\/g, '\\\\')}'`).join(',');
   const psScript = `
     Add-Type -AssemblyName System.Drawing
