@@ -44,7 +44,7 @@ const ICONS = {
   regions: '◎', starSystems: '✦', planets: '●', celestialBodyKinds: '◉', worldTypes: '◌',
   atmosphereTypes: '☁', surfaceLandforms: '⛰', surfaceBiomes: '⚘', surfaceFeatures: '◻',
   surfaceHydrospheres: '≈', geologyProvinces: '▣', findSites: '⌖', games: '▶',
-  landscapeTilesets: '▦', landscapeTiles: '▪',
+  landscapeTilesets: '▦', landscapeTiles: '▪', worldAtlases: '▣', worldAtlasTiles: '▫',
   settlements: '⬡', organisations: 'O',
   organisationUnits: '▦', facilities: '⌂', operations: '⚙', products: '◆', substances: '▣',
   parts: '⧉', machines: '⚒', buildings: '⌂', researchTechnologies: '⌬', substanceArchetypes: '◈', substanceProperties: '≋', rarityBands: '⋄', geologyProcesses: '⌁', depositShapes: '⬢', depositStates: '◐', stellarTypes: '✶', cometTypes: '☄', ringSystemTypes: '◎', starSystemTypes: '✦', species: 'S',
@@ -95,7 +95,8 @@ function worldNode(world) {
     category('Moons', moons.map(worldNode).sort(byName)),
     category('Settlements / Stations', related('settlements', settlement => settlement.planetId === world.id).map(settlementNode).sort(byName)),
     category('Facilities', nodes(related('facilities', facility => facility.planetId === world.id && !facility.settlementId))),
-    category('Landscape tileset', nodes(related('landscapeTilesets', tileset => tileset.planetId === world.id)))
+    category('Landscape tileset', nodes(related('landscapeTilesets', tileset => tileset.planetId === world.id))),
+    category('World atlas', nodes(related('worldAtlases', atlas => atlas.planetId === world.id)))
   ]);
 }
 
@@ -203,6 +204,12 @@ function buildLandDirectoryNode() {
         tile => tile.biomeId
           ? state.catalogue.nameFor(tile.biomeId)
           : (tile.hydrosphereId ? state.catalogue.nameFor(tile.hydrosphereId) : 'Water')
+      ).map(([label, items]) => category(label, nodes(items))))
+    )),
+    category('World Atlases', state.catalogue.collection('worldAtlases').map(atlas =>
+      entityNode(atlas.id, groupRecords(
+        related('worldAtlasTiles', tile => tile.atlasId === atlas.id),
+        tile => `Ring ${tile.ring ?? 0}`
       ).map(([label, items]) => category(label, nodes(items))))
     ))
   ]);
@@ -434,6 +441,8 @@ function subtitle(collection, entity) {
     findSites: `${entity.catalogTier || ''} • ${entity.depthBand || ''}`.trim(),
     landscapeTilesets: entity.planetId ? state.catalogue.nameFor(entity.planetId) : '',
     landscapeTiles: [entity.landformId && state.catalogue.nameFor(entity.landformId), entity.biomeId && state.catalogue.nameFor(entity.biomeId), entity.hydrosphereId && state.catalogue.nameFor(entity.hydrosphereId)].filter(Boolean).join(' • '),
+    worldAtlases: entity.planetId ? state.catalogue.nameFor(entity.planetId) : '',
+    worldAtlasTiles: `x${entity.x}, y${entity.y} • ring ${entity.ring ?? 0}`,
     games: `${entity.form || ''} • ${entity.playPattern || ''}`.trim(),
     settlements: entity.locationType,
     organisations: `${entity.scale || ''} ${entity.organisationType || ''}`.trim(),
@@ -488,6 +497,11 @@ function loreOpenLink(documentId, section = '') {
   return `<a class="entityLink" href="./lore.html?${esc(query.toString())}">Open in Lore Explorer</a>`;
 }
 
+function atlasOpenLink(atlasId) {
+  if (!atlasId) return '—';
+  return `<a class="entityLink" href="./atlas.html?atlas=${esc(atlasId)}">Open atlas browser</a>`;
+}
+
 function fieldsFor(collection, entity) {
   const fields = [];
 
@@ -512,6 +526,9 @@ function fieldsFor(collection, entity) {
       field('Dominant water', links(entity.dominantHydrosphereIds)),
       field('Surface assignment', esc(entity.surfaceAssignmentStatus)),
       field('Landscape tileset', entity.landscapeTilesetId ? link(entity.landscapeTilesetId) : '—'),
+      field('Capital', entity.capitalSettlementId ? link(entity.capitalSettlementId) : '—'),
+      field('World atlas', entity.worldAtlasId ? link(entity.worldAtlasId) : '—'),
+      field('Atlas browser', atlasOpenLink(entity.worldAtlasId)),
       field('Environment', esc(entity.environment)),
       field('Population', population(entity.population)),
       field('Settlements', links(relatedIds('settlements', item => item.planetId === entity.id))),
@@ -753,6 +770,30 @@ function fieldsFor(collection, entity) {
       field('Open land lore', loreOpenLink(entity.sourceDocumentId, entity.sourceSection))
     );
   }
+  if (collection === 'worldAtlases') {
+    fields.push(
+      field('World', link(entity.planetId)),
+      field('Origin', entity.originSettlementId ? link(entity.originSettlementId) : '—'),
+      field('Status', esc(entity.status)),
+      field('Tile size', esc(`${entity.tileSizeKm} km`)),
+      field('Phase-one tiles', esc(entity.phaseOne?.tileCount)),
+      field('Tiles', esc(related('worldAtlasTiles', item => item.atlasId === entity.id).length)),
+      field('Atlas browser', atlasOpenLink(entity.id))
+    );
+  }
+  if (collection === 'worldAtlasTiles') {
+    fields.push(
+      field('Atlas', link(entity.atlasId)),
+      field('World', link(entity.planetId)),
+      field('Coordinate', esc(`x${entity.x}, y${entity.y}`)),
+      field('Sequence', esc(entity.sequence)),
+      field('Batch', esc(entity.batch)),
+      field('Ring', esc(entity.ring)),
+      field('District', esc(entity.district)),
+      field('Mapped area', esc(`${entity.mappedAreaKm2} km²`)),
+      field('Atlas browser', atlasOpenLink(entity.atlasId))
+    );
+  }
   if (collection === 'researchTechnologies') {
     fields.push(
       field('Category', esc(entity.category)),
@@ -953,7 +994,7 @@ function renderDetail() {
   const previewUrl = entity.image?.generated && entity.image?.key ? state.catalogue.assetUrl(entity.image.key) : null;
   const originalUrl = previewUrl ? (state.catalogue.assetUrl(state.catalogue.originalAssetKey(entity.image.key)) || previewUrl) : null;
   const landscapeArt = collection === 'starSystems';
-  const squareArt = collection === 'landscapeTiles';
+  const squareArt = collection === 'landscapeTiles' || collection === 'worldAtlasTiles';
   const heroClass = landscapeArt ? ' heroLandscape' : squareArt ? ' heroSquare' : '';
   const placeholderClass = landscapeArt ? ' landscape' : squareArt ? ' square' : '';
   const image = previewUrl

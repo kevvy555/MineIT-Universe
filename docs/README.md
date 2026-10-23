@@ -12,6 +12,8 @@ This repository owns **canonical lore, authored identities and shared MineIT des
 ## Integration and canonical systems
 
 - [World / surface canon](WorldSurfaceCanon.md)
+- [Koplin 3 canonical world atlas](Koplin3CanonicalWorldAtlas.md)
+- [Koplin city builder specification](../game-specs/koplin-city-builder/README.md)
 - [Substance, Parts, Machines and Buildings canon](SubstanceCanon.md)
 - [Universe generation architecture](UniverseGenerationArchitecture.md)
 - [Consumers and publishing](PublishingAndConsumers.md)

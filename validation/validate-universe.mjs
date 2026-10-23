@@ -1,5 +1,5 @@
 import { readFile, access } from 'node:fs/promises';
-import { dirname, resolve } from 'node:path';
+import { basename, dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const here = dirname(fileURLToPath(import.meta.url));
@@ -26,6 +26,11 @@ const warnings = [];
 const byId = new Map();
 const idPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const imageStatuses = new Set(['not-generated', 'in-progress', 'generated', 'approved', 'needs-regeneration']);
+// Mobile canonical artwork must retain the original lossless PNG alongside its WebP.
+const mobileOriginalCollections = new Set([
+  'mobileResourceDefinitions', 'mobileBiologicalResources', 'buildings',
+  'buildingMobileLevelImages', 'landscapeTiles', 'visualAssets', 'shipClasses',
+]);
 
 if (!Number.isInteger(manifest.canonicalYear)) errors.push('manifest.canonicalYear must be an integer.');
 if (!Number.isInteger(manifest.civilisationBaselineYear)) errors.push('manifest.civilisationBaselineYear must be an integer.');
@@ -57,6 +62,16 @@ for (const [collectionName, records] of Object.entries(collections)) {
       if (record.image.generated && record.image.key) {
         try { await access(resolve(repoRoot, record.image.key)); }
         catch { errors.push(`${record.id}: image is marked generated but asset is missing at ${record.image.key}.`); }
+        if (mobileOriginalCollections.has(collectionName)) {
+          const imageKey = record.image.key;
+          if (!imageKey.endsWith('.webp')) {
+            errors.push(`${record.id}: published Mobile image must be a WebP at ${imageKey}.`);
+          } else {
+            const originalPath = resolve(repoRoot, dirname(imageKey), 'Originals', basename(imageKey, '.webp') + '.png');
+            try { await access(originalPath); }
+            catch { errors.push(`${record.id}: generated Mobile art is missing original PNG at ${originalPath}.`); }
+          }
+        }
       }
     }
   }
@@ -75,9 +90,11 @@ for (const { record } of byId.values()) {
 
 const scalarRefs = {
   starSystems: ['regionId', 'primaryAuthorityOrganisationId', 'homeworldId'],
-  planets: ['systemId', 'parentPlanetId', 'governingOrganisationId', 'celestialBodyKindId', 'worldTypeId', 'atmosphereTypeId', 'landscapeTilesetId'],
+  planets: ['systemId', 'parentPlanetId', 'governingOrganisationId', 'celestialBodyKindId', 'worldTypeId', 'atmosphereTypeId', 'landscapeTilesetId', 'capitalSettlementId', 'worldAtlasId'],
   landscapeTilesets: ['planetId', 'intendedGameId'],
   landscapeTiles: ['tilesetId', 'planetId', 'landformId', 'biomeId', 'hydrosphereId'],
+  worldAtlases: ['planetId', 'originSettlementId'],
+  worldAtlasTiles: ['atlasId', 'planetId'],
   worldTypes: ['appliesToKindId'],
   settlements: ['systemId', 'planetId', 'parentLocationId', 'governingOrganisationId'],
   organisations: ['headquartersLocationId', 'parentOrganisationId'],
@@ -104,6 +121,7 @@ const arrayRefs = {
   regions: ['administrativeOrganisationIds', 'systemIds'],
   planets: ['dominantLandformIds', 'dominantBiomeIds', 'dominantHydrosphereIds'],
   landscapeTilesets: ['landformIds', 'biomeIds', 'hydrosphereIds', 'adjacencyPreviewIds'],
+  worldAtlasTiles: ['neighborTileIds', 'referenceTileIds'],
   organisations: ['economicSectorIds'],
   facilities: ['partnerOrganisationIds'],
   operations: ['managerPersonIds', 'procurementPersonIds', 'shipIds', 'productIds', 'shipClassIds'],
@@ -344,6 +362,47 @@ for (const planet of collections.planets ?? []) {
   if (tileset && tileset.planetId !== planet.id) errors.push(`${planet.id}: landscapeTilesetId belongs to another world.`);
 }
 
+for (const atlas of collections.worldAtlases ?? []) {
+  if (!Number.isFinite(atlas.tileSizeKm) || atlas.tileSizeKm <= 0) errors.push(`${atlas.id}: tileSizeKm must be a positive number.`);
+  if (atlas.coordinateSystem?.generationOrder !== 'clockwise-square-spiral') errors.push(`${atlas.id}: generationOrder must be clockwise-square-spiral.`);
+  const atlasTiles = (collections.worldAtlasTiles ?? []).filter(tile => tile.atlasId === atlas.id);
+  if (!atlasTiles.length) errors.push(`${atlas.id}: atlas has no tiles.`);
+  if (Number.isInteger(atlas.phaseOne?.tileCount) && atlasTiles.length !== atlas.phaseOne.tileCount) {
+    errors.push(`${atlas.id}: phase-one tile count is ${atlas.phaseOne.tileCount} but ${atlasTiles.length} records exist.`);
+  }
+  const coordinates = new Set();
+  const sequences = new Set();
+  for (const tile of atlasTiles) {
+    const coordinateKey = `${tile.x},${tile.y}`;
+    if (coordinates.has(coordinateKey)) errors.push(`${atlas.id}: duplicate atlas coordinate ${coordinateKey}.`);
+    coordinates.add(coordinateKey);
+    if (!Number.isInteger(tile.sequence) || tile.sequence < 1) errors.push(`${tile.id}: sequence must be a positive integer.`);
+    if (sequences.has(tile.sequence)) errors.push(`${atlas.id}: duplicate atlas sequence ${tile.sequence}.`);
+    sequences.add(tile.sequence);
+    if (tile.batch !== Math.ceil(tile.sequence / (atlas.coordinateSystem?.batchSize || 10))) errors.push(`${tile.id}: batch does not match sequence/batchSize.`);
+    if (tile.ring !== Math.max(Math.abs(tile.x), Math.abs(tile.y))) errors.push(`${tile.id}: ring does not match coordinates.`);
+    if (!tile.image) errors.push(`${tile.id}: world atlas tile requires image metadata.`);
+    if (tile.image?.key && !String(tile.image.key).startsWith(`assets/art/universe/planets/${tile.planetId}/atlas/`)) {
+      errors.push(`${tile.id}: world atlas image must live under the owning planet atlas folder.`);
+    }
+    for (const edge of ['north', 'east', 'south', 'west']) {
+      if (!tile.edgeContinuity?.[edge]) errors.push(`${tile.id}: missing ${edge} edge continuity guidance.`);
+    }
+    for (const refId of tile.referenceTileIds ?? []) {
+      const ref = byId.get(refId)?.record;
+      if (ref && ref.sequence >= tile.sequence) errors.push(`${tile.id}: reference tile ${refId} must have an earlier sequence.`);
+    }
+  }
+  for (let sequence = 1; sequence <= atlasTiles.length; sequence += 1) {
+    if (!sequences.has(sequence)) errors.push(`${atlas.id}: missing atlas sequence ${sequence}.`);
+  }
+}
+for (const tile of collections.worldAtlasTiles ?? []) {
+  const atlas = byId.get(tile.atlasId)?.record;
+  if (atlas && atlas.planetId !== tile.planetId) errors.push(`${tile.id}: planetId does not match atlas planet.`);
+  if (tile.mappedAreaKm2 !== 1) errors.push(`${tile.id}: Koplin atlas tiles must represent 1 km².`);
+}
+
 for (const relationship of collections.relationships ?? []) if (relationship.personAId === relationship.personBId) errors.push(`${relationship.id}: relationship self-reference.`);
 for (const operation of collections.operations ?? []) for (const requirement of operation.resourceRequirements ?? []) if (!requirement.resourceType || !requirement.resourceId || !requirement.reason) errors.push(`${operation.id}: incomplete resource requirement.`);
 
@@ -487,7 +546,7 @@ console.log(`Canonical Year ${manifest.canonicalYear}; civilisation baseline Yea
 console.log(`${byId.size} entities across ${Object.keys(collections).length} logical collections and ${Object.values(collectionFiles).flat().length} JSON shards.`);
 console.log(`${retailClasses.length} factory-new ship classes across ${retailManufacturerIds.size} manufacturers.`);
 console.log(`${commercialContacts.length} commercial contacts across ${sectors.length} economic sectors and ${commercialOperations.length} procurement operations.`);
-console.log(`${(collections.games ?? []).length} games; ${(collections.surfaceLandforms ?? []).length} landforms; ${(collections.surfaceBiomes ?? []).length} biomes; ${(collections.findSites ?? []).length} P0 find sites; ${(collections.landscapeTilesets ?? []).length} authored landscape tilesets; ${(collections.landscapeTiles ?? []).length} authored landscape tiles; ${(collections.visualAssets ?? []).length} reusable visual assets.`);
+console.log(`${(collections.games ?? []).length} games; ${(collections.surfaceLandforms ?? []).length} landforms; ${(collections.surfaceBiomes ?? []).length} biomes; ${(collections.findSites ?? []).length} P0 find sites; ${(collections.landscapeTilesets ?? []).length} authored landscape tilesets; ${(collections.landscapeTiles ?? []).length} authored landscape tiles; ${(collections.visualAssets ?? []).length} reusable visual assets; ${(collections.worldAtlases ?? []).length} world atlases; ${(collections.worldAtlasTiles ?? []).length} world atlas tiles.`);
 if (warnings.length) { console.log(`\nWarnings (${warnings.length}):`); warnings.forEach(w => console.log(`- ${w}`)); }
 
 // MineIT Mobile canonical resource/environment boundary.

@@ -1,0 +1,75 @@
+[
+  {
+    "id": "world-atlas-koplin-3",
+    "name": "Koplin 3 Canonical Surface Atlas",
+    "planetId": "planet-koplin-prime",
+    "originSettlementId": "settlement-concordia",
+    "canonStatus": "authored-expansion",
+    "status": "active-authoring",
+    "description": "Canonical authored materialisation of selected 1 km × 1 km surface tiles on Koplin 3, beginning at the centre of Concordia and expanding outward in a clockwise square spiral. It is a visual atlas layer, distinct from the reusable Mobile landscape tileset and from mutable per-save game maps.",
+    "tileSizeKm": 1,
+    "coordinateSystem": {
+      "origin": "Federal Forum, Concordia",
+      "xPositive": "east",
+      "yPositive": "north",
+      "generationOrder": "clockwise-square-spiral",
+      "firstMove": "east",
+      "batchSize": 10
+    },
+    "phaseOne": {
+      "tileCount": 100,
+      "approximateMappedAreaKm2": 100,
+      "purpose": "Establish the capital core, inner city, outer metropolitan belt and first peri-urban/rural transitions before the public atlas browser is added."
+    },
+    "capitalPlacement": {
+      "continent": "Zoran continent",
+      "environment": "cool-to-warm temperate, well-watered metropolitan plain within the Zoran continent's historic fault-and-ore belt",
+      "planningRationale": "The capital deliberately sits in a region associated with Zoran technical institutions while functioning as a Commonwealth city for all three peoples. Its location supports rapid continental transport, abundant landscaped water and expansion from dense civic core into green suburbs and productive countryside."
+    },
+    "macroWorldPlan": [
+      {
+        "region": "Trondonian continent",
+        "role": "hot equatorial and tropical biomass-rich continent",
+        "visualDirection": "lush coasts, rivers, wetlands, dense agriculture, forest belts, tropical cities and large ecological preserves"
+      },
+      {
+        "region": "Zoran continent",
+        "role": "temperate, faulted and ore-rich continent; location of Concordia",
+        "visualDirection": "temperate forests and grasslands, mineral highlands, mature cities, old technical centres, farms, rail corridors and managed watersheds"
+      },
+      {
+        "region": "Blaxmar continent",
+        "role": "cold polar and sub-polar continent with deep energy and mineral resources",
+        "visualDirection": "tundra, snow, exposed rock, long-winter settlements, heavy infrastructure, protected heated agriculture and dramatic extraction landscapes"
+      },
+      {
+        "region": "Islands and polar archipelagos",
+        "role": "island chains, shelves and polar archipelagos outside the three major continental masses",
+        "visualDirection": "remote ports, research stations, fisheries, volcanic or glacial islands, nature reserves and sparse settlement"
+      }
+    ],
+    "styleLock": {
+      "reference": "User-approved MineIT building-art language adapted to a 1 km city/terrain atlas",
+      "camera": "high oblique isometric/axonometric aerial, consistent orientation on every tile",
+      "aspectRatio": "1:1",
+      "lighting": "bright temperate local midday with consistent sun direction and crisp shadows",
+      "architecture": "polished advanced Commonwealth design: white and light-grey composite structures with strong orange accents, dark mechanical details, blue glass, exposed but clean infrastructure, glass biodomes and integrated planting",
+      "rendering": "ultra-detailed AAA city-builder / colony-builder environment art; full bleed edge-to-edge; readable at overview scale",
+      "mood": "prosperous, mature, highly networked and materially comfortable; never dystopian, ruined or cyberpunk-grimy",
+      "textRule": "No readable labels, logos, UI or watermarks in the artwork",
+      "terrainRule": "As density falls, retain the same visual language in roads, utilities, farms, villages and terrain infrastructure rather than forcing city architecture into wilderness."
+    },
+    "adjacencyRules": {
+      "promptEdges": "Every tile stores north/east/south/west boundary anchors. Shared boundaries are derived deterministically so both neighboring prompts describe the same crossing features.",
+      "imageReferences": "When generating a tile, use already-generated orthogonal neighbours listed in referenceTileIds as image references wherever tooling allows. Prefer the direct predecessor and any west/south/north/east neighbour already present.",
+      "seamReview": "Reject or regenerate obvious broken roads, rail lines, waterways, lighting changes or scale changes before an image is accepted as canonical.",
+      "densityGradient": "Rings 0-1 are civic core; 2 inner city; 3 middle city; 4 outer metropolitan belt; 5 begins peri-urban, greenbelt, farms, woodland, villages and other lower-density land."
+    },
+    "websitePlan": {
+      "implementationTrigger": "after a useful first atlas area is generated, targeted initially at the first 100 tiles",
+      "viewer": "pan-and-zoom coordinate grid using worldAtlasTiles records and canonical image keys",
+      "tilePanel": "show coordinate, sequence, batch, ring, district, description and generation metadata",
+      "navigation": "render by coordinate, not generation order, while optionally visualising spiral order and generation batches"
+    }
+  }
+]

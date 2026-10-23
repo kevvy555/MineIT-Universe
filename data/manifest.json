@@ -1,12 +1,12 @@
 {
   "schemaVersion": 12,
-  "contentVersion": "0.14.0",
+  "contentVersion": "0.15.0",
   "universeId": "mineit",
   "name": "MineIT Universe",
   "canonicalYear": 5326,
   "civilisationBaselineYear": 5300,
   "calendar": "Koplin Commonwealth Calendar",
-  "published": "2026-10-06",
+  "published": "2026-10-23",
   "generation": {
     "mode": "authored-materialised",
     "materialised": true,
@@ -110,6 +110,8 @@
     "mobileResourceDefinitions": "mobile-resource-definitions.json",
     "mobileResourceOccurrenceProfiles": "mobile-resource-occurrence-profiles.json",
     "mobileBiologicalResources": "mobile-biological-resources.json",
-    "visualAssets": "visual-assets-mobile-landscape.json"
+    "visualAssets": "visual-assets-mobile-landscape.json",
+    "worldAtlases": "world-atlases.json",
+    "worldAtlasTiles": "world-atlas-tiles.json"
   }
 }

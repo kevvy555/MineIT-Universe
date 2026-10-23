@@ -846,6 +846,13 @@
     "provenance": {
       "desktopPath": "Documentation/design/Machines & Buildings/Machines/Machines.md",
       "sourceState": "details to be defined"
+    },
+    "image": {
+      "key": "assets/art/universe/machines/machine-crude-steam-piston-generator.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Yard photograph of a crude early-colony steam piston generator: exposed boiler, heavy reciprocating pistons, flywheel and charcoal structural frame, unfinished frontier fabrication. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Designer placeholder machine; refine prompt when construction parts and operating model are defined."
     }
   },
   {
@@ -863,6 +870,13 @@
     "provenance": {
       "desktopPath": "Documentation/design/Machines & Buildings/Machines/Machines.md",
       "sourceState": "details to be defined"
+    },
+    "image": {
+      "key": "assets/art/universe/machines/machine-crude-combustion-generator.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Yard photograph of a crude early-colony combustion generator: robust engine block, intake and exhaust plumbing, fuel reservoir and charcoal structural skid. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "notes": "Designer placeholder machine; refine prompt when construction parts and operating model are defined."
     }
   },
   {

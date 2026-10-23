@@ -96,7 +96,7 @@ Allowed statuses are `not-generated`, `in-progress`, `generated`, `approved`, an
 
 `not-generated` and `in-progress` require `generated: false`. An `in-progress` record must include `generationBatchId` and `generationStartedAt`. `generated` and `approved` require `generated: true`.
 
-People, named ships and star systems are current primary image-bearing types. Purchasable ship classes may also carry image metadata and prompts. Parts, machines and buildings may also carry image metadata and prompts. MineIT Mobile resource definitions may carry 1:1 catalogue/tile art under `assets/art/universe/resources/`; these images represent the natural resource identity and must not encode mutable rarity, quality, reserve or price. Star-system vistas are identity-bearing 16:9 art keyed by system ID. Substances may carry optional catalog-still image metadata; only records with an `image` object are in the generation process. Named worlds may carry a matching `landscapeTileset` of 1:1 Mobile grid tiles keyed by planet ID; those tiles are world-specific and must not be stored as reusable visual-library assets.
+People, named ships and star systems are current primary image-bearing types. Purchasable ship classes may also carry image metadata and prompts. Parts, machines and buildings may also carry image metadata and prompts. MineIT Mobile resource definitions may carry 1:1 catalogue/tile art under `assets/art/universe/resources/`; these images represent the natural resource identity and must not encode mutable rarity, quality, reserve or price. Star-system vistas are identity-bearing 16:9 art keyed by system ID. Substances may carry optional catalog-still image metadata; only records with an `image` object are in the generation process. Named worlds may carry a matching `landscapeTileset` of 1:1 Mobile grid tiles keyed by planet ID; those tiles are world-specific and must not be stored as reusable visual-library assets. Named worlds may also carry an authored `worldAtlas` of 1 km identity-bearing tiles under `assets/art/universe/planets/<planet-id>/atlas/`; atlas tiles are canonical surface art, not Mobile landscape tiles and not per-save maps.
 
 The exact repository image-generation workflow is defined in `docs/ImageGenerationProcess.md`; image-generation agents must read it before starting a batch.
 
@@ -112,6 +112,10 @@ The Lore Explorer must load lore-document metadata and canonical Markdown from `
 
 The Games page must load the `games` collection from the same manifest. It is a designer catalogue of current MineIT consumers, not an in-universe organisation type.
 
+The World Atlas browser must load `worldAtlases` and `worldAtlasTiles` from the same manifest. It must not embed a second map catalogue.
+
+`game-specs/` may hold designer specifications for future games that consume Universe IDs. Those documents are not canonical universe records and must not duplicate organisations, people, locations or other persistent entities.
+
 `prototypes/` may contain embedded sample data only when clearly marked as non-canonical design references.
 
 ## Architecture
@@ -121,16 +125,17 @@ The Games page must load the `games` collection from the same manifest. It is a 
 - `assets/art/universe/` — bespoke canonical universe art keyed by entity ID.
 - `assets/art/visual-library/` — reusable identity-neutral visual assets.
 - `js/` and `css/` — read-only browsing/indexing applications.
+- `game-specs/` — designer specifications for future games; not a second canon source.
 - `docs/` — architecture, schema and canon-governance decisions.
 - each game repository — mutable gameplay state and game-specific behaviour.
 
 ## Mobile-first UI
 
-The Directory, Commercial Network, Lore Explorer and Games catalogue must remain usable on a portrait phone.
+The Directory, Commercial Network, Lore Explorer, Games catalogue and World Atlas browser must remain usable on a portrait phone.
 
 ## Validation
 
-Any behaviour, schema or canon-generation change must preserve or extend validation for unique IDs, cross-references, manifest collection shards, organisation/world hierarchy, image state, asset paths, resource requirements, lore source paths, lore-topic source references, commercial-contact boundaries and generation metadata.
+Any behaviour, schema or canon-generation change must preserve or extend validation for unique IDs, cross-references, manifest collection shards, organisation/world hierarchy, image state, asset paths, world-atlas coordinates, resource requirements, lore source paths, lore-topic source references, commercial-contact boundaries and generation metadata.
 
 Broken references must be visible as errors rather than silently ignored.
 

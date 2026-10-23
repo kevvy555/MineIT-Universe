@@ -6,12 +6,12 @@ This repository is the authoritative owner of persistent universe entities **and
 
 ## Current canon release
 
-Content version: **0.11.0**  
-Schema version: **10**  
+Content version: **0.15.0**  
+Schema version: **12**  
 Civilisation baseline: **Year 5300**  
 Current commercial/scenario era: **Year 5326**
 
-The canonical foundation is the **Koplin Universe — Expanded Backstory & Lore Bible**, with **Materials of the Commonwealth** as the foundation substances companion, **Worlds, Land and Surface Classification** as the foundation land companion, and **Scenario II: The Deep Reach Mining Charter** as a later Year-5326 scenario extension. Structured industrial catalogues (`substances`, `parts`, `machines`, `buildings`) and land catalogues (`celestialBodyKinds`, `worldTypes`, land squares, `findSites`) are browsable in the Directory, with a Games page for the three current MineIT consumers. Schema 10 expands the shared catalogue with 71 research technologies, 31 find sites, geological process/shape/state vocabularies, structured substance archetype/property/rarity references, and star/comet/ring/system classifications. Schema 9 added per-world Mobile landscape tilesets; Koplin 3 currently has a complete matching set.
+The canonical foundation is the **Koplin Universe — Expanded Backstory & Lore Bible**, with **Materials of the Commonwealth** as the foundation substances companion, **Worlds, Land and Surface Classification** as the foundation land companion, and **Scenario II: The Deep Reach Mining Charter** as a later Year-5326 scenario extension. Structured industrial catalogues (`substances`, `parts`, `machines`, `buildings`) and land catalogues (`celestialBodyKinds`, `worldTypes`, land squares, `findSites`) are browsable in the Directory, with a Games page for the three current MineIT consumers. Schema 12 adds canonical authored world atlases and 1 km atlas-tile records, beginning with Concordia on Koplin 3. Schema 10 expands the shared catalogue with 71 research technologies, 31 find sites, geological process/shape/state vocabularies, structured substance archetype/property/rarity references, and star/comet/ring/system classifications. Schema 9 added per-world Mobile landscape tilesets; Koplin 3 currently has a complete matching set.
 
 Release 0.5.0 future-proofs the materialised Universe for later deterministic generation and introduces the first canonical commercial-contact network: 20 economic sectors, 20 structural procurement operations, additional sector organisations and 100 persistent commercial contacts materialised from the useful parts of the legacy Stage 8 deterministic buyer source.
 
@@ -41,6 +41,7 @@ Generated expansion material that does not conflict with the source bibles may r
 - `commercial-network.html` — persistent commercial contacts and their canonical structural resource demand.
 - `ship-catalogue.html` — factory-new Year-5326 ship catalogue grouped by manufacturer and ship line.
 - `lore.html` — full canonical lore explorer with source switching, quick-reference topics and section navigation.
+- `atlas.html` — pan-and-zoom canonical world-atlas browser; currently materialises Concordia / Koplin 3 surface tiles.
 
 ## Principles
 
@@ -72,6 +73,7 @@ assets/art/universe/        Bespoke canonical universe artwork
 assets/art/visual-library/  Identity-neutral reusable visual assets
 js/                         Read-only browser application code
 css/                        Browser application styles
+game-specs/                 Designer game specifications that consume Universe IDs
 prototypes/                 Non-canonical design references only
 docs/                       Canon architecture and integration specifications
 validation/                 Canon validation
@@ -80,6 +82,7 @@ games.html                  GitHub Pages games catalogue
 commercial-network.html     GitHub Pages commercial-contact browser
 ship-catalogue.html         GitHub Pages factory-new ship catalogue
 lore.html                   GitHub Pages full-lore explorer
+atlas.html                  GitHub Pages pan-and-zoom canonical world atlas
 ```
 
 Key documents:

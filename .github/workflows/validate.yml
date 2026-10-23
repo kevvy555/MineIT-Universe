@@ -42,3 +42,5 @@ jobs:
         run: node --check js/lore-app.js
       - name: Syntax check Ship Catalogue app
         run: node --check js/ship-catalogue-app.js
+      - name: Syntax check World Atlas app
+        run: node --check js/world-atlas.js
