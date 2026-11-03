@@ -8,7 +8,7 @@ const flatten = (record, prefix = "", result = {}) => {
     if (value && !Array.isArray(value) && typeof value === "object")
       flatten(value, field, result);
     else result[field] = prefix.startsWith('review') && typeof value === 'string' &&
-      /^-?\\d+(?:\\.\\d+)?$/.test(value) ? Number(value) : value;
+      /^-?\d+(?:\.\d+)?$/.test(value) ? Number(value) : value;
   }
   return result;
 };
