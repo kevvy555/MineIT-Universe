@@ -206,6 +206,13 @@ export function fieldText(value, catalogue) {
   if (value == null || value === "") return "";
   if (Array.isArray(value)) return value.map(item => fieldText(item, catalogue)).filter(Boolean).join(", ");
   if (typeof value === "string" && catalogue?.get(value)) return catalogue.get(value).name;
+  if (value && typeof value === "object") {
+    if (value.partId) return (catalogue?.get(value.partId)?.name || value.partId) +
+      " × " + value.quantity;
+    if (value.materialId) return (catalogue?.get(value.materialId)?.name || value.materialId) +
+      " × " + value.quantityKg + " kg";
+    return JSON.stringify(value);
+  }
   return simple(value);
 }
 
@@ -213,7 +220,8 @@ export function fieldText(value, catalogue) {
 // (biomes, operational tags, etc.) expose and match each individual member.
 export function valueToken(value) {
   return value === null || value === undefined || value === ""
-    ? "blank" : typeof value + ":" + String(value);
+    ? "blank" : typeof value + ":" +
+      (value && typeof value === "object" ? JSON.stringify(value) : String(value));
 }
 
 export function rowValueTokens(value) {
