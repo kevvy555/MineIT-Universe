@@ -34,6 +34,12 @@ jobs:
         run: node --check scripts/import-industrial-catalogue.mjs
       - name: Syntax check data loader
         run: node --check js/universe-data.js
+      - name: Validate unified Substance catalogue and Android audit crosswalk
+        run: node validation/validate-substance-table.mjs
+      - name: Syntax check Substance table data
+        run: node --check js/substance-table-data.js
+      - name: Syntax check Substance table interface
+        run: node --check js/substance-table.js
       - name: Syntax check Directory app
         run: node --check js/universe-app.js
       - name: Syntax check Commercial Network app

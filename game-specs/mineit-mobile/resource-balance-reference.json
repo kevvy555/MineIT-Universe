@@ -1,0 +1,659 @@
+{
+  "sourceRepository": "kevvy555/MineIT-Android",
+  "sourceRef": "develop",
+  "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+  "sourcePath": "app/src/main/assets/gameplay/resource-balance.json",
+  "sourceFormatVersion": 1,
+  "authority": "reference-only-android-owned-gameplay-balance",
+  "notes": "Read-only snapshot of existing Android gameplay tuning. Not canonical physical properties and not a runtime configuration source. Regenerate by reconciling against the Android source; do not author here.",
+  "resources": [
+    {
+      "resourceId": "mobile-resource-timber",
+      "rarity": "Common",
+      "weight": 12,
+      "qualityBias": 0.96,
+      "baseScan": 1,
+      "baselineExtractionMethod": "surface-recovery",
+      "basePrice": 0.13,
+      "legacyAliases": [],
+      "operationalTags": [
+        "construction-input",
+        "biological-stock"
+      ],
+      "baselineExtractionFamily": "bio-harvester"
+    },
+    {
+      "resourceId": "mobile-resource-plant-fibre",
+      "rarity": "Common",
+      "weight": 14,
+      "qualityBias": 0.95,
+      "baseScan": 1,
+      "baselineExtractionMethod": "surface-recovery",
+      "basePrice": 0.12,
+      "legacyAliases": [
+        "fiber"
+      ],
+      "operationalTags": [
+        "construction-input",
+        "biological-stock"
+      ],
+      "baselineExtractionFamily": "bio-harvester"
+    },
+    {
+      "resourceId": "mobile-resource-stone",
+      "rarity": "Very Common",
+      "weight": 26,
+      "qualityBias": 0.92,
+      "baseScan": 1,
+      "baselineExtractionMethod": "quarrying",
+      "basePrice": 0.1,
+      "legacyAliases": [
+        "stone"
+      ],
+      "operationalTags": [
+        "construction-input"
+      ],
+      "baselineExtractionFamily": "quarry"
+    },
+    {
+      "resourceId": "mobile-resource-clay",
+      "rarity": "Common",
+      "weight": 18,
+      "qualityBias": 0.98,
+      "baseScan": 2,
+      "baselineExtractionMethod": "quarrying",
+      "basePrice": 0.11,
+      "legacyAliases": [
+        "clay"
+      ],
+      "operationalTags": [
+        "construction-input"
+      ],
+      "baselineExtractionFamily": "quarry"
+    },
+    {
+      "resourceId": "mobile-resource-silica-sand",
+      "rarity": "Common",
+      "weight": 16,
+      "qualityBias": 1,
+      "baseScan": 2,
+      "baselineExtractionMethod": "quarrying",
+      "basePrice": 0.14,
+      "legacyAliases": [
+        "silica"
+      ],
+      "operationalTags": [
+        "construction-input"
+      ],
+      "baselineExtractionFamily": "quarry"
+    },
+    {
+      "resourceId": "mobile-resource-limestone",
+      "rarity": "Common",
+      "weight": 15,
+      "qualityBias": 0.98,
+      "baseScan": 2,
+      "baselineExtractionMethod": "quarrying",
+      "basePrice": 0.12,
+      "legacyAliases": [
+        "limestone"
+      ],
+      "operationalTags": [
+        "construction-input"
+      ],
+      "baselineExtractionFamily": "quarry"
+    },
+    {
+      "resourceId": "mobile-resource-gypsum",
+      "rarity": "Common",
+      "weight": 12,
+      "qualityBias": 1,
+      "baseScan": 2,
+      "baselineExtractionMethod": "quarrying",
+      "basePrice": 0.13,
+      "legacyAliases": [],
+      "operationalTags": [
+        "construction-input"
+      ],
+      "baselineExtractionFamily": "quarry"
+    },
+    {
+      "resourceId": "mobile-resource-biomass",
+      "rarity": "Common",
+      "weight": 22,
+      "qualityBias": 0.92,
+      "baseScan": 1,
+      "baselineExtractionMethod": "surface-recovery",
+      "basePrice": 0.16,
+      "legacyAliases": [
+        "biomass"
+      ],
+      "operationalTags": [
+        "energy-feedstock",
+        "biological-stock"
+      ],
+      "baselineExtractionFamily": "bio-harvester"
+    },
+    {
+      "resourceId": "mobile-resource-peat",
+      "rarity": "Common",
+      "weight": 14,
+      "qualityBias": 0.95,
+      "baseScan": 2,
+      "baselineExtractionMethod": "quarrying",
+      "basePrice": 0.2,
+      "legacyAliases": [
+        "peat"
+      ],
+      "operationalTags": [
+        "energy-feedstock"
+      ],
+      "baselineExtractionFamily": "quarry"
+    },
+    {
+      "resourceId": "mobile-resource-coal",
+      "rarity": "Common",
+      "weight": 22,
+      "qualityBias": 1,
+      "baseScan": 3,
+      "baselineExtractionMethod": "shaft-mining",
+      "basePrice": 0.28,
+      "legacyAliases": [
+        "coal"
+      ],
+      "operationalTags": [
+        "energy-feedstock"
+      ],
+      "baselineExtractionFamily": "mine"
+    },
+    {
+      "resourceId": "mobile-resource-crude-oil",
+      "rarity": "Uncommon",
+      "weight": 14,
+      "qualityBias": 1.1,
+      "baseScan": 5,
+      "baselineExtractionMethod": "rotary-drilling",
+      "basePrice": 0.44,
+      "legacyAliases": [
+        "oil"
+      ],
+      "operationalTags": [
+        "energy-feedstock"
+      ],
+      "baselineExtractionFamily": "rig"
+    },
+    {
+      "resourceId": "mobile-resource-natural-gas",
+      "rarity": "Uncommon",
+      "weight": 12,
+      "qualityBias": 1.12,
+      "baseScan": 5,
+      "baselineExtractionMethod": "rotary-drilling",
+      "basePrice": 0.48,
+      "legacyAliases": [
+        "gas"
+      ],
+      "operationalTags": [
+        "energy-feedstock"
+      ],
+      "baselineExtractionFamily": "rig"
+    },
+    {
+      "resourceId": "mobile-resource-hydrogen",
+      "rarity": "Uncommon",
+      "weight": 9,
+      "qualityBias": 1.15,
+      "baseScan": 4,
+      "baselineExtractionMethod": "atmospheric-harvesting",
+      "basePrice": 0.7,
+      "legacyAliases": [],
+      "operationalTags": [
+        "energy-feedstock",
+        "refining-feedstock"
+      ],
+      "baselineExtractionFamily": "atmospheric-harvester"
+    },
+    {
+      "resourceId": "mobile-resource-methane-ice",
+      "rarity": "Uncommon",
+      "weight": 10,
+      "qualityBias": 1.08,
+      "baseScan": 3,
+      "baselineExtractionMethod": "quarrying",
+      "basePrice": 0.52,
+      "legacyAliases": [],
+      "operationalTags": [
+        "energy-feedstock",
+        "refining-feedstock"
+      ],
+      "baselineExtractionFamily": "quarry"
+    },
+    {
+      "resourceId": "mobile-resource-uranium-ore",
+      "rarity": "Rare",
+      "weight": 8,
+      "qualityBias": 1.25,
+      "baseScan": 6,
+      "baselineExtractionMethod": "precision-extraction",
+      "basePrice": 0.8,
+      "legacyAliases": [
+        "fissile"
+      ],
+      "operationalTags": [
+        "energy-feedstock",
+        "industrial-material"
+      ],
+      "baselineExtractionFamily": "mine"
+    },
+    {
+      "resourceId": "mobile-resource-helium-3",
+      "rarity": "Rare",
+      "weight": 4,
+      "qualityBias": 1.35,
+      "baseScan": 6,
+      "baselineExtractionMethod": "atmospheric-harvesting",
+      "basePrice": 1.6,
+      "legacyAliases": [],
+      "operationalTags": [
+        "energy-feedstock",
+        "refining-feedstock"
+      ],
+      "baselineExtractionFamily": "atmospheric-harvester"
+    },
+    {
+      "resourceId": "mobile-resource-iron-ore",
+      "rarity": "Common",
+      "weight": 22,
+      "qualityBias": 0.98,
+      "baseScan": 3,
+      "baselineExtractionMethod": "shaft-mining",
+      "basePrice": 0.42,
+      "legacyAliases": [
+        "iron",
+        "surface-iron"
+      ],
+      "operationalTags": [
+        "industrial-material"
+      ],
+      "baselineExtractionFamily": "mine"
+    },
+    {
+      "resourceId": "mobile-resource-chromium-ore",
+      "rarity": "Uncommon",
+      "weight": 8,
+      "qualityBias": 1.12,
+      "baseScan": 4,
+      "baselineExtractionMethod": "deep-mining",
+      "basePrice": 0.78,
+      "legacyAliases": [],
+      "operationalTags": [
+        "industrial-material"
+      ],
+      "baselineExtractionFamily": "mine"
+    },
+    {
+      "resourceId": "mobile-resource-copper-ore",
+      "rarity": "Uncommon",
+      "weight": 15,
+      "qualityBias": 1.06,
+      "baseScan": 3,
+      "baselineExtractionMethod": "shaft-mining",
+      "basePrice": 0.6,
+      "legacyAliases": [
+        "copper"
+      ],
+      "operationalTags": [
+        "industrial-material"
+      ],
+      "baselineExtractionFamily": "mine"
+    },
+    {
+      "resourceId": "mobile-resource-tin-ore",
+      "rarity": "Uncommon",
+      "weight": 8,
+      "qualityBias": 1.08,
+      "baseScan": 3,
+      "baselineExtractionMethod": "shaft-mining",
+      "basePrice": 0.72,
+      "legacyAliases": [],
+      "operationalTags": [
+        "industrial-material"
+      ],
+      "baselineExtractionFamily": "mine"
+    },
+    {
+      "resourceId": "mobile-resource-bauxite",
+      "rarity": "Common",
+      "weight": 14,
+      "qualityBias": 0.98,
+      "baseScan": 2,
+      "baselineExtractionMethod": "quarrying",
+      "basePrice": 0.38,
+      "legacyAliases": [],
+      "operationalTags": [
+        "industrial-material"
+      ],
+      "baselineExtractionFamily": "quarry"
+    },
+    {
+      "resourceId": "mobile-resource-titanium-ore",
+      "rarity": "Uncommon",
+      "weight": 9,
+      "qualityBias": 1.12,
+      "baseScan": 3,
+      "baselineExtractionMethod": "shaft-mining",
+      "basePrice": 0.95,
+      "legacyAliases": [],
+      "operationalTags": [
+        "industrial-material"
+      ],
+      "baselineExtractionFamily": "mine"
+    },
+    {
+      "resourceId": "mobile-resource-nickel-ore",
+      "rarity": "Uncommon",
+      "weight": 8,
+      "qualityBias": 1.14,
+      "baseScan": 4,
+      "baselineExtractionMethod": "deep-mining",
+      "basePrice": 0.9,
+      "legacyAliases": [],
+      "operationalTags": [
+        "industrial-material"
+      ],
+      "baselineExtractionFamily": "mine"
+    },
+    {
+      "resourceId": "mobile-resource-cobalt-ore",
+      "rarity": "Rare",
+      "weight": 6,
+      "qualityBias": 1.18,
+      "baseScan": 4,
+      "baselineExtractionMethod": "deep-mining",
+      "basePrice": 1.15,
+      "legacyAliases": [],
+      "operationalTags": [
+        "industrial-material"
+      ],
+      "baselineExtractionFamily": "mine"
+    },
+    {
+      "resourceId": "mobile-resource-lithium-ore",
+      "rarity": "Uncommon",
+      "weight": 7,
+      "qualityBias": 1.14,
+      "baseScan": 4,
+      "baselineExtractionMethod": "deep-mining",
+      "basePrice": 1.05,
+      "legacyAliases": [],
+      "operationalTags": [
+        "industrial-material"
+      ],
+      "baselineExtractionFamily": "mine"
+    },
+    {
+      "resourceId": "mobile-resource-zinc-ore",
+      "rarity": "Uncommon",
+      "weight": 10,
+      "qualityBias": 1.06,
+      "baseScan": 3,
+      "baselineExtractionMethod": "shaft-mining",
+      "basePrice": 0.58,
+      "legacyAliases": [],
+      "operationalTags": [
+        "industrial-material"
+      ],
+      "baselineExtractionFamily": "mine"
+    },
+    {
+      "resourceId": "mobile-resource-lead-ore",
+      "rarity": "Uncommon",
+      "weight": 9,
+      "qualityBias": 1.05,
+      "baseScan": 3,
+      "baselineExtractionMethod": "shaft-mining",
+      "basePrice": 0.5,
+      "legacyAliases": [],
+      "operationalTags": [
+        "industrial-material"
+      ],
+      "baselineExtractionFamily": "mine"
+    },
+    {
+      "resourceId": "mobile-resource-tungsten-ore",
+      "rarity": "Rare",
+      "weight": 5,
+      "qualityBias": 1.22,
+      "baseScan": 5,
+      "baselineExtractionMethod": "deep-mining",
+      "basePrice": 1.35,
+      "legacyAliases": [],
+      "operationalTags": [
+        "industrial-material"
+      ],
+      "baselineExtractionFamily": "mine"
+    },
+    {
+      "resourceId": "mobile-resource-rare-earth-ore",
+      "rarity": "Rare",
+      "weight": 4,
+      "qualityBias": 1.28,
+      "baseScan": 6,
+      "baselineExtractionMethod": "precision-extraction",
+      "basePrice": 1.8,
+      "legacyAliases": [],
+      "operationalTags": [
+        "industrial-material",
+        "technology-feedstock"
+      ],
+      "baselineExtractionFamily": "mine"
+    },
+    {
+      "resourceId": "mobile-resource-graphite",
+      "rarity": "Uncommon",
+      "weight": 8,
+      "qualityBias": 1.05,
+      "baseScan": 3,
+      "baselineExtractionMethod": "shaft-mining",
+      "basePrice": 0.55,
+      "legacyAliases": [],
+      "operationalTags": [
+        "industrial-material"
+      ],
+      "baselineExtractionFamily": "mine"
+    },
+    {
+      "resourceId": "mobile-resource-sulfur",
+      "rarity": "Common",
+      "weight": 10,
+      "qualityBias": 1.02,
+      "baseScan": 2,
+      "baselineExtractionMethod": "quarrying",
+      "basePrice": 0.4,
+      "legacyAliases": [],
+      "operationalTags": [
+        "industrial-material"
+      ],
+      "baselineExtractionFamily": "quarry"
+    },
+    {
+      "resourceId": "mobile-resource-phosphate-rock",
+      "rarity": "Common",
+      "weight": 10,
+      "qualityBias": 1,
+      "baseScan": 2,
+      "baselineExtractionMethod": "quarrying",
+      "basePrice": 0.35,
+      "legacyAliases": [],
+      "operationalTags": [
+        "industrial-material",
+        "agriculture-feedstock"
+      ],
+      "baselineExtractionFamily": "quarry"
+    },
+    {
+      "resourceId": "mobile-resource-quartz",
+      "rarity": "Common",
+      "weight": 14,
+      "qualityBias": 1.05,
+      "baseScan": 2,
+      "baselineExtractionMethod": "quarrying",
+      "basePrice": 0.32,
+      "legacyAliases": [],
+      "operationalTags": [
+        "industrial-material"
+      ],
+      "baselineExtractionFamily": "quarry"
+    },
+    {
+      "resourceId": "mobile-resource-mica",
+      "rarity": "Uncommon",
+      "weight": 8,
+      "qualityBias": 1.12,
+      "baseScan": 3,
+      "baselineExtractionMethod": "shaft-mining",
+      "basePrice": 0.5,
+      "legacyAliases": [],
+      "operationalTags": [
+        "industrial-material"
+      ],
+      "baselineExtractionFamily": "mine"
+    },
+    {
+      "resourceId": "mobile-resource-silver",
+      "rarity": "Rare",
+      "weight": 7,
+      "qualityBias": 1.2,
+      "baseScan": 4,
+      "baselineExtractionMethod": "deep-mining",
+      "basePrice": 2.5,
+      "legacyAliases": [
+        "silver"
+      ],
+      "operationalTags": [
+        "industrial-material",
+        "commercial-precious"
+      ],
+      "baselineExtractionFamily": "mine"
+    },
+    {
+      "resourceId": "mobile-resource-gold",
+      "rarity": "Very Rare",
+      "weight": 5,
+      "qualityBias": 1.32,
+      "baseScan": 4,
+      "baselineExtractionMethod": "deep-mining",
+      "basePrice": 5,
+      "legacyAliases": [
+        "gold"
+      ],
+      "operationalTags": [
+        "industrial-material",
+        "commercial-precious"
+      ],
+      "baselineExtractionFamily": "mine"
+    },
+    {
+      "resourceId": "mobile-resource-platinum",
+      "rarity": "Exceptional",
+      "weight": 3,
+      "qualityBias": 1.45,
+      "baseScan": 6,
+      "baselineExtractionMethod": "precision-extraction",
+      "basePrice": 9,
+      "legacyAliases": [
+        "platinum"
+      ],
+      "operationalTags": [
+        "industrial-material",
+        "commercial-precious"
+      ],
+      "baselineExtractionFamily": "mine"
+    },
+    {
+      "resourceId": "mobile-resource-palladium",
+      "rarity": "Exceptional",
+      "weight": 2.5,
+      "qualityBias": 1.48,
+      "baseScan": 6,
+      "baselineExtractionMethod": "precision-extraction",
+      "basePrice": 10,
+      "legacyAliases": [
+        "palladium"
+      ],
+      "operationalTags": [
+        "industrial-material",
+        "commercial-precious"
+      ],
+      "baselineExtractionFamily": "mine"
+    },
+    {
+      "resourceId": "mobile-resource-diamond",
+      "rarity": "Ultra Rare",
+      "weight": 1.2,
+      "qualityBias": 1.7,
+      "baseScan": 7,
+      "baselineExtractionMethod": "pressure-brine-drilling",
+      "basePrice": 22,
+      "legacyAliases": [
+        "diamond"
+      ],
+      "operationalTags": [
+        "industrial-material",
+        "commercial-gem"
+      ],
+      "baselineExtractionFamily": "deep-mine"
+    },
+    {
+      "resourceId": "mobile-resource-ruby",
+      "rarity": "Exceptional",
+      "weight": 1.7,
+      "qualityBias": 1.55,
+      "baseScan": 6,
+      "baselineExtractionMethod": "precision-extraction",
+      "basePrice": 14,
+      "legacyAliases": [
+        "ruby"
+      ],
+      "operationalTags": [
+        "industrial-material",
+        "commercial-gem"
+      ],
+      "baselineExtractionFamily": "mine"
+    },
+    {
+      "resourceId": "mobile-resource-sapphire",
+      "rarity": "Exceptional",
+      "weight": 2,
+      "qualityBias": 1.5,
+      "baseScan": 6,
+      "baselineExtractionMethod": "precision-extraction",
+      "basePrice": 12,
+      "legacyAliases": [
+        "sapphire"
+      ],
+      "operationalTags": [
+        "industrial-material",
+        "commercial-gem"
+      ],
+      "baselineExtractionFamily": "mine"
+    },
+    {
+      "resourceId": "mobile-resource-emerald",
+      "rarity": "Exceptional",
+      "weight": 1.5,
+      "qualityBias": 1.58,
+      "baseScan": 6,
+      "baselineExtractionMethod": "precision-extraction",
+      "basePrice": 15,
+      "legacyAliases": [
+        "emerald"
+      ],
+      "operationalTags": [
+        "industrial-material",
+        "commercial-gem"
+      ],
+      "baselineExtractionFamily": "mine"
+    }
+  ]
+}

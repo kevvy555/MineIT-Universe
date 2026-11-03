@@ -1,5 +1,6 @@
 import { loadUniverse } from './universe-data.js';
 import { bindOriginalImageOpener } from './image-lightbox.js';
+import { createSubstanceTable, loadAndroidResourceReference } from './substance-table.js';
 
 const state = {
   catalogue: null,
@@ -7,7 +8,9 @@ const state = {
   activeView: 'geography',
   selectedId: null,
   openNodes: new Set(),
-  currentTree: null
+  currentTree: null,
+  activeCatalogueTable: false,
+  androidResourceReference: null
 };
 
 const treeEl = document.getElementById('tree');
@@ -17,6 +20,7 @@ const versionEl = document.getElementById('version');
 const detailPane = document.getElementById('detail');
 const workspace = document.getElementById('workspace');
 const divider = document.getElementById('divider');
+const substanceTable = createSubstanceTable();
 
 const DIRECTORY = {
   regions: 'Regions',
@@ -134,29 +138,35 @@ function buildSubstancesDirectoryNode() {
   const genericClasses = state.catalogue.collection('substances');
   const naturalResources = state.catalogue.collection('mobileResourceDefinitions');
   const namedMaterials = state.catalogue.collection('namedSubstances');
+  const foodResources = state.catalogue.collection('mobileBiologicalResources');
   const archetypes = [...new Set([...genericClasses, ...namedMaterials].map(record => record.dominantArchetype))].sort();
 
-  return category('Substances', archetypes.map(archetype => {
+  const root = category('Substances', archetypes.map(archetype => {
     const genericNodes = genericClasses
       .filter(record => record.dominantArchetype === archetype)
       .map(generic => entityNode(generic.id, [
-        // Reuse canonical resource identities instead of copying their definitions.
         category('Named natural resources',
-          nodes(naturalResources.filter(resource => resource.genericSubstanceId === generic.id))),
+          naturalResources.filter(resource => resource.genericSubstanceId === generic.id)
+            .map(resource => entityNode(resource.id, [
+              category('Physical occurrence', nodes(related('mobileResourceOccurrenceProfiles',
+                profile => profile.resourceId === resource.id)))
+            ])).sort(byName)),
         category('Named materials',
           nodes(namedMaterials.filter(material => material.genericSubstanceId === generic.id)))
       ])).sort(byName);
 
-    // Generic "refined" is an ontology field, not a reliable stock-production stage:
-    // manufactured alloys and composites may have refined=false in the canon.
     const pending = namedMaterials.filter(material =>
       material.dominantArchetype === archetype && !material.genericSubstanceId);
     return category(archetype, [
       ...genericNodes,
+      archetype === 'Organic' ? category('Biological food resources', nodes(foodResources)) : null,
       category('Named materials — classification pending', nodes(pending))
     ]);
   }));
+  // Clicking the title opens the bulk table; its twisty still expands/collapses the tree.
+  return { ...root, action: 'substances-table' };
 }
+
 function buildPartsDirectoryNode() {
   const records = state.catalogue.collection('parts');
   return category('Parts', groupRecords(records, record => record.category).map(([partCategory, items]) =>
@@ -180,20 +190,6 @@ function buildBuildingsDirectoryNode() {
   ));
 }
 
-function buildMobileResourcesDirectoryNode() {
-  const resources = state.catalogue.collection('mobileResourceDefinitions');
-  const resourceGroups = ['Build', 'Fuel', 'Ore'].map(group =>
-    category(group, resources.filter(resource => resource.gameplayCategory === group).map(resource =>
-      entityNode(resource.id, [
-        category('Physical occurrence', nodes(related('mobileResourceOccurrenceProfiles', profile => profile.resourceId === resource.id)))
-      ])
-    ).sort(byName))
-  );
-  return category('MineIT Mobile Resources', [
-    ...resourceGroups,
-    category('Food Sources', nodes(state.catalogue.collection('mobileBiologicalResources')))
-  ]);
-}
 
 function buildGamesDirectoryNode() {
   return category('Games', nodes(state.catalogue.collection('games')));
@@ -263,7 +259,6 @@ function buildDirectoryTree() {
       buildLandDirectoryNode(),
       buildResearchDirectoryNode(),
       buildReferenceCataloguesNode(),
-      buildMobileResourcesDirectoryNode(),
       buildSubstancesDirectoryNode(),
       buildPartsDirectoryNode(),
       buildMachinesDirectoryNode(),
@@ -336,7 +331,7 @@ function renderNode(node) {
   const entity = node.id ? state.catalogue.get(node.id) : null;
   const li = document.createElement('li');
   const row = document.createElement('div');
-  row.className = `treeRow${node.id === state.selectedId ? ' selected' : ''}`;
+  row.className = `treeRow${node.id === state.selectedId || (node.action === 'substances-table' && state.activeCatalogueTable) ? ' selected' : ''}`;
   if (node.id === state.selectedId) row.dataset.selected = 'true';
 
   const twist = document.createElement('button');
@@ -352,7 +347,8 @@ function renderNode(node) {
   button.className = `node${node.id ? '' : ' categoryNode'}`;
   button.innerHTML = `${esc(entity?.name || node.label || node.id)}${entity ? ` <span class="kind">${esc(state.catalogue.typeLabelFor(node.id))}</span>` : ''}`;
   button.onclick = () => {
-    if (node.id) selectEntity(node.id);
+    if (node.action === 'substances-table') showSubstancesTable();
+    else if (node.id) selectEntity(node.id);
     else {
       open ? state.openNodes.delete(key) : state.openNodes.add(key);
       renderTree();
@@ -581,6 +577,17 @@ function fieldsFor(collection, entity) {
       field('Physical occurrence', links(profiles)),
       field('Knowledge scope', esc(entity.knowledgeScope))
     );
+    const tuning = state.androidResourceReference?.resources.find(item => item.resourceId === entity.id);
+    if (tuning) fields.push(
+      field('Android rarity (reference)', esc(tuning.rarity)),
+      field('Android scan level (reference)', esc(tuning.baseScan)),
+      field('Android extraction method (reference)', esc(tuning.baselineExtractionMethod)),
+      field('Android extraction family (reference)', esc(tuning.baselineExtractionFamily)),
+      field('Android base price (reference)', esc(tuning.basePrice)),
+      field('Android occurrence weight (reference)', esc(tuning.weight)),
+      field('Android quality bias (reference)', esc(tuning.qualityBias)),
+      field('Android operational tags (reference)', tags(tuning.operationalTags))
+    );
   }
   if (collection === 'mobileResourceOccurrenceProfiles') {
     fields.push(
@@ -629,6 +636,7 @@ function fieldsFor(collection, entity) {
       field('Tier', esc(entity.tier)),
       field('Stock class', entity.refined ? 'Refined' : 'Raw'),
       field('Industrial role', esc(entity.industrialRole)),
+      field('Named natural resources in this category', links(relatedIds('mobileResourceDefinitions', resource => resource.genericSubstanceId === entity.id))),
       field('Named materials in this category', links(relatedIds('namedSubstances', material => material.genericSubstanceId === entity.id))),
       field('Used by parts', links(relatedIds('parts', part => (part.substanceIds || []).includes(entity.id)))),
       field('Building shell uses', links(relatedIds('buildings', building => (building.structuralShellSubstanceIds || []).includes(entity.id)))),
@@ -1017,6 +1025,10 @@ function landscapeSections(collection, entity) {
 }
 
 function renderDetail() {
+  if (state.activeCatalogueTable) {
+    substanceTable.render(detailEl, state.catalogue, state.androidResourceReference, selectEntity);
+    return;
+  }
   const entity = state.catalogue.get(state.selectedId);
   if (!entity) return;
   const collection = state.catalogue.collectionNameFor(entity.id);
@@ -1050,6 +1062,7 @@ function renderDetail() {
 
 function selectEntity(id) {
   if (!state.catalogue.get(id)) return;
+  state.activeCatalogueTable = false;
   state.selectedId = id;
   revealSelected();
   renderTree();
@@ -1057,8 +1070,18 @@ function selectEntity(id) {
   requestAnimationFrame(() => treeEl.querySelector('[data-selected="true"]')?.scrollIntoView({ block: 'nearest' }));
 }
 
+function showSubstancesTable() {
+  state.activeView = 'directory';
+  state.activeCatalogueTable = true;
+  state.openNodes.add('label:Directory');
+  state.openNodes.add('label:Substances');
+  renderTree();
+  renderDetail();
+}
+
 function switchView(view) {
   state.activeView = view;
+  if (view !== 'directory') state.activeCatalogueTable = false;
   document.querySelectorAll('.perspective').forEach(button => button.classList.toggle('active', button.dataset.view === view));
   revealSelected();
   renderTree();
@@ -1124,9 +1147,12 @@ async function start() {
   try {
     const params = new URLSearchParams(location.search);
     const root = params.get('dataRoot') || './data/';
-    const { catalogue, validation } = await loadUniverse(root);
+    const [{ catalogue, validation }, androidReference] = await Promise.all([
+      loadUniverse(root), loadAndroidResourceReference()
+    ]);
     state.catalogue = catalogue;
     state.validation = validation;
+    state.androidResourceReference = androidReference;
 
     const requestedView = params.get('view');
     if (['geography', 'organisation', 'directory'].includes(requestedView)) {
@@ -1137,6 +1163,7 @@ async function start() {
     const focusCollection = params.get('focus');
     const focusedRecords = focusCollection ? catalogue.collection(focusCollection) : [];
     const requestedId = params.get('id');
+    state.activeCatalogueTable = focusCollection === 'substances' && !requestedId;
     state.selectedId = (requestedId && catalogue.get(requestedId) ? requestedId : null)
       || focusedRecords[0]?.id
       || catalogue.collection('regions')[0]?.id
