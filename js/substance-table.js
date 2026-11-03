@@ -40,9 +40,10 @@ export function createSubstanceTable(config = {}) {
     const scrollTop = previousScroll?.scrollTop || 0;
     const wasOpen = container.querySelector("#substanceColumnPicker")?.open || false;
     const rows = config.rows ? config.rows(catalogue, reference) : substanceRows(catalogue, reference);
+    const availableFields = new Set(rows.flatMap(row => Object.keys(row.fields)));
     const possible = config.groups
-      ? [...new Set([...config.groups.flatMap(group => group.fields),
-        ...rows.flatMap(row => Object.keys(row.fields))])]
+      ? [...new Set([...config.groups.flatMap(group => group.fields)
+        .filter(key => availableFields.has(key)), ...availableFields])]
       : allSubstanceFields(rows);
     selected = selected.filter(key => possible.includes(key));
     if (!selected.includes("name")) selected.unshift("name");
