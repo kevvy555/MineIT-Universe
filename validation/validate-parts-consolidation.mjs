@@ -70,7 +70,7 @@ for (const part of parts) {
     unresolvedCount++;
   }
   assert.ok(part.planningReference);
-  assert.equal(part.planningReference.sourceCommit, reference.sourceCommit);
+  assert.equal(part.provenance?.partsDiscovery?.sourceCommit, reference.sourceCommit);
   assert.ok(part.planningReference.status.includes("planning") ||
     part.planningReference.status === "blocked-pending-engineering");
   assert.equal(part.planningReference.manufacturerCostCC == null,
