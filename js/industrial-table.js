@@ -94,7 +94,7 @@ const configurations = {
 // Source-specific fields are classified alongside their related primary attributes.
 const additionalGroupFields = {
   parts: {
-    "Canon & Provenance": "provenance.authoredFor provenance.sourceRepository provenance.sourcePath provenance.sourceCommit provenance.androidDiscoveryWorkingId provenance.partsDiscovery.repository provenance.partsDiscovery.sourceCommit provenance.partsDiscovery.sourceSections provenance.partsDiscovery.reviewStatus",
+    "Canon & Provenance": "provenance.authoredFor provenance.sourceRepository provenance.sourcePath provenance.sourceCommit provenance.androidDiscoveryWorkingId provenance.partsDiscovery.repository provenance.partsDiscovery.sourceCommit provenance.partsDiscovery.sourceSections",
     "Artwork & Visuals": "image.promptDescription"
   },
   machines: {
