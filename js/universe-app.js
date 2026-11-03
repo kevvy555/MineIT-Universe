@@ -132,13 +132,18 @@ function groupRecords(records, keyFn) {
 
 function buildSubstancesDirectoryNode() {
   const records = state.catalogue.collection('substances');
+  const naturalResources = state.catalogue.collection('mobileResourceDefinitions');
   return category('Substances', groupRecords(records, record => record.dominantArchetype).map(([archetype, items]) => {
-    const raw = items.filter(item => !item.refined);
-    const refined = items.filter(item => item.refined);
-    return category(archetype, [
-      category('Raw', nodes(raw)),
-      category('Refined', nodes(refined))
-    ].filter(Boolean));
+    const grouped = refined => category(refined ? 'Refined' : 'Raw',
+      items.filter(item => Boolean(item.refined) === refined).map(item =>
+        entityNode(item.id, [
+          // Same canonical Mobile resource records: show them here as linked examples,
+          // never duplicate or rewrite resource definitions in another catalogue.
+          category('Named natural resources',
+            nodes(naturalResources.filter(resource => resource.genericSubstanceId === item.id)))
+        ])
+      ).sort(byName));
+    return category(archetype, [grouped(false), grouped(true)]);
   }));
 }
 
@@ -1050,10 +1055,20 @@ function expandCurrent() {
 
 function installDivider() {
   let dragging = false;
-  const apply = percent => {
-    const value = Math.max(25, Math.min(75, percent));
-    detailPane.style.flexBasis = `${value}%`;
-    sessionStorage.setItem('mineitUniverseSplit', String(value));
+  const explorerPane = workspace.querySelector('.explorerPane');
+  const isPortrait = () => window.matchMedia('(max-width: 700px)').matches;
+  const storageKey = () => isPortrait() ? 'mineitUniverseSplitMobile' : 'mineitUniverseSplitSide';
+  const apply = (percent, save = true) => {
+    const min = isPortrait() ? 25 : 24;
+    const max = isPortrait() ? 70 : 60;
+    const value = Math.max(min, Math.min(max, percent));
+    explorerPane.style.flexBasis = `${value}%`;
+    if (save) sessionStorage.setItem(storageKey(), String(value));
+  };
+  const restore = () => {
+    const saved = Number(sessionStorage.getItem(storageKey()));
+    apply(saved >= 24 && saved <= 70 ? saved : (isPortrait() ? 40 : 32), false);
+    divider.setAttribute('aria-orientation', isPortrait() ? 'horizontal' : 'vertical');
   };
   divider.onpointerdown = event => {
     dragging = true;
@@ -1063,7 +1078,10 @@ function installDivider() {
   divider.onpointermove = event => {
     if (!dragging) return;
     const rect = workspace.getBoundingClientRect();
-    apply(((event.clientY - rect.top) / rect.height) * 100);
+    const percent = isPortrait()
+      ? ((event.clientY - rect.top) / rect.height) * 100
+      : ((event.clientX - rect.left) / rect.width) * 100;
+    apply(percent);
   };
   const stop = event => {
     dragging = false;
@@ -1072,8 +1090,8 @@ function installDivider() {
   };
   divider.onpointerup = stop;
   divider.onpointercancel = stop;
-  const saved = Number(sessionStorage.getItem('mineitUniverseSplit'));
-  if (Number.isFinite(saved) && saved >= 25 && saved <= 75) apply(saved);
+  window.addEventListener('resize', restore);
+  restore();
 }
 
 async function start() {

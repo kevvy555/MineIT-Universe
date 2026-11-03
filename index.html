@@ -26,8 +26,6 @@
     </header>
 
     <main class="workspace" id="workspace">
-      <section class="detailPane" id="detail" aria-live="polite"></section>
-      <div class="divider" id="divider" role="separator" aria-orientation="horizontal" aria-label="Resize detail and explorer panels"></div>
       <section class="explorerPane" aria-label="Universe Explorer">
         <div class="explorerToolbar">
           <button class="perspective active" data-view="geography">Geography</button>
@@ -41,6 +39,8 @@
         </div>
         <div class="tree" id="tree"></div>
       </section>
+      <div class="divider" id="divider" role="separator" aria-orientation="vertical" aria-label="Resize catalogue and detail panels"></div>
+      <section class="detailPane" id="detail" aria-live="polite"></section>
     </main>
   </div>
 
