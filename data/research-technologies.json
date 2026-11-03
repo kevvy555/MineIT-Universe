@@ -32,13 +32,12 @@
     ],
     "unlockedPartIds": [
       "part-generator-parts",
-      "part-battery-parts",
       "part-power-electronics"
     ],
     "unlockedMachineIds": [],
     "unlockedBuildingIds": [],
     "unlockedSubstanceIds": [],
-    "unlockNotes": "Salvage: Generator Parts, Battery Parts, Power Electronics",
+    "unlockNotes": "Legacy Part unlock superseded; specific replacement Part eligibility awaits review. Confirmed other unlocks remain.",
     "discoveryGate": null,
     "desktopProfile": {
       "gameId": "game-mineit-desktop",
@@ -51,7 +50,18 @@
       "sourceId": "generation-source-desktop-research",
       "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
     },
-    "canonStatus": "source-derived designer catalogue"
+    "canonStatus": "source-derived designer catalogue",
+    "partUnlockReview": [
+      {
+        "supersededFamily": "Battery Parts",
+        "candidatePartIds": [
+          "part-lead-acid-battery-module",
+          "part-lithium-based-battery-module"
+        ],
+        "reviewStatus": "unapproved-technology-mapping",
+        "notes": "Determine which, if any, named battery-module stock types this power salvage research permits."
+      }
+    ]
   },
   {
     "id": "research-mechanical-systems-salvage",
@@ -90,13 +100,11 @@
     "prerequisiteTechnologyIds": [
       "research-ship-systems-analysis"
     ],
-    "unlockedPartIds": [
-      "part-thermal-optical-parts"
-    ],
+    "unlockedPartIds": [],
     "unlockedMachineIds": [],
     "unlockedBuildingIds": [],
     "unlockedSubstanceIds": [],
-    "unlockNotes": "Salvage: Thermal / Optical Parts",
+    "unlockNotes": "Legacy Part unlock superseded; specific replacement Part eligibility awaits review. No replacement Part auto-unlocked.",
     "discoveryGate": null,
     "desktopProfile": {
       "gameId": "game-mineit-desktop",
@@ -109,7 +117,18 @@
       "sourceId": "generation-source-desktop-research",
       "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
     },
-    "canonStatus": "source-derived designer catalogue"
+    "canonStatus": "source-derived designer catalogue",
+    "partUnlockReview": [
+      {
+        "supersededFamily": "Thermal / Optical Parts",
+        "candidatePartIds": [
+          "part-thermal-parts",
+          "part-optical-parts"
+        ],
+        "reviewStatus": "unapproved-technology-mapping",
+        "notes": "Thermal and optical salvage are distinct; neither specific finished product unlock is approved."
+      }
+    ]
   },
   {
     "id": "research-processing-and-fabrication-salvage",
@@ -121,13 +140,12 @@
     "unlockedPartIds": [
       "part-hydraulic-parts",
       "part-processing-parts",
-      "part-fabrication-parts",
       "part-fluid-handling-parts"
     ],
     "unlockedMachineIds": [],
     "unlockedBuildingIds": [],
     "unlockedSubstanceIds": [],
-    "unlockNotes": "Salvage: Processing Parts, Fluid Handling Parts, Fabrication Parts, Hydraulic Parts",
+    "unlockNotes": "Legacy Part unlock superseded; specific replacement Part eligibility awaits review. Confirmed other unlocks remain.",
     "discoveryGate": null,
     "desktopProfile": {
       "gameId": "game-mineit-desktop",
@@ -140,7 +158,18 @@
       "sourceId": "generation-source-desktop-research",
       "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
     },
-    "canonStatus": "source-derived designer catalogue"
+    "canonStatus": "source-derived designer catalogue",
+    "partUnlockReview": [
+      {
+        "supersededFamily": "Fabrication Parts",
+        "candidatePartIds": [
+          "part-forming-cutting-tooling",
+          "part-welding-parts"
+        ],
+        "reviewStatus": "unapproved-technology-mapping",
+        "notes": "Fabrication tooling and welding spares have separate stock identities; unlock mapping awaits review."
+      }
+    ]
   },
   {
     "id": "research-electronics-and-sensor-salvage",
@@ -206,13 +235,11 @@
     "prerequisiteTechnologyIds": [
       "research-power-systems-salvage"
     ],
-    "unlockedPartIds": [
-      "part-battery-parts"
-    ],
+    "unlockedPartIds": [],
     "unlockedMachineIds": [],
     "unlockedBuildingIds": [],
     "unlockedSubstanceIds": [],
-    "unlockNotes": "Manufacture: Battery Parts",
+    "unlockNotes": "Legacy Part unlock superseded; specific replacement Part eligibility awaits review. No replacement Part auto-unlocked.",
     "discoveryGate": null,
     "desktopProfile": {
       "gameId": "game-mineit-desktop",
@@ -225,7 +252,18 @@
       "sourceId": "generation-source-desktop-research",
       "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
     },
-    "canonStatus": "source-derived designer catalogue"
+    "canonStatus": "source-derived designer catalogue",
+    "partUnlockReview": [
+      {
+        "supersededFamily": "Battery Parts",
+        "candidatePartIds": [
+          "part-lead-acid-battery-module",
+          "part-lithium-based-battery-module"
+        ],
+        "reviewStatus": "unapproved-technology-mapping",
+        "notes": "Battery chemistry-specific manufacture must be unlocked by an approved appropriate technology/requirements mapping."
+      }
+    ]
   },
   {
     "id": "research-power-electronics-manufacturing",
@@ -374,13 +412,11 @@
     "prerequisiteTechnologyIds": [
       "research-thermal-systems-salvage"
     ],
-    "unlockedPartIds": [
-      "part-thermal-optical-parts"
-    ],
+    "unlockedPartIds": [],
     "unlockedMachineIds": [],
     "unlockedBuildingIds": [],
     "unlockedSubstanceIds": [],
-    "unlockNotes": "Manufacture: Thermal / Optical Parts",
+    "unlockNotes": "Legacy Part unlock superseded; specific replacement Part eligibility awaits review. No replacement Part auto-unlocked.",
     "discoveryGate": null,
     "desktopProfile": {
       "gameId": "game-mineit-desktop",
@@ -393,7 +429,18 @@
       "sourceId": "generation-source-desktop-research",
       "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
     },
-    "canonStatus": "source-derived designer catalogue"
+    "canonStatus": "source-derived designer catalogue",
+    "partUnlockReview": [
+      {
+        "supersededFamily": "Thermal / Optical Parts",
+        "candidatePartIds": [
+          "part-thermal-parts",
+          "part-optical-parts"
+        ],
+        "reviewStatus": "unapproved-technology-mapping",
+        "notes": "Separate thermal component fabrication and optical fabrication requirements are unresolved."
+      }
+    ]
   },
   {
     "id": "research-processing-parts-manufacturing",
@@ -514,13 +561,11 @@
     "prerequisiteTechnologyIds": [
       "research-processing-and-fabrication-salvage"
     ],
-    "unlockedPartIds": [
-      "part-fabrication-parts"
-    ],
+    "unlockedPartIds": [],
     "unlockedMachineIds": [],
     "unlockedBuildingIds": [],
     "unlockedSubstanceIds": [],
-    "unlockNotes": "Manufacture: Fabrication Parts",
+    "unlockNotes": "Legacy Part unlock superseded; specific replacement Part eligibility awaits review. No replacement Part auto-unlocked.",
     "discoveryGate": null,
     "desktopProfile": {
       "gameId": "game-mineit-desktop",
@@ -533,7 +578,18 @@
       "sourceId": "generation-source-desktop-research",
       "sourcePath": "Documentation/design/Research/ResearchTechnologies.md"
     },
-    "canonStatus": "source-derived designer catalogue"
+    "canonStatus": "source-derived designer catalogue",
+    "partUnlockReview": [
+      {
+        "supersededFamily": "Fabrication Parts",
+        "candidatePartIds": [
+          "part-forming-cutting-tooling",
+          "part-welding-parts"
+        ],
+        "reviewStatus": "unapproved-technology-mapping",
+        "notes": "Split Tooling and Welding Parts production require separate technical-eligibility review."
+      }
+    ]
   },
   {
     "id": "research-crude-chemical-battery",
