@@ -1,6 +1,7 @@
 import { loadUniverse } from './universe-data.js';
 import { bindOriginalImageOpener } from './image-lightbox.js';
 import { createSubstanceTable, loadAndroidResourceReference } from './substance-table.js';
+import { createIndustrialTables, loadIndustrialDiscoveryReference } from './industrial-table.js';
 
 const state = {
   catalogue: null,
@@ -10,7 +11,8 @@ const state = {
   openNodes: new Set(),
   currentTree: null,
   activeCatalogueTable: false,
-  androidResourceReference: null
+  androidResourceReference: null,
+  industrialDiscoveryReference: null
 };
 
 const treeEl = document.getElementById('tree');
@@ -21,6 +23,7 @@ const detailPane = document.getElementById('detail');
 const workspace = document.getElementById('workspace');
 const divider = document.getElementById('divider');
 const substanceTable = createSubstanceTable();
+const industrialTables = createIndustrialTables();
 
 const DIRECTORY = {
   regions: 'Regions',
@@ -169,25 +172,25 @@ function buildSubstancesDirectoryNode() {
 
 function buildPartsDirectoryNode() {
   const records = state.catalogue.collection('parts');
-  return category('Parts', groupRecords(records, record => record.category).map(([partCategory, items]) =>
+  return { ...category('Parts', groupRecords(records, record => record.category).map(([partCategory, items]) =>
     category(partCategory, groupRecords(items, record => record.subCategory).map(([subCategory, subItems]) =>
       category(subCategory, nodes(subItems))
     ))
-  ));
+  )), action: 'parts-table' };
 }
 
 function buildMachinesDirectoryNode() {
   const records = state.catalogue.collection('machines');
-  return category('Machines', groupRecords(records, record => record.category).map(([machineCategory, items]) =>
+  return { ...category('Machines', groupRecords(records, record => record.category).map(([machineCategory, items]) =>
     category(machineCategory, nodes(items))
-  ));
+  )), action: 'machines-table' };
 }
 
 function buildBuildingsDirectoryNode() {
   const records = state.catalogue.collection('buildings');
-  return category('Buildings', groupRecords(records, record => record.category).map(([buildingCategory, items]) =>
+  return { ...category('Buildings', groupRecords(records, record => record.category).map(([buildingCategory, items]) =>
     category(buildingCategory, nodes(items))
-  ));
+  )), action: 'buildings-table' };
 }
 
 
@@ -331,7 +334,7 @@ function renderNode(node) {
   const entity = node.id ? state.catalogue.get(node.id) : null;
   const li = document.createElement('li');
   const row = document.createElement('div');
-  row.className = `treeRow${node.id === state.selectedId || (node.action === 'substances-table' && state.activeCatalogueTable) ? ' selected' : ''}`;
+  row.className = `treeRow${node.id === state.selectedId || (node.action === state.activeCatalogueTable + '-table') ? ' selected' : ''}`;
   if (node.id === state.selectedId) row.dataset.selected = 'true';
 
   const twist = document.createElement('button');
@@ -347,7 +350,7 @@ function renderNode(node) {
   button.className = `node${node.id ? '' : ' categoryNode'}`;
   button.innerHTML = `${esc(entity?.name || node.label || node.id)}${entity ? ` <span class="kind">${esc(state.catalogue.typeLabelFor(node.id))}</span>` : ''}`;
   button.onclick = () => {
-    if (node.action === 'substances-table') showSubstancesTable();
+    if (node.action?.endsWith('-table')) showCatalogueTable(node.action.slice(0, -6));
     else if (node.id) selectEntity(node.id);
     else {
       open ? state.openNodes.delete(key) : state.openNodes.add(key);
@@ -1032,12 +1035,16 @@ function returnToCatalogueTree() {
 }
 
 function renderDetail() {
+  substanceTable.close();
+  Object.values(industrialTables).forEach(table => table.close());
   if (state.activeCatalogueTable) {
-    substanceTable.render(detailEl, state.catalogue, state.androidResourceReference,
+    const kind = state.activeCatalogueTable;
+    const table = kind === 'substances' ? substanceTable : industrialTables[kind];
+    if (table) table.render(detailEl, state.catalogue,
+      kind === 'substances' ? state.androidResourceReference : state.industrialDiscoveryReference,
       selectEntity, returnToCatalogueTree);
     return;
   }
-  substanceTable.close();
   const entity = state.catalogue.get(state.selectedId);
   if (!entity) return;
   const collection = state.catalogue.collectionNameFor(entity.id);
@@ -1079,11 +1086,14 @@ function selectEntity(id) {
   requestAnimationFrame(() => treeEl.querySelector('[data-selected="true"]')?.scrollIntoView({ block: 'nearest' }));
 }
 
-function showSubstancesTable() {
+function showCatalogueTable(kind) {
+  if (!['substances', 'parts', 'machines', 'buildings'].includes(kind)) return;
   state.activeView = 'directory';
-  state.activeCatalogueTable = true;
+  state.activeCatalogueTable = kind;
   state.openNodes.add('label:Directory');
-  state.openNodes.add('label:Substances');
+  state.openNodes.add('label:' + kind.charAt(0).toUpperCase() + kind.slice(1));
+  document.querySelectorAll('.perspective').forEach(button =>
+    button.classList.toggle('active', button.dataset.view === 'directory'));
   renderTree();
   renderDetail();
 }
@@ -1156,12 +1166,13 @@ async function start() {
   try {
     const params = new URLSearchParams(location.search);
     const root = params.get('dataRoot') || './data/';
-    const [{ catalogue, validation }, androidReference] = await Promise.all([
-      loadUniverse(root), loadAndroidResourceReference()
+    const [{ catalogue, validation }, androidReference, industrialReference] = await Promise.all([
+      loadUniverse(root), loadAndroidResourceReference(), loadIndustrialDiscoveryReference()
     ]);
     state.catalogue = catalogue;
     state.validation = validation;
     state.androidResourceReference = androidReference;
+    state.industrialDiscoveryReference = industrialReference;
 
     const requestedView = params.get('view');
     if (['geography', 'organisation', 'directory'].includes(requestedView)) {
@@ -1172,7 +1183,7 @@ async function start() {
     const focusCollection = params.get('focus');
     const focusedRecords = focusCollection ? catalogue.collection(focusCollection) : [];
     const requestedId = params.get('id');
-    state.activeCatalogueTable = focusCollection === 'substances' && !requestedId;
+    state.activeCatalogueTable = ['substances', 'parts', 'machines', 'buildings'].includes(focusCollection) && !requestedId ? focusCollection : false;
     state.selectedId = (requestedId && catalogue.get(requestedId) ? requestedId : null)
       || focusedRecords[0]?.id
       || catalogue.collection('regions')[0]?.id

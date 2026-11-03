@@ -196,7 +196,7 @@ export function selectionForCategory(current, fields, selected) {
 }
 
 export function fieldLabel(key) {
-  const label = key.replace(/([a-z])([A-Z])/g, "$1 $2").replace(/\./g, " / ")
+  const label = key.replace(/([a-z])([A-Z])/g, "$1 $2").replace(/\./g, " / ").replace(/_/g, " ")
     .replace(/Ids\b/g, "IDs").replace(/\bId\b/g, "ID")
     .replace(/\bmobile\b/gi, "Mobile");
   return label.charAt(0).toUpperCase() + label.slice(1);

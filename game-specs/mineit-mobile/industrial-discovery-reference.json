@@ -1,0 +1,2613 @@
+{
+  "authority": "reference-only-android-industrial-discovery-not-canonical",
+  "sourceRepository": "kevvy555/MineIT-Android",
+  "sourceBranch": "develop",
+  "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+  "notes": "Designer review snapshot; neither approval nor provisional prices alter canonical Universe content or Android gameplay. Confirm crosswalks before publication.",
+  "sourceFiles": [
+    {
+      "path": "docs/discovery/proposed-parts-material-boms.csv",
+      "kind": "parts",
+      "section": "materialBOM",
+      "rows": 22
+    },
+    {
+      "path": "docs/discovery/proposed-parts-quantitative-material-inputs.csv",
+      "kind": "parts",
+      "section": "quantities",
+      "rows": 19
+    },
+    {
+      "path": "docs/discovery/proposed-parts-reference-prices.csv",
+      "kind": "parts",
+      "section": "prices",
+      "rows": 19
+    },
+    {
+      "path": "docs/discovery/proposed-machine-bom-cost-review.csv",
+      "kind": "machines",
+      "section": "manufacturingBOM",
+      "rows": 42
+    },
+    {
+      "path": "docs/discovery/proposed-accommodation-luxury-machine-review.csv",
+      "kind": "machines",
+      "section": "luxuryRatings",
+      "rows": 5
+    },
+    {
+      "path": "docs/discovery/proposed-accommodation-luxury-machine-bom-cost-review.csv",
+      "kind": "machines",
+      "section": "luxuryBOM",
+      "rows": 5
+    },
+    {
+      "path": "docs/discovery/proposed-electric-motor-machine-catalogue.csv",
+      "kind": "machines",
+      "section": "electricMotors",
+      "rows": 2
+    },
+    {
+      "path": "docs/discovery/proposed-building-systematic-review.csv",
+      "kind": "buildings",
+      "section": "systematicReview",
+      "rows": 24
+    },
+    {
+      "path": "docs/discovery/proposed-building-bom-coverage.csv",
+      "kind": "buildings",
+      "section": "bomCoverage",
+      "rows": 24
+    },
+    {
+      "path": "docs/discovery/proposed-building-quantitative-bom-review.csv",
+      "kind": "buildings",
+      "section": "quantitativeBOM",
+      "rows": 24
+    }
+  ],
+  "parts": [
+    {
+      "id": "part-generator-parts",
+      "review": {
+        "materialBOM": {
+          "product_name": "Generator Parts",
+          "proposed_named_inputs": "Refined Copper + Steel + Mica Insulation Sheets (standard approved); Rare Earth Magnet Alloy only in appropriately designed generator Machine BOMs",
+          "review_status": "APPROVED_INPUT_FAMILIES",
+          "proposed_finished_unit": "one standard generator service kit (mass/rating pending)",
+          "open_decision": "Standard generator materials approved. No quantities, part dimensions, machine requirements, prices or specialist generator variants approved; distinct from electric Motor Machines.",
+          "approved_finished_stock_count": "1 finished Part = 1 unit"
+        },
+        "quantities": {
+          "approved_planning_input_materials_kg_per_finished_unit": "Refined Copper 6; Steel 18; Mica Insulation Sheets 0.6"
+        },
+        "prices": {
+          "manufacturer_cost_cc_per_finished_unit": "1456.19",
+          "base_manufacturer_sell_quote_cc_per_finished_unit": "1850"
+        }
+      }
+    },
+    {
+      "id": "part-battery-parts",
+      "review": {
+        "materialBOM": {
+          "product_name": "Battery Parts (source identity / compatibility family)",
+          "proposed_named_inputs": "Current Universe substance links include general Refined Reactive Metal + Refined Conductive Metal + Refined Graphite + Electrolyte Solution; not a chemistry-specific approved recipe",
+          "review_status": "SOURCE_REFERENCE_SPLIT_APPROVED",
+          "proposed_finished_unit": "not an additional priced stock unit in target economy",
+          "open_decision": "Approved two distinct battery module products below. Keep source ID for canon and migration compatibility; do not sell/count generic Battery Parts as an interchangeable third chemistry. Existing machine links require compatibility reconciliation.",
+          "approved_finished_stock_count": "Not an additional target finished Part unit"
+        }
+      }
+    },
+    {
+      "id": "part-power-electronics",
+      "review": {
+        "materialBOM": {
+          "product_name": "Power Electronics",
+          "proposed_named_inputs": "Electronic-Grade Silicon + Refined Copper + Mica Insulation Sheets + Glass",
+          "review_status": "APPROVED_INPUT_FAMILIES",
+          "proposed_finished_unit": "electronic power module",
+          "open_decision": "Rating and processing quantities",
+          "approved_finished_stock_count": "1 finished Part = 1 unit"
+        },
+        "quantities": {
+          "approved_planning_input_materials_kg_per_finished_unit": "Electronic-Grade Silicon 0.28; Refined Copper 3.5; Mica Insulation Sheets 1; Glass 2"
+        },
+        "prices": {
+          "manufacturer_cost_cc_per_finished_unit": "2650.54",
+          "base_manufacturer_sell_quote_cc_per_finished_unit": "3350"
+        }
+      }
+    },
+    {
+      "id": "part-mechanical-parts",
+      "review": {
+        "materialBOM": {
+          "product_name": "Mechanical Parts",
+          "proposed_named_inputs": "Steel + Bronze + Refined Lubricant",
+          "review_status": "APPROVED_INPUT_FAMILIES",
+          "proposed_finished_unit": "bearing/gear service kit",
+          "open_decision": "Quantity and useful service life",
+          "approved_finished_stock_count": "1 finished Part = 1 unit"
+        },
+        "quantities": {
+          "approved_planning_input_materials_kg_per_finished_unit": "Steel 15; Bronze 4; Refined Lubricant 0.6"
+        },
+        "prices": {
+          "manufacturer_cost_cc_per_finished_unit": "1350",
+          "base_manufacturer_sell_quote_cc_per_finished_unit": "1700"
+        }
+      }
+    },
+    {
+      "id": "part-control-and-sensor-parts",
+      "review": {
+        "materialBOM": {
+          "product_name": "Control & Sensor Parts",
+          "proposed_named_inputs": "Electronic-Grade Silicon + Refined Copper + Glass + Mica Insulation Sheets",
+          "review_status": "APPROVED_INPUT_FAMILIES",
+          "proposed_finished_unit": "sensor/control module",
+          "open_decision": "Calibration",
+          "approved_finished_stock_count": "1 finished Part = 1 unit"
+        },
+        "quantities": {
+          "approved_planning_input_materials_kg_per_finished_unit": "Electronic-Grade Silicon 0.12; Refined Copper 1.2; Glass 1; Mica Insulation Sheets 0.3"
+        },
+        "prices": {
+          "manufacturer_cost_cc_per_finished_unit": "2983",
+          "base_manufacturer_sell_quote_cc_per_finished_unit": "3750"
+        }
+      }
+    },
+    {
+      "id": "part-thermal-optical-parts",
+      "review": {
+        "materialBOM": {
+          "product_name": "Thermal / Optical Parts (source compatibility identity)",
+          "proposed_named_inputs": "Legacy combined glass + ceramic + insulating + structural material references; not a single target recipe",
+          "review_status": "SOURCE_REFERENCE_SPLIT_APPROVED",
+          "proposed_finished_unit": "reference identity only (not a finished target trade unit)",
+          "open_decision": "Approved split into Thermal Parts and Optical Parts. Keep canonical source ID and existing Machine links for later reconciliation, not as third interchangeable target Part.",
+          "approved_finished_stock_count": "Not an independently priced target unit"
+        }
+      }
+    },
+    {
+      "id": "part-structural-components",
+      "review": {
+        "materialBOM": {
+          "product_name": "Structural Components",
+          "proposed_named_inputs": "Steel (approved standard); Aluminium Alloy (approved potential specialist alternative; recipe and compatibility TBD)",
+          "review_status": "APPROVED_INPUT_FAMILIES",
+          "proposed_finished_unit": "structural kit",
+          "open_decision": "Aluminium Alloy alternative is approved in principle; dimensions, strength/rating, application and variant identity still need review",
+          "approved_finished_stock_count": "1 finished Part = 1 unit"
+        },
+        "quantities": {
+          "approved_planning_input_materials_kg_per_finished_unit": "Steel 80"
+        },
+        "prices": {
+          "manufacturer_cost_cc_per_finished_unit": "1956.67",
+          "base_manufacturer_sell_quote_cc_per_finished_unit": "2450"
+        }
+      }
+    },
+    {
+      "id": "part-hydraulic-parts",
+      "review": {
+        "materialBOM": {
+          "product_name": "Hydraulic Parts",
+          "proposed_named_inputs": "Steel + Bronze + Refined Lubricant + suitable polymer-based sealing material (finished seal-grade Polymer identity TBD; existing substance-polymer class is a candidate, Polymer Feedstock is only a precursor)",
+          "review_status": "APPROVED_INPUT_FAMILIES",
+          "proposed_finished_unit": "one standard hydraulic service/pressure kit (rating and mass TBD)",
+          "open_decision": "Approved standard material direction. Confirm suitable finished elastomer/seal-grade stock against existing Polymer class, working fluid and pressure/temperature requirements; do not create a standalone seal SKU without justification. Actual material quantities, kit contents, machine/process, service life, consumer compatibility and CC price TBD.",
+          "approved_finished_stock_count": "1 finished Part = 1 unit"
+        },
+        "quantities": {
+          "approved_planning_input_materials_kg_per_finished_unit": "Steel 30; Bronze 4; Refined Lubricant 1; Polymer (provisional seal) 1.5"
+        },
+        "prices": {
+          "manufacturer_cost_cc_per_finished_unit": "2306.28",
+          "base_manufacturer_sell_quote_cc_per_finished_unit": "2900"
+        }
+      }
+    },
+    {
+      "id": "part-extraction-parts",
+      "review": {
+        "materialBOM": {
+          "product_name": "Extraction Parts (Mining Drill Bit / Cutting Head)",
+          "proposed_named_inputs": "Steel + Cemented Tungsten Carbide",
+          "review_status": "APPROVED_INPUT_FAMILIES",
+          "proposed_finished_unit": "one standard drill/cutting-head kit (size and mass pending)",
+          "open_decision": "Existing canonical Part reused; physical quantities/rating TBD",
+          "approved_finished_stock_count": "1 finished Part = 1 unit"
+        },
+        "quantities": {
+          "approved_planning_input_materials_kg_per_finished_unit": "Steel 8; Cemented Tungsten Carbide 2"
+        },
+        "prices": {
+          "manufacturer_cost_cc_per_finished_unit": "1917.63",
+          "base_manufacturer_sell_quote_cc_per_finished_unit": "2400"
+        }
+      }
+    },
+    {
+      "id": "part-processing-parts",
+      "review": {
+        "materialBOM": {
+          "product_name": "Processing Parts",
+          "proposed_named_inputs": "Refined Ceramic + Stainless Steel + Glass",
+          "review_status": "APPROVED_INPUT_FAMILIES",
+          "proposed_finished_unit": "processing liner/crucible kit",
+          "open_decision": "High-temperature variant separately later",
+          "approved_finished_stock_count": "1 finished Part = 1 unit"
+        },
+        "quantities": {
+          "approved_planning_input_materials_kg_per_finished_unit": "Refined Ceramic 18; Stainless Steel 10; Glass 2"
+        },
+        "prices": {
+          "manufacturer_cost_cc_per_finished_unit": "2311.58",
+          "base_manufacturer_sell_quote_cc_per_finished_unit": "2900"
+        }
+      }
+    },
+    {
+      "id": "part-computing-parts",
+      "review": {
+        "materialBOM": {
+          "product_name": "Computing Parts",
+          "proposed_named_inputs": "Electronic-Grade Silicon + Refined Copper + Glass + Mica Insulation Sheets",
+          "review_status": "APPROVED_INPUT_FAMILIES",
+          "proposed_finished_unit": "computing module",
+          "open_decision": "Technology rating and manufacturing yield",
+          "approved_finished_stock_count": "1 finished Part = 1 unit"
+        },
+        "quantities": {
+          "approved_planning_input_materials_kg_per_finished_unit": "Electronic-Grade Silicon 0.6; Refined Copper 2; Glass 1.5; Mica Insulation Sheets 0.6"
+        },
+        "prices": {
+          "manufacturer_cost_cc_per_finished_unit": "5116.09",
+          "base_manufacturer_sell_quote_cc_per_finished_unit": "6400"
+        }
+      }
+    },
+    {
+      "id": "part-fabrication-parts",
+      "review": {
+        "materialBOM": {
+          "product_name": "Fabrication Parts (source identity / compatibility reference)",
+          "proposed_named_inputs": "Legacy umbrella reference to welding heads, forming dies and assembly tooling. Separate approved target product material sets are in the two following rows.",
+          "review_status": "SOURCE_REFERENCE_SPLIT_APPROVED",
+          "proposed_finished_unit": "reference identity only; not an independently tradable finished Part",
+          "open_decision": "Approved distinct Forming & Cutting Tooling and Welding Parts. Retain original Universe source ID/consumer mapping for later migration; do not count generic Fabrication Parts as a third interchangeable product. Actual consumers and quantities still TBD.",
+          "approved_finished_stock_count": "Not a separately stocked target finished Part"
+        }
+      }
+    },
+    {
+      "id": "part-fluid-handling-parts",
+      "review": {
+        "materialBOM": {
+          "product_name": "Fluid Handling Parts",
+          "proposed_named_inputs": "Stainless Steel + Brass + Refined Ceramic + suitable polymer-based seal/gasket material (specific qualified finished Polymer grade TBD)",
+          "review_status": "APPROVED_INPUT_FAMILIES",
+          "proposed_finished_unit": "one finished pipe/valve/filter service kit (mass/rating TBD)",
+          "open_decision": "Approved one standard Fluid Handling Parts product for fluid distribution, containment and filtration. Qualified seal grade and chemical/pressure/temperature compatibility TBD. Hydraulic Parts remain separate actuator/cylinder kits; actual quantities, size, processes, machine consumers, lifetime and CC price TBD.",
+          "approved_finished_stock_count": "1 finished Part = 1 unit"
+        },
+        "quantities": {
+          "approved_planning_input_materials_kg_per_finished_unit": "Stainless Steel 15; Brass 5; Refined Ceramic 5; Polymer (provisional seal) 1.5"
+        },
+        "prices": {
+          "manufacturer_cost_cc_per_finished_unit": "2066.06",
+          "base_manufacturer_sell_quote_cc_per_finished_unit": "2600"
+        }
+      }
+    },
+    {
+      "id": "part-bulk-handling-parts",
+      "review": {
+        "materialBOM": {
+          "product_name": "Bulk Handling Parts",
+          "proposed_named_inputs": "Steel + Refined Ceramic + Bronze",
+          "review_status": "APPROVED_INPUT_FAMILIES",
+          "proposed_finished_unit": "conveyor/handling wear kit",
+          "open_decision": "Equipment compatibility and mass",
+          "approved_finished_stock_count": "1 finished Part = 1 unit"
+        },
+        "quantities": {
+          "approved_planning_input_materials_kg_per_finished_unit": "Steel 35; Refined Ceramic 8; Bronze 3"
+        },
+        "prices": {
+          "manufacturer_cost_cc_per_finished_unit": "1889.47",
+          "base_manufacturer_sell_quote_cc_per_finished_unit": "2400"
+        }
+      }
+    }
+  ],
+  "machines": [
+    {
+      "id": "machine-exploration-vehicle",
+      "review": {
+        "manufacturingBOM": {
+          "machine_name": "Exploration Vehicle",
+          "category": "Transport",
+          "canonical_source_part_ids": "part-mechanical-parts; part-power-electronics; part-structural-components",
+          "proposed_finished_part_ids_and_counts": "part-mechanical-parts:4; part-power-electronics:2; part-control-and-sensor-parts:3; part-structural-components:4; part-computing-parts:1; candidate-part-lithium-based-battery-module:12",
+          "proposed_nested_machine_ids_and_counts": "candidate-machine-rare-earth-permanent-magnet-motor:6",
+          "proposed_direct_processed_materials_kg": "Steel:420; Aluminium Alloy:180; Glass:25; Polymer (grade TBD):20; Refined Copper:50",
+          "proposed_assembly_labour_hours": "230",
+          "proposed_factory_equipment_hours": "160",
+          "proposed_test_hours": "75",
+          "proposed_good_unit_yield": "0.91",
+          "embedded_parts_factory_cost_CC": "74699.77",
+          "accounted_material_subassembly_mass_kg_partial_if_blocked": "1272.7",
+          "approval_status": "BLOCKED_PROPOSAL",
+          "unresolved_design_constraints": "Rare-earth traction motor unpriced; lithium battery chemistry/range uncertain"
+        }
+      }
+    },
+    {
+      "id": "machine-ship-scanner",
+      "review": {
+        "manufacturingBOM": {
+          "machine_name": "Ship Scanner",
+          "category": "Surveying",
+          "canonical_source_part_ids": "part-power-electronics; part-control-and-sensor-parts; part-structural-components",
+          "proposed_finished_part_ids_and_counts": "part-power-electronics:4; part-control-and-sensor-parts:5; part-structural-components:2; part-computing-parts:4; candidate-part-optical-parts:2",
+          "proposed_direct_processed_materials_kg": "Steel:200; Aluminium Alloy:80; Glass:20; Refined Copper:10",
+          "proposed_assembly_labour_hours": "170",
+          "proposed_factory_equipment_hours": "125",
+          "proposed_test_hours": "100",
+          "proposed_good_unit_yield": "0.91",
+          "embedded_parts_factory_cost_CC": "54703.00",
+          "direct_processed_material_cost_CC": "4140.00",
+          "nested_machine_factory_cost_CC": "0.00",
+          "proposed_manufacturer_cost_CC": "109058.24",
+          "proposed_base_sell_quote_CC": "136350",
+          "estimated_finished_freight_mass_kg": "522",
+          "accounted_material_subassembly_mass_kg_partial_if_blocked": "522",
+          "approval_status": "PROPOSED_NOT_APPROVED",
+          "unresolved_design_constraints": "Sensor resolution range and ship interface grading unreviewed"
+        }
+      }
+    },
+    {
+      "id": "machine-substance-analyser",
+      "review": {
+        "manufacturingBOM": {
+          "machine_name": "Substance Analyser",
+          "category": "Surveying",
+          "canonical_source_part_ids": "part-power-electronics; part-control-and-sensor-parts; part-extraction-parts; part-structural-components",
+          "proposed_finished_part_ids_and_counts": "part-power-electronics:2; part-control-and-sensor-parts:4; part-extraction-parts:1; part-structural-components:1; candidate-part-optical-parts:2; part-computing-parts:2",
+          "proposed_direct_processed_materials_kg": "Steel:60; Refined Copper:10; Glass:30",
+          "proposed_assembly_labour_hours": "130",
+          "proposed_factory_equipment_hours": "90",
+          "proposed_test_hours": "80",
+          "proposed_good_unit_yield": "0.91",
+          "embedded_parts_factory_cost_CC": "36147.70",
+          "direct_processed_material_cost_CC": "1060.00",
+          "nested_machine_factory_cost_CC": "0.00",
+          "proposed_manufacturer_cost_CC": "74404.07",
+          "proposed_base_sell_quote_CC": "93050",
+          "estimated_finished_freight_mass_kg": "234.1",
+          "accounted_material_subassembly_mass_kg_partial_if_blocked": "234.1",
+          "approval_status": "PROPOSED_NOT_APPROVED",
+          "unresolved_design_constraints": "Precision analyser optics sensor grade and calibration unreviewed"
+        }
+      }
+    },
+    {
+      "id": "machine-ship-reactor",
+      "review": {
+        "manufacturingBOM": {
+          "machine_name": "Ship Reactor",
+          "category": "Power",
+          "canonical_source_part_ids": "part-generator-parts; part-battery-parts; part-power-electronics; part-thermal-optical-parts; part-control-and-sensor-parts; part-fabrication-parts; part-structural-components",
+          "proposed_finished_part_ids_and_counts": "part-power-electronics:8; part-control-and-sensor-parts:6; candidate-part-thermal-parts:4; part-structural-components:8; part-mechanical-parts:4; part-fluid-handling-parts:4; part-computing-parts:3",
+          "proposed_direct_processed_materials_kg": "Steel:1500; High-Temperature Nickel Alloy:500; Refined Copper:100",
+          "proposed_assembly_labour_hours": "900",
+          "proposed_factory_equipment_hours": "850",
+          "proposed_test_hours": "500",
+          "proposed_good_unit_yield": "0.85",
+          "embedded_parts_factory_cost_CC": "93570.31",
+          "direct_processed_material_cost_CC": "59200.00",
+          "nested_machine_factory_cost_CC": "0.00",
+          "accounted_material_subassembly_mass_kg_partial_if_blocked": "2975.1",
+          "approval_status": "BLOCKED_PROPOSAL",
+          "unresolved_design_constraints": "Fusion core shielding containment fuel/ratings unspecified; no nuclear fuel assembly"
+        }
+      }
+    },
+    {
+      "id": "machine-ship-life-support",
+      "review": {
+        "manufacturingBOM": {
+          "machine_name": "Ship Life Support",
+          "category": "Life Support",
+          "canonical_source_part_ids": "part-fluid-handling-parts; part-mechanical-parts; part-power-electronics; part-control-and-sensor-parts",
+          "proposed_finished_part_ids_and_counts": "part-fluid-handling-parts:8; part-mechanical-parts:5; part-power-electronics:4; part-control-and-sensor-parts:4; candidate-part-thermal-parts:2; part-computing-parts:2",
+          "proposed_direct_processed_materials_kg": "Steel:400; Stainless Steel:150; Polymer (grade TBD):60",
+          "proposed_assembly_labour_hours": "300",
+          "proposed_factory_equipment_hours": "260",
+          "proposed_test_hours": "145",
+          "proposed_good_unit_yield": "0.9",
+          "embedded_parts_factory_cost_CC": "60945.88",
+          "direct_processed_material_cost_CC": "7130.00",
+          "nested_machine_factory_cost_CC": "0.00",
+          "proposed_manufacturer_cost_CC": "157139.87",
+          "proposed_base_sell_quote_CC": "196450",
+          "estimated_finished_freight_mass_kg": "980.9",
+          "accounted_material_subassembly_mass_kg_partial_if_blocked": "980.9",
+          "approval_status": "PROPOSED_NOT_APPROVED",
+          "unresolved_design_constraints": "Oxygen recycle media and emergency redundancy ratings need direct input decision"
+        }
+      }
+    },
+    {
+      "id": "machine-ship-computer",
+      "review": {
+        "manufacturingBOM": {
+          "machine_name": "Ship Computer",
+          "category": "Computing",
+          "canonical_source_part_ids": "part-computing-parts; part-power-electronics; part-control-and-sensor-parts",
+          "proposed_finished_part_ids_and_counts": "part-computing-parts:12; part-power-electronics:4; part-control-and-sensor-parts:6; part-structural-components:2",
+          "proposed_direct_processed_materials_kg": "Steel:100; Refined Copper:50",
+          "proposed_assembly_labour_hours": "250",
+          "proposed_factory_equipment_hours": "175",
+          "proposed_test_hours": "150",
+          "proposed_good_unit_yield": "0.91",
+          "embedded_parts_factory_cost_CC": "93806.58",
+          "direct_processed_material_cost_CC": "1900.00",
+          "nested_machine_factory_cost_CC": "0.00",
+          "proposed_manufacturer_cost_CC": "169457.78",
+          "proposed_base_sell_quote_CC": "211850",
+          "estimated_finished_freight_mass_kg": "384.8",
+          "accounted_material_subassembly_mass_kg_partial_if_blocked": "384.8",
+          "approval_status": "PROPOSED_NOT_APPROVED",
+          "unresolved_design_constraints": "Computer grade and nav/software entitlements excluded"
+        }
+      }
+    },
+    {
+      "id": "machine-ship-refinery-unit",
+      "review": {
+        "manufacturingBOM": {
+          "machine_name": "Ship Refinery Unit",
+          "category": "Processing",
+          "canonical_source_part_ids": "part-processing-parts; part-mechanical-parts; part-hydraulic-parts; part-power-electronics; part-thermal-optical-parts; part-structural-components",
+          "proposed_finished_part_ids_and_counts": "part-processing-parts:10; part-mechanical-parts:8; part-hydraulic-parts:4; part-power-electronics:4; candidate-part-thermal-parts:5; part-structural-components:8; part-fluid-handling-parts:3; candidate-part-forming-cutting-tooling:2",
+          "proposed_nested_machine_ids_and_counts": "candidate-machine-conventional-electric-motor:4",
+          "proposed_direct_processed_materials_kg": "Steel:3200; Refined Ceramic:300; High-Temperature Nickel Alloy:200",
+          "proposed_assembly_labour_hours": "650",
+          "proposed_factory_equipment_hours": "600",
+          "proposed_test_hours": "260",
+          "proposed_good_unit_yield": "0.88",
+          "embedded_parts_factory_cost_CC": "94200.17",
+          "direct_processed_material_cost_CC": "48400.00",
+          "nested_machine_factory_cost_CC": "31267.36",
+          "proposed_manufacturer_cost_CC": "377235.83",
+          "proposed_base_sell_quote_CC": "471550",
+          "estimated_finished_freight_mass_kg": "5214.8",
+          "accounted_material_subassembly_mass_kg_partial_if_blocked": "5214.8",
+          "approval_status": "PROPOSED_NOT_APPROVED",
+          "unresolved_design_constraints": "Bulk refractory/wear content and ship mass & machinery capacity to be rated"
+        }
+      }
+    },
+    {
+      "id": "machine-drill-machine",
+      "review": {
+        "manufacturingBOM": {
+          "machine_name": "Drill Machine",
+          "category": "Extraction",
+          "canonical_source_part_ids": "part-extraction-parts; part-mechanical-parts; part-hydraulic-parts; part-power-electronics; part-structural-components",
+          "proposed_finished_part_ids_and_counts": "part-extraction-parts:12; part-mechanical-parts:6; part-hydraulic-parts:8; part-power-electronics:3; part-structural-components:8; part-control-and-sensor-parts:2",
+          "proposed_nested_machine_ids_and_counts": "candidate-machine-conventional-electric-motor:4",
+          "proposed_direct_processed_materials_kg": "Steel:2400; Refined Ceramic:150",
+          "proposed_assembly_labour_hours": "450",
+          "proposed_factory_equipment_hours": "390",
+          "proposed_test_hours": "175",
+          "proposed_good_unit_yield": "0.9",
+          "embedded_parts_factory_cost_CC": "79132.78",
+          "direct_processed_material_cost_CC": "21600.00",
+          "nested_machine_factory_cost_CC": "31267.36",
+          "proposed_manufacturer_cost_CC": "263722.38",
+          "proposed_base_sell_quote_CC": "329700",
+          "estimated_finished_freight_mass_kg": "3787.5",
+          "accounted_material_subassembly_mass_kg_partial_if_blocked": "3787.5",
+          "approval_status": "PROPOSED_NOT_APPROVED",
+          "unresolved_design_constraints": "Head wear/cut rate, torque and drill capacity TBD"
+        }
+      }
+    },
+    {
+      "id": "machine-conveyor-machine",
+      "review": {
+        "manufacturingBOM": {
+          "machine_name": "Conveyor Machine",
+          "category": "Transport",
+          "canonical_source_part_ids": "part-mechanical-parts; part-power-electronics; part-structural-components; part-bulk-handling-parts",
+          "proposed_finished_part_ids_and_counts": "part-mechanical-parts:4; part-power-electronics:2; part-structural-components:8; part-bulk-handling-parts:8; part-control-and-sensor-parts:1",
+          "proposed_nested_machine_ids_and_counts": "candidate-machine-conventional-electric-motor:4",
+          "proposed_direct_processed_materials_kg": "Steel:1800; Polymer (grade TBD):60",
+          "proposed_assembly_labour_hours": "310",
+          "proposed_factory_equipment_hours": "265",
+          "proposed_test_hours": "105",
+          "proposed_good_unit_yield": "0.93",
+          "embedded_parts_factory_cost_CC": "44453.20",
+          "direct_processed_material_cost_CC": "15480.00",
+          "nested_machine_factory_cost_CC": "31267.36",
+          "proposed_manufacturer_cost_CC": "173710.28",
+          "proposed_base_sell_quote_CC": "217150",
+          "estimated_finished_freight_mass_kg": "3054.2",
+          "accounted_material_subassembly_mass_kg_partial_if_blocked": "3054.2",
+          "approval_status": "PROPOSED_NOT_APPROVED",
+          "unresolved_design_constraints": "Belt material Polymer stand-in and rated length/capacity pending"
+        }
+      }
+    },
+    {
+      "id": "machine-mine-ventilation",
+      "review": {
+        "manufacturingBOM": {
+          "machine_name": "Mine Ventilation",
+          "category": "Safety",
+          "canonical_source_part_ids": "part-mechanical-parts; part-fluid-handling-parts; part-power-electronics",
+          "proposed_finished_part_ids_and_counts": "part-mechanical-parts:4; part-fluid-handling-parts:4; part-power-electronics:2; part-structural-components:3",
+          "proposed_nested_machine_ids_and_counts": "candidate-machine-conventional-electric-motor:3",
+          "proposed_direct_processed_materials_kg": "Steel:500; Polymer (grade TBD):100",
+          "proposed_assembly_labour_hours": "255",
+          "proposed_factory_equipment_hours": "200",
+          "proposed_test_hours": "90",
+          "proposed_good_unit_yield": "0.93",
+          "embedded_parts_factory_cost_CC": "24835.33",
+          "direct_processed_material_cost_CC": "5800.00",
+          "nested_machine_factory_cost_CC": "23450.52",
+          "proposed_manufacturer_cost_CC": "118103.06",
+          "proposed_base_sell_quote_CC": "147650",
+          "estimated_finished_freight_mass_kg": "1171.5",
+          "accounted_material_subassembly_mass_kg_partial_if_blocked": "1171.5",
+          "approval_status": "PROPOSED_NOT_APPROVED",
+          "unresolved_design_constraints": "Fan duct length/capacity and filter consumable needs TBD"
+        }
+      }
+    },
+    {
+      "id": "machine-crusher-machine",
+      "review": {
+        "manufacturingBOM": {
+          "machine_name": "Crusher Machine",
+          "category": "Processing",
+          "canonical_source_part_ids": "part-mechanical-parts; part-processing-parts; part-structural-components; part-power-electronics",
+          "proposed_finished_part_ids_and_counts": "part-mechanical-parts:8; part-processing-parts:6; part-structural-components:10; part-power-electronics:3; candidate-part-forming-cutting-tooling:2",
+          "proposed_nested_machine_ids_and_counts": "candidate-machine-conventional-electric-motor:6",
+          "proposed_direct_processed_materials_kg": "Steel:3500; Refined Ceramic:300",
+          "proposed_assembly_labour_hours": "600",
+          "proposed_factory_equipment_hours": "530",
+          "proposed_test_hours": "210",
+          "proposed_good_unit_yield": "0.89",
+          "embedded_parts_factory_cost_CC": "58540.70",
+          "direct_processed_material_cost_CC": "32800.00",
+          "nested_machine_factory_cost_CC": "46901.04",
+          "proposed_manufacturer_cost_CC": "311844.65",
+          "proposed_base_sell_quote_CC": "389850",
+          "estimated_finished_freight_mass_kg": "5080.3",
+          "accounted_material_subassembly_mass_kg_partial_if_blocked": "5080.3",
+          "approval_status": "PROPOSED_NOT_APPROVED",
+          "unresolved_design_constraints": "Crusher capacity hard-wear liners and drive rating TBD"
+        }
+      }
+    },
+    {
+      "id": "machine-smelter-machine",
+      "review": {
+        "manufacturingBOM": {
+          "machine_name": "Smelter Machine",
+          "category": "Processing",
+          "canonical_source_part_ids": "part-processing-parts; part-thermal-optical-parts; part-structural-components; part-power-electronics; part-fluid-handling-parts",
+          "proposed_finished_part_ids_and_counts": "part-processing-parts:12; candidate-part-thermal-parts:10; part-structural-components:10; part-power-electronics:4; part-fluid-handling-parts:6; part-control-and-sensor-parts:3",
+          "proposed_direct_processed_materials_kg": "Steel:2000; Refined Ceramic:1200; Stainless Steel:600",
+          "proposed_assembly_labour_hours": "760",
+          "proposed_factory_equipment_hours": "690",
+          "proposed_test_hours": "310",
+          "proposed_good_unit_yield": "0.87",
+          "embedded_parts_factory_cost_CC": "103758.48",
+          "direct_processed_material_cost_CC": "46600.00",
+          "nested_machine_factory_cost_CC": "0.00",
+          "proposed_manufacturer_cost_CC": "384205.15",
+          "proposed_base_sell_quote_CC": "480300",
+          "estimated_finished_freight_mass_kg": "5200.4",
+          "accounted_material_subassembly_mass_kg_partial_if_blocked": "5200.4",
+          "approval_status": "PROPOSED_NOT_APPROVED",
+          "unresolved_design_constraints": "Refractory lining and operating heat/quality limits TBD"
+        }
+      }
+    },
+    {
+      "id": "machine-crude-chemical-battery",
+      "review": {
+        "manufacturingBOM": {
+          "machine_name": "Crude Chemical Battery",
+          "category": "Power",
+          "canonical_source_part_ids": "part-battery-parts; part-power-electronics; part-structural-components",
+          "proposed_finished_part_ids_and_counts": "candidate-part-lead-acid-battery-module:12; part-power-electronics:3; part-structural-components:4; part-fluid-handling-parts:1",
+          "proposed_direct_processed_materials_kg": "Steel:280; Refined Copper:80; Polymer (grade TBD):60",
+          "proposed_assembly_labour_hours": "230",
+          "proposed_factory_equipment_hours": "175",
+          "proposed_test_hours": "115",
+          "proposed_good_unit_yield": "0.93",
+          "embedded_parts_factory_cost_CC": "34774.32",
+          "direct_processed_material_cost_CC": "5080.00",
+          "nested_machine_factory_cost_CC": "0.00",
+          "proposed_manufacturer_cost_CC": "100112.17",
+          "proposed_base_sell_quote_CC": "125150",
+          "estimated_finished_freight_mass_kg": "1342.7",
+          "accounted_material_subassembly_mass_kg_partial_if_blocked": "1342.7",
+          "approval_status": "CONDITIONAL_PROPOSAL",
+          "unresolved_design_constraints": "Lead-acid chemistry and rated energy capacity require signoff"
+        }
+      }
+    },
+    {
+      "id": "machine-wind-generator",
+      "review": {
+        "manufacturingBOM": {
+          "machine_name": "Wind Generator",
+          "category": "Power",
+          "canonical_source_part_ids": "part-generator-parts; part-mechanical-parts; part-power-electronics; part-structural-components; part-control-and-sensor-parts",
+          "proposed_finished_part_ids_and_counts": "part-generator-parts:8; part-mechanical-parts:6; part-power-electronics:5; part-structural-components:12; part-control-and-sensor-parts:3",
+          "proposed_direct_processed_materials_kg": "Steel:2500; Aluminium Alloy:500; Refined Copper:100",
+          "proposed_assembly_labour_hours": "540",
+          "proposed_factory_equipment_hours": "440",
+          "proposed_test_hours": "175",
+          "proposed_good_unit_yield": "0.91",
+          "embedded_parts_factory_cost_CC": "65431.26",
+          "direct_processed_material_cost_CC": "35200.00",
+          "nested_machine_factory_cost_CC": "0.00",
+          "proposed_manufacturer_cost_CC": "240968.42",
+          "proposed_base_sell_quote_CC": "301250",
+          "estimated_finished_freight_mass_kg": "4165.5",
+          "accounted_material_subassembly_mass_kg_partial_if_blocked": "4165.5",
+          "approval_status": "PROPOSED_NOT_APPROVED",
+          "unresolved_design_constraints": "Rotor blades and support foundation rating; no motor as generator"
+        }
+      }
+    },
+    {
+      "id": "machine-water-wheel-generator",
+      "review": {
+        "manufacturingBOM": {
+          "machine_name": "Water Wheel Generator",
+          "category": "Power",
+          "canonical_source_part_ids": "part-generator-parts; part-mechanical-parts; part-power-electronics; part-structural-components; part-control-and-sensor-parts",
+          "proposed_finished_part_ids_and_counts": "part-generator-parts:6; part-mechanical-parts:8; part-power-electronics:3; part-structural-components:12; part-control-and-sensor-parts:2",
+          "proposed_direct_processed_materials_kg": "Steel:3500; Stainless Steel:500",
+          "proposed_assembly_labour_hours": "570",
+          "proposed_factory_equipment_hours": "485",
+          "proposed_test_hours": "150",
+          "proposed_good_unit_yield": "0.9",
+          "embedded_parts_factory_cost_CC": "56934.80",
+          "direct_processed_material_cost_CC": "37500.00",
+          "nested_machine_factory_cost_CC": "0.00",
+          "proposed_manufacturer_cost_CC": "243038.67",
+          "proposed_base_sell_quote_CC": "303800",
+          "estimated_finished_freight_mass_kg": "4987.1",
+          "accounted_material_subassembly_mass_kg_partial_if_blocked": "4987.1",
+          "approval_status": "PROPOSED_NOT_APPROVED",
+          "unresolved_design_constraints": "Hydraulic head and site engineering separate from Machine"
+        }
+      }
+    },
+    {
+      "id": "machine-thermoelectric-trickler",
+      "review": {
+        "manufacturingBOM": {
+          "machine_name": "Thermoelectric Trickler",
+          "category": "Power",
+          "canonical_source_part_ids": "part-thermal-optical-parts; part-power-electronics; part-battery-parts",
+          "proposed_finished_part_ids_and_counts": "candidate-part-thermal-parts:3; part-power-electronics:2; part-control-and-sensor-parts:2; part-structural-components:1; candidate-part-lead-acid-battery-module:1",
+          "proposed_direct_processed_materials_kg": "Refined Ceramic:30; Refined Copper:15",
+          "proposed_assembly_labour_hours": "125",
+          "proposed_factory_equipment_hours": "100",
+          "proposed_test_hours": "55",
+          "proposed_good_unit_yield": "0.93",
+          "embedded_parts_factory_cost_CC": "21986.17",
+          "direct_processed_material_cost_CC": "810.00",
+          "nested_machine_factory_cost_CC": "0.00",
+          "accounted_material_subassembly_mass_kg_partial_if_blocked": "290.7",
+          "approval_status": "BLOCKED_PROPOSAL",
+          "unresolved_design_constraints": "Thermoelectric semiconductor junction materials unapproved; no rotating generator Part"
+        }
+      }
+    },
+    {
+      "id": "machine-solar-thermal-generator",
+      "review": {
+        "manufacturingBOM": {
+          "machine_name": "Solar Thermal Generator",
+          "category": "Power",
+          "canonical_source_part_ids": "part-generator-parts; part-mechanical-parts; part-power-electronics; part-thermal-optical-parts; part-control-and-sensor-parts; part-structural-components",
+          "proposed_finished_part_ids_and_counts": "part-generator-parts:6; part-mechanical-parts:6; part-power-electronics:5; candidate-part-thermal-parts:8; candidate-part-optical-parts:16; part-control-and-sensor-parts:5; part-structural-components:12",
+          "proposed_nested_machine_ids_and_counts": "candidate-machine-conventional-electric-motor:4",
+          "proposed_direct_processed_materials_kg": "Steel:3800; Glass:1500; Refined Copper:120",
+          "proposed_assembly_labour_hours": "860",
+          "proposed_factory_equipment_hours": "780",
+          "proposed_test_hours": "330",
+          "proposed_good_unit_yield": "0.88",
+          "embedded_parts_factory_cost_CC": "126554.24",
+          "direct_processed_material_cost_CC": "51040.00",
+          "nested_machine_factory_cost_CC": "31267.36",
+          "proposed_manufacturer_cost_CC": "471092.73",
+          "proposed_base_sell_quote_CC": "588900",
+          "estimated_finished_freight_mass_kg": "7031.7",
+          "accounted_material_subassembly_mass_kg_partial_if_blocked": "7031.7",
+          "approval_status": "PROPOSED_NOT_APPROVED",
+          "unresolved_design_constraints": "Tracking motor size optics field/reflector area and thermal receiver ratings"
+        }
+      }
+    },
+    {
+      "id": "machine-power-distribution-system",
+      "review": {
+        "manufacturingBOM": {
+          "machine_name": "Power Distribution System",
+          "category": "Power",
+          "canonical_source_part_ids": "part-power-electronics; part-control-and-sensor-parts; part-structural-components",
+          "proposed_finished_part_ids_and_counts": "part-power-electronics:15; part-control-and-sensor-parts:8; part-structural-components:10; part-computing-parts:2",
+          "proposed_direct_processed_materials_kg": "Steel:1600; Refined Copper:500",
+          "proposed_assembly_labour_hours": "475",
+          "proposed_factory_equipment_hours": "420",
+          "proposed_test_hours": "245",
+          "proposed_good_unit_yield": "0.9",
+          "embedded_parts_factory_cost_CC": "93420.98",
+          "direct_processed_material_cost_CC": "23800.00",
+          "nested_machine_factory_cost_CC": "0.00",
+          "proposed_manufacturer_cost_CC": "262467.76",
+          "proposed_base_sell_quote_CC": "328100",
+          "estimated_finished_freight_mass_kg": "2856.4",
+          "accounted_material_subassembly_mass_kg_partial_if_blocked": "2856.4",
+          "approval_status": "PROPOSED_NOT_APPROVED",
+          "unresolved_design_constraints": "Transformer winding voltage and switchgear test burden"
+        }
+      }
+    },
+    {
+      "id": "machine-life-support-machine",
+      "review": {
+        "manufacturingBOM": {
+          "machine_name": "Life Support Machine",
+          "category": "Life Support",
+          "canonical_source_part_ids": "part-fluid-handling-parts; part-mechanical-parts; part-power-electronics; part-control-and-sensor-parts",
+          "proposed_finished_part_ids_and_counts": "part-fluid-handling-parts:7; part-mechanical-parts:5; part-power-electronics:4; part-control-and-sensor-parts:5; candidate-part-thermal-parts:2",
+          "proposed_direct_processed_materials_kg": "Steel:600; Stainless Steel:150; Polymer (grade TBD):90",
+          "proposed_assembly_labour_hours": "290",
+          "proposed_factory_equipment_hours": "235",
+          "proposed_test_hours": "130",
+          "proposed_good_unit_yield": "0.91",
+          "embedded_parts_factory_cost_CC": "51630.64",
+          "direct_processed_material_cost_CC": "9270.00",
+          "nested_machine_factory_cost_CC": "0.00",
+          "proposed_manufacturer_cost_CC": "141099.60",
+          "proposed_base_sell_quote_CC": "176400",
+          "estimated_finished_freight_mass_kg": "1165.8",
+          "accounted_material_subassembly_mass_kg_partial_if_blocked": "1165.8",
+          "approval_status": "PROPOSED_NOT_APPROVED",
+          "unresolved_design_constraints": "Recycling and life support cartridge replacement not counted twice"
+        }
+      }
+    },
+    {
+      "id": "machine-climate-control-machine",
+      "review": {
+        "manufacturingBOM": {
+          "machine_name": "Climate Control Machine",
+          "category": "Life Support",
+          "canonical_source_part_ids": "part-thermal-optical-parts; part-mechanical-parts; part-power-electronics; part-control-and-sensor-parts",
+          "proposed_finished_part_ids_and_counts": "candidate-part-thermal-parts:6; part-mechanical-parts:5; part-power-electronics:5; part-control-and-sensor-parts:5; part-structural-components:4",
+          "proposed_nested_machine_ids_and_counts": "candidate-machine-conventional-electric-motor:3",
+          "proposed_direct_processed_materials_kg": "Steel:900; Refined Copper:150; Polymer (grade TBD):100",
+          "proposed_assembly_labour_hours": "330",
+          "proposed_factory_equipment_hours": "280",
+          "proposed_test_hours": "130",
+          "proposed_good_unit_yield": "0.92",
+          "embedded_parts_factory_cost_CC": "57447.56",
+          "direct_processed_material_cost_CC": "12300.00",
+          "nested_machine_factory_cost_CC": "23450.52",
+          "proposed_manufacturer_cost_CC": "184563.13",
+          "proposed_base_sell_quote_CC": "230750",
+          "estimated_finished_freight_mass_kg": "1924.2",
+          "accounted_material_subassembly_mass_kg_partial_if_blocked": "1924.2",
+          "approval_status": "PROPOSED_NOT_APPROVED",
+          "unresolved_design_constraints": "Heating cooling capacity and refrigerant stock TBD"
+        }
+      }
+    },
+    {
+      "id": "machine-irrigation-system",
+      "review": {
+        "manufacturingBOM": {
+          "machine_name": "Irrigation System",
+          "category": "Agriculture",
+          "canonical_source_part_ids": "part-fluid-handling-parts; part-mechanical-parts; part-power-electronics",
+          "proposed_finished_part_ids_and_counts": "part-fluid-handling-parts:6; part-mechanical-parts:4; part-power-electronics:3; part-control-and-sensor-parts:3; part-structural-components:3",
+          "proposed_nested_machine_ids_and_counts": "candidate-machine-conventional-electric-motor:3",
+          "proposed_direct_processed_materials_kg": "Steel:1000; Stainless Steel:200; Polymer (grade TBD):80",
+          "proposed_assembly_labour_hours": "350",
+          "proposed_factory_equipment_hours": "280",
+          "proposed_test_hours": "105",
+          "proposed_good_unit_yield": "0.92",
+          "embedded_parts_factory_cost_CC": "40566.99",
+          "direct_processed_material_cost_CC": "13240.00",
+          "nested_machine_factory_cost_CC": "23450.52",
+          "proposed_manufacturer_cost_CC": "165769.03",
+          "proposed_base_sell_quote_CC": "207250",
+          "estimated_finished_freight_mass_kg": "1874.2",
+          "accounted_material_subassembly_mass_kg_partial_if_blocked": "1874.2",
+          "approval_status": "PROPOSED_NOT_APPROVED",
+          "unresolved_design_constraints": "Water distribution pipe footprint and pump capacity TBD"
+        }
+      }
+    },
+    {
+      "id": "machine-growth-management-system",
+      "review": {
+        "manufacturingBOM": {
+          "machine_name": "Growth Management System",
+          "category": "Agriculture",
+          "canonical_source_part_ids": "part-thermal-optical-parts; part-control-and-sensor-parts; part-power-electronics",
+          "proposed_finished_part_ids_and_counts": "candidate-part-thermal-parts:3; candidate-part-optical-parts:8; part-control-and-sensor-parts:6; part-power-electronics:5; part-computing-parts:3",
+          "proposed_direct_processed_materials_kg": "Steel:300; Glass:300",
+          "proposed_assembly_labour_hours": "400",
+          "proposed_factory_equipment_hours": "330",
+          "proposed_test_hours": "160",
+          "proposed_good_unit_yield": "0.9",
+          "embedded_parts_factory_cost_CC": "73083.12",
+          "direct_processed_material_cost_CC": "6000.00",
+          "nested_machine_factory_cost_CC": "0.00",
+          "proposed_manufacturer_cost_CC": "189870.13",
+          "proposed_base_sell_quote_CC": "237350",
+          "estimated_finished_freight_mass_kg": "824",
+          "accounted_material_subassembly_mass_kg_partial_if_blocked": "824",
+          "approval_status": "PROPOSED_NOT_APPROVED",
+          "unresolved_design_constraints": "Lighting system and dome coverage rating needs comparison"
+        }
+      }
+    },
+    {
+      "id": "machine-pump-machine",
+      "review": {
+        "manufacturingBOM": {
+          "machine_name": "Pump Machine",
+          "category": "Fluid",
+          "canonical_source_part_ids": "part-hydraulic-parts; part-mechanical-parts; part-power-electronics; part-structural-components",
+          "proposed_finished_part_ids_and_counts": "part-hydraulic-parts:6; part-mechanical-parts:5; part-power-electronics:3; part-structural-components:5; part-fluid-handling-parts:4",
+          "proposed_nested_machine_ids_and_counts": "candidate-machine-conventional-electric-motor:4",
+          "proposed_direct_processed_materials_kg": "Steel:1400; Stainless Steel:180; Refined Copper:100",
+          "proposed_assembly_labour_hours": "340",
+          "proposed_factory_equipment_hours": "300",
+          "proposed_test_hours": "135",
+          "proposed_good_unit_yield": "0.91",
+          "embedded_parts_factory_cost_CC": "46586.89",
+          "direct_processed_material_cost_CC": "16820.00",
+          "nested_machine_factory_cost_CC": "31267.36",
+          "proposed_manufacturer_cost_CC": "192664.01",
+          "proposed_base_sell_quote_CC": "240850",
+          "estimated_finished_freight_mass_kg": "2637.7",
+          "accounted_material_subassembly_mass_kg_partial_if_blocked": "2637.7",
+          "approval_status": "PROPOSED_NOT_APPROVED",
+          "unresolved_design_constraints": "Pressure class and distinction from Hydraulic actuator seals TBD"
+        }
+      }
+    },
+    {
+      "id": "machine-filtration-machine",
+      "review": {
+        "manufacturingBOM": {
+          "machine_name": "Filtration Machine",
+          "category": "Fluid",
+          "canonical_source_part_ids": "part-fluid-handling-parts; part-processing-parts; part-structural-components",
+          "proposed_finished_part_ids_and_counts": "part-fluid-handling-parts:10; part-processing-parts:8; part-structural-components:4; part-control-and-sensor-parts:2; part-power-electronics:2",
+          "proposed_direct_processed_materials_kg": "Stainless Steel:1200; Refined Ceramic:200; Polymer (grade TBD):40",
+          "proposed_assembly_labour_hours": "340",
+          "proposed_factory_equipment_hours": "300",
+          "proposed_test_hours": "145",
+          "proposed_good_unit_yield": "0.92",
+          "embedded_parts_factory_cost_CC": "58247.00",
+          "direct_processed_material_cost_CC": "26720.00",
+          "nested_machine_factory_cost_CC": "0.00",
+          "proposed_manufacturer_cost_CC": "181214.13",
+          "proposed_base_sell_quote_CC": "226550",
+          "estimated_finished_freight_mass_kg": "2149",
+          "accounted_material_subassembly_mass_kg_partial_if_blocked": "2149",
+          "approval_status": "PROPOSED_NOT_APPROVED",
+          "unresolved_design_constraints": "Filter area and replaceable media cycle not priced"
+        }
+      }
+    },
+    {
+      "id": "machine-research-computer",
+      "review": {
+        "manufacturingBOM": {
+          "machine_name": "Research Computer",
+          "category": "Research",
+          "canonical_source_part_ids": "part-computing-parts; part-power-electronics; part-control-and-sensor-parts",
+          "proposed_finished_part_ids_and_counts": "part-computing-parts:18; part-power-electronics:5; part-control-and-sensor-parts:8; part-structural-components:3; candidate-part-optical-parts:3",
+          "proposed_direct_processed_materials_kg": "Steel:200; Refined Copper:50; Glass:100",
+          "proposed_assembly_labour_hours": "410",
+          "proposed_factory_equipment_hours": "350",
+          "proposed_test_hours": "260",
+          "proposed_good_unit_yield": "0.87",
+          "embedded_parts_factory_cost_CC": "142288.54",
+          "direct_processed_material_cost_CC": "3900.00",
+          "nested_machine_factory_cost_CC": "0.00",
+          "proposed_manufacturer_cost_CC": "290216.71",
+          "proposed_base_sell_quote_CC": "362800",
+          "estimated_finished_freight_mass_kg": "722",
+          "accounted_material_subassembly_mass_kg_partial_if_blocked": "722",
+          "approval_status": "PROPOSED_NOT_APPROVED",
+          "unresolved_design_constraints": "Precision computing performance and science software license separate"
+        }
+      }
+    },
+    {
+      "id": "machine-fabrication-machine",
+      "review": {
+        "manufacturingBOM": {
+          "machine_name": "Fabrication Machine",
+          "category": "Manufacturing",
+          "canonical_source_part_ids": "part-fabrication-parts; part-mechanical-parts; part-power-electronics; part-structural-components",
+          "proposed_finished_part_ids_and_counts": "candidate-part-forming-cutting-tooling:8; part-mechanical-parts:8; part-power-electronics:5; part-structural-components:10; part-control-and-sensor-parts:4",
+          "proposed_nested_machine_ids_and_counts": "candidate-machine-conventional-electric-motor:6",
+          "proposed_direct_processed_materials_kg": "Steel:2800; Refined Copper:150",
+          "proposed_assembly_labour_hours": "690",
+          "proposed_factory_equipment_hours": "615",
+          "proposed_test_hours": "230",
+          "proposed_good_unit_yield": "0.88",
+          "embedded_parts_factory_cost_CC": "80963.00",
+          "direct_processed_material_cost_CC": "25700.00",
+          "nested_machine_factory_cost_CC": "46901.04",
+          "proposed_manufacturer_cost_CC": "355981.86",
+          "proposed_base_sell_quote_CC": "445000",
+          "estimated_finished_freight_mass_kg": "4218.3",
+          "accounted_material_subassembly_mass_kg_partial_if_blocked": "4218.3",
+          "approval_status": "PROPOSED_NOT_APPROVED",
+          "unresolved_design_constraints": "Tool capacity material families and optional CNC motion grade TBD"
+        }
+      }
+    },
+    {
+      "id": "machine-assembly-crane",
+      "review": {
+        "manufacturingBOM": {
+          "machine_name": "Assembly Crane",
+          "category": "Manufacturing",
+          "canonical_source_part_ids": "part-hydraulic-parts; part-mechanical-parts; part-power-electronics; part-structural-components; part-control-and-sensor-parts",
+          "proposed_finished_part_ids_and_counts": "part-hydraulic-parts:12; part-mechanical-parts:12; part-power-electronics:6; part-structural-components:25; part-control-and-sensor-parts:5; part-bulk-handling-parts:4",
+          "proposed_nested_machine_ids_and_counts": "candidate-machine-conventional-electric-motor:8",
+          "proposed_direct_processed_materials_kg": "Steel:12000",
+          "proposed_assembly_labour_hours": "850",
+          "proposed_factory_equipment_hours": "820",
+          "proposed_test_hours": "300",
+          "proposed_good_unit_yield": "0.89",
+          "embedded_parts_factory_cost_CC": "131168.23",
+          "direct_processed_material_cost_CC": "96000.00",
+          "nested_machine_factory_cost_CC": "62534.72",
+          "proposed_manufacturer_cost_CC": "558430.28",
+          "proposed_base_sell_quote_CC": "698050",
+          "estimated_finished_freight_mass_kg": "14562.6",
+          "accounted_material_subassembly_mass_kg_partial_if_blocked": "14562.6",
+          "approval_status": "PROPOSED_NOT_APPROVED",
+          "unresolved_design_constraints": "Lift load and span; site civil foundations priced at Building level"
+        }
+      }
+    },
+    {
+      "id": "machine-welding-machine",
+      "review": {
+        "manufacturingBOM": {
+          "machine_name": "Welding Machine",
+          "category": "Manufacturing",
+          "canonical_source_part_ids": "part-fabrication-parts; part-power-electronics; part-thermal-optical-parts",
+          "proposed_finished_part_ids_and_counts": "candidate-part-welding-parts:10; part-power-electronics:6; candidate-part-thermal-parts:4; part-control-and-sensor-parts:3; part-structural-components:5",
+          "proposed_direct_processed_materials_kg": "Steel:700; Refined Copper:350",
+          "proposed_assembly_labour_hours": "475",
+          "proposed_factory_equipment_hours": "405",
+          "proposed_test_hours": "220",
+          "proposed_good_unit_yield": "0.89",
+          "embedded_parts_factory_cost_CC": "63127.11",
+          "direct_processed_material_cost_CC": "13300.00",
+          "nested_machine_factory_cost_CC": "0.00",
+          "proposed_manufacturer_cost_CC": "214131.58",
+          "proposed_base_sell_quote_CC": "267700",
+          "estimated_finished_freight_mass_kg": "1672",
+          "accounted_material_subassembly_mass_kg_partial_if_blocked": "1672",
+          "approval_status": "PROPOSED_NOT_APPROVED",
+          "unresolved_design_constraints": "Welding process and consumable versus capital tool replacement"
+        }
+      }
+    },
+    {
+      "id": "machine-crude-steam-piston-generator",
+      "review": {
+        "manufacturingBOM": {
+          "machine_name": "Crude Steam Piston Generator",
+          "category": "Power",
+          "proposed_finished_part_ids_and_counts": "part-generator-parts:4; part-mechanical-parts:6; part-hydraulic-parts:4; part-power-electronics:3; candidate-part-thermal-parts:6; part-structural-components:10; part-fluid-handling-parts:3",
+          "proposed_direct_processed_materials_kg": "Steel:4000; Stainless Steel:500",
+          "proposed_assembly_labour_hours": "540",
+          "proposed_factory_equipment_hours": "495",
+          "proposed_test_hours": "170",
+          "proposed_good_unit_yield": "0.9",
+          "embedded_parts_factory_cost_CC": "71569.56",
+          "direct_processed_material_cost_CC": "41500.00",
+          "nested_machine_factory_cost_CC": "0.00",
+          "accounted_material_subassembly_mass_kg_partial_if_blocked": "5640.7",
+          "approval_status": "BLOCKED_PROPOSAL",
+          "unresolved_design_constraints": "Universe source partIds empty; candidate only and steam engine/condenser fuel inputs TBD"
+        }
+      }
+    },
+    {
+      "id": "machine-crude-combustion-generator",
+      "review": {
+        "manufacturingBOM": {
+          "machine_name": "Crude Combustion Generator",
+          "category": "Power",
+          "proposed_finished_part_ids_and_counts": "part-generator-parts:5; part-mechanical-parts:8; part-power-electronics:4; candidate-part-thermal-parts:6; part-structural-components:8; part-fluid-handling-parts:4",
+          "proposed_direct_processed_materials_kg": "Steel:3400; Stainless Steel:400",
+          "proposed_assembly_labour_hours": "530",
+          "proposed_factory_equipment_hours": "465",
+          "proposed_test_hours": "170",
+          "proposed_good_unit_yield": "0.91",
+          "embedded_parts_factory_cost_CC": "67303.89",
+          "direct_processed_material_cost_CC": "34800.00",
+          "nested_machine_factory_cost_CC": "0.00",
+          "accounted_material_subassembly_mass_kg_partial_if_blocked": "4783.1",
+          "approval_status": "BLOCKED_PROPOSAL",
+          "unresolved_design_constraints": "Universe source partIds empty; combustion engine/exhaust and fuel/ratings TBD"
+        }
+      }
+    },
+    {
+      "id": "machine-livestock-handling-system",
+      "review": {
+        "manufacturingBOM": {
+          "machine_name": "Livestock Handling System",
+          "category": "Agriculture",
+          "canonical_source_part_ids": "part-mechanical-parts; part-structural-components; part-fluid-handling-parts; part-control-and-sensor-parts",
+          "proposed_finished_part_ids_and_counts": "part-mechanical-parts:4; part-structural-components:8; part-fluid-handling-parts:3; part-control-and-sensor-parts:2; part-power-electronics:2; part-bulk-handling-parts:2",
+          "proposed_direct_processed_materials_kg": "Steel:1400; Polymer (grade TBD):100",
+          "proposed_assembly_labour_hours": "310",
+          "proposed_factory_equipment_hours": "265",
+          "proposed_test_hours": "110",
+          "proposed_good_unit_yield": "0.93",
+          "embedded_parts_factory_cost_CC": "42297.56",
+          "direct_processed_material_cost_CC": "13000.00",
+          "nested_machine_factory_cost_CC": "0.00",
+          "proposed_manufacturer_cost_CC": "135696.30",
+          "proposed_base_sell_quote_CC": "169650",
+          "estimated_finished_freight_mass_kg": "2273.6",
+          "accounted_material_subassembly_mass_kg_partial_if_blocked": "2273.6",
+          "approval_status": "PROPOSED_NOT_APPROVED",
+          "unresolved_design_constraints": "Animal welfare and animal-scale gate mass/coverage pending"
+        }
+      }
+    },
+    {
+      "id": "machine-colony-operations-computer",
+      "review": {
+        "manufacturingBOM": {
+          "machine_name": "Colony Operations Computer",
+          "category": "Computing",
+          "canonical_source_part_ids": "part-computing-parts; part-power-electronics; part-control-and-sensor-parts",
+          "proposed_finished_part_ids_and_counts": "part-computing-parts:14; part-power-electronics:5; part-control-and-sensor-parts:8; part-structural-components:3",
+          "proposed_direct_processed_materials_kg": "Steel:400; Glass:100",
+          "proposed_assembly_labour_hours": "360",
+          "proposed_factory_equipment_hours": "305",
+          "proposed_test_hours": "190",
+          "proposed_good_unit_yield": "0.9",
+          "embedded_parts_factory_cost_CC": "114611.97",
+          "direct_processed_material_cost_CC": "4400.00",
+          "nested_machine_factory_cost_CC": "0.00",
+          "proposed_manufacturer_cost_CC": "230902.19",
+          "proposed_base_sell_quote_CC": "288650",
+          "estimated_finished_freight_mass_kg": "809.6",
+          "accounted_material_subassembly_mass_kg_partial_if_blocked": "809.6",
+          "approval_status": "PROPOSED_NOT_APPROVED",
+          "unresolved_design_constraints": "Software licence and controller coverage separate from physical system"
+        }
+      }
+    },
+    {
+      "id": "machine-bulk-stacker",
+      "review": {
+        "manufacturingBOM": {
+          "machine_name": "Bulk Stacker",
+          "category": "Transport",
+          "canonical_source_part_ids": "part-bulk-handling-parts; part-hydraulic-parts; part-mechanical-parts; part-structural-components; part-power-electronics",
+          "proposed_finished_part_ids_and_counts": "part-bulk-handling-parts:12; part-hydraulic-parts:8; part-mechanical-parts:8; part-structural-components:18; part-power-electronics:4; part-control-and-sensor-parts:3",
+          "proposed_nested_machine_ids_and_counts": "candidate-machine-conventional-electric-motor:8",
+          "proposed_direct_processed_materials_kg": "Steel:6800",
+          "proposed_assembly_labour_hours": "700",
+          "proposed_factory_equipment_hours": "655",
+          "proposed_test_hours": "250",
+          "proposed_good_unit_yield": "0.9",
+          "embedded_parts_factory_cost_CC": "106695.10",
+          "direct_processed_material_cost_CC": "54400.00",
+          "nested_machine_factory_cost_CC": "62534.72",
+          "proposed_manufacturer_cost_CC": "435366.47",
+          "proposed_base_sell_quote_CC": "544250",
+          "estimated_finished_freight_mass_kg": "9262",
+          "accounted_material_subassembly_mass_kg_partial_if_blocked": "9262",
+          "approval_status": "PROPOSED_NOT_APPROVED",
+          "unresolved_design_constraints": "Stacking capacity reach and operating wear critical"
+        }
+      }
+    },
+    {
+      "id": "machine-warehouse-handler",
+      "review": {
+        "manufacturingBOM": {
+          "machine_name": "Warehouse Handler",
+          "category": "Transport",
+          "canonical_source_part_ids": "part-bulk-handling-parts; part-hydraulic-parts; part-mechanical-parts; part-structural-components; part-power-electronics; part-control-and-sensor-parts",
+          "proposed_finished_part_ids_and_counts": "part-bulk-handling-parts:5; part-hydraulic-parts:4; part-mechanical-parts:5; part-structural-components:8; part-power-electronics:3; part-control-and-sensor-parts:3",
+          "proposed_nested_machine_ids_and_counts": "candidate-machine-conventional-electric-motor:4",
+          "proposed_direct_processed_materials_kg": "Steel:1400",
+          "proposed_assembly_labour_hours": "400",
+          "proposed_factory_equipment_hours": "345",
+          "proposed_test_hours": "160",
+          "proposed_good_unit_yield": "0.91",
+          "embedded_parts_factory_cost_CC": "57976.45",
+          "direct_processed_material_cost_CC": "11200.00",
+          "nested_machine_factory_cost_CC": "31267.36",
+          "proposed_manufacturer_cost_CC": "213564.63",
+          "proposed_base_sell_quote_CC": "267000",
+          "estimated_finished_freight_mass_kg": "2659.7",
+          "accounted_material_subassembly_mass_kg_partial_if_blocked": "2659.7",
+          "approval_status": "PROPOSED_NOT_APPROVED",
+          "unresolved_design_constraints": "Aisle clearance and capacity; not shipyard crane"
+        }
+      }
+    }
+  ],
+  "buildings": [
+    {
+      "id": "building-collection-camp",
+      "review": {
+        "systematicReview": {
+          "review_order": "1",
+          "building_name": "Collection Camp",
+          "source_candidate_machine_ids_not_obligatory": "machine-thermoelectric-trickler; machine-climate-control-machine",
+          "proposed_required_machine_direction": "None mandatory",
+          "key_system_or_asset_issue": "APPROVED 2026-11-01: standard manual single-level Collection Camp with no mandatory Machines; 900 kg Graded Aggregate, 450 kg Sawn Lumber, 80 kg Steel, 35 kg Woven Industrial Fabric, 36 labour hours. No Power/Industry requirement. Optional thermoelectric or climate equipment only as separately installed assets. Full CC cost awaits processed material source rates.",
+          "review_status": "APPROVED_QUANTITIES_BASIC_UNPOWERED",
+          "numeric_bom_reference": "proposed-building-quantitative-bom-review.csv"
+        },
+        "bomCoverage": {
+          "building_name": "Collection Camp",
+          "source_shell_substance_ids_unquantified": "substance-stone-aggregate; substance-woody-plant",
+          "source_fit_out_substance_ids_unquantified": "substance-refined-structural-metal",
+          "source_candidate_installed_machine_ids_not_all_mandatory": "machine-thermoelectric-trickler; machine-climate-control-machine",
+          "installed_machine_counts_status": "APPROVED_ZERO_MANDATORY_MACHINES; optional climate/thermo independent asset only",
+          "shell_construction_material_quantities_status": "APPROVED_900KG_AGGREGATE_450KG_LUMBER_80KG_STEEL_35KG_FABRIC_36H",
+          "condition_and_title_valuation_status": "TITLE_CONDITION_AND_RIGHTS_TBD",
+          "site_specific_notes": "APPROVED 2026-11-01 Collection Camp standard physical installed recipe and zero mandatory Machines, no upgrades. Material-to-game-unit conversions and final CC prices remain open; verify native no-Power/Industry rule. Optional equipment must be separately purchased and valued.",
+          "review_status": "APPROVED_BASE_BOM_QUANTITY_PRICING_PENDING"
+        },
+        "quantitativeBOM": {
+          "building_name": "Collection Camp",
+          "unit_definition": "One unlevelled installed native-food Collection Camp fixed asset; no portable completed SKU",
+          "structural_shell_and_fit_out_inputs_kg": "Graded Aggregate:900; Sawn Lumber:450; Steel:80; Woven Industrial Fabric:35",
+          "proposed_required_machine_ids_and_counts": "none; mandatory machine count 0",
+          "optional_machine_ids_conditional": "machine-thermoelectric-trickler; machine-climate-control-machine (only separately installed if justified)",
+          "site_construction_labour_hours": "36",
+          "installed_structure_material_mass_kg": "1465",
+          "transportable_nonlocal_material_mass_kg_if_aggregate_locally_sourced": "565",
+          "direct_material_cost_CC_status": "NOT TOTALLED: aggregate/lumber/fabric unit prices and finished-stock/kg conversion TBD",
+          "labour_cost_CC_partial": "2520",
+          "source_android_gameplay_cost_and_constraints": "Android native Collection Camp: exactly 45 generic Build, 0 Ore, no upgrade, can collect native Food without Power/Industry; kg conversion not inferred",
+          "approval_status": "APPROVED_BASE_PHYSICAL_BOM_PRICING_PENDING",
+          "unresolved_dependencies": "User approved one-level manual unpowered Collection Camp, 900 kg Graded Aggregate, 450 kg Sawn Lumber, 80 kg Steel, 35 kg Woven Industrial Fabric and 36 labour hours. Rates/stock-unit conversion, waste, additional site conditions and completed installed-asset CC quote TBD. Conditional equipment is excluded from the base."
+        }
+      }
+    },
+    {
+      "id": "building-stockpile",
+      "review": {
+        "systematicReview": {
+          "review_order": "2",
+          "building_name": "Stockpile",
+          "source_candidate_machine_ids_not_obligatory": "machine-conveyor-machine; machine-bulk-stacker",
+          "proposed_required_machine_direction": "Zero mandatory installed Machines; large Conveyor and Bulk Stacker optional industrial fit-out only",
+          "key_system_or_asset_issue": "APPROVED 2026-11-01: basic manual unpowered open yard 12 x 15 m, nominal 50-tonne loose storage design target (not game cap); 31,000 kg Graded Aggregate, 250 kg Sawn Lumber, 60 kg Steel, 70 site labour hours, 0 mandatory Machines. Conveyor and Bulk Stacker remain optional separately installed assets. Final CC and upgrade design pending.",
+          "review_status": "APPROVED_QUANTITIES_BASIC_UNPOWERED",
+          "numeric_bom_reference": "proposed-building-quantitative-bom-review.csv"
+        },
+        "bomCoverage": {
+          "building_name": "Stockpile",
+          "source_candidate_installed_machine_ids_not_all_mandatory": "machine-conveyor-machine; machine-bulk-stacker",
+          "installed_machine_counts_status": "APPROVED_ZERO_MANDATORY_MACHINES; Conveyor and Bulk Stacker optional separate rated equipment",
+          "shell_construction_material_quantities_status": "APPROVED_31000KG_AGGREGATE_250KG_LUMBER_60KG_STEEL_70H",
+          "condition_and_title_valuation_status": "TITLE_CONDITION_AND_RIGHTS_TBD",
+          "site_specific_notes": "User approved 12x15m basic unpowered pad, ~50t physical stock capacity proposal (not Android live cap), 31t aggregate, 250kg timber, 60kg steel, 70 labour hours and no mandatory Machines. Stored loose inventory is a separate asset, not shell material.",
+          "review_status": "APPROVED_BASE_BOM_QUANTITY_PRICING_PENDING"
+        },
+        "quantitativeBOM": {
+          "building_name": "Stockpile",
+          "unit_definition": "One installed, unpowered open bulk Stockpile hardstand, indicative 12 m x 15 m footprint, ~50 t operational loose bulk stock target; stock itself is NOT fixed building material",
+          "structural_shell_and_fit_out_inputs_kg": "Graded Aggregate:31000; Sawn Lumber:250; Steel:60",
+          "proposed_required_machine_ids_and_counts": "none; mandatory machine count 0",
+          "optional_machine_ids_conditional": "machine-conveyor-machine:0_or_1+; machine-bulk-stacker:0_or_1+ only at rated industrial throughput after separate purchase/installation and equipment capacity review",
+          "site_construction_labour_hours": "70",
+          "installed_structure_material_mass_kg": "31310",
+          "transportable_nonlocal_material_mass_kg_if_aggregate_locally_sourced": "310",
+          "direct_material_cost_CC_status": "NOT TOTALLED: Graded Aggregate/Sawn Lumber physical stock-unit cost and site/compact machinery service charges TBD",
+          "labour_cost_CC_partial": "4900",
+          "source_android_gameplay_cost_and_constraints": "Universe Stockpile is an open storage building; no dedicated Stockpile DevelopmentKind found in current InfrastructureRules/ColonyDevelopmentService. 50 t is an intended physical design example, NOT an active storage cap or persisted gameplay stock.",
+          "approval_status": "APPROVED_BASE_PHYSICAL_BOM_PRICING_PENDING",
+          "unresolved_dependencies": "Approved manual 12 x 15 m, 0.1 m compacted pad, nominal 50-tonne loose stock target not game capacity. 31,000 kg Graded Aggregate, 250 kg Sawn Lumber, 60 kg Steel, 70 labour hours and zero mandatory Machines. Conveyor/Bulk Stacker optional separate additions. No full CC cost, current game storage limit or upgraded layouts approved."
+        }
+      }
+    },
+    {
+      "id": "building-accommodation-building",
+      "review": {
+        "systematicReview": {
+          "review_order": "3",
+          "building_name": "Accommodation Building",
+          "source_candidate_machine_ids_not_obligatory": "machine-climate-control-machine",
+          "proposed_required_machine_direction": "Approved base 20-bed T1 temperate shell with zero mandatory industrial standalone Machines. Optional luxury Machine T1-T5 identities/service/area/Power now APPROVED discovery products, per-category access rate/curve approved; all luxury physical BOMs/prices proposed (§70).",
+          "key_system_or_asset_issue": "USER APPROVED 2026-11-02: scalable single-storey T1 20-bed/200m2/300m2 planning module; Basic/Standard/Comfortable/Premium room-area and incremental fitting, T1-T5 designed construction limits with company-wide optional unlock and actual per-module build/refit cost; construction inputs 12000kg Aggregate, 7000kg Lumber, 1200kg Steel, 350kg Glass, 150kg Fabric, 80kg Copper, 1 finished Fluid Handling Part, 1 Power Electronics, 300h. APPROVED ADDITIONAL DIRECTION: unlimited optional installed luxury Machine copies, technology-tier access, diminishing happiness from machine access per resident with saturation once access is available to all, morale productivity 0 at zero and NO hard global upper cap. Unapproved: candidate luxury Machine product IDs, counted capacity and Power/consumables, morale curve coefficients, full supplier cost, site certification and luxury Machine engineering. See §69. Five residential luxury Machines T1-T5 and installed service/area/Power ratings (1/10/30/60/120 residents/day; 2/16/25/50/120 m2; 0.25/3/7/20/45 native Power) APPROVED on 2026-11-02, as is per-category g(c)=ln(1+100c)/ln(101), capped category access at 100% but no fixed global morale max. Their proposed physical Part/material BOMs, factory CC quotes, running costs, morale reward weights and precise productivity response are NOT approved. See §70. Latest §72 / H010: T1 Personal Recreation Terminal physical BOM approved (one finished Computing Parts kit, 4.2kg external materials and 5/3/2h labour/shop/test with host low-voltage distribution); indicative 7900 CC quote NOT APPROVED. T2–T5 redesigned luxury Machine physical recipes PROPOSED for one group review with indicative 23900/50900/141850/177900 CC manufacturer quotes NOT APPROVED. Five luxury identities/capacity/footprint/Power/access curve approved; optional installations beyond the base 20-bed building consume real floor area, Power and upkeep. See proposed-accommodation-luxury-machine-bom-cost-review.csv and §72. §73 CORRECTION: all five luxury physical BOMs approved; crowding 100*max(0,assigned residents/certified beds-1) approved; only shared Part wear, Water within Food, rated Life Support / Climate Control where planet requires. No separate water or maintenance economy. Numerical morale luxury bonuses and market prices pending.",
+          "review_status": "APPROVED_ACCOMMODATION_V1_PHYSICAL_BOM_AND_OVER_CROWDING__TWO_MOCKS_FOR_REVIEW",
+          "numeric_bom_reference": "proposed-building-quantitative-bom-review.csv; galaxy-economic-foundation.md#69-accommodation-baseline-approved-with-optional-koplin-designs-and-access-based-luxury-morale-2-november-2026"
+        },
+        "bomCoverage": {
+          "building_name": "Accommodation Building",
+          "source_shell_substance_ids_unquantified": "substance-woody-plant; substance-stone-aggregate; substance-refined-structural-metal; substance-glass",
+          "source_candidate_installed_machine_ids_not_all_mandatory": "machine-climate-control-machine",
+          "installed_machine_counts_status": "APPROVED_BASE_T1_ZERO_REQUIRED_TEMPERATE_MACHINES; five optional NEW luxury Machine types/tech/service/area/Power ratings approved; user chooses number, physical BOM and prices unapproved. Climate/life support conditional.",
+          "shell_construction_material_quantities_status": "APPROVED_T1_PLANNING_20BED_200M2_12000KG_AGGREGATE_7000KG_LUMBER_1200KG_STEEL_350KG_GLASS_150KG_FABRIC_80KG_COPPER_300H_PLUS_2_FINISHED_PARTS",
+          "condition_and_title_valuation_status": "TITLE_CONDITION_AND_RIGHTS_TBD",
+          "site_specific_notes": "User APPROVED 2026-11-02 physical T1 Basic 20-bed 200m2/300m2 planning Module, four independent room comfort/area fit-outs, 20-bed materials/Parts/labour and optional T1-T5 blueprint route. Higher Housing technology unlocks optional capacity, comfort design and tiered luxury Machines; no automatic upgrades. Arbitrarily many fitted Machines permitted but happiness based on operating access slots divided by eligible residents, with diminishing benefit and saturation at everyone served. Global morale can reach 0 work productivity and has no fixed upper cap. §69 candidate amenity product IDs, service/Power/material BOM, formula weights and high-rise/hostile certification NOT approved. Legacy 160-bed §63 L1 compound remains unapproved. Full price and transferable-condition ledger pending. Five residential luxury Machines T1-T5 and installed service/area/Power ratings (1/10/30/60/120 residents/day; 2/16/25/50/120 m2; 0.25/3/7/20/45 native Power) APPROVED on 2026-11-02, as is per-category g(c)=ln(1+100c)/ln(101), capped category access at 100% but no fixed global morale max. Their proposed physical Part/material BOMs, factory CC quotes, running costs, morale reward weights and precise productivity response are NOT approved. See §70. Latest §72 / H010: T1 Personal Recreation Terminal physical BOM approved (one finished Computing Parts kit, 4.2kg external materials and 5/3/2h labour/shop/test with host low-voltage distribution); indicative 7900 CC quote NOT APPROVED. T2–T5 redesigned luxury Machine physical recipes PROPOSED for one group review with indicative 23900/50900/141850/177900 CC manufacturer quotes NOT APPROVED. Five luxury identities/capacity/footprint/Power/access curve approved; optional installations beyond the base 20-bed building consume real floor area, Power and upkeep. See proposed-accommodation-luxury-machine-bom-cost-review.csv and §72. §73 CORRECTION: all five luxury physical BOMs approved; crowding 100*max(0,assigned residents/certified beds-1) approved; only shared Part wear, Water within Food, rated Life Support / Climate Control where planet requires. No separate water or maintenance economy. Numerical morale luxury bonuses and market prices pending.",
+          "review_status": "APPROVED_ACCOMMODATION_V1_PHYSICAL_BOM_AND_OVER_CROWDING__TWO_MOCKS_FOR_REVIEW"
+        },
+        "quantitativeBOM": {
+          "building_name": "Accommodation Building",
+          "unit_definition": "APPROVED discovery planning module: T1 single-storey 200m2 (10x20m) Basic Accommodation / 20 certified Basic beds / 300m2 site; 8 = 160 real beds. Optional rooms/extension and T1-T5 design unlocked by technology and paid for physically; luxury Machines fitted by player, amenity rating TBD.",
+          "structural_shell_and_fit_out_inputs_kg": "APPROVED PLANNING T1: Graded Aggregate:12000; Sawn Lumber:7000; Steel:1200; Glass:350; Woven Industrial Fabric:150; Refined Copper:80; plus approved finished purchased Part inputs (not double-counted): part-fluid-handling-parts:1; part-power-electronics:1",
+          "proposed_required_machine_ids_and_counts": "APPROVED base T1 on safe habitable temperate world: zero universal standalone Machines; 1 finished Fluid Handling Part + 1 Power Electronics as direct finished Part inputs, conditional equipment still subject to actual rating/fit check",
+          "optional_machine_ids_conditional": "Climate Control / Life Support conditional to site/environment ratings; five optional newly APPROVED luxury discovery Machine IDs and their service/area/Power ratings are in proposed-accommodation-luxury-machine-review.csv; physical manufacturing BOM/cost estimates still UNAPPROVED in proposed-accommodation-luxury-machine-bom-cost-review.csv.",
+          "site_construction_labour_hours": "300",
+          "installed_structure_material_mass_kg": "20813.28",
+          "transportable_nonlocal_material_mass_kg_if_aggregate_locally_sourced": "8813.28",
+          "direct_material_cost_CC_status": "NO COMPLETED CC TOTAL: 1200kg Steel x illustrative UNAPPROVED 8 CC/kg = 9600 CC; 1 finished Fluid Handling Part cost 2066.06 CC and 1 finished Power Electronics cost 2650.54 CC (manufacturer-cost planning rates). Graded Aggregate/Lumber/Glass/Fabric/Copper, service, freight, water/waste and rated luxury Machines still unpriced.",
+          "labour_cost_CC_partial": "21000",
+          "source_android_gameplay_cost_and_constraints": "Current Android HOUSING L1-L5 still 160/360/650/1050/1600 actual beds; L1 55 generic Build; housing Power and per-resident support; workplace sleeping and docked ship assignments separate. New proposed module counts/area/comfort/morale are discovery only: no gameplay change.",
+          "approval_status": "APPROVED_ACCOMMODATION_V1_PHYSICAL_BOM_AND_OVER_CROWDING__TWO_MOCKS_FOR_REVIEW",
+          "unresolved_dependencies": "USER APPROVED 2026-11-02 other §68 Accommodation details (T1 20 beds, 200m2 module/300m2 footprint, four comfort bands, incremental physical fit-out/extension BOM, T1-T5 design concepts, direct 20780kg processed materials, purchased Parts approx raw-input 33.28kg, 300 labour h) subject to true site/Part certification and validated rates; 35316.60 CC arithmetic PARTIAL, not a manufacturer or sale value. Corporate tech only unlocks OPTIONAL build/comfort/size/advanced Machine fitting; no free upgrades. Morale must be capable of 0 productivity at 0, with no upper global cap, and luxury benefit saturated once service access covers eligible residents; new luxury machine types/ratings/Power/consumables/amenity weights/numerical access curve NOT approved. Proposed §69 example; retain actual staff, ship, survival, title and condition, no implementation. Five residential luxury Machines T1-T5 and installed service/area/Power ratings (1/10/30/60/120 residents/day; 2/16/25/50/120 m2; 0.25/3/7/20/45 native Power) APPROVED on 2026-11-02, as is per-category g(c)=ln(1+100c)/ln(101), capped category access at 100% but no fixed global morale max. Their proposed physical Part/material BOMs, factory CC quotes, running costs, morale reward weights and precise productivity response are NOT approved. See §70. Latest §72 / H010: T1 Personal Recreation Terminal physical BOM approved (one finished Computing Parts kit, 4.2kg external materials and 5/3/2h labour/shop/test with host low-voltage distribution); indicative 7900 CC quote NOT APPROVED. T2–T5 redesigned luxury Machine physical recipes PROPOSED for one group review with indicative 23900/50900/141850/177900 CC manufacturer quotes NOT APPROVED. Five luxury identities/capacity/footprint/Power/access curve approved; optional installations beyond the base 20-bed building consume real floor area, Power and upkeep. See proposed-accommodation-luxury-machine-bom-cost-review.csv and §72. §73 CORRECTION: all five luxury physical BOMs approved; crowding 100*max(0,assigned residents/certified beds-1) approved; only shared Part wear, Water within Food, rated Life Support / Climate Control where planet requires. No separate water or maintenance economy. Numerical morale luxury bonuses and market prices pending."
+        }
+      }
+    },
+    {
+      "id": "building-quarry",
+      "review": {
+        "systematicReview": {
+          "review_order": "4",
+          "building_name": "Quarry",
+          "source_candidate_machine_ids_not_obligatory": "machine-drill-machine; machine-conveyor-machine",
+          "proposed_required_machine_direction": "TBD",
+          "key_system_or_asset_issue": "Drill and Conveyor must scale with quarry throughput; compare affordable early quarry against large industrial machinery",
+          "review_status": "PAUSED_UNAPPROVED_AWAITING_BUILDING_ARCHITECTURE",
+          "numeric_bom_reference": "proposed-building-quantitative-bom-review.csv"
+        },
+        "bomCoverage": {
+          "building_name": "Quarry",
+          "source_shell_substance_ids_unquantified": "substance-stone-aggregate; substance-clay-mineral",
+          "source_fit_out_substance_ids_unquantified": "substance-refined-structural-metal; substance-refined-ceramic; substance-refined-lubricant",
+          "source_candidate_installed_machine_ids_not_all_mandatory": "machine-drill-machine; machine-conveyor-machine",
+          "installed_machine_counts_status": "L1_PROPOSAL_NO_AUTOMATIC_FULL_SIZE_MACHINES; drill conditional; conveyor optional",
+          "shell_construction_material_quantities_status": "PROPOSED_L1_20000KG_AGGREGATE_1200KG_LUMBER_900KG_STEEL_120KG_FABRIC_220H",
+          "condition_and_title_valuation_status": "TITLE_CONDITION_AND_RIGHTS_TBD",
+          "site_specific_notes": "Proposed 2026-11-02 L1 20x25m face, ~1000m2 site, 22.22t input mass; 4.0 native Power L1. Small-tool/contracted quarrying may need rated service; no giant default Drill/Conveyor. Approval and throughput evidence pending",
+          "review_status": "PAUSED_UNAPPROVED_PENDING_UNIFIED_BUILDING_MODEL"
+        },
+        "quantitativeBOM": {
+          "building_name": "Quarry",
+          "unit_definition": "One L1 open-surface quarry physical reference: 20 x 25 m active bench within ~1000 m2 working/access site; soft/breakable shallow material only; conditional hard-rock machinery",
+          "structural_shell_and_fit_out_inputs_kg": "Graded Aggregate:20000; Sawn Lumber:1200; Steel:900; Woven Industrial Fabric:120",
+          "proposed_required_machine_ids_and_counts": "No automatically mandatory full-size Drill Machine or Conveyor Machine in proposed small L1 soft material case; powered/small tools and extraction service rated separately",
+          "optional_machine_ids_conditional": "machine-drill-machine if hard rock and rated throughput justified; machine-conveyor-machine for higher throughput/levels; contractor breakage/hauling excluded from owned assets",
+          "site_construction_labour_hours": "220",
+          "installed_structure_material_mass_kg": "22220",
+          "transportable_nonlocal_material_mass_kg_if_aggregate_locally_sourced": "2220",
+          "direct_material_cost_CC_status": "NOT TOTALLED: local Graded Aggregate, lumber/fabric physical CC/kg rates, actual tool/site preparation and ongoing extraction services TBD; Steel 900 kg x illustrative unapproved 8 CC/kg = 7200 CC only",
+          "labour_cost_CC_partial": "15400",
+          "source_android_gameplay_cost_and_constraints": "Native EXTRACT site cost depends on deposit/terrain/distance and extraction method; Quarry family requires 4.0 Power at L1, 9.0 L2; L1-L5 extraction upgrades apply increasing generic Build and Ore; no independent installed Drill or Conveyor exists in current source rule",
+          "approval_status": "PAUSED_UNAPPROVED_PENDING_UNIFIED_BUILDING_MODEL",
+          "unresolved_dependencies": "Provisional low-throughput small L1 soft/loose stone case; verify volume/day, mechanical breaking tools and minimum mechanisation. Hard-rock sites might require a rated smaller Drill Machine or contractor service; no free giant unpriced machine. 220 site labour hours and 22220 kg installed materials are NOT approved. Future upgrades should be additive."
+        }
+      }
+    },
+    {
+      "id": "building-simple-pit-mine",
+      "review": {
+        "systematicReview": {
+          "review_order": "5",
+          "building_name": "Simple Pit Mine",
+          "source_candidate_machine_ids_not_obligatory": "machine-drill-machine; machine-conveyor-machine",
+          "proposed_required_machine_direction": "TBD",
+          "key_system_or_asset_issue": "Small mine starts at low capacity; distinguish manual/site infrastructure from full Drill and Conveyor equipment",
+          "review_status": "AWAITING_REVIEW"
+        },
+        "bomCoverage": {
+          "building_name": "Simple Pit Mine",
+          "source_shell_substance_ids_unquantified": "substance-stone-aggregate; substance-clay-mineral",
+          "source_fit_out_substance_ids_unquantified": "substance-refined-structural-metal; substance-refined-ceramic; substance-refined-lubricant; substance-refined-insulator",
+          "source_candidate_installed_machine_ids_not_all_mandatory": "machine-drill-machine; machine-conveyor-machine",
+          "installed_machine_counts_status": "TBD_PER_LEVEL_AND_ACTUAL_INSTALLATION",
+          "shell_construction_material_quantities_status": "TBD_PER_SIZE_LEVEL_MASS_VOLUME",
+          "condition_and_title_valuation_status": "TITLE_CONDITION_AND_RIGHTS_TBD",
+          "site_specific_notes": "Machine IDs are possible compatible installations; chosen type, count, level, grade and ownership require review",
+          "review_status": "PROPOSAL_BUILDING_BOM_UNQUANTIFIED"
+        },
+        "quantitativeBOM": {
+          "building_name": "Simple Pit Mine",
+          "unit_definition": "Building by actual built level/site/capacity; per-facility installed fixed asset",
+          "approval_status": "AWAITING_BUILDING_BY_BUILDING_REVIEW",
+          "unresolved_dependencies": "Quantify shell, site work, actual installed Machines, upgrade delta, transfer rights and condition after Machine suitability review"
+        }
+      }
+    },
+    {
+      "id": "building-water-collector",
+      "review": {
+        "systematicReview": {
+          "review_order": "6",
+          "building_name": "Water Collector",
+          "source_candidate_machine_ids_not_obligatory": "machine-pump-machine; machine-filtration-machine",
+          "proposed_required_machine_direction": "TBD",
+          "key_system_or_asset_issue": "Pump and Filtration need rated flow; local water collection may be gravity/passive at low levels",
+          "review_status": "AWAITING_REVIEW"
+        },
+        "bomCoverage": {
+          "building_name": "Water Collector",
+          "source_shell_substance_ids_unquantified": "substance-stone-aggregate; substance-clay-mineral",
+          "source_fit_out_substance_ids_unquantified": "substance-refined-structural-metal; substance-refined-ceramic; substance-refined-insulator",
+          "source_candidate_installed_machine_ids_not_all_mandatory": "machine-pump-machine; machine-filtration-machine",
+          "installed_machine_counts_status": "TBD_PER_LEVEL_AND_ACTUAL_INSTALLATION",
+          "shell_construction_material_quantities_status": "TBD_PER_SIZE_LEVEL_MASS_VOLUME",
+          "condition_and_title_valuation_status": "TITLE_CONDITION_AND_RIGHTS_TBD",
+          "site_specific_notes": "Machine IDs are possible compatible installations; chosen type, count, level, grade and ownership require review",
+          "review_status": "PROPOSAL_BUILDING_BOM_UNQUANTIFIED"
+        },
+        "quantitativeBOM": {
+          "building_name": "Water Collector",
+          "unit_definition": "Building by actual built level/site/capacity; per-facility installed fixed asset",
+          "approval_status": "AWAITING_BUILDING_BY_BUILDING_REVIEW",
+          "unresolved_dependencies": "Quantify shell, site work, actual installed Machines, upgrade delta, transfer rights and condition after Machine suitability review"
+        }
+      }
+    },
+    {
+      "id": "building-ranch",
+      "review": {
+        "systematicReview": {
+          "review_order": "7",
+          "building_name": "Ranch",
+          "source_candidate_machine_ids_not_obligatory": "machine-irrigation-system; machine-livestock-handling-system",
+          "proposed_required_machine_direction": "TBD",
+          "key_system_or_asset_issue": "Irrigation and Livestock Handling scale to animal count and water availability; avoid obligatory large installations",
+          "review_status": "AWAITING_REVIEW"
+        },
+        "bomCoverage": {
+          "building_name": "Ranch",
+          "source_shell_substance_ids_unquantified": "substance-stone-aggregate; substance-woody-plant",
+          "source_fit_out_substance_ids_unquantified": "substance-refined-structural-metal; substance-fresh-water",
+          "source_candidate_installed_machine_ids_not_all_mandatory": "machine-irrigation-system; machine-livestock-handling-system",
+          "installed_machine_counts_status": "TBD_PER_LEVEL_AND_ACTUAL_INSTALLATION",
+          "shell_construction_material_quantities_status": "TBD_PER_SIZE_LEVEL_MASS_VOLUME",
+          "condition_and_title_valuation_status": "TITLE_CONDITION_AND_RIGHTS_TBD",
+          "site_specific_notes": "Machine IDs are possible compatible installations; chosen type, count, level, grade and ownership require review",
+          "review_status": "PROPOSAL_BUILDING_BOM_UNQUANTIFIED"
+        },
+        "quantitativeBOM": {
+          "building_name": "Ranch",
+          "unit_definition": "Building by actual built level/site/capacity; per-facility installed fixed asset",
+          "approval_status": "AWAITING_BUILDING_BY_BUILDING_REVIEW",
+          "unresolved_dependencies": "Quantify shell, site work, actual installed Machines, upgrade delta, transfer rights and condition after Machine suitability review"
+        }
+      }
+    },
+    {
+      "id": "building-farm",
+      "review": {
+        "systematicReview": {
+          "review_order": "8",
+          "building_name": "Farm",
+          "source_candidate_machine_ids_not_obligatory": "machine-irrigation-system; machine-growth-management-system",
+          "proposed_required_machine_direction": "TBD",
+          "key_system_or_asset_issue": "Irrigation and Growth Management may be optional depending on environment and agricultural method",
+          "review_status": "AWAITING_REVIEW"
+        },
+        "bomCoverage": {
+          "building_name": "Farm",
+          "source_shell_substance_ids_unquantified": "substance-stone-aggregate; substance-woody-plant",
+          "source_fit_out_substance_ids_unquantified": "substance-refined-structural-metal; substance-glass; substance-refined-insulator; substance-fresh-water",
+          "source_candidate_installed_machine_ids_not_all_mandatory": "machine-irrigation-system; machine-growth-management-system",
+          "installed_machine_counts_status": "TBD_PER_LEVEL_AND_ACTUAL_INSTALLATION",
+          "shell_construction_material_quantities_status": "TBD_PER_SIZE_LEVEL_MASS_VOLUME",
+          "condition_and_title_valuation_status": "TITLE_CONDITION_AND_RIGHTS_TBD",
+          "site_specific_notes": "Machine IDs are possible compatible installations; chosen type, count, level, grade and ownership require review",
+          "review_status": "PROPOSAL_BUILDING_BOM_UNQUANTIFIED"
+        },
+        "quantitativeBOM": {
+          "building_name": "Farm",
+          "unit_definition": "Building by actual built level/site/capacity; per-facility installed fixed asset",
+          "approval_status": "AWAITING_BUILDING_BY_BUILDING_REVIEW",
+          "unresolved_dependencies": "Quantify shell, site work, actual installed Machines, upgrade delta, transfer rights and condition after Machine suitability review"
+        }
+      }
+    },
+    {
+      "id": "building-bio-harvester",
+      "review": {
+        "systematicReview": {
+          "review_order": "9",
+          "building_name": "Bio Harvester",
+          "source_candidate_machine_ids_not_obligatory": "machine-growth-management-system; machine-pump-machine",
+          "proposed_required_machine_direction": "TBD",
+          "key_system_or_asset_issue": "Pump and Growth Management should match biomass process and actual environment",
+          "review_status": "AWAITING_REVIEW"
+        },
+        "bomCoverage": {
+          "building_name": "Bio Harvester",
+          "source_shell_substance_ids_unquantified": "substance-refined-structural-metal; substance-woody-plant",
+          "source_fit_out_substance_ids_unquantified": "substance-refined-structural-metal; substance-refined-insulator",
+          "source_candidate_installed_machine_ids_not_all_mandatory": "machine-growth-management-system; machine-pump-machine",
+          "installed_machine_counts_status": "TBD_PER_LEVEL_AND_ACTUAL_INSTALLATION",
+          "shell_construction_material_quantities_status": "TBD_PER_SIZE_LEVEL_MASS_VOLUME",
+          "condition_and_title_valuation_status": "TITLE_CONDITION_AND_RIGHTS_TBD",
+          "site_specific_notes": "Machine IDs are possible compatible installations; chosen type, count, level, grade and ownership require review",
+          "review_status": "PROPOSAL_BUILDING_BOM_UNQUANTIFIED"
+        },
+        "quantitativeBOM": {
+          "building_name": "Bio Harvester",
+          "unit_definition": "Building by actual built level/site/capacity; per-facility installed fixed asset",
+          "approval_status": "AWAITING_BUILDING_BY_BUILDING_REVIEW",
+          "unresolved_dependencies": "Quantify shell, site work, actual installed Machines, upgrade delta, transfer rights and condition after Machine suitability review"
+        }
+      }
+    },
+    {
+      "id": "building-algae-facility",
+      "review": {
+        "systematicReview": {
+          "review_order": "10",
+          "building_name": "Algae Facility",
+          "source_candidate_machine_ids_not_obligatory": "machine-growth-management-system; machine-pump-machine",
+          "proposed_required_machine_direction": "TBD",
+          "key_system_or_asset_issue": "Pump and Growth Management conditional on aquatic/thermal site and industrial culture stage",
+          "review_status": "AWAITING_REVIEW"
+        },
+        "bomCoverage": {
+          "building_name": "Algae Facility",
+          "source_shell_substance_ids_unquantified": "substance-refined-structural-metal; substance-glass",
+          "source_fit_out_substance_ids_unquantified": "substance-refined-insulator; substance-fresh-water",
+          "source_candidate_installed_machine_ids_not_all_mandatory": "machine-growth-management-system; machine-pump-machine",
+          "installed_machine_counts_status": "TBD_PER_LEVEL_AND_ACTUAL_INSTALLATION",
+          "shell_construction_material_quantities_status": "TBD_PER_SIZE_LEVEL_MASS_VOLUME",
+          "condition_and_title_valuation_status": "TITLE_CONDITION_AND_RIGHTS_TBD",
+          "site_specific_notes": "Machine IDs are possible compatible installations; chosen type, count, level, grade and ownership require review",
+          "review_status": "PROPOSAL_BUILDING_BOM_UNQUANTIFIED"
+        },
+        "quantitativeBOM": {
+          "building_name": "Algae Facility",
+          "unit_definition": "Building by actual built level/site/capacity; per-facility installed fixed asset",
+          "approval_status": "AWAITING_BUILDING_BY_BUILDING_REVIEW",
+          "unresolved_dependencies": "Quantify shell, site work, actual installed Machines, upgrade delta, transfer rights and condition after Machine suitability review"
+        }
+      }
+    },
+    {
+      "id": "building-aquaculture-facility",
+      "review": {
+        "systematicReview": {
+          "review_order": "11",
+          "building_name": "Aquaculture Facility",
+          "source_candidate_machine_ids_not_obligatory": "machine-pump-machine; machine-filtration-machine; machine-growth-management-system",
+          "proposed_required_machine_direction": "TBD",
+          "key_system_or_asset_issue": "Pump, Filtration and Growth Management need coverage and water flow; natural water and installed ponds differ",
+          "review_status": "AWAITING_REVIEW"
+        },
+        "bomCoverage": {
+          "building_name": "Aquaculture Facility",
+          "source_shell_substance_ids_unquantified": "substance-stone-aggregate; substance-refined-structural-metal",
+          "source_fit_out_substance_ids_unquantified": "substance-refined-structural-metal; substance-refined-ceramic; substance-refined-insulator; substance-glass",
+          "source_candidate_installed_machine_ids_not_all_mandatory": "machine-pump-machine; machine-filtration-machine; machine-growth-management-system",
+          "installed_machine_counts_status": "TBD_PER_LEVEL_AND_ACTUAL_INSTALLATION",
+          "shell_construction_material_quantities_status": "TBD_PER_SIZE_LEVEL_MASS_VOLUME",
+          "condition_and_title_valuation_status": "TITLE_CONDITION_AND_RIGHTS_TBD",
+          "site_specific_notes": "Machine IDs are possible compatible installations; chosen type, count, level, grade and ownership require review",
+          "review_status": "PROPOSAL_BUILDING_BOM_UNQUANTIFIED"
+        },
+        "quantitativeBOM": {
+          "building_name": "Aquaculture Facility",
+          "unit_definition": "Building by actual built level/site/capacity; per-facility installed fixed asset",
+          "approval_status": "AWAITING_BUILDING_BY_BUILDING_REVIEW",
+          "unresolved_dependencies": "Quantify shell, site work, actual installed Machines, upgrade delta, transfer rights and condition after Machine suitability review"
+        }
+      }
+    },
+    {
+      "id": "building-agricultural-dome",
+      "review": {
+        "systematicReview": {
+          "review_order": "12",
+          "building_name": "Agricultural Dome",
+          "source_candidate_machine_ids_not_obligatory": "machine-life-support-machine; machine-climate-control-machine; machine-irrigation-system; machine-growth-management-system",
+          "proposed_required_machine_direction": "TBD",
+          "key_system_or_asset_issue": "Seal/climate/life support/irrigation/growth systems should be sized to dome capacity and site; upgrades incremental",
+          "review_status": "AWAITING_REVIEW"
+        },
+        "bomCoverage": {
+          "building_name": "Agricultural Dome",
+          "source_shell_substance_ids_unquantified": "substance-refined-structural-metal; substance-glass",
+          "source_fit_out_substance_ids_unquantified": "substance-refined-structural-metal; substance-refined-ceramic; substance-refined-insulator",
+          "source_candidate_installed_machine_ids_not_all_mandatory": "machine-life-support-machine; machine-climate-control-machine; machine-irrigation-system; machine-growth-management-system",
+          "installed_machine_counts_status": "TBD_PER_LEVEL_AND_ACTUAL_INSTALLATION",
+          "shell_construction_material_quantities_status": "TBD_PER_SIZE_LEVEL_MASS_VOLUME",
+          "condition_and_title_valuation_status": "TITLE_CONDITION_AND_RIGHTS_TBD",
+          "site_specific_notes": "Dome levels, shell/area, climate and life-support fitting quantities depend on site and capacity",
+          "review_status": "LEVEL_SCALING_REQUIRED"
+        },
+        "quantitativeBOM": {
+          "building_name": "Agricultural Dome",
+          "unit_definition": "Building by actual built level/site/capacity; per-facility installed fixed asset",
+          "approval_status": "AWAITING_BUILDING_BY_BUILDING_REVIEW",
+          "unresolved_dependencies": "Quantify shell, site work, actual installed Machines, upgrade delta, transfer rights and condition after Machine suitability review"
+        }
+      }
+    },
+    {
+      "id": "building-extraction-rig",
+      "review": {
+        "systematicReview": {
+          "review_order": "13",
+          "building_name": "Extraction Rig",
+          "source_candidate_machine_ids_not_obligatory": "machine-drill-machine; machine-pump-machine",
+          "proposed_required_machine_direction": "TBD",
+          "key_system_or_asset_issue": "Drill and Pump are not always interchangeable requirements; liquid/gas/brine drilling ratings needed",
+          "review_status": "AWAITING_REVIEW"
+        },
+        "bomCoverage": {
+          "building_name": "Extraction Rig",
+          "source_shell_substance_ids_unquantified": "substance-refined-structural-metal; substance-stone-aggregate",
+          "source_fit_out_substance_ids_unquantified": "substance-refined-structural-metal; substance-refined-lubricant; substance-refined-insulator",
+          "source_candidate_installed_machine_ids_not_all_mandatory": "machine-drill-machine; machine-pump-machine",
+          "installed_machine_counts_status": "TBD_PER_LEVEL_AND_ACTUAL_INSTALLATION",
+          "shell_construction_material_quantities_status": "TBD_PER_SIZE_LEVEL_MASS_VOLUME",
+          "condition_and_title_valuation_status": "TITLE_CONDITION_AND_RIGHTS_TBD",
+          "site_specific_notes": "Machine IDs are possible compatible installations; chosen type, count, level, grade and ownership require review",
+          "review_status": "PROPOSAL_BUILDING_BOM_UNQUANTIFIED"
+        },
+        "quantitativeBOM": {
+          "building_name": "Extraction Rig",
+          "unit_definition": "Building by actual built level/site/capacity; per-facility installed fixed asset",
+          "approval_status": "AWAITING_BUILDING_BY_BUILDING_REVIEW",
+          "unresolved_dependencies": "Quantify shell, site work, actual installed Machines, upgrade delta, transfer rights and condition after Machine suitability review"
+        }
+      }
+    },
+    {
+      "id": "building-deep-mine",
+      "review": {
+        "systematicReview": {
+          "review_order": "14",
+          "building_name": "Deep Mine",
+          "source_candidate_machine_ids_not_obligatory": "machine-drill-machine; machine-conveyor-machine; machine-mine-ventilation",
+          "proposed_required_machine_direction": "TBD",
+          "key_system_or_asset_issue": "Drill Conveyor Ventilation are valid candidates but need underground depth safety capacity scaling",
+          "review_status": "AWAITING_REVIEW"
+        },
+        "bomCoverage": {
+          "building_name": "Deep Mine",
+          "source_shell_substance_ids_unquantified": "substance-stone-aggregate; substance-refined-structural-metal",
+          "source_fit_out_substance_ids_unquantified": "substance-refined-structural-metal; substance-refined-ceramic; substance-refined-lubricant; substance-refined-insulator",
+          "source_candidate_installed_machine_ids_not_all_mandatory": "machine-drill-machine; machine-conveyor-machine; machine-mine-ventilation",
+          "installed_machine_counts_status": "TBD_PER_LEVEL_AND_ACTUAL_INSTALLATION",
+          "shell_construction_material_quantities_status": "TBD_PER_SIZE_LEVEL_MASS_VOLUME",
+          "condition_and_title_valuation_status": "TITLE_CONDITION_AND_RIGHTS_TBD",
+          "site_specific_notes": "Machine IDs are possible compatible installations; chosen type, count, level, grade and ownership require review",
+          "review_status": "PROPOSAL_BUILDING_BOM_UNQUANTIFIED"
+        },
+        "quantitativeBOM": {
+          "building_name": "Deep Mine",
+          "unit_definition": "Building by actual built level/site/capacity; per-facility installed fixed asset",
+          "approval_status": "AWAITING_BUILDING_BY_BUILDING_REVIEW",
+          "unresolved_dependencies": "Quantify shell, site work, actual installed Machines, upgrade delta, transfer rights and condition after Machine suitability review"
+        }
+      }
+    },
+    {
+      "id": "building-warehouse",
+      "review": {
+        "systematicReview": {
+          "review_order": "15",
+          "building_name": "Warehouse",
+          "source_candidate_machine_ids_not_obligatory": "machine-warehouse-handler",
+          "proposed_required_machine_direction": "TBD",
+          "key_system_or_asset_issue": "Warehouse Handler cost/size must fit enclosed building; levels and aisles affect machine quantity",
+          "review_status": "AWAITING_REVIEW"
+        },
+        "bomCoverage": {
+          "building_name": "Warehouse",
+          "source_shell_substance_ids_unquantified": "substance-woody-plant; substance-stone-aggregate; substance-refined-structural-metal; substance-glass",
+          "source_candidate_installed_machine_ids_not_all_mandatory": "machine-warehouse-handler",
+          "installed_machine_counts_status": "TBD_PER_LEVEL_AND_ACTUAL_INSTALLATION",
+          "shell_construction_material_quantities_status": "TBD_PER_SIZE_LEVEL_MASS_VOLUME",
+          "condition_and_title_valuation_status": "TITLE_CONDITION_AND_RIGHTS_TBD",
+          "site_specific_notes": "Machine IDs are possible compatible installations; chosen type, count, level, grade and ownership require review",
+          "review_status": "PROPOSAL_BUILDING_BOM_UNQUANTIFIED"
+        },
+        "quantitativeBOM": {
+          "building_name": "Warehouse",
+          "unit_definition": "Building by actual built level/site/capacity; per-facility installed fixed asset",
+          "approval_status": "AWAITING_BUILDING_BY_BUILDING_REVIEW",
+          "unresolved_dependencies": "Quantify shell, site work, actual installed Machines, upgrade delta, transfer rights and condition after Machine suitability review"
+        }
+      }
+    },
+    {
+      "id": "building-power-plant",
+      "review": {
+        "systematicReview": {
+          "review_order": "16",
+          "building_name": "Power Plant",
+          "source_candidate_machine_ids_not_obligatory": "machine-power-distribution-system; machine-wind-generator; machine-water-wheel-generator; machine-solar-thermal-generator; machine-crude-chemical-battery",
+          "proposed_required_machine_direction": "TBD",
+          "key_system_or_asset_issue": "Wind Water Wheel Solar Thermal Chemical Battery are technology/biome alternatives; never mandate all",
+          "review_status": "AWAITING_REVIEW"
+        },
+        "bomCoverage": {
+          "building_name": "Power Plant",
+          "source_shell_substance_ids_unquantified": "substance-stone-aggregate",
+          "source_fit_out_substance_ids_unquantified": "substance-refined-structural-metal; substance-refined-conductive-metal; substance-refined-insulator",
+          "source_candidate_installed_machine_ids_not_all_mandatory": "machine-power-distribution-system; machine-wind-generator; machine-water-wheel-generator; machine-solar-thermal-generator; machine-crude-chemical-battery",
+          "installed_machine_counts_status": "TBD_PER_LEVEL_AND_ACTUAL_INSTALLATION",
+          "shell_construction_material_quantities_status": "TBD_PER_SIZE_LEVEL_MASS_VOLUME",
+          "condition_and_title_valuation_status": "TITLE_CONDITION_AND_RIGHTS_TBD",
+          "site_specific_notes": "Wind, water-wheel, solar and chemical battery are alternatives/optional; do not install all listed power options automatically",
+          "review_status": "ALTERNATIVE_MACHINE_FITOUT"
+        },
+        "quantitativeBOM": {
+          "building_name": "Power Plant",
+          "unit_definition": "Building by actual built level/site/capacity; per-facility installed fixed asset",
+          "approval_status": "AWAITING_BUILDING_BY_BUILDING_REVIEW",
+          "unresolved_dependencies": "Quantify shell, site work, actual installed Machines, upgrade delta, transfer rights and condition after Machine suitability review"
+        }
+      }
+    },
+    {
+      "id": "building-habitat",
+      "review": {
+        "systematicReview": {
+          "review_order": "17",
+          "building_name": "Habitat",
+          "source_candidate_machine_ids_not_obligatory": "machine-life-support-machine; machine-climate-control-machine",
+          "proposed_required_machine_direction": "TBD",
+          "key_system_or_asset_issue": "Life Support and Climate Control depend on resident capacity and planetary atmosphere",
+          "review_status": "AWAITING_REVIEW"
+        },
+        "bomCoverage": {
+          "building_name": "Habitat",
+          "source_shell_substance_ids_unquantified": "substance-stone-aggregate; substance-woody-plant",
+          "source_fit_out_substance_ids_unquantified": "substance-refined-structural-metal; substance-glass; substance-refined-insulator; substance-refined-ceramic",
+          "source_candidate_installed_machine_ids_not_all_mandatory": "machine-life-support-machine; machine-climate-control-machine",
+          "installed_machine_counts_status": "TBD_PER_LEVEL_AND_ACTUAL_INSTALLATION",
+          "shell_construction_material_quantities_status": "TBD_PER_SIZE_LEVEL_MASS_VOLUME",
+          "condition_and_title_valuation_status": "TITLE_CONDITION_AND_RIGHTS_TBD",
+          "site_specific_notes": "Machine IDs are possible compatible installations; chosen type, count, level, grade and ownership require review",
+          "review_status": "PROPOSAL_BUILDING_BOM_UNQUANTIFIED"
+        },
+        "quantitativeBOM": {
+          "building_name": "Habitat",
+          "unit_definition": "Building by actual built level/site/capacity; per-facility installed fixed asset",
+          "approval_status": "AWAITING_BUILDING_BY_BUILDING_REVIEW",
+          "unresolved_dependencies": "Quantify shell, site work, actual installed Machines, upgrade delta, transfer rights and condition after Machine suitability review"
+        }
+      }
+    },
+    {
+      "id": "building-headquarters",
+      "review": {
+        "systematicReview": {
+          "review_order": "18",
+          "building_name": "Headquarters",
+          "source_candidate_machine_ids_not_obligatory": "machine-colony-operations-computer",
+          "proposed_required_machine_direction": "TBD",
+          "key_system_or_asset_issue": "Colony Operations Computer is a fitted asset; infrastructure shell and optional license distinct",
+          "review_status": "AWAITING_REVIEW"
+        },
+        "bomCoverage": {
+          "building_name": "Headquarters",
+          "source_shell_substance_ids_unquantified": "substance-stone-aggregate; substance-refined-structural-metal",
+          "source_fit_out_substance_ids_unquantified": "substance-refined-structural-metal; substance-refined-conductive-metal; substance-glass; substance-refined-insulator",
+          "source_candidate_installed_machine_ids_not_all_mandatory": "machine-colony-operations-computer",
+          "installed_machine_counts_status": "TBD_PER_LEVEL_AND_ACTUAL_INSTALLATION",
+          "shell_construction_material_quantities_status": "TBD_PER_SIZE_LEVEL_MASS_VOLUME",
+          "condition_and_title_valuation_status": "TITLE_CONDITION_AND_RIGHTS_TBD",
+          "site_specific_notes": "Machine IDs are possible compatible installations; chosen type, count, level, grade and ownership require review",
+          "review_status": "PROPOSAL_BUILDING_BOM_UNQUANTIFIED"
+        },
+        "quantitativeBOM": {
+          "building_name": "Headquarters",
+          "unit_definition": "Building by actual built level/site/capacity; per-facility installed fixed asset",
+          "approval_status": "AWAITING_BUILDING_BY_BUILDING_REVIEW",
+          "unresolved_dependencies": "Quantify shell, site work, actual installed Machines, upgrade delta, transfer rights and condition after Machine suitability review"
+        }
+      }
+    },
+    {
+      "id": "building-basic-refinery",
+      "review": {
+        "systematicReview": {
+          "review_order": "19",
+          "building_name": "Basic Refinery",
+          "source_candidate_machine_ids_not_obligatory": "machine-crusher-machine; machine-smelter-machine",
+          "proposed_required_machine_direction": "TBD",
+          "key_system_or_asset_issue": "Crusher and Smelter may be fitted selectively; refinery processes/levels/retrofitting determine machine mix",
+          "review_status": "AWAITING_REVIEW"
+        },
+        "bomCoverage": {
+          "building_name": "Basic Refinery",
+          "source_shell_substance_ids_unquantified": "substance-stone-aggregate; substance-clay-mineral",
+          "source_fit_out_substance_ids_unquantified": "substance-refined-structural-metal; substance-refined-ceramic; substance-glass; substance-refined-insulator; substance-refined-graphite",
+          "source_candidate_installed_machine_ids_not_all_mandatory": "machine-crusher-machine; machine-smelter-machine",
+          "installed_machine_counts_status": "TBD_PER_LEVEL_AND_ACTUAL_INSTALLATION",
+          "shell_construction_material_quantities_status": "TBD_PER_SIZE_LEVEL_MASS_VOLUME",
+          "condition_and_title_valuation_status": "TITLE_CONDITION_AND_RIGHTS_TBD",
+          "site_specific_notes": "Machine IDs are possible compatible installations; chosen type, count, level, grade and ownership require review",
+          "review_status": "PROPOSAL_BUILDING_BOM_UNQUANTIFIED"
+        },
+        "quantitativeBOM": {
+          "building_name": "Basic Refinery",
+          "unit_definition": "Building by actual built level/site/capacity; per-facility installed fixed asset",
+          "approval_status": "AWAITING_BUILDING_BY_BUILDING_REVIEW",
+          "unresolved_dependencies": "Quantify shell, site work, actual installed Machines, upgrade delta, transfer rights and condition after Machine suitability review"
+        }
+      }
+    },
+    {
+      "id": "building-industry",
+      "review": {
+        "systematicReview": {
+          "review_order": "20",
+          "building_name": "Industry",
+          "source_candidate_machine_ids_not_obligatory": "machine-fabrication-machine; machine-assembly-crane; machine-welding-machine",
+          "proposed_required_machine_direction": "TBD",
+          "key_system_or_asset_issue": "Fabrication Crane Welding are modular fit-outs not automatic simultaneous costs; specific workshop functions differ",
+          "review_status": "AWAITING_REVIEW"
+        },
+        "bomCoverage": {
+          "building_name": "Industry",
+          "source_shell_substance_ids_unquantified": "substance-stone-aggregate; substance-refined-structural-metal",
+          "source_fit_out_substance_ids_unquantified": "substance-refined-structural-metal; substance-refined-conductive-metal; substance-refined-insulator; substance-refined-lubricant",
+          "source_candidate_installed_machine_ids_not_all_mandatory": "machine-fabrication-machine; machine-assembly-crane; machine-welding-machine",
+          "installed_machine_counts_status": "TBD_PER_LEVEL_AND_ACTUAL_INSTALLATION",
+          "shell_construction_material_quantities_status": "TBD_PER_SIZE_LEVEL_MASS_VOLUME",
+          "condition_and_title_valuation_status": "TITLE_CONDITION_AND_RIGHTS_TBD",
+          "site_specific_notes": "Machine IDs are possible compatible installations; chosen type, count, level, grade and ownership require review",
+          "review_status": "PROPOSAL_BUILDING_BOM_UNQUANTIFIED"
+        },
+        "quantitativeBOM": {
+          "building_name": "Industry",
+          "unit_definition": "Building by actual built level/site/capacity; per-facility installed fixed asset",
+          "approval_status": "AWAITING_BUILDING_BY_BUILDING_REVIEW",
+          "unresolved_dependencies": "Quantify shell, site work, actual installed Machines, upgrade delta, transfer rights and condition after Machine suitability review"
+        }
+      }
+    },
+    {
+      "id": "building-research-building",
+      "review": {
+        "systematicReview": {
+          "review_order": "21",
+          "building_name": "Research Building",
+          "source_candidate_machine_ids_not_obligatory": "machine-research-computer",
+          "proposed_required_machine_direction": "TBD",
+          "key_system_or_asset_issue": "Research Computer installed equipment vs licensed technology and lab shell separately valued",
+          "review_status": "AWAITING_REVIEW"
+        },
+        "bomCoverage": {
+          "building_name": "Research Building",
+          "source_shell_substance_ids_unquantified": "substance-stone-aggregate; substance-clay-mineral",
+          "source_fit_out_substance_ids_unquantified": "substance-refined-structural-metal; substance-refined-conductive-metal; substance-glass; substance-refined-insulator",
+          "source_candidate_installed_machine_ids_not_all_mandatory": "machine-research-computer",
+          "installed_machine_counts_status": "TBD_PER_LEVEL_AND_ACTUAL_INSTALLATION",
+          "shell_construction_material_quantities_status": "TBD_PER_SIZE_LEVEL_MASS_VOLUME",
+          "condition_and_title_valuation_status": "TITLE_CONDITION_AND_RIGHTS_TBD",
+          "site_specific_notes": "Machine IDs are possible compatible installations; chosen type, count, level, grade and ownership require review",
+          "review_status": "PROPOSAL_BUILDING_BOM_UNQUANTIFIED"
+        },
+        "quantitativeBOM": {
+          "building_name": "Research Building",
+          "unit_definition": "Building by actual built level/site/capacity; per-facility installed fixed asset",
+          "approval_status": "AWAITING_BUILDING_BY_BUILDING_REVIEW",
+          "unresolved_dependencies": "Quantify shell, site work, actual installed Machines, upgrade delta, transfer rights and condition after Machine suitability review"
+        }
+      }
+    },
+    {
+      "id": "building-spaceport",
+      "review": {
+        "systematicReview": {
+          "review_order": "22",
+          "building_name": "Spaceport",
+          "source_candidate_machine_ids_not_obligatory": "machine-assembly-crane",
+          "proposed_required_machine_direction": "TBD",
+          "key_system_or_asset_issue": "Berths/site/handling infrastructure; Assembly Crane can be optional or shared and ratings matter",
+          "review_status": "AWAITING_REVIEW"
+        },
+        "bomCoverage": {
+          "building_name": "Spaceport",
+          "source_shell_substance_ids_unquantified": "substance-stone-aggregate; substance-refined-structural-metal",
+          "source_fit_out_substance_ids_unquantified": "substance-refined-structural-metal; substance-refined-conductive-metal; substance-refined-insulator",
+          "source_candidate_installed_machine_ids_not_all_mandatory": "machine-assembly-crane",
+          "installed_machine_counts_status": "TBD_PER_LEVEL_AND_ACTUAL_INSTALLATION",
+          "shell_construction_material_quantities_status": "TBD_PER_SIZE_LEVEL_MASS_VOLUME",
+          "condition_and_title_valuation_status": "TITLE_CONDITION_AND_RIGHTS_TBD",
+          "site_specific_notes": "Machine IDs are possible compatible installations; chosen type, count, level, grade and ownership require review",
+          "review_status": "PROPOSAL_BUILDING_BOM_UNQUANTIFIED"
+        },
+        "quantitativeBOM": {
+          "building_name": "Spaceport",
+          "unit_definition": "Building by actual built level/site/capacity; per-facility installed fixed asset",
+          "approval_status": "AWAITING_BUILDING_BY_BUILDING_REVIEW",
+          "unresolved_dependencies": "Quantify shell, site work, actual installed Machines, upgrade delta, transfer rights and condition after Machine suitability review"
+        }
+      }
+    },
+    {
+      "id": "building-shipyard-bay",
+      "review": {
+        "systematicReview": {
+          "review_order": "23",
+          "building_name": "Shipyard Bay",
+          "source_candidate_machine_ids_not_obligatory": "machine-fabrication-machine; machine-assembly-crane; machine-welding-machine",
+          "proposed_required_machine_direction": "TBD",
+          "key_system_or_asset_issue": "Fabrication Crane Welding fit-out counts depend on ship size and yard capacity; distinguish site shell and installed kit",
+          "review_status": "AWAITING_REVIEW"
+        },
+        "bomCoverage": {
+          "building_name": "Shipyard Bay",
+          "source_shell_substance_ids_unquantified": "substance-stone-aggregate",
+          "source_fit_out_substance_ids_unquantified": "substance-refined-structural-metal; substance-refined-conductive-metal; substance-refined-lubricant; substance-glass; substance-refined-ceramic",
+          "source_candidate_installed_machine_ids_not_all_mandatory": "machine-fabrication-machine; machine-assembly-crane; machine-welding-machine",
+          "installed_machine_counts_status": "TBD_PER_LEVEL_AND_ACTUAL_INSTALLATION",
+          "shell_construction_material_quantities_status": "TBD_PER_SIZE_LEVEL_MASS_VOLUME",
+          "condition_and_title_valuation_status": "TITLE_CONDITION_AND_RIGHTS_TBD",
+          "site_specific_notes": "Machine IDs are possible compatible installations; chosen type, count, level, grade and ownership require review",
+          "review_status": "PROPOSAL_BUILDING_BOM_UNQUANTIFIED"
+        },
+        "quantitativeBOM": {
+          "building_name": "Shipyard Bay",
+          "unit_definition": "Building by actual built level/site/capacity; per-facility installed fixed asset",
+          "approval_status": "AWAITING_BUILDING_BY_BUILDING_REVIEW",
+          "unresolved_dependencies": "Quantify shell, site work, actual installed Machines, upgrade delta, transfer rights and condition after Machine suitability review"
+        }
+      }
+    },
+    {
+      "id": "building-crashed-ship",
+      "review": {
+        "systematicReview": {
+          "review_order": "24",
+          "building_name": "Crashed Ship",
+          "source_candidate_machine_ids_not_obligatory": "machine-ship-reactor; machine-ship-life-support; machine-ship-computer; machine-ship-refinery-unit; machine-ship-scanner; machine-substance-analyser; machine-exploration-vehicle",
+          "proposed_required_machine_direction": "Existing asset; no new-build recipe",
+          "key_system_or_asset_issue": "Reused or wrecked ship; salvage provenance, remaining condition and corporate title; never price as new building",
+          "review_status": "SPECIAL_REUSED_ASSET_PENDING_REVIEW"
+        },
+        "bomCoverage": {
+          "building_name": "Crashed Ship",
+          "source_candidate_installed_machine_ids_not_all_mandatory": "machine-ship-reactor; machine-ship-life-support; machine-ship-computer; machine-ship-refinery-unit; machine-ship-scanner; machine-substance-analyser; machine-exploration-vehicle",
+          "installed_machine_counts_status": "TBD_PER_LEVEL_AND_ACTUAL_INSTALLATION",
+          "shell_construction_material_quantities_status": "TBD_PER_SIZE_LEVEL_MASS_VOLUME",
+          "condition_and_title_valuation_status": "TITLE_CONDITION_AND_RIGHTS_TBD",
+          "site_specific_notes": "Reused damaged ship is not a new purchasable building shell; asset title, ship equipment recovery and condition differ",
+          "review_status": "NON_STANDARD_REUSED_ASSET"
+        },
+        "quantitativeBOM": {
+          "building_name": "Crashed Ship",
+          "unit_definition": "Building by actual built level/site/capacity; per-facility installed fixed asset",
+          "approval_status": "AWAITING_BUILDING_BY_BUILDING_REVIEW",
+          "unresolved_dependencies": "Quantify shell, site work, actual installed Machines, upgrade delta, transfer rights and condition after Machine suitability review"
+        }
+      }
+    }
+  ],
+  "unmappedCandidates": {
+    "parts": [
+      {
+        "id": "candidate-part-lead-acid-battery-module",
+        "sourceFile": "docs/discovery/proposed-parts-material-boms.csv",
+        "section": "materialBOM",
+        "fields": {
+          "product_name": "Lead-Acid Battery Module",
+          "proposed_named_inputs": "Refined Lead + Sulfuric Acid (electrolyte); suitable case, connectors and separators TBD",
+          "review_status": "APPROVED_PRODUCT_BOM_PENDING",
+          "proposed_finished_unit": "one finished stationary lead-acid battery module (capacity and mass TBD)",
+          "open_decision": "Approved distinct chemistry and named physical product. Stationary industrial/backup use; exact internal plates, formation process, housing, safety, rating, yield, manufacturing equipment, price and final ingredient quantities TBD.",
+          "approved_finished_stock_count": "1 finished Part = 1 unit"
+        }
+      },
+      {
+        "id": "candidate-part-lithium-based-battery-module",
+        "sourceFile": "docs/discovery/proposed-parts-material-boms.csv",
+        "section": "materialBOM",
+        "fields": {
+          "product_name": "Lithium-Based Battery Module",
+          "proposed_named_inputs": "Lithium Carbonate (upstream cathode precursor only) + Refined Graphite (potential anode) + Refined Copper (current collector) + compatible cathode chemistry/electrolyte/separator TBD",
+          "review_status": "APPROVED_PRODUCT_BOM_PENDING",
+          "proposed_finished_unit": "one finished lithium-based rechargeable battery module (capacity and mass TBD)",
+          "open_decision": "Approved distinct lithium-based battery product for mobile/weight-sensitive equipment. No specific lithium-ion cathode chemistry, lithium carbonate direct-use cathode conversion, material ratios, process, thermal/safety electronics, cost, rating, price or consumer mapping approved.",
+          "approved_finished_stock_count": "1 finished Part = 1 unit"
+        }
+      },
+      {
+        "id": "candidate-part-thermal-parts",
+        "sourceFile": "docs/discovery/proposed-parts-material-boms.csv",
+        "section": "materialBOM",
+        "fields": {
+          "product_name": "Thermal Parts",
+          "proposed_named_inputs": "Stainless Steel + Refined Ceramic + appropriate thermal insulation (exact approved insulating stock and specialised variants TBD)",
+          "review_status": "APPROVED_INPUT_FAMILIES",
+          "proposed_finished_unit": "one finished Thermal Part or service module (size and mass TBD)",
+          "open_decision": "Heat exchangers, thermal barriers and equipment thermal management. Insulation selection, precise quantities, rating, manufacture, consumer Machine links and price TBD; Optical Parts separate.",
+          "approved_finished_stock_count": "1 finished Part = 1 unit"
+        }
+      },
+      {
+        "id": "candidate-part-optical-parts",
+        "sourceFile": "docs/discovery/proposed-parts-material-boms.csv",
+        "section": "materialBOM",
+        "fields": {
+          "product_name": "Optical Parts",
+          "proposed_named_inputs": "Glass + Refined Ceramic + suitable structural metal; Optical Sapphire optional for specialist precision optics only",
+          "review_status": "APPROVED_INPUT_FAMILIES",
+          "proposed_finished_unit": "one finished optical component or service module (size and mass TBD)",
+          "open_decision": "Lenses, mirrors, concentrators and optical instruments. Refined metal identity and specialist optical material suitability depend on application; exact quantities, optical grade, tooling, compatibility and price TBD.",
+          "approved_finished_stock_count": "1 finished Part = 1 unit"
+        }
+      },
+      {
+        "id": "candidate-part-forming-cutting-tooling",
+        "sourceFile": "docs/discovery/proposed-parts-material-boms.csv",
+        "section": "materialBOM",
+        "fields": {
+          "product_name": "Forming & Cutting Tooling",
+          "proposed_named_inputs": "Steel + Cemented Tungsten Carbide",
+          "review_status": "APPROVED_INPUT_FAMILIES",
+          "proposed_finished_unit": "one finished forming/cutting tool or standard service tooling kit (size/rating TBD)",
+          "open_decision": "Approved for forming dies, cutting inserts and industrial machine tooling. Do not require Refined Copper solely because the old combined Fabrication Parts recipe had it. Exact tooling form/grade, material quantities, process, lifetime, mass and price remain TBD.",
+          "approved_finished_stock_count": "1 finished Part = 1 unit"
+        }
+      },
+      {
+        "id": "candidate-part-welding-parts",
+        "sourceFile": "docs/discovery/proposed-parts-material-boms.csv",
+        "section": "materialBOM",
+        "fields": {
+          "product_name": "Welding Parts",
+          "proposed_named_inputs": "Refined Copper + Steel + suitable heat-resistant insulation (specified qualified stock TBD; Mica Insulation Sheets or Refined Ceramic to be evaluated)",
+          "review_status": "APPROVED_INPUT_FAMILIES",
+          "proposed_finished_unit": "one finished welding head/contact/consumable service kit (type/rating TBD)",
+          "open_decision": "Approved for suitable welding heads, contacts and joining equipment. Heat-resistant insulation is approved as a family only, not exact grade, composition or quantity. Machine compatibility, wear, welding mode, tooling and price TBD.",
+          "approved_finished_stock_count": "1 finished Part = 1 unit"
+        }
+      },
+      {
+        "id": "candidate-part-precast-concrete-sections",
+        "sourceFile": "docs/discovery/proposed-parts-material-boms.csv",
+        "section": "materialBOM",
+        "fields": {
+          "product_name": "Precast Concrete Sections",
+          "proposed_named_inputs": "Cement + Graded Aggregate + suitable sand + process water + Steel if reinforced",
+          "review_status": "APPROVED_INPUT_FAMILIES",
+          "proposed_finished_unit": "one finished cured transportable section (size TBD)",
+          "open_decision": "Material families approved; optional reinforcement where structural requirements justify. Exact section size, strength, steel compatibility, recipe ratios, equipment, curing time and price remain TBD.",
+          "approved_finished_stock_count": "1 finished Part = 1 unit"
+        }
+      },
+      {
+        "id": "candidate-part-nuclear-fuel-assembly",
+        "sourceFile": "docs/discovery/proposed-parts-material-boms.csv",
+        "section": "materialBOM",
+        "fields": {
+          "product_name": "Nuclear Fuel Assembly",
+          "proposed_named_inputs": "Uranium Concentrate (approved upstream source) + qualified fabricated fuel form + protective cladding + structural components; exact materials/grades and all manufacturing steps TBD",
+          "review_status": "APPROVED_PRODUCT_BOM_PENDING",
+          "proposed_finished_unit": "one finished compatible fission-reactor consumable assembly (rating and service life TBD)",
+          "open_decision": "Approved one independently stockable finished fission fuel assembly with specialist qualified production and installed depletion, yielding tracked Spent Nuclear Fuel. No additional saleable processing intermediates by default. Specific fuel chemistry, cladding, quantities, facility/machine compatibility, waste rules, pricing and reactor design TBD; distinct from Fusion Fuel and existing fusion Ship Reactor.",
+          "approved_finished_stock_count": "1 finished Part = 1 unit"
+        }
+      },
+      {
+        "id": "candidate-part-lead-acid-battery-module",
+        "sourceFile": "docs/discovery/proposed-parts-quantitative-material-inputs.csv",
+        "section": "quantities",
+        "fields": {
+          "approved_planning_input_materials_kg_per_finished_unit": "Refined Lead 36; Sulfuric Acid 10; Refined Copper 1; Polymer (provisional) 4"
+        }
+      },
+      {
+        "id": "candidate-part-lithium-based-battery-module",
+        "sourceFile": "docs/discovery/proposed-parts-quantitative-material-inputs.csv",
+        "section": "quantities",
+        "fields": {
+          "approved_planning_input_materials_kg_per_finished_unit": "Lithium Carbonate 1.5; Refined Graphite 2.5; Refined Copper 2; unresolved cathode allowance 5; unresolved electrolyte allowance 2; Polymer provisional 3; Stainless Steel 3"
+        }
+      },
+      {
+        "id": "candidate-part-thermal-parts",
+        "sourceFile": "docs/discovery/proposed-parts-quantitative-material-inputs.csv",
+        "section": "quantities",
+        "fields": {
+          "approved_planning_input_materials_kg_per_finished_unit": "Stainless Steel 24; Refined Ceramic 10; Mica Insulation Sheets 2.5"
+        }
+      },
+      {
+        "id": "candidate-part-optical-parts",
+        "sourceFile": "docs/discovery/proposed-parts-quantitative-material-inputs.csv",
+        "section": "quantities",
+        "fields": {
+          "approved_planning_input_materials_kg_per_finished_unit": "Glass 6; Refined Ceramic 3; Steel 4"
+        }
+      },
+      {
+        "id": "candidate-part-forming-cutting-tooling",
+        "sourceFile": "docs/discovery/proposed-parts-quantitative-material-inputs.csv",
+        "section": "quantities",
+        "fields": {
+          "approved_planning_input_materials_kg_per_finished_unit": "Steel 12; Cemented Tungsten Carbide 3"
+        }
+      },
+      {
+        "id": "candidate-part-welding-parts",
+        "sourceFile": "docs/discovery/proposed-parts-quantitative-material-inputs.csv",
+        "section": "quantities",
+        "fields": {
+          "approved_planning_input_materials_kg_per_finished_unit": "Refined Copper 4; Steel 8; Mica Insulation Sheets 1"
+        }
+      },
+      {
+        "id": "candidate-part-precast-concrete-sections",
+        "sourceFile": "docs/discovery/proposed-parts-quantitative-material-inputs.csv",
+        "section": "quantities",
+        "fields": {
+          "approved_planning_input_materials_kg_per_finished_unit": "Cement 175; Graded Aggregate 600; Suitable Sand 300; Process Water 75; Steel 25 for reinforced example"
+        }
+      },
+      {
+        "id": "candidate-part-nuclear-fuel-assembly",
+        "sourceFile": "docs/discovery/proposed-parts-quantitative-material-inputs.csv",
+        "section": "quantities",
+        "fields": {
+          "approved_planning_input_materials_kg_per_finished_unit": "Uranium Concentrate plus fuel and cladding materials TBD"
+        }
+      },
+      {
+        "id": "candidate-part-lead-acid-battery-module",
+        "sourceFile": "docs/discovery/proposed-parts-reference-prices.csv",
+        "section": "prices",
+        "fields": {
+          "manufacturer_cost_cc_per_finished_unit": "1410.83",
+          "base_manufacturer_sell_quote_cc_per_finished_unit": "1800"
+        }
+      },
+      {
+        "id": "candidate-part-lithium-based-battery-module",
+        "sourceFile": "docs/discovery/proposed-parts-reference-prices.csv",
+        "section": "prices",
+        "fields": {
+          "manufacturer_cost_cc_per_finished_unit": "3508.91",
+          "base_manufacturer_sell_quote_cc_per_finished_unit": "4400"
+        }
+      },
+      {
+        "id": "candidate-part-thermal-parts",
+        "sourceFile": "docs/discovery/proposed-parts-reference-prices.csv",
+        "section": "prices",
+        "fields": {
+          "manufacturer_cost_cc_per_finished_unit": "2450.53",
+          "base_manufacturer_sell_quote_cc_per_finished_unit": "3100"
+        }
+      },
+      {
+        "id": "candidate-part-optical-parts",
+        "sourceFile": "docs/discovery/proposed-parts-reference-prices.csv",
+        "section": "prices",
+        "fields": {
+          "manufacturer_cost_cc_per_finished_unit": "2404.07",
+          "base_manufacturer_sell_quote_cc_per_finished_unit": "3050"
+        }
+      },
+      {
+        "id": "candidate-part-forming-cutting-tooling",
+        "sourceFile": "docs/discovery/proposed-parts-reference-prices.csv",
+        "section": "prices",
+        "fields": {
+          "manufacturer_cost_cc_per_finished_unit": "3176.45",
+          "base_manufacturer_sell_quote_cc_per_finished_unit": "4000"
+        }
+      },
+      {
+        "id": "candidate-part-welding-parts",
+        "sourceFile": "docs/discovery/proposed-parts-reference-prices.csv",
+        "section": "prices",
+        "fields": {
+          "manufacturer_cost_cc_per_finished_unit": "1868.94",
+          "base_manufacturer_sell_quote_cc_per_finished_unit": "2350"
+        }
+      },
+      {
+        "id": "candidate-part-precast-concrete-sections",
+        "sourceFile": "docs/discovery/proposed-parts-reference-prices.csv",
+        "section": "prices",
+        "fields": {
+          "manufacturer_cost_cc_per_finished_unit": "2511.39",
+          "base_manufacturer_sell_quote_cc_per_finished_unit": "3150"
+        }
+      },
+      {
+        "id": "candidate-part-nuclear-fuel-assembly",
+        "sourceFile": "docs/discovery/proposed-parts-reference-prices.csv",
+        "section": "prices",
+        "fields": {}
+      }
+    ],
+    "machines": [
+      {
+        "id": "candidate-machine-conventional-electric-motor",
+        "sourceFile": "docs/discovery/proposed-machine-bom-cost-review.csv",
+        "section": "manufacturingBOM",
+        "fields": {
+          "machine_name": "Conventional Electric Motor",
+          "category": "Discovery",
+          "proposed_direct_processed_materials_kg": "Steel:55; Refined Copper:12; Mica Insulation Sheets:1",
+          "proposed_assembly_labour_hours": "20",
+          "proposed_factory_equipment_hours": "30",
+          "proposed_test_hours": "10",
+          "proposed_good_unit_yield": "0.95",
+          "embedded_parts_factory_cost_CC": "0.00",
+          "direct_processed_material_cost_CC": "726.00",
+          "nested_machine_factory_cost_CC": "0.00",
+          "proposed_manufacturer_cost_CC": "7816.84",
+          "proposed_base_sell_quote_CC": "9800",
+          "estimated_finished_freight_mass_kg": "63.9",
+          "accounted_material_subassembly_mass_kg_partial_if_blocked": "63.9",
+          "approval_status": "PROPOSED_NOT_APPROVED",
+          "unresolved_design_constraints": "Approved conventional motor identity; standard rated output/reliability TBD; direct materials count without embedded Part"
+        }
+      },
+      {
+        "id": "candidate-machine-rare-earth-permanent-magnet-motor",
+        "sourceFile": "docs/discovery/proposed-machine-bom-cost-review.csv",
+        "section": "manufacturingBOM",
+        "fields": {
+          "machine_name": "Rare-Earth Permanent-Magnet Motor",
+          "category": "Discovery",
+          "proposed_direct_processed_materials_kg": "Steel:18; Refined Copper:8; Mica Insulation Sheets:0.5; Rare Earth Magnet Alloy:2",
+          "proposed_assembly_labour_hours": "30",
+          "proposed_factory_equipment_hours": "40",
+          "proposed_test_hours": "20",
+          "proposed_good_unit_yield": "0.92",
+          "embedded_parts_factory_cost_CC": "0.00",
+          "accounted_material_subassembly_mass_kg_partial_if_blocked": "26.8",
+          "approval_status": "BLOCKED_PROPOSAL",
+          "unresolved_design_constraints": "Rare Earth Magnet Alloy price, magnetic grade and specific rated output TBD"
+        }
+      },
+      {
+        "id": "candidate-vector-exchange-drive",
+        "sourceFile": "docs/discovery/proposed-machine-bom-cost-review.csv",
+        "section": "manufacturingBOM",
+        "fields": {
+          "machine_name": "Vector Exchange Drive",
+          "category": "Discovery",
+          "embedded_parts_factory_cost_CC": "0.00",
+          "direct_processed_material_cost_CC": "0.00",
+          "nested_machine_factory_cost_CC": "0.00",
+          "accounted_material_subassembly_mass_kg_partial_if_blocked": "0",
+          "approval_status": "BLOCKED_PROPOSAL",
+          "unresolved_design_constraints": "Drive lattice and technology complete bill missing; do not infer from generic motor or ship reactor"
+        }
+      },
+      {
+        "id": "candidate-machine-personal-recreation-terminal",
+        "sourceFile": "docs/discovery/proposed-machine-bom-cost-review.csv",
+        "section": "manufacturingBOM",
+        "fields": {
+          "machine_name": "Personal Recreation Terminal",
+          "category": "Accommodation Luxury (discovery candidate, not yet Universe canon)",
+          "proposed_finished_part_ids_and_counts": "part-computing-parts:1",
+          "proposed_direct_processed_materials_kg": "Steel:1.5; Polymer:2; Glass:0.5; Refined Copper:0.2",
+          "proposed_assembly_labour_hours": "5",
+          "proposed_factory_equipment_hours": "3",
+          "proposed_test_hours": "2",
+          "proposed_good_unit_yield": "0.98",
+          "embedded_parts_factory_cost_CC": "5116.09",
+          "direct_processed_material_cost_CC": "58.40",
+          "nested_machine_factory_cost_CC": "0.00",
+          "proposed_manufacturer_cost_CC": "6290.30",
+          "proposed_base_sell_quote_CC": "7900",
+          "estimated_finished_freight_mass_kg": "8.90",
+          "accounted_material_subassembly_mass_kg_partial_if_blocked": "8.90",
+          "approval_status": "APPROVED_PHYSICAL_BOM_2026_11_02__MANUFACTURER_CC_AND_GENERIC_WEAR_RATES_PROVISIONAL",
+          "unresolved_design_constraints": "APPROVED physical recipe and manufacturing effort by user 2 Nov 2026; see §73. Factory CC and suggested quote are derived provisional scenarios only, not approved. Shared Part wear rules govern maintenance; Water within Food. Exact category morale weights and world-support sizing remain future shared engineering."
+        }
+      },
+      {
+        "id": "candidate-machine-communal-fitness-leisure-system",
+        "sourceFile": "docs/discovery/proposed-machine-bom-cost-review.csv",
+        "section": "manufacturingBOM",
+        "fields": {
+          "machine_name": "Communal Fitness & Leisure System",
+          "category": "Accommodation Luxury (discovery candidate, not yet Universe canon)",
+          "proposed_finished_part_ids_and_counts": "part-mechanical-parts:2; part-power-electronics:1; part-control-and-sensor-parts:1",
+          "proposed_direct_processed_materials_kg": "Steel:80; Polymer:25; Refined Copper:4; Glass:4",
+          "proposed_assembly_labour_hours": "40",
+          "proposed_factory_equipment_hours": "30",
+          "proposed_test_hours": "16",
+          "proposed_good_unit_yield": "0.96",
+          "embedded_parts_factory_cost_CC": "8333.54",
+          "direct_processed_material_cost_CC": "1226.00",
+          "nested_machine_factory_cost_CC": "0.00",
+          "proposed_manufacturer_cost_CC": "19082.85",
+          "proposed_base_sell_quote_CC": "23900",
+          "estimated_finished_freight_mass_kg": "161.60",
+          "accounted_material_subassembly_mass_kg_partial_if_blocked": "161.60",
+          "approval_status": "APPROVED_PHYSICAL_BOM_2026_11_02__MANUFACTURER_CC_AND_GENERIC_WEAR_RATES_PROVISIONAL",
+          "unresolved_design_constraints": "APPROVED physical recipe and manufacturing effort by user 2 Nov 2026; see §73. Factory CC and suggested quote are derived provisional scenarios only, not approved. Shared Part wear rules govern maintenance; Water within Food. Exact category morale weights and world-support sizing remain future shared engineering."
+        }
+      },
+      {
+        "id": "candidate-machine-advanced-entertainment-system",
+        "sourceFile": "docs/discovery/proposed-machine-bom-cost-review.csv",
+        "section": "manufacturingBOM",
+        "fields": {
+          "machine_name": "Advanced Entertainment System",
+          "category": "Accommodation Luxury (discovery candidate, not yet Universe canon)",
+          "proposed_finished_part_ids_and_counts": "part-computing-parts:2; part-power-electronics:1; part-control-and-sensor-parts:1; candidate-part-optical-parts:1",
+          "proposed_direct_processed_materials_kg": "Steel:100; Glass:30; Refined Copper:12; Polymer:24",
+          "proposed_assembly_labour_hours": "80",
+          "proposed_factory_equipment_hours": "65",
+          "proposed_test_hours": "35",
+          "proposed_good_unit_yield": "0.95",
+          "embedded_parts_factory_cost_CC": "18269.79",
+          "direct_processed_material_cost_CC": "1856.00",
+          "nested_machine_factory_cost_CC": "0.00",
+          "proposed_manufacturer_cost_CC": "40711.36",
+          "proposed_base_sell_quote_CC": "50900",
+          "estimated_finished_freight_mass_kg": "197.80",
+          "accounted_material_subassembly_mass_kg_partial_if_blocked": "197.80",
+          "approval_status": "APPROVED_PHYSICAL_BOM_2026_11_02__MANUFACTURER_CC_AND_GENERIC_WEAR_RATES_PROVISIONAL",
+          "unresolved_design_constraints": "APPROVED physical recipe and manufacturing effort by user 2 Nov 2026; see §73. Factory CC and suggested quote are derived provisional scenarios only, not approved. Shared Part wear rules govern maintenance; Water within Food. Exact category morale weights and world-support sizing remain future shared engineering."
+        }
+      },
+      {
+        "id": "candidate-machine-immersive-recreation-suite",
+        "sourceFile": "docs/discovery/proposed-machine-bom-cost-review.csv",
+        "section": "manufacturingBOM",
+        "fields": {
+          "machine_name": "Immersive Recreation Suite",
+          "category": "Accommodation Luxury (discovery candidate, not yet Universe canon)",
+          "proposed_finished_part_ids_and_counts": "part-computing-parts:6; part-control-and-sensor-parts:4; candidate-part-optical-parts:3; candidate-part-thermal-parts:1; part-power-electronics:3; part-structural-components:1",
+          "proposed_direct_processed_materials_kg": "Steel:180; Glass:60; Refined Copper:18; Polymer:70; Refined Ceramic:20",
+          "proposed_assembly_labour_hours": "180",
+          "proposed_factory_equipment_hours": "135",
+          "proposed_test_hours": "70",
+          "proposed_good_unit_yield": "0.93",
+          "embedded_parts_factory_cost_CC": "62199.57",
+          "direct_processed_material_cost_CC": "4136.00",
+          "nested_machine_factory_cost_CC": "0.00",
+          "proposed_manufacturer_cost_CC": "113479.11",
+          "proposed_base_sell_quote_CC": "141850",
+          "estimated_finished_freight_mass_kg": "562.52",
+          "accounted_material_subassembly_mass_kg_partial_if_blocked": "562.52",
+          "approval_status": "APPROVED_PHYSICAL_BOM_2026_11_02__MANUFACTURER_CC_AND_GENERIC_WEAR_RATES_PROVISIONAL",
+          "unresolved_design_constraints": "APPROVED physical recipe and manufacturing effort by user 2 Nov 2026; see §73. Factory CC and suggested quote are derived provisional scenarios only, not approved. Shared Part wear rules govern maintenance; Water within Food. Exact category morale weights and world-support sizing remain future shared engineering."
+        }
+      },
+      {
+        "id": "candidate-machine-integrated-wellness-leisure-system",
+        "sourceFile": "docs/discovery/proposed-machine-bom-cost-review.csv",
+        "section": "manufacturingBOM",
+        "fields": {
+          "machine_name": "Integrated Wellness & Leisure System",
+          "category": "Accommodation Luxury (discovery candidate, not yet Universe canon)",
+          "proposed_finished_part_ids_and_counts": "part-fluid-handling-parts:4; candidate-part-thermal-parts:3; part-computing-parts:2; part-power-electronics:2; part-structural-components:3; part-mechanical-parts:3; part-control-and-sensor-parts:2",
+          "proposed_direct_processed_materials_kg": "Steel:500; Stainless Steel:160; Glass:160; Refined Copper:55; Refined Ceramic:60; Polymer:120",
+          "proposed_assembly_labour_hours": "300",
+          "proposed_factory_equipment_hours": "260",
+          "proposed_test_hours": "120",
+          "proposed_good_unit_yield": "0.92",
+          "embedded_parts_factory_cost_CC": "47035.10",
+          "direct_processed_material_cost_CC": "13290.00",
+          "nested_machine_factory_cost_CC": "0.00",
+          "proposed_manufacturer_cost_CC": "142309.89",
+          "proposed_base_sell_quote_CC": "177900",
+          "estimated_finished_freight_mass_kg": "1597.50",
+          "accounted_material_subassembly_mass_kg_partial_if_blocked": "1597.50",
+          "approval_status": "APPROVED_PHYSICAL_BOM_2026_11_02__MANUFACTURER_CC_AND_GENERIC_WEAR_RATES_PROVISIONAL",
+          "unresolved_design_constraints": "APPROVED physical recipe and manufacturing effort by user 2 Nov 2026; see §73. Factory CC and suggested quote are derived provisional scenarios only, not approved. Shared Part wear rules govern maintenance; Water within Food. Exact category morale weights and world-support sizing remain future shared engineering."
+        }
+      },
+      {
+        "id": "candidate-machine-personal-recreation-terminal",
+        "sourceFile": "docs/discovery/proposed-accommodation-luxury-machine-review.csv",
+        "section": "luxuryRatings",
+        "fields": {
+          "candidate_machine_name": "Personal Recreation Terminal",
+          "required_housing_tech_level": "1",
+          "amenity_category": "personal_media",
+          "proposed_resident_service_equivalents_per_day": "1",
+          "proposed_machine_footprint_m2": "2",
+          "proposed_operating_power_units": "0.25",
+          "finished_part_inputs_approved_2026_11_02": "part-computing-parts:1",
+          "proposed_operating_consumables": "Rated Power + standard component Part wear/replacement. Water remains included in Food.",
+          "approval_status": "APPROVED_PHYSICAL_BOM_2026_11_02__MANUFACTURER_CC_AND_GENERIC_WEAR_RATES_PROVISIONAL",
+          "notes": "User approved §71-§72 physical BOMs for all five machines (2 Nov 2026). Machine identity, capacity, m², Power and logarithmic category access already approved. No new maintenance tiers, water commodity or leisure licence. Source §73; CC examples and morale point weights provisional."
+        }
+      },
+      {
+        "id": "candidate-machine-communal-fitness-leisure-system",
+        "sourceFile": "docs/discovery/proposed-accommodation-luxury-machine-review.csv",
+        "section": "luxuryRatings",
+        "fields": {
+          "candidate_machine_name": "Communal Fitness & Leisure System",
+          "required_housing_tech_level": "2",
+          "amenity_category": "fitness_social",
+          "proposed_resident_service_equivalents_per_day": "10",
+          "proposed_machine_footprint_m2": "16",
+          "proposed_operating_power_units": "3",
+          "finished_part_inputs_approved_2026_11_02": "part-mechanical-parts:2; part-power-electronics:1; part-control-and-sensor-parts:1",
+          "proposed_operating_consumables": "Rated Power + standard component Part wear/replacement. Water remains included in Food.",
+          "approval_status": "APPROVED_PHYSICAL_BOM_2026_11_02__MANUFACTURER_CC_AND_GENERIC_WEAR_RATES_PROVISIONAL",
+          "notes": "User approved §71-§72 physical BOMs for all five machines (2 Nov 2026). Machine identity, capacity, m², Power and logarithmic category access already approved. No new maintenance tiers, water commodity or leisure licence. Source §73; CC examples and morale point weights provisional."
+        }
+      },
+      {
+        "id": "candidate-machine-advanced-entertainment-system",
+        "sourceFile": "docs/discovery/proposed-accommodation-luxury-machine-review.csv",
+        "section": "luxuryRatings",
+        "fields": {
+          "candidate_machine_name": "Advanced Entertainment System",
+          "required_housing_tech_level": "3",
+          "amenity_category": "cultural_entertainment",
+          "proposed_resident_service_equivalents_per_day": "30",
+          "proposed_machine_footprint_m2": "25",
+          "proposed_operating_power_units": "7",
+          "finished_part_inputs_approved_2026_11_02": "part-computing-parts:2; part-power-electronics:1; part-control-and-sensor-parts:1; candidate-part-optical-parts:1",
+          "proposed_operating_consumables": "Rated Power + standard component Part wear/replacement. Water remains included in Food.",
+          "approval_status": "APPROVED_PHYSICAL_BOM_2026_11_02__MANUFACTURER_CC_AND_GENERIC_WEAR_RATES_PROVISIONAL",
+          "notes": "User approved §71-§72 physical BOMs for all five machines (2 Nov 2026). Machine identity, capacity, m², Power and logarithmic category access already approved. No new maintenance tiers, water commodity or leisure licence. Source §73; CC examples and morale point weights provisional."
+        }
+      },
+      {
+        "id": "candidate-machine-immersive-recreation-suite",
+        "sourceFile": "docs/discovery/proposed-accommodation-luxury-machine-review.csv",
+        "section": "luxuryRatings",
+        "fields": {
+          "candidate_machine_name": "Immersive Recreation Suite",
+          "required_housing_tech_level": "4",
+          "amenity_category": "immersive_recreation",
+          "proposed_resident_service_equivalents_per_day": "60",
+          "proposed_machine_footprint_m2": "50",
+          "proposed_operating_power_units": "20",
+          "finished_part_inputs_approved_2026_11_02": "part-computing-parts:6; part-control-and-sensor-parts:4; candidate-part-optical-parts:3; candidate-part-thermal-parts:1; part-power-electronics:3; part-structural-components:1",
+          "proposed_operating_consumables": "Rated Power + standard component Part wear/replacement. Water remains included in Food.",
+          "approval_status": "APPROVED_PHYSICAL_BOM_2026_11_02__MANUFACTURER_CC_AND_GENERIC_WEAR_RATES_PROVISIONAL",
+          "notes": "User approved §71-§72 physical BOMs for all five machines (2 Nov 2026). Machine identity, capacity, m², Power and logarithmic category access already approved. No new maintenance tiers, water commodity or leisure licence. Source §73; CC examples and morale point weights provisional."
+        }
+      },
+      {
+        "id": "candidate-machine-integrated-wellness-leisure-system",
+        "sourceFile": "docs/discovery/proposed-accommodation-luxury-machine-review.csv",
+        "section": "luxuryRatings",
+        "fields": {
+          "candidate_machine_name": "Integrated Wellness & Leisure System",
+          "required_housing_tech_level": "5",
+          "amenity_category": "wellness",
+          "proposed_resident_service_equivalents_per_day": "120",
+          "proposed_machine_footprint_m2": "120",
+          "proposed_operating_power_units": "45",
+          "finished_part_inputs_approved_2026_11_02": "part-fluid-handling-parts:4; candidate-part-thermal-parts:3; part-computing-parts:2; part-power-electronics:2; part-structural-components:3; part-mechanical-parts:3; part-control-and-sensor-parts:2",
+          "proposed_operating_consumables": "Rated Power + standard component Part wear/replacement. Water remains included in Food.",
+          "approval_status": "APPROVED_PHYSICAL_BOM_2026_11_02__MANUFACTURER_CC_AND_GENERIC_WEAR_RATES_PROVISIONAL",
+          "notes": "User approved §71-§72 physical BOMs for all five machines (2 Nov 2026). Machine identity, capacity, m², Power and logarithmic category access already approved. No new maintenance tiers, water commodity or leisure licence. Source §73; CC examples and morale point weights provisional."
+        }
+      },
+      {
+        "id": "candidate-machine-personal-recreation-terminal",
+        "sourceFile": "docs/discovery/proposed-accommodation-luxury-machine-bom-cost-review.csv",
+        "section": "luxuryBOM",
+        "fields": {
+          "name": "Personal Recreation Terminal",
+          "housing_tech_unlock": "1",
+          "amenity_category": "personal_media",
+          "resident_service_slots_per_day_APPROVED": "1",
+          "footprint_m2_APPROVED": "2",
+          "operating_power_units_APPROVED": "0.25",
+          "proposed_direct_finished_part_counts": "part-computing-parts:1",
+          "proposed_direct_processed_materials_kg": "Steel:1.5; Polymer:2; Glass:0.5; Refined Copper:0.2",
+          "proposed_assembly_labour_h": "5",
+          "proposed_factory_shop_h": "3",
+          "proposed_qualification_test_h": "2",
+          "proposed_good_unit_yield": "0.98",
+          "reference_part_factory_cost_CC": "5116.09",
+          "provisional_direct_material_cost_CC": "58.40",
+          "provisional_labour_cost_CC": "350.00",
+          "provisional_factory_and_test_cost_CC": "640.00",
+          "provisional_manufacturer_cost_CC": "6290.30",
+          "provisional_manufacturer_sell_quote_CC": "7900",
+          "accounted_direct_and_part_input_mass_kg": "8.90",
+          "operating_consumables_and_maintenance": "Standard Machine/Part condition and replacement only; rated Power; Water included in Food; world-appropriate host Life Support / Climate Control are separately rated physical assets.",
+          "approval_status": "APPROVED_PHYSICAL_BOM_2026_11_02__MANUFACTURER_CC_AND_GENERIC_WEAR_RATES_PROVISIONAL",
+          "unresolved_engineering_and_pricing_constraints": "§73: User approved all five physical manufacturing recipes including Parts, direct materials, assembly/shop/test hours, yield. Numerical CC prices are conditional on unapproved material costs and factory tariffs. No separate water or maintenance system. Luxury morale point weights unapproved."
+        }
+      },
+      {
+        "id": "candidate-machine-communal-fitness-leisure-system",
+        "sourceFile": "docs/discovery/proposed-accommodation-luxury-machine-bom-cost-review.csv",
+        "section": "luxuryBOM",
+        "fields": {
+          "name": "Communal Fitness & Leisure System",
+          "housing_tech_unlock": "2",
+          "amenity_category": "fitness_social",
+          "resident_service_slots_per_day_APPROVED": "10",
+          "footprint_m2_APPROVED": "16",
+          "operating_power_units_APPROVED": "3",
+          "proposed_direct_finished_part_counts": "part-mechanical-parts:2; part-power-electronics:1; part-control-and-sensor-parts:1",
+          "proposed_direct_processed_materials_kg": "Steel:80; Polymer:25; Refined Copper:4; Glass:4",
+          "proposed_assembly_labour_h": "40",
+          "proposed_factory_shop_h": "30",
+          "proposed_qualification_test_h": "16",
+          "proposed_good_unit_yield": "0.96",
+          "reference_part_factory_cost_CC": "8333.54",
+          "provisional_direct_material_cost_CC": "1226.00",
+          "provisional_labour_cost_CC": "2800.00",
+          "provisional_factory_and_test_cost_CC": "5960.00",
+          "provisional_manufacturer_cost_CC": "19082.85",
+          "provisional_manufacturer_sell_quote_CC": "23900",
+          "accounted_direct_and_part_input_mass_kg": "161.60",
+          "operating_consumables_and_maintenance": "Standard Machine/Part condition and replacement only; rated Power; Water included in Food; world-appropriate host Life Support / Climate Control are separately rated physical assets.",
+          "approval_status": "APPROVED_PHYSICAL_BOM_2026_11_02__MANUFACTURER_CC_AND_GENERIC_WEAR_RATES_PROVISIONAL",
+          "unresolved_engineering_and_pricing_constraints": "§73: User approved all five physical manufacturing recipes including Parts, direct materials, assembly/shop/test hours, yield. Numerical CC prices are conditional on unapproved material costs and factory tariffs. No separate water or maintenance system. Luxury morale point weights unapproved."
+        }
+      },
+      {
+        "id": "candidate-machine-advanced-entertainment-system",
+        "sourceFile": "docs/discovery/proposed-accommodation-luxury-machine-bom-cost-review.csv",
+        "section": "luxuryBOM",
+        "fields": {
+          "name": "Advanced Entertainment System",
+          "housing_tech_unlock": "3",
+          "amenity_category": "cultural_entertainment",
+          "resident_service_slots_per_day_APPROVED": "30",
+          "footprint_m2_APPROVED": "25",
+          "operating_power_units_APPROVED": "7",
+          "proposed_direct_finished_part_counts": "part-computing-parts:2; part-power-electronics:1; part-control-and-sensor-parts:1; candidate-part-optical-parts:1",
+          "proposed_direct_processed_materials_kg": "Steel:100; Glass:30; Refined Copper:12; Polymer:24",
+          "proposed_assembly_labour_h": "80",
+          "proposed_factory_shop_h": "65",
+          "proposed_qualification_test_h": "35",
+          "proposed_good_unit_yield": "0.95",
+          "reference_part_factory_cost_CC": "18269.79",
+          "provisional_direct_material_cost_CC": "1856.00",
+          "provisional_labour_cost_CC": "5600.00",
+          "provisional_factory_and_test_cost_CC": "12950.00",
+          "provisional_manufacturer_cost_CC": "40711.36",
+          "provisional_manufacturer_sell_quote_CC": "50900",
+          "accounted_direct_and_part_input_mass_kg": "197.80",
+          "operating_consumables_and_maintenance": "Standard Machine/Part condition and replacement only; rated Power; Water included in Food; world-appropriate host Life Support / Climate Control are separately rated physical assets.",
+          "approval_status": "APPROVED_PHYSICAL_BOM_2026_11_02__MANUFACTURER_CC_AND_GENERIC_WEAR_RATES_PROVISIONAL",
+          "unresolved_engineering_and_pricing_constraints": "§73: User approved all five physical manufacturing recipes including Parts, direct materials, assembly/shop/test hours, yield. Numerical CC prices are conditional on unapproved material costs and factory tariffs. No separate water or maintenance system. Luxury morale point weights unapproved."
+        }
+      },
+      {
+        "id": "candidate-machine-immersive-recreation-suite",
+        "sourceFile": "docs/discovery/proposed-accommodation-luxury-machine-bom-cost-review.csv",
+        "section": "luxuryBOM",
+        "fields": {
+          "name": "Immersive Recreation Suite",
+          "housing_tech_unlock": "4",
+          "amenity_category": "immersive_recreation",
+          "resident_service_slots_per_day_APPROVED": "60",
+          "footprint_m2_APPROVED": "50",
+          "operating_power_units_APPROVED": "20",
+          "proposed_direct_finished_part_counts": "part-computing-parts:6; part-control-and-sensor-parts:4; candidate-part-optical-parts:3; candidate-part-thermal-parts:1; part-power-electronics:3; part-structural-components:1",
+          "proposed_direct_processed_materials_kg": "Steel:180; Glass:60; Refined Copper:18; Polymer:70; Refined Ceramic:20",
+          "proposed_assembly_labour_h": "180",
+          "proposed_factory_shop_h": "135",
+          "proposed_qualification_test_h": "70",
+          "proposed_good_unit_yield": "0.93",
+          "reference_part_factory_cost_CC": "62199.57",
+          "provisional_direct_material_cost_CC": "4136.00",
+          "provisional_labour_cost_CC": "12600.00",
+          "provisional_factory_and_test_cost_CC": "26600.00",
+          "provisional_manufacturer_cost_CC": "113479.11",
+          "provisional_manufacturer_sell_quote_CC": "141850",
+          "accounted_direct_and_part_input_mass_kg": "562.52",
+          "operating_consumables_and_maintenance": "Standard Machine/Part condition and replacement only; rated Power; Water included in Food; world-appropriate host Life Support / Climate Control are separately rated physical assets.",
+          "approval_status": "APPROVED_PHYSICAL_BOM_2026_11_02__MANUFACTURER_CC_AND_GENERIC_WEAR_RATES_PROVISIONAL",
+          "unresolved_engineering_and_pricing_constraints": "§73: User approved all five physical manufacturing recipes including Parts, direct materials, assembly/shop/test hours, yield. Numerical CC prices are conditional on unapproved material costs and factory tariffs. No separate water or maintenance system. Luxury morale point weights unapproved."
+        }
+      },
+      {
+        "id": "candidate-machine-integrated-wellness-leisure-system",
+        "sourceFile": "docs/discovery/proposed-accommodation-luxury-machine-bom-cost-review.csv",
+        "section": "luxuryBOM",
+        "fields": {
+          "name": "Integrated Wellness & Leisure System",
+          "housing_tech_unlock": "5",
+          "amenity_category": "wellness",
+          "resident_service_slots_per_day_APPROVED": "120",
+          "footprint_m2_APPROVED": "120",
+          "operating_power_units_APPROVED": "45",
+          "proposed_direct_finished_part_counts": "part-fluid-handling-parts:4; candidate-part-thermal-parts:3; part-computing-parts:2; part-power-electronics:2; part-structural-components:3; part-mechanical-parts:3; part-control-and-sensor-parts:2",
+          "proposed_direct_processed_materials_kg": "Steel:500; Stainless Steel:160; Glass:160; Refined Copper:55; Refined Ceramic:60; Polymer:120",
+          "proposed_assembly_labour_h": "300",
+          "proposed_factory_shop_h": "260",
+          "proposed_qualification_test_h": "120",
+          "proposed_good_unit_yield": "0.92",
+          "reference_part_factory_cost_CC": "47035.10",
+          "provisional_direct_material_cost_CC": "13290.00",
+          "provisional_labour_cost_CC": "21000.00",
+          "provisional_factory_and_test_cost_CC": "49600.00",
+          "provisional_manufacturer_cost_CC": "142309.89",
+          "provisional_manufacturer_sell_quote_CC": "177900",
+          "accounted_direct_and_part_input_mass_kg": "1597.50",
+          "operating_consumables_and_maintenance": "Standard Machine/Part condition and replacement only; rated Power; Water included in Food; world-appropriate host Life Support / Climate Control are separately rated physical assets.",
+          "approval_status": "APPROVED_PHYSICAL_BOM_2026_11_02__MANUFACTURER_CC_AND_GENERIC_WEAR_RATES_PROVISIONAL",
+          "unresolved_engineering_and_pricing_constraints": "§73: User approved all five physical manufacturing recipes including Parts, direct materials, assembly/shop/test hours, yield. Numerical CC prices are conditional on unapproved material costs and factory tariffs. No separate water or maintenance system. Luxury morale point weights unapproved."
+        }
+      },
+      {
+        "id": "candidate-machine-conventional-electric-motor",
+        "sourceFile": "docs/discovery/proposed-electric-motor-machine-catalogue.csv",
+        "section": "electricMotors",
+        "fields": {
+          "product_name": "Conventional Electric Motor",
+          "product_kind": "Finished installable Machine subassembly",
+          "approved_principal_materials": "Refined Copper + Steel",
+          "intended_machine_consumers": "Conveyor Machine; Pump Machine; warehouse or bulk-handling drives; conventional manufacturing machinery",
+          "existing_manufacturing_destination": "Machine Works / existing Industry machinery assembly",
+          "approval_status": "APPROVED DISCOVERY; Universe canonical ID pending",
+          "pricing_and_units": "1 finished motor = 1 stock unit; price TBD",
+          "unresolved_requirements": "Exact rated power and size, insulation, bearings, control Parts, BOM material quantities, installed Machine compatibility, machine/test equipment, power, labour, yield, mass, volume, wear and price TBD."
+        }
+      },
+      {
+        "id": "candidate-machine-rare-earth-permanent-magnet-motor",
+        "sourceFile": "docs/discovery/proposed-electric-motor-machine-catalogue.csv",
+        "section": "electricMotors",
+        "fields": {
+          "product_name": "Rare-Earth Permanent-Magnet Motor",
+          "product_kind": "Finished installable Machine subassembly",
+          "approved_principal_materials": "Refined Copper + Steel + Rare Earth Magnet Alloy",
+          "intended_machine_consumers": "Exploration Vehicle compact traction; precision actuators; size/weight-constrained industrial drive; appropriate spacecraft auxiliary systems",
+          "existing_manufacturing_destination": "Machine Works / existing Industry machinery assembly",
+          "approval_status": "APPROVED DISCOVERY; Universe canonical ID pending",
+          "pricing_and_units": "1 finished motor = 1 stock unit; price TBD",
+          "unresolved_requirements": "Justify specific consumer via required power/torque/size/efficiency, magnet temperature grade, ratings, controls and thermal management. Insulation, other Part inputs, quantities, mass, production equipment, wear and price TBD."
+        }
+      }
+    ],
+    "buildings": []
+  }
+}
