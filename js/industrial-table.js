@@ -38,7 +38,9 @@ const configurations = {
       group("Production & Prices",
         "planningReference.finishedMassKg planningReference.manufacturerCostCC planningReference.baseManufacturerQuoteCC planningReference.status planningReference.basis"),
       group("Discovery & Approval", "materialApprovalStatus"),
-      common[1], visuals, group("Description", "description")
+      group("Canon & Provenance", "canonStatus provenance.desktopPath planningReference.sourceSection"),
+      group("Artwork & Visuals", "image.key image.generated image.status image.promptDescription image.notes"),
+      group("Description", "description")
     ]
   },
   machines: {
@@ -94,8 +96,7 @@ const configurations = {
 // Source-specific fields are classified alongside their related primary attributes.
 const additionalGroupFields = {
   parts: {
-    "Canon & Provenance": "provenance.authoredFor provenance.sourceRepository provenance.sourcePath provenance.sourceCommit provenance.androidDiscoveryWorkingId provenance.partsDiscovery.repository provenance.partsDiscovery.sourceCommit provenance.partsDiscovery.sourceSections",
-    "Artwork & Visuals": "image.promptDescription"
+    "Canon & Provenance": "provenance.authoredFor provenance.sourceRepository provenance.sourcePath provenance.sourceCommit provenance.androidDiscoveryWorkingId provenance.partsDiscovery.repository provenance.partsDiscovery.sourceCommit provenance.partsDiscovery.sourceSections"
   },
   machines: {
     "Identity & Classification": "review.manufacturingBOM.machine_name review.manufacturingBOM.category review.luxuryRatings.candidate_machine_name review.luxuryBOM.name review.electricMotors.product_name review.electricMotors.product_kind",
