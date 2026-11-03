@@ -235,7 +235,7 @@ export function createSubstanceTable(config = {}) {
       tbody.innerHTML = result.map(row => '<tr>' + ordered.map(key => {
         const value = fieldText(row.fields[key], catalogue);
         const label = value || "—";
-        return '<td title="' + esc(value) + '">' + (key === "name" ?
+        return '<td title="' + esc(value) + '">' + (key === "name" && row.canonical !== false ?
           '<button class="substance-item" type="button" data-item-id="' +
           esc(row.id) + '">' + esc(label) + '</button>' : esc(label)) + '</td>';
       }).join("") + '</tr>').join("") ||
