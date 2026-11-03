@@ -105,6 +105,89 @@ if (buildings.length !== 24) {
 if (parts.length < 13) errors.push(`Industrial parts catalogue unexpectedly small: ${parts.length}.`);
 if (machines.length < 28) errors.push(`Industrial machines catalogue unexpectedly small: ${machines.length}.`);
 
+// Canonical identity reconciliation preserves older broad Part families.
+const reconciledPartIds = [
+  'part-lead-acid-battery-module', 'part-lithium-based-battery-module',
+  'part-thermal-parts', 'part-optical-parts',
+  'part-forming-cutting-tooling', 'part-welding-parts',
+  'part-precast-concrete-sections', 'part-nuclear-fuel-assembly'
+];
+const reconciledMachineIds = [
+  'machine-conventional-electric-motor', 'machine-rare-earth-permanent-magnet-motor',
+  'machine-vector-exchange-drive', 'machine-personal-recreation-terminal',
+  'machine-communal-fitness-leisure-system', 'machine-advanced-entertainment-system',
+  'machine-immersive-recreation-suite', 'machine-integrated-wellness-leisure-system'
+];
+for (const id of reconciledPartIds) {
+  const part = partById.get(id);
+  if (!part) { errors.push(`Canonical discovery Part missing: ${id}`); continue; }
+  if (!part.provenance?.androidDiscoveryWorkingId?.startsWith('candidate-'))
+    errors.push(`${id}: missing stable Android discovery crosswalk`);
+  if (!part.materialDesignStatus)
+    errors.push(`${id}: source material-design approval state required`);
+}
+for (const id of reconciledMachineIds) {
+  const machine = machineById.get(id);
+  if (!machine) { errors.push(`Canonical discovery Machine missing: ${id}`); continue; }
+  if (!machine.provenance?.androidDiscoveryWorkingId?.startsWith('candidate-'))
+    errors.push(`${id}: missing stable Android discovery crosswalk`);
+  if (!machine.manufacturingDesignStatus)
+    errors.push(`${id}: source manufacturing-design status required`);
+}
+for (const id of ['part-battery-parts', 'part-thermal-optical-parts', 'part-fabrication-parts']) {
+  if (!partById.has(id)) errors.push(`Legacy broad Part identity missing: ${id}`);
+}
+const [genericMaterials, namedMaterials] = await Promise.all([
+  readFile(resolve(dataRoot, 'substances.json'), 'utf8').then(JSON.parse),
+  readFile(resolve(dataRoot, 'named-substances.json'), 'utf8').then(JSON.parse)
+]);
+const materialIds = new Set([...genericMaterials, ...namedMaterials].map(item => item.id));
+let approvedLuxuryCount = 0;
+for (const part of parts) {
+  for (const substanceId of part.substanceIds || []) {
+    if (!materialIds.has(substanceId))
+      errors.push(`${part.id}: unknown material ${substanceId}`);
+  }
+}
+for (const machine of machines) {
+  for (const materialId of machine.principalMaterialIds || []) {
+    if (!materialIds.has(materialId))
+      errors.push(`${machine.id}: unknown principal material ${materialId}`);
+  }
+  const bom = machine.approvedPhysicalBOM;
+  if (!bom) continue;
+  approvedLuxuryCount++;
+  if (bom.approval !== 'approved-physical-bom-2026-11-02')
+    errors.push(`${machine.id}: unexpected physical BOM approval`);
+  if (!machine.amenityProfile || machine.amenityProfile.approval !== 'approved-discovery-2026-11-02')
+    errors.push(`${machine.id}: approved physical BOM missing approved amenity rating`);
+  const linkedParts = new Set(machine.partIds || []);
+  for (const entry of bom.finishedPartInputs || []) {
+    if (!partById.has(entry.partId) || !linkedParts.has(entry.partId) ||
+        !Number.isInteger(entry.quantity) || entry.quantity <= 0)
+      errors.push(`${machine.id}: invalid finished Part input ${JSON.stringify(entry)}`);
+  }
+  for (const entry of bom.directMaterialInputs || []) {
+    if (!materialIds.has(entry.materialId) || !Number.isFinite(entry.quantityKg) ||
+        entry.quantityKg <= 0)
+      errors.push(`${machine.id}: invalid direct material input ${JSON.stringify(entry)}`);
+  }
+  for (const field of ['assemblyLabourHours', 'factoryShopHours', 'qualificationTestHours']) {
+    if (!Number.isFinite(bom[field]) || bom[field] < 0)
+      errors.push(`${machine.id}: invalid approved manufacturing ${field}`);
+  }
+  if (!(bom.targetGoodUnitYield > 0 && bom.targetGoodUnitYield <= 1))
+    errors.push(`${machine.id}: invalid approved production yield`);
+  for (const field of ['residentServiceSlotsPerDay', 'floorAreaM2', 'operatingPowerUnits']) {
+    if (!(machine.amenityProfile[field] > 0))
+      errors.push(`${machine.id}: invalid approved amenity rating ${field}`);
+  }
+  if (machine.manufacturerCostCC != null || machine.baseSellQuoteCC != null)
+    errors.push(`${machine.id}: provisional prices must not be canonicalised`);
+}
+if (approvedLuxuryCount !== 5)
+  errors.push(`Expected five approved physical amenity BOMs, found ${approvedLuxuryCount}`);
+
 if (errors.length) {
   console.error(`Industrial catalogue validation failed with ${errors.length} error(s):`);
   errors.forEach(error => console.error(`- ${error}`));
