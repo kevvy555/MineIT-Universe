@@ -127,6 +127,41 @@ export async function loadIndustrialDiscoveryReference() {
   }
 }
 
+export function industrialReviewRows(kind, catalogue, reference) {
+  if (!["parts", "machines", "buildings"].includes(kind))
+    throw new Error("Unsupported industrial catalogue: " + kind);
+  const source = new Map((reference?.[kind] || []).map(row => [row.id, row.review]));
+  const canonicalRows = catalogue.collection(kind).map(record => {
+    const fields = flatten(record);
+    fields.catalogueStatus = "Canonical";
+    if (source.has(record.id)) flatten(source.get(record.id), "review", fields);
+    return { id: record.id, record, collection: kind, fields, canonical: true };
+  });
+  // Candidates are review-only rows, not Universe entities. Never link to missing IDs.
+  const candidates = new Map();
+  for (const candidate of reference?.unmappedCandidates?.[kind] || []) {
+    const row = candidates.get(candidate.id) || {
+      id: candidate.id, name: "", review: {}
+    };
+    row.name ||= candidate.fields.product_name || candidate.fields.machine_name ||
+      candidate.fields.candidate_machine_name || candidate.fields.name || "";
+    row.review[candidate.section] = candidate.fields;
+    candidates.set(candidate.id, row);
+  }
+  const reviewRows = [...candidates.values()].map(candidate => {
+    const record = {
+      id: candidate.id, name: candidate.name || candidate.id,
+      catalogueStatus: "Discovery candidate — not canonical"
+    };
+    const fields = flatten(record);
+    flatten(candidate.review, "review", fields);
+    return { id: candidate.id, record, collection: kind,
+      fields, canonical: false };
+  });
+  return [...canonicalRows, ...reviewRows]
+    .sort((a, b) => a.record.name.localeCompare(b.record.name));
+}
+
 export function createIndustrialTables() {
   return Object.fromEntries(Object.entries(configurations).map(([kind, config]) =>
     [kind, createSubstanceTable({
@@ -138,36 +173,7 @@ export function createIndustrialTables() {
       })),
       storageKey: "mineit" + config.title + "Columns",
       rows(catalogue, reference) {
-        const source = new Map((reference?.[kind] || []).map(row => [row.id, row.review]));
-        const canonicalRows = catalogue.collection(kind).map(record => {
-          const fields = flatten(record);
-          fields.catalogueStatus = "Canonical";
-          if (source.has(record.id)) flatten(source.get(record.id), "review", fields);
-          return { id: record.id, record, collection: kind, fields, canonical: true };
-        });
-        // Candidates are review-only rows, not Universe entities. Never link to missing IDs.
-        const candidates = new Map();
-        for (const candidate of reference?.unmappedCandidates?.[kind] || []) {
-          const row = candidates.get(candidate.id) || {
-            id: candidate.id, name: "", review: {}
-          };
-          row.name ||= candidate.fields.product_name || candidate.fields.machine_name ||
-            candidate.fields.candidate_machine_name || candidate.fields.name || "";
-          row.review[candidate.section] = candidate.fields;
-          candidates.set(candidate.id, row);
-        }
-        const reviewRows = [...candidates.values()].map(candidate => {
-          const record = {
-            id: candidate.id, name: candidate.name || candidate.id,
-            catalogueStatus: "Discovery candidate — not canonical"
-          };
-          const fields = flatten(record);
-          flatten(candidate.review, "review", fields);
-          return { id: candidate.id, record, collection: kind,
-            fields, canonical: false };
-        });
-        return [...canonicalRows, ...reviewRows]
-          .sort((a, b) => a.record.name.localeCompare(b.record.name));
+        return industrialReviewRows(kind, catalogue, reference);
       },
       sourceNote(reference) {
         return reference
