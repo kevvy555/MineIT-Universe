@@ -126,7 +126,11 @@
       "machine-ship-refinery-unit",
       "machine-colony-operations-computer",
       "machine-bulk-stacker",
-      "machine-warehouse-handler"
+      "machine-warehouse-handler",
+      "machine-communal-fitness-leisure-system",
+      "machine-advanced-entertainment-system",
+      "machine-immersive-recreation-suite",
+      "machine-integrated-wellness-leisure-system"
     ],
     "image": {
       "key": "assets/art/universe/parts/part-power-electronics.webp",
@@ -177,7 +181,9 @@
       "machine-ship-refinery-unit",
       "machine-livestock-handling-system",
       "machine-bulk-stacker",
-      "machine-warehouse-handler"
+      "machine-warehouse-handler",
+      "machine-communal-fitness-leisure-system",
+      "machine-integrated-wellness-leisure-system"
     ],
     "image": {
       "key": "assets/art/universe/parts/part-mechanical-parts.webp",
@@ -227,7 +233,11 @@
       "machine-ship-computer",
       "machine-livestock-handling-system",
       "machine-colony-operations-computer",
-      "machine-warehouse-handler"
+      "machine-warehouse-handler",
+      "machine-communal-fitness-leisure-system",
+      "machine-advanced-entertainment-system",
+      "machine-immersive-recreation-suite",
+      "machine-integrated-wellness-leisure-system"
     ],
     "image": {
       "key": "assets/art/universe/parts/part-control-and-sensor-parts.webp",
@@ -322,7 +332,9 @@
       "machine-ship-refinery-unit",
       "machine-livestock-handling-system",
       "machine-bulk-stacker",
-      "machine-warehouse-handler"
+      "machine-warehouse-handler",
+      "machine-immersive-recreation-suite",
+      "machine-integrated-wellness-leisure-system"
     ],
     "image": {
       "key": "assets/art/universe/parts/part-structural-components.webp",
@@ -467,7 +479,11 @@
     "machineIds": [
       "machine-research-computer",
       "machine-ship-computer",
-      "machine-colony-operations-computer"
+      "machine-colony-operations-computer",
+      "machine-personal-recreation-terminal",
+      "machine-advanced-entertainment-system",
+      "machine-immersive-recreation-suite",
+      "machine-integrated-wellness-leisure-system"
     ],
     "image": {
       "key": "assets/art/universe/parts/part-computing-parts.webp",
@@ -542,7 +558,8 @@
       "machine-irrigation-system",
       "machine-filtration-machine",
       "machine-ship-life-support",
-      "machine-livestock-handling-system"
+      "machine-livestock-handling-system",
+      "machine-integrated-wellness-leisure-system"
     ],
     "image": {
       "key": "assets/art/universe/parts/part-fluid-handling-parts.webp",
@@ -584,6 +601,292 @@
       "status": "generated",
       "promptDescription": "Workshop kit photograph of bulk-handling parts: hoppers, chutes, screening decks, grabs and pallet forks in charcoal structural metal with ceramic wear lips. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
       "notes": "Identity-neutral spare-part kit; not a complete machine."
+    }
+  },
+  {
+    "id": "part-lead-acid-battery-module",
+    "name": "Lead-Acid Battery Module",
+    "entityType": "Part",
+    "category": "Power",
+    "subCategory": "Battery",
+    "subCategories": [
+      "Battery"
+    ],
+    "sources": [
+      "Manufactured"
+    ],
+    "substanceIds": [
+      "named-substance-refined-lead",
+      "named-substance-sulfuric-acid"
+    ],
+    "description": "A complete lead-acid electrical storage module for stationary industrial and backup power applications, distinct from generic replaceable Battery Parts.",
+    "canonStatus": "working canon",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/discovery/proposed-parts-material-boms.csv",
+      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+      "androidDiscoveryWorkingId": "candidate-part-lead-acid-battery-module"
+    },
+    "materialDesignStatus": "APPROVED_PRODUCT_BOM_PENDING",
+    "materialDesignNotes": "Approved battery chemistry and identity; electrochemical plate design, safety certification, exact bill of materials and ratings remain unresolved.",
+    "machineIds": [],
+    "image": {
+      "key": "assets/art/universe/parts/part-lead-acid-battery-module.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Studio product photograph of lead-acid battery module: physically plausible industrial component kit or assembled module, safely labelled only by shape, practical exposed material details, neutral background, Year-5326 Koplin industrial realism. No readable text, branding, logos, people or watermark.",
+      "notes": "Art not yet generated; candidate identity reconciled from Android industrial discovery."
+    }
+  },
+  {
+    "id": "part-lithium-based-battery-module",
+    "name": "Lithium-Based Battery Module",
+    "entityType": "Part",
+    "category": "Power",
+    "subCategory": "Battery",
+    "subCategories": [
+      "Battery"
+    ],
+    "sources": [
+      "Manufactured"
+    ],
+    "substanceIds": [
+      "named-substance-lithium-carbonate",
+      "substance-refined-graphite",
+      "named-substance-refined-copper"
+    ],
+    "description": "A complete lightweight lithium-based storage module intended for weight-sensitive mobile equipment; final cathode chemistry and thermal protection must be qualified.",
+    "canonStatus": "working canon",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/discovery/proposed-parts-material-boms.csv",
+      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+      "androidDiscoveryWorkingId": "candidate-part-lithium-based-battery-module"
+    },
+    "materialDesignStatus": "APPROVED_PRODUCT_BOM_PENDING",
+    "materialDesignNotes": "Lithium carbonate is an upstream precursor, not an approved directly usable cathode. Cell chemistry, separators, electrolyte and final quantitative recipe are still undecided.",
+    "machineIds": [],
+    "image": {
+      "key": "assets/art/universe/parts/part-lithium-based-battery-module.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Studio product photograph of lithium-based battery module: physically plausible industrial component kit or assembled module, safely labelled only by shape, practical exposed material details, neutral background, Year-5326 Koplin industrial realism. No readable text, branding, logos, people or watermark.",
+      "notes": "Art not yet generated; candidate identity reconciled from Android industrial discovery."
+    }
+  },
+  {
+    "id": "part-thermal-parts",
+    "name": "Thermal Parts",
+    "entityType": "Part",
+    "category": "Thermal",
+    "subCategory": "Thermal Management",
+    "subCategories": [
+      "Thermal Management"
+    ],
+    "sources": [
+      "Manufactured"
+    ],
+    "substanceIds": [
+      "named-substance-stainless-steel",
+      "substance-refined-ceramic"
+    ],
+    "description": "Serviceable components for transferring, containing or shielding heat in industrial and environmental machinery, distinct from Optical Parts.",
+    "canonStatus": "working canon",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/discovery/proposed-parts-material-boms.csv",
+      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+      "androidDiscoveryWorkingId": "candidate-part-thermal-parts"
+    },
+    "materialDesignStatus": "APPROVED_INPUT_FAMILIES",
+    "materialDesignNotes": "Specific insulation grade and machine-specific ratings remain to be qualified; existing Thermal / Optical Parts record is retained for older consumers.",
+    "machineIds": [
+      "machine-immersive-recreation-suite",
+      "machine-integrated-wellness-leisure-system"
+    ],
+    "image": {
+      "key": "assets/art/universe/parts/part-thermal-parts.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Studio product photograph of thermal parts: physically plausible industrial component kit or assembled module, safely labelled only by shape, practical exposed material details, neutral background, Year-5326 Koplin industrial realism. No readable text, branding, logos, people or watermark.",
+      "notes": "Art not yet generated; candidate identity reconciled from Android industrial discovery."
+    }
+  },
+  {
+    "id": "part-optical-parts",
+    "name": "Optical Parts",
+    "entityType": "Part",
+    "category": "Electronics",
+    "subCategory": "Optics",
+    "subCategories": [
+      "Optics"
+    ],
+    "sources": [
+      "Manufactured"
+    ],
+    "substanceIds": [
+      "substance-glass",
+      "substance-refined-ceramic"
+    ],
+    "description": "Serviceable lenses, mirrors and optical assemblies for sensing, illumination or optical instruments, separate from thermal machinery components.",
+    "canonStatus": "working canon",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/discovery/proposed-parts-material-boms.csv",
+      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+      "androidDiscoveryWorkingId": "candidate-part-optical-parts"
+    },
+    "materialDesignStatus": "APPROVED_INPUT_FAMILIES",
+    "materialDesignNotes": "Optical grade, metal housing and specialist sapphire requirements remain conditional; existing Thermal / Optical Parts record is retained.",
+    "machineIds": [
+      "machine-advanced-entertainment-system",
+      "machine-immersive-recreation-suite"
+    ],
+    "image": {
+      "key": "assets/art/universe/parts/part-optical-parts.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Studio product photograph of optical parts: physically plausible industrial component kit or assembled module, safely labelled only by shape, practical exposed material details, neutral background, Year-5326 Koplin industrial realism. No readable text, branding, logos, people or watermark.",
+      "notes": "Art not yet generated; candidate identity reconciled from Android industrial discovery."
+    }
+  },
+  {
+    "id": "part-forming-cutting-tooling",
+    "name": "Forming & Cutting Tooling",
+    "entityType": "Part",
+    "category": "Manufacturing",
+    "subCategory": "Tooling",
+    "subCategories": [
+      "Tooling"
+    ],
+    "sources": [
+      "Manufactured"
+    ],
+    "substanceIds": [
+      "named-substance-steel",
+      "named-substance-cemented-tungsten-carbide"
+    ],
+    "description": "Replaceable dies, cutters and forming implements used in industrial fabrication and machining, distinct from welding consumables.",
+    "canonStatus": "working canon",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/discovery/proposed-parts-material-boms.csv",
+      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+      "androidDiscoveryWorkingId": "candidate-part-forming-cutting-tooling"
+    },
+    "materialDesignStatus": "APPROVED_INPUT_FAMILIES",
+    "materialDesignNotes": "Qualified tooling geometry, wear grade, size and machine compatibility are still under review; generic Fabrication Parts remains valid.",
+    "machineIds": [],
+    "image": {
+      "key": "assets/art/universe/parts/part-forming-cutting-tooling.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Studio product photograph of forming & cutting tooling: physically plausible industrial component kit or assembled module, safely labelled only by shape, practical exposed material details, neutral background, Year-5326 Koplin industrial realism. No readable text, branding, logos, people or watermark.",
+      "notes": "Art not yet generated; candidate identity reconciled from Android industrial discovery."
+    }
+  },
+  {
+    "id": "part-welding-parts",
+    "name": "Welding Parts",
+    "entityType": "Part",
+    "category": "Manufacturing",
+    "subCategory": "Welding",
+    "subCategories": [
+      "Welding"
+    ],
+    "sources": [
+      "Manufactured"
+    ],
+    "substanceIds": [
+      "named-substance-refined-copper",
+      "named-substance-steel"
+    ],
+    "description": "Replaceable welding heads, electrical contacts and joining-equipment components for industrial welding processes.",
+    "canonStatus": "working canon",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/discovery/proposed-parts-material-boms.csv",
+      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+      "androidDiscoveryWorkingId": "candidate-part-welding-parts"
+    },
+    "materialDesignStatus": "APPROVED_INPUT_FAMILIES",
+    "materialDesignNotes": "The exact high-temperature insulation stock and welding processes are not yet qualified; generic Fabrication Parts remains valid.",
+    "machineIds": [],
+    "image": {
+      "key": "assets/art/universe/parts/part-welding-parts.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Studio product photograph of welding parts: physically plausible industrial component kit or assembled module, safely labelled only by shape, practical exposed material details, neutral background, Year-5326 Koplin industrial realism. No readable text, branding, logos, people or watermark.",
+      "notes": "Art not yet generated; candidate identity reconciled from Android industrial discovery."
+    }
+  },
+  {
+    "id": "part-precast-concrete-sections",
+    "name": "Precast Concrete Sections",
+    "entityType": "Part",
+    "category": "Construction",
+    "subCategory": "Structural Components",
+    "subCategories": [
+      "Structural Components"
+    ],
+    "sources": [
+      "Manufactured"
+    ],
+    "substanceIds": [
+      "named-substance-cement",
+      "named-substance-graded-aggregate"
+    ],
+    "description": "Factory-cast concrete structural sections transported and installed as finished construction components, rather than loose bulk cement or aggregate.",
+    "canonStatus": "working canon",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/discovery/proposed-parts-material-boms.csv",
+      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+      "androidDiscoveryWorkingId": "candidate-part-precast-concrete-sections"
+    },
+    "materialDesignStatus": "APPROVED_INPUT_FAMILIES",
+    "materialDesignNotes": "Sand grade, section dimensions, reinforcement requirements, curing process and final quantities require engineering review.",
+    "machineIds": [],
+    "image": {
+      "key": "assets/art/universe/parts/part-precast-concrete-sections.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Studio product photograph of precast concrete sections: physically plausible industrial component kit or assembled module, safely labelled only by shape, practical exposed material details, neutral background, Year-5326 Koplin industrial realism. No readable text, branding, logos, people or watermark.",
+      "notes": "Art not yet generated; candidate identity reconciled from Android industrial discovery."
+    }
+  },
+  {
+    "id": "part-nuclear-fuel-assembly",
+    "name": "Nuclear Fuel Assembly",
+    "entityType": "Part",
+    "category": "Power",
+    "subCategory": "Nuclear Fuel",
+    "subCategories": [
+      "Nuclear Fuel"
+    ],
+    "sources": [
+      "Manufactured"
+    ],
+    "substanceIds": [
+      "named-substance-uranium-concentrate"
+    ],
+    "description": "A qualified manufactured fission-fuel assembly consumed in a compatible nuclear reactor and ultimately yielding spent nuclear fuel; it is distinct from fusion fuel.",
+    "canonStatus": "working canon",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/discovery/proposed-parts-material-boms.csv",
+      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+      "androidDiscoveryWorkingId": "candidate-part-nuclear-fuel-assembly"
+    },
+    "materialDesignStatus": "APPROVED_PRODUCT_BOM_PENDING",
+    "materialDesignNotes": "Uranium Concentrate is an upstream precursor, not an assembled fuel. Fuel chemistry, cladding, processing and reactor compatibility remain unresolved.",
+    "machineIds": [],
+    "image": {
+      "key": "assets/art/universe/parts/part-nuclear-fuel-assembly.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Studio product photograph of nuclear fuel assembly: physically plausible industrial component kit or assembled module, safely labelled only by shape, practical exposed material details, neutral background, Year-5326 Koplin industrial realism. No readable text, branding, logos, people or watermark.",
+      "notes": "Art not yet generated; candidate identity reconciled from Android industrial discovery."
     }
   }
 ]

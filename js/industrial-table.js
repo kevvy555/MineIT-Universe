@@ -94,16 +94,18 @@ const configurations = {
 const additionalGroupFields = {
   parts: {
     "Identity & Classification": "review.materialBOM.product_name",
-    "Canon & Provenance": "provenance.authoredFor"
+    "Materials & Construction": "materialDesignNotes",
+    "Discovery & Approval": "materialDesignStatus",
+    "Canon & Provenance": "provenance.authoredFor provenance.sourceRepository provenance.sourcePath provenance.sourceCommit provenance.androidDiscoveryWorkingId"
   },
   machines: {
     "Identity & Classification": "review.manufacturingBOM.machine_name review.manufacturingBOM.category review.luxuryRatings.candidate_machine_name review.luxuryBOM.name review.electricMotors.product_name review.electricMotors.product_kind",
-    "Parts & Materials": "review.luxuryRatings.finished_part_inputs_approved_2026_11_02 review.electricMotors.approved_principal_materials",
-    "Power & Service": "review.luxuryRatings.notes review.luxuryBOM.housing_tech_unlock review.luxuryBOM.amenity_category review.luxuryBOM.resident_service_slots_per_day_APPROVED review.luxuryBOM.footprint_m2_APPROVED review.luxuryBOM.operating_power_units_APPROVED review.luxuryBOM.operating_consumables_and_maintenance",
-    "Manufacturing & Quality": "review.luxuryBOM.proposed_assembly_labour_h review.luxuryBOM.proposed_factory_shop_h review.luxuryBOM.proposed_qualification_test_h review.luxuryBOM.proposed_good_unit_yield review.luxuryBOM.accounted_direct_and_part_input_mass_kg",
+    "Parts & Materials": "review.luxuryRatings.finished_part_inputs_approved_2026_11_02 review.electricMotors.approved_principal_materials principalMaterialIds approvedPhysicalBOM.finishedPartInputs approvedPhysicalBOM.directMaterialInputs",
+    "Power & Service": "review.luxuryRatings.notes review.luxuryBOM.housing_tech_unlock review.luxuryBOM.amenity_category review.luxuryBOM.resident_service_slots_per_day_APPROVED review.luxuryBOM.footprint_m2_APPROVED review.luxuryBOM.operating_power_units_APPROVED review.luxuryBOM.operating_consumables_and_maintenance amenityProfile.approval amenityProfile.category amenityProfile.residentServiceSlotsPerDay amenityProfile.floorAreaM2 amenityProfile.operatingPowerUnits",
+    "Manufacturing & Quality": "review.luxuryBOM.proposed_assembly_labour_h review.luxuryBOM.proposed_factory_shop_h review.luxuryBOM.proposed_qualification_test_h review.luxuryBOM.proposed_good_unit_yield review.luxuryBOM.accounted_direct_and_part_input_mass_kg approvedPhysicalBOM.approval approvedPhysicalBOM.assemblyLabourHours approvedPhysicalBOM.factoryShopHours approvedPhysicalBOM.qualificationTestHours approvedPhysicalBOM.targetGoodUnitYield",
     "Costs & Reference Quotes": "review.luxuryBOM.reference_part_factory_cost_CC review.luxuryBOM.provisional_direct_material_cost_CC review.luxuryBOM.provisional_labour_cost_CC review.luxuryBOM.provisional_factory_and_test_cost_CC review.luxuryBOM.provisional_manufacturer_cost_CC review.luxuryBOM.provisional_manufacturer_sell_quote_CC review.electricMotors.pricing_and_units",
-    "Discovery & Approval": "review.luxuryRatings.approval_status review.luxuryBOM.approval_status review.luxuryBOM.unresolved_engineering_and_pricing_constraints review.electricMotors.approval_status review.electricMotors.unresolved_requirements",
-    "Canon & Provenance": "provenance.authoredFor provenance.sourceState"
+    "Discovery & Approval": "review.luxuryRatings.approval_status review.luxuryBOM.approval_status review.luxuryBOM.unresolved_engineering_and_pricing_constraints review.electricMotors.approval_status review.electricMotors.unresolved_requirements manufacturingDesignStatus manufacturingDesignNotes",
+    "Canon & Provenance": "provenance.authoredFor provenance.sourceState provenance.sourceRepository provenance.sourcePath provenance.sourceCommit provenance.androidDiscoveryWorkingId provenance.lorePath"
   },
   buildings: {
     "Identity & Classification": "review.systematicReview.building_name review.bomCoverage.building_name review.quantitativeBOM.building_name",
@@ -130,16 +132,22 @@ export async function loadIndustrialDiscoveryReference() {
 export function industrialReviewRows(kind, catalogue, reference) {
   if (!["parts", "machines", "buildings"].includes(kind))
     throw new Error("Unsupported industrial catalogue: " + kind);
+  const canonicalRecords = catalogue.collection(kind);
+  const aliases = new Map(canonicalRecords
+    .filter(record => record.provenance?.androidDiscoveryWorkingId)
+    .map(record => [record.provenance.androidDiscoveryWorkingId, record.id]));
   const source = new Map((reference?.[kind] || []).map(row => [row.id, row.review]));
-  const canonicalRows = catalogue.collection(kind).map(record => {
-    const fields = flatten(record);
-    fields.catalogueStatus = "Canonical";
-    if (source.has(record.id)) flatten(source.get(record.id), "review", fields);
-    return { id: record.id, record, collection: kind, fields, canonical: true };
-  });
-  // Candidates are review-only rows, not Universe entities. Never link to missing IDs.
+  // Candidate discovery IDs are historical source keys, not additional entities
+  // after their approved identity is reconciled into the canonical collection.
   const candidates = new Map();
   for (const candidate of reference?.unmappedCandidates?.[kind] || []) {
+    const canonicalId = aliases.get(candidate.id);
+    if (canonicalId) {
+      const review = source.get(canonicalId) || {};
+      review[candidate.section] = candidate.fields;
+      source.set(canonicalId, review);
+      continue;
+    }
     const row = candidates.get(candidate.id) || {
       id: candidate.id, name: "", review: {}
     };
@@ -148,6 +156,13 @@ export function industrialReviewRows(kind, catalogue, reference) {
     row.review[candidate.section] = candidate.fields;
     candidates.set(candidate.id, row);
   }
+  const canonicalRows = canonicalRecords.map(record => {
+    const fields = flatten(record);
+    fields.catalogueStatus = "Canonical";
+    if (source.has(record.id)) flatten(source.get(record.id), "review", fields);
+    return { id: record.id, record, collection: kind, fields, canonical: true };
+  });
+  // Any still-unmapped proposal remains visibly non-canonical.
   const reviewRows = [...candidates.values()].map(candidate => {
     const record = {
       id: candidate.id, name: candidate.name || candidate.id,
@@ -181,7 +196,7 @@ export function createIndustrialTables() {
             reference.sourceCommit.slice(0, 8) +
             ". Approved and provisional values are labelled in their source fields. " +
             (reference.unmappedCandidates?.[kind]?.length || 0) +
-            " additional discovery candidates appear as non-canonical review rows. Their names do not open canonical details."
+            " Source working IDs reconciled to canonical entities are shown once; any remaining proposals are labelled non-canonical."
           : "Android industrial discovery reference is unavailable. Canonical Universe records remain visible.";
       }
     })]));

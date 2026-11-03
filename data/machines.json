@@ -1000,5 +1000,531 @@
       "promptDescription": "Interior photograph of a warehouse handler: enclosed-aisle gantry with pallet forks and bulk-handling grabs, lighter than a shipyard assembly crane. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
       "notes": "Transferable industrial machine assembled from canonical parts."
     }
+  },
+  {
+    "id": "machine-conventional-electric-motor",
+    "name": "Conventional Electric Motor",
+    "entityType": "Machine",
+    "category": "Power",
+    "subCategory": "Electric Drive",
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [],
+    "description": "A conventional electromagnetic rotary drive for pumps, conveyors, bulk handling and general industrial machinery, designed around copper windings and a structural metal frame.",
+    "canonStatus": "working canon",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/discovery/proposed-electric-motor-machine-catalogue.csv",
+      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+      "androidDiscoveryWorkingId": "candidate-machine-conventional-electric-motor"
+    },
+    "principalMaterialIds": [
+      "named-substance-refined-copper",
+      "named-substance-steel"
+    ],
+    "manufacturingDesignStatus": "PROPOSED_NOT_APPROVED",
+    "manufacturingDesignNotes": "Approved conventional motor identity; standard rated output/reliability TBD; direct materials count without embedded Part",
+    "image": {
+      "key": "assets/art/universe/machines/machine-conventional-electric-motor.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Product reference photograph of conventional electric motor: one physically plausible independent manufactured industrial machine in a compact workshop environment, Year-5326 Koplin industrial realism, metal and ceramic structures with practical utility connections. No readable labels, branding, logos, people or watermark.",
+      "notes": "Art not yet generated; canonical identity reconciled from Android industrial discovery."
+    }
+  },
+  {
+    "id": "machine-rare-earth-permanent-magnet-motor",
+    "name": "Rare-Earth Permanent-Magnet Motor",
+    "entityType": "Machine",
+    "category": "Power",
+    "subCategory": "Electric Drive",
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [],
+    "description": "A specialised electric motor using rare-earth permanent magnet material for applications that justify its higher performance and material demand.",
+    "canonStatus": "working canon",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/discovery/proposed-electric-motor-machine-catalogue.csv",
+      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+      "androidDiscoveryWorkingId": "candidate-machine-rare-earth-permanent-magnet-motor"
+    },
+    "principalMaterialIds": [
+      "named-substance-refined-copper",
+      "named-substance-steel",
+      "named-substance-rare-earth-magnet-alloy"
+    ],
+    "manufacturingDesignStatus": "BLOCKED_PROPOSAL",
+    "manufacturingDesignNotes": "Rare Earth Magnet Alloy price, magnetic grade and specific rated output TBD",
+    "image": {
+      "key": "assets/art/universe/machines/machine-rare-earth-permanent-magnet-motor.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Product reference photograph of rare-earth permanent-magnet motor: one physically plausible independent manufactured industrial machine in a compact workshop environment, Year-5326 Koplin industrial realism, metal and ceramic structures with practical utility connections. No readable labels, branding, logos, people or watermark.",
+      "notes": "Art not yet generated; canonical identity reconciled from Android industrial discovery."
+    }
+  },
+  {
+    "id": "machine-vector-exchange-drive",
+    "name": "Vector Exchange Drive",
+    "entityType": "Machine",
+    "category": "Propulsion",
+    "subCategory": "Interstellar Drive",
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [],
+    "description": "An advanced Veyrite-dependent interstellar propulsion system whose existence is established in the Koplin universe; its internal engineered lattice and manufacturing bill remain strategic and unresolved.",
+    "canonStatus": "source-canonical",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/discovery/proposed-machine-bom-cost-review.csv",
+      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+      "androidDiscoveryWorkingId": "candidate-vector-exchange-drive",
+      "lorePath": "data/lore/Koplin_Universe_Expanded_Backstory_Lore_Bible.md"
+    },
+    "manufacturingDesignStatus": "BLOCKED_PROPOSAL",
+    "manufacturingDesignNotes": "Drive lattice and technology complete bill missing; do not infer from generic motor or ship reactor",
+    "image": {
+      "key": "assets/art/universe/machines/machine-vector-exchange-drive.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Product reference photograph of vector exchange drive: one physically plausible independent manufactured industrial machine in a compact workshop environment, Year-5326 Koplin industrial realism, metal and ceramic structures with practical utility connections. No readable labels, branding, logos, people or watermark.",
+      "notes": "Art not yet generated; canonical identity reconciled from Android industrial discovery."
+    }
+  },
+  {
+    "id": "machine-personal-recreation-terminal",
+    "name": "Personal Recreation Terminal",
+    "entityType": "Machine",
+    "category": "Accommodation",
+    "subCategory": "Personal Media",
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-computing-parts"
+    ],
+    "description": "An individually accessible residential recreation terminal providing one daily user service slot within accommodation.",
+    "canonStatus": "working canon",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/discovery/proposed-accommodation-luxury-machine-bom-cost-review.csv",
+      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+      "androidDiscoveryWorkingId": "candidate-machine-personal-recreation-terminal"
+    },
+    "approvedPhysicalBOM": {
+      "approval": "approved-physical-bom-2026-11-02",
+      "finishedPartInputs": [
+        {
+          "partId": "part-computing-parts",
+          "quantity": 1
+        }
+      ],
+      "directMaterialInputs": [
+        {
+          "materialId": "named-substance-steel",
+          "quantityKg": 1.5
+        },
+        {
+          "materialId": "substance-polymer",
+          "quantityKg": 2
+        },
+        {
+          "materialId": "substance-glass",
+          "quantityKg": 0.5
+        },
+        {
+          "materialId": "named-substance-refined-copper",
+          "quantityKg": 0.2
+        }
+      ],
+      "assemblyLabourHours": 5,
+      "factoryShopHours": 3,
+      "qualificationTestHours": 2,
+      "targetGoodUnitYield": 0.98
+    },
+    "amenityProfile": {
+      "approval": "approved-discovery-2026-11-02",
+      "category": "personal_media",
+      "residentServiceSlotsPerDay": 1,
+      "floorAreaM2": 2,
+      "operatingPowerUnits": 0.25
+    },
+    "manufacturingDesignStatus": "APPROVED_PHYSICAL_BOM_2026_11_02__MANUFACTURER_CC_AND_GENERIC_WEAR_RATES_PROVISIONAL",
+    "manufacturingDesignNotes": "APPROVED physical recipe and manufacturing effort by user 2 Nov 2026; see §73. Factory CC and suggested quote are derived provisional scenarios only, not approved. Shared Part wear rules govern maintenance; Water within Food. Exact category morale weights and world-support sizing remain future shared engineering.",
+    "image": {
+      "key": "assets/art/universe/machines/machine-personal-recreation-terminal.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Product reference photograph of personal recreation terminal: one physically plausible independent manufactured industrial machine in a compact workshop environment, Year-5326 Koplin industrial realism, metal and ceramic structures with practical utility connections. No readable labels, branding, logos, people or watermark.",
+      "notes": "Art not yet generated; canonical identity reconciled from Android industrial discovery."
+    }
+  },
+  {
+    "id": "machine-communal-fitness-leisure-system",
+    "name": "Communal Fitness & Leisure System",
+    "entityType": "Machine",
+    "category": "Accommodation",
+    "subCategory": "Fitness & Social",
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-mechanical-parts",
+      "part-power-electronics",
+      "part-control-and-sensor-parts"
+    ],
+    "description": "A shared recreation and fitness installation for accommodation residents, supporting ten resident service slots per day.",
+    "canonStatus": "working canon",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/discovery/proposed-accommodation-luxury-machine-bom-cost-review.csv",
+      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+      "androidDiscoveryWorkingId": "candidate-machine-communal-fitness-leisure-system"
+    },
+    "approvedPhysicalBOM": {
+      "approval": "approved-physical-bom-2026-11-02",
+      "finishedPartInputs": [
+        {
+          "partId": "part-mechanical-parts",
+          "quantity": 2
+        },
+        {
+          "partId": "part-power-electronics",
+          "quantity": 1
+        },
+        {
+          "partId": "part-control-and-sensor-parts",
+          "quantity": 1
+        }
+      ],
+      "directMaterialInputs": [
+        {
+          "materialId": "named-substance-steel",
+          "quantityKg": 80
+        },
+        {
+          "materialId": "substance-polymer",
+          "quantityKg": 25
+        },
+        {
+          "materialId": "named-substance-refined-copper",
+          "quantityKg": 4
+        },
+        {
+          "materialId": "substance-glass",
+          "quantityKg": 4
+        }
+      ],
+      "assemblyLabourHours": 40,
+      "factoryShopHours": 30,
+      "qualificationTestHours": 16,
+      "targetGoodUnitYield": 0.96
+    },
+    "amenityProfile": {
+      "approval": "approved-discovery-2026-11-02",
+      "category": "fitness_social",
+      "residentServiceSlotsPerDay": 10,
+      "floorAreaM2": 16,
+      "operatingPowerUnits": 3
+    },
+    "manufacturingDesignStatus": "APPROVED_PHYSICAL_BOM_2026_11_02__MANUFACTURER_CC_AND_GENERIC_WEAR_RATES_PROVISIONAL",
+    "manufacturingDesignNotes": "APPROVED physical recipe and manufacturing effort by user 2 Nov 2026; see §73. Factory CC and suggested quote are derived provisional scenarios only, not approved. Shared Part wear rules govern maintenance; Water within Food. Exact category morale weights and world-support sizing remain future shared engineering.",
+    "image": {
+      "key": "assets/art/universe/machines/machine-communal-fitness-leisure-system.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Product reference photograph of communal fitness & leisure system: one physically plausible independent manufactured industrial machine in a compact workshop environment, Year-5326 Koplin industrial realism, metal and ceramic structures with practical utility connections. No readable labels, branding, logos, people or watermark.",
+      "notes": "Art not yet generated; canonical identity reconciled from Android industrial discovery."
+    }
+  },
+  {
+    "id": "machine-advanced-entertainment-system",
+    "name": "Advanced Entertainment System",
+    "entityType": "Machine",
+    "category": "Accommodation",
+    "subCategory": "Cultural Entertainment",
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-computing-parts",
+      "part-power-electronics",
+      "part-control-and-sensor-parts",
+      "part-optical-parts"
+    ],
+    "description": "A shared advanced entertainment installation serving thirty accommodation residents per day.",
+    "canonStatus": "working canon",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/discovery/proposed-accommodation-luxury-machine-bom-cost-review.csv",
+      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+      "androidDiscoveryWorkingId": "candidate-machine-advanced-entertainment-system"
+    },
+    "approvedPhysicalBOM": {
+      "approval": "approved-physical-bom-2026-11-02",
+      "finishedPartInputs": [
+        {
+          "partId": "part-computing-parts",
+          "quantity": 2
+        },
+        {
+          "partId": "part-power-electronics",
+          "quantity": 1
+        },
+        {
+          "partId": "part-control-and-sensor-parts",
+          "quantity": 1
+        },
+        {
+          "partId": "part-optical-parts",
+          "quantity": 1
+        }
+      ],
+      "directMaterialInputs": [
+        {
+          "materialId": "named-substance-steel",
+          "quantityKg": 100
+        },
+        {
+          "materialId": "substance-glass",
+          "quantityKg": 30
+        },
+        {
+          "materialId": "named-substance-refined-copper",
+          "quantityKg": 12
+        },
+        {
+          "materialId": "substance-polymer",
+          "quantityKg": 24
+        }
+      ],
+      "assemblyLabourHours": 80,
+      "factoryShopHours": 65,
+      "qualificationTestHours": 35,
+      "targetGoodUnitYield": 0.95
+    },
+    "amenityProfile": {
+      "approval": "approved-discovery-2026-11-02",
+      "category": "cultural_entertainment",
+      "residentServiceSlotsPerDay": 30,
+      "floorAreaM2": 25,
+      "operatingPowerUnits": 7
+    },
+    "manufacturingDesignStatus": "APPROVED_PHYSICAL_BOM_2026_11_02__MANUFACTURER_CC_AND_GENERIC_WEAR_RATES_PROVISIONAL",
+    "manufacturingDesignNotes": "APPROVED physical recipe and manufacturing effort by user 2 Nov 2026; see §73. Factory CC and suggested quote are derived provisional scenarios only, not approved. Shared Part wear rules govern maintenance; Water within Food. Exact category morale weights and world-support sizing remain future shared engineering.",
+    "image": {
+      "key": "assets/art/universe/machines/machine-advanced-entertainment-system.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Product reference photograph of advanced entertainment system: one physically plausible independent manufactured industrial machine in a compact workshop environment, Year-5326 Koplin industrial realism, metal and ceramic structures with practical utility connections. No readable labels, branding, logos, people or watermark.",
+      "notes": "Art not yet generated; canonical identity reconciled from Android industrial discovery."
+    }
+  },
+  {
+    "id": "machine-immersive-recreation-suite",
+    "name": "Immersive Recreation Suite",
+    "entityType": "Machine",
+    "category": "Accommodation",
+    "subCategory": "Immersive Recreation",
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-computing-parts",
+      "part-control-and-sensor-parts",
+      "part-optical-parts",
+      "part-thermal-parts",
+      "part-power-electronics",
+      "part-structural-components"
+    ],
+    "description": "A large immersive recreation installation providing sixty resident service slots per day.",
+    "canonStatus": "working canon",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/discovery/proposed-accommodation-luxury-machine-bom-cost-review.csv",
+      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+      "androidDiscoveryWorkingId": "candidate-machine-immersive-recreation-suite"
+    },
+    "approvedPhysicalBOM": {
+      "approval": "approved-physical-bom-2026-11-02",
+      "finishedPartInputs": [
+        {
+          "partId": "part-computing-parts",
+          "quantity": 6
+        },
+        {
+          "partId": "part-control-and-sensor-parts",
+          "quantity": 4
+        },
+        {
+          "partId": "part-optical-parts",
+          "quantity": 3
+        },
+        {
+          "partId": "part-thermal-parts",
+          "quantity": 1
+        },
+        {
+          "partId": "part-power-electronics",
+          "quantity": 3
+        },
+        {
+          "partId": "part-structural-components",
+          "quantity": 1
+        }
+      ],
+      "directMaterialInputs": [
+        {
+          "materialId": "named-substance-steel",
+          "quantityKg": 180
+        },
+        {
+          "materialId": "substance-glass",
+          "quantityKg": 60
+        },
+        {
+          "materialId": "named-substance-refined-copper",
+          "quantityKg": 18
+        },
+        {
+          "materialId": "substance-polymer",
+          "quantityKg": 70
+        },
+        {
+          "materialId": "substance-refined-ceramic",
+          "quantityKg": 20
+        }
+      ],
+      "assemblyLabourHours": 180,
+      "factoryShopHours": 135,
+      "qualificationTestHours": 70,
+      "targetGoodUnitYield": 0.93
+    },
+    "amenityProfile": {
+      "approval": "approved-discovery-2026-11-02",
+      "category": "immersive_recreation",
+      "residentServiceSlotsPerDay": 60,
+      "floorAreaM2": 50,
+      "operatingPowerUnits": 20
+    },
+    "manufacturingDesignStatus": "APPROVED_PHYSICAL_BOM_2026_11_02__MANUFACTURER_CC_AND_GENERIC_WEAR_RATES_PROVISIONAL",
+    "manufacturingDesignNotes": "APPROVED physical recipe and manufacturing effort by user 2 Nov 2026; see §73. Factory CC and suggested quote are derived provisional scenarios only, not approved. Shared Part wear rules govern maintenance; Water within Food. Exact category morale weights and world-support sizing remain future shared engineering.",
+    "image": {
+      "key": "assets/art/universe/machines/machine-immersive-recreation-suite.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Product reference photograph of immersive recreation suite: one physically plausible independent manufactured industrial machine in a compact workshop environment, Year-5326 Koplin industrial realism, metal and ceramic structures with practical utility connections. No readable labels, branding, logos, people or watermark.",
+      "notes": "Art not yet generated; canonical identity reconciled from Android industrial discovery."
+    }
+  },
+  {
+    "id": "machine-integrated-wellness-leisure-system",
+    "name": "Integrated Wellness & Leisure System",
+    "entityType": "Machine",
+    "category": "Accommodation",
+    "subCategory": "Wellness",
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-fluid-handling-parts",
+      "part-thermal-parts",
+      "part-computing-parts",
+      "part-power-electronics",
+      "part-structural-components",
+      "part-mechanical-parts",
+      "part-control-and-sensor-parts"
+    ],
+    "description": "A high-capacity integrated wellness and recreation installation providing one hundred and twenty resident service slots per day.",
+    "canonStatus": "working canon",
+    "provenance": {
+      "sourceRepository": "kevvy555/MineIT-Android",
+      "sourcePath": "docs/discovery/proposed-accommodation-luxury-machine-bom-cost-review.csv",
+      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+      "androidDiscoveryWorkingId": "candidate-machine-integrated-wellness-leisure-system"
+    },
+    "approvedPhysicalBOM": {
+      "approval": "approved-physical-bom-2026-11-02",
+      "finishedPartInputs": [
+        {
+          "partId": "part-fluid-handling-parts",
+          "quantity": 4
+        },
+        {
+          "partId": "part-thermal-parts",
+          "quantity": 3
+        },
+        {
+          "partId": "part-computing-parts",
+          "quantity": 2
+        },
+        {
+          "partId": "part-power-electronics",
+          "quantity": 2
+        },
+        {
+          "partId": "part-structural-components",
+          "quantity": 3
+        },
+        {
+          "partId": "part-mechanical-parts",
+          "quantity": 3
+        },
+        {
+          "partId": "part-control-and-sensor-parts",
+          "quantity": 2
+        }
+      ],
+      "directMaterialInputs": [
+        {
+          "materialId": "named-substance-steel",
+          "quantityKg": 500
+        },
+        {
+          "materialId": "named-substance-stainless-steel",
+          "quantityKg": 160
+        },
+        {
+          "materialId": "substance-glass",
+          "quantityKg": 160
+        },
+        {
+          "materialId": "named-substance-refined-copper",
+          "quantityKg": 55
+        },
+        {
+          "materialId": "substance-refined-ceramic",
+          "quantityKg": 60
+        },
+        {
+          "materialId": "substance-polymer",
+          "quantityKg": 120
+        }
+      ],
+      "assemblyLabourHours": 300,
+      "factoryShopHours": 260,
+      "qualificationTestHours": 120,
+      "targetGoodUnitYield": 0.92
+    },
+    "amenityProfile": {
+      "approval": "approved-discovery-2026-11-02",
+      "category": "wellness",
+      "residentServiceSlotsPerDay": 120,
+      "floorAreaM2": 120,
+      "operatingPowerUnits": 45
+    },
+    "manufacturingDesignStatus": "APPROVED_PHYSICAL_BOM_2026_11_02__MANUFACTURER_CC_AND_GENERIC_WEAR_RATES_PROVISIONAL",
+    "manufacturingDesignNotes": "APPROVED physical recipe and manufacturing effort by user 2 Nov 2026; see §73. Factory CC and suggested quote are derived provisional scenarios only, not approved. Shared Part wear rules govern maintenance; Water within Food. Exact category morale weights and world-support sizing remain future shared engineering.",
+    "image": {
+      "key": "assets/art/universe/machines/machine-integrated-wellness-leisure-system.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Product reference photograph of integrated wellness & leisure system: one physically plausible independent manufactured industrial machine in a compact workshop environment, Year-5326 Koplin industrial realism, metal and ceramic structures with practical utility connections. No readable labels, branding, logos, people or watermark.",
+      "notes": "Art not yet generated; canonical identity reconciled from Android industrial discovery."
+    }
   }
 ]
