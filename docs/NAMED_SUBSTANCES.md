@@ -29,3 +29,13 @@ The table has a per-column filter and ascending/descending sort. Its column pick
 Android `ResourceCatalogue.kt` also contains legacy mining tiers, price/proxy values, category multipliers and unlock labels; those values are not merged automatically because their IDs and semantics do not consistently match the canonical 42 resources. Current per-save deposit quality, reserve, generated abundance and market quotes are deliberately excluded. Discovery data contributes provenance and broad approved identities, not invented prices or quantified production recipes.
 
 When extending the bulk table, add new fields to the appropriate canonical entity or game-owned source first. The table is a read-only projection, not another source of truth.
+
+### Bulk-review table workspace and value filters
+
+The Substances table uses the **full Directory workspace width**, temporarily hiding the left tree while bulk reviewing. **Catalogue tree** restores the split navigation/detail view; opening a named record from the table also restores its normal detail view. This is a presentation-only change.
+
+**Choose columns** contains **Select all** and **Clear all**; clearing retains Name, which is the required link back to entity details. The available columns are grouped logically, with Name leading, and browser-session choices are preserved. Selecting many fields produces a horizontally scrollable table without constraining it to the former right-hand detail pane.
+
+Every visible column supports a text filter (including numeric comparisons where applicable), click-to-sort, and a **Values** dropdown listing distinct values with checkboxes and an option search. For list-valued fields the dropdown lists **individual values** (e.g. each operational tag or eligible biome), not an arbitrary concatenation. Checking multiple values in one column matches any selected value (OR); combining filters across columns uses AND. The special **(No value)** choice can select entities without a value in that column. With no checkboxes selected, the column remains unrestricted. The column dropdown also has **Choose shown** and **Clear selection**, while the top-level Clear filters resets text and checkbox choices.
+
+The source material, IDs, occurrence rules, and Android reference snapshot are not changed by these UI improvements.

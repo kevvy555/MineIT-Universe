@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { substanceRows, allSubstanceFields, applySubstanceTable } from "../js/substance-table-data.js";
+import { substanceRows, allSubstanceFields, applySubstanceTable,
+  uniqueColumnValues, valueToken, rowValueTokens } from "../js/substance-table-data.js";
 
 const load = path => JSON.parse(readFileSync(new URL("../" + path, import.meta.url), "utf8"));
 const collections = {
@@ -45,4 +46,38 @@ assert.ok(filtered.length > 0);
 assert.ok(filtered.every(r => r.fields["android.baseScan"] >= 6));
 const byName = applySubstanceTable(rows, ["name"], { name: "refined iron" }, "name", 1, catalogue);
 assert.deepEqual(byName.map(r => r.record.name), ["Refined Iron"]);
-console.log("Substances review valid:", rows.length, "unique records,", keys.length, "available fields.");
+assert.equal(keys[0], "name", "Name is always the first available column");
+assert.ok(keys.indexOf("kind") < keys.indexOf("android.baseScan"), "Identity precedes Android reference");
+
+const kindOptions = uniqueColumnValues(rows, "kind", catalogue);
+assert.deepEqual(kindOptions.map(x => x.label), ["Biological food", "Generic class", "Named material", "Natural resource"]);
+assert.equal(kindOptions.reduce((sum, entry) => sum + entry.count, 0), rows.length);
+const selectedKinds = { kind: new Set([valueToken("Natural resource"), valueToken("Named material")]) };
+const included = applySubstanceTable(rows, ["kind"], {}, "name", 1, catalogue, selectedKinds);
+assert.equal(included.length, 104, "Selected dropdown values combine with OR within one column");
+const metalsOnly = applySubstanceTable(rows, ["kind", "archetype"], {}, "name", 1, catalogue,
+  { kind: new Set([valueToken("Natural resource")]), archetype: new Set([valueToken("Metal")]) });
+assert.ok(metalsOnly.length > 0 && metalsOnly.length < 42);
+assert.ok(metalsOnly.every(row => row.fields.kind === "Natural resource" && row.fields.archetype === "Metal"),
+  "Separate column selections combine with AND");
+
+const tags = uniqueColumnValues(rows, "android.operationalTags", catalogue);
+assert.ok(tags.some(entry => entry.label === "refining-feedstock"),
+  "Array-valued fields offer individual named options");
+const withTag = applySubstanceTable(rows, ["android.operationalTags"], {}, "name", 1, catalogue,
+  { "android.operationalTags": new Set([valueToken("refining-feedstock")]) });
+assert.ok(withTag.length > 0);
+assert.ok(withTag.every(row => row.fields["android.operationalTags"]?.includes("refining-feedstock")));
+assert.deepEqual(rowValueTokens([]), ["blank"]);
+const missingScan = applySubstanceTable(rows, ["android.baseScan"], {}, "name", 1, catalogue,
+  { "android.baseScan": new Set(["blank"]) });
+assert.equal(missingScan.length, 191 - 42, "The no-value option filters missing Android fields");
+const scanChoice = uniqueColumnValues(rows, "android.baseScan", catalogue);
+assert.ok(scanChoice.some(x => x.token === "number:1"));
+assert.ok(scanChoice.some(x => x.token === "blank"));
+const combined = applySubstanceTable(rows, ["kind", "name"], {name:"iron"}, "name", 1, catalogue,
+  {kind:new Set([valueToken("Named material")])});
+assert.deepEqual(combined.map(x=>x.record.name), ["Refined Iron"]);
+
+console.log("Substances review valid:", rows.length, "unique records,", keys.length,
+  "fields; multi-select value filters and sort ordering verified.");

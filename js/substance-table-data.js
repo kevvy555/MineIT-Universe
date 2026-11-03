@@ -42,7 +42,18 @@ export const DEFAULT_COLUMNS = ["name", "kind", "archetype", "genericClassName",
 
 export function allSubstanceFields(rows) {
   const keys = new Set(rows.flatMap(row => Object.keys(row.fields)));
-  return [...keys].sort((a, b) => a.localeCompare(b));
+  const groupOrder = ["Identity", "Generic substance class", "Named materials",
+    "Resource and gameplay metadata", "Occurrence and geology", "Biological food",
+    "Android reference only", "Sources and provenance", "Artwork"];
+  const identityOrder = ["name", "kind", "archetype", "genericClassName",
+    "id", "genericSubstanceId", "description", "canonStatus"];
+  return [...keys].sort((a, b) => {
+    const ga = groupOrder.indexOf(columnGroup(a)), gb = groupOrder.indexOf(columnGroup(b));
+    if (ga !== gb) return ga - gb;
+    const ia = identityOrder.indexOf(a), ib = identityOrder.indexOf(b);
+    if (ia !== -1 || ib !== -1) return (ia === -1 ? 999 : ia) - (ib === -1 ? 999 : ib);
+    return fieldLabel(a).localeCompare(fieldLabel(b));
+  });
 }
 
 export function columnGroup(key) {
@@ -76,19 +87,62 @@ export function fieldText(value, catalogue) {
   return simple(value);
 }
 
-export function applySubstanceTable(rows, columns, filters = {}, sortKey = "name", direction = 1, catalogue) {
+// A checked value is an exact inclusion match, not a substring. Array-valued columns
+// (biomes, operational tags, etc.) expose and match each individual member.
+export function valueToken(value) {
+  return value === null || value === undefined || value === ""
+    ? "blank" : typeof value + ":" + String(value);
+}
+
+export function rowValueTokens(value) {
+  if (Array.isArray(value)) return value.length
+    ? [...new Set(value.map(valueToken))] : ["blank"];
+  return [valueToken(value)];
+}
+
+export function uniqueColumnValues(rows, key, catalogue) {
+  const choices = new Map();
+  for (const row of rows) {
+    const values = row.fields[key];
+    const entries = Array.isArray(values) ? (values.length ? values : [null]) : [values];
+    const seen = new Set();
+    for (const value of entries) {
+      const token = valueToken(value);
+      if (seen.has(token)) continue;
+      seen.add(token);
+      if (!choices.has(token)) choices.set(token, {
+        token, label: token === "blank" ? "(No value)" : fieldText(value, catalogue),
+        value, count: 0
+      });
+      choices.get(token).count++;
+    }
+  }
+  return [...choices.values()].sort((a, b) => {
+    if (a.token === "blank") return 1;
+    if (b.token === "blank") return -1;
+    if (typeof a.value === "number" && typeof b.value === "number")
+      return a.value - b.value;
+    return a.label.localeCompare(b.label, undefined, { numeric: true, sensitivity: "base" });
+  });
+}
+
+export function applySubstanceTable(rows, columns, filters = {}, sortKey = "name",
+  direction = 1, catalogue, selectedValues = {}) {
   const found = rows.filter(row => columns.every(key => {
     const filter = String(filters[key] || "").trim().toLowerCase();
-    if (!filter) return true;
     const value = row.fields[key];
-    const numeric = filter.match(/^(>=|<=|>|<|=)\s*(-?\d+(?:\.\d+)?)$/);
-    if (numeric && typeof value === "number") {
-      const n = Number(numeric[2]);
-      return ({ ">": value > n, "<": value < n, "=": value === n,
-        ">=": value >= n, "<=": value <= n })[numeric[1]];
+    if (filter) {
+      const numeric = filter.match(/^(>=|<=|>|<|=)\\s*(-?\\d+(?:\\.\\d+)?)$/);
+      if (numeric && typeof value === "number") {
+        const n = Number(numeric[2]);
+        if (!({ ">": value > n, "<": value < n, "=": value === n,
+          ">=": value >= n, "<=": value <= n })[numeric[1]]) return false;
+      } else if (!fieldText(value, catalogue).toLowerCase().includes(filter) &&
+                 !simple(value).toLowerCase().includes(filter)) return false;
     }
-    return fieldText(value, catalogue).toLowerCase().includes(filter) ||
-      simple(value).toLowerCase().includes(filter);
+    const allowed = selectedValues[key];
+    if (allowed?.size && !rowValueTokens(value).some(token => allowed.has(token))) return false;
+    return true;
   }));
   found.sort((a, b) => {
     const x = a.fields[sortKey], y = b.fields[sortKey];

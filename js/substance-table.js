@@ -1,5 +1,5 @@
 import { substanceRows, allSubstanceFields, DEFAULT_COLUMNS, columnGroup,
-  fieldLabel, fieldText, applySubstanceTable } from "./substance-table-data.js";
+  fieldLabel, fieldText, applySubstanceTable, uniqueColumnValues } from "./substance-table-data.js";
 
 const esc = value => String(value ?? "").replaceAll("&", "&amp;").replaceAll("<", "&lt;")
   .replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#039;");
@@ -21,16 +21,22 @@ export async function loadAndroidResourceReference() {
 
 export function createSubstanceTable() {
   let selected = [...DEFAULT_COLUMNS];
-  let filters = {};
+  let textFilters = {};
+  let valueFilters = {};
   let sortKey = "name";
   let direction = 1;
+  let cleanupListeners = () => {};
   try {
     const stored = JSON.parse(sessionStorage.getItem("mineitSubstanceColumns") || "null");
     if (Array.isArray(stored) && stored.every(x => typeof x === "string"))
       selected = [...new Set(["name", ...stored])];
-  } catch { /* browser storage can be unavailable */ }
+  } catch { /* browser storage may be disabled */ }
 
-  function render(container, catalogue, reference, onSelect) {
+  function render(container, catalogue, reference, onSelect, onBack) {
+    cleanupListeners();
+    const previousScroll = container.querySelector(".substance-review-scroll");
+    const scrollLeft = previousScroll?.scrollLeft || 0;
+    const scrollTop = previousScroll?.scrollTop || 0;
     const wasOpen = container.querySelector("#substanceColumnPicker")?.open || false;
     const rows = substanceRows(catalogue, reference);
     const possible = allSubstanceFields(rows);
@@ -38,7 +44,6 @@ export function createSubstanceTable() {
     if (!selected.includes("name")) selected.unshift("name");
     const ordered = possible.filter(key => selected.includes(key));
     const groups = [...new Set(possible.map(columnGroup))];
-
     const picker = groups.map(group => {
       const options = possible.filter(key => columnGroup(key) === group);
       return '<fieldset><legend>' + esc(group) + '</legend>' +
@@ -51,12 +56,17 @@ export function createSubstanceTable() {
     container.innerHTML = '<div class="substance-review">' +
       '<div class="substance-review-title"><div><div class="eyebrow">Universe Catalogue / bulk review</div>' +
       '<h1>Substances</h1><p>All generic classes and physical resources in one table. ' +
-      'Select a name to open its details.</p></div>' +
+      'Choose columns, filter individual values, or click a name to open its details.</p></div>' +
       '<strong id="substanceCount"></strong></div>' +
-      '<div class="substance-review-tools"><details id="substanceColumnPicker" ' +
-      (wasOpen ? "open" : "") + '><summary>Choose columns (' + ordered.length +
-      ' of ' + possible.length + ')</summary><div class="substance-pick-grid">' + picker +
-      '</div></details><button type="button" id="substanceClear">Clear filters</button></div>' +
+      '<div class="substance-review-tools"><button type="button" id="substanceBack">← Catalogue tree</button>' +
+      '<details id="substanceColumnPicker" ' + (wasOpen ? "open" : "") +
+      '><summary>Choose columns (' + ordered.length + ' of ' + possible.length +
+      ')</summary><div class="substance-column-actions">' +
+      '<button type="button" id="substanceSelectAll">Select all</button>' +
+      '<button type="button" id="substanceClearColumns">Clear all</button>' +
+      '<span>Name stays visible to open details.</span></div>' +
+      '<div class="substance-pick-grid">' + picker + '</div></details>' +
+      '<button type="button" id="substanceClear">Clear filters</button></div>' +
       '<p class="substance-source-note">' + (reference ?
       'Android tuning columns are <strong>reference only</strong> from commit <code>' +
       esc(reference.sourceCommit.slice(0, 8)) +
@@ -64,10 +74,93 @@ export function createSubstanceTable() {
       'Android tuning reference is unavailable; Universe definitions are unaffected.') +
       '</p><div class="substance-review-scroll"><table class="substance-review-table">' +
       '<thead><tr id="substanceHeading"></tr><tr id="substanceFilterHead"></tr></thead>' +
-      '<tbody id="substanceTableBody"></tbody></table></div></div>';
+      '<tbody id="substanceTableBody"></tbody></table></div>' +
+      '<div class="substance-filter-popup" id="substanceValuePopup" role="dialog" hidden></div></div>';
 
     const titleRow = container.querySelector("#substanceHeading");
     const filterRow = container.querySelector("#substanceFilterHead");
+    const popup = container.querySelector("#substanceValuePopup");
+    const valueButtons = new Map();
+    let activeButton = null;
+
+    function closePopup() {
+      popup.hidden = true;
+      if (activeButton) activeButton.setAttribute("aria-expanded", "false");
+      activeButton = null;
+    }
+
+    function updateValueButtons() {
+      for (const [key, button] of valueButtons) {
+        const count = valueFilters[key]?.size || 0;
+        button.textContent = count ? "Values (" + count + ") ▾" : "Values ▾";
+        button.classList.toggle("has-selection", count > 0);
+        button.setAttribute("aria-label", "Select values for " + fieldLabel(key) +
+          (count ? ", " + count + " selected" : ""));
+      }
+    }
+
+    function showPopup(key, button) {
+      if (!popup.hidden && activeButton === button) { closePopup(); return; }
+      closePopup();
+      activeButton = button;
+      button.setAttribute("aria-expanded", "true");
+      const choices = uniqueColumnValues(rows, key, catalogue);
+      popup.innerHTML = '<div class="substance-popup-heading"><strong>' +
+        esc(fieldLabel(key)) + '</strong><button type="button" data-close aria-label="Close filter">×</button></div>' +
+        '<input type="search" class="substance-popup-search" aria-label="Find values" placeholder="Search values…">' +
+        '<div class="substance-popup-options" role="group" aria-label="Values for ' +
+        esc(fieldLabel(key)) + '"></div>' +
+        '<div class="substance-popup-actions"><button type="button" data-select>Choose shown</button>' +
+        '<button type="button" data-clear>Clear selection</button></div>';
+      const search = popup.querySelector(".substance-popup-search");
+      const list = popup.querySelector(".substance-popup-options");
+      const chosen = () => valueFilters[key] || (valueFilters[key] = new Set());
+      const shown = () => choices.filter(choice =>
+        choice.label.toLowerCase().includes(search.value.trim().toLowerCase()));
+
+      function refreshChoices() {
+        list.innerHTML = shown().map(choice =>
+          '<label class="substance-value-choice"><input type="checkbox" data-token="' +
+          esc(choice.token) + '" ' + (chosen().has(choice.token) ? "checked " : "") +
+          '><span>' + esc(choice.label) + '</span><small>' +
+          choice.count + '</small></label>').join("") ||
+          '<p class="substance-value-empty">No matching values</p>';
+        list.querySelectorAll("[data-token]").forEach(checkbox => checkbox.onchange = () => {
+          if (checkbox.checked) chosen().add(checkbox.dataset.token);
+          else chosen().delete(checkbox.dataset.token);
+          updateRows();
+          updateValueButtons();
+        });
+      }
+
+      search.oninput = refreshChoices;
+      popup.querySelector("[data-close]").onclick = closePopup;
+      popup.querySelector("[data-select]").onclick = () => {
+        for (const option of shown()) chosen().add(option.token);
+        refreshChoices();
+        updateRows();
+        updateValueButtons();
+      };
+      popup.querySelector("[data-clear]").onclick = () => {
+        chosen().clear();
+        refreshChoices();
+        updateRows();
+        updateValueButtons();
+      };
+      refreshChoices();
+      popup.hidden = false;
+      const bounds = button.getBoundingClientRect();
+      const width = Math.min(350, window.innerWidth - 16);
+      popup.style.width = width + "px";
+      popup.style.left = Math.max(8, Math.min(bounds.left, window.innerWidth - width - 8)) + "px";
+      const height = Math.min(420, window.innerHeight - 24);
+      const below = window.innerHeight - bounds.bottom;
+      popup.style.top = Math.max(8, below < height && bounds.top > height
+        ? bounds.top - height - 4
+        : Math.min(bounds.bottom + 4, window.innerHeight - height - 8)) + "px";
+      search.focus();
+    }
+
     for (const key of ordered) {
       const th = document.createElement("th");
       const button = document.createElement("button");
@@ -79,28 +172,39 @@ export function createSubstanceTable() {
       button.onclick = () => {
         if (sortKey === key) direction = -direction;
         else { sortKey = key; direction = 1; }
-        render(container, catalogue, reference, onSelect);
+        render(container, catalogue, reference, onSelect, onBack);
       };
       th.append(button);
       titleRow.append(th);
 
       const filterCell = document.createElement("th");
+      const controls = document.createElement("div");
+      controls.className = "substance-filter-controls";
       const input = document.createElement("input");
       input.className = "substance-column-filter";
       input.type = "search";
-      input.placeholder = "Filter";
-      input.value = filters[key] || "";
-      input.setAttribute("aria-label", "Filter " + fieldLabel(key));
+      input.placeholder = "Text filter";
+      input.value = textFilters[key] || "";
+      input.setAttribute("aria-label", "Text filter " + fieldLabel(key));
       input.addEventListener("input", () => {
-        filters[key] = input.value;
+        textFilters[key] = input.value;
         updateRows();
       });
-      filterCell.append(input);
+      const valuesButton = document.createElement("button");
+      valuesButton.className = "substance-value-button";
+      valuesButton.type = "button";
+      valuesButton.setAttribute("aria-expanded", "false");
+      valuesButton.setAttribute("aria-haspopup", "dialog");
+      valuesButton.onclick = () => showPopup(key, valuesButton);
+      valueButtons.set(key, valuesButton);
+      controls.append(input, valuesButton);
+      filterCell.append(controls);
       filterRow.append(filterCell);
     }
 
     function updateRows() {
-      const result = applySubstanceTable(rows, ordered, filters, sortKey, direction, catalogue);
+      const result = applySubstanceTable(rows, ordered, textFilters,
+        sortKey, direction, catalogue, valueFilters);
       container.querySelector("#substanceCount").textContent =
         result.length + " / " + rows.length + " records";
       const tbody = container.querySelector("#substanceTableBody");
@@ -110,22 +214,59 @@ export function createSubstanceTable() {
         return '<td title="' + esc(value) + '">' + (key === "name" ?
           '<button class="substance-item" type="button" data-item-id="' +
           esc(row.id) + '">' + esc(label) + '</button>' : esc(label)) + '</td>';
-      }).join("") + '</tr>').join("");
+      }).join("") + '</tr>').join("") ||
+        '<tr><td colspan="' + ordered.length + '" class="substance-no-results">No matching substances</td></tr>';
       tbody.querySelectorAll("[data-item-id]").forEach(button =>
         button.onclick = () => onSelect(button.dataset.itemId));
     }
-    container.querySelectorAll("[data-column]").forEach(box => box.onchange = () => {
-      selected = box.checked ? [...selected, box.dataset.column] :
-        selected.filter(key => key !== box.dataset.column);
+
+    function setColumns(keys) {
+      selected = [...new Set(["name", ...keys])];
+      if (!selected.includes(sortKey)) { sortKey = "name"; direction = 1; }
       try { sessionStorage.setItem("mineitSubstanceColumns", JSON.stringify(selected)); }
-      catch { /* storage unavailable */ }
-      render(container, catalogue, reference, onSelect);
+      catch { /* browser storage may be unavailable */ }
+      render(container, catalogue, reference, onSelect, onBack);
+    }
+    container.querySelectorAll("[data-column]").forEach(box => box.onchange = () => {
+      setColumns(box.checked ? [...selected, box.dataset.column] :
+        selected.filter(key => key !== box.dataset.column));
     });
+    container.querySelector("#substanceSelectAll").onclick = () => setColumns(possible);
+    container.querySelector("#substanceClearColumns").onclick = () => setColumns(["name"]);
     container.querySelector("#substanceClear").onclick = () => {
-      filters = {};
-      render(container, catalogue, reference, onSelect);
+      textFilters = {};
+      valueFilters = {};
+      render(container, catalogue, reference, onSelect, onBack);
     };
+    container.querySelector("#substanceBack").onclick = onBack;
+    const onOutside = event => {
+      if (!popup.hidden && !popup.contains(event.target) && event.target !== activeButton)
+        closePopup();
+    };
+    const onEscape = event => {
+      if (event.key === "Escape" && !popup.hidden) {
+        const opener = activeButton;
+        closePopup();
+        opener?.focus();
+      }
+    };
+    const onResize = () => closePopup();
+    document.addEventListener("pointerdown", onOutside);
+    document.addEventListener("keydown", onEscape);
+    window.addEventListener("resize", onResize);
+    container.addEventListener("scroll", onResize);
+    container.querySelector(".substance-review-scroll").addEventListener("scroll", onResize);
+    cleanupListeners = () => {
+      document.removeEventListener("pointerdown", onOutside);
+      document.removeEventListener("keydown", onEscape);
+      window.removeEventListener("resize", onResize);
+      container.removeEventListener("scroll", onResize);
+    };
+    updateValueButtons();
     updateRows();
+    const viewport = container.querySelector(".substance-review-scroll");
+    viewport.scrollLeft = scrollLeft;
+    viewport.scrollTop = scrollTop;
   }
-  return { render };
+  return { render, close: () => cleanupListeners() };
 }

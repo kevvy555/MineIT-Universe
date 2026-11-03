@@ -1024,11 +1024,21 @@ function landscapeSections(collection, entity) {
   return '';
 }
 
+function returnToCatalogueTree() {
+  state.activeCatalogueTable = false;
+  revealSelected();
+  renderTree();
+  renderDetail();
+}
+
 function renderDetail() {
+  workspace.classList.toggle('substance-table-mode', state.activeCatalogueTable);
   if (state.activeCatalogueTable) {
-    substanceTable.render(detailEl, state.catalogue, state.androidResourceReference, selectEntity);
+    substanceTable.render(detailEl, state.catalogue, state.androidResourceReference,
+      selectEntity, returnToCatalogueTree);
     return;
   }
+  substanceTable.close();
   const entity = state.catalogue.get(state.selectedId);
   if (!entity) return;
   const collection = state.catalogue.collectionNameFor(entity.id);
