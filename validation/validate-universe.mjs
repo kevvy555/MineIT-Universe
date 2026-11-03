@@ -237,8 +237,19 @@ for (const technology of collections.researchTechnologies ?? []) {
     (technology.unlockedMachineIds ?? []).length +
     (technology.unlockedBuildingIds ?? []).length +
     (technology.unlockedSubstanceIds ?? []).length;
-  if (technology.category === 'PartManufacturing' && (technology.unlockedPartIds ?? []).length !== 1) {
-    errors.push(`${technology.id}: PartManufacturing technology must unlock exactly one canonical part.`);
+  if (technology.category === 'PartManufacturing') {
+    const actualUnlocks = (technology.unlockedPartIds ?? []).length;
+    // Retiring a generic product may leave its historical manufacturing
+    // technology awaiting a specific named Part unlock decision. This is NOT
+    // permission to award both replacement products or invent a new unlock.
+    const pendingMigration = actualUnlocks === 0 &&
+      (technology.partUnlockReview ?? []).length === 1 &&
+      technology.partUnlockReview.every(review =>
+        review.reviewStatus === 'unapproved-technology-mapping' &&
+        review.supersededFamily && review.candidatePartIds?.length > 0);
+    if (actualUnlocks !== 1 && !pendingMigration) {
+      errors.push(`${technology.id}: PartManufacturing requires exactly one unlocked Part or one explicit unresolved legacy migration.`);
+    }
   }
   if (technology.category === 'Machine' && (technology.unlockedMachineIds ?? []).length !== 1) {
     errors.push(`${technology.id}: Machine technology must unlock exactly one canonical machine.`);
