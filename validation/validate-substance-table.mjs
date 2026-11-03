@@ -26,7 +26,9 @@ assert.deepEqual(new Set(reference.resources.map(r => r.resourceId)),
 assert.equal(new Set(reference.resources.map(r => r.resourceId)).size, 42);
 
 const rows = substanceRows(catalogue, reference);
-assert.equal(rows.length, 191, "80 generic + 42 raw + 62 named + 7 biological");
+assert.equal(rows.length, 111, "42 natural + 62 named + 7 biological");
+assert.ok(rows.every(row => row.collection !== "substances"));
+assert.equal(collections.substances.length, 80);
 assert.equal(new Set(rows.map(row => row.id)).size, rows.length, "No duplicated resources");
 assert.equal(rows.filter(row => row.fields.kind === "Biological food").length, 7);
 assert.equal(rows.filter(row => row.fields.kind === "Named material").length, 62);
@@ -50,7 +52,7 @@ assert.equal(keys[0], "name", "Name is always the first available column");
 assert.ok(keys.indexOf("kind") < keys.indexOf("android.baseScan"), "Identity precedes Android reference");
 
 const kindOptions = uniqueColumnValues(rows, "kind", catalogue);
-assert.deepEqual(kindOptions.map(x => x.label), ["Biological food", "Generic class", "Named material", "Natural resource"]);
+assert.deepEqual(kindOptions.map(x => x.label), ["Biological food", "Named material", "Natural resource"]);
 assert.equal(kindOptions.reduce((sum, entry) => sum + entry.count, 0), rows.length);
 const selectedKinds = { kind: new Set([valueToken("Natural resource"), valueToken("Named material")]) };
 const included = applySubstanceTable(rows, ["kind"], {}, "name", 1, catalogue, selectedKinds);
@@ -71,7 +73,7 @@ assert.ok(withTag.every(row => row.fields["android.operationalTags"]?.includes("
 assert.deepEqual(rowValueTokens([]), ["blank"]);
 const missingScan = applySubstanceTable(rows, ["android.baseScan"], {}, "name", 1, catalogue,
   { "android.baseScan": new Set(["blank"]) });
-assert.equal(missingScan.length, 191 - 42, "The no-value option filters missing Android fields");
+assert.equal(missingScan.length, 111 - 42, "The no-value option filters missing Android fields");
 const scanChoice = uniqueColumnValues(rows, "android.baseScan", catalogue);
 assert.ok(scanChoice.some(x => x.token === "number:1"));
 assert.ok(scanChoice.some(x => x.token === "blank"));

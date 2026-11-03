@@ -30,7 +30,7 @@ export function substanceRows(catalogue, androidReference) {
       result.push({ id: record.id, record, collection, fields });
     }
   };
-  add("substances", "Generic class");
+  // Generic classes remain classification parents, not physical resource rows.
   add("mobileResourceDefinitions", "Natural resource");
   add("namedSubstances", "Named material");
   add("mobileBiologicalResources", "Biological food");
