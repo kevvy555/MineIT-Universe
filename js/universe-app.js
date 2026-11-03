@@ -319,6 +319,22 @@ function tags(values) {
   return values?.length ? `<div class="tagList">${values.map(value => `<span class="tag">${esc(value)}</span>`).join('')}</div>` : '—';
 }
 
+function partMaterialLinks(inputs) {
+  if (!inputs?.length) return '—';
+  const display = input => {
+    const target = state.catalogue.get(input.substanceId);
+    const name = target?.name || input.substanceId;
+    const kg = Number.isFinite(input.planningQuantityKg)
+      ? ` · ${input.planningQuantityKg} kg planning` : '';
+    const qualifier = input.requirement?.startsWith('conditional') ? ' (conditional)' :
+      input.approval === 'planning-only-unqualified' ? ' (unqualified)' :
+      input.requirement?.startsWith('upstream') ? ' (upstream)' : '';
+    return link(input.substanceId, name + kg + qualifier);
+  };
+  return '<div class="multiLinks">' + inputs.map(display).join('') + '</div>';
+}
+
+
 function field(label, value) {
   return `<div class="field"><div class="fieldLabel">${esc(label)}</div><div class="fieldValue">${value ?? '—'}</div></div>`;
 }
@@ -641,7 +657,9 @@ function fieldsFor(collection, entity) {
       field('Industrial role', esc(entity.industrialRole)),
       field('Named natural resources in this category', links(relatedIds('mobileResourceDefinitions', resource => resource.genericSubstanceId === entity.id))),
       field('Named materials in this category', links(relatedIds('namedSubstances', material => material.genericSubstanceId === entity.id))),
-      field('Used by parts', links(relatedIds('parts', part => (part.substanceIds || []).includes(entity.id)))),
+      field('Used by parts', links(relatedIds('parts', part =>
+        (part.substanceIds || []).includes(entity.id) ||
+        (part.materialInputs || []).some(input => input.substanceId === entity.id)))),
       field('Building shell uses', links(relatedIds('buildings', building => (building.structuralShellSubstanceIds || []).includes(entity.id)))),
       field('Building fit-out uses', links(relatedIds('buildings', building => (building.fitOutSubstanceIds || []).includes(entity.id)))),
       field('Find sites', links(relatedIds('findSites', site => (site.substanceIds || []).includes(entity.id)))),
@@ -657,18 +675,39 @@ function fieldsFor(collection, entity) {
       field('Originating natural resources', links(entity.sourceRawResourceIds)),
       field('Upstream inputs (discovery)', esc(entity.upstreamInputDescription)),
       field('Industrial use', esc(entity.industrialRole)),
+      field('Used in Part manufacturing', links(relatedIds('parts', part =>
+        (part.materialInputs || []).some(input => input.substanceId === entity.id)))),
       field('Identity approval', esc(entity.discoveryStatus)),
       field('Class mapping', esc(entity.classificationStatus)),
       field('Discovery source', esc([entity.sourceProvenance?.repository, entity.sourceProvenance?.path].filter(Boolean).join('/')))
     );
   }
   if (collection === 'parts') {
+    const economic = entity.planningReference;
+    const unit = entity.finishedUnit;
+    const unresolved = (entity.unresolvedMaterialInputs || []).map(input =>
+      input.label + (input.planningAllowanceKg == null ? '' :
+        ' · ' + input.planningAllowanceKg + ' kg planning') + ' (' + input.status + ')');
     fields.push(
+      field('Part role', esc(entity.partRole === 'legacy-compatibility' ?
+        'Legacy compatibility — not separate trade stock' : 'Finished product')),
       field('Category', esc(entity.category)),
       field('Sub-category', esc((entity.subCategories || [entity.subCategory]).filter(Boolean).join(', '))),
       field('Sources', tags(entity.sources)),
-      field('Substances', links(entity.substanceIds)),
-      field('Used in machines', links(entity.machineIds))
+      field('Generic material classifications', links(entity.substanceIds)),
+      field('Approved / candidate material inputs', partMaterialLinks(entity.materialInputs)),
+      field('Unresolved manufacturing inputs', unresolved.length ? esc(unresolved.join('; ')) : '—'),
+      field('Material approval', esc(entity.materialApprovalStatus)),
+      field('Finished stock unit', unit ? esc(unit.description + ' (' + unit.count + ' ' + unit.unit + ')') : 'Not a separate finished stock product'),
+      field('Reference finished mass', Number.isFinite(economic?.finishedMassKg) ?
+        esc(economic.finishedMassKg + ' kg — planning only') : '—'),
+      field('Reference manufacturer cost', Number.isFinite(economic?.manufacturerCostCC) ?
+        esc(economic.manufacturerCostCC + ' CC / Part — planning only') : '—'),
+      field('Reference base sell quote', Number.isFinite(economic?.baseManufacturerQuoteCC) ?
+        esc(economic.baseManufacturerQuoteCC + ' CC / Part — planning only') : '—'),
+      field('Reference status', esc(economic?.status)),
+      field('Used in machines (compatibility)', links(entity.machineIds)),
+      field('Legacy replacements', links(entity.legacyReplacementPartIds))
     );
   }
   if (collection === 'machines') {
