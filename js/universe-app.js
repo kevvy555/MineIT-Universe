@@ -47,7 +47,7 @@ const ICONS = {
   landscapeTilesets: '▦', landscapeTiles: '▪', worldAtlases: '▣', worldAtlasTiles: '▫',
   settlements: '⬡', organisations: 'O',
   organisationUnits: '▦', facilities: '⌂', operations: '⚙', products: '◆', substances: '▣',
-  parts: '⧉', machines: '⚒', buildings: '⌂', researchTechnologies: '⌬', substanceArchetypes: '◈', substanceProperties: '≋', rarityBands: '⋄', geologyProcesses: '⌁', depositShapes: '⬢', depositStates: '◐', stellarTypes: '✶', cometTypes: '☄', ringSystemTypes: '◎', starSystemTypes: '✦', species: 'S',
+  namedSubstances: '◆', parts: '⧉', machines: '⚒', buildings: '⌂', researchTechnologies: '⌬', substanceArchetypes: '◈', substanceProperties: '≋', rarityBands: '⋄', geologyProcesses: '⌁', depositShapes: '⬢', depositStates: '◐', stellarTypes: '✶', cometTypes: '☄', ringSystemTypes: '◎', starSystemTypes: '✦', species: 'S',
   people: 'P', shipClasses: '△', ships: '▲', projects: '◇', events: '◷', relationships: '↔',
   currencies: '¤', loreDocuments: '▤', loreTopics: 'i', mobileResourceDefinitions: '◈', mobileResourceOccurrenceProfiles: '⌖', mobileBiologicalResources: '⚘'
 };
@@ -133,17 +133,28 @@ function groupRecords(records, keyFn) {
 function buildSubstancesDirectoryNode() {
   const records = state.catalogue.collection('substances');
   const naturalResources = state.catalogue.collection('mobileResourceDefinitions');
-  return category('Substances', groupRecords(records, record => record.dominantArchetype).map(([archetype, items]) => {
+  const namedMaterials = state.catalogue.collection('namedSubstances');
+  const archetypes = [...new Set([...records, ...namedMaterials].map(record => record.dominantArchetype))].sort();
+  return category('Substances', archetypes.map(archetype => {
+    const items = records.filter(record => record.dominantArchetype === archetype);
     const grouped = refined => category(refined ? 'Refined' : 'Raw',
       items.filter(item => Boolean(item.refined) === refined).map(item =>
         entityNode(item.id, [
-          // Same canonical Mobile resource records: show them here as linked examples,
-          // never duplicate or rewrite resource definitions in another catalogue.
           category('Named natural resources',
-            nodes(naturalResources.filter(resource => resource.genericSubstanceId === item.id)))
+            nodes(naturalResources.filter(resource => resource.genericSubstanceId === item.id))),
+          category('Named materials',
+            nodes(namedMaterials.filter(material => material.genericSubstanceId === item.id)))
         ])
       ).sort(byName));
-    return category(archetype, [grouped(false), grouped(true)]);
+    // A specific named material may be approved without an approved generic mapping.
+    // Keep it visible without guessing a category or silently losing it.
+    const pending = namedMaterials.filter(material =>
+      material.dominantArchetype === archetype && !material.genericSubstanceId);
+    return category(archetype, [
+      grouped(false),
+      grouped(true),
+      category('Named materials — classification pending', nodes(pending))
+    ]);
   }));
 }
 
@@ -619,11 +630,26 @@ function fieldsFor(collection, entity) {
       field('Tier', esc(entity.tier)),
       field('Stock class', entity.refined ? 'Refined' : 'Raw'),
       field('Industrial role', esc(entity.industrialRole)),
+      field('Named materials in this category', links(relatedIds('namedSubstances', material => material.genericSubstanceId === entity.id))),
       field('Used by parts', links(relatedIds('parts', part => (part.substanceIds || []).includes(entity.id)))),
       field('Building shell uses', links(relatedIds('buildings', building => (building.structuralShellSubstanceIds || []).includes(entity.id)))),
       field('Building fit-out uses', links(relatedIds('buildings', building => (building.fitOutSubstanceIds || []).includes(entity.id)))),
       field('Find sites', links(relatedIds('findSites', site => (site.substanceIds || []).includes(entity.id)))),
       field('Open materials lore', loreOpenLink(entity.sourceDocumentId, entity.sourceSection))
+    );
+  }
+  if (collection === 'namedSubstances') {
+    fields.push(
+      field('Archetype', esc(entity.dominantArchetype)),
+      field('Generic substance class', entity.genericSubstanceId ? link(entity.genericSubstanceId) : 'Classification pending'),
+      field('Material stage', esc(entity.materialStage)),
+      field('Stock handling', esc(entity.stockBehaviour)),
+      field('Originating natural resources', links(entity.sourceRawResourceIds)),
+      field('Upstream inputs (discovery)', esc(entity.upstreamInputDescription)),
+      field('Industrial use', esc(entity.industrialRole)),
+      field('Identity approval', esc(entity.discoveryStatus)),
+      field('Class mapping', esc(entity.classificationStatus)),
+      field('Discovery source', esc([entity.sourceProvenance?.repository, entity.sourceProvenance?.path].filter(Boolean).join('/')))
     );
   }
   if (collection === 'parts') {

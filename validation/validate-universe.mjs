@@ -113,6 +113,7 @@ const scalarRefs = {
   currencies: ['sourceDocumentId'],
   loreTopics: ['sourceDocumentId'],
   substances: ['sourceDocumentId'],
+  namedSubstances: ['genericSubstanceId'],
   mobileResourceDefinitions: ['gameId', 'genericSubstanceId'],
   mobileResourceOccurrenceProfiles: ['resourceId'],
   mobileBiologicalResources: ['gameId']
@@ -127,6 +128,7 @@ const arrayRefs = {
   operations: ['managerPersonIds', 'procurementPersonIds', 'shipIds', 'productIds', 'shipClassIds'],
   products: ['producerOrganisationIds'],
   people: ['operationIds', 'shipIds'],
+  namedSubstances: ['sourceRawResourceIds'],
   parts: ['substanceIds', 'machineIds'],
   machines: ['partIds'],
   buildings: ['structuralShellSubstanceIds', 'fitOutSubstanceIds', 'machineIds'],
@@ -160,6 +162,15 @@ const arrayRefs = {
     'excludedLandformIds'
   ]
 };
+const byGenericSubstance = new Map((collections.substances ?? []).map(s => [s.id, s]));
+for (const material of collections.namedSubstances ?? []) {
+  if (!['raw', 'processed', 'site-made'].includes(material.materialStage)) errors.push(`${material.id}: invalid material stage.`);
+  if (!['classified', 'requires-generic-class-review'].includes(material.classificationStatus)) errors.push(`${material.id}: invalid classification status.`);
+  if (material.genericSubstanceId) {
+    const parent = byGenericSubstance.get(material.genericSubstanceId);
+    if (parent && parent.dominantArchetype !== material.dominantArchetype) errors.push(`${material.id}: generic class and named material archetype differ.`);
+  }
+}
 for (const [collectionName, fields] of Object.entries(scalarRefs)) for (const record of collections[collectionName] ?? []) fields.forEach(field => validateRef(record.id, field, record[field]));
 for (const [collectionName, fields] of Object.entries(arrayRefs)) {
   for (const record of collections[collectionName] ?? []) for (const field of fields) {

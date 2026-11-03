@@ -1,0 +1,1305 @@
+[
+  {
+    "id": "named-substance-aluminium",
+    "name": "Aluminium",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-refined-light-metal",
+    "dominantArchetype": "Metal",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-bauxite"
+    ],
+    "industrialRole": "Lightweight structures and ship components",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-metal-catalogue.csv",
+      "workingId": "candidate-processed-aluminium"
+    }
+  },
+  {
+    "id": "named-substance-aluminium-alloy",
+    "name": "Aluminium Alloy",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-lightweight-alloy",
+    "dominantArchetype": "Metal",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [],
+    "upstreamInputDescription": "Aluminium + Refined Copper",
+    "industrialRole": "Lightweight ship and building frames machine housings and structural panels",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-alloy-material-catalogue.csv",
+      "workingId": "candidate-processed-aluminium-alloy"
+    }
+  },
+  {
+    "id": "named-substance-biochar",
+    "name": "Biochar",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-carbon-rich-mineral",
+    "dominantArchetype": "Carbon",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-biomass"
+    ],
+    "upstreamInputDescription": "Biomass",
+    "industrialRole": "Agricultural / Carbon",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-fuel-material-catalogue.csv",
+      "workingId": "candidate-processed-biochar"
+    }
+  },
+  {
+    "id": "named-substance-biomass-pellets",
+    "name": "Biomass Pellets",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-organic-biomass",
+    "dominantArchetype": "Organic",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-biomass"
+    ],
+    "upstreamInputDescription": "Biomass",
+    "industrialRole": "Fuel / Solid",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-fuel-material-catalogue.csv",
+      "workingId": "candidate-processed-biomass-pellets"
+    }
+  },
+  {
+    "id": "named-substance-brass",
+    "name": "Brass",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-conductive-alloy",
+    "dominantArchetype": "Metal",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [],
+    "upstreamInputDescription": "Refined Copper + Refined Zinc",
+    "industrialRole": "Machinable valves fittings connectors and selected electrical or fluid-handling Parts",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-alloy-material-catalogue.csv",
+      "workingId": "candidate-processed-brass"
+    }
+  },
+  {
+    "id": "named-substance-bronze",
+    "name": "Bronze",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-structural-alloy",
+    "dominantArchetype": "Metal",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [],
+    "upstreamInputDescription": "Refined Copper + Refined Tin",
+    "industrialRole": "Wear-resistant bearings bushings and machinery components",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-alloy-material-catalogue.csv",
+      "workingId": "candidate-processed-bronze"
+    }
+  },
+  {
+    "id": "named-substance-cement",
+    "name": "Cement",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": null,
+    "dominantArchetype": "Silicate",
+    "classificationStatus": "requires-generic-class-review",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-limestone"
+    ],
+    "upstreamInputDescription": "Limestone + Clay + Gypsum (calcination into clinker and grinding; intermediate clinker not independently stockable by default)",
+    "industrialRole": "Construction / Binder",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-construction-material-catalogue.csv",
+      "workingId": "candidate-processed-cement"
+    }
+  },
+  {
+    "id": "named-substance-cemented-tungsten-carbide",
+    "name": "Cemented Tungsten Carbide",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": null,
+    "dominantArchetype": "Metal",
+    "classificationStatus": "requires-generic-class-review",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [],
+    "upstreamInputDescription": "Refined Tungsten + Refined Graphite (carbon) + Refined Cobalt binder",
+    "industrialRole": "Approved Extraction Parts drill/cutting tips; approved Forming & Cutting Tooling dies and industrial machine cutting inserts; other wear-resistant equipment pending consumer review",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-engineered-material-catalogue.csv",
+      "workingId": "candidate-processed-cemented-tungsten-carbide"
+    }
+  },
+  {
+    "id": "named-substance-coke",
+    "name": "Coke",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-high-density-solid-fuel",
+    "dominantArchetype": "Carbon",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-coal"
+    ],
+    "upstreamInputDescription": "Washed Coal / Coal",
+    "industrialRole": "Fuel / Industrial",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-fuel-material-catalogue.csv",
+      "workingId": "candidate-processed-coke"
+    }
+  },
+  {
+    "id": "named-substance-compressed-hydrogen",
+    "name": "Compressed Hydrogen",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-refined-combustible-gas",
+    "dominantArchetype": "Volatile",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-hydrogen"
+    ],
+    "upstreamInputDescription": "Hydrogen",
+    "industrialRole": "Fuel / Gas",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-fuel-material-catalogue.csv",
+      "workingId": "candidate-processed-compressed-hydrogen"
+    }
+  },
+  {
+    "id": "named-substance-cut-diamond",
+    "name": "Cut Diamond",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-native-carbon-mineral",
+    "dominantArchetype": "Carbon",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-diamond"
+    ],
+    "industrialRole": "Luxury gemstone exports",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-gemstone-catalogue.csv",
+      "workingId": "mobile-resource-diamond"
+    }
+  },
+  {
+    "id": "named-substance-cut-emerald",
+    "name": "Cut Emerald",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-crystalline-mineral",
+    "dominantArchetype": "Silicate",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-emerald"
+    ],
+    "industrialRole": "Luxury gemstone trading",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-gemstone-catalogue.csv",
+      "workingId": "mobile-resource-emerald"
+    }
+  },
+  {
+    "id": "named-substance-cut-ruby",
+    "name": "Cut Ruby",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-abrasive-mineral",
+    "dominantArchetype": "Silicate",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-ruby"
+    ],
+    "industrialRole": "Luxury gemstone trading",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-gemstone-catalogue.csv",
+      "workingId": "mobile-resource-ruby"
+    }
+  },
+  {
+    "id": "named-substance-cut-sapphire",
+    "name": "Cut Sapphire",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-abrasive-mineral",
+    "dominantArchetype": "Silicate",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-sapphire"
+    ],
+    "industrialRole": "Luxury gemstone exports",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-gemstone-catalogue.csv",
+      "workingId": "mobile-resource-sapphire"
+    }
+  },
+  {
+    "id": "named-substance-cut-stone-blocks",
+    "name": "Cut Stone Blocks",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-stone-aggregate",
+    "dominantArchetype": "Silicate",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-stone"
+    ],
+    "upstreamInputDescription": "Construction Stone",
+    "industrialRole": "Construction / Mineral",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-construction-material-catalogue.csv",
+      "workingId": "candidate-processed-cut-stone-blocks"
+    }
+  },
+  {
+    "id": "named-substance-dried-peat-briquettes",
+    "name": "Dried Peat Briquettes",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-high-density-solid-fuel",
+    "dominantArchetype": "Carbon",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-peat"
+    ],
+    "upstreamInputDescription": "Peat",
+    "industrialRole": "Fuel / Solid",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-fuel-material-catalogue.csv",
+      "workingId": "candidate-processed-peat-briquettes"
+    }
+  },
+  {
+    "id": "named-substance-electronic-grade-silicon",
+    "name": "Electronic-Grade Silicon",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": null,
+    "dominantArchetype": "Silicate",
+    "classificationStatus": "requires-generic-class-review",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-quartz"
+    ],
+    "industrialRole": "High-purity silicon for computing, sensors and microelectronic Parts",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-nonmetallic-minerals-catalogue.csv",
+      "workingId": "candidate-processed-electronic-grade-silicon"
+    }
+  },
+  {
+    "id": "named-substance-engineered-veyrite-lattice",
+    "name": "Engineered Veyrite Lattice",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": null,
+    "dominantArchetype": "Metal",
+    "classificationStatus": "requires-generic-class-review",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [],
+    "industrialRole": "Refined/grown lattice for Vector Exchange drive systems",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "docs/discovery/galaxy-economic-foundation.md"
+    }
+  },
+  {
+    "id": "named-substance-fired-bricks",
+    "name": "Fired Bricks",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-refined-ceramic",
+    "dominantArchetype": "Silicate",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-clay"
+    ],
+    "upstreamInputDescription": "Clay",
+    "industrialRole": "Construction / Ceramic",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-construction-material-catalogue.csv",
+      "workingId": "candidate-processed-fired-bricks"
+    }
+  },
+  {
+    "id": "named-substance-fresh-concrete",
+    "name": "Fresh Concrete",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-structural-composite",
+    "dominantArchetype": "Silicate",
+    "classificationStatus": "classified",
+    "materialStage": "site-made",
+    "stockBehaviour": "non-stockable-site-process",
+    "sourceRawResourceIds": [],
+    "industrialRole": "On-site mixing of cement, aggregate and water for permanent structures",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "docs/discovery/galaxy-economic-foundation.md"
+    }
+  },
+  {
+    "id": "named-substance-fusion-fuel",
+    "name": "Fusion Fuel",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": null,
+    "dominantArchetype": "Volatile",
+    "classificationStatus": "requires-generic-class-review",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-helium-3"
+    ],
+    "upstreamInputDescription": "Purified Helium-3 + other fusion inputs (e.g. deuterium), fuel preparation",
+    "industrialRole": "Fuel / Fleet",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-fuel-material-catalogue.csv",
+      "workingId": "fusion-fuel"
+    }
+  },
+  {
+    "id": "named-substance-graded-aggregate",
+    "name": "Graded Aggregate",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-stone-aggregate",
+    "dominantArchetype": "Silicate",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-stone"
+    ],
+    "upstreamInputDescription": "Construction Stone",
+    "industrialRole": "Construction / Mineral",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-construction-material-catalogue.csv",
+      "workingId": "candidate-processed-graded-aggregate"
+    }
+  },
+  {
+    "id": "named-substance-high-temperature-nickel-alloy",
+    "name": "High-Temperature Nickel Alloy",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-heat-resistant-alloy",
+    "dominantArchetype": "Metal",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [],
+    "upstreamInputDescription": "Refined Nickel + Refined Chromium + Aluminium + Refined Titanium",
+    "industrialRole": "High-temperature ship propulsion turbines industrial pumps and advanced machinery",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-alloy-material-catalogue.csv",
+      "workingId": "candidate-processed-high-temperature-nickel-alloy"
+    }
+  },
+  {
+    "id": "named-substance-industrial-diamond-grit",
+    "name": "Industrial Diamond Grit",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-native-carbon-mineral",
+    "dominantArchetype": "Carbon",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-diamond"
+    ],
+    "industrialRole": "Industrial cutting and drilling tool Parts",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-gemstone-catalogue.csv",
+      "workingId": "mobile-resource-diamond"
+    }
+  },
+  {
+    "id": "named-substance-lithium-carbonate",
+    "name": "Lithium Carbonate",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": null,
+    "dominantArchetype": "Salt",
+    "classificationStatus": "requires-generic-class-review",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-lithium-ore"
+    ],
+    "industrialRole": "Battery-material precursor; do not assume elemental lithium metal",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-metal-catalogue.csv",
+      "workingId": "candidate-processed-lithium-carbonate"
+    }
+  },
+  {
+    "id": "named-substance-mica-insulation-sheets",
+    "name": "Mica Insulation Sheets",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-refined-insulator",
+    "dominantArchetype": "Silicate",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-mica"
+    ],
+    "industrialRole": "Electrical/thermal sheet insulation for manufacture of equipment Parts",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-nonmetallic-minerals-catalogue.csv",
+      "workingId": "candidate-processed-mica-insulation-sheets"
+    }
+  },
+  {
+    "id": "named-substance-natural-veyrite",
+    "name": "Natural Veyrite",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": null,
+    "dominantArchetype": "Metal",
+    "classificationStatus": "requires-generic-class-review",
+    "materialStage": "raw",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [],
+    "industrialRole": "Extremely rare naturally occurring strategic material; not a fuel",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "docs/discovery/galaxy-economic-foundation.md"
+    }
+  },
+  {
+    "id": "named-substance-optical-sapphire",
+    "name": "Optical Sapphire",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-abrasive-mineral",
+    "dominantArchetype": "Silicate",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-sapphire"
+    ],
+    "industrialRole": "Approved Optical Parts (candidate-part-optical-parts): precision lenses and optical sensors where sapphire is warranted; not required for all optics",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-gemstone-catalogue.csv",
+      "workingId": "mobile-resource-sapphire"
+    }
+  },
+  {
+    "id": "named-substance-phosphate-fertiliser",
+    "name": "Phosphate Fertiliser",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-fertilizer",
+    "dominantArchetype": "Salt",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-phosphate-rock"
+    ],
+    "industrialRole": "Phosphate nutrient input to agricultural food production",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-nonmetallic-minerals-catalogue.csv",
+      "workingId": "candidate-processed-phosphate-fertiliser"
+    }
+  },
+  {
+    "id": "named-substance-plaster",
+    "name": "Plaster",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-sulfate-mineral",
+    "dominantArchetype": "Salt",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-gypsum"
+    ],
+    "upstreamInputDescription": "Gypsum",
+    "industrialRole": "Construction / Mineral",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-construction-material-catalogue.csv",
+      "workingId": "candidate-processed-plaster"
+    }
+  },
+  {
+    "id": "named-substance-polymer-feedstock",
+    "name": "Polymer Feedstock",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-polymer",
+    "dominantArchetype": "Carbon",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-crude-oil"
+    ],
+    "upstreamInputDescription": "Crude Oil",
+    "industrialRole": "Industrial / Chemicals",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-fuel-material-catalogue.csv",
+      "workingId": "candidate-processed-polymer-feedstock"
+    }
+  },
+  {
+    "id": "named-substance-processed-fibre",
+    "name": "Processed Fibre",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-fibrous-plant",
+    "dominantArchetype": "Organic",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-plant-fibre"
+    ],
+    "upstreamInputDescription": "Plant Fibre",
+    "industrialRole": "Construction / Fibres",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-construction-material-catalogue.csv",
+      "workingId": "candidate-processed-processed-fibre"
+    }
+  },
+  {
+    "id": "named-substance-propellant",
+    "name": "Propellant",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-liquid-propellant",
+    "dominantArchetype": "Carbon",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [],
+    "upstreamInputDescription": "Manufactured fuel/oxidizer and suitable other inputs TBD",
+    "industrialRole": "Fuel / Fleet",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-fuel-material-catalogue.csv",
+      "workingId": "propellant"
+    }
+  },
+  {
+    "id": "named-substance-purified-helium-3",
+    "name": "Purified Helium-3",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-compressed-inert-gas",
+    "dominantArchetype": "Volatile",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-helium-3"
+    ],
+    "upstreamInputDescription": "Helium-3",
+    "industrialRole": "Nuclear / Fusion",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-fuel-material-catalogue.csv",
+      "workingId": "candidate-processed-purified-helium-3"
+    }
+  },
+  {
+    "id": "named-substance-purified-methane",
+    "name": "Purified Methane",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-refined-combustible-gas",
+    "dominantArchetype": "Volatile",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-natural-gas",
+      "mobile-resource-methane-ice"
+    ],
+    "upstreamInputDescription": "Natural Gas OR Methane Ice",
+    "industrialRole": "Fuel / Gas",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-fuel-material-catalogue.csv",
+      "workingId": "candidate-processed-purified-methane"
+    }
+  },
+  {
+    "id": "named-substance-purified-silica",
+    "name": "Purified Silica",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-silica-mineral",
+    "dominantArchetype": "Silicate",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-silica-sand"
+    ],
+    "upstreamInputDescription": "Silica Sand",
+    "industrialRole": "Construction / Glass",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-construction-material-catalogue.csv",
+      "workingId": "candidate-processed-purified-silica"
+    }
+  },
+  {
+    "id": "named-substance-quicklime",
+    "name": "Quicklime",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-carbonate-mineral",
+    "dominantArchetype": "Salt",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-limestone"
+    ],
+    "upstreamInputDescription": "Limestone",
+    "industrialRole": "Construction / Mineral",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-construction-material-catalogue.csv",
+      "workingId": "candidate-processed-quicklime"
+    }
+  },
+  {
+    "id": "named-substance-rare-earth-magnet-alloy",
+    "name": "Rare Earth Magnet Alloy",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-magnetic-alloy",
+    "dominantArchetype": "Metal",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-rare-earth-ore"
+    ],
+    "industrialRole": "Permanent-magnet alloy used in motor and generator Parts",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "docs/discovery/galaxy-economic-foundation.md"
+    }
+  },
+  {
+    "id": "named-substance-refined-chromium",
+    "name": "Refined Chromium",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-refined-structural-metal",
+    "dominantArchetype": "Metal",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-chromium-ore"
+    ],
+    "industrialRole": "Stainless and corrosion-resistant alloys",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-metal-catalogue.csv",
+      "workingId": "candidate-processed-refined-chromium"
+    }
+  },
+  {
+    "id": "named-substance-refined-cobalt",
+    "name": "Refined Cobalt",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-refined-magnetic-metal",
+    "dominantArchetype": "Metal",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-cobalt-ore"
+    ],
+    "industrialRole": "Battery materials, high-performance alloys and Cemented Tungsten Carbide binder",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-metal-catalogue.csv",
+      "workingId": "candidate-processed-refined-cobalt"
+    }
+  },
+  {
+    "id": "named-substance-refined-copper",
+    "name": "Refined Copper",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-refined-conductive-metal",
+    "dominantArchetype": "Metal",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-copper-ore"
+    ],
+    "industrialRole": "Wire, electrical conductors and motor windings",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-metal-catalogue.csv",
+      "workingId": "candidate-processed-refined-copper"
+    }
+  },
+  {
+    "id": "named-substance-refined-gold",
+    "name": "Refined Gold",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": null,
+    "dominantArchetype": "Metal",
+    "classificationStatus": "requires-generic-class-review",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-gold"
+    ],
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-precious-metals-catalogue.csv",
+      "workingId": "mobile-resource-gold"
+    }
+  },
+  {
+    "id": "named-substance-refined-iron",
+    "name": "Refined Iron",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-refined-structural-metal",
+    "dominantArchetype": "Metal",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-iron-ore"
+    ],
+    "industrialRole": "Frames, fabricated structural steel feedstock",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-metal-catalogue.csv",
+      "workingId": "candidate-processed-refined-iron"
+    }
+  },
+  {
+    "id": "named-substance-refined-lead",
+    "name": "Refined Lead",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-refined-heavy-metal",
+    "dominantArchetype": "Metal",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-lead-ore"
+    ],
+    "industrialRole": "Radiation shielding and battery components",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-metal-catalogue.csv",
+      "workingId": "candidate-processed-refined-lead"
+    }
+  },
+  {
+    "id": "named-substance-refined-nickel",
+    "name": "Refined Nickel",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-refined-magnetic-metal",
+    "dominantArchetype": "Metal",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-nickel-ore"
+    ],
+    "industrialRole": "Alloys and battery components",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-metal-catalogue.csv",
+      "workingId": "candidate-processed-refined-nickel"
+    }
+  },
+  {
+    "id": "named-substance-refined-palladium",
+    "name": "Refined Palladium",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": null,
+    "dominantArchetype": "Metal",
+    "classificationStatus": "requires-generic-class-review",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-palladium"
+    ],
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-precious-metals-catalogue.csv",
+      "workingId": "mobile-resource-palladium"
+    }
+  },
+  {
+    "id": "named-substance-refined-platinum",
+    "name": "Refined Platinum",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": null,
+    "dominantArchetype": "Metal",
+    "classificationStatus": "requires-generic-class-review",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-platinum"
+    ],
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-precious-metals-catalogue.csv",
+      "workingId": "mobile-resource-platinum"
+    }
+  },
+  {
+    "id": "named-substance-refined-silver",
+    "name": "Refined Silver",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": null,
+    "dominantArchetype": "Metal",
+    "classificationStatus": "requires-generic-class-review",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-silver"
+    ],
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-precious-metals-catalogue.csv",
+      "workingId": "mobile-resource-silver"
+    }
+  },
+  {
+    "id": "named-substance-refined-tin",
+    "name": "Refined Tin",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-refined-conductive-metal",
+    "dominantArchetype": "Metal",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-tin-ore"
+    ],
+    "industrialRole": "Solder and bronze inputs",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-metal-catalogue.csv",
+      "workingId": "candidate-processed-refined-tin"
+    }
+  },
+  {
+    "id": "named-substance-refined-titanium",
+    "name": "Refined Titanium",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-refined-light-metal",
+    "dominantArchetype": "Metal",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-titanium-ore"
+    ],
+    "industrialRole": "Strong low-mass structures and corrosion-resistant components",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-metal-catalogue.csv",
+      "workingId": "candidate-processed-refined-titanium"
+    }
+  },
+  {
+    "id": "named-substance-refined-tungsten",
+    "name": "Refined Tungsten",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-refined-heavy-metal",
+    "dominantArchetype": "Metal",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-tungsten-ore"
+    ],
+    "industrialRole": "High-temperature tooling and Cemented Tungsten Carbide feedstock for drill/cutting equipment",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-metal-catalogue.csv",
+      "workingId": "candidate-processed-refined-tungsten"
+    }
+  },
+  {
+    "id": "named-substance-refined-zinc",
+    "name": "Refined Zinc",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-refined-reactive-metal",
+    "dominantArchetype": "Metal",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-zinc-ore"
+    ],
+    "industrialRole": "Galvanic coatings and brass ingredients",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-metal-catalogue.csv",
+      "workingId": "candidate-processed-refined-zinc"
+    }
+  },
+  {
+    "id": "named-substance-sawn-lumber",
+    "name": "Sawn Lumber",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-woody-plant",
+    "dominantArchetype": "Organic",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-timber"
+    ],
+    "upstreamInputDescription": "Timber",
+    "industrialRole": "Construction / Timber",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-construction-material-catalogue.csv",
+      "workingId": "candidate-processed-sawn-lumber"
+    }
+  },
+  {
+    "id": "named-substance-spent-nuclear-fuel",
+    "name": "Spent Nuclear Fuel",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": null,
+    "dominantArchetype": "Metal",
+    "classificationStatus": "requires-generic-class-review",
+    "materialStage": "processed",
+    "stockBehaviour": "regulated-waste",
+    "sourceRawResourceIds": [
+      "mobile-resource-uranium-ore"
+    ],
+    "upstreamInputDescription": "Depleted Nuclear Fuel Assembly",
+    "industrialRole": "Nuclear / Waste",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-fuel-material-catalogue.csv",
+      "workingId": "candidate-waste-spent-nuclear-fuel"
+    }
+  },
+  {
+    "id": "named-substance-stainless-steel",
+    "name": "Stainless Steel",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-corrosion-resistant-alloy",
+    "dominantArchetype": "Metal",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [],
+    "upstreamInputDescription": "Refined Iron + Refined Chromium + carbon; Nickel for applicable grades",
+    "industrialRole": "Corrosion resistant machinery and parts",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-alloy-material-catalogue.csv",
+      "workingId": "candidate-processed-stainless-steel"
+    }
+  },
+  {
+    "id": "named-substance-steel",
+    "name": "Steel",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-structural-alloy",
+    "dominantArchetype": "Metal",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [],
+    "upstreamInputDescription": "Refined Iron + carbon from Refined Graphite",
+    "industrialRole": "Structural equipment and buildings",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-alloy-material-catalogue.csv",
+      "workingId": "candidate-processed-steel"
+    }
+  },
+  {
+    "id": "named-substance-sulfuric-acid",
+    "name": "Sulfuric Acid",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-concentrated-acid",
+    "dominantArchetype": "Water",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-sulfur"
+    ],
+    "industrialRole": "Industrial reagent, chemical processing and compatible battery manufacturing",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-nonmetallic-minerals-catalogue.csv",
+      "workingId": "candidate-processed-sulfuric-acid"
+    }
+  },
+  {
+    "id": "named-substance-titanium-alloy",
+    "name": "Titanium Alloy",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-lightweight-alloy",
+    "dominantArchetype": "Metal",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [],
+    "upstreamInputDescription": "Refined Titanium + Aluminium + Refined Tin",
+    "industrialRole": "Lightweight ship and machinery parts",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-alloy-material-catalogue.csv",
+      "workingId": "candidate-processed-titanium-alloy"
+    }
+  },
+  {
+    "id": "named-substance-treated-structural-timber",
+    "name": "Treated Structural Timber",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-woody-plant",
+    "dominantArchetype": "Organic",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-timber"
+    ],
+    "upstreamInputDescription": "Sawn Lumber",
+    "industrialRole": "Construction / Timber",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-construction-material-catalogue.csv",
+      "workingId": "candidate-processed-treated-structural-timber"
+    }
+  },
+  {
+    "id": "named-substance-uranium-concentrate",
+    "name": "Uranium Concentrate",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-radioactive-ore",
+    "dominantArchetype": "Metal",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-uranium-ore"
+    ],
+    "upstreamInputDescription": "Uranium Ore",
+    "industrialRole": "Nuclear / Materials",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-fuel-material-catalogue.csv",
+      "workingId": "candidate-processed-uranium-concentrate"
+    }
+  },
+  {
+    "id": "named-substance-washed-coal",
+    "name": "Washed Coal",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-solid-fuel-deposit",
+    "dominantArchetype": "Carbon",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-coal"
+    ],
+    "upstreamInputDescription": "Coal",
+    "industrialRole": "Fuel / Solid",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-fuel-material-catalogue.csv",
+      "workingId": "candidate-processed-washed-coal"
+    }
+  },
+  {
+    "id": "named-substance-woven-industrial-fabric",
+    "name": "Woven Industrial Fabric",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-fibrous-plant",
+    "dominantArchetype": "Organic",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-plant-fibre"
+    ],
+    "upstreamInputDescription": "Processed Fibre",
+    "industrialRole": "Construction / Fibres",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-construction-material-catalogue.csv",
+      "workingId": "candidate-processed-woven-industrial-fabric"
+    }
+  }
+]
