@@ -23,18 +23,18 @@ const visuals = group("Artwork & Visuals",
 const configurations = {
   parts: {
     title: "Parts",
-    description: "19 finished Part products and three legacy compatibility identities. Quantities, masses and CC prices are approved discovery planning references, not live game recipes or prices.",
+    description: "19 finished Part products. Three superseded generic Parts were retired; unresolved Machine and research relationships remain pending review. Quantities, masses and CC prices are discovery planning references, not live game recipes or prices.",
     defaultColumns: ["name", "partRole", "category", "subCategory", "materialInputs",
       "materialApprovalStatus", "planningReference.finishedMassKg",
       "planningReference.manufacturerCostCC", "planningReference.baseManufacturerQuoteCC"],
     hiddenFields: ["entityType", "catalogueStatus"],
-    linkedFields: ["substanceIds", "materialInputs", "machineIds", "legacyReplacementPartIds"],
+    linkedFields: ["substanceIds", "materialInputs", "machineIds"],
     groups: [
       group("Identity & Classification",
         "name id partRole category subCategory subCategories sources finishedUnit.count finishedUnit.unit finishedUnit.description"),
       group("Materials & Construction",
         "substanceIds materialInputs unresolvedMaterialInputs"),
-      group("Machines & Usage", "machineIds legacyReplacementPartIds"),
+      group("Machines & Usage", "machineIds"),
       group("Production & Prices",
         "planningReference.finishedMassKg planningReference.manufacturerCostCC planningReference.baseManufacturerQuoteCC planningReference.status planningReference.basis"),
       group("Discovery & Approval", "materialApprovalStatus"),
@@ -52,7 +52,7 @@ const configurations = {
     groups: [
       common[0],
       group("Parts & Materials",
-        "partIds review.manufacturingBOM.canonical_source_part_ids review.manufacturingBOM.proposed_finished_part_ids_and_counts review.manufacturingBOM.proposed_direct_processed_materials_kg review.luxuryBOM.proposed_direct_finished_part_counts review.luxuryBOM.proposed_direct_processed_materials_kg"),
+        "partIds pendingPartCompatibility review.manufacturingBOM.canonical_source_part_ids review.manufacturingBOM.proposed_finished_part_ids_and_counts review.manufacturingBOM.proposed_direct_processed_materials_kg review.luxuryBOM.proposed_direct_finished_part_counts review.luxuryBOM.proposed_direct_processed_materials_kg"),
       group("Nested Machines & Capabilities",
         "review.manufacturingBOM.proposed_nested_machine_ids_and_counts outputSummary inputSummary fuelType review.electricMotors.intended_machine_consumers review.electricMotors.existing_manufacturing_destination"),
       group("Power & Service",
@@ -197,7 +197,7 @@ export function createIndustrialTables() {
         if (kind === "parts")
           return "Parts identities, material links and planning data now come from canonical Universe data/parts.json. " +
             "The 18 CC reference prices and masses are discovery planning only, NOT live rates. " +
-            "Three compatibility IDs are not separate tradable Parts; unknown input materials remain explicitly unresolved.";
+            "Three superseded generic identities have been removed; unresolved Machine/research mappings are marked for review. Unknown input materials remain explicitly unresolved.";
         return reference
           ? "Android discovery is a read-only review snapshot at " +
             reference.sourceCommit.slice(0, 8) +
