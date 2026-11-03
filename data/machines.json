@@ -21,10 +21,10 @@
     "fuelType": "Liquid fuel",
     "image": {
       "key": "assets/art/universe/machines/machine-exploration-vehicle.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "Three-quarter photograph of a rugged six-wheeled frontier exploration rover with a pressurised cabin, sampling arm and sensor mast, charcoal structural frame. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Transferable industrial machine assembled from canonical parts."
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A rugged six-wheeled all-terrain exploration rover equipped with geological sampling equipment, sensors and a pressurised cabin for frontier survey work. Specific visual requirements: a rugged six-wheeled frontier exploration rover with a pressurised cabin, sampling arm and sensor mast, charcoal structural frame. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
     }
   },
   {
@@ -48,10 +48,10 @@
     },
     "image": {
       "key": "assets/art/universe/machines/machine-ship-scanner.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "Photograph of a shipboard long-range scanner suite: radar and seismic sensor clusters on a structural metal pallette, no readable displays. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Transferable industrial machine assembled from canonical parts."
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: An integrated long-range ship sensor suite combining radar, seismic and thermal techniques to map planetary surfaces and shallow subsurface structures. Specific visual requirements: a shipboard long-range scanner suite: radar and seismic sensor clusters on a structural metal pallette, no readable displays. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
     }
   },
   {
@@ -76,10 +76,10 @@
     },
     "image": {
       "key": "assets/art/universe/machines/machine-substance-analyser.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "Photograph of a close-range substance analyser: spectrographic head, ceramic sample stage and sensor housings on a compact structural frame. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Transferable industrial machine assembled from canonical parts."
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A close-range spectrographic and geological inspection system used to identify composition, density and structural properties of sampled deposits. Specific visual requirements: a close-range substance analyser: spectrographic head, ceramic sample stage and sensor housings on a compact structural frame. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
     }
   },
   {
@@ -108,10 +108,10 @@
     "outputSummary": "Shipboard electrical power",
     "image": {
       "key": "assets/art/universe/machines/machine-ship-reactor.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "Photograph of a compact shipboard fusion reactor module: shielded housing, thermal exchangers, battery banks and generator assemblies, unlabelled. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Transferable industrial machine assembled from canonical parts."
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A compact high-output fusion reactor designed to provide sustained electrical power for a spacecraft and, where connections permit, nearby surface infrastructure. Specific visual requirements: a compact shipboard fusion reactor module: shielded housing, thermal exchangers, battery banks and generator assemblies, unlabelled. Output context: Shipboard electrical power. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
     }
   },
   {
@@ -137,10 +137,10 @@
     "outputSummary": "Breathable air, climate regulation and water recycling",
     "image": {
       "key": "assets/art/universe/machines/machine-ship-life-support.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "Photograph of a shipboard life-support plant: fluid loops, fans and sensor racks for air, water and pressure, no readable gauges. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Transferable industrial machine assembled from canonical parts."
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A shipboard environmental management system controlling oxygen circulation, water recycling, humidity, temperature and atmospheric pressure. Specific visual requirements: a shipboard life-support plant: fluid loops, fans and sensor racks for air, water and pressure, no readable gauges. Output context: Breathable air, climate regulation and water recycling. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
     }
   },
   {
@@ -165,10 +165,10 @@
     "outputSummary": "Navigation, operational data and system diagnostics",
     "image": {
       "key": "assets/art/universe/machines/machine-ship-computer.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "Photograph of a spacecraft mainframe: dark glass slabs, computing parts and power electronics in a structural rack, screens without readable text. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Transferable industrial machine assembled from canonical parts."
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A spacecraft navigation, systems-control and data-processing mainframe capable of supporting engineering, scientific and operational workloads. Specific visual requirements: a spacecraft mainframe: dark glass slabs, computing parts and power electronics in a structural rack, screens without readable text. Output context: Navigation, operational data and system diagnostics. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
     }
   },
   {
@@ -197,10 +197,10 @@
     "outputSummary": "Limited-throughput refined substances",
     "image": {
       "key": "assets/art/universe/machines/machine-ship-refinery-unit.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "Photograph of a compact ship refinery unit: small crusher, thermal chamber and hydraulic rams on a tight structural skid. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Transferable industrial machine assembled from canonical parts."
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A compact onboard materials-processing unit capable of basic thermal reduction, crushing and separation where full-scale refinery infrastructure is unavailable. Specific visual requirements: a compact ship refinery unit: small crusher, thermal chamber and hydraulic rams on a tight structural skid. Input context: Raw mineral feedstock. Output context: Limited-throughput refined substances. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
     }
   },
   {
@@ -230,8 +230,8 @@
       "key": "assets/art/universe/machines/machine-drill-machine.webp",
       "generated": true,
       "status": "generated",
-      "promptDescription": "Yard photograph of a heavy rotary drill machine: ceramic-tipped cutting head, hydraulic rams, mechanical gearbox and charcoal structural mast. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Transferable industrial machine assembled from canonical parts."
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A heavy rotary boring system using hardened cutting assemblies to break rock and access subsurface deposit seams. Specific visual requirements: a heavy rotary drill machine: ceramic-tipped cutting head, hydraulic rams, mechanical gearbox and charcoal structural mast. Input context: Power. Output context: Extracted raw material. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
     }
   },
   {
@@ -260,8 +260,8 @@
       "key": "assets/art/universe/machines/machine-conveyor-machine.webp",
       "generated": true,
       "status": "generated",
-      "promptDescription": "Yard photograph of a heavy-duty conveyor: charcoal structural truss, mechanical rollers, bulk-handling hopper and chute, power-electronics cabinet. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Transferable industrial machine assembled from canonical parts."
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: An automated heavy-duty material transport system for moving loose minerals and industrial feedstock between extraction, processing and storage areas. Specific visual requirements: a heavy-duty conveyor: charcoal structural truss, mechanical rollers, bulk-handling hopper and chute, power-electronics cabinet. Input context: Power. Output context: Bulk material movement. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
     }
   },
   {
@@ -287,10 +287,10 @@
     "outputSummary": "Ventilation and filtered air circulation",
     "image": {
       "key": "assets/art/universe/machines/machine-mine-ventilation.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "Yard photograph of mine ventilation plant: large fan, ducting and filtration housings in structural metal with sensor packs. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Transferable industrial machine assembled from canonical parts."
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A high-capacity fan, filtration and duct system that circulates breathable air and controls dust, contaminants and heat in underground workings. Specific visual requirements: mine ventilation plant: large fan, ducting and filtration housings in structural metal with sensor packs. Input context: Power. Output context: Ventilation and filtered air circulation. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
     }
   },
   {
@@ -317,10 +317,10 @@
     "outputSummary": "Crushed mineral feedstock",
     "image": {
       "key": "assets/art/universe/machines/machine-crusher-machine.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "Yard photograph of a mineral crusher: processing chamber, mechanical drive and structural frame reducing rock to feedstock. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Transferable industrial machine assembled from canonical parts."
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and rails, restrained electric-blue emissive indicators, small warm amber work lights, crisp bevels, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible mineral crusher with comfortable transparent margin: a compact rock-feed hopper with pale ceramic wear liners, enclosed crushing chamber, visible flywheel or geared mechanical drive, hydraulic supports and a short discharge chute with a small amount of crushed aggregate, making the hopper-to-crusher-to-discharge flow immediately clear. Keep the machine visually dominant and lightly worn but well maintained. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric building palette and rendering language while keeping the crusher a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
     }
   },
   {
@@ -348,10 +348,10 @@
     "outputSummary": "Refined substances",
     "image": {
       "key": "assets/art/universe/machines/machine-smelter-machine.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "Yard photograph of an industrial smelter: ceramic-lined furnace, thermal stacks, fluid cooling loops and structural housing. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Transferable industrial machine assembled from canonical parts."
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and rails, restrained electric-blue emissive indicators, controlled amber furnace glow, crisp bevels, compact modular construction and a strong readable silhouette at 128x128. Centre one complete physically plausible industrial smelter with comfortable transparent margin: a squat ceramic-lined high-temperature furnace vessel, protected mineral-feed opening, sealed processing chamber, compact thermal exhaust stack, visible fluid-cooling loops and heat exchangers, structural housing and a guarded tapping/output port. Make the furnace, cooling circuit and material flow immediately understandable without turning the asset into a refinery building. Keep the machine visually dominant and lightly worn but well maintained. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping the smelter a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
     }
   },
   {
@@ -377,10 +377,10 @@
     "outputSummary": "Stored electrical power",
     "image": {
       "key": "assets/art/universe/machines/machine-crude-chemical-battery.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "Yard photograph of a modular chemical battery bank: cell stacks, busbars and protected electrolyte reservoirs in a structural rack. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Transferable industrial machine assembled from canonical parts."
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A modular industrial electrochemical storage bank assembled from robust battery cells, conductive busbars and protected electrolyte reservoirs. Specific visual requirements: a modular chemical battery bank: cell stacks, busbars and protected electrolyte reservoirs in a structural rack. Input context: Electrolyte solution and refined reactive metal. Output context: Stored electrical power. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
     }
   },
   {
@@ -408,10 +408,10 @@
     "outputSummary": "Power",
     "image": {
       "key": "assets/art/universe/machines/machine-wind-generator.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "Yard photograph of a tall atmospheric wind generator: aerodynamic blades, structural tower, generator housing and sensor pack. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Transferable industrial machine assembled from canonical parts."
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A tall atmospheric turbine with aerodynamic blades, structural tower and integrated generator equipment for converting local wind into electrical power. Specific visual requirements: a tall atmospheric wind generator: aerodynamic blades, structural tower, generator housing and sensor pack. Input context: Ambient wind. Output context: Power. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
     }
   },
   {
@@ -439,10 +439,10 @@
     "outputSummary": "Power",
     "image": {
       "key": "assets/art/universe/machines/machine-water-wheel-generator.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "Yard photograph of a hydro-mechanical water-wheel generator: reinforced wheel, mechanical drive and generator housing on a race. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Transferable industrial machine assembled from canonical parts."
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A hydro-mechanical generator that converts the movement of suitable flowing water into electrical power through a reinforced wheel and generator assembly. Specific visual requirements: a hydro-mechanical water-wheel generator: reinforced wheel, mechanical drive and generator housing on a race. Input context: Flowing water. Output context: Power. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
     }
   },
   {
@@ -468,10 +468,10 @@
     "outputSummary": "Power",
     "image": {
       "key": "assets/art/universe/machines/machine-thermoelectric-trickler.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "Close photograph of a compact thermoelectric trickler: ceramic heat plates, power electronics and a small battery pack on a portable pad. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Transferable industrial machine assembled from canonical parts."
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A compact thermoelectric generator that turns a maintained temperature differential into low-output electrical power. Specific visual requirements: a compact thermoelectric trickler: ceramic heat plates, power electronics and a small battery pack on a portable pad. Input context: Heat source from suitable solid, liquid or gaseous fuel. Output context: Power. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
     }
   },
   {
@@ -500,10 +500,10 @@
     "outputSummary": "Power",
     "image": {
       "key": "assets/art/universe/machines/machine-solar-thermal-generator.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "Yard photograph of a solar-thermal generator: tracked mirrors, central receiver, thermal plumbing and generator housing. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Transferable industrial machine assembled from canonical parts."
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A solar-thermal generation system using tracked reflectors and a central receiver to heat working fluid and produce electrical power. Specific visual requirements: a solar-thermal generator: tracked mirrors, central receiver, thermal plumbing and generator housing. Input context: Sunlight and working fluid. Output context: Power. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
     }
   },
   {
@@ -529,10 +529,10 @@
     "outputSummary": "Distributed facility power",
     "image": {
       "key": "assets/art/universe/machines/machine-power-distribution-system.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "Yard photograph of a power distribution switchyard: transformers, buswork and control cabinets, no readable signage. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Transferable industrial machine assembled from canonical parts."
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A switchyard, transformer and control system that safely routes electrical power between generation sources, storage and colony facilities. Specific visual requirements: a power distribution switchyard: transformers, buswork and control cabinets, no readable signage. Input context: Electrical power from connected sources. Output context: Distributed facility power. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
     }
   },
   {
@@ -561,8 +561,8 @@
       "key": "assets/art/universe/machines/machine-life-support-machine.webp",
       "generated": false,
       "status": "not-generated",
-      "promptDescription": "Photograph of a modular habitat life-support machine: air-recycling stacks, fluid loops and sensor racks. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Transferable industrial machine assembled from canonical parts."
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A modular habitat environmental system providing air recycling, carbon-dioxide removal and water-management support. Specific visual requirements: a modular habitat life-support machine: air-recycling stacks, fluid loops and sensor racks. Input context: Power. Output context: Breathable air and environmental recycling. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
     }
   },
   {
@@ -591,8 +591,8 @@
       "key": "assets/art/universe/machines/machine-climate-control-machine.webp",
       "generated": false,
       "status": "not-generated",
-      "promptDescription": "Photograph of a wall-mountable climate-control machine: thermal exchanger, fans and sensor pack for heating, cooling and filtration. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Transferable industrial machine assembled from canonical parts."
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A local environmental-control unit providing heating, cooling, ventilation, humidity management and particulate filtration in occupied structures. Specific visual requirements: a wall-mountable climate-control machine: thermal exchanger, fans and sensor pack for heating, cooling and filtration. Input context: Power. Output context: Temperature and humidity regulation. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
     }
   },
   {
@@ -620,8 +620,8 @@
       "key": "assets/art/universe/machines/machine-irrigation-system.webp",
       "generated": false,
       "status": "not-generated",
-      "promptDescription": "Yard photograph of an irrigation system: pipes, valves, pumps and dosing controls laid out as a farm/ranch watering network. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Transferable industrial machine assembled from canonical parts."
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: An automated water-distribution network equipped with moisture monitoring and nutrient-dosing controls for managed cultivation. Specific visual requirements: an irrigation system: pipes, valves, pumps and dosing controls laid out as a farm/ranch watering network. Input context: Fresh water and power. Output context: Controlled crop irrigation. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
     }
   },
   {
@@ -649,8 +649,8 @@
       "key": "assets/art/universe/machines/machine-growth-management-system.webp",
       "generated": false,
       "status": "not-generated",
-      "promptDescription": "Photograph of a growth-management system: grow-lighting bars, atmospheric sensors and thermal-optical housings over cultivation trays. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Transferable industrial machine assembled from canonical parts."
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A cultivation-control system coordinating grow lighting, atmospheric conditions and biological monitoring to maintain productive growing environments. Specific visual requirements: a growth-management system: grow-lighting bars, atmospheric sensors and thermal-optical housings over cultivation trays. Input context: Power. Output context: Managed growing conditions. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
     }
   },
   {
@@ -679,8 +679,8 @@
       "key": "assets/art/universe/machines/machine-pump-machine.webp",
       "generated": false,
       "status": "not-generated",
-      "promptDescription": "Yard photograph of a high-pressure industrial pump: hydraulic drive, mechanical body and structural skid for water, brine or gas. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Transferable industrial machine assembled from canonical parts."
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A high-pressure industrial pump for recovering and transferring water, brines, liquids or suitable gases between deposits, processing systems and storage. Specific visual requirements: a high-pressure industrial pump: hydraulic drive, mechanical body and structural skid for water, brine or gas. Input context: Power. Output context: Pressurised fluid flow. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
     }
   },
   {
@@ -708,8 +708,8 @@
       "key": "assets/art/universe/machines/machine-filtration-machine.webp",
       "generated": false,
       "status": "not-generated",
-      "promptDescription": "Yard photograph of a filtration bank: ceramic-lined vessels, pipes and processing cartridges on a structural frame. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Transferable industrial machine assembled from canonical parts."
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A modular mechanical and chemical filtration bank for separating salts, particulates and other contaminants from raw fluid streams. Specific visual requirements: a filtration bank: ceramic-lined vessels, pipes and processing cartridges on a structural frame. Input context: Raw fluid and power. Output context: Conditioned or purified fluid. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
     }
   },
   {
@@ -737,8 +737,8 @@
       "key": "assets/art/universe/machines/machine-research-computer.webp",
       "generated": false,
       "status": "not-generated",
-      "promptDescription": "Photograph of a scientific research computer: dark glass workstations and computing racks without readable UI text. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Transferable industrial machine assembled from canonical parts."
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: An advanced scientific workstation for processing samples, running engineering models and compiling technical analyses and designs. Specific visual requirements: a scientific research computer: dark glass workstations and computing racks without readable UI text. Input context: Power and research data. Output context: Scientific analysis and technical data. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
     }
   },
   {
@@ -767,8 +767,8 @@
       "key": "assets/art/universe/machines/machine-fabrication-machine.webp",
       "generated": false,
       "status": "not-generated",
-      "promptDescription": "Yard photograph of a fabrication machine: forming dies, mechanical axes and structural enclosure for machining parts. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Transferable industrial machine assembled from canonical parts."
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A precision industrial machining and forming system that shapes refined metals, ceramics and composites into standardised parts and components. Specific visual requirements: a fabrication machine: forming dies, mechanical axes and structural enclosure for machining parts. Input context: Refined substances and power. Output context: Fabricated components. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
     }
   },
   {
@@ -798,8 +798,8 @@
       "key": "assets/art/universe/machines/machine-assembly-crane.webp",
       "generated": false,
       "status": "not-generated",
-      "promptDescription": "Yard photograph of a heavy assembly gantry crane: hydraulic hoist, structural span and sensor-guided manipulator, not a warehouse fork system. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Transferable industrial machine assembled from canonical parts."
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A heavy gantry crane and powered manipulator used in industrial, shipyard and port facilities to position structural sections, machinery and cargo. Specific visual requirements: a heavy assembly gantry crane: hydraulic hoist, structural span and sensor-guided manipulator, not a warehouse fork system. Input context: Power. Output context: Heavy lifting and assembly capability. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
     }
   },
   {
@@ -827,8 +827,8 @@
       "key": "assets/art/universe/machines/machine-welding-machine.webp",
       "generated": false,
       "status": "not-generated",
-      "promptDescription": "Yard photograph of a heavy welding machine: directed-energy head, fabrication tooling and thermal shielding on a structural cart. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Transferable industrial machine assembled from canonical parts."
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A heavy industrial welding system using high-current arc and directed-energy emitters to form durable structural joints. Specific visual requirements: a heavy welding machine: directed-energy head, fabrication tooling and thermal shielding on a structural cart. Input context: Power and appropriate joining consumables. Output context: Welded structural joints. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
     }
   },
   {
@@ -851,8 +851,8 @@
       "key": "assets/art/universe/machines/machine-crude-steam-piston-generator.webp",
       "generated": false,
       "status": "not-generated",
-      "promptDescription": "Yard photograph of a crude early-colony steam piston generator: exposed boiler, heavy reciprocating pistons, flywheel and charcoal structural frame, unfinished frontier fabrication. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Designer placeholder machine; refine prompt when construction parts and operating model are defined."
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: Legacy Desktop power-generation archetype retained because the technology catalogue explicitly unlocks Crude Steam Piston Generator. Detailed construction parts and operating model remain intentionally undefined until that machine is designed. Specific visual requirements: a crude early-colony steam piston generator: exposed boiler, heavy reciprocating pistons, flywheel and charcoal structural frame, unfinished frontier fabrication. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
     }
   },
   {
@@ -875,8 +875,8 @@
       "key": "assets/art/universe/machines/machine-crude-combustion-generator.webp",
       "generated": false,
       "status": "not-generated",
-      "promptDescription": "Yard photograph of a crude early-colony combustion generator: robust engine block, intake and exhaust plumbing, fuel reservoir and charcoal structural skid. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Designer placeholder machine; refine prompt when construction parts and operating model are defined."
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: Legacy Desktop power-generation archetype retained because the technology catalogue explicitly unlocks Crude Combustion Generator. Detailed construction parts and operating model remain intentionally undefined until that machine is designed. Specific visual requirements: a crude early-colony combustion generator: robust engine block, intake and exhaust plumbing, fuel reservoir and charcoal structural skid. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
     }
   },
   {
@@ -905,8 +905,8 @@
       "key": "assets/art/universe/machines/machine-livestock-handling-system.webp",
       "generated": false,
       "status": "not-generated",
-      "promptDescription": "Yard photograph of a livestock handling system: charcoal metal crush, gates, watering troughs and sensor tags for breeding and harvesting local colony herd animals, no Earth brand marks. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Transferable industrial machine assembled from canonical parts."
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A transferable yard system of crushes, gates, watering points and sensors used to breed and harvest local colony herd animals for food. Specific visual requirements: a livestock handling system: charcoal metal crush, gates, watering troughs and sensor tags for breeding and harvesting local colony herd animals, no Earth brand marks. Input context: Power, water and local herd animals. Output context: Managed breeding and food harvest from local livestock. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
     }
   },
   {
@@ -934,8 +934,8 @@
       "key": "assets/art/universe/machines/machine-colony-operations-computer.webp",
       "generated": false,
       "status": "not-generated",
-      "promptDescription": "Photograph of a colony operations computer: clustered computing racks, dark glass coordination boards and sensor links for running a mining colony efficiently, screens without readable text. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Transferable industrial machine assembled from canonical parts."
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A transferable colony coordination computer that runs mining-settlement operations, staffing and efficiency control from assembled computing parts. Specific visual requirements: a colony operations computer: clustered computing racks, dark glass coordination boards and sensor links for running a mining colony efficiently, screens without readable text. Input context: Power and operational data. Output context: Colony coordination and operating efficiency. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
     }
   },
   {
@@ -964,9 +964,9 @@
     "image": {
       "key": "assets/art/universe/machines/machine-bulk-stacker.webp",
       "generated": true,
-      "status": "generated",
-      "promptDescription": "Yard photograph of a bulk stacker-reclaimer: long structural boom, hydraulic luffing, conveyor belt and bulk-handling hopper stacking loose aggregate in an open yard. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Transferable industrial machine assembled from canonical parts."
+      "status": "needs-regeneration",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A transferable open-yard stacker-reclaimer that loads, stacks and reclaims loose bulk at a stockpile, wearing with use and movable to another yard. Specific visual requirements: a bulk stacker-reclaimer: long structural boom, hydraulic luffing, conveyor belt and bulk-handling hopper stacking loose aggregate in an open yard. Input context: Power and loose bulk material. Output context: Stacked or reclaimed bulk at stockpile throughput. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
     }
   },
   {
@@ -996,9 +996,9 @@
     "image": {
       "key": "assets/art/universe/machines/machine-warehouse-handler.webp",
       "generated": true,
-      "status": "generated",
-      "promptDescription": "Interior photograph of a warehouse handler: enclosed-aisle gantry with pallet forks and bulk-handling grabs, lighter than a shipyard assembly crane. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Transferable industrial machine assembled from canonical parts."
+      "status": "needs-regeneration",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A transferable enclosed-aisle handler for loading, inventory movement and dispatch inside a warehouse, lighter than a shipyard assembly crane. Specific visual requirements: a warehouse handler: enclosed-aisle gantry with pallet forks and bulk-handling grabs, lighter than a shipyard assembly crane. Input context: Power and unitised or palletised goods. Output context: Warehouse loading, inventory handling and dispatch throughput. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
     }
   },
   {
@@ -1029,8 +1029,8 @@
       "key": "assets/art/universe/machines/machine-conventional-electric-motor.webp",
       "generated": false,
       "status": "not-generated",
-      "promptDescription": "Product reference photograph of conventional electric motor: one physically plausible independent manufactured industrial machine in a compact workshop environment, Year-5326 Koplin industrial realism, metal and ceramic structures with practical utility connections. No readable labels, branding, logos, people or watermark.",
-      "notes": "Art not yet generated; canonical identity reconciled from Android industrial discovery."
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A conventional electromagnetic rotary drive for pumps, conveyors, bulk handling and general industrial machinery, designed around copper windings and a structural metal frame. Specific visual requirements: conventional electric motor: one physically plausible independent manufactured industrial machine in a compact workshop environment, Year-5326 Koplin industrial realism, metal and ceramic structures with practical utility connections. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
     }
   },
   {
@@ -1062,8 +1062,8 @@
       "key": "assets/art/universe/machines/machine-rare-earth-permanent-magnet-motor.webp",
       "generated": false,
       "status": "not-generated",
-      "promptDescription": "Product reference photograph of rare-earth permanent-magnet motor: one physically plausible independent manufactured industrial machine in a compact workshop environment, Year-5326 Koplin industrial realism, metal and ceramic structures with practical utility connections. No readable labels, branding, logos, people or watermark.",
-      "notes": "Art not yet generated; canonical identity reconciled from Android industrial discovery."
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A specialised electric motor using rare-earth permanent magnet material for applications that justify its higher performance and material demand. Specific visual requirements: rare-earth permanent-magnet motor: one physically plausible independent manufactured industrial machine in a compact workshop environment, Year-5326 Koplin industrial realism, metal and ceramic structures with practical utility connections. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
     }
   },
   {
@@ -1091,8 +1091,8 @@
       "key": "assets/art/universe/machines/machine-vector-exchange-drive.webp",
       "generated": false,
       "status": "not-generated",
-      "promptDescription": "Product reference photograph of vector exchange drive: one physically plausible independent manufactured industrial machine in a compact workshop environment, Year-5326 Koplin industrial realism, metal and ceramic structures with practical utility connections. No readable labels, branding, logos, people or watermark.",
-      "notes": "Art not yet generated; canonical identity reconciled from Android industrial discovery."
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: An advanced Veyrite-dependent interstellar propulsion system whose existence is established in the Koplin universe; its internal engineered lattice and manufacturing bill remain strategic and unresolved. Specific visual requirements: vector exchange drive: one physically plausible independent manufactured industrial machine in a compact workshop environment, Year-5326 Koplin industrial realism, metal and ceramic structures with practical utility connections. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
     }
   },
   {
@@ -1159,8 +1159,8 @@
       "key": "assets/art/universe/machines/machine-personal-recreation-terminal.webp",
       "generated": false,
       "status": "not-generated",
-      "promptDescription": "Product reference photograph of personal recreation terminal: one physically plausible independent manufactured industrial machine in a compact workshop environment, Year-5326 Koplin industrial realism, metal and ceramic structures with practical utility connections. No readable labels, branding, logos, people or watermark.",
-      "notes": "Art not yet generated; canonical identity reconciled from Android industrial discovery."
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: An individually accessible residential recreation terminal providing one daily user service slot within accommodation. Specific visual requirements: personal recreation terminal: one physically plausible independent manufactured industrial machine in a compact workshop environment, Year-5326 Koplin industrial realism, metal and ceramic structures with practical utility connections. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
     }
   },
   {
@@ -1237,8 +1237,8 @@
       "key": "assets/art/universe/machines/machine-communal-fitness-leisure-system.webp",
       "generated": false,
       "status": "not-generated",
-      "promptDescription": "Product reference photograph of communal fitness & leisure system: one physically plausible independent manufactured industrial machine in a compact workshop environment, Year-5326 Koplin industrial realism, metal and ceramic structures with practical utility connections. No readable labels, branding, logos, people or watermark.",
-      "notes": "Art not yet generated; canonical identity reconciled from Android industrial discovery."
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A shared recreation and fitness installation for accommodation residents, supporting ten resident service slots per day. Specific visual requirements: communal fitness & leisure system: one physically plausible independent manufactured industrial machine in a compact workshop environment, Year-5326 Koplin industrial realism, metal and ceramic structures with practical utility connections. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
     }
   },
   {
@@ -1320,8 +1320,8 @@
       "key": "assets/art/universe/machines/machine-advanced-entertainment-system.webp",
       "generated": false,
       "status": "not-generated",
-      "promptDescription": "Product reference photograph of advanced entertainment system: one physically plausible independent manufactured industrial machine in a compact workshop environment, Year-5326 Koplin industrial realism, metal and ceramic structures with practical utility connections. No readable labels, branding, logos, people or watermark.",
-      "notes": "Art not yet generated; canonical identity reconciled from Android industrial discovery."
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A shared advanced entertainment installation serving thirty accommodation residents per day. Specific visual requirements: advanced entertainment system: one physically plausible independent manufactured industrial machine in a compact workshop environment, Year-5326 Koplin industrial realism, metal and ceramic structures with practical utility connections. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
     }
   },
   {
@@ -1417,8 +1417,8 @@
       "key": "assets/art/universe/machines/machine-immersive-recreation-suite.webp",
       "generated": false,
       "status": "not-generated",
-      "promptDescription": "Product reference photograph of immersive recreation suite: one physically plausible independent manufactured industrial machine in a compact workshop environment, Year-5326 Koplin industrial realism, metal and ceramic structures with practical utility connections. No readable labels, branding, logos, people or watermark.",
-      "notes": "Art not yet generated; canonical identity reconciled from Android industrial discovery."
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A large immersive recreation installation providing sixty resident service slots per day. Specific visual requirements: immersive recreation suite: one physically plausible independent manufactured industrial machine in a compact workshop environment, Year-5326 Koplin industrial realism, metal and ceramic structures with practical utility connections. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
     }
   },
   {
@@ -1523,8 +1523,8 @@
       "key": "assets/art/universe/machines/machine-integrated-wellness-leisure-system.webp",
       "generated": false,
       "status": "not-generated",
-      "promptDescription": "Product reference photograph of integrated wellness & leisure system: one physically plausible independent manufactured industrial machine in a compact workshop environment, Year-5326 Koplin industrial realism, metal and ceramic structures with practical utility connections. No readable labels, branding, logos, people or watermark.",
-      "notes": "Art not yet generated; canonical identity reconciled from Android industrial discovery."
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A high-capacity integrated wellness and recreation installation providing one hundred and twenty resident service slots per day. Specific visual requirements: integrated wellness & leisure system: one physically plausible independent manufactured industrial machine in a compact workshop environment, Year-5326 Koplin industrial realism, metal and ceramic structures with practical utility connections. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
     }
   }
 ]
