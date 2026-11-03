@@ -131,33 +131,32 @@ function groupRecords(records, keyFn) {
 }
 
 function buildSubstancesDirectoryNode() {
-  const records = state.catalogue.collection('substances');
+  const genericClasses = state.catalogue.collection('substances');
   const naturalResources = state.catalogue.collection('mobileResourceDefinitions');
   const namedMaterials = state.catalogue.collection('namedSubstances');
-  const archetypes = [...new Set([...records, ...namedMaterials].map(record => record.dominantArchetype))].sort();
+  const archetypes = [...new Set([...genericClasses, ...namedMaterials].map(record => record.dominantArchetype))].sort();
+
   return category('Substances', archetypes.map(archetype => {
-    const items = records.filter(record => record.dominantArchetype === archetype);
-    const grouped = refined => category(refined ? 'Refined' : 'Raw',
-      items.filter(item => Boolean(item.refined) === refined).map(item =>
-        entityNode(item.id, [
-          category('Named natural resources',
-            nodes(naturalResources.filter(resource => resource.genericSubstanceId === item.id))),
-          category('Named materials',
-            nodes(namedMaterials.filter(material => material.genericSubstanceId === item.id)))
-        ])
-      ).sort(byName));
-    // A specific named material may be approved without an approved generic mapping.
-    // Keep it visible without guessing a category or silently losing it.
+    const genericNodes = genericClasses
+      .filter(record => record.dominantArchetype === archetype)
+      .map(generic => entityNode(generic.id, [
+        // Reuse canonical resource identities instead of copying their definitions.
+        category('Named natural resources',
+          nodes(naturalResources.filter(resource => resource.genericSubstanceId === generic.id))),
+        category('Named materials',
+          nodes(namedMaterials.filter(material => material.genericSubstanceId === generic.id)))
+      ])).sort(byName);
+
+    // Generic "refined" is an ontology field, not a reliable stock-production stage:
+    // manufactured alloys and composites may have refined=false in the canon.
     const pending = namedMaterials.filter(material =>
       material.dominantArchetype === archetype && !material.genericSubstanceId);
     return category(archetype, [
-      grouped(false),
-      grouped(true),
+      ...genericNodes,
       category('Named materials — classification pending', nodes(pending))
     ]);
   }));
 }
-
 function buildPartsDirectoryNode() {
   const records = state.catalogue.collection('parts');
   return category('Parts', groupRecords(records, record => record.category).map(([partCategory, items]) =>
