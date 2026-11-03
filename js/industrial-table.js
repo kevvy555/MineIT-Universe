@@ -7,13 +7,14 @@ const flatten = (record, prefix = "", result = {}) => {
     const field = prefix ? prefix + "." + key : key;
     if (value && !Array.isArray(value) && typeof value === "object")
       flatten(value, field, result);
-    else result[field] = value;
+    else result[field] = prefix.startsWith('review') && typeof value === 'string' &&
+      /^-?\\d+(?:\\.\\d+)?$/.test(value) ? Number(value) : value;
   }
   return result;
 };
 const group = (name, fields) => ({ name, fields: fields.split(" ") });
 const common = [
-  group("Identity & Classification", "name id entityType category subCategory subCategories categories buildingType sources"),
+  group("Identity & Classification", "name id catalogueStatus entityType category subCategory subCategories categories buildingType sources"),
   group("Canon & Provenance", "canonStatus provenance.desktopPath image.notes")
 ];
 const visuals = group("Artwork & Visuals",
@@ -111,11 +112,35 @@ export function createIndustrialTables() {
       storageKey: "mineit" + config.title + "Columns",
       rows(catalogue, reference) {
         const source = new Map((reference?.[kind] || []).map(row => [row.id, row.review]));
-        return catalogue.collection(kind).map(record => {
+        const canonicalRows = catalogue.collection(kind).map(record => {
           const fields = flatten(record);
+          fields.catalogueStatus = "Canonical";
           if (source.has(record.id)) flatten(source.get(record.id), "review", fields);
-          return { id: record.id, record, collection: kind, fields };
-        }).sort((a, b) => a.record.name.localeCompare(b.record.name));
+          return { id: record.id, record, collection: kind, fields, canonical: true };
+        });
+        // Candidates are review-only rows, not Universe entities. Never link to missing IDs.
+        const candidates = new Map();
+        for (const candidate of reference?.unmappedCandidates?.[kind] || []) {
+          const row = candidates.get(candidate.id) || {
+            id: candidate.id, name: "", review: {}
+          };
+          row.name ||= candidate.fields.product_name || candidate.fields.machine_name ||
+            candidate.fields.candidate_machine_name || candidate.fields.name || "";
+          row.review[candidate.section] = candidate.fields;
+          candidates.set(candidate.id, row);
+        }
+        const reviewRows = [...candidates.values()].map(candidate => {
+          const record = {
+            id: candidate.id, name: candidate.name || candidate.id,
+            catalogueStatus: "Discovery candidate — not canonical"
+          };
+          const fields = flatten(record);
+          flatten(candidate.review, "review", fields);
+          return { id: candidate.id, record, collection: kind,
+            fields, canonical: false };
+        });
+        return [...canonicalRows, ...reviewRows]
+          .sort((a, b) => a.record.name.localeCompare(b.record.name));
       },
       sourceNote(reference) {
         return reference
@@ -123,7 +148,7 @@ export function createIndustrialTables() {
             reference.sourceCommit.slice(0, 8) +
             ". Approved and provisional values are labelled in their source fields. " +
             (reference.unmappedCandidates?.[kind]?.length || 0) +
-            " proposals without canonical IDs are not silently added to this table."
+            " additional discovery candidates appear as non-canonical review rows. Their names do not open canonical details."
           : "Android industrial discovery reference is unavailable. Canonical Universe records remain visible.";
       }
     })]));
