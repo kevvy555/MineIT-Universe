@@ -132,7 +132,7 @@ export function applySubstanceTable(rows, columns, filters = {}, sortKey = "name
     const filter = String(filters[key] || "").trim().toLowerCase();
     const value = row.fields[key];
     if (filter) {
-      const numeric = filter.match(/^(>=|<=|>|<|=)\\s*(-?\\d+(?:\\.\\d+)?)$/);
+      const numeric = filter.match(/^(>=|<=|>|<|=)\s*(-?\d+(?:\.\d+)?)$/);
       if (numeric && typeof value === "number") {
         const n = Number(numeric[2]);
         if (!({ ">": value > n, "<": value < n, "=": value === n,
