@@ -40,37 +40,159 @@ export function substanceRows(catalogue, androidReference) {
 export const DEFAULT_COLUMNS = ["name", "kind", "archetype", "genericClassName",
   "gameplayCategory", "materialStage", "renewable", "canonStatus", "android.baseScan"];
 
-export function allSubstanceFields(rows) {
-  const keys = new Set(rows.flatMap(row => Object.keys(row.fields)));
-  const groupOrder = ["Identity", "Generic substance class", "Named materials",
-    "Resource and gameplay metadata", "Occurrence and geology", "Biological food",
-    "Android reference only", "Sources and provenance", "Artwork"];
-  const identityOrder = ["name", "kind", "archetype", "genericClassName",
-    "id", "genericSubstanceId", "description", "canonStatus"];
-  return [...keys].sort((a, b) => {
-    const ga = groupOrder.indexOf(columnGroup(a)), gb = groupOrder.indexOf(columnGroup(b));
-    if (ga !== gb) return ga - gb;
-    const ia = identityOrder.indexOf(a), ib = identityOrder.indexOf(b);
-    if (ia !== -1 || ib !== -1) return (ia === -1 ? 999 : ia) - (ib === -1 ? 999 : ib);
-    return fieldLabel(a).localeCompare(fieldLabel(b));
-  });
-}
+// The ten designer-approved categories govern the UI and preserve the original JSON
+// field names. They do not create a second data source or change catalogue records.
+export const SUBSTANCE_COLUMN_GROUPS = [
+  {
+    "name": "Identity & Classification",
+    "fields": [
+      "name",
+      "id",
+      "kind",
+      "entityType",
+      "archetype",
+      "dominantArchetype",
+      "genericClassName",
+      "genericSubstanceId",
+      "classificationStatus",
+      "materialStage"
+    ]
+  },
+  {
+    "name": "Properties & Applications",
+    "fields": [
+      "description",
+      "industrialRole",
+      "stockBehaviour",
+      "renewable",
+      "naturalOccurrence",
+      "visualDescription"
+    ]
+  },
+  {
+    "name": "Production & Materials",
+    "fields": [
+      "sourceRawResourceIds",
+      "upstreamInputDescription"
+    ]
+  },
+  {
+    "name": "Game Integration",
+    "fields": [
+      "gameId",
+      "gameplayCategory",
+      "mobileKey"
+    ]
+  },
+  {
+    "name": "Governance & Approval",
+    "fields": [
+      "canonStatus",
+      "discoveryStatus",
+      "knowledgeScope"
+    ]
+  },
+  {
+    "name": "Geological Occurrence",
+    "fields": [
+      "occurrence.id",
+      "occurrence.name",
+      "occurrence.resourceId",
+      "occurrence.canonStatus",
+      "occurrence.knowledgeScope",
+      "occurrence.naturalOccurrence",
+      "occurrence.occurrenceClass",
+      "occurrence.worldTypeEligibility",
+      "occurrence.allowedCelestialBodyKindIds",
+      "occurrence.eligibleWorldTypeIds",
+      "occurrence.preferredWorldTypeIds",
+      "occurrence.excludedWorldTypeIds",
+      "occurrence.primaryExtractionZoneIds",
+      "occurrence.secondaryExtractionZoneIds",
+      "occurrence.preferredGeologyProvinceIds",
+      "occurrence.requiredBiomeIds",
+      "occurrence.requiredHydrosphereIds",
+      "occurrence.excludedAtmosphereTypeIds",
+      "occurrence.notes"
+    ]
+  },
+  {
+    "name": "Biology & Agriculture",
+    "fields": [
+      "naturalOccurrenceAllowed",
+      "manufactured",
+      "introducedAgricultureAllowed",
+      "controlledAgricultureAllowed",
+      "allowedCelestialBodyKindIds",
+      "naturalWorldTypeIds",
+      "openAgricultureWorldTypeIds",
+      "requiredNaturalBiomeIds",
+      "requiredNaturalHydrosphereIds",
+      "excludedLandformIds",
+      "notes"
+    ]
+  },
+  {
+    "name": "Game Balancing — Android",
+    "fields": [
+      "android.resourceId",
+      "android.rarity",
+      "android.weight",
+      "android.qualityBias",
+      "android.baseScan",
+      "android.baselineExtractionMethod",
+      "android.baselineExtractionFamily",
+      "android.basePrice",
+      "android.operationalTags",
+      "android.legacyAliases"
+    ]
+  },
+  {
+    "name": "Sources & Provenance",
+    "fields": [
+      "provenance.sourceRepository",
+      "provenance.sourcePath",
+      "provenance.approvedDate",
+      "sourceProvenance.repository",
+      "sourceProvenance.path",
+      "sourceProvenance.workingId"
+    ]
+  },
+  {
+    "name": "Artwork & Visuals",
+    "fields": [
+      "image.key",
+      "image.generated",
+      "image.status",
+      "image.promptDescription",
+      "image.notes"
+    ]
+  }
+];
+
+const groupByField = new Map(SUBSTANCE_COLUMN_GROUPS.flatMap(group =>
+  group.fields.map(field => [field, group.name])));
 
 export function columnGroup(key) {
-  if (key.startsWith("android.")) return "Android reference only";
-  if (key.startsWith("occurrence.")) return "Occurrence and geology";
-  if (key.startsWith("image.")) return "Artwork";
-  if (key.startsWith("provenance.") || key.startsWith("sourceProvenance.") ||
-    key.startsWith("source")) return "Sources and provenance";
-  if (["name", "id", "kind", "archetype", "genericClassName", "genericSubstanceId",
-    "description", "canonStatus", "entityType"].includes(key)) return "Identity";
-  if (["substanceType", "thermalBehaviour", "standardState", "form", "refined",
-    "tier", "industrialRole"].includes(key)) return "Generic substance class";
-  if (["materialStage", "stockBehaviour", "classificationStatus", "discoveryStatus",
-    "sourceRawResourceIds", "upstreamInputDescription"].includes(key)) return "Named materials";
-  if (key.includes("Agriculture") || key.includes("Natural") || ["manufactured",
-    "naturalOccurrenceAllowed", "notes", "excludedLandformIds"].includes(key)) return "Biological food";
-  return "Resource and gameplay metadata";
+  // Newly introduced fields remain accessible; tests require deliberate classification.
+  return groupByField.get(key) || 'Uncategorised';
+}
+
+export function allSubstanceFields(rows) {
+  const available = new Set(rows.flatMap(row => Object.keys(row.fields)));
+  const ordered = SUBSTANCE_COLUMN_GROUPS.flatMap(group =>
+    group.fields.filter(field => available.delete(field)));
+  return [...ordered, ...[...available].sort((a, b) => a.localeCompare(b))];
+}
+
+export function selectionForCategory(current, fields, selected) {
+  const next = new Set(current);
+  for (const field of fields) {
+    if (selected) next.add(field);
+    else if (field !== 'name') next.delete(field);
+  }
+  next.add('name'); // Name always remains as the route back to details.
+  return [...next];
 }
 
 export function fieldLabel(key) {

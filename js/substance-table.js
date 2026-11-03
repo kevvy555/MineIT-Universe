@@ -1,5 +1,6 @@
 import { substanceRows, allSubstanceFields, DEFAULT_COLUMNS, columnGroup,
-  fieldLabel, fieldText, applySubstanceTable, uniqueColumnValues } from "./substance-table-data.js";
+  fieldLabel, fieldText, applySubstanceTable, uniqueColumnValues,
+  SUBSTANCE_COLUMN_GROUPS, selectionForCategory } from "./substance-table-data.js";
 
 const esc = value => String(value ?? "").replaceAll("&", "&amp;").replaceAll("<", "&lt;")
   .replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#039;");
@@ -43,17 +44,27 @@ export function createSubstanceTable() {
     selected = selected.filter(key => possible.includes(key));
     if (!selected.includes("name")) selected.unshift("name");
     const ordered = possible.filter(key => selected.includes(key));
-    const groups = [...new Set(possible.map(columnGroup))];
-    // Pack every option into one full-width grid: no nested scroll box or tall group cards.
-    // The category remains available on hover and to assistive technology.
-    const picker = groups.flatMap(group =>
-      possible.filter(key => columnGroup(key) === group).map(key =>
-        '<label class="substance-choice" title="' + esc(group + ' — ' + fieldLabel(key)) +
-        '"><input type="checkbox" aria-label="' + esc(group + ': ' + fieldLabel(key)) +
+    const available = new Set(possible);
+    const groups = SUBSTANCE_COLUMN_GROUPS.map(group => ({
+      ...group, fields: group.fields.filter(key => available.has(key))
+    }));
+    // Every category stays expanded: no subpanels, no nested scrolling.
+    const picker = groups.map(group => {
+      const checked = group.fields.filter(key => ordered.includes(key)).length;
+      const options = group.fields.map(key =>
+        '<label class="substance-choice" title="' + esc(group.name + ' — ' + fieldLabel(key)) +
+        '"><input type="checkbox" aria-label="' + esc(group.name + ': ' + fieldLabel(key)) +
         '" data-column="' + esc(key) + '" ' + (ordered.includes(key) ? "checked " : "") +
         (key === "name" ? "disabled " : "") + '><span>' + esc(fieldLabel(key)) +
-        '</span></label>')
-    ).join("");
+        '</span></label>').join("");
+      return '<section class="substance-column-category" data-column-group="' + esc(group.name) +
+        '"><div class="substance-category-heading"><strong>' + esc(group.name) +
+        '</strong><span class="substance-category-count">' + checked + ' / ' +
+        group.fields.length + '</span><div class="substance-category-actions">' +
+        '<button type="button" data-group-select="' + esc(group.name) + '">Select all</button>' +
+        '<button type="button" data-group-clear="' + esc(group.name) + '">Deselect all</button>' +
+        '</div></div><div class="substance-category-fields">' + options + '</div></section>';
+    }).join("");
 
     container.innerHTML = '<div class="substance-review">' +
       '<div class="substance-review-title"><div><div class="eyebrow">Universe Catalogue / bulk review</div>' +
@@ -67,7 +78,7 @@ export function createSubstanceTable() {
       '><summary>Choose columns (' + ordered.length + ' of ' + possible.length +
       ')</summary><div class="substance-column-actions">' +
       '<button type="button" id="substanceSelectAll">Select all</button>' +
-      '<button type="button" id="substanceClearColumns">Clear all</button>' +
+      '<button type="button" id="substanceClearColumns">Deselect all</button>' +
       '<span>Name stays visible to open details.</span></div>' +
       '<div class="substance-pick-grid">' + picker + '</div></details></div>' +
       '<p class="substance-source-note">' + (reference ?
@@ -236,6 +247,14 @@ export function createSubstanceTable() {
     });
     container.querySelector("#substanceSelectAll").onclick = () => setColumns(possible);
     container.querySelector("#substanceClearColumns").onclick = () => setColumns(["name"]);
+    container.querySelectorAll("[data-group-select]").forEach(button => button.onclick = () => {
+      const group = groups.find(item => item.name === button.dataset.groupSelect);
+      if (group) setColumns(selectionForCategory(selected, group.fields, true));
+    });
+    container.querySelectorAll("[data-group-clear]").forEach(button => button.onclick = () => {
+      const group = groups.find(item => item.name === button.dataset.groupClear);
+      if (group) setColumns(selectionForCategory(selected, group.fields, false));
+    });
     container.querySelector("#substanceClear").onclick = () => {
       textFilters = {};
       valueFilters = {};

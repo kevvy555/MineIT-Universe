@@ -1,7 +1,8 @@
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { substanceRows, allSubstanceFields, applySubstanceTable,
-  uniqueColumnValues, valueToken, rowValueTokens } from "../js/substance-table-data.js";
+  uniqueColumnValues, valueToken, rowValueTokens, SUBSTANCE_COLUMN_GROUPS,
+  columnGroup, selectionForCategory } from "../js/substance-table-data.js";
 
 const load = path => JSON.parse(readFileSync(new URL("../" + path, import.meta.url), "utf8"));
 const collections = {
@@ -51,6 +52,37 @@ assert.deepEqual(byName.map(r => r.record.name), ["Refined Iron"]);
 assert.equal(keys[0], "name", "Name is always the first available column");
 assert.ok(keys.indexOf("kind") < keys.indexOf("android.baseScan"), "Identity precedes Android reference");
 
+// All current fields must belong to exactly one of the ten approved categories.
+assert.deepEqual(SUBSTANCE_COLUMN_GROUPS.map(group => group.name), [
+  "Identity & Classification", "Properties & Applications", "Production & Materials",
+  "Game Integration", "Governance & Approval", "Geological Occurrence",
+  "Biology & Agriculture", "Game Balancing — Android",
+  "Sources & Provenance", "Artwork & Visuals"
+]);
+const groupedFields = SUBSTANCE_COLUMN_GROUPS.flatMap(group => group.fields);
+assert.equal(groupedFields.length, 75, "The full current column set is preserved");
+assert.equal(new Set(groupedFields).size, 75, "Every field belongs to one category");
+assert.deepEqual(new Set(groupedFields), new Set(keys), "No missing or extra field definitions");
+assert.ok(SUBSTANCE_COLUMN_GROUPS.every(group => group.fields.length > 0));
+for (const group of SUBSTANCE_COLUMN_GROUPS) {
+  assert.ok(group.fields.every(field => columnGroup(field) === group.name),
+    "Column grouping must be stable and explicit");
+}
+const geological = SUBSTANCE_COLUMN_GROUPS.find(group => group.name === "Geological Occurrence");
+const baseline = ["name", "kind", "android.baseScan"];
+const geologySelected = selectionForCategory(baseline, geological.fields, true);
+assert.equal(geologySelected.length, baseline.length + geological.fields.length);
+assert.ok(geological.fields.every(field => geologySelected.includes(field)));
+assert.deepEqual(new Set(selectionForCategory(geologySelected, geological.fields, false)),
+  new Set(baseline), "Deselecting one category must preserve selections in other categories");
+const identity = SUBSTANCE_COLUMN_GROUPS.find(group => group.name === "Identity & Classification");
+assert.deepEqual(selectionForCategory(identity.fields, identity.fields, false), ["name"],
+  "Name cannot be deselected, including by category clear");
+assert.deepEqual(new Set(selectionForCategory([], keys, true)), new Set(keys),
+  "Global select includes all available columns");
+assert.deepEqual(selectionForCategory(keys, keys, false), ["name"],
+  "Global deselect leaves only the required Name column");
+
 const kindOptions = uniqueColumnValues(rows, "kind", catalogue);
 assert.deepEqual(kindOptions.map(x => x.label), ["Biological food", "Named material", "Natural resource"]);
 assert.equal(kindOptions.reduce((sum, entry) => sum + entry.count, 0), rows.length);
@@ -92,8 +124,16 @@ assert.match(directoryCss, /\.substance-review-tools details\{width:100%;max-wid
   "The column selector should span the entire right-hand table pane");
 assert.match(directoryCss, /\.substance-pick-grid\{width:100%;max-height:none;overflow:visible/,
   "Column-selection checkboxes must have no nested scroll container");
-assert.match(tableApp, /groups\.flatMap\(group/,
-  "Render the selectable fields as a compact full-width grid instead of tall grouped cards");
+assert.match(tableApp, /groups\.map\(group/,
+  "Render ten categories at once without collapsed subsections");
+assert.match(tableApp, /data-group-select/,
+  "Every category has a Select all control");
+assert.match(tableApp, /data-group-clear/,
+  "Every category has a Deselect all control");
+assert.match(tableApp, /data-column-group/,
+  "Group headings must be visible in the expanded column chooser");
+assert.match(directoryCss, /\.substance-pick-grid\{width:100%;max-height:none;overflow:visible/,
+  "The category chooser must remain unscrollable");
 
 console.log("Substances review valid:", rows.length, "unique records,", keys.length,
   "fields; multi-select value filters and sort ordering verified.");
