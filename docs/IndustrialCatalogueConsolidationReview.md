@@ -1,5 +1,15 @@
 # Parts, Machines and Buildings — consolidated review (3 November 2026)
 
+> **Current Parts catalogue state (3 November 2026, feature PR #24):** **19 active
+> finished Parts**, zero active legacy Part records. The old Battery Parts,
+> Thermal / Optical Parts and Fabrication Parts IDs were explicitly retired
+> following user approval. Their former Machine consumers and technology
+> unlocks are tracked as **unapproved migration reviews**, not falsely
+> reassigned. Historical stages below describe earlier 22-record snapshots.
+>
+> No Android saved-stock conversion or final engineering compatibility has
+> been implemented as part of the Universe catalogue retirement.
+
 ## Scope and authority
 
 This is a **read-only catalogue review**, not a release of new gameplay balance or a
@@ -28,11 +38,11 @@ the original CSV field names, data, review status, approval status and
 unresolved notes rather than inferring new canon. Source files and their
 section labels are listed within the snapshot.
 
-| Type | Canonical IDs before integration | Newly reconciled IDs | Current canonical IDs | Remaining unmapped candidates |
-| --- | ---: | ---: | ---: | ---: |
-| Parts | 14 | 8 | 22 | 0 |
-| Machines | 34 | 8 | 42 | 0 |
-| Buildings | 24 | 0 | 24 | 0 |
+| Type | Before new identity integration | New identities | Initially reconciled | Current active identities | Retired legacy |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Parts | 14 | 8 | 22 | **19** | **3** |
+| Machines | 34 | 8 | 42 | 42 | 0 |
+| Buildings | 24 | 0 | 24 | 24 | 0 |
 
 The 16 approved distinct identities were integrated on 3 November 2026 into
 `data/parts.json` and `data/machines.json` with **stable `part-` and
@@ -259,3 +269,70 @@ nonduplicated subcategories, source-approval states, linked planned quantities,
 unresolved inputs without fake IDs, source-pinned planning prices and absence
 of duplicate Android review columns in the Parts table. Browser interaction
 and small-screen visual QA remain separate manual checks.
+
+## Superseded Parts removal — explicit approval, 3 November 2026
+
+**Decision:** remove the three combined source-family IDs from the current
+canonical `data/parts.json` collection. All 19 individual finished Part
+products remain. This supersedes the earlier temporary decision to preserve
+the three generic source families as active Part records. Original names,
+historical IDs and mapping context remain here and in the pinned Android
+discovery archive, not in an independent shadow canonical catalogue.
+
+| Retired canonical ID | Former meaning | Distinct surviving Parts |
+| --- | --- | --- |
+| `part-battery-parts` | Battery Parts (generic/ambiguous chemistry) | `part-lead-acid-battery-module`, `part-lithium-based-battery-module` |
+| `part-thermal-optical-parts` | Thermal / Optical Parts (two different functions) | `part-thermal-parts`, `part-optical-parts` |
+| `part-fabrication-parts` | Fabrication Parts (tooling and welding) | `part-forming-cutting-tooling`, `part-welding-parts` |
+
+### Affected Machine consumers — migration remains unapproved
+
+Removing the three old Part identities invalidated **14 prior
+Machine–Part compatibility edges across ten Machines**. They were removed
+from canonical `machine.partIds`; the remaining known links were kept.
+Each former edge is now represented as a typed
+`machine.pendingPartCompatibility` review with a legacy *family name*,
+existing candidate product IDs where physically plausible, an
+`unapproved-consumer-mapping` status and an engineering note. A candidate
+is **not** a required, installed or manufacturing-ready input.
+
+| Affected Machine | Number of previous legacy edges | Disposition |
+| --- | ---: | --- |
+| Ship Reactor | 3 | Battery, thermal/optical and fabrication fit require independent evaluation; no fission-related assumption |
+| Ship Refinery Unit | 1 | Thermal process/fitting review |
+| Smelter Machine | 1 | Heat-rated Thermal Parts review |
+| Crude Chemical Battery | 1 | Electrical chemistry/grade review; do not assume battery-module chemistry |
+| Thermoelectric Trickler | 2 | Thermal management and optional electrical buffer; no presumed rotating generator |
+| Solar Thermal Generator | 1 | Thermal collection vs optical reflector Parts separately |
+| Climate Control Machine | 1 | Thermal control rating review |
+| Growth Management System | 1 | Growth illumination, sensors and temperature fit unresolved |
+| Fabrication Machine | 1 | Forming & Cutting Tooling candidate needs compatibility approval |
+| Welding Machine | 2 | Welding Parts and potential thermal protection reviewed separately |
+
+Six existing Research Technology identities remain valid, but their
+**six obsolete `unlockedPartIds` links** were removed. Each now has a
+typed `partUnlockReview` with the surviving candidate product IDs and
+`unapproved-technology-mapping` status; no replacement Part is automatically
+granted by a legacy unlock. The affected technologies are:
+
+- Power Systems Salvage
+- Thermal Systems Salvage
+- Processing and Fabrication Salvage
+- Battery Parts Manufacturing
+- Thermal / Optical Parts Manufacturing
+- Fabrication Parts Manufacturing
+
+The historical source snapshot intentionally retains the old names/IDs as
+**archived discovery evidence**; the live Parts review projects **only the
+19 canonical records**. Existing external saved stock, historical Desktop
+source research requirements, importer mappings and future Mobile runtime
+consumption have **not** been migrated and require explicit compatibility
+design before production activation. Do not interpret removal as proof that
+saved generic stock can be converted automatically into specific finished
+products. The current Universe canonical graph contains no references to
+retired IDs in its active Part/Machine/Research relationships.
+
+Regression checks enforce that all retired IDs are absent from the
+canonical Part collection, every active candidate reference resolves to one
+of the surviving Parts, and all 14 Machine and six research migration
+questions remain plainly flagged pending.
