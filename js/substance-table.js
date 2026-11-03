@@ -20,15 +20,15 @@ export async function loadAndroidResourceReference() {
   }
 }
 
-export function createSubstanceTable() {
-  let selected = [...DEFAULT_COLUMNS];
+export function createSubstanceTable(config = {}) {
+  let selected = [...(config.defaultColumns || DEFAULT_COLUMNS)];
   let textFilters = {};
   let valueFilters = {};
   let sortKey = "name";
   let direction = 1;
   let cleanupListeners = () => {};
   try {
-    const stored = JSON.parse(sessionStorage.getItem("mineitSubstanceColumns") || "null");
+    const stored = JSON.parse(sessionStorage.getItem((config.storageKey || "mineitSubstanceColumns")) || "null");
     if (Array.isArray(stored) && stored.every(x => typeof x === "string"))
       selected = [...new Set(["name", ...stored])];
   } catch { /* browser storage may be disabled */ }
@@ -39,15 +39,23 @@ export function createSubstanceTable() {
     const scrollLeft = previousScroll?.scrollLeft || 0;
     const scrollTop = previousScroll?.scrollTop || 0;
     const wasOpen = container.querySelector("#substanceColumnPicker")?.open || false;
-    const rows = substanceRows(catalogue, reference);
-    const possible = allSubstanceFields(rows);
+    const rows = config.rows ? config.rows(catalogue, reference) : substanceRows(catalogue, reference);
+    const possible = config.groups
+      ? [...new Set([...config.groups.flatMap(group => group.fields),
+        ...rows.flatMap(row => Object.keys(row.fields))])]
+      : allSubstanceFields(rows);
     selected = selected.filter(key => possible.includes(key));
     if (!selected.includes("name")) selected.unshift("name");
     const ordered = possible.filter(key => selected.includes(key));
     const available = new Set(possible);
-    const groups = SUBSTANCE_COLUMN_GROUPS.map(group => ({
+    const groups = (config.groups || SUBSTANCE_COLUMN_GROUPS).map(group => ({
       ...group, fields: group.fields.filter(key => available.has(key))
     }));
+    if (config.groups) {
+      const grouped = new Set(groups.flatMap(group => group.fields));
+      const other = possible.filter(key => !grouped.has(key)).sort();
+      if (other.length) groups.push({ name: "Additional Review Fields", fields: other });
+    }
     // Every category stays expanded: no subpanels, no nested scrolling.
     const picker = groups.map(group => {
       const checked = group.fields.filter(key => ordered.includes(key)).length;
@@ -68,8 +76,9 @@ export function createSubstanceTable() {
 
     container.innerHTML = '<div class="substance-review">' +
       '<div class="substance-review-title"><div><div class="eyebrow">Universe Catalogue / bulk review</div>' +
-      '<h1>Substances</h1><p>Individual natural resources and processed materials in one table. ' +
-      'Choose columns, filter individual values, or click a name to open its details.</p></div>' +
+      '<h1>' + esc(config.title || "Substances") + '</h1><p>' +
+      esc(config.description || "Individual natural resources and processed materials in one table. Choose columns, filter individual values, or click a name to open its details.") +
+      '</p></div>' +
       '<strong id="substanceCount"></strong></div>' +
       '<div class="substance-review-tools"><div class="substance-tool-actions">' +
       '<button type="button" id="substanceBack">← Catalogue tree</button>' +
@@ -81,7 +90,7 @@ export function createSubstanceTable() {
       '<button type="button" id="substanceClearColumns">Deselect all</button>' +
       '<span>Name stays visible to open details.</span></div>' +
       '<div class="substance-pick-grid">' + picker + '</div></details></div>' +
-      '<p class="substance-source-note">' + (reference ?
+      '<p class="substance-source-note">' + (config.sourceNote ? esc(config.sourceNote(reference)) : reference ?
       'Android tuning columns are <strong>reference only</strong> from commit <code>' +
       esc(reference.sourceCommit.slice(0, 8)) +
       '</code>; gameplay prices and scan levels are not Universe canon.' :
@@ -229,7 +238,8 @@ export function createSubstanceTable() {
           '<button class="substance-item" type="button" data-item-id="' +
           esc(row.id) + '">' + esc(label) + '</button>' : esc(label)) + '</td>';
       }).join("") + '</tr>').join("") ||
-        '<tr><td colspan="' + ordered.length + '" class="substance-no-results">No matching substances</td></tr>';
+        '<tr><td colspan="' + ordered.length + '" class="substance-no-results">No matching ' +
+        esc(config.title || "substances") + '</td></tr>';
       tbody.querySelectorAll("[data-item-id]").forEach(button =>
         button.onclick = () => onSelect(button.dataset.itemId));
     }
@@ -237,7 +247,7 @@ export function createSubstanceTable() {
     function setColumns(keys) {
       selected = [...new Set(["name", ...keys])];
       if (!selected.includes(sortKey)) { sortKey = "name"; direction = 1; }
-      try { sessionStorage.setItem("mineitSubstanceColumns", JSON.stringify(selected)); }
+      try { sessionStorage.setItem((config.storageKey || "mineitSubstanceColumns"), JSON.stringify(selected)); }
       catch { /* browser storage may be unavailable */ }
       render(container, catalogue, reference, onSelect, onBack);
     }
