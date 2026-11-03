@@ -44,9 +44,15 @@ for (const [kind, totals] of Object.entries(expected)) {
   assert.ok(rows.every(row => row.canonical && row.fields.catalogueStatus === "Canonical"));
   assert.ok(rows.every(row => row.fields.name === row.record.name));
   for (const row of rows.filter(row => row.record.provenance?.androidDiscoveryWorkingId)) {
-    assert.ok(row.fields["review.materialBOM.review_status"] ||
-      row.fields["review.manufacturingBOM.approval_status"],
-      "Promoted record should retain its source discovery overlay");
+    if (kind === "parts") {
+      assert.ok(row.fields.materialApprovalStatus,
+        "Consolidated Part must expose one canonical material approval status");
+      assert.ok(!("review.materialBOM.review_status" in row.fields),
+        "Parts should not duplicate historic status and canonical status columns");
+    } else {
+      assert.ok(row.fields["review.manufacturingBOM.approval_status"],
+        "Unreconciled Machine manufacturing review remains visible");
+    }
   }
   assert.equal(applySubstanceTable(rows, ["name"], {}, "name", 1, catalogue).length, rows.length);
   assert.equal(uniqueColumnValues(rows, "catalogueStatus", catalogue).length, 1);
