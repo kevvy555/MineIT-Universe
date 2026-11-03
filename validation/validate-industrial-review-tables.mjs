@@ -9,7 +9,7 @@ assert.equal(reference.authority, "reference-only-android-industrial-discovery-n
 assert.match(reference.sourceCommit, /^[0-9a-f]{40}$/);
 assert.equal(reference.sourceFiles.length, 10);
 const expected = {
-  parts: { original: 14, reconciled: 8, total: 22 },
+  parts: { original: 14, reconciled: 8, total: 19 },
   machines: { original: 34, reconciled: 8, total: 42 },
   buildings: { original: 24, reconciled: 0, total: 24 }
 };
@@ -32,7 +32,13 @@ for (const [kind, totals] of Object.entries(expected)) {
   assert.equal(original.size, totals.original);
   assert.equal(candidates.size, totals.reconciled);
   assert.equal(canonicalIds.size, canonical.length);
-  assert.ok([...original].every(id => canonicalIds.has(id)));
+  const retired = kind === "parts"
+    ? new Set(["part-battery-parts", "part-thermal-optical-parts", "part-fabrication-parts"])
+    : new Set();
+  assert.ok([...original].every(id => canonicalIds.has(id) || retired.has(id)),
+    "Historic source identities must be canonical or explicitly retired");
+  assert.ok([...retired].every(id => !canonicalIds.has(id)),
+    "Retired source Parts must not return to current canonical catalogue");
   assert.equal(new Set(aliases).size, aliases.length, "Candidate aliases must be unique");
   assert.deepEqual(new Set(aliases), candidates, "Every candidate identity must be reconciled");
   assert.ok(aliases.every(id => !canonicalIds.has(id)),
@@ -63,4 +69,4 @@ assert.equal(camp.fields["review.quantitativeBOM.site_construction_labour_hours"
 assert.match(camp.fields["review.systematicReview.review_status"], /APPROVED/);
 const quarry = buildings.find(row => row.id === "building-quarry");
 assert.match(quarry.fields["review.quantitativeBOM.approval_status"], /UNAPPROVED/);
-console.log("Industrial review tables validated: 22 canonical Parts, 42 canonical Machines, 24 Buildings; no candidate duplicates.");
+console.log("Industrial review tables validated: 19 canonical Parts, 42 canonical Machines, 24 Buildings; three retired source IDs ignored.");
