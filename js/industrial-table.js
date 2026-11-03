@@ -23,21 +23,22 @@ const visuals = group("Artwork & Visuals",
 const configurations = {
   parts: {
     title: "Parts",
-    description: "Canonical Parts and Android discovery proposals side-by-side. Filter, sort or open an existing Part; proposals do not create new canonical items.",
-    defaultColumns: ["name", "category", "subCategory", "substanceIds",
-      "review.materialBOM.review_status",
-      "review.quantities.approved_planning_input_materials_kg_per_finished_unit",
-      "review.prices.base_manufacturer_sell_quote_cc_per_finished_unit"],
+    description: "19 finished Part products and three legacy compatibility identities. Quantities, masses and CC prices are approved discovery planning references, not live game recipes or prices.",
+    defaultColumns: ["name", "partRole", "category", "subCategory", "materialInputs",
+      "materialApprovalStatus", "planningReference.finishedMassKg",
+      "planningReference.manufacturerCostCC", "planningReference.baseManufacturerQuoteCC"],
+    hiddenFields: ["entityType", "catalogueStatus"],
+    linkedFields: ["substanceIds", "materialInputs", "machineIds", "legacyReplacementPartIds"],
     groups: [
-      common[0],
+      group("Identity & Classification",
+        "name id partRole category subCategory subCategories sources finishedUnit.count finishedUnit.unit finishedUnit.description"),
       group("Materials & Construction",
-        "substanceIds review.materialBOM.proposed_named_inputs review.materialBOM.proposed_finished_unit review.materialBOM.approved_finished_stock_count review.quantities.approved_planning_input_materials_kg_per_finished_unit"),
-      group("Machines & Usage", "machineIds review.materialBOM.open_decision"),
+        "substanceIds materialInputs unresolvedMaterialInputs"),
+      group("Machines & Usage", "machineIds legacyReplacementPartIds"),
       group("Production & Prices",
-        "review.prices.manufacturer_cost_cc_per_finished_unit review.prices.base_manufacturer_sell_quote_cc_per_finished_unit"),
-      group("Discovery & Approval", "review.materialBOM.review_status"),
-      common[1], visuals,
-      group("Description", "description")
+        "planningReference.finishedMassKg planningReference.manufacturerCostCC planningReference.baseManufacturerQuoteCC planningReference.status planningReference.basis"),
+      group("Discovery & Approval", "materialApprovalStatus"),
+      common[1], visuals, group("Description", "description")
     ]
   },
   machines: {
@@ -93,10 +94,8 @@ const configurations = {
 // Source-specific fields are classified alongside their related primary attributes.
 const additionalGroupFields = {
   parts: {
-    "Identity & Classification": "review.materialBOM.product_name",
-    "Materials & Construction": "materialDesignNotes",
-    "Discovery & Approval": "materialDesignStatus",
-    "Canon & Provenance": "provenance.authoredFor provenance.sourceRepository provenance.sourcePath provenance.sourceCommit provenance.androidDiscoveryWorkingId"
+    "Canon & Provenance": "provenance.authoredFor provenance.sourceRepository provenance.sourcePath provenance.sourceCommit provenance.androidDiscoveryWorkingId provenance.partsDiscovery.repository provenance.partsDiscovery.sourceCommit provenance.partsDiscovery.sourceSections provenance.partsDiscovery.reviewStatus",
+    "Artwork & Visuals": "image.promptDescription"
   },
   machines: {
     "Identity & Classification": "review.manufacturingBOM.machine_name review.manufacturingBOM.category review.luxuryRatings.candidate_machine_name review.luxuryBOM.name review.electricMotors.product_name review.electricMotors.product_kind",
@@ -159,7 +158,10 @@ export function industrialReviewRows(kind, catalogue, reference) {
   const canonicalRows = canonicalRecords.map(record => {
     const fields = flatten(record);
     fields.catalogueStatus = "Canonical";
-    if (source.has(record.id)) flatten(source.get(record.id), "review", fields);
+    // Parts have now reconciled these discovery inputs into canonical, typed
+    // fields. Keep the frozen Android snapshot for history, not duplicate columns.
+    if (kind !== "parts" && source.has(record.id))
+      flatten(source.get(record.id), "review", fields);
     return { id: record.id, record, collection: kind, fields, canonical: true };
   });
   // Any still-unmapped proposal remains visibly non-canonical.
@@ -191,6 +193,10 @@ export function createIndustrialTables() {
         return industrialReviewRows(kind, catalogue, reference);
       },
       sourceNote(reference) {
+        if (kind === "parts")
+          return "Parts identities, material links and planning data now come from canonical Universe data/parts.json. " +
+            "The 18 CC reference prices and masses are discovery planning only, NOT live rates. " +
+            "Three compatibility IDs are not separate tradable Parts; unknown input materials remain explicitly unresolved.";
         return reference
           ? "Android discovery is a read-only review snapshot at " +
             reference.sourceCommit.slice(0, 8) +
