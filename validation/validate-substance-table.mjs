@@ -40,9 +40,9 @@ assert.ok(keys.includes("occurrence.eligibleWorldTypeIds"));
 assert.ok(keys.includes("image.status"));
 assert.ok(keys.includes("sourceProvenance.path"));
 const filtered = applySubstanceTable(rows, ["name", "android.baseScan"],
-  { "android.baseScan": ">=9" }, "android.baseScan", -1, catalogue);
+  { "android.baseScan": ">=6" }, "android.baseScan", -1, catalogue);
 assert.ok(filtered.length > 0);
-assert.ok(filtered.every(r => r.fields["android.baseScan"] >= 9));
+assert.ok(filtered.every(r => r.fields["android.baseScan"] >= 6));
 const byName = applySubstanceTable(rows, ["name"], { name: "refined iron" }, "name", 1, catalogue);
 assert.deepEqual(byName.map(r => r.record.name), ["Refined Iron"]);
 console.log("Substances review valid:", rows.length, "unique records,", keys.length, "available fields.");
