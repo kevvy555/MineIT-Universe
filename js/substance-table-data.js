@@ -211,6 +211,18 @@ export function fieldText(value, catalogue) {
       " × " + value.quantity;
     if (value.materialId) return (catalogue?.get(value.materialId)?.name || value.materialId) +
       " × " + value.quantityKg + " kg";
+    if (value.substanceId) {
+      const name = catalogue?.get(value.substanceId)?.name || value.substanceId;
+      const qty = Number.isFinite(value.planningQuantityKg) ?
+        " · " + value.planningQuantityKg + " kg planning" : "";
+      const use = value.requirement?.startsWith("conditional") ? " (conditional)" :
+        value.approval === "planning-only-unqualified" ? " (unqualified)" :
+        value.requirement?.startsWith("upstream") ? " (upstream)" : "";
+      return name + qty + use;
+    }
+    if (value.label) return value.label +
+      (Number.isFinite(value.planningAllowanceKg) ?
+      " · " + value.planningAllowanceKg + " kg (unresolved)" : " (unresolved)");
     return JSON.stringify(value);
   }
   return simple(value);
