@@ -40,7 +40,9 @@ export function createSubstanceTable(config = {}) {
     const scrollTop = previousScroll?.scrollTop || 0;
     const wasOpen = container.querySelector("#substanceColumnPicker")?.open || false;
     const rows = config.rows ? config.rows(catalogue, reference) : substanceRows(catalogue, reference);
-    const availableFields = new Set(rows.flatMap(row => Object.keys(row.fields)));
+    const hidden = new Set(config.hiddenFields || []);
+    const availableFields = new Set(rows.flatMap(row => Object.keys(row.fields))
+      .filter(key => !hidden.has(key)));
     const possible = config.groups
       ? [...new Set([...config.groups.flatMap(group => group.fields)
         .filter(key => availableFields.has(key)), ...availableFields])]
@@ -226,6 +228,21 @@ export function createSubstanceTable(config = {}) {
       filterRow.append(filterCell);
     }
 
+    function renderLinkedCell(raw) {
+      const links = (Array.isArray(raw) ? raw : [raw]).filter(Boolean).map(item => {
+        const id = typeof item === "string" ? item :
+          item.substanceId || item.materialId || item.partId || item.machineId;
+        const label = fieldText(item, catalogue);
+        if (!id) return '<span class="substance-unlinked">' + esc(label) + '</span>';
+        const target = catalogue.get(id);
+        if (!target) return '<span class="status error" title="Unresolved canonical ID">' +
+          esc(id) + '</span>';
+        return '<button class="substance-item substance-reference" type="button" data-entity-id="' +
+          esc(id) + '" title="Open ' + esc(target.name) + '">' + esc(label) + '</button>';
+      });
+      return '<div class="substance-ref-list">' + (links.join("") || "—") + '</div>';
+    }
+
     function updateRows() {
       const result = applySubstanceTable(rows, ordered, textFilters,
         sortKey, direction, catalogue, valueFilters);
@@ -235,14 +252,19 @@ export function createSubstanceTable(config = {}) {
       tbody.innerHTML = result.map(row => '<tr>' + ordered.map(key => {
         const value = fieldText(row.fields[key], catalogue);
         const label = value || "—";
-        return '<td title="' + esc(value) + '">' + (key === "name" && row.canonical !== false ?
+        const linked = config.linkedFields?.includes(key) && Array.isArray(row.fields[key]);
+        return '<td' + (linked ? ' class="substance-link-cell"' : '') +
+          ' title="' + esc(value) + '">' + (key === "name" && row.canonical !== false ?
           '<button class="substance-item" type="button" data-item-id="' +
-          esc(row.id) + '">' + esc(label) + '</button>' : esc(label)) + '</td>';
+          esc(row.id) + '">' + esc(label) + '</button>' :
+          linked ? renderLinkedCell(row.fields[key]) : esc(label)) + '</td>';
       }).join("") + '</tr>').join("") ||
         '<tr><td colspan="' + ordered.length + '" class="substance-no-results">No matching ' +
         esc(config.title || "substances") + '</td></tr>';
       tbody.querySelectorAll("[data-item-id]").forEach(button =>
         button.onclick = () => onSelect(button.dataset.itemId));
+      tbody.querySelectorAll("[data-entity-id]").forEach(button =>
+        button.onclick = () => onSelect(button.dataset.entityId));
     }
 
     function setColumns(keys) {
