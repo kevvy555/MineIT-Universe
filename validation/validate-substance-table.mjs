@@ -134,6 +134,15 @@ assert.match(tableApp, /data-column-group/,
   "Group headings must be visible in the expanded column chooser");
 assert.match(directoryCss, /\.substance-pick-grid\{width:100%;max-height:none;overflow:visible/,
   "The category chooser must remain unscrollable");
+assert.match(directoryCss,
+  /\.substance-pick-grid\{width:100%;max-height:none;overflow:visible;\s*display:grid;grid-template-columns:repeat\(auto-fit,/,
+  "Category panels must flow horizontally across available width and wrap responsively");
+assert.doesNotMatch(directoryCss,
+  /\.substance-pick-grid\{[^}]*flex-direction:column/,
+  "Categories must not occupy one full-width vertical row each");
+assert.match(directoryCss,
+  /\.substance-category-fields\{display:grid;grid-template-columns:repeat\(2,minmax\(0,1fr\)\)/,
+  "Category checkboxes should remain compact and readable");
 
 console.log("Substances review valid:", rows.length, "unique records,", keys.length,
   "fields; multi-select value filters and sort ordering verified.");
