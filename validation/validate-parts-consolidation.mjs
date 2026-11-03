@@ -11,23 +11,20 @@ const reference = load("game-specs/mineit-mobile/industrial-discovery-reference.
 const byId = new Map([...parts, ...machines, ...materials].map(r => [r.id, r]));
 const catalogue = { collection: kind => kind === "parts" ? parts : [],
   get: id => byId.get(id) };
-assert.equal(parts.length, 22);
+assert.equal(parts.length, 19);
 assert.equal(new Set(parts.map(p => p.id)).size, parts.length);
 
 const legacy = parts.filter(p => p.partRole === "legacy-compatibility");
 const finished = parts.filter(p => p.partRole === "finished-product");
-assert.equal(legacy.length, 3);
+assert.equal(legacy.length, 0);
 assert.equal(finished.length, 19);
-assert.deepEqual(new Set(legacy.map(p => p.id)), new Set([
-  "part-battery-parts", "part-thermal-optical-parts", "part-fabrication-parts"
-]));
+const retiredIds = new Set(["part-battery-parts", "part-thermal-optical-parts", "part-fabrication-parts"]);
+assert.ok(parts.every(p => !retiredIds.has(p.id)), "Superseded identities must not appear as Parts");
 assert.equal(finished.filter(p => p.materialApprovalStatus === "APPROVED_INPUT_FAMILIES").length, 16);
 assert.equal(finished.filter(p => p.materialApprovalStatus === "APPROVED_PRODUCT_BOM_PENDING").length, 3);
-assert.ok(legacy.every(p => p.materialApprovalStatus === "SOURCE_REFERENCE_SPLIT_APPROVED"));
-assert.ok(legacy.every(p => !p.finishedUnit && !p.planningReference));
+assert.ok(parts.every(p => p.materialApprovalStatus !== "SOURCE_REFERENCE_SPLIT_APPROVED"));
 assert.ok(finished.every(p => p.finishedUnit?.unit === "each" && p.finishedUnit.count === 1));
-assert.ok(legacy.every(p => p.legacyReplacementPartIds.length === 2 &&
-  p.legacyReplacementPartIds.every(id => byId.get(id)?.partRole === "finished-product")));
+assert.ok(parts.every(p => !p.legacyReplacementPartIds));
 assert.ok(parts.every(p => !p.materialDesignStatus && !p.materialDesignNotes));
 
 let inputCount = 0, planningInputCount = 0, unresolvedCount = 0;
@@ -112,5 +109,5 @@ assert.equal(reviewed.find(row => row.id === "part-extraction-parts")
 assert.equal(reviewed.find(row => row.id === "part-precast-concrete-sections")
   .fields["planningReference.finishedMassKg"], 1160);
 assert.ok(reviewed.every(row => row.fields.materialApprovalStatus));
-console.log("Parts consolidation validated: 19 finished, 3 legacy, 61 linked inputs, " +
+console.log("Parts consolidation validated: 19 finished, zero legacy, 61 linked inputs, " +
   "58 planning quantities, 5 unresolved input descriptions, 18 reference prices.");
