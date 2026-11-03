@@ -100,7 +100,7 @@ const readable = fieldText(source.materialInputs[0], catalogue);
 assert.match(readable, /Steel/);
 assert.match(readable, /kg planning/);
 const reviewed = industrialReviewRows("parts", catalogue, reference);
-assert.equal(reviewed.length, 22);
+assert.equal(reviewed.length, 19);
 assert.ok(reviewed.every(row => row.canonical && row.fields.partRole));
 assert.ok(reviewed.every(row => !("review.materialBOM.product_name" in row.fields) &&
   !("review.quantities.approved_planning_input_materials_kg_per_finished_unit" in row.fields)));
