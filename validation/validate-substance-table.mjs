@@ -79,5 +79,19 @@ const combined = applySubstanceTable(rows, ["kind", "name"], {name:"iron"}, "nam
   {kind:new Set([valueToken("Named material")])});
 assert.deepEqual(combined.map(x=>x.record.name), ["Refined Iron"]);
 
+const directoryCss = readFileSync(new URL("../css/substance-table.css", import.meta.url), "utf8");
+const directoryApp = readFileSync(new URL("../js/universe-app.js", import.meta.url), "utf8");
+const tableApp = readFileSync(new URL("../js/substance-table.js", import.meta.url), "utf8");
+assert.ok(!directoryCss.includes(".workspace.substance-table-mode"),
+  "The bulk table must not hide the catalogue tree or occupy the full workspace");
+assert.ok(!directoryApp.includes("classList.toggle('substance-table-mode'"),
+  "The Directory must preserve the original split-pane presentation");
+assert.match(directoryCss, /\.substance-review-tools details\{width:100%;max-width:none/,
+  "The column selector should span the entire right-hand table pane");
+assert.match(directoryCss, /\.substance-pick-grid\{width:100%;max-height:none;overflow:visible/,
+  "Column-selection checkboxes must have no nested scroll container");
+assert.match(tableApp, /groups\.flatMap\(group/,
+  "Render the selectable fields as a compact full-width grid instead of tall grouped cards");
+
 console.log("Substances review valid:", rows.length, "unique records,", keys.length,
   "fields; multi-select value filters and sort ordering verified.");

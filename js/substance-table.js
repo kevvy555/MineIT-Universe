@@ -44,29 +44,32 @@ export function createSubstanceTable() {
     if (!selected.includes("name")) selected.unshift("name");
     const ordered = possible.filter(key => selected.includes(key));
     const groups = [...new Set(possible.map(columnGroup))];
-    const picker = groups.map(group => {
-      const options = possible.filter(key => columnGroup(key) === group);
-      return '<fieldset><legend>' + esc(group) + '</legend>' +
-        options.map(key => '<label class="substance-choice"><input type="checkbox" data-column="' +
-          esc(key) + '" ' + (ordered.includes(key) ? "checked " : "") +
-          (key === "name" ? "disabled " : "") + '><span>' +
-          esc(fieldLabel(key)) + '</span></label>').join("") + '</fieldset>';
-    }).join("");
+    // Pack every option into one full-width grid: no nested scroll box or tall group cards.
+    // The category remains available on hover and to assistive technology.
+    const picker = groups.flatMap(group =>
+      possible.filter(key => columnGroup(key) === group).map(key =>
+        '<label class="substance-choice" title="' + esc(group + ' — ' + fieldLabel(key)) +
+        '"><input type="checkbox" aria-label="' + esc(group + ': ' + fieldLabel(key)) +
+        '" data-column="' + esc(key) + '" ' + (ordered.includes(key) ? "checked " : "") +
+        (key === "name" ? "disabled " : "") + '><span>' + esc(fieldLabel(key)) +
+        '</span></label>')
+    ).join("");
 
     container.innerHTML = '<div class="substance-review">' +
       '<div class="substance-review-title"><div><div class="eyebrow">Universe Catalogue / bulk review</div>' +
       '<h1>Substances</h1><p>All generic classes and physical resources in one table. ' +
       'Choose columns, filter individual values, or click a name to open its details.</p></div>' +
       '<strong id="substanceCount"></strong></div>' +
-      '<div class="substance-review-tools"><button type="button" id="substanceBack">← Catalogue tree</button>' +
+      '<div class="substance-review-tools"><div class="substance-tool-actions">' +
+      '<button type="button" id="substanceBack">← Catalogue tree</button>' +
+      '<button type="button" id="substanceClear">Clear filters</button></div>' +
       '<details id="substanceColumnPicker" ' + (wasOpen ? "open" : "") +
       '><summary>Choose columns (' + ordered.length + ' of ' + possible.length +
       ')</summary><div class="substance-column-actions">' +
       '<button type="button" id="substanceSelectAll">Select all</button>' +
       '<button type="button" id="substanceClearColumns">Clear all</button>' +
       '<span>Name stays visible to open details.</span></div>' +
-      '<div class="substance-pick-grid">' + picker + '</div></details>' +
-      '<button type="button" id="substanceClear">Clear filters</button></div>' +
+      '<div class="substance-pick-grid">' + picker + '</div></details></div>' +
       '<p class="substance-source-note">' + (reference ?
       'Android tuning columns are <strong>reference only</strong> from commit <code>' +
       esc(reference.sourceCommit.slice(0, 8)) +

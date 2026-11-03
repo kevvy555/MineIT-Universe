@@ -1032,7 +1032,6 @@ function returnToCatalogueTree() {
 }
 
 function renderDetail() {
-  workspace.classList.toggle('substance-table-mode', state.activeCatalogueTable);
   if (state.activeCatalogueTable) {
     substanceTable.render(detailEl, state.catalogue, state.androidResourceReference,
       selectEntity, returnToCatalogueTree);
