@@ -21,8 +21,7 @@
       "partsDiscovery": {
         "repository": "kevvy555/MineIT-Android",
         "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
-        "sourceSections": "§§48-59",
-        "reviewStatus": "APPROVED_INPUT_FAMILIES"
+        "sourceSections": "§§48-59"
       }
     },
     "machineIds": [
@@ -71,7 +70,6 @@
       "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
       "finishedMassKg": 23.5,
       "sourceSection": "galaxy-economic-foundation.md §59",
-      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
       "manufacturerCostCC": 1456.19,
       "baseManufacturerQuoteCC": 1850
     }
@@ -99,8 +97,7 @@
       "partsDiscovery": {
         "repository": "kevvy555/MineIT-Android",
         "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
-        "sourceSections": "§§48-59",
-        "reviewStatus": "SOURCE_REFERENCE_SPLIT_APPROVED"
+        "sourceSections": "§§48-59"
       }
     },
     "machineIds": [
@@ -144,8 +141,7 @@
       "partsDiscovery": {
         "repository": "kevvy555/MineIT-Android",
         "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
-        "sourceSections": "§§48-59",
-        "reviewStatus": "APPROVED_INPUT_FAMILIES"
+        "sourceSections": "§§48-59"
       }
     },
     "machineIds": [
@@ -230,7 +226,6 @@
       "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
       "finishedMassKg": 6.3,
       "sourceSection": "galaxy-economic-foundation.md §59",
-      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
       "manufacturerCostCC": 2650.54,
       "baseManufacturerQuoteCC": 3350
     }
@@ -256,8 +251,7 @@
       "partsDiscovery": {
         "repository": "kevvy555/MineIT-Android",
         "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
-        "sourceSections": "§§48-59",
-        "reviewStatus": "APPROVED_INPUT_FAMILIES"
+        "sourceSections": "§§48-59"
       }
     },
     "machineIds": [
@@ -323,7 +317,6 @@
       "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
       "finishedMassKg": 18.8,
       "sourceSection": "galaxy-economic-foundation.md §59",
-      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
       "manufacturerCostCC": 1350,
       "baseManufacturerQuoteCC": 1700
     }
@@ -353,8 +346,7 @@
       "partsDiscovery": {
         "repository": "kevvy555/MineIT-Android",
         "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
-        "sourceSections": "§§48-59",
-        "reviewStatus": "APPROVED_INPUT_FAMILIES"
+        "sourceSections": "§§48-59"
       }
     },
     "machineIds": [
@@ -426,7 +418,6 @@
       "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
       "finishedMassKg": 2.4,
       "sourceSection": "galaxy-economic-foundation.md §59",
-      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
       "manufacturerCostCC": 2983,
       "baseManufacturerQuoteCC": 3750
     }
@@ -458,8 +449,7 @@
       "partsDiscovery": {
         "repository": "kevvy555/MineIT-Android",
         "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
-        "sourceSections": "§§48-59",
-        "reviewStatus": "SOURCE_REFERENCE_SPLIT_APPROVED"
+        "sourceSections": "§§48-59"
       }
     },
     "machineIds": [
@@ -506,8 +496,7 @@
       "partsDiscovery": {
         "repository": "kevvy555/MineIT-Android",
         "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
-        "sourceSections": "§§48-59",
-        "reviewStatus": "APPROVED_INPUT_FAMILIES"
+        "sourceSections": "§§48-59"
       }
     },
     "machineIds": [
@@ -568,7 +557,6 @@
       "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
       "finishedMassKg": 76,
       "sourceSection": "galaxy-economic-foundation.md §59",
-      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
       "manufacturerCostCC": 1956.67,
       "baseManufacturerQuoteCC": 2450
     }
@@ -594,8 +582,7 @@
       "partsDiscovery": {
         "repository": "kevvy555/MineIT-Android",
         "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
-        "sourceSections": "§§48-59",
-        "reviewStatus": "APPROVED_INPUT_FAMILIES"
+        "sourceSections": "§§48-59"
       }
     },
     "machineIds": [
@@ -652,7 +639,6 @@
       "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
       "finishedMassKg": 35,
       "sourceSection": "galaxy-economic-foundation.md §59",
-      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
       "manufacturerCostCC": 2306.28,
       "baseManufacturerQuoteCC": 2900
     }
@@ -678,8 +664,7 @@
       "partsDiscovery": {
         "repository": "kevvy555/MineIT-Android",
         "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
-        "sourceSections": "§§48-59",
-        "reviewStatus": "APPROVED_INPUT_FAMILIES"
+        "sourceSections": "§§48-59"
       }
     },
     "machineIds": [
@@ -720,7 +705,6 @@
       "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
       "finishedMassKg": 9.2,
       "sourceSection": "galaxy-economic-foundation.md §59",
-      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
       "manufacturerCostCC": 1917.63,
       "baseManufacturerQuoteCC": 2400
     }
@@ -747,8 +731,7 @@
       "partsDiscovery": {
         "repository": "kevvy555/MineIT-Android",
         "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
-        "sourceSections": "§§48-59",
-        "reviewStatus": "APPROVED_INPUT_FAMILIES"
+        "sourceSections": "§§48-59"
       }
     },
     "machineIds": [
@@ -797,7 +780,6 @@
       "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
       "finishedMassKg": 28,
       "sourceSection": "galaxy-economic-foundation.md §59",
-      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
       "manufacturerCostCC": 2311.58,
       "baseManufacturerQuoteCC": 2900
     }
@@ -824,8 +806,7 @@
       "partsDiscovery": {
         "repository": "kevvy555/MineIT-Android",
         "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
-        "sourceSections": "§§48-59",
-        "reviewStatus": "APPROVED_INPUT_FAMILIES"
+        "sourceSections": "§§48-59"
       }
     },
     "machineIds": [
@@ -883,7 +864,6 @@
       "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
       "finishedMassKg": 4.35,
       "sourceSection": "galaxy-economic-foundation.md §59",
-      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
       "manufacturerCostCC": 5116.09,
       "baseManufacturerQuoteCC": 6400
     }
@@ -909,8 +889,7 @@
       "partsDiscovery": {
         "repository": "kevvy555/MineIT-Android",
         "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
-        "sourceSections": "§§48-59",
-        "reviewStatus": "SOURCE_REFERENCE_SPLIT_APPROVED"
+        "sourceSections": "§§48-59"
       }
     },
     "machineIds": [
@@ -954,8 +933,7 @@
       "partsDiscovery": {
         "repository": "kevvy555/MineIT-Android",
         "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
-        "sourceSections": "§§48-59",
-        "reviewStatus": "APPROVED_INPUT_FAMILIES"
+        "sourceSections": "§§48-59"
       }
     },
     "machineIds": [
@@ -1014,7 +992,6 @@
       "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
       "finishedMassKg": 25,
       "sourceSection": "galaxy-economic-foundation.md §59",
-      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
       "manufacturerCostCC": 2066.06,
       "baseManufacturerQuoteCC": 2600
     }
@@ -1039,8 +1016,7 @@
       "partsDiscovery": {
         "repository": "kevvy555/MineIT-Android",
         "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
-        "sourceSections": "§§48-59",
-        "reviewStatus": "APPROVED_INPUT_FAMILIES"
+        "sourceSections": "§§48-59"
       }
     },
     "machineIds": [
@@ -1088,7 +1064,6 @@
       "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
       "finishedMassKg": 44,
       "sourceSection": "galaxy-economic-foundation.md §59",
-      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
       "manufacturerCostCC": 1889.47,
       "baseManufacturerQuoteCC": 2400
     }
@@ -1116,8 +1091,7 @@
       "partsDiscovery": {
         "repository": "kevvy555/MineIT-Android",
         "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
-        "sourceSections": "§§48-59",
-        "reviewStatus": "APPROVED_PRODUCT_BOM_PENDING"
+        "sourceSections": "§§48-59"
       }
     },
     "machineIds": [],
@@ -1167,7 +1141,6 @@
       "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
       "finishedMassKg": 50,
       "sourceSection": "galaxy-economic-foundation.md §59",
-      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
       "manufacturerCostCC": 1410.83,
       "baseManufacturerQuoteCC": 1800
     }
@@ -1196,8 +1169,7 @@
       "partsDiscovery": {
         "repository": "kevvy555/MineIT-Android",
         "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
-        "sourceSections": "§§48-59",
-        "reviewStatus": "APPROVED_PRODUCT_BOM_PENDING"
+        "sourceSections": "§§48-59"
       }
     },
     "machineIds": [],
@@ -1264,7 +1236,6 @@
       "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
       "finishedMassKg": 18,
       "sourceSection": "galaxy-economic-foundation.md §59",
-      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
       "manufacturerCostCC": 3508.91,
       "baseManufacturerQuoteCC": 4400
     }
@@ -1292,8 +1263,7 @@
       "partsDiscovery": {
         "repository": "kevvy555/MineIT-Android",
         "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
-        "sourceSections": "§§48-59",
-        "reviewStatus": "APPROVED_INPUT_FAMILIES"
+        "sourceSections": "§§48-59"
       }
     },
     "machineIds": [
@@ -1340,7 +1310,6 @@
       "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
       "finishedMassKg": 35,
       "sourceSection": "galaxy-economic-foundation.md §59",
-      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
       "manufacturerCostCC": 2450.53,
       "baseManufacturerQuoteCC": 3100
     }
@@ -1368,8 +1337,7 @@
       "partsDiscovery": {
         "repository": "kevvy555/MineIT-Android",
         "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
-        "sourceSections": "§§48-59",
-        "reviewStatus": "APPROVED_INPUT_FAMILIES"
+        "sourceSections": "§§48-59"
       }
     },
     "machineIds": [
@@ -1421,7 +1389,6 @@
       "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
       "finishedMassKg": 12,
       "sourceSection": "galaxy-economic-foundation.md §59",
-      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
       "manufacturerCostCC": 2404.07,
       "baseManufacturerQuoteCC": 3050
     }
@@ -1449,8 +1416,7 @@
       "partsDiscovery": {
         "repository": "kevvy555/MineIT-Android",
         "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
-        "sourceSections": "§§48-59",
-        "reviewStatus": "APPROVED_INPUT_FAMILIES"
+        "sourceSections": "§§48-59"
       }
     },
     "machineIds": [],
@@ -1488,7 +1454,6 @@
       "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
       "finishedMassKg": 13.8,
       "sourceSection": "galaxy-economic-foundation.md §59",
-      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
       "manufacturerCostCC": 3176.45,
       "baseManufacturerQuoteCC": 4000
     }
@@ -1516,8 +1481,7 @@
       "partsDiscovery": {
         "repository": "kevvy555/MineIT-Android",
         "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
-        "sourceSections": "§§48-59",
-        "reviewStatus": "APPROVED_INPUT_FAMILIES"
+        "sourceSections": "§§48-59"
       }
     },
     "machineIds": [],
@@ -1561,7 +1525,6 @@
       "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
       "finishedMassKg": 12,
       "sourceSection": "galaxy-economic-foundation.md §59",
-      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
       "manufacturerCostCC": 1868.94,
       "baseManufacturerQuoteCC": 2350
     }
@@ -1589,8 +1552,7 @@
       "partsDiscovery": {
         "repository": "kevvy555/MineIT-Android",
         "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
-        "sourceSections": "§§48-59",
-        "reviewStatus": "APPROVED_INPUT_FAMILIES"
+        "sourceSections": "§§48-59"
       }
     },
     "machineIds": [],
@@ -1646,7 +1608,6 @@
       "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
       "finishedMassKg": 1160,
       "sourceSection": "galaxy-economic-foundation.md §59",
-      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
       "manufacturerCostCC": 2511.39,
       "baseManufacturerQuoteCC": 3150
     }
@@ -1673,8 +1634,7 @@
       "partsDiscovery": {
         "repository": "kevvy555/MineIT-Android",
         "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
-        "sourceSections": "§§48-59",
-        "reviewStatus": "APPROVED_PRODUCT_BOM_PENDING"
+        "sourceSections": "§§48-59"
       }
     },
     "machineIds": [],
@@ -1708,8 +1668,7 @@
     "planningReference": {
       "status": "blocked-pending-engineering",
       "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
-      "sourceSection": "galaxy-economic-foundation.md §59",
-      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a"
+      "sourceSection": "galaxy-economic-foundation.md §59"
     }
   }
 ]
