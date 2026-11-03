@@ -5,9 +5,6 @@
     "entityType": "Part",
     "category": "Power",
     "subCategory": "Generator",
-    "subCategories": [
-      "Generator"
-    ],
     "sources": [
       "Crashed Ship",
       "Manufactured"
@@ -20,7 +17,13 @@
     "description": "Core components for converting mechanical motion into electrical output.",
     "canonStatus": "source-canonical",
     "provenance": {
-      "desktopPath": "Machines & Buildings/Parts/Parts.md"
+      "desktopPath": "Machines & Buildings/Parts/Parts.md",
+      "partsDiscovery": {
+        "repository": "kevvy555/MineIT-Android",
+        "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+        "sourceSections": "§§48-59",
+        "reviewStatus": "APPROVED_INPUT_FAMILIES"
+      }
     },
     "machineIds": [
       "machine-wind-generator",
@@ -34,6 +37,43 @@
       "status": "not-generated",
       "promptDescription": "Workshop kit photograph of generator parts: copper-wound stator segments, magnetic cores, structural metal housings and shaft couplings laid on a scarred metal bench. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
       "notes": "Identity-neutral spare-part kit; not a complete machine."
+    },
+    "partRole": "finished-product",
+    "materialApprovalStatus": "APPROVED_INPUT_FAMILIES",
+    "finishedUnit": {
+      "count": 1,
+      "unit": "each",
+      "description": "one standard generator service kit (mass/rating pending)"
+    },
+    "materialInputs": [
+      {
+        "substanceId": "named-substance-refined-copper",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "planningQuantityKg": 6
+      },
+      {
+        "substanceId": "named-substance-steel",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "planningQuantityKg": 18
+      },
+      {
+        "substanceId": "named-substance-mica-insulation-sheets",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "planningQuantityKg": 0.6
+      }
+    ],
+    "unresolvedMaterialInputs": [],
+    "planningReference": {
+      "status": "approved-discovery-planning-not-live",
+      "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
+      "finishedMassKg": 23.5,
+      "sourceSection": "galaxy-economic-foundation.md §59",
+      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+      "manufacturerCostCC": 1456.19,
+      "baseManufacturerQuoteCC": 1850
     }
   },
   {
@@ -42,9 +82,6 @@
     "entityType": "Part",
     "category": "Power",
     "subCategory": "Battery",
-    "subCategories": [
-      "Battery"
-    ],
     "sources": [
       "Crashed Ship",
       "Manufactured"
@@ -58,7 +95,13 @@
     "description": "Components for storing and discharging electrical energy.",
     "canonStatus": "source-canonical",
     "provenance": {
-      "desktopPath": "Machines & Buildings/Parts/Parts.md"
+      "desktopPath": "Machines & Buildings/Parts/Parts.md",
+      "partsDiscovery": {
+        "repository": "kevvy555/MineIT-Android",
+        "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+        "sourceSections": "§§48-59",
+        "reviewStatus": "SOURCE_REFERENCE_SPLIT_APPROVED"
+      }
     },
     "machineIds": [
       "machine-crude-chemical-battery",
@@ -71,7 +114,13 @@
       "status": "not-generated",
       "promptDescription": "Workshop kit photograph of battery parts: graphite cell stacks, reactive-metal electrodes, insulated busbars and sealed electrolyte reservoirs grouped as a spare kit. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
       "notes": "Identity-neutral spare-part kit; not a complete machine."
-    }
+    },
+    "partRole": "legacy-compatibility",
+    "materialApprovalStatus": "SOURCE_REFERENCE_SPLIT_APPROVED",
+    "legacyReplacementPartIds": [
+      "part-lead-acid-battery-module",
+      "part-lithium-based-battery-module"
+    ]
   },
   {
     "id": "part-power-electronics",
@@ -79,9 +128,6 @@
     "entityType": "Part",
     "category": "Power",
     "subCategory": "Electronics",
-    "subCategories": [
-      "Electronics"
-    ],
     "sources": [
       "Crashed Ship",
       "Manufactured"
@@ -94,7 +140,13 @@
     "description": "Control circuits and inverters for managing electrical flow.",
     "canonStatus": "source-canonical",
     "provenance": {
-      "desktopPath": "Machines & Buildings/Parts/Parts.md"
+      "desktopPath": "Machines & Buildings/Parts/Parts.md",
+      "partsDiscovery": {
+        "repository": "kevvy555/MineIT-Android",
+        "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+        "sourceSections": "§§48-59",
+        "reviewStatus": "APPROVED_INPUT_FAMILIES"
+      }
     },
     "machineIds": [
       "machine-crude-chemical-battery",
@@ -138,6 +190,49 @@
       "status": "not-generated",
       "promptDescription": "Workshop kit photograph of power electronics: glass-insulated inverter boards, conductive busbars and ceramic control modules, no readable labels. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
       "notes": "Identity-neutral spare-part kit; not a complete machine."
+    },
+    "partRole": "finished-product",
+    "materialApprovalStatus": "APPROVED_INPUT_FAMILIES",
+    "finishedUnit": {
+      "count": 1,
+      "unit": "each",
+      "description": "electronic power module"
+    },
+    "materialInputs": [
+      {
+        "substanceId": "named-substance-electronic-grade-silicon",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "planningQuantityKg": 0.28
+      },
+      {
+        "substanceId": "named-substance-refined-copper",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "planningQuantityKg": 3.5
+      },
+      {
+        "substanceId": "named-substance-mica-insulation-sheets",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "planningQuantityKg": 1
+      },
+      {
+        "substanceId": "substance-glass",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "planningQuantityKg": 2
+      }
+    ],
+    "unresolvedMaterialInputs": [],
+    "planningReference": {
+      "status": "approved-discovery-planning-not-live",
+      "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
+      "finishedMassKg": 6.3,
+      "sourceSection": "galaxy-economic-foundation.md §59",
+      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+      "manufacturerCostCC": 2650.54,
+      "baseManufacturerQuoteCC": 3350
     }
   },
   {
@@ -146,9 +241,6 @@
     "entityType": "Part",
     "category": "Power",
     "subCategory": "Mechanical",
-    "subCategories": [
-      "Mechanical"
-    ],
     "sources": [
       "Crashed Ship",
       "Manufactured"
@@ -160,7 +252,13 @@
     "description": "Bearings, gears, and shafts for transmitting mechanical power.",
     "canonStatus": "source-canonical",
     "provenance": {
-      "desktopPath": "Machines & Buildings/Parts/Parts.md"
+      "desktopPath": "Machines & Buildings/Parts/Parts.md",
+      "partsDiscovery": {
+        "repository": "kevvy555/MineIT-Android",
+        "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+        "sourceSections": "§§48-59",
+        "reviewStatus": "APPROVED_INPUT_FAMILIES"
+      }
     },
     "machineIds": [
       "machine-wind-generator",
@@ -191,6 +289,43 @@
       "status": "not-generated",
       "promptDescription": "Workshop kit photograph of mechanical parts: greased gears, bearings and shafts in charcoal structural metal, lubricant sheen, spare-kit layout. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
       "notes": "Identity-neutral spare-part kit; not a complete machine."
+    },
+    "partRole": "finished-product",
+    "materialApprovalStatus": "APPROVED_INPUT_FAMILIES",
+    "finishedUnit": {
+      "count": 1,
+      "unit": "each",
+      "description": "bearing/gear service kit"
+    },
+    "materialInputs": [
+      {
+        "substanceId": "named-substance-steel",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "planningQuantityKg": 15
+      },
+      {
+        "substanceId": "named-substance-bronze",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "planningQuantityKg": 4
+      },
+      {
+        "substanceId": "substance-refined-lubricant",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "planningQuantityKg": 0.6
+      }
+    ],
+    "unresolvedMaterialInputs": [],
+    "planningReference": {
+      "status": "approved-discovery-planning-not-live",
+      "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
+      "finishedMassKg": 18.8,
+      "sourceSection": "galaxy-economic-foundation.md §59",
+      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+      "manufacturerCostCC": 1350,
+      "baseManufacturerQuoteCC": 1700
     }
   },
   {
@@ -214,7 +349,13 @@
     "description": "Automation components and monitoring instruments.",
     "canonStatus": "source-canonical",
     "provenance": {
-      "desktopPath": "Machines & Buildings/Parts/Parts.md"
+      "desktopPath": "Machines & Buildings/Parts/Parts.md",
+      "partsDiscovery": {
+        "repository": "kevvy555/MineIT-Android",
+        "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+        "sourceSections": "§§48-59",
+        "reviewStatus": "APPROVED_INPUT_FAMILIES"
+      }
     },
     "machineIds": [
       "machine-wind-generator",
@@ -245,6 +386,49 @@
       "status": "not-generated",
       "promptDescription": "Workshop kit photograph of control and sensor parts: insulated instrument housings, sensor heads and compact automation modules without screens of readable text. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
       "notes": "Identity-neutral spare-part kit; not a complete machine."
+    },
+    "partRole": "finished-product",
+    "materialApprovalStatus": "APPROVED_INPUT_FAMILIES",
+    "finishedUnit": {
+      "count": 1,
+      "unit": "each",
+      "description": "sensor/control module"
+    },
+    "materialInputs": [
+      {
+        "substanceId": "named-substance-electronic-grade-silicon",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "planningQuantityKg": 0.12
+      },
+      {
+        "substanceId": "named-substance-refined-copper",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "planningQuantityKg": 1.2
+      },
+      {
+        "substanceId": "substance-glass",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "planningQuantityKg": 1
+      },
+      {
+        "substanceId": "named-substance-mica-insulation-sheets",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "planningQuantityKg": 0.3
+      }
+    ],
+    "unresolvedMaterialInputs": [],
+    "planningReference": {
+      "status": "approved-discovery-planning-not-live",
+      "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
+      "finishedMassKg": 2.4,
+      "sourceSection": "galaxy-economic-foundation.md §59",
+      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+      "manufacturerCostCC": 2983,
+      "baseManufacturerQuoteCC": 3750
     }
   },
   {
@@ -270,7 +454,13 @@
     "description": "Heat exchangers, lenses, and mirrors for concentrating or transferring thermal energy.",
     "canonStatus": "source-canonical",
     "provenance": {
-      "desktopPath": "Machines & Buildings/Parts/Parts.md"
+      "desktopPath": "Machines & Buildings/Parts/Parts.md",
+      "partsDiscovery": {
+        "repository": "kevvy555/MineIT-Android",
+        "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+        "sourceSections": "§§48-59",
+        "reviewStatus": "SOURCE_REFERENCE_SPLIT_APPROVED"
+      }
     },
     "machineIds": [
       "machine-thermoelectric-trickler",
@@ -288,7 +478,13 @@
       "status": "not-generated",
       "promptDescription": "Workshop kit photograph of thermal and optical parts: ceramic heat-exchanger plates, glass lenses and metal mirrors for concentrating or transferring heat. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
       "notes": "Identity-neutral spare-part kit; not a complete machine."
-    }
+    },
+    "partRole": "legacy-compatibility",
+    "materialApprovalStatus": "SOURCE_REFERENCE_SPLIT_APPROVED",
+    "legacyReplacementPartIds": [
+      "part-thermal-parts",
+      "part-optical-parts"
+    ]
   },
   {
     "id": "part-structural-components",
@@ -296,9 +492,6 @@
     "entityType": "Part",
     "category": "Other",
     "subCategory": "Structural",
-    "subCategories": [
-      "Structural"
-    ],
     "sources": [
       "Crashed Ship",
       "Manufactured"
@@ -309,7 +502,13 @@
     "description": "Frames, panels, and fasteners providing physical integrity.",
     "canonStatus": "source-canonical",
     "provenance": {
-      "desktopPath": "Machines & Buildings/Parts/Parts.md"
+      "desktopPath": "Machines & Buildings/Parts/Parts.md",
+      "partsDiscovery": {
+        "repository": "kevvy555/MineIT-Android",
+        "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+        "sourceSections": "§§48-59",
+        "reviewStatus": "APPROVED_INPUT_FAMILIES"
+      }
     },
     "machineIds": [
       "machine-crude-chemical-battery",
@@ -342,6 +541,36 @@
       "status": "not-generated",
       "promptDescription": "Workshop kit photograph of structural components: charcoal metal frames, panels and dark fasteners, the same kit used across Commonwealth machines. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
       "notes": "Identity-neutral spare-part kit; not a complete machine."
+    },
+    "partRole": "finished-product",
+    "materialApprovalStatus": "APPROVED_INPUT_FAMILIES",
+    "finishedUnit": {
+      "count": 1,
+      "unit": "each",
+      "description": "structural kit"
+    },
+    "materialInputs": [
+      {
+        "substanceId": "named-substance-steel",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "planningQuantityKg": 80
+      },
+      {
+        "substanceId": "named-substance-aluminium-alloy",
+        "requirement": "conditional-alternative",
+        "approval": "approved-conditional-family"
+      }
+    ],
+    "unresolvedMaterialInputs": [],
+    "planningReference": {
+      "status": "approved-discovery-planning-not-live",
+      "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
+      "finishedMassKg": 76,
+      "sourceSection": "galaxy-economic-foundation.md §59",
+      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+      "manufacturerCostCC": 1956.67,
+      "baseManufacturerQuoteCC": 2450
     }
   },
   {
@@ -350,9 +579,6 @@
     "entityType": "Part",
     "category": "Mechanical",
     "subCategory": "Hydraulic",
-    "subCategories": [
-      "Hydraulic"
-    ],
     "sources": [
       "Crashed Ship",
       "Manufactured"
@@ -364,7 +590,13 @@
     "description": "Pistons, cylinders, and pressure systems for heavy-force applications.",
     "canonStatus": "source-canonical",
     "provenance": {
-      "desktopPath": "Machines & Buildings/Parts/Parts.md"
+      "desktopPath": "Machines & Buildings/Parts/Parts.md",
+      "partsDiscovery": {
+        "repository": "kevvy555/MineIT-Android",
+        "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+        "sourceSections": "§§48-59",
+        "reviewStatus": "APPROVED_INPUT_FAMILIES"
+      }
     },
     "machineIds": [
       "machine-drill-machine",
@@ -380,6 +612,49 @@
       "status": "not-generated",
       "promptDescription": "Workshop kit photograph of hydraulic parts: pistons, cylinders and pressure fittings in structural metal with lubricant sheen for heavy-force work. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
       "notes": "Identity-neutral spare-part kit; not a complete machine."
+    },
+    "partRole": "finished-product",
+    "materialApprovalStatus": "APPROVED_INPUT_FAMILIES",
+    "finishedUnit": {
+      "count": 1,
+      "unit": "each",
+      "description": "one standard hydraulic service/pressure kit (rating and mass TBD)"
+    },
+    "materialInputs": [
+      {
+        "substanceId": "named-substance-steel",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "planningQuantityKg": 30
+      },
+      {
+        "substanceId": "named-substance-bronze",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "planningQuantityKg": 4
+      },
+      {
+        "substanceId": "substance-refined-lubricant",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "planningQuantityKg": 1
+      },
+      {
+        "substanceId": "substance-polymer",
+        "requirement": "candidate",
+        "approval": "planning-only-unqualified",
+        "planningQuantityKg": 1.5
+      }
+    ],
+    "unresolvedMaterialInputs": [],
+    "planningReference": {
+      "status": "approved-discovery-planning-not-live",
+      "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
+      "finishedMassKg": 35,
+      "sourceSection": "galaxy-economic-foundation.md §59",
+      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+      "manufacturerCostCC": 2306.28,
+      "baseManufacturerQuoteCC": 2900
     }
   },
   {
@@ -388,9 +663,6 @@
     "entityType": "Part",
     "category": "Mining",
     "subCategory": "Extraction",
-    "subCategories": [
-      "Extraction"
-    ],
     "sources": [
       "Crashed Ship",
       "Manufactured"
@@ -402,7 +674,13 @@
     "description": "Cutting heads, drill bits, and boring tools for substance removal.",
     "canonStatus": "source-canonical",
     "provenance": {
-      "desktopPath": "Machines & Buildings/Parts/Parts.md"
+      "desktopPath": "Machines & Buildings/Parts/Parts.md",
+      "partsDiscovery": {
+        "repository": "kevvy555/MineIT-Android",
+        "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+        "sourceSections": "§§48-59",
+        "reviewStatus": "APPROVED_INPUT_FAMILIES"
+      }
     },
     "machineIds": [
       "machine-drill-machine",
@@ -414,6 +692,37 @@
       "status": "not-generated",
       "promptDescription": "Workshop kit photograph of extraction parts: ceramic-tipped drill bits, cutting heads and boring tools with structural-metal collars. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
       "notes": "Identity-neutral spare-part kit; not a complete machine."
+    },
+    "partRole": "finished-product",
+    "materialApprovalStatus": "APPROVED_INPUT_FAMILIES",
+    "finishedUnit": {
+      "count": 1,
+      "unit": "each",
+      "description": "one standard drill/cutting-head kit (size and mass pending)"
+    },
+    "materialInputs": [
+      {
+        "substanceId": "named-substance-steel",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "planningQuantityKg": 8
+      },
+      {
+        "substanceId": "named-substance-cemented-tungsten-carbide",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "planningQuantityKg": 2
+      }
+    ],
+    "unresolvedMaterialInputs": [],
+    "planningReference": {
+      "status": "approved-discovery-planning-not-live",
+      "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
+      "finishedMassKg": 9.2,
+      "sourceSection": "galaxy-economic-foundation.md §59",
+      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+      "manufacturerCostCC": 1917.63,
+      "baseManufacturerQuoteCC": 2400
     }
   },
   {
@@ -422,9 +731,6 @@
     "entityType": "Part",
     "category": "Processing",
     "subCategory": "Processing",
-    "subCategories": [
-      "Processing"
-    ],
     "sources": [
       "Crashed Ship",
       "Manufactured"
@@ -437,7 +743,13 @@
     "description": "Crucibles, heating chambers, and separation elements for substance transformation.",
     "canonStatus": "source-canonical",
     "provenance": {
-      "desktopPath": "Machines & Buildings/Parts/Parts.md"
+      "desktopPath": "Machines & Buildings/Parts/Parts.md",
+      "partsDiscovery": {
+        "repository": "kevvy555/MineIT-Android",
+        "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+        "sourceSections": "§§48-59",
+        "reviewStatus": "APPROVED_INPUT_FAMILIES"
+      }
     },
     "machineIds": [
       "machine-crusher-machine",
@@ -451,6 +763,43 @@
       "status": "not-generated",
       "promptDescription": "Workshop kit photograph of processing parts: ceramic crucibles, heating-chamber liners and glass separation elements. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
       "notes": "Identity-neutral spare-part kit; not a complete machine."
+    },
+    "partRole": "finished-product",
+    "materialApprovalStatus": "APPROVED_INPUT_FAMILIES",
+    "finishedUnit": {
+      "count": 1,
+      "unit": "each",
+      "description": "processing liner/crucible kit"
+    },
+    "materialInputs": [
+      {
+        "substanceId": "substance-refined-ceramic",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "planningQuantityKg": 18
+      },
+      {
+        "substanceId": "named-substance-stainless-steel",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "planningQuantityKg": 10
+      },
+      {
+        "substanceId": "substance-glass",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "planningQuantityKg": 2
+      }
+    ],
+    "unresolvedMaterialInputs": [],
+    "planningReference": {
+      "status": "approved-discovery-planning-not-live",
+      "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
+      "finishedMassKg": 28,
+      "sourceSection": "galaxy-economic-foundation.md §59",
+      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+      "manufacturerCostCC": 2311.58,
+      "baseManufacturerQuoteCC": 2900
     }
   },
   {
@@ -459,9 +808,6 @@
     "entityType": "Part",
     "category": "Electronics",
     "subCategory": "Computing",
-    "subCategories": [
-      "Computing"
-    ],
     "sources": [
       "Crashed Ship",
       "Manufactured"
@@ -474,7 +820,13 @@
     "description": "Logic circuits, data storage, and display components for data processing.",
     "canonStatus": "source-canonical",
     "provenance": {
-      "desktopPath": "Machines & Buildings/Parts/Parts.md"
+      "desktopPath": "Machines & Buildings/Parts/Parts.md",
+      "partsDiscovery": {
+        "repository": "kevvy555/MineIT-Android",
+        "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+        "sourceSections": "§§48-59",
+        "reviewStatus": "APPROVED_INPUT_FAMILIES"
+      }
     },
     "machineIds": [
       "machine-research-computer",
@@ -491,6 +843,49 @@
       "status": "not-generated",
       "promptDescription": "Workshop kit photograph of computing parts: logic boards, data-storage modules and dark glass display slabs with no readable UI text. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
       "notes": "Identity-neutral spare-part kit; not a complete machine."
+    },
+    "partRole": "finished-product",
+    "materialApprovalStatus": "APPROVED_INPUT_FAMILIES",
+    "finishedUnit": {
+      "count": 1,
+      "unit": "each",
+      "description": "computing module"
+    },
+    "materialInputs": [
+      {
+        "substanceId": "named-substance-electronic-grade-silicon",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "planningQuantityKg": 0.6
+      },
+      {
+        "substanceId": "named-substance-refined-copper",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "planningQuantityKg": 2
+      },
+      {
+        "substanceId": "substance-glass",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "planningQuantityKg": 1.5
+      },
+      {
+        "substanceId": "named-substance-mica-insulation-sheets",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "planningQuantityKg": 0.6
+      }
+    ],
+    "unresolvedMaterialInputs": [],
+    "planningReference": {
+      "status": "approved-discovery-planning-not-live",
+      "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
+      "finishedMassKg": 4.35,
+      "sourceSection": "galaxy-economic-foundation.md §59",
+      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+      "manufacturerCostCC": 5116.09,
+      "baseManufacturerQuoteCC": 6400
     }
   },
   {
@@ -499,9 +894,6 @@
     "entityType": "Part",
     "category": "Manufacturing",
     "subCategory": "Fabrication",
-    "subCategories": [
-      "Fabrication"
-    ],
     "sources": [
       "Crashed Ship",
       "Manufactured"
@@ -513,7 +905,13 @@
     "description": "Welding heads, forming dies, and assembly tooling for construction work.",
     "canonStatus": "source-canonical",
     "provenance": {
-      "desktopPath": "Machines & Buildings/Parts/Parts.md"
+      "desktopPath": "Machines & Buildings/Parts/Parts.md",
+      "partsDiscovery": {
+        "repository": "kevvy555/MineIT-Android",
+        "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+        "sourceSections": "§§48-59",
+        "reviewStatus": "SOURCE_REFERENCE_SPLIT_APPROVED"
+      }
     },
     "machineIds": [
       "machine-fabrication-machine",
@@ -526,7 +924,13 @@
       "status": "not-generated",
       "promptDescription": "Workshop kit photograph of fabrication parts: welding heads, forming dies and assembly tooling in structural and conductive metal. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
       "notes": "Identity-neutral spare-part kit; not a complete machine."
-    }
+    },
+    "partRole": "legacy-compatibility",
+    "materialApprovalStatus": "SOURCE_REFERENCE_SPLIT_APPROVED",
+    "legacyReplacementPartIds": [
+      "part-forming-cutting-tooling",
+      "part-welding-parts"
+    ]
   },
   {
     "id": "part-fluid-handling-parts",
@@ -534,9 +938,6 @@
     "entityType": "Part",
     "category": "Fluid Systems",
     "subCategory": "Fluid Handling",
-    "subCategories": [
-      "Fluid Handling"
-    ],
     "sources": [
       "Crashed Ship",
       "Manufactured"
@@ -549,7 +950,13 @@
     "description": "Pipes, valves, seals, and filters for fluid transport and containment.",
     "canonStatus": "source-canonical",
     "provenance": {
-      "desktopPath": "Machines & Buildings/Parts/Parts.md"
+      "desktopPath": "Machines & Buildings/Parts/Parts.md",
+      "partsDiscovery": {
+        "repository": "kevvy555/MineIT-Android",
+        "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+        "sourceSections": "§§48-59",
+        "reviewStatus": "APPROVED_INPUT_FAMILIES"
+      }
     },
     "machineIds": [
       "machine-mine-ventilation",
@@ -567,6 +974,49 @@
       "status": "not-generated",
       "promptDescription": "Workshop kit photograph of fluid-handling parts: pipes, valves, seals and ceramic-lined filters for water, brine and process fluids. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
       "notes": "Identity-neutral spare-part kit; not a complete machine."
+    },
+    "partRole": "finished-product",
+    "materialApprovalStatus": "APPROVED_INPUT_FAMILIES",
+    "finishedUnit": {
+      "count": 1,
+      "unit": "each",
+      "description": "one finished pipe/valve/filter service kit (mass/rating TBD)"
+    },
+    "materialInputs": [
+      {
+        "substanceId": "named-substance-stainless-steel",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "planningQuantityKg": 15
+      },
+      {
+        "substanceId": "named-substance-brass",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "planningQuantityKg": 5
+      },
+      {
+        "substanceId": "substance-refined-ceramic",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "planningQuantityKg": 5
+      },
+      {
+        "substanceId": "substance-polymer",
+        "requirement": "candidate",
+        "approval": "planning-only-unqualified",
+        "planningQuantityKg": 1.5
+      }
+    ],
+    "unresolvedMaterialInputs": [],
+    "planningReference": {
+      "status": "approved-discovery-planning-not-live",
+      "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
+      "finishedMassKg": 25,
+      "sourceSection": "galaxy-economic-foundation.md §59",
+      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+      "manufacturerCostCC": 2066.06,
+      "baseManufacturerQuoteCC": 2600
     }
   },
   {
@@ -575,9 +1025,6 @@
     "entityType": "Part",
     "category": "Logistics",
     "subCategory": "Bulk Handling",
-    "subCategories": [
-      "Bulk Handling"
-    ],
     "sources": [
       "Manufactured"
     ],
@@ -588,7 +1035,13 @@
     "description": "Hoppers, chutes, screens, grabs and pallet interfaces for moving loose bulk and unit loads.",
     "canonStatus": "source-canonical",
     "provenance": {
-      "authoredFor": "industrial-catalog-gapfill"
+      "authoredFor": "industrial-catalog-gapfill",
+      "partsDiscovery": {
+        "repository": "kevvy555/MineIT-Android",
+        "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+        "sourceSections": "§§48-59",
+        "reviewStatus": "APPROVED_INPUT_FAMILIES"
+      }
     },
     "machineIds": [
       "machine-conveyor-machine",
@@ -601,6 +1054,43 @@
       "status": "generated",
       "promptDescription": "Workshop kit photograph of bulk-handling parts: hoppers, chutes, screening decks, grabs and pallet forks in charcoal structural metal with ceramic wear lips. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
       "notes": "Identity-neutral spare-part kit; not a complete machine."
+    },
+    "partRole": "finished-product",
+    "materialApprovalStatus": "APPROVED_INPUT_FAMILIES",
+    "finishedUnit": {
+      "count": 1,
+      "unit": "each",
+      "description": "conveyor/handling wear kit"
+    },
+    "materialInputs": [
+      {
+        "substanceId": "named-substance-steel",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "planningQuantityKg": 35
+      },
+      {
+        "substanceId": "substance-refined-ceramic",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "planningQuantityKg": 8
+      },
+      {
+        "substanceId": "named-substance-bronze",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "planningQuantityKg": 3
+      }
+    ],
+    "unresolvedMaterialInputs": [],
+    "planningReference": {
+      "status": "approved-discovery-planning-not-live",
+      "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
+      "finishedMassKg": 44,
+      "sourceSection": "galaxy-economic-foundation.md §59",
+      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+      "manufacturerCostCC": 1889.47,
+      "baseManufacturerQuoteCC": 2400
     }
   },
   {
@@ -609,9 +1099,6 @@
     "entityType": "Part",
     "category": "Power",
     "subCategory": "Battery",
-    "subCategories": [
-      "Battery"
-    ],
     "sources": [
       "Manufactured"
     ],
@@ -625,10 +1112,14 @@
       "sourceRepository": "kevvy555/MineIT-Android",
       "sourcePath": "docs/discovery/proposed-parts-material-boms.csv",
       "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
-      "androidDiscoveryWorkingId": "candidate-part-lead-acid-battery-module"
+      "androidDiscoveryWorkingId": "candidate-part-lead-acid-battery-module",
+      "partsDiscovery": {
+        "repository": "kevvy555/MineIT-Android",
+        "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+        "sourceSections": "§§48-59",
+        "reviewStatus": "APPROVED_PRODUCT_BOM_PENDING"
+      }
     },
-    "materialDesignStatus": "APPROVED_PRODUCT_BOM_PENDING",
-    "materialDesignNotes": "Approved battery chemistry and identity; electrochemical plate design, safety certification, exact bill of materials and ratings remain unresolved.",
     "machineIds": [],
     "image": {
       "key": "assets/art/universe/parts/part-lead-acid-battery-module.webp",
@@ -636,6 +1127,49 @@
       "status": "not-generated",
       "promptDescription": "Studio product photograph of lead-acid battery module: physically plausible industrial component kit or assembled module, safely labelled only by shape, practical exposed material details, neutral background, Year-5326 Koplin industrial realism. No readable text, branding, logos, people or watermark.",
       "notes": "Art not yet generated; candidate identity reconciled from Android industrial discovery."
+    },
+    "partRole": "finished-product",
+    "materialApprovalStatus": "APPROVED_PRODUCT_BOM_PENDING",
+    "finishedUnit": {
+      "count": 1,
+      "unit": "each",
+      "description": "one finished stationary lead-acid battery module (capacity and mass TBD)"
+    },
+    "materialInputs": [
+      {
+        "substanceId": "named-substance-refined-lead",
+        "requirement": "upstream-source",
+        "approval": "approved-upstream-source",
+        "planningQuantityKg": 36
+      },
+      {
+        "substanceId": "named-substance-sulfuric-acid",
+        "requirement": "upstream-source",
+        "approval": "approved-upstream-source",
+        "planningQuantityKg": 10
+      },
+      {
+        "substanceId": "named-substance-refined-copper",
+        "requirement": "candidate",
+        "approval": "planning-only-unqualified",
+        "planningQuantityKg": 1
+      },
+      {
+        "substanceId": "substance-polymer",
+        "requirement": "candidate",
+        "approval": "planning-only-unqualified",
+        "planningQuantityKg": 4
+      }
+    ],
+    "unresolvedMaterialInputs": [],
+    "planningReference": {
+      "status": "approved-discovery-planning-not-live",
+      "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
+      "finishedMassKg": 50,
+      "sourceSection": "galaxy-economic-foundation.md §59",
+      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+      "manufacturerCostCC": 1410.83,
+      "baseManufacturerQuoteCC": 1800
     }
   },
   {
@@ -644,9 +1178,6 @@
     "entityType": "Part",
     "category": "Power",
     "subCategory": "Battery",
-    "subCategories": [
-      "Battery"
-    ],
     "sources": [
       "Manufactured"
     ],
@@ -661,10 +1192,14 @@
       "sourceRepository": "kevvy555/MineIT-Android",
       "sourcePath": "docs/discovery/proposed-parts-material-boms.csv",
       "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
-      "androidDiscoveryWorkingId": "candidate-part-lithium-based-battery-module"
+      "androidDiscoveryWorkingId": "candidate-part-lithium-based-battery-module",
+      "partsDiscovery": {
+        "repository": "kevvy555/MineIT-Android",
+        "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+        "sourceSections": "§§48-59",
+        "reviewStatus": "APPROVED_PRODUCT_BOM_PENDING"
+      }
     },
-    "materialDesignStatus": "APPROVED_PRODUCT_BOM_PENDING",
-    "materialDesignNotes": "Lithium carbonate is an upstream precursor, not an approved directly usable cathode. Cell chemistry, separators, electrolyte and final quantitative recipe are still undecided.",
     "machineIds": [],
     "image": {
       "key": "assets/art/universe/parts/part-lithium-based-battery-module.webp",
@@ -672,6 +1207,66 @@
       "status": "not-generated",
       "promptDescription": "Studio product photograph of lithium-based battery module: physically plausible industrial component kit or assembled module, safely labelled only by shape, practical exposed material details, neutral background, Year-5326 Koplin industrial realism. No readable text, branding, logos, people or watermark.",
       "notes": "Art not yet generated; candidate identity reconciled from Android industrial discovery."
+    },
+    "partRole": "finished-product",
+    "materialApprovalStatus": "APPROVED_PRODUCT_BOM_PENDING",
+    "finishedUnit": {
+      "count": 1,
+      "unit": "each",
+      "description": "one finished lithium-based rechargeable battery module (capacity and mass TBD)"
+    },
+    "materialInputs": [
+      {
+        "substanceId": "named-substance-lithium-carbonate",
+        "requirement": "upstream-precursor",
+        "approval": "approved-upstream-source",
+        "planningQuantityKg": 1.5
+      },
+      {
+        "substanceId": "substance-refined-graphite",
+        "requirement": "candidate",
+        "approval": "planning-only-unqualified",
+        "planningQuantityKg": 2.5
+      },
+      {
+        "substanceId": "named-substance-refined-copper",
+        "requirement": "candidate",
+        "approval": "planning-only-unqualified",
+        "planningQuantityKg": 2
+      },
+      {
+        "substanceId": "substance-polymer",
+        "requirement": "candidate",
+        "approval": "planning-only-unqualified",
+        "planningQuantityKg": 3
+      },
+      {
+        "substanceId": "named-substance-stainless-steel",
+        "requirement": "candidate",
+        "approval": "planning-only-unqualified",
+        "planningQuantityKg": 3
+      }
+    ],
+    "unresolvedMaterialInputs": [
+      {
+        "label": "unresolved cathode allowance",
+        "planningAllowanceKg": 5,
+        "status": "unresolved-material-allowance"
+      },
+      {
+        "label": "unresolved electrolyte allowance",
+        "planningAllowanceKg": 2,
+        "status": "unresolved-material-allowance"
+      }
+    ],
+    "planningReference": {
+      "status": "approved-discovery-planning-not-live",
+      "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
+      "finishedMassKg": 18,
+      "sourceSection": "galaxy-economic-foundation.md §59",
+      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+      "manufacturerCostCC": 3508.91,
+      "baseManufacturerQuoteCC": 4400
     }
   },
   {
@@ -680,9 +1275,6 @@
     "entityType": "Part",
     "category": "Thermal",
     "subCategory": "Thermal Management",
-    "subCategories": [
-      "Thermal Management"
-    ],
     "sources": [
       "Manufactured"
     ],
@@ -696,10 +1288,14 @@
       "sourceRepository": "kevvy555/MineIT-Android",
       "sourcePath": "docs/discovery/proposed-parts-material-boms.csv",
       "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
-      "androidDiscoveryWorkingId": "candidate-part-thermal-parts"
+      "androidDiscoveryWorkingId": "candidate-part-thermal-parts",
+      "partsDiscovery": {
+        "repository": "kevvy555/MineIT-Android",
+        "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+        "sourceSections": "§§48-59",
+        "reviewStatus": "APPROVED_INPUT_FAMILIES"
+      }
     },
-    "materialDesignStatus": "APPROVED_INPUT_FAMILIES",
-    "materialDesignNotes": "Specific insulation grade and machine-specific ratings remain to be qualified; existing Thermal / Optical Parts record is retained for older consumers.",
     "machineIds": [
       "machine-immersive-recreation-suite",
       "machine-integrated-wellness-leisure-system"
@@ -710,6 +1306,43 @@
       "status": "not-generated",
       "promptDescription": "Studio product photograph of thermal parts: physically plausible industrial component kit or assembled module, safely labelled only by shape, practical exposed material details, neutral background, Year-5326 Koplin industrial realism. No readable text, branding, logos, people or watermark.",
       "notes": "Art not yet generated; candidate identity reconciled from Android industrial discovery."
+    },
+    "partRole": "finished-product",
+    "materialApprovalStatus": "APPROVED_INPUT_FAMILIES",
+    "finishedUnit": {
+      "count": 1,
+      "unit": "each",
+      "description": "one finished Thermal Part or service module (size and mass TBD)"
+    },
+    "materialInputs": [
+      {
+        "substanceId": "named-substance-stainless-steel",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "planningQuantityKg": 24
+      },
+      {
+        "substanceId": "substance-refined-ceramic",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "planningQuantityKg": 10
+      },
+      {
+        "substanceId": "named-substance-mica-insulation-sheets",
+        "requirement": "candidate",
+        "approval": "planning-only-unqualified",
+        "planningQuantityKg": 2.5
+      }
+    ],
+    "unresolvedMaterialInputs": [],
+    "planningReference": {
+      "status": "approved-discovery-planning-not-live",
+      "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
+      "finishedMassKg": 35,
+      "sourceSection": "galaxy-economic-foundation.md §59",
+      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+      "manufacturerCostCC": 2450.53,
+      "baseManufacturerQuoteCC": 3100
     }
   },
   {
@@ -718,9 +1351,6 @@
     "entityType": "Part",
     "category": "Electronics",
     "subCategory": "Optics",
-    "subCategories": [
-      "Optics"
-    ],
     "sources": [
       "Manufactured"
     ],
@@ -734,10 +1364,14 @@
       "sourceRepository": "kevvy555/MineIT-Android",
       "sourcePath": "docs/discovery/proposed-parts-material-boms.csv",
       "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
-      "androidDiscoveryWorkingId": "candidate-part-optical-parts"
+      "androidDiscoveryWorkingId": "candidate-part-optical-parts",
+      "partsDiscovery": {
+        "repository": "kevvy555/MineIT-Android",
+        "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+        "sourceSections": "§§48-59",
+        "reviewStatus": "APPROVED_INPUT_FAMILIES"
+      }
     },
-    "materialDesignStatus": "APPROVED_INPUT_FAMILIES",
-    "materialDesignNotes": "Optical grade, metal housing and specialist sapphire requirements remain conditional; existing Thermal / Optical Parts record is retained.",
     "machineIds": [
       "machine-advanced-entertainment-system",
       "machine-immersive-recreation-suite"
@@ -748,6 +1382,48 @@
       "status": "not-generated",
       "promptDescription": "Studio product photograph of optical parts: physically plausible industrial component kit or assembled module, safely labelled only by shape, practical exposed material details, neutral background, Year-5326 Koplin industrial realism. No readable text, branding, logos, people or watermark.",
       "notes": "Art not yet generated; candidate identity reconciled from Android industrial discovery."
+    },
+    "partRole": "finished-product",
+    "materialApprovalStatus": "APPROVED_INPUT_FAMILIES",
+    "finishedUnit": {
+      "count": 1,
+      "unit": "each",
+      "description": "one finished optical component or service module (size and mass TBD)"
+    },
+    "materialInputs": [
+      {
+        "substanceId": "substance-glass",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "planningQuantityKg": 6
+      },
+      {
+        "substanceId": "substance-refined-ceramic",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "planningQuantityKg": 3
+      },
+      {
+        "substanceId": "named-substance-optical-sapphire",
+        "requirement": "conditional-specialist",
+        "approval": "approved-conditional-family"
+      },
+      {
+        "substanceId": "named-substance-steel",
+        "requirement": "candidate",
+        "approval": "planning-only-unqualified",
+        "planningQuantityKg": 4
+      }
+    ],
+    "unresolvedMaterialInputs": [],
+    "planningReference": {
+      "status": "approved-discovery-planning-not-live",
+      "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
+      "finishedMassKg": 12,
+      "sourceSection": "galaxy-economic-foundation.md §59",
+      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+      "manufacturerCostCC": 2404.07,
+      "baseManufacturerQuoteCC": 3050
     }
   },
   {
@@ -756,9 +1432,6 @@
     "entityType": "Part",
     "category": "Manufacturing",
     "subCategory": "Tooling",
-    "subCategories": [
-      "Tooling"
-    ],
     "sources": [
       "Manufactured"
     ],
@@ -772,10 +1445,14 @@
       "sourceRepository": "kevvy555/MineIT-Android",
       "sourcePath": "docs/discovery/proposed-parts-material-boms.csv",
       "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
-      "androidDiscoveryWorkingId": "candidate-part-forming-cutting-tooling"
+      "androidDiscoveryWorkingId": "candidate-part-forming-cutting-tooling",
+      "partsDiscovery": {
+        "repository": "kevvy555/MineIT-Android",
+        "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+        "sourceSections": "§§48-59",
+        "reviewStatus": "APPROVED_INPUT_FAMILIES"
+      }
     },
-    "materialDesignStatus": "APPROVED_INPUT_FAMILIES",
-    "materialDesignNotes": "Qualified tooling geometry, wear grade, size and machine compatibility are still under review; generic Fabrication Parts remains valid.",
     "machineIds": [],
     "image": {
       "key": "assets/art/universe/parts/part-forming-cutting-tooling.webp",
@@ -783,6 +1460,37 @@
       "status": "not-generated",
       "promptDescription": "Studio product photograph of forming & cutting tooling: physically plausible industrial component kit or assembled module, safely labelled only by shape, practical exposed material details, neutral background, Year-5326 Koplin industrial realism. No readable text, branding, logos, people or watermark.",
       "notes": "Art not yet generated; candidate identity reconciled from Android industrial discovery."
+    },
+    "partRole": "finished-product",
+    "materialApprovalStatus": "APPROVED_INPUT_FAMILIES",
+    "finishedUnit": {
+      "count": 1,
+      "unit": "each",
+      "description": "one finished forming/cutting tool or standard service tooling kit (size/rating TBD)"
+    },
+    "materialInputs": [
+      {
+        "substanceId": "named-substance-steel",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "planningQuantityKg": 12
+      },
+      {
+        "substanceId": "named-substance-cemented-tungsten-carbide",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "planningQuantityKg": 3
+      }
+    ],
+    "unresolvedMaterialInputs": [],
+    "planningReference": {
+      "status": "approved-discovery-planning-not-live",
+      "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
+      "finishedMassKg": 13.8,
+      "sourceSection": "galaxy-economic-foundation.md §59",
+      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+      "manufacturerCostCC": 3176.45,
+      "baseManufacturerQuoteCC": 4000
     }
   },
   {
@@ -791,9 +1499,6 @@
     "entityType": "Part",
     "category": "Manufacturing",
     "subCategory": "Welding",
-    "subCategories": [
-      "Welding"
-    ],
     "sources": [
       "Manufactured"
     ],
@@ -807,10 +1512,14 @@
       "sourceRepository": "kevvy555/MineIT-Android",
       "sourcePath": "docs/discovery/proposed-parts-material-boms.csv",
       "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
-      "androidDiscoveryWorkingId": "candidate-part-welding-parts"
+      "androidDiscoveryWorkingId": "candidate-part-welding-parts",
+      "partsDiscovery": {
+        "repository": "kevvy555/MineIT-Android",
+        "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+        "sourceSections": "§§48-59",
+        "reviewStatus": "APPROVED_INPUT_FAMILIES"
+      }
     },
-    "materialDesignStatus": "APPROVED_INPUT_FAMILIES",
-    "materialDesignNotes": "The exact high-temperature insulation stock and welding processes are not yet qualified; generic Fabrication Parts remains valid.",
     "machineIds": [],
     "image": {
       "key": "assets/art/universe/parts/part-welding-parts.webp",
@@ -818,6 +1527,43 @@
       "status": "not-generated",
       "promptDescription": "Studio product photograph of welding parts: physically plausible industrial component kit or assembled module, safely labelled only by shape, practical exposed material details, neutral background, Year-5326 Koplin industrial realism. No readable text, branding, logos, people or watermark.",
       "notes": "Art not yet generated; candidate identity reconciled from Android industrial discovery."
+    },
+    "partRole": "finished-product",
+    "materialApprovalStatus": "APPROVED_INPUT_FAMILIES",
+    "finishedUnit": {
+      "count": 1,
+      "unit": "each",
+      "description": "one finished welding head/contact/consumable service kit (type/rating TBD)"
+    },
+    "materialInputs": [
+      {
+        "substanceId": "named-substance-refined-copper",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "planningQuantityKg": 4
+      },
+      {
+        "substanceId": "named-substance-steel",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "planningQuantityKg": 8
+      },
+      {
+        "substanceId": "named-substance-mica-insulation-sheets",
+        "requirement": "candidate",
+        "approval": "planning-only-unqualified",
+        "planningQuantityKg": 1
+      }
+    ],
+    "unresolvedMaterialInputs": [],
+    "planningReference": {
+      "status": "approved-discovery-planning-not-live",
+      "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
+      "finishedMassKg": 12,
+      "sourceSection": "galaxy-economic-foundation.md §59",
+      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+      "manufacturerCostCC": 1868.94,
+      "baseManufacturerQuoteCC": 2350
     }
   },
   {
@@ -826,9 +1572,6 @@
     "entityType": "Part",
     "category": "Construction",
     "subCategory": "Structural Components",
-    "subCategories": [
-      "Structural Components"
-    ],
     "sources": [
       "Manufactured"
     ],
@@ -842,10 +1585,14 @@
       "sourceRepository": "kevvy555/MineIT-Android",
       "sourcePath": "docs/discovery/proposed-parts-material-boms.csv",
       "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
-      "androidDiscoveryWorkingId": "candidate-part-precast-concrete-sections"
+      "androidDiscoveryWorkingId": "candidate-part-precast-concrete-sections",
+      "partsDiscovery": {
+        "repository": "kevvy555/MineIT-Android",
+        "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+        "sourceSections": "§§48-59",
+        "reviewStatus": "APPROVED_INPUT_FAMILIES"
+      }
     },
-    "materialDesignStatus": "APPROVED_INPUT_FAMILIES",
-    "materialDesignNotes": "Sand grade, section dimensions, reinforcement requirements, curing process and final quantities require engineering review.",
     "machineIds": [],
     "image": {
       "key": "assets/art/universe/parts/part-precast-concrete-sections.webp",
@@ -853,6 +1600,55 @@
       "status": "not-generated",
       "promptDescription": "Studio product photograph of precast concrete sections: physically plausible industrial component kit or assembled module, safely labelled only by shape, practical exposed material details, neutral background, Year-5326 Koplin industrial realism. No readable text, branding, logos, people or watermark.",
       "notes": "Art not yet generated; candidate identity reconciled from Android industrial discovery."
+    },
+    "partRole": "finished-product",
+    "materialApprovalStatus": "APPROVED_INPUT_FAMILIES",
+    "finishedUnit": {
+      "count": 1,
+      "unit": "each",
+      "description": "one finished cured transportable section (size TBD)"
+    },
+    "materialInputs": [
+      {
+        "substanceId": "named-substance-cement",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "planningQuantityKg": 175
+      },
+      {
+        "substanceId": "named-substance-graded-aggregate",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "planningQuantityKg": 600
+      },
+      {
+        "substanceId": "named-substance-steel",
+        "requirement": "conditional-reinforcement",
+        "approval": "approved-conditional-family",
+        "planningQuantityKg": 25,
+        "planningNote": "for reinforced example"
+      }
+    ],
+    "unresolvedMaterialInputs": [
+      {
+        "label": "Suitable Sand",
+        "planningAllowanceKg": 300,
+        "status": "unresolved-material-identity"
+      },
+      {
+        "label": "Process Water",
+        "planningAllowanceKg": 75,
+        "status": "unresolved-process-input"
+      }
+    ],
+    "planningReference": {
+      "status": "approved-discovery-planning-not-live",
+      "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
+      "finishedMassKg": 1160,
+      "sourceSection": "galaxy-economic-foundation.md §59",
+      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+      "manufacturerCostCC": 2511.39,
+      "baseManufacturerQuoteCC": 3150
     }
   },
   {
@@ -861,9 +1657,6 @@
     "entityType": "Part",
     "category": "Power",
     "subCategory": "Nuclear Fuel",
-    "subCategories": [
-      "Nuclear Fuel"
-    ],
     "sources": [
       "Manufactured"
     ],
@@ -876,10 +1669,14 @@
       "sourceRepository": "kevvy555/MineIT-Android",
       "sourcePath": "docs/discovery/proposed-parts-material-boms.csv",
       "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
-      "androidDiscoveryWorkingId": "candidate-part-nuclear-fuel-assembly"
+      "androidDiscoveryWorkingId": "candidate-part-nuclear-fuel-assembly",
+      "partsDiscovery": {
+        "repository": "kevvy555/MineIT-Android",
+        "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
+        "sourceSections": "§§48-59",
+        "reviewStatus": "APPROVED_PRODUCT_BOM_PENDING"
+      }
     },
-    "materialDesignStatus": "APPROVED_PRODUCT_BOM_PENDING",
-    "materialDesignNotes": "Uranium Concentrate is an upstream precursor, not an assembled fuel. Fuel chemistry, cladding, processing and reactor compatibility remain unresolved.",
     "machineIds": [],
     "image": {
       "key": "assets/art/universe/parts/part-nuclear-fuel-assembly.webp",
@@ -887,6 +1684,32 @@
       "status": "not-generated",
       "promptDescription": "Studio product photograph of nuclear fuel assembly: physically plausible industrial component kit or assembled module, safely labelled only by shape, practical exposed material details, neutral background, Year-5326 Koplin industrial realism. No readable text, branding, logos, people or watermark.",
       "notes": "Art not yet generated; candidate identity reconciled from Android industrial discovery."
+    },
+    "partRole": "finished-product",
+    "materialApprovalStatus": "APPROVED_PRODUCT_BOM_PENDING",
+    "finishedUnit": {
+      "count": 1,
+      "unit": "each",
+      "description": "one finished compatible fission-reactor consumable assembly (rating and service life TBD)"
+    },
+    "materialInputs": [
+      {
+        "substanceId": "named-substance-uranium-concentrate",
+        "requirement": "upstream-precursor",
+        "approval": "approved-upstream-source"
+      }
+    ],
+    "unresolvedMaterialInputs": [
+      {
+        "label": "Uranium Concentrate plus fuel and cladding materials TBD",
+        "status": "design-unresolved"
+      }
+    ],
+    "planningReference": {
+      "status": "blocked-pending-engineering",
+      "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
+      "sourceSection": "galaxy-economic-foundation.md §59",
+      "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a"
     }
   }
 ]
