@@ -123,8 +123,8 @@ for (const id of reconciledPartIds) {
   if (!part) { errors.push(`Canonical discovery Part missing: ${id}`); continue; }
   if (!part.provenance?.androidDiscoveryWorkingId?.startsWith('candidate-'))
     errors.push(`${id}: missing stable Android discovery crosswalk`);
-  if (!part.materialDesignStatus)
-    errors.push(`${id}: source material-design approval state required`);
+  if (!part.materialApprovalStatus)
+    errors.push(`${id}: source material approval state required`);
 }
 for (const id of reconciledMachineIds) {
   const machine = machineById.get(id);
