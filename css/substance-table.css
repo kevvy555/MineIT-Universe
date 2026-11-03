@@ -83,3 +83,11 @@
   .substance-category-heading{align-items:flex-start}
   .substance-category-actions{margin-left:0}
 }
+
+/* Linked entity references in existing bulk review table; preserve table dimensions. */
+.substance-review-table td.substance-link-cell{white-space:normal;min-width:180px;max-width:360px;overflow:visible}
+.substance-ref-list{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px}
+.substance-reference{display:inline-block;font-weight:500;white-space:normal;line-height:1.35;
+  color:var(--accent);text-decoration:underline;text-decoration-color:#35637d;text-underline-offset:3px}
+.substance-reference:hover,.substance-reference:focus-visible{text-decoration-color:currentColor}
+.substance-unlinked{color:var(--muted);font-size:inherit}
