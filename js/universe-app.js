@@ -319,6 +319,21 @@ function tags(values) {
   return values?.length ? `<div class="tagList">${values.map(value => `<span class="tag">${esc(value)}</span>`).join('')}</div>` : '—';
 }
 
+// Pending candidate IDs remain navigable, but are explicitly NOT adopted
+// as required fitted Parts or automatic research unlocks.
+function pendingPartReviews(entries) {
+  if (!entries?.length) return '—';
+  return '<div class="multiLinks">' + entries.map(entry => {
+    const candidates = (entry.candidatePartIds || []).length
+      ? links(entry.candidatePartIds)
+      : '<em>No candidate assigned</em>';
+    return '<div><strong>' + esc(entry.supersededFamily) + '</strong>' +
+      ' — <span class="status">' + esc(entry.reviewStatus) +
+      '</span><div>' + candidates + '</div><small>' +
+      esc(entry.notes || 'Engineering review required') + '</small></div>';
+  }).join('') + '</div>';
+}
+
 function partMaterialLinks(inputs) {
   if (!inputs?.length) return '—';
   const display = input => {
@@ -716,6 +731,7 @@ function fieldsFor(collection, entity) {
       field('Sub-category', esc(entity.subCategory)),
       field('Sources', tags(entity.sources)),
       field('Construction parts', links(entity.partIds)),
+      field('Unapproved Part compatibility candidates', pendingPartReviews(entity.pendingPartCompatibility)),
       field('Installed in buildings', links(relatedIds('buildings', building => (building.machineIds || []).includes(entity.id)))),
       field('Input', esc(entity.inputSummary)),
       field('Output', esc(entity.outputSummary)),
@@ -879,6 +895,7 @@ function fieldsFor(collection, entity) {
       field('Category', esc(entity.category)),
       field('Prerequisites', links(entity.prerequisiteTechnologyIds)),
       field('Unlocks parts', links(entity.unlockedPartIds)),
+      field('Unapproved replacement Part unlocks', pendingPartReviews(entity.partUnlockReview)),
       field('Unlocks machines', links(entity.unlockedMachineIds)),
       field('Unlocks buildings', links(entity.unlockedBuildingIds)),
       field('Unlocks substances', links(entity.unlockedSubstanceIds)),
