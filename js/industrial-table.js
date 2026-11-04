@@ -172,7 +172,7 @@ export function industrialReviewRows(kind, catalogue, reference) {
   const canonicalRows = canonicalRecords.map(record => {
     const fields = flatten(record);
     fields.catalogueStatus = "Canonical";
-     // Parts have now reconciled these discovery inputs into canonical, typed
+    // Parts have now reconciled these discovery inputs into canonical, typed
     // fields. Keep the frozen Android snapshot for history, not duplicate columns.
     if (kind !== "parts" && source.has(record.id))
       flatten(source.get(record.id), "review", fields);
@@ -215,7 +215,10 @@ export function createIndustrialTables() {
         fields: [...group.fields,
           ...(additionalGroupFields[kind]?.[group.name] || "").split(" ").filter(Boolean)]
       })),
-      storageKey: "mineit" + config.title + "Columns",
+      // A revised Parts column schema needs a fresh selection so the old
+      // provenance-heavy preferences do not hide Approval/Needs Approval.
+      storageKey: kind === "parts" ? "mineitPartsReviewColumns" :
+        "mineit" + config.title + "Columns",
       rows(catalogue, reference) {
         return industrialReviewRows(kind, catalogue, reference);
       },
