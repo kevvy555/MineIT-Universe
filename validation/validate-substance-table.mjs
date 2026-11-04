@@ -27,12 +27,12 @@ assert.deepEqual(new Set(reference.resources.map(r => r.resourceId)),
 assert.equal(new Set(reference.resources.map(r => r.resourceId)).size, 42);
 
 const rows = substanceRows(catalogue, reference);
-assert.equal(rows.length, 111, "42 natural + 62 named + 7 biological");
+assert.equal(rows.length, 113, "42 natural + 64 named + 7 biological");
 assert.ok(rows.every(row => row.collection !== "substances"));
 assert.equal(collections.substances.length, 80);
 assert.equal(new Set(rows.map(row => row.id)).size, rows.length, "No duplicated resources");
 assert.equal(rows.filter(row => row.fields.kind === "Biological food").length, 7);
-assert.equal(rows.filter(row => row.fields.kind === "Named material").length, 62);
+assert.equal(rows.filter(row => row.fields.kind === "Named material").length, 64);
 assert.equal(rows.filter(row => row.fields.kind === "Natural resource").length, 42);
 assert.equal(rows.find(row => row.id === "mobile-resource-iron-ore").fields.genericClassName,
   "Structural Metal Ore");
@@ -43,6 +43,14 @@ assert.ok(keys.includes("android.basePrice"));
 assert.ok(keys.includes("occurrence.eligibleWorldTypeIds"));
 assert.ok(keys.includes("image.status"));
 assert.ok(keys.includes("sourceProvenance.path"));
+assert.ok(keys.includes("upstreamMaterialIds"), "LFP cathode source links must remain reviewable");
+const lfpMaterialRows = rows.filter(row => row.id === "named-substance-lfp-cathode-material" ||
+  row.id === "named-substance-lfp-battery-electrolyte");
+assert.equal(lfpMaterialRows.length, 2, "Both stockable refined battery materials must appear");
+assert.ok(lfpMaterialRows.every(row => row.fields.materialStage === "processed" &&
+  row.fields.stockBehaviour === "stockable"));
+assert.deepEqual(rows.find(row => row.id === "named-substance-lfp-cathode-material").fields.upstreamMaterialIds,
+  ["named-substance-lithium-carbonate"]);
 const filtered = applySubstanceTable(rows, ["name", "android.baseScan"],
   { "android.baseScan": ">=6" }, "android.baseScan", -1, catalogue);
 assert.ok(filtered.length > 0);
@@ -60,8 +68,8 @@ assert.deepEqual(SUBSTANCE_COLUMN_GROUPS.map(group => group.name), [
   "Sources & Provenance", "Artwork & Visuals"
 ]);
 const groupedFields = SUBSTANCE_COLUMN_GROUPS.flatMap(group => group.fields);
-assert.equal(groupedFields.length, 75, "The full current column set is preserved");
-assert.equal(new Set(groupedFields).size, 75, "Every field belongs to one category");
+assert.equal(groupedFields.length, 76, "The full current column set is preserved");
+assert.equal(new Set(groupedFields).size, 76, "Every field belongs to one category");
 assert.deepEqual(new Set(groupedFields), new Set(keys), "No missing or extra field definitions");
 assert.ok(SUBSTANCE_COLUMN_GROUPS.every(group => group.fields.length > 0));
 for (const group of SUBSTANCE_COLUMN_GROUPS) {
