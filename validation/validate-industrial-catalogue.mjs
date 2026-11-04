@@ -123,8 +123,10 @@ for (const id of reconciledPartIds) {
   if (!part) { errors.push(`Canonical discovery Part missing: ${id}`); continue; }
   if (!part.provenance?.androidDiscoveryWorkingId?.startsWith('candidate-'))
     errors.push(`${id}: missing stable Android discovery crosswalk`);
-  if (!part.materialApprovalStatus)
-    errors.push(`${id}: source material approval state required`);
+  if (!part.approval || !part.fieldApprovalStatuses?.materialInputs)
+    errors.push(`${id}: canonical Part approval and explicit material-input decision required`);
+  if (part.materialApprovalStatus !== undefined)
+    errors.push(`${id}: superseded materialApprovalStatus must not reappear`);
 }
 for (const id of reconciledMachineIds) {
   const machine = machineById.get(id);
