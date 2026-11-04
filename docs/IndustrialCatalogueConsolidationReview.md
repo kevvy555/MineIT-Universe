@@ -378,3 +378,51 @@ lithium cathode and electrolyte, concrete sand and water, nuclear fuel
 form/cladding, and 11 linked candidate inputs with unqualified material
 grades. Keep them visibly pending, without inventing confirmed substance
 IDs or erasing planning allowances.
+
+
+## Approved LFP battery module manufacturing recipe — 4 November 2026
+
+The user approved a deliberately **simple seven-refined-material gameplay BOM**
+for one `part-lithium-based-battery-module`, with a **finished mass of 18 kg**.
+This supersedes the battery's earlier provisional unqualified/candidate inputs
+and the two free-text unresolved allowances; it does not require modelling
+every internal battery subassembly.
+
+| Direct refined input | Canonical ID | kg per module |
+| --- | --- | ---: |
+| Lithium Iron Phosphate (LFP) Cathode Material | `named-substance-lfp-cathode-material` | 5 |
+| Refined Graphite | `substance-refined-graphite` | 2.5 |
+| LFP Battery Electrolyte | `named-substance-lfp-battery-electrolyte` | 2 |
+| Refined Copper | `named-substance-refined-copper` | 2 |
+| Aluminium | `named-substance-aluminium` | 0.5 |
+| Polymer Feedstock | `named-substance-polymer-feedstock` | 3 |
+| Stainless Steel | `named-substance-stainless-steel` | 3 |
+| **Total / approved finished mass** | | **18** |
+
+The two newly introduced identities are **stockable processed/refined materials**,
+not Parts. The LFP cathode has a typed upstream link to the already existing
+Lithium Carbonate; the 1.5 kg precursor formerly recorded on the battery itself
+was removed to avoid double counting. Its iron/phosphate precursor recipe and
+upstream quantities are **not** being finalised here. The electrolyte is
+LiPF6 dissolved in carbonate solvents. Both new materials need future
+generic-class taxonomy review: the existing generic Electrolyte Solution
+belongs to the canonical **aqueous / Water** archetype and must not be
+incorrectly assigned to this **nonaqueous** processed product.
+
+Refined Graphite must meet battery-grade quality, and Refined Copper/Aluminium
+foil processing, microporous PE/PP separator formation from Polymer Feedstock,
+and the integrated battery management electronics are handled inside the battery
+factory. Stainless Steel forms the housing/supports. **No separate BMS,
+separator Part, copper foil or aluminium foil product identity** is required.
+Those engineering functions do not introduce additional BOM rows.
+
+The **18 kg total and seven input quantities are approved for the gameplay
+manufacturing recipe**, not a certified physical factory design. The historical
+manufacturer cost and quote in the Part's `planningReference` remain
+discovery-era price references: **not recalculated or newly approved against
+the seven-material LFP recipe**. The rest of the Parts catalogue remains at
+its earlier review state.
+
+This decision reduces the currently unresolved Part material descriptions
+from five to **three** (two concrete inputs and the nuclear fuel/cladding
+description). Other provisional input qualifications elsewhere remain pending.
