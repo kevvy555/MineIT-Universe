@@ -205,6 +205,7 @@ export function createIndustrialTables() {
   return Object.fromEntries(Object.entries(configurations).map(([kind, config]) =>
     [kind, createSubstanceTable({
       ...config,
+      tableKind: kind,
       groups: config.groups.map(group => ({
         ...group,
         fields: [...group.fields,
