@@ -24,14 +24,23 @@ const configurations = {
   parts: {
     title: "Parts",
     description: "19 finished Part products. Three superseded generic Parts were retired; unresolved Machine and research relationships remain pending review. Quantities, masses and CC prices are discovery planning references, not live game recipes or prices.",
-    defaultColumns: ["name", "partRole", "category", "subCategory", "materialInputs",
+    defaultColumns: ["name", "category", "subCategory", "finishedUnitCount", "materialInputs",
       "materialApprovalStatus", "planningReference.finishedMassKg",
       "planningReference.manufacturerCostCC", "planningReference.baseManufacturerQuoteCC"],
+    imagePreviewField: "partImage",
+    columnLabels: {
+      finishedUnitCount: "FinishedUnitCount",
+      finishedUnitDescription: "Finished Unit Description",
+      "planningReference.finishedMassKg": "Weight (kg)",
+      "planningReference.manufacturerCostCC": "Manufacturer Cost (CC)",
+      "planningReference.baseManufacturerQuoteCC": "Manufacturer Quote Cost (CC)",
+      partImage: "Part Image"
+    },
     hiddenFields: ["entityType", "catalogueStatus"],
     linkedFields: ["substanceIds", "materialInputs", "machineIds"],
     groups: [
       group("Identity & Classification",
-        "name id partRole category subCategory subCategories sources finishedUnit.count finishedUnit.unit finishedUnit.description"),
+        "name id partRole category subCategory subCategories sources finishedUnitCount finishedUnitDescription"),
       group("Materials & Construction",
         "substanceIds materialInputs unresolvedMaterialInputs"),
       group("Machines & Usage", "machineIds"),
@@ -39,7 +48,7 @@ const configurations = {
         "planningReference.finishedMassKg planningReference.manufacturerCostCC planningReference.baseManufacturerQuoteCC planningReference.status planningReference.basis"),
       group("Discovery & Approval", "materialApprovalStatus"),
       group("Canon & Provenance", "canonStatus provenance.desktopPath planningReference.sourceSection"),
-      group("Artwork & Visuals", "image.key image.generated image.status image.promptDescription image.notes"),
+      group("Artwork & Visuals", "partImage image.key image.generated image.status image.promptDescription image.notes"),
       group("Description", "description")
     ]
   },
@@ -159,6 +168,9 @@ export function industrialReviewRows(kind, catalogue, reference) {
   const canonicalRows = canonicalRecords.map(record => {
     const fields = flatten(record);
     fields.catalogueStatus = "Canonical";
+    if (kind === "parts")
+      fields.partImage = record.image?.generated && ["generated", "approved"].includes(record.image.status)
+        ? "Available" : "Not generated";
     // Parts have now reconciled these discovery inputs into canonical, typed
     // fields. Keep the frozen Android snapshot for history, not duplicate columns.
     if (kind !== "parts" && source.has(record.id))
