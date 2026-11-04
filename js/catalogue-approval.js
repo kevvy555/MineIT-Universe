@@ -40,6 +40,15 @@ function fieldState(kind, record, key, value) {
         throw new Error(record.id + ": cannot approve absent Machine field " + key);
       if (key === "pendingPartCompatibility" && value.length)
         throw new Error(record.id + ": unresolved Part compatibility cannot be approved");
+      // Imported scenario numbers are not signed-off values. A later reviewer
+      // can approve them only alongside documented mass/economic evidence,
+      // not by changing the status column while keeping provisional inputs.
+      if (["manufacturing.manufacturerCostCC", "manufacturing.manufacturerQuoteCC"].includes(key) &&
+          !record.manufacturing?.approvedPriceEvidence?.trim())
+        throw new Error(record.id + ": provisional Machine CC requires approved price evidence");
+      if (key === "manufacturing.finishedMassKg" &&
+          !record.manufacturing?.approvedMassEvidence?.trim())
+        throw new Error(record.id + ": estimated Machine mass requires approved mass evidence");
       if (key === "manufacturing.directMaterialInputs" &&
           value.some(input => input.qualification === "planning-only-unqualified"))
         throw new Error(record.id + ": unqualified Machine material cannot be approved");
