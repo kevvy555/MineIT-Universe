@@ -25,7 +25,100 @@
       "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A rugged six-wheeled all-terrain exploration rover equipped with geological sampling equipment, sensors and a pressurised cabin for frontier survey work. Specific visual requirements: a rugged six-wheeled frontier exploration rover with a pressurised cabin, sampling arm and sensor mast, charcoal structural frame. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
       "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
-    }
+    },
+    "manufacturing": {
+      "authority": "unapproved-android-discovery-proposal",
+      "finishedPartInputs": [
+        {
+          "partId": "part-mechanical-parts",
+          "quantity": 4
+        },
+        {
+          "partId": "part-power-electronics",
+          "quantity": 2
+        },
+        {
+          "partId": "part-control-and-sensor-parts",
+          "quantity": 3
+        },
+        {
+          "partId": "part-structural-components",
+          "quantity": 4
+        },
+        {
+          "partId": "part-computing-parts",
+          "quantity": 1
+        },
+        {
+          "partId": "part-lithium-based-battery-module",
+          "quantity": 12
+        }
+      ],
+      "directMaterialInputs": [
+        {
+          "materialId": "named-substance-steel",
+          "quantityKg": 420
+        },
+        {
+          "materialId": "named-substance-aluminium-alloy",
+          "quantityKg": 180
+        },
+        {
+          "materialId": "substance-glass",
+          "quantityKg": 25
+        },
+        {
+          "materialId": "substance-polymer",
+          "quantityKg": 20,
+          "qualification": "grade-tbd"
+        },
+        {
+          "materialId": "named-substance-refined-copper",
+          "quantityKg": 50
+        }
+      ],
+      "nestedMachineInputs": [
+        {
+          "machineId": "machine-rare-earth-permanent-magnet-motor",
+          "quantity": 6
+        }
+      ],
+      "assemblyHours": 230,
+      "factoryHours": 160,
+      "testHours": 75,
+      "goodUnitYield": 0.91,
+      "finishedMassKg": null,
+      "manufacturerCostCC": null,
+      "manufacturerQuoteCC": null,
+      "reviewNotes": "Rare-earth traction motor unpriced; lithium battery chemistry/range uncertain"
+    },
+    "operatingProfile": {
+      "ratedCapacity": null,
+      "operatingPowerUnits": null,
+      "footprintM2": null
+    },
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "In Review",
+      "manufacturing.directMaterialInputs": "In Review",
+      "manufacturing.nestedMachineInputs": "In Review",
+      "manufacturing.assemblyHours": "In Review",
+      "manufacturing.factoryHours": "In Review",
+      "manufacturing.testHours": "In Review",
+      "manufacturing.goodUnitYield": "In Review",
+      "manufacturing.finishedMassKg": "In Review",
+      "manufacturing.manufacturerCostCC": "Blocked",
+      "manufacturing.manufacturerQuoteCC": "Blocked",
+      "operatingProfile.ratedCapacity": "In Review",
+      "operatingProfile.operatingPowerUnits": "In Review",
+      "operatingProfile.footprintM2": "In Review",
+      "pendingPartCompatibility": "In Review",
+      "inputSummary": "In Review",
+      "outputSummary": "In Review"
+    },
+    "fieldApplicability": {
+      "pendingPartCompatibility": false
+    },
+    "approval": "Blocked"
   },
   {
     "id": "machine-ship-scanner",
@@ -52,7 +145,86 @@
       "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: An integrated long-range ship sensor suite combining radar, seismic and thermal techniques to map planetary surfaces and shallow subsurface structures. Specific visual requirements: a shipboard long-range scanner suite: radar and seismic sensor clusters on a structural metal pallette, no readable displays. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
       "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
-    }
+    },
+    "manufacturing": {
+      "authority": "unapproved-android-discovery-proposal",
+      "finishedPartInputs": [
+        {
+          "partId": "part-power-electronics",
+          "quantity": 4
+        },
+        {
+          "partId": "part-control-and-sensor-parts",
+          "quantity": 5
+        },
+        {
+          "partId": "part-structural-components",
+          "quantity": 2
+        },
+        {
+          "partId": "part-computing-parts",
+          "quantity": 4
+        },
+        {
+          "partId": "part-optical-parts",
+          "quantity": 2
+        }
+      ],
+      "directMaterialInputs": [
+        {
+          "materialId": "named-substance-steel",
+          "quantityKg": 200
+        },
+        {
+          "materialId": "named-substance-aluminium-alloy",
+          "quantityKg": 80
+        },
+        {
+          "materialId": "substance-glass",
+          "quantityKg": 20
+        },
+        {
+          "materialId": "named-substance-refined-copper",
+          "quantityKg": 10
+        }
+      ],
+      "nestedMachineInputs": [],
+      "assemblyHours": 170,
+      "factoryHours": 125,
+      "testHours": 100,
+      "goodUnitYield": 0.91,
+      "finishedMassKg": 522,
+      "manufacturerCostCC": 109058.24,
+      "manufacturerQuoteCC": 136350,
+      "reviewNotes": "Sensor resolution range and ship interface grading unreviewed"
+    },
+    "operatingProfile": {
+      "ratedCapacity": null,
+      "operatingPowerUnits": null,
+      "footprintM2": null
+    },
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "In Review",
+      "manufacturing.directMaterialInputs": "In Review",
+      "manufacturing.nestedMachineInputs": "In Review",
+      "manufacturing.assemblyHours": "In Review",
+      "manufacturing.factoryHours": "In Review",
+      "manufacturing.testHours": "In Review",
+      "manufacturing.goodUnitYield": "In Review",
+      "manufacturing.finishedMassKg": "In Review",
+      "manufacturing.manufacturerCostCC": "In Review",
+      "manufacturing.manufacturerQuoteCC": "In Review",
+      "operatingProfile.ratedCapacity": "In Review",
+      "operatingProfile.operatingPowerUnits": "In Review",
+      "operatingProfile.footprintM2": "In Review",
+      "pendingPartCompatibility": "In Review",
+      "inputSummary": "In Review",
+      "outputSummary": "In Review"
+    },
+    "fieldApplicability": {
+      "pendingPartCompatibility": false
+    },
+    "approval": "In Review"
   },
   {
     "id": "machine-substance-analyser",
@@ -80,7 +252,86 @@
       "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A close-range spectrographic and geological inspection system used to identify composition, density and structural properties of sampled deposits. Specific visual requirements: a close-range substance analyser: spectrographic head, ceramic sample stage and sensor housings on a compact structural frame. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
       "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
-    }
+    },
+    "manufacturing": {
+      "authority": "unapproved-android-discovery-proposal",
+      "finishedPartInputs": [
+        {
+          "partId": "part-power-electronics",
+          "quantity": 2
+        },
+        {
+          "partId": "part-control-and-sensor-parts",
+          "quantity": 4
+        },
+        {
+          "partId": "part-extraction-parts",
+          "quantity": 1
+        },
+        {
+          "partId": "part-structural-components",
+          "quantity": 1
+        },
+        {
+          "partId": "part-optical-parts",
+          "quantity": 2
+        },
+        {
+          "partId": "part-computing-parts",
+          "quantity": 2
+        }
+      ],
+      "directMaterialInputs": [
+        {
+          "materialId": "named-substance-steel",
+          "quantityKg": 60
+        },
+        {
+          "materialId": "named-substance-refined-copper",
+          "quantityKg": 10
+        },
+        {
+          "materialId": "substance-glass",
+          "quantityKg": 30
+        }
+      ],
+      "nestedMachineInputs": [],
+      "assemblyHours": 130,
+      "factoryHours": 90,
+      "testHours": 80,
+      "goodUnitYield": 0.91,
+      "finishedMassKg": 234.1,
+      "manufacturerCostCC": 74404.07,
+      "manufacturerQuoteCC": 93050,
+      "reviewNotes": "Precision analyser optics sensor grade and calibration unreviewed"
+    },
+    "operatingProfile": {
+      "ratedCapacity": null,
+      "operatingPowerUnits": null,
+      "footprintM2": null
+    },
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "In Review",
+      "manufacturing.directMaterialInputs": "In Review",
+      "manufacturing.nestedMachineInputs": "In Review",
+      "manufacturing.assemblyHours": "In Review",
+      "manufacturing.factoryHours": "In Review",
+      "manufacturing.testHours": "In Review",
+      "manufacturing.goodUnitYield": "In Review",
+      "manufacturing.finishedMassKg": "In Review",
+      "manufacturing.manufacturerCostCC": "In Review",
+      "manufacturing.manufacturerQuoteCC": "In Review",
+      "operatingProfile.ratedCapacity": "In Review",
+      "operatingProfile.operatingPowerUnits": "In Review",
+      "operatingProfile.footprintM2": "In Review",
+      "pendingPartCompatibility": "In Review",
+      "inputSummary": "In Review",
+      "outputSummary": "In Review"
+    },
+    "fieldApplicability": {
+      "pendingPartCompatibility": false
+    },
+    "approval": "In Review"
   },
   {
     "id": "machine-ship-reactor",
@@ -131,7 +382,90 @@
         "reviewStatus": "unapproved-consumer-mapping",
         "notes": "Old generic fabrication service kit had no established reactor-specific use; no replacement Part assumed."
       }
-    ]
+    ],
+    "manufacturing": {
+      "authority": "unapproved-android-discovery-proposal",
+      "finishedPartInputs": [
+        {
+          "partId": "part-power-electronics",
+          "quantity": 8
+        },
+        {
+          "partId": "part-control-and-sensor-parts",
+          "quantity": 6
+        },
+        {
+          "partId": "part-thermal-parts",
+          "quantity": 4
+        },
+        {
+          "partId": "part-structural-components",
+          "quantity": 8
+        },
+        {
+          "partId": "part-mechanical-parts",
+          "quantity": 4
+        },
+        {
+          "partId": "part-fluid-handling-parts",
+          "quantity": 4
+        },
+        {
+          "partId": "part-computing-parts",
+          "quantity": 3
+        }
+      ],
+      "directMaterialInputs": [
+        {
+          "materialId": "named-substance-steel",
+          "quantityKg": 1500
+        },
+        {
+          "materialId": "named-substance-high-temperature-nickel-alloy",
+          "quantityKg": 500
+        },
+        {
+          "materialId": "named-substance-refined-copper",
+          "quantityKg": 100
+        }
+      ],
+      "nestedMachineInputs": [],
+      "assemblyHours": 900,
+      "factoryHours": 850,
+      "testHours": 500,
+      "goodUnitYield": 0.85,
+      "finishedMassKg": null,
+      "manufacturerCostCC": null,
+      "manufacturerQuoteCC": null,
+      "reviewNotes": "Fusion core shielding containment fuel/ratings unspecified; no nuclear fuel assembly"
+    },
+    "operatingProfile": {
+      "ratedCapacity": null,
+      "operatingPowerUnits": null,
+      "footprintM2": null
+    },
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "In Review",
+      "manufacturing.directMaterialInputs": "In Review",
+      "manufacturing.nestedMachineInputs": "In Review",
+      "manufacturing.assemblyHours": "In Review",
+      "manufacturing.factoryHours": "In Review",
+      "manufacturing.testHours": "In Review",
+      "manufacturing.goodUnitYield": "In Review",
+      "manufacturing.finishedMassKg": "In Review",
+      "manufacturing.manufacturerCostCC": "Blocked",
+      "manufacturing.manufacturerQuoteCC": "Blocked",
+      "operatingProfile.ratedCapacity": "In Review",
+      "operatingProfile.operatingPowerUnits": "In Review",
+      "operatingProfile.footprintM2": "In Review",
+      "pendingPartCompatibility": "In Review",
+      "inputSummary": "In Review",
+      "outputSummary": "In Review"
+    },
+    "fieldApplicability": {
+      "pendingPartCompatibility": true
+    },
+    "approval": "Blocked"
   },
   {
     "id": "machine-ship-life-support",
@@ -160,7 +494,87 @@
       "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A shipboard environmental management system controlling oxygen circulation, water recycling, humidity, temperature and atmospheric pressure. Specific visual requirements: a shipboard life-support plant: fluid loops, fans and sensor racks for air, water and pressure, no readable gauges. Output context: Breathable air, climate regulation and water recycling. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
       "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
-    }
+    },
+    "manufacturing": {
+      "authority": "unapproved-android-discovery-proposal",
+      "finishedPartInputs": [
+        {
+          "partId": "part-fluid-handling-parts",
+          "quantity": 8
+        },
+        {
+          "partId": "part-mechanical-parts",
+          "quantity": 5
+        },
+        {
+          "partId": "part-power-electronics",
+          "quantity": 4
+        },
+        {
+          "partId": "part-control-and-sensor-parts",
+          "quantity": 4
+        },
+        {
+          "partId": "part-thermal-parts",
+          "quantity": 2
+        },
+        {
+          "partId": "part-computing-parts",
+          "quantity": 2
+        }
+      ],
+      "directMaterialInputs": [
+        {
+          "materialId": "named-substance-steel",
+          "quantityKg": 400
+        },
+        {
+          "materialId": "named-substance-stainless-steel",
+          "quantityKg": 150
+        },
+        {
+          "materialId": "substance-polymer",
+          "quantityKg": 60,
+          "qualification": "grade-tbd"
+        }
+      ],
+      "nestedMachineInputs": [],
+      "assemblyHours": 300,
+      "factoryHours": 260,
+      "testHours": 145,
+      "goodUnitYield": 0.9,
+      "finishedMassKg": 980.9,
+      "manufacturerCostCC": 157139.87,
+      "manufacturerQuoteCC": 196450,
+      "reviewNotes": "Oxygen recycle media and emergency redundancy ratings need direct input decision"
+    },
+    "operatingProfile": {
+      "ratedCapacity": null,
+      "operatingPowerUnits": null,
+      "footprintM2": null
+    },
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "In Review",
+      "manufacturing.directMaterialInputs": "In Review",
+      "manufacturing.nestedMachineInputs": "In Review",
+      "manufacturing.assemblyHours": "In Review",
+      "manufacturing.factoryHours": "In Review",
+      "manufacturing.testHours": "In Review",
+      "manufacturing.goodUnitYield": "In Review",
+      "manufacturing.finishedMassKg": "In Review",
+      "manufacturing.manufacturerCostCC": "In Review",
+      "manufacturing.manufacturerQuoteCC": "In Review",
+      "operatingProfile.ratedCapacity": "In Review",
+      "operatingProfile.operatingPowerUnits": "In Review",
+      "operatingProfile.footprintM2": "In Review",
+      "pendingPartCompatibility": "In Review",
+      "inputSummary": "In Review",
+      "outputSummary": "In Review"
+    },
+    "fieldApplicability": {
+      "pendingPartCompatibility": false
+    },
+    "approval": "In Review"
   },
   {
     "id": "machine-ship-computer",
@@ -188,7 +602,74 @@
       "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A spacecraft navigation, systems-control and data-processing mainframe capable of supporting engineering, scientific and operational workloads. Specific visual requirements: a spacecraft mainframe: dark glass slabs, computing parts and power electronics in a structural rack, screens without readable text. Output context: Navigation, operational data and system diagnostics. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
       "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
-    }
+    },
+    "manufacturing": {
+      "authority": "unapproved-android-discovery-proposal",
+      "finishedPartInputs": [
+        {
+          "partId": "part-computing-parts",
+          "quantity": 12
+        },
+        {
+          "partId": "part-power-electronics",
+          "quantity": 4
+        },
+        {
+          "partId": "part-control-and-sensor-parts",
+          "quantity": 6
+        },
+        {
+          "partId": "part-structural-components",
+          "quantity": 2
+        }
+      ],
+      "directMaterialInputs": [
+        {
+          "materialId": "named-substance-steel",
+          "quantityKg": 100
+        },
+        {
+          "materialId": "named-substance-refined-copper",
+          "quantityKg": 50
+        }
+      ],
+      "nestedMachineInputs": [],
+      "assemblyHours": 250,
+      "factoryHours": 175,
+      "testHours": 150,
+      "goodUnitYield": 0.91,
+      "finishedMassKg": 384.8,
+      "manufacturerCostCC": 169457.78,
+      "manufacturerQuoteCC": 211850,
+      "reviewNotes": "Computer grade and nav/software entitlements excluded"
+    },
+    "operatingProfile": {
+      "ratedCapacity": null,
+      "operatingPowerUnits": null,
+      "footprintM2": null
+    },
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "In Review",
+      "manufacturing.directMaterialInputs": "In Review",
+      "manufacturing.nestedMachineInputs": "In Review",
+      "manufacturing.assemblyHours": "In Review",
+      "manufacturing.factoryHours": "In Review",
+      "manufacturing.testHours": "In Review",
+      "manufacturing.goodUnitYield": "In Review",
+      "manufacturing.finishedMassKg": "In Review",
+      "manufacturing.manufacturerCostCC": "In Review",
+      "manufacturing.manufacturerQuoteCC": "In Review",
+      "operatingProfile.ratedCapacity": "In Review",
+      "operatingProfile.operatingPowerUnits": "In Review",
+      "operatingProfile.footprintM2": "In Review",
+      "pendingPartCompatibility": "In Review",
+      "inputSummary": "In Review",
+      "outputSummary": "In Review"
+    },
+    "fieldApplicability": {
+      "pendingPartCompatibility": false
+    },
+    "approval": "In Review"
   },
   {
     "id": "machine-ship-refinery-unit",
@@ -229,7 +710,99 @@
         "reviewStatus": "unapproved-consumer-mapping",
         "notes": "Thermal processing/refining design may require heat management; specific Part ratings and quantities unapproved."
       }
-    ]
+    ],
+    "manufacturing": {
+      "authority": "unapproved-android-discovery-proposal",
+      "finishedPartInputs": [
+        {
+          "partId": "part-processing-parts",
+          "quantity": 10
+        },
+        {
+          "partId": "part-mechanical-parts",
+          "quantity": 8
+        },
+        {
+          "partId": "part-hydraulic-parts",
+          "quantity": 4
+        },
+        {
+          "partId": "part-power-electronics",
+          "quantity": 4
+        },
+        {
+          "partId": "part-thermal-parts",
+          "quantity": 5
+        },
+        {
+          "partId": "part-structural-components",
+          "quantity": 8
+        },
+        {
+          "partId": "part-fluid-handling-parts",
+          "quantity": 3
+        },
+        {
+          "partId": "part-forming-cutting-tooling",
+          "quantity": 2
+        }
+      ],
+      "directMaterialInputs": [
+        {
+          "materialId": "named-substance-steel",
+          "quantityKg": 3200
+        },
+        {
+          "materialId": "substance-refined-ceramic",
+          "quantityKg": 300
+        },
+        {
+          "materialId": "named-substance-high-temperature-nickel-alloy",
+          "quantityKg": 200
+        }
+      ],
+      "nestedMachineInputs": [
+        {
+          "machineId": "machine-conventional-electric-motor",
+          "quantity": 4
+        }
+      ],
+      "assemblyHours": 650,
+      "factoryHours": 600,
+      "testHours": 260,
+      "goodUnitYield": 0.88,
+      "finishedMassKg": 5214.8,
+      "manufacturerCostCC": 377235.83,
+      "manufacturerQuoteCC": 471550,
+      "reviewNotes": "Bulk refractory/wear content and ship mass & machinery capacity to be rated"
+    },
+    "operatingProfile": {
+      "ratedCapacity": null,
+      "operatingPowerUnits": null,
+      "footprintM2": null
+    },
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "In Review",
+      "manufacturing.directMaterialInputs": "In Review",
+      "manufacturing.nestedMachineInputs": "In Review",
+      "manufacturing.assemblyHours": "In Review",
+      "manufacturing.factoryHours": "In Review",
+      "manufacturing.testHours": "In Review",
+      "manufacturing.goodUnitYield": "In Review",
+      "manufacturing.finishedMassKg": "In Review",
+      "manufacturing.manufacturerCostCC": "In Review",
+      "manufacturing.manufacturerQuoteCC": "In Review",
+      "operatingProfile.ratedCapacity": "In Review",
+      "operatingProfile.operatingPowerUnits": "In Review",
+      "operatingProfile.footprintM2": "In Review",
+      "pendingPartCompatibility": "In Review",
+      "inputSummary": "In Review",
+      "outputSummary": "In Review"
+    },
+    "fieldApplicability": {
+      "pendingPartCompatibility": true
+    },
+    "approval": "In Review"
   },
   {
     "id": "machine-drill-machine",
@@ -260,7 +833,87 @@
       "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A heavy rotary boring system using hardened cutting assemblies to break rock and access subsurface deposit seams. Specific visual requirements: a heavy rotary drill machine: ceramic-tipped cutting head, hydraulic rams, mechanical gearbox and charcoal structural mast. Input context: Power. Output context: Extracted raw material. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
       "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
-    }
+    },
+    "manufacturing": {
+      "authority": "unapproved-android-discovery-proposal",
+      "finishedPartInputs": [
+        {
+          "partId": "part-extraction-parts",
+          "quantity": 12
+        },
+        {
+          "partId": "part-mechanical-parts",
+          "quantity": 6
+        },
+        {
+          "partId": "part-hydraulic-parts",
+          "quantity": 8
+        },
+        {
+          "partId": "part-power-electronics",
+          "quantity": 3
+        },
+        {
+          "partId": "part-structural-components",
+          "quantity": 8
+        },
+        {
+          "partId": "part-control-and-sensor-parts",
+          "quantity": 2
+        }
+      ],
+      "directMaterialInputs": [
+        {
+          "materialId": "named-substance-steel",
+          "quantityKg": 2400
+        },
+        {
+          "materialId": "substance-refined-ceramic",
+          "quantityKg": 150
+        }
+      ],
+      "nestedMachineInputs": [
+        {
+          "machineId": "machine-conventional-electric-motor",
+          "quantity": 4
+        }
+      ],
+      "assemblyHours": 450,
+      "factoryHours": 390,
+      "testHours": 175,
+      "goodUnitYield": 0.9,
+      "finishedMassKg": 3787.5,
+      "manufacturerCostCC": 263722.38,
+      "manufacturerQuoteCC": 329700,
+      "reviewNotes": "Head wear/cut rate, torque and drill capacity TBD"
+    },
+    "operatingProfile": {
+      "ratedCapacity": null,
+      "operatingPowerUnits": null,
+      "footprintM2": null
+    },
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "In Review",
+      "manufacturing.directMaterialInputs": "In Review",
+      "manufacturing.nestedMachineInputs": "In Review",
+      "manufacturing.assemblyHours": "In Review",
+      "manufacturing.factoryHours": "In Review",
+      "manufacturing.testHours": "In Review",
+      "manufacturing.goodUnitYield": "In Review",
+      "manufacturing.finishedMassKg": "In Review",
+      "manufacturing.manufacturerCostCC": "In Review",
+      "manufacturing.manufacturerQuoteCC": "In Review",
+      "operatingProfile.ratedCapacity": "In Review",
+      "operatingProfile.operatingPowerUnits": "In Review",
+      "operatingProfile.footprintM2": "In Review",
+      "pendingPartCompatibility": "In Review",
+      "inputSummary": "In Review",
+      "outputSummary": "In Review"
+    },
+    "fieldApplicability": {
+      "pendingPartCompatibility": false
+    },
+    "approval": "In Review"
   },
   {
     "id": "machine-conveyor-machine",
@@ -290,7 +943,84 @@
       "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: An automated heavy-duty material transport system for moving loose minerals and industrial feedstock between extraction, processing and storage areas. Specific visual requirements: a heavy-duty conveyor: charcoal structural truss, mechanical rollers, bulk-handling hopper and chute, power-electronics cabinet. Input context: Power. Output context: Bulk material movement. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
       "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
-    }
+    },
+    "manufacturing": {
+      "authority": "unapproved-android-discovery-proposal",
+      "finishedPartInputs": [
+        {
+          "partId": "part-mechanical-parts",
+          "quantity": 4
+        },
+        {
+          "partId": "part-power-electronics",
+          "quantity": 2
+        },
+        {
+          "partId": "part-structural-components",
+          "quantity": 8
+        },
+        {
+          "partId": "part-bulk-handling-parts",
+          "quantity": 8
+        },
+        {
+          "partId": "part-control-and-sensor-parts",
+          "quantity": 1
+        }
+      ],
+      "directMaterialInputs": [
+        {
+          "materialId": "named-substance-steel",
+          "quantityKg": 1800
+        },
+        {
+          "materialId": "substance-polymer",
+          "quantityKg": 60,
+          "qualification": "grade-tbd"
+        }
+      ],
+      "nestedMachineInputs": [
+        {
+          "machineId": "machine-conventional-electric-motor",
+          "quantity": 4
+        }
+      ],
+      "assemblyHours": 310,
+      "factoryHours": 265,
+      "testHours": 105,
+      "goodUnitYield": 0.93,
+      "finishedMassKg": 3054.2,
+      "manufacturerCostCC": 173710.28,
+      "manufacturerQuoteCC": 217150,
+      "reviewNotes": "Belt material Polymer stand-in and rated length/capacity pending"
+    },
+    "operatingProfile": {
+      "ratedCapacity": null,
+      "operatingPowerUnits": null,
+      "footprintM2": null
+    },
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "In Review",
+      "manufacturing.directMaterialInputs": "In Review",
+      "manufacturing.nestedMachineInputs": "In Review",
+      "manufacturing.assemblyHours": "In Review",
+      "manufacturing.factoryHours": "In Review",
+      "manufacturing.testHours": "In Review",
+      "manufacturing.goodUnitYield": "In Review",
+      "manufacturing.finishedMassKg": "In Review",
+      "manufacturing.manufacturerCostCC": "In Review",
+      "manufacturing.manufacturerQuoteCC": "In Review",
+      "operatingProfile.ratedCapacity": "In Review",
+      "operatingProfile.operatingPowerUnits": "In Review",
+      "operatingProfile.footprintM2": "In Review",
+      "pendingPartCompatibility": "In Review",
+      "inputSummary": "In Review",
+      "outputSummary": "In Review"
+    },
+    "fieldApplicability": {
+      "pendingPartCompatibility": false
+    },
+    "approval": "In Review"
   },
   {
     "id": "machine-mine-ventilation",
@@ -319,7 +1049,80 @@
       "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A high-capacity fan, filtration and duct system that circulates breathable air and controls dust, contaminants and heat in underground workings. Specific visual requirements: mine ventilation plant: large fan, ducting and filtration housings in structural metal with sensor packs. Input context: Power. Output context: Ventilation and filtered air circulation. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
       "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
-    }
+    },
+    "manufacturing": {
+      "authority": "unapproved-android-discovery-proposal",
+      "finishedPartInputs": [
+        {
+          "partId": "part-mechanical-parts",
+          "quantity": 4
+        },
+        {
+          "partId": "part-fluid-handling-parts",
+          "quantity": 4
+        },
+        {
+          "partId": "part-power-electronics",
+          "quantity": 2
+        },
+        {
+          "partId": "part-structural-components",
+          "quantity": 3
+        }
+      ],
+      "directMaterialInputs": [
+        {
+          "materialId": "named-substance-steel",
+          "quantityKg": 500
+        },
+        {
+          "materialId": "substance-polymer",
+          "quantityKg": 100,
+          "qualification": "grade-tbd"
+        }
+      ],
+      "nestedMachineInputs": [
+        {
+          "machineId": "machine-conventional-electric-motor",
+          "quantity": 3
+        }
+      ],
+      "assemblyHours": 255,
+      "factoryHours": 200,
+      "testHours": 90,
+      "goodUnitYield": 0.93,
+      "finishedMassKg": 1171.5,
+      "manufacturerCostCC": 118103.06,
+      "manufacturerQuoteCC": 147650,
+      "reviewNotes": "Fan duct length/capacity and filter consumable needs TBD"
+    },
+    "operatingProfile": {
+      "ratedCapacity": null,
+      "operatingPowerUnits": null,
+      "footprintM2": null
+    },
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "In Review",
+      "manufacturing.directMaterialInputs": "In Review",
+      "manufacturing.nestedMachineInputs": "In Review",
+      "manufacturing.assemblyHours": "In Review",
+      "manufacturing.factoryHours": "In Review",
+      "manufacturing.testHours": "In Review",
+      "manufacturing.goodUnitYield": "In Review",
+      "manufacturing.finishedMassKg": "In Review",
+      "manufacturing.manufacturerCostCC": "In Review",
+      "manufacturing.manufacturerQuoteCC": "In Review",
+      "operatingProfile.ratedCapacity": "In Review",
+      "operatingProfile.operatingPowerUnits": "In Review",
+      "operatingProfile.footprintM2": "In Review",
+      "pendingPartCompatibility": "In Review",
+      "inputSummary": "In Review",
+      "outputSummary": "In Review"
+    },
+    "fieldApplicability": {
+      "pendingPartCompatibility": false
+    },
+    "approval": "In Review"
   },
   {
     "id": "machine-crusher-machine",
@@ -349,7 +1152,83 @@
       "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and rails, restrained electric-blue emissive indicators, small warm amber work lights, crisp bevels, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible mineral crusher with comfortable transparent margin: a compact rock-feed hopper with pale ceramic wear liners, enclosed crushing chamber, visible flywheel or geared mechanical drive, hydraulic supports and a short discharge chute with a small amount of crushed aggregate, making the hopper-to-crusher-to-discharge flow immediately clear. Keep the machine visually dominant and lightly worn but well maintained. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
       "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric building palette and rendering language while keeping the crusher a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
-    }
+    },
+    "manufacturing": {
+      "authority": "unapproved-android-discovery-proposal",
+      "finishedPartInputs": [
+        {
+          "partId": "part-mechanical-parts",
+          "quantity": 8
+        },
+        {
+          "partId": "part-processing-parts",
+          "quantity": 6
+        },
+        {
+          "partId": "part-structural-components",
+          "quantity": 10
+        },
+        {
+          "partId": "part-power-electronics",
+          "quantity": 3
+        },
+        {
+          "partId": "part-forming-cutting-tooling",
+          "quantity": 2
+        }
+      ],
+      "directMaterialInputs": [
+        {
+          "materialId": "named-substance-steel",
+          "quantityKg": 3500
+        },
+        {
+          "materialId": "substance-refined-ceramic",
+          "quantityKg": 300
+        }
+      ],
+      "nestedMachineInputs": [
+        {
+          "machineId": "machine-conventional-electric-motor",
+          "quantity": 6
+        }
+      ],
+      "assemblyHours": 600,
+      "factoryHours": 530,
+      "testHours": 210,
+      "goodUnitYield": 0.89,
+      "finishedMassKg": 5080.3,
+      "manufacturerCostCC": 311844.65,
+      "manufacturerQuoteCC": 389850,
+      "reviewNotes": "Crusher capacity hard-wear liners and drive rating TBD"
+    },
+    "operatingProfile": {
+      "ratedCapacity": null,
+      "operatingPowerUnits": null,
+      "footprintM2": null
+    },
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "In Review",
+      "manufacturing.directMaterialInputs": "In Review",
+      "manufacturing.nestedMachineInputs": "In Review",
+      "manufacturing.assemblyHours": "In Review",
+      "manufacturing.factoryHours": "In Review",
+      "manufacturing.testHours": "In Review",
+      "manufacturing.goodUnitYield": "In Review",
+      "manufacturing.finishedMassKg": "In Review",
+      "manufacturing.manufacturerCostCC": "In Review",
+      "manufacturing.manufacturerQuoteCC": "In Review",
+      "operatingProfile.ratedCapacity": "In Review",
+      "operatingProfile.operatingPowerUnits": "In Review",
+      "operatingProfile.footprintM2": "In Review",
+      "pendingPartCompatibility": "In Review",
+      "inputSummary": "In Review",
+      "outputSummary": "In Review"
+    },
+    "fieldApplicability": {
+      "pendingPartCompatibility": false
+    },
+    "approval": "In Review"
   },
   {
     "id": "machine-smelter-machine",
@@ -389,7 +1268,86 @@
         "reviewStatus": "unapproved-consumer-mapping",
         "notes": "High-temperature control suggests thermal protection; do not assume optical components."
       }
-    ]
+    ],
+    "manufacturing": {
+      "authority": "unapproved-android-discovery-proposal",
+      "finishedPartInputs": [
+        {
+          "partId": "part-processing-parts",
+          "quantity": 12
+        },
+        {
+          "partId": "part-thermal-parts",
+          "quantity": 10
+        },
+        {
+          "partId": "part-structural-components",
+          "quantity": 10
+        },
+        {
+          "partId": "part-power-electronics",
+          "quantity": 4
+        },
+        {
+          "partId": "part-fluid-handling-parts",
+          "quantity": 6
+        },
+        {
+          "partId": "part-control-and-sensor-parts",
+          "quantity": 3
+        }
+      ],
+      "directMaterialInputs": [
+        {
+          "materialId": "named-substance-steel",
+          "quantityKg": 2000
+        },
+        {
+          "materialId": "substance-refined-ceramic",
+          "quantityKg": 1200
+        },
+        {
+          "materialId": "named-substance-stainless-steel",
+          "quantityKg": 600
+        }
+      ],
+      "nestedMachineInputs": [],
+      "assemblyHours": 760,
+      "factoryHours": 690,
+      "testHours": 310,
+      "goodUnitYield": 0.87,
+      "finishedMassKg": 5200.4,
+      "manufacturerCostCC": 384205.15,
+      "manufacturerQuoteCC": 480300,
+      "reviewNotes": "Refractory lining and operating heat/quality limits TBD"
+    },
+    "operatingProfile": {
+      "ratedCapacity": null,
+      "operatingPowerUnits": null,
+      "footprintM2": null
+    },
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "In Review",
+      "manufacturing.directMaterialInputs": "In Review",
+      "manufacturing.nestedMachineInputs": "In Review",
+      "manufacturing.assemblyHours": "In Review",
+      "manufacturing.factoryHours": "In Review",
+      "manufacturing.testHours": "In Review",
+      "manufacturing.goodUnitYield": "In Review",
+      "manufacturing.finishedMassKg": "In Review",
+      "manufacturing.manufacturerCostCC": "In Review",
+      "manufacturing.manufacturerQuoteCC": "In Review",
+      "operatingProfile.ratedCapacity": "In Review",
+      "operatingProfile.operatingPowerUnits": "In Review",
+      "operatingProfile.footprintM2": "In Review",
+      "pendingPartCompatibility": "In Review",
+      "inputSummary": "In Review",
+      "outputSummary": "In Review"
+    },
+    "fieldApplicability": {
+      "pendingPartCompatibility": true
+    },
+    "approval": "In Review"
   },
   {
     "id": "machine-crude-chemical-battery",
@@ -428,7 +1386,79 @@
         "reviewStatus": "unapproved-consumer-mapping",
         "notes": "Chemical storage bank chemistry and electrical ratings unresolved; do not presume lead-acid or lithium suitability."
       }
-    ]
+    ],
+    "manufacturing": {
+      "authority": "unapproved-android-discovery-proposal",
+      "finishedPartInputs": [
+        {
+          "partId": "part-lead-acid-battery-module",
+          "quantity": 12
+        },
+        {
+          "partId": "part-power-electronics",
+          "quantity": 3
+        },
+        {
+          "partId": "part-structural-components",
+          "quantity": 4
+        },
+        {
+          "partId": "part-fluid-handling-parts",
+          "quantity": 1
+        }
+      ],
+      "directMaterialInputs": [
+        {
+          "materialId": "named-substance-steel",
+          "quantityKg": 280
+        },
+        {
+          "materialId": "named-substance-refined-copper",
+          "quantityKg": 80
+        },
+        {
+          "materialId": "substance-polymer",
+          "quantityKg": 60,
+          "qualification": "grade-tbd"
+        }
+      ],
+      "nestedMachineInputs": [],
+      "assemblyHours": 230,
+      "factoryHours": 175,
+      "testHours": 115,
+      "goodUnitYield": 0.93,
+      "finishedMassKg": 1342.7,
+      "manufacturerCostCC": 100112.17,
+      "manufacturerQuoteCC": 125150,
+      "reviewNotes": "Lead-acid chemistry and rated energy capacity require signoff"
+    },
+    "operatingProfile": {
+      "ratedCapacity": null,
+      "operatingPowerUnits": null,
+      "footprintM2": null
+    },
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "In Review",
+      "manufacturing.directMaterialInputs": "In Review",
+      "manufacturing.nestedMachineInputs": "In Review",
+      "manufacturing.assemblyHours": "In Review",
+      "manufacturing.factoryHours": "In Review",
+      "manufacturing.testHours": "In Review",
+      "manufacturing.goodUnitYield": "In Review",
+      "manufacturing.finishedMassKg": "In Review",
+      "manufacturing.manufacturerCostCC": "In Review",
+      "manufacturing.manufacturerQuoteCC": "In Review",
+      "operatingProfile.ratedCapacity": "In Review",
+      "operatingProfile.operatingPowerUnits": "In Review",
+      "operatingProfile.footprintM2": "In Review",
+      "pendingPartCompatibility": "In Review",
+      "inputSummary": "In Review",
+      "outputSummary": "In Review"
+    },
+    "fieldApplicability": {
+      "pendingPartCompatibility": true
+    },
+    "approval": "In Review"
   },
   {
     "id": "machine-wind-generator",
@@ -459,7 +1489,82 @@
       "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A tall atmospheric turbine with aerodynamic blades, structural tower and integrated generator equipment for converting local wind into electrical power. Specific visual requirements: a tall atmospheric wind generator: aerodynamic blades, structural tower, generator housing and sensor pack. Input context: Ambient wind. Output context: Power. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
       "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
-    }
+    },
+    "manufacturing": {
+      "authority": "unapproved-android-discovery-proposal",
+      "finishedPartInputs": [
+        {
+          "partId": "part-generator-parts",
+          "quantity": 8
+        },
+        {
+          "partId": "part-mechanical-parts",
+          "quantity": 6
+        },
+        {
+          "partId": "part-power-electronics",
+          "quantity": 5
+        },
+        {
+          "partId": "part-structural-components",
+          "quantity": 12
+        },
+        {
+          "partId": "part-control-and-sensor-parts",
+          "quantity": 3
+        }
+      ],
+      "directMaterialInputs": [
+        {
+          "materialId": "named-substance-steel",
+          "quantityKg": 2500
+        },
+        {
+          "materialId": "named-substance-aluminium-alloy",
+          "quantityKg": 500
+        },
+        {
+          "materialId": "named-substance-refined-copper",
+          "quantityKg": 100
+        }
+      ],
+      "nestedMachineInputs": [],
+      "assemblyHours": 540,
+      "factoryHours": 440,
+      "testHours": 175,
+      "goodUnitYield": 0.91,
+      "finishedMassKg": 4165.5,
+      "manufacturerCostCC": 240968.42,
+      "manufacturerQuoteCC": 301250,
+      "reviewNotes": "Rotor blades and support foundation rating; no motor as generator"
+    },
+    "operatingProfile": {
+      "ratedCapacity": null,
+      "operatingPowerUnits": null,
+      "footprintM2": null
+    },
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "In Review",
+      "manufacturing.directMaterialInputs": "In Review",
+      "manufacturing.nestedMachineInputs": "In Review",
+      "manufacturing.assemblyHours": "In Review",
+      "manufacturing.factoryHours": "In Review",
+      "manufacturing.testHours": "In Review",
+      "manufacturing.goodUnitYield": "In Review",
+      "manufacturing.finishedMassKg": "In Review",
+      "manufacturing.manufacturerCostCC": "In Review",
+      "manufacturing.manufacturerQuoteCC": "In Review",
+      "operatingProfile.ratedCapacity": "In Review",
+      "operatingProfile.operatingPowerUnits": "In Review",
+      "operatingProfile.footprintM2": "In Review",
+      "pendingPartCompatibility": "In Review",
+      "inputSummary": "In Review",
+      "outputSummary": "In Review"
+    },
+    "fieldApplicability": {
+      "pendingPartCompatibility": false
+    },
+    "approval": "In Review"
   },
   {
     "id": "machine-water-wheel-generator",
@@ -490,7 +1595,78 @@
       "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A hydro-mechanical generator that converts the movement of suitable flowing water into electrical power through a reinforced wheel and generator assembly. Specific visual requirements: a hydro-mechanical water-wheel generator: reinforced wheel, mechanical drive and generator housing on a race. Input context: Flowing water. Output context: Power. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
       "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
-    }
+    },
+    "manufacturing": {
+      "authority": "unapproved-android-discovery-proposal",
+      "finishedPartInputs": [
+        {
+          "partId": "part-generator-parts",
+          "quantity": 6
+        },
+        {
+          "partId": "part-mechanical-parts",
+          "quantity": 8
+        },
+        {
+          "partId": "part-power-electronics",
+          "quantity": 3
+        },
+        {
+          "partId": "part-structural-components",
+          "quantity": 12
+        },
+        {
+          "partId": "part-control-and-sensor-parts",
+          "quantity": 2
+        }
+      ],
+      "directMaterialInputs": [
+        {
+          "materialId": "named-substance-steel",
+          "quantityKg": 3500
+        },
+        {
+          "materialId": "named-substance-stainless-steel",
+          "quantityKg": 500
+        }
+      ],
+      "nestedMachineInputs": [],
+      "assemblyHours": 570,
+      "factoryHours": 485,
+      "testHours": 150,
+      "goodUnitYield": 0.9,
+      "finishedMassKg": 4987.1,
+      "manufacturerCostCC": 243038.67,
+      "manufacturerQuoteCC": 303800,
+      "reviewNotes": "Hydraulic head and site engineering separate from Machine"
+    },
+    "operatingProfile": {
+      "ratedCapacity": null,
+      "operatingPowerUnits": null,
+      "footprintM2": null
+    },
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "In Review",
+      "manufacturing.directMaterialInputs": "In Review",
+      "manufacturing.nestedMachineInputs": "In Review",
+      "manufacturing.assemblyHours": "In Review",
+      "manufacturing.factoryHours": "In Review",
+      "manufacturing.testHours": "In Review",
+      "manufacturing.goodUnitYield": "In Review",
+      "manufacturing.finishedMassKg": "In Review",
+      "manufacturing.manufacturerCostCC": "In Review",
+      "manufacturing.manufacturerQuoteCC": "In Review",
+      "operatingProfile.ratedCapacity": "In Review",
+      "operatingProfile.operatingPowerUnits": "In Review",
+      "operatingProfile.footprintM2": "In Review",
+      "pendingPartCompatibility": "In Review",
+      "inputSummary": "In Review",
+      "outputSummary": "In Review"
+    },
+    "fieldApplicability": {
+      "pendingPartCompatibility": false
+    },
+    "approval": "In Review"
   },
   {
     "id": "machine-thermoelectric-trickler",
@@ -533,7 +1709,78 @@
         "reviewStatus": "unapproved-consumer-mapping",
         "notes": "A thermoelectric generator may need a buffer, but storage chemistry or buffer presence is not approved."
       }
-    ]
+    ],
+    "manufacturing": {
+      "authority": "unapproved-android-discovery-proposal",
+      "finishedPartInputs": [
+        {
+          "partId": "part-thermal-parts",
+          "quantity": 3
+        },
+        {
+          "partId": "part-power-electronics",
+          "quantity": 2
+        },
+        {
+          "partId": "part-control-and-sensor-parts",
+          "quantity": 2
+        },
+        {
+          "partId": "part-structural-components",
+          "quantity": 1
+        },
+        {
+          "partId": "part-lead-acid-battery-module",
+          "quantity": 1
+        }
+      ],
+      "directMaterialInputs": [
+        {
+          "materialId": "substance-refined-ceramic",
+          "quantityKg": 30
+        },
+        {
+          "materialId": "named-substance-refined-copper",
+          "quantityKg": 15
+        }
+      ],
+      "nestedMachineInputs": [],
+      "assemblyHours": 125,
+      "factoryHours": 100,
+      "testHours": 55,
+      "goodUnitYield": 0.93,
+      "finishedMassKg": null,
+      "manufacturerCostCC": null,
+      "manufacturerQuoteCC": null,
+      "reviewNotes": "Thermoelectric semiconductor junction materials unapproved; no rotating generator Part"
+    },
+    "operatingProfile": {
+      "ratedCapacity": null,
+      "operatingPowerUnits": null,
+      "footprintM2": null
+    },
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "In Review",
+      "manufacturing.directMaterialInputs": "In Review",
+      "manufacturing.nestedMachineInputs": "In Review",
+      "manufacturing.assemblyHours": "In Review",
+      "manufacturing.factoryHours": "In Review",
+      "manufacturing.testHours": "In Review",
+      "manufacturing.goodUnitYield": "In Review",
+      "manufacturing.finishedMassKg": "In Review",
+      "manufacturing.manufacturerCostCC": "Blocked",
+      "manufacturing.manufacturerQuoteCC": "Blocked",
+      "operatingProfile.ratedCapacity": "In Review",
+      "operatingProfile.operatingPowerUnits": "In Review",
+      "operatingProfile.footprintM2": "In Review",
+      "pendingPartCompatibility": "In Review",
+      "inputSummary": "In Review",
+      "outputSummary": "In Review"
+    },
+    "fieldApplicability": {
+      "pendingPartCompatibility": true
+    },
+    "approval": "Blocked"
   },
   {
     "id": "machine-solar-thermal-generator",
@@ -575,7 +1822,95 @@
         "reviewStatus": "unapproved-consumer-mapping",
         "notes": "Reflector optics and heat collection are distinct functions; candidate Thermal/Optical requirements both need per-model sign-off."
       }
-    ]
+    ],
+    "manufacturing": {
+      "authority": "unapproved-android-discovery-proposal",
+      "finishedPartInputs": [
+        {
+          "partId": "part-generator-parts",
+          "quantity": 6
+        },
+        {
+          "partId": "part-mechanical-parts",
+          "quantity": 6
+        },
+        {
+          "partId": "part-power-electronics",
+          "quantity": 5
+        },
+        {
+          "partId": "part-thermal-parts",
+          "quantity": 8
+        },
+        {
+          "partId": "part-optical-parts",
+          "quantity": 16
+        },
+        {
+          "partId": "part-control-and-sensor-parts",
+          "quantity": 5
+        },
+        {
+          "partId": "part-structural-components",
+          "quantity": 12
+        }
+      ],
+      "directMaterialInputs": [
+        {
+          "materialId": "named-substance-steel",
+          "quantityKg": 3800
+        },
+        {
+          "materialId": "substance-glass",
+          "quantityKg": 1500
+        },
+        {
+          "materialId": "named-substance-refined-copper",
+          "quantityKg": 120
+        }
+      ],
+      "nestedMachineInputs": [
+        {
+          "machineId": "machine-conventional-electric-motor",
+          "quantity": 4
+        }
+      ],
+      "assemblyHours": 860,
+      "factoryHours": 780,
+      "testHours": 330,
+      "goodUnitYield": 0.88,
+      "finishedMassKg": 7031.7,
+      "manufacturerCostCC": 471092.73,
+      "manufacturerQuoteCC": 588900,
+      "reviewNotes": "Tracking motor size optics field/reflector area and thermal receiver ratings"
+    },
+    "operatingProfile": {
+      "ratedCapacity": null,
+      "operatingPowerUnits": null,
+      "footprintM2": null
+    },
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "In Review",
+      "manufacturing.directMaterialInputs": "In Review",
+      "manufacturing.nestedMachineInputs": "In Review",
+      "manufacturing.assemblyHours": "In Review",
+      "manufacturing.factoryHours": "In Review",
+      "manufacturing.testHours": "In Review",
+      "manufacturing.goodUnitYield": "In Review",
+      "manufacturing.finishedMassKg": "In Review",
+      "manufacturing.manufacturerCostCC": "In Review",
+      "manufacturing.manufacturerQuoteCC": "In Review",
+      "operatingProfile.ratedCapacity": "In Review",
+      "operatingProfile.operatingPowerUnits": "In Review",
+      "operatingProfile.footprintM2": "In Review",
+      "pendingPartCompatibility": "In Review",
+      "inputSummary": "In Review",
+      "outputSummary": "In Review"
+    },
+    "fieldApplicability": {
+      "pendingPartCompatibility": true
+    },
+    "approval": "In Review"
   },
   {
     "id": "machine-power-distribution-system",
@@ -604,7 +1939,74 @@
       "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A switchyard, transformer and control system that safely routes electrical power between generation sources, storage and colony facilities. Specific visual requirements: a power distribution switchyard: transformers, buswork and control cabinets, no readable signage. Input context: Electrical power from connected sources. Output context: Distributed facility power. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
       "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
-    }
+    },
+    "manufacturing": {
+      "authority": "unapproved-android-discovery-proposal",
+      "finishedPartInputs": [
+        {
+          "partId": "part-power-electronics",
+          "quantity": 15
+        },
+        {
+          "partId": "part-control-and-sensor-parts",
+          "quantity": 8
+        },
+        {
+          "partId": "part-structural-components",
+          "quantity": 10
+        },
+        {
+          "partId": "part-computing-parts",
+          "quantity": 2
+        }
+      ],
+      "directMaterialInputs": [
+        {
+          "materialId": "named-substance-steel",
+          "quantityKg": 1600
+        },
+        {
+          "materialId": "named-substance-refined-copper",
+          "quantityKg": 500
+        }
+      ],
+      "nestedMachineInputs": [],
+      "assemblyHours": 475,
+      "factoryHours": 420,
+      "testHours": 245,
+      "goodUnitYield": 0.9,
+      "finishedMassKg": 2856.4,
+      "manufacturerCostCC": 262467.76,
+      "manufacturerQuoteCC": 328100,
+      "reviewNotes": "Transformer winding voltage and switchgear test burden"
+    },
+    "operatingProfile": {
+      "ratedCapacity": null,
+      "operatingPowerUnits": null,
+      "footprintM2": null
+    },
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "In Review",
+      "manufacturing.directMaterialInputs": "In Review",
+      "manufacturing.nestedMachineInputs": "In Review",
+      "manufacturing.assemblyHours": "In Review",
+      "manufacturing.factoryHours": "In Review",
+      "manufacturing.testHours": "In Review",
+      "manufacturing.goodUnitYield": "In Review",
+      "manufacturing.finishedMassKg": "In Review",
+      "manufacturing.manufacturerCostCC": "In Review",
+      "manufacturing.manufacturerQuoteCC": "In Review",
+      "operatingProfile.ratedCapacity": "In Review",
+      "operatingProfile.operatingPowerUnits": "In Review",
+      "operatingProfile.footprintM2": "In Review",
+      "pendingPartCompatibility": "In Review",
+      "inputSummary": "In Review",
+      "outputSummary": "In Review"
+    },
+    "fieldApplicability": {
+      "pendingPartCompatibility": false
+    },
+    "approval": "In Review"
   },
   {
     "id": "machine-life-support-machine",
@@ -634,7 +2036,83 @@
       "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A modular habitat environmental system providing air recycling, carbon-dioxide removal and water-management support. Specific visual requirements: a modular habitat life-support machine: air-recycling stacks, fluid loops and sensor racks. Input context: Power. Output context: Breathable air and environmental recycling. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
       "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
-    }
+    },
+    "manufacturing": {
+      "authority": "unapproved-android-discovery-proposal",
+      "finishedPartInputs": [
+        {
+          "partId": "part-fluid-handling-parts",
+          "quantity": 7
+        },
+        {
+          "partId": "part-mechanical-parts",
+          "quantity": 5
+        },
+        {
+          "partId": "part-power-electronics",
+          "quantity": 4
+        },
+        {
+          "partId": "part-control-and-sensor-parts",
+          "quantity": 5
+        },
+        {
+          "partId": "part-thermal-parts",
+          "quantity": 2
+        }
+      ],
+      "directMaterialInputs": [
+        {
+          "materialId": "named-substance-steel",
+          "quantityKg": 600
+        },
+        {
+          "materialId": "named-substance-stainless-steel",
+          "quantityKg": 150
+        },
+        {
+          "materialId": "substance-polymer",
+          "quantityKg": 90,
+          "qualification": "grade-tbd"
+        }
+      ],
+      "nestedMachineInputs": [],
+      "assemblyHours": 290,
+      "factoryHours": 235,
+      "testHours": 130,
+      "goodUnitYield": 0.91,
+      "finishedMassKg": 1165.8,
+      "manufacturerCostCC": 141099.6,
+      "manufacturerQuoteCC": 176400,
+      "reviewNotes": "Recycling and life support cartridge replacement not counted twice"
+    },
+    "operatingProfile": {
+      "ratedCapacity": null,
+      "operatingPowerUnits": null,
+      "footprintM2": null
+    },
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "In Review",
+      "manufacturing.directMaterialInputs": "In Review",
+      "manufacturing.nestedMachineInputs": "In Review",
+      "manufacturing.assemblyHours": "In Review",
+      "manufacturing.factoryHours": "In Review",
+      "manufacturing.testHours": "In Review",
+      "manufacturing.goodUnitYield": "In Review",
+      "manufacturing.finishedMassKg": "In Review",
+      "manufacturing.manufacturerCostCC": "In Review",
+      "manufacturing.manufacturerQuoteCC": "In Review",
+      "operatingProfile.ratedCapacity": "In Review",
+      "operatingProfile.operatingPowerUnits": "In Review",
+      "operatingProfile.footprintM2": "In Review",
+      "pendingPartCompatibility": "In Review",
+      "inputSummary": "In Review",
+      "outputSummary": "In Review"
+    },
+    "fieldApplicability": {
+      "pendingPartCompatibility": false
+    },
+    "approval": "In Review"
   },
   {
     "id": "machine-climate-control-machine",
@@ -673,7 +2151,88 @@
         "reviewStatus": "unapproved-consumer-mapping",
         "notes": "Heating and cooling use thermally rated assemblies; optical use requires separate evidence."
       }
-    ]
+    ],
+    "manufacturing": {
+      "authority": "unapproved-android-discovery-proposal",
+      "finishedPartInputs": [
+        {
+          "partId": "part-thermal-parts",
+          "quantity": 6
+        },
+        {
+          "partId": "part-mechanical-parts",
+          "quantity": 5
+        },
+        {
+          "partId": "part-power-electronics",
+          "quantity": 5
+        },
+        {
+          "partId": "part-control-and-sensor-parts",
+          "quantity": 5
+        },
+        {
+          "partId": "part-structural-components",
+          "quantity": 4
+        }
+      ],
+      "directMaterialInputs": [
+        {
+          "materialId": "named-substance-steel",
+          "quantityKg": 900
+        },
+        {
+          "materialId": "named-substance-refined-copper",
+          "quantityKg": 150
+        },
+        {
+          "materialId": "substance-polymer",
+          "quantityKg": 100,
+          "qualification": "grade-tbd"
+        }
+      ],
+      "nestedMachineInputs": [
+        {
+          "machineId": "machine-conventional-electric-motor",
+          "quantity": 3
+        }
+      ],
+      "assemblyHours": 330,
+      "factoryHours": 280,
+      "testHours": 130,
+      "goodUnitYield": 0.92,
+      "finishedMassKg": 1924.2,
+      "manufacturerCostCC": 184563.13,
+      "manufacturerQuoteCC": 230750,
+      "reviewNotes": "Heating cooling capacity and refrigerant stock TBD"
+    },
+    "operatingProfile": {
+      "ratedCapacity": null,
+      "operatingPowerUnits": null,
+      "footprintM2": null
+    },
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "In Review",
+      "manufacturing.directMaterialInputs": "In Review",
+      "manufacturing.nestedMachineInputs": "In Review",
+      "manufacturing.assemblyHours": "In Review",
+      "manufacturing.factoryHours": "In Review",
+      "manufacturing.testHours": "In Review",
+      "manufacturing.goodUnitYield": "In Review",
+      "manufacturing.finishedMassKg": "In Review",
+      "manufacturing.manufacturerCostCC": "In Review",
+      "manufacturing.manufacturerQuoteCC": "In Review",
+      "operatingProfile.ratedCapacity": "In Review",
+      "operatingProfile.operatingPowerUnits": "In Review",
+      "operatingProfile.footprintM2": "In Review",
+      "pendingPartCompatibility": "In Review",
+      "inputSummary": "In Review",
+      "outputSummary": "In Review"
+    },
+    "fieldApplicability": {
+      "pendingPartCompatibility": true
+    },
+    "approval": "In Review"
   },
   {
     "id": "machine-irrigation-system",
@@ -702,7 +2261,88 @@
       "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: An automated water-distribution network equipped with moisture monitoring and nutrient-dosing controls for managed cultivation. Specific visual requirements: an irrigation system: pipes, valves, pumps and dosing controls laid out as a farm/ranch watering network. Input context: Fresh water and power. Output context: Controlled crop irrigation. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
       "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
-    }
+    },
+    "manufacturing": {
+      "authority": "unapproved-android-discovery-proposal",
+      "finishedPartInputs": [
+        {
+          "partId": "part-fluid-handling-parts",
+          "quantity": 6
+        },
+        {
+          "partId": "part-mechanical-parts",
+          "quantity": 4
+        },
+        {
+          "partId": "part-power-electronics",
+          "quantity": 3
+        },
+        {
+          "partId": "part-control-and-sensor-parts",
+          "quantity": 3
+        },
+        {
+          "partId": "part-structural-components",
+          "quantity": 3
+        }
+      ],
+      "directMaterialInputs": [
+        {
+          "materialId": "named-substance-steel",
+          "quantityKg": 1000
+        },
+        {
+          "materialId": "named-substance-stainless-steel",
+          "quantityKg": 200
+        },
+        {
+          "materialId": "substance-polymer",
+          "quantityKg": 80,
+          "qualification": "grade-tbd"
+        }
+      ],
+      "nestedMachineInputs": [
+        {
+          "machineId": "machine-conventional-electric-motor",
+          "quantity": 3
+        }
+      ],
+      "assemblyHours": 350,
+      "factoryHours": 280,
+      "testHours": 105,
+      "goodUnitYield": 0.92,
+      "finishedMassKg": 1874.2,
+      "manufacturerCostCC": 165769.03,
+      "manufacturerQuoteCC": 207250,
+      "reviewNotes": "Water distribution pipe footprint and pump capacity TBD"
+    },
+    "operatingProfile": {
+      "ratedCapacity": null,
+      "operatingPowerUnits": null,
+      "footprintM2": null
+    },
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "In Review",
+      "manufacturing.directMaterialInputs": "In Review",
+      "manufacturing.nestedMachineInputs": "In Review",
+      "manufacturing.assemblyHours": "In Review",
+      "manufacturing.factoryHours": "In Review",
+      "manufacturing.testHours": "In Review",
+      "manufacturing.goodUnitYield": "In Review",
+      "manufacturing.finishedMassKg": "In Review",
+      "manufacturing.manufacturerCostCC": "In Review",
+      "manufacturing.manufacturerQuoteCC": "In Review",
+      "operatingProfile.ratedCapacity": "In Review",
+      "operatingProfile.operatingPowerUnits": "In Review",
+      "operatingProfile.footprintM2": "In Review",
+      "pendingPartCompatibility": "In Review",
+      "inputSummary": "In Review",
+      "outputSummary": "In Review"
+    },
+    "fieldApplicability": {
+      "pendingPartCompatibility": false
+    },
+    "approval": "In Review"
   },
   {
     "id": "machine-growth-management-system",
@@ -741,7 +2381,78 @@
         "reviewStatus": "unapproved-consumer-mapping",
         "notes": "Growth lighting, sensors and thermal regulation must be mapped to specific assemblies; neither is automatically approved."
       }
-    ]
+    ],
+    "manufacturing": {
+      "authority": "unapproved-android-discovery-proposal",
+      "finishedPartInputs": [
+        {
+          "partId": "part-thermal-parts",
+          "quantity": 3
+        },
+        {
+          "partId": "part-optical-parts",
+          "quantity": 8
+        },
+        {
+          "partId": "part-control-and-sensor-parts",
+          "quantity": 6
+        },
+        {
+          "partId": "part-power-electronics",
+          "quantity": 5
+        },
+        {
+          "partId": "part-computing-parts",
+          "quantity": 3
+        }
+      ],
+      "directMaterialInputs": [
+        {
+          "materialId": "named-substance-steel",
+          "quantityKg": 300
+        },
+        {
+          "materialId": "substance-glass",
+          "quantityKg": 300
+        }
+      ],
+      "nestedMachineInputs": [],
+      "assemblyHours": 400,
+      "factoryHours": 330,
+      "testHours": 160,
+      "goodUnitYield": 0.9,
+      "finishedMassKg": 824,
+      "manufacturerCostCC": 189870.13,
+      "manufacturerQuoteCC": 237350,
+      "reviewNotes": "Lighting system and dome coverage rating needs comparison"
+    },
+    "operatingProfile": {
+      "ratedCapacity": null,
+      "operatingPowerUnits": null,
+      "footprintM2": null
+    },
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "In Review",
+      "manufacturing.directMaterialInputs": "In Review",
+      "manufacturing.nestedMachineInputs": "In Review",
+      "manufacturing.assemblyHours": "In Review",
+      "manufacturing.factoryHours": "In Review",
+      "manufacturing.testHours": "In Review",
+      "manufacturing.goodUnitYield": "In Review",
+      "manufacturing.finishedMassKg": "In Review",
+      "manufacturing.manufacturerCostCC": "In Review",
+      "manufacturing.manufacturerQuoteCC": "In Review",
+      "operatingProfile.ratedCapacity": "In Review",
+      "operatingProfile.operatingPowerUnits": "In Review",
+      "operatingProfile.footprintM2": "In Review",
+      "pendingPartCompatibility": "In Review",
+      "inputSummary": "In Review",
+      "outputSummary": "In Review"
+    },
+    "fieldApplicability": {
+      "pendingPartCompatibility": true
+    },
+    "approval": "In Review"
   },
   {
     "id": "machine-pump-machine",
@@ -771,7 +2482,87 @@
       "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A high-pressure industrial pump for recovering and transferring water, brines, liquids or suitable gases between deposits, processing systems and storage. Specific visual requirements: a high-pressure industrial pump: hydraulic drive, mechanical body and structural skid for water, brine or gas. Input context: Power. Output context: Pressurised fluid flow. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
       "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
-    }
+    },
+    "manufacturing": {
+      "authority": "unapproved-android-discovery-proposal",
+      "finishedPartInputs": [
+        {
+          "partId": "part-hydraulic-parts",
+          "quantity": 6
+        },
+        {
+          "partId": "part-mechanical-parts",
+          "quantity": 5
+        },
+        {
+          "partId": "part-power-electronics",
+          "quantity": 3
+        },
+        {
+          "partId": "part-structural-components",
+          "quantity": 5
+        },
+        {
+          "partId": "part-fluid-handling-parts",
+          "quantity": 4
+        }
+      ],
+      "directMaterialInputs": [
+        {
+          "materialId": "named-substance-steel",
+          "quantityKg": 1400
+        },
+        {
+          "materialId": "named-substance-stainless-steel",
+          "quantityKg": 180
+        },
+        {
+          "materialId": "named-substance-refined-copper",
+          "quantityKg": 100
+        }
+      ],
+      "nestedMachineInputs": [
+        {
+          "machineId": "machine-conventional-electric-motor",
+          "quantity": 4
+        }
+      ],
+      "assemblyHours": 340,
+      "factoryHours": 300,
+      "testHours": 135,
+      "goodUnitYield": 0.91,
+      "finishedMassKg": 2637.7,
+      "manufacturerCostCC": 192664.01,
+      "manufacturerQuoteCC": 240850,
+      "reviewNotes": "Pressure class and distinction from Hydraulic actuator seals TBD"
+    },
+    "operatingProfile": {
+      "ratedCapacity": null,
+      "operatingPowerUnits": null,
+      "footprintM2": null
+    },
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "In Review",
+      "manufacturing.directMaterialInputs": "In Review",
+      "manufacturing.nestedMachineInputs": "In Review",
+      "manufacturing.assemblyHours": "In Review",
+      "manufacturing.factoryHours": "In Review",
+      "manufacturing.testHours": "In Review",
+      "manufacturing.goodUnitYield": "In Review",
+      "manufacturing.finishedMassKg": "In Review",
+      "manufacturing.manufacturerCostCC": "In Review",
+      "manufacturing.manufacturerQuoteCC": "In Review",
+      "operatingProfile.ratedCapacity": "In Review",
+      "operatingProfile.operatingPowerUnits": "In Review",
+      "operatingProfile.footprintM2": "In Review",
+      "pendingPartCompatibility": "In Review",
+      "inputSummary": "In Review",
+      "outputSummary": "In Review"
+    },
+    "fieldApplicability": {
+      "pendingPartCompatibility": false
+    },
+    "approval": "In Review"
   },
   {
     "id": "machine-filtration-machine",
@@ -800,7 +2591,83 @@
       "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A modular mechanical and chemical filtration bank for separating salts, particulates and other contaminants from raw fluid streams. Specific visual requirements: a filtration bank: ceramic-lined vessels, pipes and processing cartridges on a structural frame. Input context: Raw fluid and power. Output context: Conditioned or purified fluid. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
       "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
-    }
+    },
+    "manufacturing": {
+      "authority": "unapproved-android-discovery-proposal",
+      "finishedPartInputs": [
+        {
+          "partId": "part-fluid-handling-parts",
+          "quantity": 10
+        },
+        {
+          "partId": "part-processing-parts",
+          "quantity": 8
+        },
+        {
+          "partId": "part-structural-components",
+          "quantity": 4
+        },
+        {
+          "partId": "part-control-and-sensor-parts",
+          "quantity": 2
+        },
+        {
+          "partId": "part-power-electronics",
+          "quantity": 2
+        }
+      ],
+      "directMaterialInputs": [
+        {
+          "materialId": "named-substance-stainless-steel",
+          "quantityKg": 1200
+        },
+        {
+          "materialId": "substance-refined-ceramic",
+          "quantityKg": 200
+        },
+        {
+          "materialId": "substance-polymer",
+          "quantityKg": 40,
+          "qualification": "grade-tbd"
+        }
+      ],
+      "nestedMachineInputs": [],
+      "assemblyHours": 340,
+      "factoryHours": 300,
+      "testHours": 145,
+      "goodUnitYield": 0.92,
+      "finishedMassKg": 2149,
+      "manufacturerCostCC": 181214.13,
+      "manufacturerQuoteCC": 226550,
+      "reviewNotes": "Filter area and replaceable media cycle not priced"
+    },
+    "operatingProfile": {
+      "ratedCapacity": null,
+      "operatingPowerUnits": null,
+      "footprintM2": null
+    },
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "In Review",
+      "manufacturing.directMaterialInputs": "In Review",
+      "manufacturing.nestedMachineInputs": "In Review",
+      "manufacturing.assemblyHours": "In Review",
+      "manufacturing.factoryHours": "In Review",
+      "manufacturing.testHours": "In Review",
+      "manufacturing.goodUnitYield": "In Review",
+      "manufacturing.finishedMassKg": "In Review",
+      "manufacturing.manufacturerCostCC": "In Review",
+      "manufacturing.manufacturerQuoteCC": "In Review",
+      "operatingProfile.ratedCapacity": "In Review",
+      "operatingProfile.operatingPowerUnits": "In Review",
+      "operatingProfile.footprintM2": "In Review",
+      "pendingPartCompatibility": "In Review",
+      "inputSummary": "In Review",
+      "outputSummary": "In Review"
+    },
+    "fieldApplicability": {
+      "pendingPartCompatibility": false
+    },
+    "approval": "In Review"
   },
   {
     "id": "machine-research-computer",
@@ -829,7 +2696,82 @@
       "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: An advanced scientific workstation for processing samples, running engineering models and compiling technical analyses and designs. Specific visual requirements: a scientific research computer: dark glass workstations and computing racks without readable UI text. Input context: Power and research data. Output context: Scientific analysis and technical data. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
       "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
-    }
+    },
+    "manufacturing": {
+      "authority": "unapproved-android-discovery-proposal",
+      "finishedPartInputs": [
+        {
+          "partId": "part-computing-parts",
+          "quantity": 18
+        },
+        {
+          "partId": "part-power-electronics",
+          "quantity": 5
+        },
+        {
+          "partId": "part-control-and-sensor-parts",
+          "quantity": 8
+        },
+        {
+          "partId": "part-structural-components",
+          "quantity": 3
+        },
+        {
+          "partId": "part-optical-parts",
+          "quantity": 3
+        }
+      ],
+      "directMaterialInputs": [
+        {
+          "materialId": "named-substance-steel",
+          "quantityKg": 200
+        },
+        {
+          "materialId": "named-substance-refined-copper",
+          "quantityKg": 50
+        },
+        {
+          "materialId": "substance-glass",
+          "quantityKg": 100
+        }
+      ],
+      "nestedMachineInputs": [],
+      "assemblyHours": 410,
+      "factoryHours": 350,
+      "testHours": 260,
+      "goodUnitYield": 0.87,
+      "finishedMassKg": 722,
+      "manufacturerCostCC": 290216.71,
+      "manufacturerQuoteCC": 362800,
+      "reviewNotes": "Precision computing performance and science software license separate"
+    },
+    "operatingProfile": {
+      "ratedCapacity": null,
+      "operatingPowerUnits": null,
+      "footprintM2": null
+    },
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "In Review",
+      "manufacturing.directMaterialInputs": "In Review",
+      "manufacturing.nestedMachineInputs": "In Review",
+      "manufacturing.assemblyHours": "In Review",
+      "manufacturing.factoryHours": "In Review",
+      "manufacturing.testHours": "In Review",
+      "manufacturing.goodUnitYield": "In Review",
+      "manufacturing.finishedMassKg": "In Review",
+      "manufacturing.manufacturerCostCC": "In Review",
+      "manufacturing.manufacturerQuoteCC": "In Review",
+      "operatingProfile.ratedCapacity": "In Review",
+      "operatingProfile.operatingPowerUnits": "In Review",
+      "operatingProfile.footprintM2": "In Review",
+      "pendingPartCompatibility": "In Review",
+      "inputSummary": "In Review",
+      "outputSummary": "In Review"
+    },
+    "fieldApplicability": {
+      "pendingPartCompatibility": false
+    },
+    "approval": "In Review"
   },
   {
     "id": "machine-fabrication-machine",
@@ -869,7 +2811,83 @@
         "reviewStatus": "unapproved-consumer-mapping",
         "notes": "Forming and cutting processes are likely consumers of Forming & Cutting Tooling; tool geometry/count unapproved."
       }
-    ]
+    ],
+    "manufacturing": {
+      "authority": "unapproved-android-discovery-proposal",
+      "finishedPartInputs": [
+        {
+          "partId": "part-forming-cutting-tooling",
+          "quantity": 8
+        },
+        {
+          "partId": "part-mechanical-parts",
+          "quantity": 8
+        },
+        {
+          "partId": "part-power-electronics",
+          "quantity": 5
+        },
+        {
+          "partId": "part-structural-components",
+          "quantity": 10
+        },
+        {
+          "partId": "part-control-and-sensor-parts",
+          "quantity": 4
+        }
+      ],
+      "directMaterialInputs": [
+        {
+          "materialId": "named-substance-steel",
+          "quantityKg": 2800
+        },
+        {
+          "materialId": "named-substance-refined-copper",
+          "quantityKg": 150
+        }
+      ],
+      "nestedMachineInputs": [
+        {
+          "machineId": "machine-conventional-electric-motor",
+          "quantity": 6
+        }
+      ],
+      "assemblyHours": 690,
+      "factoryHours": 615,
+      "testHours": 230,
+      "goodUnitYield": 0.88,
+      "finishedMassKg": 4218.3,
+      "manufacturerCostCC": 355981.86,
+      "manufacturerQuoteCC": 445000,
+      "reviewNotes": "Tool capacity material families and optional CNC motion grade TBD"
+    },
+    "operatingProfile": {
+      "ratedCapacity": null,
+      "operatingPowerUnits": null,
+      "footprintM2": null
+    },
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "In Review",
+      "manufacturing.directMaterialInputs": "In Review",
+      "manufacturing.nestedMachineInputs": "In Review",
+      "manufacturing.assemblyHours": "In Review",
+      "manufacturing.factoryHours": "In Review",
+      "manufacturing.testHours": "In Review",
+      "manufacturing.goodUnitYield": "In Review",
+      "manufacturing.finishedMassKg": "In Review",
+      "manufacturing.manufacturerCostCC": "In Review",
+      "manufacturing.manufacturerQuoteCC": "In Review",
+      "operatingProfile.ratedCapacity": "In Review",
+      "operatingProfile.operatingPowerUnits": "In Review",
+      "operatingProfile.footprintM2": "In Review",
+      "pendingPartCompatibility": "In Review",
+      "inputSummary": "In Review",
+      "outputSummary": "In Review"
+    },
+    "fieldApplicability": {
+      "pendingPartCompatibility": true
+    },
+    "approval": "In Review"
   },
   {
     "id": "machine-assembly-crane",
@@ -900,7 +2918,83 @@
       "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A heavy gantry crane and powered manipulator used in industrial, shipyard and port facilities to position structural sections, machinery and cargo. Specific visual requirements: a heavy assembly gantry crane: hydraulic hoist, structural span and sensor-guided manipulator, not a warehouse fork system. Input context: Power. Output context: Heavy lifting and assembly capability. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
       "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
-    }
+    },
+    "manufacturing": {
+      "authority": "unapproved-android-discovery-proposal",
+      "finishedPartInputs": [
+        {
+          "partId": "part-hydraulic-parts",
+          "quantity": 12
+        },
+        {
+          "partId": "part-mechanical-parts",
+          "quantity": 12
+        },
+        {
+          "partId": "part-power-electronics",
+          "quantity": 6
+        },
+        {
+          "partId": "part-structural-components",
+          "quantity": 25
+        },
+        {
+          "partId": "part-control-and-sensor-parts",
+          "quantity": 5
+        },
+        {
+          "partId": "part-bulk-handling-parts",
+          "quantity": 4
+        }
+      ],
+      "directMaterialInputs": [
+        {
+          "materialId": "named-substance-steel",
+          "quantityKg": 12000
+        }
+      ],
+      "nestedMachineInputs": [
+        {
+          "machineId": "machine-conventional-electric-motor",
+          "quantity": 8
+        }
+      ],
+      "assemblyHours": 850,
+      "factoryHours": 820,
+      "testHours": 300,
+      "goodUnitYield": 0.89,
+      "finishedMassKg": 14562.6,
+      "manufacturerCostCC": 558430.28,
+      "manufacturerQuoteCC": 698050,
+      "reviewNotes": "Lift load and span; site civil foundations priced at Building level"
+    },
+    "operatingProfile": {
+      "ratedCapacity": null,
+      "operatingPowerUnits": null,
+      "footprintM2": null
+    },
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "In Review",
+      "manufacturing.directMaterialInputs": "In Review",
+      "manufacturing.nestedMachineInputs": "In Review",
+      "manufacturing.assemblyHours": "In Review",
+      "manufacturing.factoryHours": "In Review",
+      "manufacturing.testHours": "In Review",
+      "manufacturing.goodUnitYield": "In Review",
+      "manufacturing.finishedMassKg": "In Review",
+      "manufacturing.manufacturerCostCC": "In Review",
+      "manufacturing.manufacturerQuoteCC": "In Review",
+      "operatingProfile.ratedCapacity": "In Review",
+      "operatingProfile.operatingPowerUnits": "In Review",
+      "operatingProfile.footprintM2": "In Review",
+      "pendingPartCompatibility": "In Review",
+      "inputSummary": "In Review",
+      "outputSummary": "In Review"
+    },
+    "fieldApplicability": {
+      "pendingPartCompatibility": false
+    },
+    "approval": "In Review"
   },
   {
     "id": "machine-welding-machine",
@@ -946,7 +3040,78 @@
         "reviewStatus": "unapproved-consumer-mapping",
         "notes": "Heat protection/management may use thermal assemblies; optical requirement needs separate evidence."
       }
-    ]
+    ],
+    "manufacturing": {
+      "authority": "unapproved-android-discovery-proposal",
+      "finishedPartInputs": [
+        {
+          "partId": "part-welding-parts",
+          "quantity": 10
+        },
+        {
+          "partId": "part-power-electronics",
+          "quantity": 6
+        },
+        {
+          "partId": "part-thermal-parts",
+          "quantity": 4
+        },
+        {
+          "partId": "part-control-and-sensor-parts",
+          "quantity": 3
+        },
+        {
+          "partId": "part-structural-components",
+          "quantity": 5
+        }
+      ],
+      "directMaterialInputs": [
+        {
+          "materialId": "named-substance-steel",
+          "quantityKg": 700
+        },
+        {
+          "materialId": "named-substance-refined-copper",
+          "quantityKg": 350
+        }
+      ],
+      "nestedMachineInputs": [],
+      "assemblyHours": 475,
+      "factoryHours": 405,
+      "testHours": 220,
+      "goodUnitYield": 0.89,
+      "finishedMassKg": 1672,
+      "manufacturerCostCC": 214131.58,
+      "manufacturerQuoteCC": 267700,
+      "reviewNotes": "Welding process and consumable versus capital tool replacement"
+    },
+    "operatingProfile": {
+      "ratedCapacity": null,
+      "operatingPowerUnits": null,
+      "footprintM2": null
+    },
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "In Review",
+      "manufacturing.directMaterialInputs": "In Review",
+      "manufacturing.nestedMachineInputs": "In Review",
+      "manufacturing.assemblyHours": "In Review",
+      "manufacturing.factoryHours": "In Review",
+      "manufacturing.testHours": "In Review",
+      "manufacturing.goodUnitYield": "In Review",
+      "manufacturing.finishedMassKg": "In Review",
+      "manufacturing.manufacturerCostCC": "In Review",
+      "manufacturing.manufacturerQuoteCC": "In Review",
+      "operatingProfile.ratedCapacity": "In Review",
+      "operatingProfile.operatingPowerUnits": "In Review",
+      "operatingProfile.footprintM2": "In Review",
+      "pendingPartCompatibility": "In Review",
+      "inputSummary": "In Review",
+      "outputSummary": "In Review"
+    },
+    "fieldApplicability": {
+      "pendingPartCompatibility": true
+    },
+    "approval": "In Review"
   },
   {
     "id": "machine-crude-steam-piston-generator",
@@ -970,7 +3135,86 @@
       "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: Legacy Desktop power-generation archetype retained because the technology catalogue explicitly unlocks Crude Steam Piston Generator. Detailed construction parts and operating model remain intentionally undefined until that machine is designed. Specific visual requirements: a crude early-colony steam piston generator: exposed boiler, heavy reciprocating pistons, flywheel and charcoal structural frame, unfinished frontier fabrication. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
       "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
-    }
+    },
+    "manufacturing": {
+      "authority": "unapproved-android-discovery-proposal",
+      "finishedPartInputs": [
+        {
+          "partId": "part-generator-parts",
+          "quantity": 4
+        },
+        {
+          "partId": "part-mechanical-parts",
+          "quantity": 6
+        },
+        {
+          "partId": "part-hydraulic-parts",
+          "quantity": 4
+        },
+        {
+          "partId": "part-power-electronics",
+          "quantity": 3
+        },
+        {
+          "partId": "part-thermal-parts",
+          "quantity": 6
+        },
+        {
+          "partId": "part-structural-components",
+          "quantity": 10
+        },
+        {
+          "partId": "part-fluid-handling-parts",
+          "quantity": 3
+        }
+      ],
+      "directMaterialInputs": [
+        {
+          "materialId": "named-substance-steel",
+          "quantityKg": 4000
+        },
+        {
+          "materialId": "named-substance-stainless-steel",
+          "quantityKg": 500
+        }
+      ],
+      "nestedMachineInputs": [],
+      "assemblyHours": 540,
+      "factoryHours": 495,
+      "testHours": 170,
+      "goodUnitYield": 0.9,
+      "finishedMassKg": null,
+      "manufacturerCostCC": null,
+      "manufacturerQuoteCC": null,
+      "reviewNotes": "Universe source partIds empty; candidate only and steam engine/condenser fuel inputs TBD"
+    },
+    "operatingProfile": {
+      "ratedCapacity": null,
+      "operatingPowerUnits": null,
+      "footprintM2": null
+    },
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "In Review",
+      "manufacturing.directMaterialInputs": "In Review",
+      "manufacturing.nestedMachineInputs": "In Review",
+      "manufacturing.assemblyHours": "In Review",
+      "manufacturing.factoryHours": "In Review",
+      "manufacturing.testHours": "In Review",
+      "manufacturing.goodUnitYield": "In Review",
+      "manufacturing.finishedMassKg": "In Review",
+      "manufacturing.manufacturerCostCC": "Blocked",
+      "manufacturing.manufacturerQuoteCC": "Blocked",
+      "operatingProfile.ratedCapacity": "In Review",
+      "operatingProfile.operatingPowerUnits": "In Review",
+      "operatingProfile.footprintM2": "In Review",
+      "pendingPartCompatibility": "In Review",
+      "inputSummary": "In Review",
+      "outputSummary": "In Review"
+    },
+    "fieldApplicability": {
+      "pendingPartCompatibility": false
+    },
+    "approval": "Blocked"
   },
   {
     "id": "machine-crude-combustion-generator",
@@ -994,7 +3238,82 @@
       "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: Legacy Desktop power-generation archetype retained because the technology catalogue explicitly unlocks Crude Combustion Generator. Detailed construction parts and operating model remain intentionally undefined until that machine is designed. Specific visual requirements: a crude early-colony combustion generator: robust engine block, intake and exhaust plumbing, fuel reservoir and charcoal structural skid. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
       "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
-    }
+    },
+    "manufacturing": {
+      "authority": "unapproved-android-discovery-proposal",
+      "finishedPartInputs": [
+        {
+          "partId": "part-generator-parts",
+          "quantity": 5
+        },
+        {
+          "partId": "part-mechanical-parts",
+          "quantity": 8
+        },
+        {
+          "partId": "part-power-electronics",
+          "quantity": 4
+        },
+        {
+          "partId": "part-thermal-parts",
+          "quantity": 6
+        },
+        {
+          "partId": "part-structural-components",
+          "quantity": 8
+        },
+        {
+          "partId": "part-fluid-handling-parts",
+          "quantity": 4
+        }
+      ],
+      "directMaterialInputs": [
+        {
+          "materialId": "named-substance-steel",
+          "quantityKg": 3400
+        },
+        {
+          "materialId": "named-substance-stainless-steel",
+          "quantityKg": 400
+        }
+      ],
+      "nestedMachineInputs": [],
+      "assemblyHours": 530,
+      "factoryHours": 465,
+      "testHours": 170,
+      "goodUnitYield": 0.91,
+      "finishedMassKg": null,
+      "manufacturerCostCC": null,
+      "manufacturerQuoteCC": null,
+      "reviewNotes": "Universe source partIds empty; combustion engine/exhaust and fuel/ratings TBD"
+    },
+    "operatingProfile": {
+      "ratedCapacity": null,
+      "operatingPowerUnits": null,
+      "footprintM2": null
+    },
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "In Review",
+      "manufacturing.directMaterialInputs": "In Review",
+      "manufacturing.nestedMachineInputs": "In Review",
+      "manufacturing.assemblyHours": "In Review",
+      "manufacturing.factoryHours": "In Review",
+      "manufacturing.testHours": "In Review",
+      "manufacturing.goodUnitYield": "In Review",
+      "manufacturing.finishedMassKg": "In Review",
+      "manufacturing.manufacturerCostCC": "Blocked",
+      "manufacturing.manufacturerQuoteCC": "Blocked",
+      "operatingProfile.ratedCapacity": "In Review",
+      "operatingProfile.operatingPowerUnits": "In Review",
+      "operatingProfile.footprintM2": "In Review",
+      "pendingPartCompatibility": "In Review",
+      "inputSummary": "In Review",
+      "outputSummary": "In Review"
+    },
+    "fieldApplicability": {
+      "pendingPartCompatibility": false
+    },
+    "approval": "Blocked"
   },
   {
     "id": "machine-livestock-handling-system",
@@ -1024,7 +3343,83 @@
       "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A transferable yard system of crushes, gates, watering points and sensors used to breed and harvest local colony herd animals for food. Specific visual requirements: a livestock handling system: charcoal metal crush, gates, watering troughs and sensor tags for breeding and harvesting local colony herd animals, no Earth brand marks. Input context: Power, water and local herd animals. Output context: Managed breeding and food harvest from local livestock. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
       "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
-    }
+    },
+    "manufacturing": {
+      "authority": "unapproved-android-discovery-proposal",
+      "finishedPartInputs": [
+        {
+          "partId": "part-mechanical-parts",
+          "quantity": 4
+        },
+        {
+          "partId": "part-structural-components",
+          "quantity": 8
+        },
+        {
+          "partId": "part-fluid-handling-parts",
+          "quantity": 3
+        },
+        {
+          "partId": "part-control-and-sensor-parts",
+          "quantity": 2
+        },
+        {
+          "partId": "part-power-electronics",
+          "quantity": 2
+        },
+        {
+          "partId": "part-bulk-handling-parts",
+          "quantity": 2
+        }
+      ],
+      "directMaterialInputs": [
+        {
+          "materialId": "named-substance-steel",
+          "quantityKg": 1400
+        },
+        {
+          "materialId": "substance-polymer",
+          "quantityKg": 100,
+          "qualification": "grade-tbd"
+        }
+      ],
+      "nestedMachineInputs": [],
+      "assemblyHours": 310,
+      "factoryHours": 265,
+      "testHours": 110,
+      "goodUnitYield": 0.93,
+      "finishedMassKg": 2273.6,
+      "manufacturerCostCC": 135696.3,
+      "manufacturerQuoteCC": 169650,
+      "reviewNotes": "Animal welfare and animal-scale gate mass/coverage pending"
+    },
+    "operatingProfile": {
+      "ratedCapacity": null,
+      "operatingPowerUnits": null,
+      "footprintM2": null
+    },
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "In Review",
+      "manufacturing.directMaterialInputs": "In Review",
+      "manufacturing.nestedMachineInputs": "In Review",
+      "manufacturing.assemblyHours": "In Review",
+      "manufacturing.factoryHours": "In Review",
+      "manufacturing.testHours": "In Review",
+      "manufacturing.goodUnitYield": "In Review",
+      "manufacturing.finishedMassKg": "In Review",
+      "manufacturing.manufacturerCostCC": "In Review",
+      "manufacturing.manufacturerQuoteCC": "In Review",
+      "operatingProfile.ratedCapacity": "In Review",
+      "operatingProfile.operatingPowerUnits": "In Review",
+      "operatingProfile.footprintM2": "In Review",
+      "pendingPartCompatibility": "In Review",
+      "inputSummary": "In Review",
+      "outputSummary": "In Review"
+    },
+    "fieldApplicability": {
+      "pendingPartCompatibility": false
+    },
+    "approval": "In Review"
   },
   {
     "id": "machine-colony-operations-computer",
@@ -1053,7 +3448,74 @@
       "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A transferable colony coordination computer that runs mining-settlement operations, staffing and efficiency control from assembled computing parts. Specific visual requirements: a colony operations computer: clustered computing racks, dark glass coordination boards and sensor links for running a mining colony efficiently, screens without readable text. Input context: Power and operational data. Output context: Colony coordination and operating efficiency. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
       "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
-    }
+    },
+    "manufacturing": {
+      "authority": "unapproved-android-discovery-proposal",
+      "finishedPartInputs": [
+        {
+          "partId": "part-computing-parts",
+          "quantity": 14
+        },
+        {
+          "partId": "part-power-electronics",
+          "quantity": 5
+        },
+        {
+          "partId": "part-control-and-sensor-parts",
+          "quantity": 8
+        },
+        {
+          "partId": "part-structural-components",
+          "quantity": 3
+        }
+      ],
+      "directMaterialInputs": [
+        {
+          "materialId": "named-substance-steel",
+          "quantityKg": 400
+        },
+        {
+          "materialId": "substance-glass",
+          "quantityKg": 100
+        }
+      ],
+      "nestedMachineInputs": [],
+      "assemblyHours": 360,
+      "factoryHours": 305,
+      "testHours": 190,
+      "goodUnitYield": 0.9,
+      "finishedMassKg": 809.6,
+      "manufacturerCostCC": 230902.19,
+      "manufacturerQuoteCC": 288650,
+      "reviewNotes": "Software licence and controller coverage separate from physical system"
+    },
+    "operatingProfile": {
+      "ratedCapacity": null,
+      "operatingPowerUnits": null,
+      "footprintM2": null
+    },
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "In Review",
+      "manufacturing.directMaterialInputs": "In Review",
+      "manufacturing.nestedMachineInputs": "In Review",
+      "manufacturing.assemblyHours": "In Review",
+      "manufacturing.factoryHours": "In Review",
+      "manufacturing.testHours": "In Review",
+      "manufacturing.goodUnitYield": "In Review",
+      "manufacturing.finishedMassKg": "In Review",
+      "manufacturing.manufacturerCostCC": "In Review",
+      "manufacturing.manufacturerQuoteCC": "In Review",
+      "operatingProfile.ratedCapacity": "In Review",
+      "operatingProfile.operatingPowerUnits": "In Review",
+      "operatingProfile.footprintM2": "In Review",
+      "pendingPartCompatibility": "In Review",
+      "inputSummary": "In Review",
+      "outputSummary": "In Review"
+    },
+    "fieldApplicability": {
+      "pendingPartCompatibility": false
+    },
+    "approval": "In Review"
   },
   {
     "id": "machine-bulk-stacker",
@@ -1084,7 +3546,83 @@
       "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A transferable open-yard stacker-reclaimer that loads, stacks and reclaims loose bulk at a stockpile, wearing with use and movable to another yard. Specific visual requirements: a bulk stacker-reclaimer: long structural boom, hydraulic luffing, conveyor belt and bulk-handling hopper stacking loose aggregate in an open yard. Input context: Power and loose bulk material. Output context: Stacked or reclaimed bulk at stockpile throughput. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
       "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
-    }
+    },
+    "manufacturing": {
+      "authority": "unapproved-android-discovery-proposal",
+      "finishedPartInputs": [
+        {
+          "partId": "part-bulk-handling-parts",
+          "quantity": 12
+        },
+        {
+          "partId": "part-hydraulic-parts",
+          "quantity": 8
+        },
+        {
+          "partId": "part-mechanical-parts",
+          "quantity": 8
+        },
+        {
+          "partId": "part-structural-components",
+          "quantity": 18
+        },
+        {
+          "partId": "part-power-electronics",
+          "quantity": 4
+        },
+        {
+          "partId": "part-control-and-sensor-parts",
+          "quantity": 3
+        }
+      ],
+      "directMaterialInputs": [
+        {
+          "materialId": "named-substance-steel",
+          "quantityKg": 6800
+        }
+      ],
+      "nestedMachineInputs": [
+        {
+          "machineId": "machine-conventional-electric-motor",
+          "quantity": 8
+        }
+      ],
+      "assemblyHours": 700,
+      "factoryHours": 655,
+      "testHours": 250,
+      "goodUnitYield": 0.9,
+      "finishedMassKg": 9262,
+      "manufacturerCostCC": 435366.47,
+      "manufacturerQuoteCC": 544250,
+      "reviewNotes": "Stacking capacity reach and operating wear critical"
+    },
+    "operatingProfile": {
+      "ratedCapacity": null,
+      "operatingPowerUnits": null,
+      "footprintM2": null
+    },
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "In Review",
+      "manufacturing.directMaterialInputs": "In Review",
+      "manufacturing.nestedMachineInputs": "In Review",
+      "manufacturing.assemblyHours": "In Review",
+      "manufacturing.factoryHours": "In Review",
+      "manufacturing.testHours": "In Review",
+      "manufacturing.goodUnitYield": "In Review",
+      "manufacturing.finishedMassKg": "In Review",
+      "manufacturing.manufacturerCostCC": "In Review",
+      "manufacturing.manufacturerQuoteCC": "In Review",
+      "operatingProfile.ratedCapacity": "In Review",
+      "operatingProfile.operatingPowerUnits": "In Review",
+      "operatingProfile.footprintM2": "In Review",
+      "pendingPartCompatibility": "In Review",
+      "inputSummary": "In Review",
+      "outputSummary": "In Review"
+    },
+    "fieldApplicability": {
+      "pendingPartCompatibility": false
+    },
+    "approval": "In Review"
   },
   {
     "id": "machine-warehouse-handler",
@@ -1116,7 +3654,83 @@
       "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A transferable enclosed-aisle handler for loading, inventory movement and dispatch inside a warehouse, lighter than a shipyard assembly crane. Specific visual requirements: a warehouse handler: enclosed-aisle gantry with pallet forks and bulk-handling grabs, lighter than a shipyard assembly crane. Input context: Power and unitised or palletised goods. Output context: Warehouse loading, inventory handling and dispatch throughput. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
       "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
-    }
+    },
+    "manufacturing": {
+      "authority": "unapproved-android-discovery-proposal",
+      "finishedPartInputs": [
+        {
+          "partId": "part-bulk-handling-parts",
+          "quantity": 5
+        },
+        {
+          "partId": "part-hydraulic-parts",
+          "quantity": 4
+        },
+        {
+          "partId": "part-mechanical-parts",
+          "quantity": 5
+        },
+        {
+          "partId": "part-structural-components",
+          "quantity": 8
+        },
+        {
+          "partId": "part-power-electronics",
+          "quantity": 3
+        },
+        {
+          "partId": "part-control-and-sensor-parts",
+          "quantity": 3
+        }
+      ],
+      "directMaterialInputs": [
+        {
+          "materialId": "named-substance-steel",
+          "quantityKg": 1400
+        }
+      ],
+      "nestedMachineInputs": [
+        {
+          "machineId": "machine-conventional-electric-motor",
+          "quantity": 4
+        }
+      ],
+      "assemblyHours": 400,
+      "factoryHours": 345,
+      "testHours": 160,
+      "goodUnitYield": 0.91,
+      "finishedMassKg": 2659.7,
+      "manufacturerCostCC": 213564.63,
+      "manufacturerQuoteCC": 267000,
+      "reviewNotes": "Aisle clearance and capacity; not shipyard crane"
+    },
+    "operatingProfile": {
+      "ratedCapacity": null,
+      "operatingPowerUnits": null,
+      "footprintM2": null
+    },
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "In Review",
+      "manufacturing.directMaterialInputs": "In Review",
+      "manufacturing.nestedMachineInputs": "In Review",
+      "manufacturing.assemblyHours": "In Review",
+      "manufacturing.factoryHours": "In Review",
+      "manufacturing.testHours": "In Review",
+      "manufacturing.goodUnitYield": "In Review",
+      "manufacturing.finishedMassKg": "In Review",
+      "manufacturing.manufacturerCostCC": "In Review",
+      "manufacturing.manufacturerQuoteCC": "In Review",
+      "operatingProfile.ratedCapacity": "In Review",
+      "operatingProfile.operatingPowerUnits": "In Review",
+      "operatingProfile.footprintM2": "In Review",
+      "pendingPartCompatibility": "In Review",
+      "inputSummary": "In Review",
+      "outputSummary": "In Review"
+    },
+    "fieldApplicability": {
+      "pendingPartCompatibility": false
+    },
+    "approval": "In Review"
   },
   {
     "id": "machine-conventional-electric-motor",
@@ -1148,7 +3762,47 @@
       "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A conventional electromagnetic rotary drive for pumps, conveyors, bulk handling and general industrial machinery, designed around copper windings and a structural metal frame. Specific visual requirements: conventional electric motor: one physically plausible independent manufactured industrial machine in a compact workshop environment, Year-5326 Koplin industrial realism, metal and ceramic structures with practical utility connections. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
       "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
-    }
+    },
+    "manufacturing": {
+      "authority": "discovery-identity-quantities-pending",
+      "finishedPartInputs": [],
+      "directMaterialInputs": [],
+      "nestedMachineInputs": [],
+      "assemblyHours": null,
+      "factoryHours": null,
+      "testHours": null,
+      "goodUnitYield": null,
+      "finishedMassKg": null,
+      "manufacturerCostCC": null,
+      "manufacturerQuoteCC": null
+    },
+    "operatingProfile": {
+      "ratedCapacity": null,
+      "operatingPowerUnits": null,
+      "footprintM2": null
+    },
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "In Review",
+      "manufacturing.directMaterialInputs": "In Review",
+      "manufacturing.nestedMachineInputs": "In Review",
+      "manufacturing.assemblyHours": "In Review",
+      "manufacturing.factoryHours": "In Review",
+      "manufacturing.testHours": "In Review",
+      "manufacturing.goodUnitYield": "In Review",
+      "manufacturing.finishedMassKg": "In Review",
+      "manufacturing.manufacturerCostCC": "In Review",
+      "manufacturing.manufacturerQuoteCC": "In Review",
+      "operatingProfile.ratedCapacity": "In Review",
+      "operatingProfile.operatingPowerUnits": "In Review",
+      "operatingProfile.footprintM2": "In Review",
+      "pendingPartCompatibility": "In Review",
+      "inputSummary": "In Review",
+      "outputSummary": "In Review"
+    },
+    "fieldApplicability": {
+      "pendingPartCompatibility": false
+    },
+    "approval": "In Review"
   },
   {
     "id": "machine-rare-earth-permanent-magnet-motor",
@@ -1181,7 +3835,47 @@
       "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A specialised electric motor using rare-earth permanent magnet material for applications that justify its higher performance and material demand. Specific visual requirements: rare-earth permanent-magnet motor: one physically plausible independent manufactured industrial machine in a compact workshop environment, Year-5326 Koplin industrial realism, metal and ceramic structures with practical utility connections. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
       "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
-    }
+    },
+    "manufacturing": {
+      "authority": "discovery-identity-quantities-pending",
+      "finishedPartInputs": [],
+      "directMaterialInputs": [],
+      "nestedMachineInputs": [],
+      "assemblyHours": null,
+      "factoryHours": null,
+      "testHours": null,
+      "goodUnitYield": null,
+      "finishedMassKg": null,
+      "manufacturerCostCC": null,
+      "manufacturerQuoteCC": null
+    },
+    "operatingProfile": {
+      "ratedCapacity": null,
+      "operatingPowerUnits": null,
+      "footprintM2": null
+    },
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "In Review",
+      "manufacturing.directMaterialInputs": "In Review",
+      "manufacturing.nestedMachineInputs": "In Review",
+      "manufacturing.assemblyHours": "In Review",
+      "manufacturing.factoryHours": "In Review",
+      "manufacturing.testHours": "In Review",
+      "manufacturing.goodUnitYield": "In Review",
+      "manufacturing.finishedMassKg": "In Review",
+      "manufacturing.manufacturerCostCC": "Blocked",
+      "manufacturing.manufacturerQuoteCC": "Blocked",
+      "operatingProfile.ratedCapacity": "In Review",
+      "operatingProfile.operatingPowerUnits": "In Review",
+      "operatingProfile.footprintM2": "In Review",
+      "pendingPartCompatibility": "In Review",
+      "inputSummary": "In Review",
+      "outputSummary": "In Review"
+    },
+    "fieldApplicability": {
+      "pendingPartCompatibility": false
+    },
+    "approval": "Blocked"
   },
   {
     "id": "machine-vector-exchange-drive",
@@ -1210,7 +3904,47 @@
       "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: An advanced Veyrite-dependent interstellar propulsion system whose existence is established in the Koplin universe; its internal engineered lattice and manufacturing bill remain strategic and unresolved. Specific visual requirements: vector exchange drive: one physically plausible independent manufactured industrial machine in a compact workshop environment, Year-5326 Koplin industrial realism, metal and ceramic structures with practical utility connections. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
       "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
-    }
+    },
+    "manufacturing": {
+      "authority": "discovery-identity-quantities-pending",
+      "finishedPartInputs": [],
+      "directMaterialInputs": [],
+      "nestedMachineInputs": [],
+      "assemblyHours": null,
+      "factoryHours": null,
+      "testHours": null,
+      "goodUnitYield": null,
+      "finishedMassKg": null,
+      "manufacturerCostCC": null,
+      "manufacturerQuoteCC": null
+    },
+    "operatingProfile": {
+      "ratedCapacity": null,
+      "operatingPowerUnits": null,
+      "footprintM2": null
+    },
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "In Review",
+      "manufacturing.directMaterialInputs": "In Review",
+      "manufacturing.nestedMachineInputs": "In Review",
+      "manufacturing.assemblyHours": "In Review",
+      "manufacturing.factoryHours": "In Review",
+      "manufacturing.testHours": "In Review",
+      "manufacturing.goodUnitYield": "In Review",
+      "manufacturing.finishedMassKg": "In Review",
+      "manufacturing.manufacturerCostCC": "Blocked",
+      "manufacturing.manufacturerQuoteCC": "Blocked",
+      "operatingProfile.ratedCapacity": "In Review",
+      "operatingProfile.operatingPowerUnits": "In Review",
+      "operatingProfile.footprintM2": "In Review",
+      "pendingPartCompatibility": "In Review",
+      "inputSummary": "In Review",
+      "outputSummary": "In Review"
+    },
+    "fieldApplicability": {
+      "pendingPartCompatibility": false
+    },
+    "approval": "Blocked"
   },
   {
     "id": "machine-personal-recreation-terminal",
@@ -1232,8 +3966,17 @@
       "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
       "androidDiscoveryWorkingId": "candidate-machine-personal-recreation-terminal"
     },
-    "approvedPhysicalBOM": {
-      "approval": "approved-physical-bom-2026-11-02",
+    "manufacturingDesignStatus": "APPROVED_PHYSICAL_BOM_2026_11_02__MANUFACTURER_CC_AND_GENERIC_WEAR_RATES_PROVISIONAL",
+    "manufacturingDesignNotes": "APPROVED physical recipe and manufacturing effort by user 2 Nov 2026; see §73. Factory CC and suggested quote are derived provisional scenarios only, not approved. Shared Part wear rules govern maintenance; Water within Food. Exact category morale weights and world-support sizing remain future shared engineering.",
+    "image": {
+      "key": "assets/art/universe/machines/machine-personal-recreation-terminal.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: An individually accessible residential recreation terminal providing one daily user service slot within accommodation. Specific visual requirements: personal recreation terminal: one physically plausible independent manufactured industrial machine in a compact workshop environment, Year-5326 Koplin industrial realism, metal and ceramic structures with practical utility connections. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
+    },
+    "manufacturing": {
+      "authority": "approved-physical-bom-prices-provisional",
       "finishedPartInputs": [
         {
           "partId": "part-computing-parts",
@@ -1258,27 +4001,49 @@
           "quantityKg": 0.2
         }
       ],
-      "assemblyLabourHours": 5,
-      "factoryShopHours": 3,
-      "qualificationTestHours": 2,
-      "targetGoodUnitYield": 0.98
+      "nestedMachineInputs": [],
+      "assemblyHours": 5,
+      "factoryHours": 3,
+      "testHours": 2,
+      "goodUnitYield": 0.98,
+      "finishedMassKg": null,
+      "manufacturerCostCC": null,
+      "manufacturerQuoteCC": null,
+      "physicalApprovalEvidence": "approved-physical-bom-2026-11-02"
     },
-    "amenityProfile": {
-      "approval": "approved-discovery-2026-11-02",
-      "category": "personal_media",
-      "residentServiceSlotsPerDay": 1,
-      "floorAreaM2": 2,
-      "operatingPowerUnits": 0.25
+    "operatingProfile": {
+      "ratedCapacity": {
+        "quantity": 1,
+        "unit": "resident service slots/day"
+      },
+      "operatingPowerUnits": 0.25,
+      "footprintM2": 2,
+      "amenityCategory": "personal_media",
+      "housingTechnologyTier": 1,
+      "ratingApprovalEvidence": "approved-discovery-2026-11-02"
     },
-    "manufacturingDesignStatus": "APPROVED_PHYSICAL_BOM_2026_11_02__MANUFACTURER_CC_AND_GENERIC_WEAR_RATES_PROVISIONAL",
-    "manufacturingDesignNotes": "APPROVED physical recipe and manufacturing effort by user 2 Nov 2026; see §73. Factory CC and suggested quote are derived provisional scenarios only, not approved. Shared Part wear rules govern maintenance; Water within Food. Exact category morale weights and world-support sizing remain future shared engineering.",
-    "image": {
-      "key": "assets/art/universe/machines/machine-personal-recreation-terminal.webp",
-      "generated": true,
-      "status": "generated",
-      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: An individually accessible residential recreation terminal providing one daily user service slot within accommodation. Specific visual requirements: personal recreation terminal: one physically plausible independent manufactured industrial machine in a compact workshop environment, Year-5326 Koplin industrial realism, metal and ceramic structures with practical utility connections. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
-      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
-    }
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "Approved",
+      "manufacturing.directMaterialInputs": "Approved",
+      "manufacturing.nestedMachineInputs": "In Review",
+      "manufacturing.assemblyHours": "Approved",
+      "manufacturing.factoryHours": "Approved",
+      "manufacturing.testHours": "Approved",
+      "manufacturing.goodUnitYield": "Approved",
+      "manufacturing.finishedMassKg": "In Review",
+      "manufacturing.manufacturerCostCC": "In Review",
+      "manufacturing.manufacturerQuoteCC": "In Review",
+      "operatingProfile.ratedCapacity": "Approved",
+      "operatingProfile.operatingPowerUnits": "Approved",
+      "operatingProfile.footprintM2": "Approved",
+      "pendingPartCompatibility": "In Review",
+      "inputSummary": "In Review",
+      "outputSummary": "In Review"
+    },
+    "fieldApplicability": {
+      "pendingPartCompatibility": false
+    },
+    "approval": "In Review"
   },
   {
     "id": "machine-communal-fitness-leisure-system",
@@ -1302,8 +4067,17 @@
       "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
       "androidDiscoveryWorkingId": "candidate-machine-communal-fitness-leisure-system"
     },
-    "approvedPhysicalBOM": {
-      "approval": "approved-physical-bom-2026-11-02",
+    "manufacturingDesignStatus": "APPROVED_PHYSICAL_BOM_2026_11_02__MANUFACTURER_CC_AND_GENERIC_WEAR_RATES_PROVISIONAL",
+    "manufacturingDesignNotes": "APPROVED physical recipe and manufacturing effort by user 2 Nov 2026; see §73. Factory CC and suggested quote are derived provisional scenarios only, not approved. Shared Part wear rules govern maintenance; Water within Food. Exact category morale weights and world-support sizing remain future shared engineering.",
+    "image": {
+      "key": "assets/art/universe/machines/machine-communal-fitness-leisure-system.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A shared recreation and fitness installation for accommodation residents, supporting ten resident service slots per day. Specific visual requirements: communal fitness & leisure system: one physically plausible independent manufactured industrial machine in a compact workshop environment, Year-5326 Koplin industrial realism, metal and ceramic structures with practical utility connections. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
+    },
+    "manufacturing": {
+      "authority": "approved-physical-bom-prices-provisional",
       "finishedPartInputs": [
         {
           "partId": "part-mechanical-parts",
@@ -1336,27 +4110,49 @@
           "quantityKg": 4
         }
       ],
-      "assemblyLabourHours": 40,
-      "factoryShopHours": 30,
-      "qualificationTestHours": 16,
-      "targetGoodUnitYield": 0.96
+      "nestedMachineInputs": [],
+      "assemblyHours": 40,
+      "factoryHours": 30,
+      "testHours": 16,
+      "goodUnitYield": 0.96,
+      "finishedMassKg": null,
+      "manufacturerCostCC": null,
+      "manufacturerQuoteCC": null,
+      "physicalApprovalEvidence": "approved-physical-bom-2026-11-02"
     },
-    "amenityProfile": {
-      "approval": "approved-discovery-2026-11-02",
-      "category": "fitness_social",
-      "residentServiceSlotsPerDay": 10,
-      "floorAreaM2": 16,
-      "operatingPowerUnits": 3
+    "operatingProfile": {
+      "ratedCapacity": {
+        "quantity": 10,
+        "unit": "resident service slots/day"
+      },
+      "operatingPowerUnits": 3,
+      "footprintM2": 16,
+      "amenityCategory": "fitness_social",
+      "housingTechnologyTier": 2,
+      "ratingApprovalEvidence": "approved-discovery-2026-11-02"
     },
-    "manufacturingDesignStatus": "APPROVED_PHYSICAL_BOM_2026_11_02__MANUFACTURER_CC_AND_GENERIC_WEAR_RATES_PROVISIONAL",
-    "manufacturingDesignNotes": "APPROVED physical recipe and manufacturing effort by user 2 Nov 2026; see §73. Factory CC and suggested quote are derived provisional scenarios only, not approved. Shared Part wear rules govern maintenance; Water within Food. Exact category morale weights and world-support sizing remain future shared engineering.",
-    "image": {
-      "key": "assets/art/universe/machines/machine-communal-fitness-leisure-system.webp",
-      "generated": true,
-      "status": "generated",
-      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A shared recreation and fitness installation for accommodation residents, supporting ten resident service slots per day. Specific visual requirements: communal fitness & leisure system: one physically plausible independent manufactured industrial machine in a compact workshop environment, Year-5326 Koplin industrial realism, metal and ceramic structures with practical utility connections. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
-      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
-    }
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "Approved",
+      "manufacturing.directMaterialInputs": "Approved",
+      "manufacturing.nestedMachineInputs": "In Review",
+      "manufacturing.assemblyHours": "Approved",
+      "manufacturing.factoryHours": "Approved",
+      "manufacturing.testHours": "Approved",
+      "manufacturing.goodUnitYield": "Approved",
+      "manufacturing.finishedMassKg": "In Review",
+      "manufacturing.manufacturerCostCC": "In Review",
+      "manufacturing.manufacturerQuoteCC": "In Review",
+      "operatingProfile.ratedCapacity": "Approved",
+      "operatingProfile.operatingPowerUnits": "Approved",
+      "operatingProfile.footprintM2": "Approved",
+      "pendingPartCompatibility": "In Review",
+      "inputSummary": "In Review",
+      "outputSummary": "In Review"
+    },
+    "fieldApplicability": {
+      "pendingPartCompatibility": false
+    },
+    "approval": "In Review"
   },
   {
     "id": "machine-advanced-entertainment-system",
@@ -1381,8 +4177,17 @@
       "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
       "androidDiscoveryWorkingId": "candidate-machine-advanced-entertainment-system"
     },
-    "approvedPhysicalBOM": {
-      "approval": "approved-physical-bom-2026-11-02",
+    "manufacturingDesignStatus": "APPROVED_PHYSICAL_BOM_2026_11_02__MANUFACTURER_CC_AND_GENERIC_WEAR_RATES_PROVISIONAL",
+    "manufacturingDesignNotes": "APPROVED physical recipe and manufacturing effort by user 2 Nov 2026; see §73. Factory CC and suggested quote are derived provisional scenarios only, not approved. Shared Part wear rules govern maintenance; Water within Food. Exact category morale weights and world-support sizing remain future shared engineering.",
+    "image": {
+      "key": "assets/art/universe/machines/machine-advanced-entertainment-system.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A shared advanced entertainment installation serving thirty accommodation residents per day. Specific visual requirements: advanced entertainment system: one physically plausible independent manufactured industrial machine in a compact workshop environment, Year-5326 Koplin industrial realism, metal and ceramic structures with practical utility connections. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
+    },
+    "manufacturing": {
+      "authority": "approved-physical-bom-prices-provisional",
       "finishedPartInputs": [
         {
           "partId": "part-computing-parts",
@@ -1419,27 +4224,49 @@
           "quantityKg": 24
         }
       ],
-      "assemblyLabourHours": 80,
-      "factoryShopHours": 65,
-      "qualificationTestHours": 35,
-      "targetGoodUnitYield": 0.95
+      "nestedMachineInputs": [],
+      "assemblyHours": 80,
+      "factoryHours": 65,
+      "testHours": 35,
+      "goodUnitYield": 0.95,
+      "finishedMassKg": null,
+      "manufacturerCostCC": null,
+      "manufacturerQuoteCC": null,
+      "physicalApprovalEvidence": "approved-physical-bom-2026-11-02"
     },
-    "amenityProfile": {
-      "approval": "approved-discovery-2026-11-02",
-      "category": "cultural_entertainment",
-      "residentServiceSlotsPerDay": 30,
-      "floorAreaM2": 25,
-      "operatingPowerUnits": 7
+    "operatingProfile": {
+      "ratedCapacity": {
+        "quantity": 30,
+        "unit": "resident service slots/day"
+      },
+      "operatingPowerUnits": 7,
+      "footprintM2": 25,
+      "amenityCategory": "cultural_entertainment",
+      "housingTechnologyTier": 3,
+      "ratingApprovalEvidence": "approved-discovery-2026-11-02"
     },
-    "manufacturingDesignStatus": "APPROVED_PHYSICAL_BOM_2026_11_02__MANUFACTURER_CC_AND_GENERIC_WEAR_RATES_PROVISIONAL",
-    "manufacturingDesignNotes": "APPROVED physical recipe and manufacturing effort by user 2 Nov 2026; see §73. Factory CC and suggested quote are derived provisional scenarios only, not approved. Shared Part wear rules govern maintenance; Water within Food. Exact category morale weights and world-support sizing remain future shared engineering.",
-    "image": {
-      "key": "assets/art/universe/machines/machine-advanced-entertainment-system.webp",
-      "generated": true,
-      "status": "generated",
-      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A shared advanced entertainment installation serving thirty accommodation residents per day. Specific visual requirements: advanced entertainment system: one physically plausible independent manufactured industrial machine in a compact workshop environment, Year-5326 Koplin industrial realism, metal and ceramic structures with practical utility connections. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
-      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
-    }
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "Approved",
+      "manufacturing.directMaterialInputs": "Approved",
+      "manufacturing.nestedMachineInputs": "In Review",
+      "manufacturing.assemblyHours": "Approved",
+      "manufacturing.factoryHours": "Approved",
+      "manufacturing.testHours": "Approved",
+      "manufacturing.goodUnitYield": "Approved",
+      "manufacturing.finishedMassKg": "In Review",
+      "manufacturing.manufacturerCostCC": "In Review",
+      "manufacturing.manufacturerQuoteCC": "In Review",
+      "operatingProfile.ratedCapacity": "Approved",
+      "operatingProfile.operatingPowerUnits": "Approved",
+      "operatingProfile.footprintM2": "Approved",
+      "pendingPartCompatibility": "In Review",
+      "inputSummary": "In Review",
+      "outputSummary": "In Review"
+    },
+    "fieldApplicability": {
+      "pendingPartCompatibility": false
+    },
+    "approval": "In Review"
   },
   {
     "id": "machine-immersive-recreation-suite",
@@ -1466,8 +4293,17 @@
       "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
       "androidDiscoveryWorkingId": "candidate-machine-immersive-recreation-suite"
     },
-    "approvedPhysicalBOM": {
-      "approval": "approved-physical-bom-2026-11-02",
+    "manufacturingDesignStatus": "APPROVED_PHYSICAL_BOM_2026_11_02__MANUFACTURER_CC_AND_GENERIC_WEAR_RATES_PROVISIONAL",
+    "manufacturingDesignNotes": "APPROVED physical recipe and manufacturing effort by user 2 Nov 2026; see §73. Factory CC and suggested quote are derived provisional scenarios only, not approved. Shared Part wear rules govern maintenance; Water within Food. Exact category morale weights and world-support sizing remain future shared engineering.",
+    "image": {
+      "key": "assets/art/universe/machines/machine-immersive-recreation-suite.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A large immersive recreation installation providing sixty resident service slots per day. Specific visual requirements: immersive recreation suite: one physically plausible independent manufactured industrial machine in a compact workshop environment, Year-5326 Koplin industrial realism, metal and ceramic structures with practical utility connections. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
+    },
+    "manufacturing": {
+      "authority": "approved-physical-bom-prices-provisional",
       "finishedPartInputs": [
         {
           "partId": "part-computing-parts",
@@ -1516,27 +4352,49 @@
           "quantityKg": 20
         }
       ],
-      "assemblyLabourHours": 180,
-      "factoryShopHours": 135,
-      "qualificationTestHours": 70,
-      "targetGoodUnitYield": 0.93
+      "nestedMachineInputs": [],
+      "assemblyHours": 180,
+      "factoryHours": 135,
+      "testHours": 70,
+      "goodUnitYield": 0.93,
+      "finishedMassKg": null,
+      "manufacturerCostCC": null,
+      "manufacturerQuoteCC": null,
+      "physicalApprovalEvidence": "approved-physical-bom-2026-11-02"
     },
-    "amenityProfile": {
-      "approval": "approved-discovery-2026-11-02",
-      "category": "immersive_recreation",
-      "residentServiceSlotsPerDay": 60,
-      "floorAreaM2": 50,
-      "operatingPowerUnits": 20
+    "operatingProfile": {
+      "ratedCapacity": {
+        "quantity": 60,
+        "unit": "resident service slots/day"
+      },
+      "operatingPowerUnits": 20,
+      "footprintM2": 50,
+      "amenityCategory": "immersive_recreation",
+      "housingTechnologyTier": 4,
+      "ratingApprovalEvidence": "approved-discovery-2026-11-02"
     },
-    "manufacturingDesignStatus": "APPROVED_PHYSICAL_BOM_2026_11_02__MANUFACTURER_CC_AND_GENERIC_WEAR_RATES_PROVISIONAL",
-    "manufacturingDesignNotes": "APPROVED physical recipe and manufacturing effort by user 2 Nov 2026; see §73. Factory CC and suggested quote are derived provisional scenarios only, not approved. Shared Part wear rules govern maintenance; Water within Food. Exact category morale weights and world-support sizing remain future shared engineering.",
-    "image": {
-      "key": "assets/art/universe/machines/machine-immersive-recreation-suite.webp",
-      "generated": true,
-      "status": "generated",
-      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A large immersive recreation installation providing sixty resident service slots per day. Specific visual requirements: immersive recreation suite: one physically plausible independent manufactured industrial machine in a compact workshop environment, Year-5326 Koplin industrial realism, metal and ceramic structures with practical utility connections. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
-      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
-    }
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "Approved",
+      "manufacturing.directMaterialInputs": "Approved",
+      "manufacturing.nestedMachineInputs": "In Review",
+      "manufacturing.assemblyHours": "Approved",
+      "manufacturing.factoryHours": "Approved",
+      "manufacturing.testHours": "Approved",
+      "manufacturing.goodUnitYield": "Approved",
+      "manufacturing.finishedMassKg": "In Review",
+      "manufacturing.manufacturerCostCC": "In Review",
+      "manufacturing.manufacturerQuoteCC": "In Review",
+      "operatingProfile.ratedCapacity": "Approved",
+      "operatingProfile.operatingPowerUnits": "Approved",
+      "operatingProfile.footprintM2": "Approved",
+      "pendingPartCompatibility": "In Review",
+      "inputSummary": "In Review",
+      "outputSummary": "In Review"
+    },
+    "fieldApplicability": {
+      "pendingPartCompatibility": false
+    },
+    "approval": "In Review"
   },
   {
     "id": "machine-integrated-wellness-leisure-system",
@@ -1564,8 +4422,17 @@
       "sourceCommit": "1f17f5a9f9a816239f973b6fc1b3f56b379b596a",
       "androidDiscoveryWorkingId": "candidate-machine-integrated-wellness-leisure-system"
     },
-    "approvedPhysicalBOM": {
-      "approval": "approved-physical-bom-2026-11-02",
+    "manufacturingDesignStatus": "APPROVED_PHYSICAL_BOM_2026_11_02__MANUFACTURER_CC_AND_GENERIC_WEAR_RATES_PROVISIONAL",
+    "manufacturingDesignNotes": "APPROVED physical recipe and manufacturing effort by user 2 Nov 2026; see §73. Factory CC and suggested quote are derived provisional scenarios only, not approved. Shared Part wear rules govern maintenance; Water within Food. Exact category morale weights and world-support sizing remain future shared engineering.",
+    "image": {
+      "key": "assets/art/universe/machines/machine-integrated-wellness-leisure-system.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A high-capacity integrated wellness and recreation installation providing one hundred and twenty resident service slots per day. Specific visual requirements: integrated wellness & leisure system: one physically plausible independent manufactured industrial machine in a compact workshop environment, Year-5326 Koplin industrial realism, metal and ceramic structures with practical utility connections. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
+      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
+    },
+    "manufacturing": {
+      "authority": "approved-physical-bom-prices-provisional",
       "finishedPartInputs": [
         {
           "partId": "part-fluid-handling-parts",
@@ -1622,26 +4489,48 @@
           "quantityKg": 120
         }
       ],
-      "assemblyLabourHours": 300,
-      "factoryShopHours": 260,
-      "qualificationTestHours": 120,
-      "targetGoodUnitYield": 0.92
+      "nestedMachineInputs": [],
+      "assemblyHours": 300,
+      "factoryHours": 260,
+      "testHours": 120,
+      "goodUnitYield": 0.92,
+      "finishedMassKg": null,
+      "manufacturerCostCC": null,
+      "manufacturerQuoteCC": null,
+      "physicalApprovalEvidence": "approved-physical-bom-2026-11-02"
     },
-    "amenityProfile": {
-      "approval": "approved-discovery-2026-11-02",
-      "category": "wellness",
-      "residentServiceSlotsPerDay": 120,
-      "floorAreaM2": 120,
-      "operatingPowerUnits": 45
+    "operatingProfile": {
+      "ratedCapacity": {
+        "quantity": 120,
+        "unit": "resident service slots/day"
+      },
+      "operatingPowerUnits": 45,
+      "footprintM2": 120,
+      "amenityCategory": "wellness",
+      "housingTechnologyTier": 5,
+      "ratingApprovalEvidence": "approved-discovery-2026-11-02"
     },
-    "manufacturingDesignStatus": "APPROVED_PHYSICAL_BOM_2026_11_02__MANUFACTURER_CC_AND_GENERIC_WEAR_RATES_PROVISIONAL",
-    "manufacturingDesignNotes": "APPROVED physical recipe and manufacturing effort by user 2 Nov 2026; see §73. Factory CC and suggested quote are derived provisional scenarios only, not approved. Shared Part wear rules govern maintenance; Water within Food. Exact category morale weights and world-support sizing remain future shared engineering.",
-    "image": {
-      "key": "assets/art/universe/machines/machine-integrated-wellness-leisure-system.webp",
-      "generated": true,
-      "status": "generated",
-      "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A high-capacity integrated wellness and recreation installation providing one hundred and twenty resident service slots per day. Specific visual requirements: integrated wellness & leisure system: one physically plausible independent manufactured industrial machine in a compact workshop environment, Year-5326 Koplin industrial realism, metal and ceramic structures with practical utility connections. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
-      "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
-    }
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "Approved",
+      "manufacturing.directMaterialInputs": "Approved",
+      "manufacturing.nestedMachineInputs": "In Review",
+      "manufacturing.assemblyHours": "Approved",
+      "manufacturing.factoryHours": "Approved",
+      "manufacturing.testHours": "Approved",
+      "manufacturing.goodUnitYield": "Approved",
+      "manufacturing.finishedMassKg": "In Review",
+      "manufacturing.manufacturerCostCC": "In Review",
+      "manufacturing.manufacturerQuoteCC": "In Review",
+      "operatingProfile.ratedCapacity": "Approved",
+      "operatingProfile.operatingPowerUnits": "Approved",
+      "operatingProfile.footprintM2": "Approved",
+      "pendingPartCompatibility": "In Review",
+      "inputSummary": "In Review",
+      "outputSummary": "In Review"
+    },
+    "fieldApplicability": {
+      "pendingPartCompatibility": false
+    },
+    "approval": "In Review"
   }
 ]

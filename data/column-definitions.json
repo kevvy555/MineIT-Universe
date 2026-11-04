@@ -559,140 +559,13 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-amenity-profile-approval-1f212dd8",
-    "name": "Amenity Profile / approval",
+    "id": "column-definition-machines-name-8717a224",
+    "name": "Name",
     "table": "machines",
-    "fieldKey": "amenityProfile.approval",
-    "category": "Power & Service",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-amenity-profile-category-fce7b437",
-    "name": "Amenity Profile / category",
-    "table": "machines",
-    "fieldKey": "amenityProfile.category",
-    "category": "Power & Service",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-amenity-profile-floor-area-m2-3807948d",
-    "name": "Amenity Profile / floor Area M2",
-    "table": "machines",
-    "fieldKey": "amenityProfile.floorAreaM2",
-    "category": "Power & Service",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-amenity-profile-operating-power-units-e48f62ee",
-    "name": "Amenity Profile / operating Power Units",
-    "table": "machines",
-    "fieldKey": "amenityProfile.operatingPowerUnits",
-    "category": "Power & Service",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-amenity-profile-resident-service-slots-per-day-ab9b8168",
-    "name": "Amenity Profile / resident Service Slots Per Day",
-    "table": "machines",
-    "fieldKey": "amenityProfile.residentServiceSlotsPerDay",
-    "category": "Power & Service",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-approval-9f4f8684",
-    "name": "Approval",
-    "table": "machines",
-    "fieldKey": "approval",
-    "category": "Discovery & Approval",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-approved-physical-bom-approval-4677a76e",
-    "name": "Approved Physical BOM / approval",
-    "table": "machines",
-    "fieldKey": "approvedPhysicalBOM.approval",
-    "category": "Manufacturing & Quality",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-approved-physical-bom-assembly-labour-hours-6ecfbab9",
-    "name": "Approved Physical BOM / assembly Labour Hours",
-    "table": "machines",
-    "fieldKey": "approvedPhysicalBOM.assemblyLabourHours",
-    "category": "Manufacturing & Quality",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-approved-physical-bom-direct-material-inputs-55842970",
-    "name": "Approved Physical BOM / direct Material Inputs",
-    "table": "machines",
-    "fieldKey": "approvedPhysicalBOM.directMaterialInputs",
-    "category": "Parts & Materials",
-    "requiresApproval": true,
-    "approvalPolicy": "manufacturing-design",
-    "description": "Designer review required for this field; source-derived draft values are not automatically approved."
-  },
-  {
-    "id": "column-definition-machines-approved-physical-bom-factory-shop-hours-f2343d40",
-    "name": "Approved Physical BOM / factory Shop Hours",
-    "table": "machines",
-    "fieldKey": "approvedPhysicalBOM.factoryShopHours",
-    "category": "Manufacturing & Quality",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-approved-physical-bom-finished-part-inputs-01426b0b",
-    "name": "Approved Physical BOM / finished Part Inputs",
-    "table": "machines",
-    "fieldKey": "approvedPhysicalBOM.finishedPartInputs",
-    "category": "Parts & Materials",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-approved-physical-bom-qualification-test-hours-42e332e9",
-    "name": "Approved Physical BOM / qualification Test Hours",
-    "table": "machines",
-    "fieldKey": "approvedPhysicalBOM.qualificationTestHours",
-    "category": "Manufacturing & Quality",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-approved-physical-bom-target-good-unit-yield-0d96ca44",
-    "name": "Approved Physical BOM / target Good Unit Yield",
-    "table": "machines",
-    "fieldKey": "approvedPhysicalBOM.targetGoodUnitYield",
-    "category": "Manufacturing & Quality",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-canon-status-e485cad8",
-    "name": "Canon Status",
-    "table": "machines",
-    "fieldKey": "canonStatus",
-    "category": "Canon & Provenance",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-catalogue-status-eb302c8a",
-    "name": "Catalogue Status",
-    "table": "machines",
-    "fieldKey": "catalogueStatus",
+    "fieldKey": "name",
     "category": "Identity & Classification",
     "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
+    "description": "Designer-facing identity, derived relationship or display field; no separate sign-off."
   },
   {
     "id": "column-definition-machines-category-220390fb",
@@ -701,124 +574,212 @@
     "fieldKey": "category",
     "category": "Identity & Classification",
     "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
+    "description": "Designer-facing identity, derived relationship or display field; no separate sign-off."
+  },
+  {
+    "id": "column-definition-machines-sub-category-b6bae68f",
+    "name": "Subcategory",
+    "table": "machines",
+    "fieldKey": "subCategory",
+    "category": "Identity & Classification",
+    "requiresApproval": false,
+    "description": "Designer-facing identity, derived relationship or display field; no separate sign-off."
   },
   {
     "id": "column-definition-machines-description-fb3211cb",
     "name": "Description",
     "table": "machines",
     "fieldKey": "description",
-    "category": "Description",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-entity-type-da1607a8",
-    "name": "Entity Type",
-    "table": "machines",
-    "fieldKey": "entityType",
     "category": "Identity & Classification",
     "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
+    "description": "Designer-facing identity, derived relationship or display field; no separate sign-off."
   },
   {
-    "id": "column-definition-machines-fuel-type-f2f98a43",
-    "name": "Fuel Type",
+    "id": "column-definition-machines-manufacturing-finished-part-inputs",
+    "name": "Finished Part Inputs",
     "table": "machines",
-    "fieldKey": "fuelType",
-    "category": "Nested Machines & Capabilities",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
+    "fieldKey": "manufacturing.finishedPartInputs",
+    "category": "Physical Construction",
+    "requiresApproval": true,
+    "description": "Requires an explicit Machine design decision. Historic proposals or missing quantities are not approvals; use fieldApplicability only for explicitly non-applicable requirements.",
+    "approvalPolicy": "machines-explicit-design-and-quantities"
   },
   {
-    "id": "column-definition-machines-id-d9c353ea",
-    "name": "ID",
+    "id": "column-definition-machines-manufacturing-direct-material-inputs",
+    "name": "Direct Material Inputs",
     "table": "machines",
-    "fieldKey": "id",
-    "category": "Identity & Classification",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
+    "fieldKey": "manufacturing.directMaterialInputs",
+    "category": "Physical Construction",
+    "requiresApproval": true,
+    "description": "Requires an explicit Machine design decision. Historic proposals or missing quantities are not approvals; use fieldApplicability only for explicitly non-applicable requirements.",
+    "approvalPolicy": "machines-explicit-design-and-quantities"
   },
   {
-    "id": "column-definition-machines-image-generated-5f160937",
-    "name": "Image / generated",
+    "id": "column-definition-machines-manufacturing-nested-machine-inputs",
+    "name": "Nested Machines",
     "table": "machines",
-    "fieldKey": "image.generated",
-    "category": "Artwork & Visuals",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
+    "fieldKey": "manufacturing.nestedMachineInputs",
+    "category": "Physical Construction",
+    "requiresApproval": true,
+    "description": "Requires an explicit Machine design decision. Historic proposals or missing quantities are not approvals; use fieldApplicability only for explicitly non-applicable requirements.",
+    "approvalPolicy": "machines-explicit-design-and-quantities"
   },
   {
-    "id": "column-definition-machines-image-key-093cff2d",
-    "name": "Image / key",
+    "id": "column-definition-machines-pending-part-compatibility-38abd145",
+    "name": "Pending Part Compatibility",
     "table": "machines",
-    "fieldKey": "image.key",
-    "category": "Artwork & Visuals",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
+    "fieldKey": "pendingPartCompatibility",
+    "category": "Physical Construction",
+    "requiresApproval": true,
+    "description": "Requires an explicit Machine design decision. Historic proposals or missing quantities are not approvals; use fieldApplicability only for explicitly non-applicable requirements.",
+    "approvalPolicy": "machines-explicit-design-and-quantities"
   },
   {
-    "id": "column-definition-machines-image-notes-6bf6a5d3",
-    "name": "Image / notes",
+    "id": "column-definition-machines-output-summary-ca1f3156",
+    "name": "Function / Output",
     "table": "machines",
-    "fieldKey": "image.notes",
-    "category": "Canon & Provenance",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-image-prompt-description-b0a2b2d6",
-    "name": "Image / prompt Description",
-    "table": "machines",
-    "fieldKey": "image.promptDescription",
-    "category": "Artwork & Visuals",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-image-status-2b752238",
-    "name": "Image / status",
-    "table": "machines",
-    "fieldKey": "image.status",
-    "category": "Artwork & Visuals",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
+    "fieldKey": "outputSummary",
+    "category": "Operation & Capabilities",
+    "requiresApproval": true,
+    "description": "Requires an explicit Machine design decision. Historic proposals or missing quantities are not approvals; use fieldApplicability only for explicitly non-applicable requirements.",
+    "approvalPolicy": "machines-explicit-design-and-quantities"
   },
   {
     "id": "column-definition-machines-input-summary-34aa34f3",
-    "name": "Input Summary",
+    "name": "Operating Inputs",
     "table": "machines",
     "fieldKey": "inputSummary",
-    "category": "Nested Machines & Capabilities",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
+    "category": "Operation & Capabilities",
+    "requiresApproval": true,
+    "description": "Requires an explicit Machine design decision. Historic proposals or missing quantities are not approvals; use fieldApplicability only for explicitly non-applicable requirements.",
+    "approvalPolicy": "machines-explicit-design-and-quantities"
   },
   {
-    "id": "column-definition-machines-manufacturing-design-notes-6d715926",
-    "name": "Manufacturing Design Notes",
+    "id": "column-definition-machines-operating-profile-rated-capacity",
+    "name": "Rated Capacity",
     "table": "machines",
-    "fieldKey": "manufacturingDesignNotes",
+    "fieldKey": "operatingProfile.ratedCapacity",
+    "category": "Operation & Capabilities",
+    "requiresApproval": true,
+    "description": "Requires an explicit Machine design decision. Historic proposals or missing quantities are not approvals; use fieldApplicability only for explicitly non-applicable requirements.",
+    "approvalPolicy": "machines-explicit-design-and-quantities"
+  },
+  {
+    "id": "column-definition-machines-operating-profile-operating-power-units",
+    "name": "Operating Power",
+    "table": "machines",
+    "fieldKey": "operatingProfile.operatingPowerUnits",
+    "category": "Operation & Capabilities",
+    "requiresApproval": true,
+    "description": "Requires an explicit Machine design decision. Historic proposals or missing quantities are not approvals; use fieldApplicability only for explicitly non-applicable requirements.",
+    "approvalPolicy": "machines-explicit-design-and-quantities"
+  },
+  {
+    "id": "column-definition-machines-operating-profile-footprint-m2",
+    "name": "Footprint (m²)",
+    "table": "machines",
+    "fieldKey": "operatingProfile.footprintM2",
+    "category": "Operation & Capabilities",
+    "requiresApproval": true,
+    "description": "Requires an explicit Machine design decision. Historic proposals or missing quantities are not approvals; use fieldApplicability only for explicitly non-applicable requirements.",
+    "approvalPolicy": "machines-explicit-design-and-quantities"
+  },
+  {
+    "id": "column-definition-machines-building-compatibility-ids",
+    "name": "Building Compatibility",
+    "table": "machines",
+    "fieldKey": "buildingCompatibilityIds",
+    "category": "Operation & Capabilities",
+    "requiresApproval": false,
+    "description": "Designer-facing identity, derived relationship or display field; no separate sign-off."
+  },
+  {
+    "id": "column-definition-machines-technology-unlock",
+    "name": "Technology Unlock",
+    "table": "machines",
+    "fieldKey": "technologyUnlock",
+    "category": "Operation & Capabilities",
+    "requiresApproval": false,
+    "description": "Designer-facing identity, derived relationship or display field; no separate sign-off."
+  },
+  {
+    "id": "column-definition-machines-manufacturing-assembly-hours",
+    "name": "Assembly Hours",
+    "table": "machines",
+    "fieldKey": "manufacturing.assemblyHours",
+    "category": "Manufacturing & Pricing",
+    "requiresApproval": true,
+    "description": "Requires an explicit Machine design decision. Historic proposals or missing quantities are not approvals; use fieldApplicability only for explicitly non-applicable requirements.",
+    "approvalPolicy": "machines-explicit-design-and-quantities"
+  },
+  {
+    "id": "column-definition-machines-manufacturing-factory-hours",
+    "name": "Factory Hours",
+    "table": "machines",
+    "fieldKey": "manufacturing.factoryHours",
+    "category": "Manufacturing & Pricing",
+    "requiresApproval": true,
+    "description": "Requires an explicit Machine design decision. Historic proposals or missing quantities are not approvals; use fieldApplicability only for explicitly non-applicable requirements.",
+    "approvalPolicy": "machines-explicit-design-and-quantities"
+  },
+  {
+    "id": "column-definition-machines-manufacturing-test-hours",
+    "name": "Test Hours",
+    "table": "machines",
+    "fieldKey": "manufacturing.testHours",
+    "category": "Manufacturing & Pricing",
+    "requiresApproval": true,
+    "description": "Requires an explicit Machine design decision. Historic proposals or missing quantities are not approvals; use fieldApplicability only for explicitly non-applicable requirements.",
+    "approvalPolicy": "machines-explicit-design-and-quantities"
+  },
+  {
+    "id": "column-definition-machines-manufacturing-good-unit-yield",
+    "name": "Good Unit Yield",
+    "table": "machines",
+    "fieldKey": "manufacturing.goodUnitYield",
+    "category": "Manufacturing & Pricing",
+    "requiresApproval": true,
+    "description": "Requires an explicit Machine design decision. Historic proposals or missing quantities are not approvals; use fieldApplicability only for explicitly non-applicable requirements.",
+    "approvalPolicy": "machines-explicit-design-and-quantities"
+  },
+  {
+    "id": "column-definition-machines-manufacturing-finished-mass-kg",
+    "name": "Finished Weight (kg)",
+    "table": "machines",
+    "fieldKey": "manufacturing.finishedMassKg",
+    "category": "Manufacturing & Pricing",
+    "requiresApproval": true,
+    "description": "Requires an explicit Machine design decision. Historic proposals or missing quantities are not approvals; use fieldApplicability only for explicitly non-applicable requirements.",
+    "approvalPolicy": "machines-explicit-design-and-quantities"
+  },
+  {
+    "id": "column-definition-machines-manufacturing-manufacturer-cost-cc",
+    "name": "Manufacturer Cost (CC)",
+    "table": "machines",
+    "fieldKey": "manufacturing.manufacturerCostCC",
+    "category": "Manufacturing & Pricing",
+    "requiresApproval": true,
+    "description": "Requires an explicit Machine design decision. Historic proposals or missing quantities are not approvals; use fieldApplicability only for explicitly non-applicable requirements.",
+    "approvalPolicy": "machines-explicit-design-and-quantities"
+  },
+  {
+    "id": "column-definition-machines-manufacturing-manufacturer-quote-cc",
+    "name": "Manufacturer Quote (CC)",
+    "table": "machines",
+    "fieldKey": "manufacturing.manufacturerQuoteCC",
+    "category": "Manufacturing & Pricing",
+    "requiresApproval": true,
+    "description": "Requires an explicit Machine design decision. Historic proposals or missing quantities are not approvals; use fieldApplicability only for explicitly non-applicable requirements.",
+    "approvalPolicy": "machines-explicit-design-and-quantities"
+  },
+  {
+    "id": "column-definition-machines-approval-9f4f8684",
+    "name": "Approval",
+    "table": "machines",
+    "fieldKey": "approval",
     "category": "Discovery & Approval",
     "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-manufacturing-design-status-236e3b1b",
-    "name": "Manufacturing Design Status",
-    "table": "machines",
-    "fieldKey": "manufacturingDesignStatus",
-    "category": "Discovery & Approval",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-name-8717a224",
-    "name": "Name",
-    "table": "machines",
-    "fieldKey": "name",
-    "category": "Identity & Classification",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
+    "description": "Designer-facing identity, derived relationship or display field; no separate sign-off."
   },
   {
     "id": "column-definition-machines-needs-approval-d56fe44b",
@@ -827,667 +788,16 @@
     "fieldKey": "needsApproval",
     "category": "Discovery & Approval",
     "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
+    "description": "Designer-facing identity, derived relationship or display field; no separate sign-off."
   },
   {
-    "id": "column-definition-machines-output-summary-ca1f3156",
-    "name": "Output Summary",
+    "id": "column-definition-machines-image-generated-5f160937",
+    "name": "Image Generated",
     "table": "machines",
-    "fieldKey": "outputSummary",
-    "category": "Nested Machines & Capabilities",
+    "fieldKey": "image.generated",
+    "category": "Artwork & Visuals",
     "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-part-ids-03d4914c",
-    "name": "Part IDs",
-    "table": "machines",
-    "fieldKey": "partIds",
-    "category": "Parts & Materials",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-pending-part-compatibility-38abd145",
-    "name": "Pending Part Compatibility",
-    "table": "machines",
-    "fieldKey": "pendingPartCompatibility",
-    "category": "Parts & Materials",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-principal-material-ids-69c5068c",
-    "name": "Principal Material IDs",
-    "table": "machines",
-    "fieldKey": "principalMaterialIds",
-    "category": "Parts & Materials",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-provenance-android-discovery-working-id-a605e89d",
-    "name": "Provenance / android Discovery Working ID",
-    "table": "machines",
-    "fieldKey": "provenance.androidDiscoveryWorkingId",
-    "category": "Canon & Provenance",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-provenance-authored-for-1c46596f",
-    "name": "Provenance / authored For",
-    "table": "machines",
-    "fieldKey": "provenance.authoredFor",
-    "category": "Canon & Provenance",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-provenance-desktop-path-a93622bd",
-    "name": "Provenance / desktop Path",
-    "table": "machines",
-    "fieldKey": "provenance.desktopPath",
-    "category": "Canon & Provenance",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-provenance-lore-path-b43ade59",
-    "name": "Provenance / lore Path",
-    "table": "machines",
-    "fieldKey": "provenance.lorePath",
-    "category": "Canon & Provenance",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-provenance-source-commit-85b6168a",
-    "name": "Provenance / source Commit",
-    "table": "machines",
-    "fieldKey": "provenance.sourceCommit",
-    "category": "Canon & Provenance",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-provenance-source-path-39c0f554",
-    "name": "Provenance / source Path",
-    "table": "machines",
-    "fieldKey": "provenance.sourcePath",
-    "category": "Canon & Provenance",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-provenance-source-repository-e3669577",
-    "name": "Provenance / source Repository",
-    "table": "machines",
-    "fieldKey": "provenance.sourceRepository",
-    "category": "Canon & Provenance",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-provenance-source-state-58c91fc4",
-    "name": "Provenance / source State",
-    "table": "machines",
-    "fieldKey": "provenance.sourceState",
-    "category": "Canon & Provenance",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-electric-motors-approval-status-9502786e",
-    "name": "Review / electric Motors / approval status",
-    "table": "machines",
-    "fieldKey": "review.electricMotors.approval_status",
-    "category": "Discovery & Approval",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-electric-motors-approved-principal-materials-d2250eb7",
-    "name": "Review / electric Motors / approved principal materials",
-    "table": "machines",
-    "fieldKey": "review.electricMotors.approved_principal_materials",
-    "category": "Parts & Materials",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-electric-motors-existing-manufacturing-destination-1114730b",
-    "name": "Review / electric Motors / existing manufacturing destination",
-    "table": "machines",
-    "fieldKey": "review.electricMotors.existing_manufacturing_destination",
-    "category": "Nested Machines & Capabilities",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-electric-motors-intended-machine-consumers-0063cedf",
-    "name": "Review / electric Motors / intended machine consumers",
-    "table": "machines",
-    "fieldKey": "review.electricMotors.intended_machine_consumers",
-    "category": "Nested Machines & Capabilities",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-electric-motors-pricing-and-units-67fc5250",
-    "name": "Review / electric Motors / pricing and units",
-    "table": "machines",
-    "fieldKey": "review.electricMotors.pricing_and_units",
-    "category": "Costs & Reference Quotes",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-electric-motors-product-kind-73b86cb2",
-    "name": "Review / electric Motors / product kind",
-    "table": "machines",
-    "fieldKey": "review.electricMotors.product_kind",
-    "category": "Identity & Classification",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-electric-motors-product-name-da248333",
-    "name": "Review / electric Motors / product name",
-    "table": "machines",
-    "fieldKey": "review.electricMotors.product_name",
-    "category": "Identity & Classification",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-electric-motors-unresolved-requirements-5c5ccabc",
-    "name": "Review / electric Motors / unresolved requirements",
-    "table": "machines",
-    "fieldKey": "review.electricMotors.unresolved_requirements",
-    "category": "Discovery & Approval",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-luxury-bom-accounted-direct-and-part-input-mass-kg-7e532521",
-    "name": "Review / luxury BOM / accounted direct and part input mass kg",
-    "table": "machines",
-    "fieldKey": "review.luxuryBOM.accounted_direct_and_part_input_mass_kg",
-    "category": "Manufacturing & Quality",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-luxury-bom-amenity-category-ab2c87a2",
-    "name": "Review / luxury BOM / amenity category",
-    "table": "machines",
-    "fieldKey": "review.luxuryBOM.amenity_category",
-    "category": "Power & Service",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-luxury-bom-approval-status-b60ba304",
-    "name": "Review / luxury BOM / approval status",
-    "table": "machines",
-    "fieldKey": "review.luxuryBOM.approval_status",
-    "category": "Discovery & Approval",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-luxury-bom-footprint-m2-approved-0ea420a5",
-    "name": "Review / luxury BOM / footprint m2 APPROVED",
-    "table": "machines",
-    "fieldKey": "review.luxuryBOM.footprint_m2_APPROVED",
-    "category": "Power & Service",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-luxury-bom-housing-tech-unlock-7a96d7c7",
-    "name": "Review / luxury BOM / housing tech unlock",
-    "table": "machines",
-    "fieldKey": "review.luxuryBOM.housing_tech_unlock",
-    "category": "Power & Service",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-luxury-bom-name-a61c61c9",
-    "name": "Review / luxury BOM / name",
-    "table": "machines",
-    "fieldKey": "review.luxuryBOM.name",
-    "category": "Identity & Classification",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-luxury-bom-operating-consumables-and-maintenance-0ef72bf0",
-    "name": "Review / luxury BOM / operating consumables and maintenance",
-    "table": "machines",
-    "fieldKey": "review.luxuryBOM.operating_consumables_and_maintenance",
-    "category": "Power & Service",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-luxury-bom-operating-power-units-approved-6ff02897",
-    "name": "Review / luxury BOM / operating power units APPROVED",
-    "table": "machines",
-    "fieldKey": "review.luxuryBOM.operating_power_units_APPROVED",
-    "category": "Power & Service",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-luxury-bom-proposed-assembly-labour-h-ba31abf2",
-    "name": "Review / luxury BOM / proposed assembly labour h",
-    "table": "machines",
-    "fieldKey": "review.luxuryBOM.proposed_assembly_labour_h",
-    "category": "Manufacturing & Quality",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-luxury-bom-proposed-direct-finished-part-counts-6e2edd3e",
-    "name": "Review / luxury BOM / proposed direct finished part counts",
-    "table": "machines",
-    "fieldKey": "review.luxuryBOM.proposed_direct_finished_part_counts",
-    "category": "Parts & Materials",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-luxury-bom-proposed-direct-processed-materials-kg-12ce9f21",
-    "name": "Review / luxury BOM / proposed direct processed materials kg",
-    "table": "machines",
-    "fieldKey": "review.luxuryBOM.proposed_direct_processed_materials_kg",
-    "category": "Parts & Materials",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-luxury-bom-proposed-factory-shop-h-39f29921",
-    "name": "Review / luxury BOM / proposed factory shop h",
-    "table": "machines",
-    "fieldKey": "review.luxuryBOM.proposed_factory_shop_h",
-    "category": "Manufacturing & Quality",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-luxury-bom-proposed-good-unit-yield-65fc38ad",
-    "name": "Review / luxury BOM / proposed good unit yield",
-    "table": "machines",
-    "fieldKey": "review.luxuryBOM.proposed_good_unit_yield",
-    "category": "Manufacturing & Quality",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-luxury-bom-proposed-qualification-test-h-a2364f50",
-    "name": "Review / luxury BOM / proposed qualification test h",
-    "table": "machines",
-    "fieldKey": "review.luxuryBOM.proposed_qualification_test_h",
-    "category": "Manufacturing & Quality",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-luxury-bom-provisional-direct-material-cost-cc-b94dbbf7",
-    "name": "Review / luxury BOM / provisional direct material cost CC",
-    "table": "machines",
-    "fieldKey": "review.luxuryBOM.provisional_direct_material_cost_CC",
-    "category": "Costs & Reference Quotes",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-luxury-bom-provisional-factory-and-test-cost-cc-1bcf4997",
-    "name": "Review / luxury BOM / provisional factory and test cost CC",
-    "table": "machines",
-    "fieldKey": "review.luxuryBOM.provisional_factory_and_test_cost_CC",
-    "category": "Costs & Reference Quotes",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-luxury-bom-provisional-labour-cost-cc-c4a2d159",
-    "name": "Review / luxury BOM / provisional labour cost CC",
-    "table": "machines",
-    "fieldKey": "review.luxuryBOM.provisional_labour_cost_CC",
-    "category": "Costs & Reference Quotes",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-luxury-bom-provisional-manufacturer-cost-cc-e5fa0843",
-    "name": "Review / luxury BOM / provisional manufacturer cost CC",
-    "table": "machines",
-    "fieldKey": "review.luxuryBOM.provisional_manufacturer_cost_CC",
-    "category": "Costs & Reference Quotes",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-luxury-bom-provisional-manufacturer-sell-quote-cc-21b106ed",
-    "name": "Review / luxury BOM / provisional manufacturer sell quote CC",
-    "table": "machines",
-    "fieldKey": "review.luxuryBOM.provisional_manufacturer_sell_quote_CC",
-    "category": "Costs & Reference Quotes",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-luxury-bom-reference-part-factory-cost-cc-911ef9b3",
-    "name": "Review / luxury BOM / reference part factory cost CC",
-    "table": "machines",
-    "fieldKey": "review.luxuryBOM.reference_part_factory_cost_CC",
-    "category": "Costs & Reference Quotes",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-luxury-bom-resident-service-slots-per-day-approved-926365a1",
-    "name": "Review / luxury BOM / resident service slots per day APPROVED",
-    "table": "machines",
-    "fieldKey": "review.luxuryBOM.resident_service_slots_per_day_APPROVED",
-    "category": "Power & Service",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-luxury-bom-unresolved-engineering-and-pricing-constraints-f9cfb925",
-    "name": "Review / luxury BOM / unresolved engineering and pricing constraints",
-    "table": "machines",
-    "fieldKey": "review.luxuryBOM.unresolved_engineering_and_pricing_constraints",
-    "category": "Discovery & Approval",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-luxury-ratings-amenity-category-e13c0eea",
-    "name": "Review / luxury Ratings / amenity category",
-    "table": "machines",
-    "fieldKey": "review.luxuryRatings.amenity_category",
-    "category": "Power & Service",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-luxury-ratings-approval-status-d231bafc",
-    "name": "Review / luxury Ratings / approval status",
-    "table": "machines",
-    "fieldKey": "review.luxuryRatings.approval_status",
-    "category": "Discovery & Approval",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-luxury-ratings-candidate-machine-name-94410d01",
-    "name": "Review / luxury Ratings / candidate machine name",
-    "table": "machines",
-    "fieldKey": "review.luxuryRatings.candidate_machine_name",
-    "category": "Identity & Classification",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-luxury-ratings-finished-part-inputs-approved-2026-11-02-5a02c69f",
-    "name": "Review / luxury Ratings / finished part inputs approved 2026 11 02",
-    "table": "machines",
-    "fieldKey": "review.luxuryRatings.finished_part_inputs_approved_2026_11_02",
-    "category": "Parts & Materials",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-luxury-ratings-notes-44b32a6f",
-    "name": "Review / luxury Ratings / notes",
-    "table": "machines",
-    "fieldKey": "review.luxuryRatings.notes",
-    "category": "Power & Service",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-luxury-ratings-proposed-machine-footprint-m2-1274a660",
-    "name": "Review / luxury Ratings / proposed machine footprint m2",
-    "table": "machines",
-    "fieldKey": "review.luxuryRatings.proposed_machine_footprint_m2",
-    "category": "Power & Service",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-luxury-ratings-proposed-operating-consumables-02a4c4ff",
-    "name": "Review / luxury Ratings / proposed operating consumables",
-    "table": "machines",
-    "fieldKey": "review.luxuryRatings.proposed_operating_consumables",
-    "category": "Power & Service",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-luxury-ratings-proposed-operating-power-units-ac81c35a",
-    "name": "Review / luxury Ratings / proposed operating power units",
-    "table": "machines",
-    "fieldKey": "review.luxuryRatings.proposed_operating_power_units",
-    "category": "Power & Service",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-luxury-ratings-proposed-resident-service-equivalents-per-day-a30ffe4a",
-    "name": "Review / luxury Ratings / proposed resident service equivalents per day",
-    "table": "machines",
-    "fieldKey": "review.luxuryRatings.proposed_resident_service_equivalents_per_day",
-    "category": "Power & Service",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-luxury-ratings-required-housing-tech-level-9a3d8939",
-    "name": "Review / luxury Ratings / required housing tech level",
-    "table": "machines",
-    "fieldKey": "review.luxuryRatings.required_housing_tech_level",
-    "category": "Power & Service",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-manufacturing-bom-accounted-material-subassembly-mass-kg-part-0ee999a7",
-    "name": "Review / manufacturing BOM / accounted material subassembly mass kg partial if blocked",
-    "table": "machines",
-    "fieldKey": "review.manufacturingBOM.accounted_material_subassembly_mass_kg_partial_if_blocked",
-    "category": "Manufacturing & Quality",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-manufacturing-bom-approval-status-5279654f",
-    "name": "Review / manufacturing BOM / approval status",
-    "table": "machines",
-    "fieldKey": "review.manufacturingBOM.approval_status",
-    "category": "Discovery & Approval",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-manufacturing-bom-canonical-source-part-ids-490ad57e",
-    "name": "Review / manufacturing BOM / canonical source part IDs",
-    "table": "machines",
-    "fieldKey": "review.manufacturingBOM.canonical_source_part_ids",
-    "category": "Parts & Materials",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-manufacturing-bom-category-319e9d97",
-    "name": "Review / manufacturing BOM / category",
-    "table": "machines",
-    "fieldKey": "review.manufacturingBOM.category",
-    "category": "Identity & Classification",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-manufacturing-bom-direct-processed-material-cost-cc-b3d672e0",
-    "name": "Review / manufacturing BOM / direct processed material cost CC",
-    "table": "machines",
-    "fieldKey": "review.manufacturingBOM.direct_processed_material_cost_CC",
-    "category": "Costs & Reference Quotes",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-manufacturing-bom-embedded-parts-factory-cost-cc-fec78ba6",
-    "name": "Review / manufacturing BOM / embedded parts factory cost CC",
-    "table": "machines",
-    "fieldKey": "review.manufacturingBOM.embedded_parts_factory_cost_CC",
-    "category": "Costs & Reference Quotes",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-manufacturing-bom-estimated-finished-freight-mass-kg-87dfb346",
-    "name": "Review / manufacturing BOM / estimated finished freight mass kg",
-    "table": "machines",
-    "fieldKey": "review.manufacturingBOM.estimated_finished_freight_mass_kg",
-    "category": "Manufacturing & Quality",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-manufacturing-bom-machine-name-9c42e55e",
-    "name": "Review / manufacturing BOM / machine name",
-    "table": "machines",
-    "fieldKey": "review.manufacturingBOM.machine_name",
-    "category": "Identity & Classification",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-manufacturing-bom-nested-machine-factory-cost-cc-30e4b6fc",
-    "name": "Review / manufacturing BOM / nested machine factory cost CC",
-    "table": "machines",
-    "fieldKey": "review.manufacturingBOM.nested_machine_factory_cost_CC",
-    "category": "Costs & Reference Quotes",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-manufacturing-bom-proposed-assembly-labour-hours-08453cec",
-    "name": "Review / manufacturing BOM / proposed assembly labour hours",
-    "table": "machines",
-    "fieldKey": "review.manufacturingBOM.proposed_assembly_labour_hours",
-    "category": "Manufacturing & Quality",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-manufacturing-bom-proposed-base-sell-quote-cc-90407f6a",
-    "name": "Review / manufacturing BOM / proposed base sell quote CC",
-    "table": "machines",
-    "fieldKey": "review.manufacturingBOM.proposed_base_sell_quote_CC",
-    "category": "Costs & Reference Quotes",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-manufacturing-bom-proposed-direct-processed-materials-kg-84991144",
-    "name": "Review / manufacturing BOM / proposed direct processed materials kg",
-    "table": "machines",
-    "fieldKey": "review.manufacturingBOM.proposed_direct_processed_materials_kg",
-    "category": "Parts & Materials",
-    "requiresApproval": true,
-    "approvalPolicy": "manufacturing-design",
-    "description": "Designer review required for this field; source-derived draft values are not automatically approved."
-  },
-  {
-    "id": "column-definition-machines-review-manufacturing-bom-proposed-factory-equipment-hours-43560d4b",
-    "name": "Review / manufacturing BOM / proposed factory equipment hours",
-    "table": "machines",
-    "fieldKey": "review.manufacturingBOM.proposed_factory_equipment_hours",
-    "category": "Manufacturing & Quality",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-manufacturing-bom-proposed-finished-part-ids-and-counts-772db900",
-    "name": "Review / manufacturing BOM / proposed finished part IDs and counts",
-    "table": "machines",
-    "fieldKey": "review.manufacturingBOM.proposed_finished_part_ids_and_counts",
-    "category": "Parts & Materials",
-    "requiresApproval": true,
-    "approvalPolicy": "manufacturing-design",
-    "description": "Designer review required for this field; source-derived draft values are not automatically approved."
-  },
-  {
-    "id": "column-definition-machines-review-manufacturing-bom-proposed-good-unit-yield-b39d257c",
-    "name": "Review / manufacturing BOM / proposed good unit yield",
-    "table": "machines",
-    "fieldKey": "review.manufacturingBOM.proposed_good_unit_yield",
-    "category": "Manufacturing & Quality",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-manufacturing-bom-proposed-manufacturer-cost-cc-6229e894",
-    "name": "Review / manufacturing BOM / proposed manufacturer cost CC",
-    "table": "machines",
-    "fieldKey": "review.manufacturingBOM.proposed_manufacturer_cost_CC",
-    "category": "Costs & Reference Quotes",
-    "requiresApproval": true,
-    "approvalPolicy": "manufacturing-economics",
-    "description": "Designer review required for this field; source-derived draft values are not automatically approved."
-  },
-  {
-    "id": "column-definition-machines-review-manufacturing-bom-proposed-nested-machine-ids-and-counts-264e4e1d",
-    "name": "Review / manufacturing BOM / proposed nested machine IDs and counts",
-    "table": "machines",
-    "fieldKey": "review.manufacturingBOM.proposed_nested_machine_ids_and_counts",
-    "category": "Nested Machines & Capabilities",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-manufacturing-bom-proposed-test-hours-a2f9251e",
-    "name": "Review / manufacturing BOM / proposed test hours",
-    "table": "machines",
-    "fieldKey": "review.manufacturingBOM.proposed_test_hours",
-    "category": "Manufacturing & Quality",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-review-manufacturing-bom-unresolved-design-constraints-612fdc20",
-    "name": "Review / manufacturing BOM / unresolved design constraints",
-    "table": "machines",
-    "fieldKey": "review.manufacturingBOM.unresolved_design_constraints",
-    "category": "Discovery & Approval",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-sources-15cf13d3",
-    "name": "Sources",
-    "table": "machines",
-    "fieldKey": "sources",
-    "category": "Identity & Classification",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-machines-sub-category-b6bae68f",
-    "name": "Sub Category",
-    "table": "machines",
-    "fieldKey": "subCategory",
-    "category": "Identity & Classification",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
+    "description": "Designer-facing identity, derived relationship or display field; no separate sign-off."
   },
   {
     "id": "column-definition-parts-approval-58a62b0e",
