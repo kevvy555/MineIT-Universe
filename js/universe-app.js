@@ -339,8 +339,8 @@ function partMaterialLinks(inputs) {
   const display = input => {
     const target = state.catalogue.get(input.substanceId);
     const name = target?.name || input.substanceId;
-    const kg = Number.isFinite(input.planningQuantityKg)
-      ? ` · ${input.planningQuantityKg} kg planning` : '';
+    const kg = Number.isFinite(input.quantityKg)
+      ? ` · ${input.quantityKg} kg` : '';
     const qualifier = input.requirement?.startsWith('conditional') ? ' (conditional)' :
       input.approval === 'planning-only-unqualified' ? ' (unqualified)' :
       input.requirement?.startsWith('upstream') ? ' (upstream)' : '';
@@ -699,7 +699,6 @@ function fieldsFor(collection, entity) {
   }
   if (collection === 'parts') {
     const economic = entity.planningReference;
-    const unit = entity.finishedUnit;
     const unresolved = (entity.unresolvedMaterialInputs || []).map(input =>
       input.label + (input.planningAllowanceKg == null ? '' :
         ' · ' + input.planningAllowanceKg + ' kg planning') + ' (' + input.status + ')');
@@ -713,13 +712,14 @@ function fieldsFor(collection, entity) {
       field('Approved / candidate material inputs', partMaterialLinks(entity.materialInputs)),
       field('Unresolved manufacturing inputs', unresolved.length ? esc(unresolved.join('; ')) : '—'),
       field('Material approval', esc(entity.materialApprovalStatus)),
-      field('Finished stock unit', unit ? esc(unit.description + ' (' + unit.count + ' ' + unit.unit + ')') : 'Not a separate finished stock product'),
-      field('Reference finished mass', Number.isFinite(economic?.finishedMassKg) ?
-        esc(economic.finishedMassKg + ' kg — planning only') : '—'),
-      field('Reference manufacturer cost', Number.isFinite(economic?.manufacturerCostCC) ?
-        esc(economic.manufacturerCostCC + ' CC / Part — planning only') : '—'),
-      field('Reference base sell quote', Number.isFinite(economic?.baseManufacturerQuoteCC) ?
-        esc(economic.baseManufacturerQuoteCC + ' CC / Part — planning only') : '—'),
+      field('FinishedUnitCount', esc(entity.finishedUnitCount)),
+      field('Finished Unit Description', esc(entity.finishedUnitDescription)),
+      field('Weight (kg)', Number.isFinite(economic?.finishedMassKg) ?
+        esc(economic.finishedMassKg + ' — planning reference') : '—'),
+      field('Manufacturer Cost (CC)', Number.isFinite(economic?.manufacturerCostCC) ?
+        esc(economic.manufacturerCostCC + ' — planning reference') : '—'),
+      field('Manufacturer Quote Cost (CC)', Number.isFinite(economic?.baseManufacturerQuoteCC) ?
+        esc(economic.baseManufacturerQuoteCC + ' — planning reference') : '—'),
       field('Reference status', esc(economic?.status)),
       field('Used in machines (compatibility)', links(entity.machineIds)),
       field('Legacy replacements', links(entity.legacyReplacementPartIds))
