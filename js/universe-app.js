@@ -3,7 +3,7 @@ import { bindOriginalImageOpener } from './image-lightbox.js';
 import { createSubstanceTable, loadAndroidResourceReference } from './substance-table.js';
 import { createIndustrialTables, loadIndustrialDiscoveryReference } from './industrial-table.js';
 import { createApprovalReferenceTables } from './approval-tables.js';
-import { approvalSummary, partMassReview } from './catalogue-approval.js';
+import { approvalSummary } from './catalogue-approval.js';
 
 const state = {
   catalogue: null,
@@ -725,11 +725,6 @@ function fieldsFor(collection, entity) {
       'planningReference.manufacturerCostCC': economic?.manufacturerCostCC,
       'planningReference.baseManufacturerQuoteCC': economic?.baseManufacturerQuoteCC
     }, state.catalogue);
-    const fieldNames = new Map(state.catalogue.collection('columnDefinitions')
-      .filter(item => item.table === 'parts' && item.requiresApproval)
-      .map(item => [item.fieldKey, item.name]));
-    const fieldApprovals = Object.entries(status.fieldStates).map(([key, value]) =>
-      (fieldNames.get(key) || key) + ': ' + value);
     fields.push(
       field('Part role', esc(entity.partRole === 'legacy-compatibility' ?
         'Legacy compatibility — not separate trade stock' : 'Finished product')),
@@ -740,8 +735,6 @@ function fieldsFor(collection, entity) {
       field('Approved / candidate material inputs', partMaterialLinks(entity.materialInputs)),
       field('Approval', esc(status.approval)),
        field('Needs Approval', esc(status.needsApproval.join(', ') || 'None')),
-       field('Field Approvals', esc(fieldApprovals.join(' • '))),
-       field('Mass Review', esc(partMassReview(entity))),
       field('FinishedUnitCount', esc(entity.finishedUnitCount)),
       field('Finished Unit Description', esc(entity.finishedUnitDescription)),
       field('Weight (kg)', Number.isFinite(economic?.finishedMassKg) ?
@@ -750,7 +743,6 @@ function fieldsFor(collection, entity) {
         esc(economic.manufacturerCostCC + ' — planning reference') : '—'),
       field('Manufacturer Quote Cost (CC)', Number.isFinite(economic?.baseManufacturerQuoteCC) ?
         esc(economic.baseManufacturerQuoteCC + ' — planning reference') : '—'),
-      field('Reference status', esc(economic?.status)),
       field('Used in machines (compatibility)', links(entity.machineIds)),
       field('Legacy replacements', links(entity.legacyReplacementPartIds))
     );
