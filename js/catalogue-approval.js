@@ -72,22 +72,3 @@ export function approvalSummary(kind, record, fields, catalogue) {
     needsApproval: pending, fieldStates: states };
 }
 
-export function partMassReview(part) {
-  const inputs = part.materialInputs || [];
-  const required = inputs.filter(input => !input.requirement?.startsWith("conditional") &&
-    input.requirement !== "upstream-precursor");
-  if (!required.length || required.some(input => !Number.isFinite(input.quantityKg)))
-    return "Pending material quantities";
-  const inputKg = required.reduce((sum, input) => sum + input.quantityKg, 0);
-  const optionalKg = inputs.filter(input => input.requirement?.startsWith("conditional") &&
-    Number.isFinite(input.quantityKg)).reduce((sum, input) => sum + input.quantityKg, 0);
-  const mass = part.planningReference?.finishedMassKg;
-  if (!Number.isFinite(mass)) return "Finished weight pending";
-  const round = value => Math.round(value * 100) / 100;
-  const delta = round(inputKg - mass);
-  const base = `${round(inputKg)} kg inputs vs ${mass} kg finished`;
-  return delta === 0 && !optionalKg ? "Matched: " + base :
-    base + ` (difference ${delta > 0 ? "+" : ""}${delta} kg)` +
-    (optionalKg ? `; conditional +${round(optionalKg)} kg` : "") +
-    " — reconcile process losses, options or weight";
-}
