@@ -1,5 +1,5 @@
 import { createSubstanceTable } from "./substance-table.js";
-import { approvalSummary, partMassReview } from "./catalogue-approval.js";
+import { approvalSummary } from "./catalogue-approval.js";
 
 // This is a read-only projection, not an independently authored industrial catalogue.
 // Canonical identities and relationships are loaded from the Universe manifest.
@@ -26,21 +26,19 @@ const configurations = {
     title: "Parts",
     description: "19 finished Part products. Three superseded generic Parts were retired; unresolved Machine and research relationships remain pending review. Quantities, masses and CC prices are discovery planning references, not live game recipes or prices.",
     defaultColumns: ["name", "category", "subCategory", "finishedUnitCount", "materialInputs",
-      "approval", "needsApproval", "massReview", "planningReference.finishedMassKg",
+      "approval", "needsApproval", "image.generated", "planningReference.finishedMassKg",
       "planningReference.manufacturerCostCC", "planningReference.baseManufacturerQuoteCC"],
-    imagePreviewField: "partImage",
+    pendingColumnAction: true,
     columnLabels: {
       finishedUnitCount: "FinishedUnitCount",
       finishedUnitDescription: "Finished Unit Description",
       "planningReference.finishedMassKg": "Weight (kg)",
       "planningReference.manufacturerCostCC": "Manufacturer Cost (CC)",
       "planningReference.baseManufacturerQuoteCC": "Manufacturer Quote Cost (CC)",
-      partImage: "Part Image",
+      "image.generated": "Image Generated",
       approval: "Approval",
-      needsApproval: "Needs Approval",
-      massReview: "Mass Review"
+      needsApproval: "Needs Approval"
     },
-    hiddenFields: ["entityType", "catalogueStatus"],
     linkedFields: ["substanceIds", "materialInputs", "machineIds"],
     groups: [
       group("Identity & Classification",
@@ -49,11 +47,10 @@ const configurations = {
         "substanceIds materialInputs"),
       group("Machines & Usage", "machineIds"),
       group("Production & Prices",
-        "massReview planningReference.finishedMassKg planningReference.manufacturerCostCC planningReference.baseManufacturerQuoteCC planningReference.status planningReference.basis"),
-      group("Discovery & Approval",
-        "approval needsApproval fieldApprovalStatuses.partRole fieldApprovalStatuses.finishedUnitCount fieldApprovalStatuses.finishedUnitDescription fieldApprovalStatuses.materialInputs fieldApprovalStatuses.planningReference.finishedMassKg fieldApprovalStatuses.planningReference.manufacturerCostCC fieldApprovalStatuses.planningReference.baseManufacturerQuoteCC"),
-      group("Canon & Provenance", "canonStatus provenance.desktopPath planningReference.sourceSection"),
-      group("Artwork & Visuals", "partImage image.key image.generated image.status image.promptDescription image.notes"),
+        "planningReference.finishedMassKg planningReference.manufacturerCostCC planningReference.baseManufacturerQuoteCC"),
+      group("Discovery & Approval", "approval needsApproval"),
+      group("Canon", "canonStatus"),
+      group("Artwork & Visuals", "image.generated"),
       group("Description", "description")
     ]
   },
@@ -108,9 +105,6 @@ const configurations = {
 
 // Source-specific fields are classified alongside their related primary attributes.
 const additionalGroupFields = {
-  parts: {
-    "Canon & Provenance": "provenance.authoredFor provenance.sourceRepository provenance.sourcePath provenance.sourceCommit provenance.androidDiscoveryWorkingId provenance.partsDiscovery.repository provenance.partsDiscovery.sourceCommit provenance.partsDiscovery.sourceSections"
-  },
   machines: {
     "Identity & Classification": "review.manufacturingBOM.machine_name review.manufacturingBOM.category review.luxuryRatings.candidate_machine_name review.luxuryBOM.name review.electricMotors.product_name review.electricMotors.product_kind",
     "Parts & Materials": "review.luxuryRatings.finished_part_inputs_approved_2026_11_02 review.electricMotors.approved_principal_materials principalMaterialIds approvedPhysicalBOM.finishedPartInputs approvedPhysicalBOM.directMaterialInputs",
@@ -146,6 +140,12 @@ export function industrialReviewRows(kind, catalogue, reference) {
   if (!["parts", "machines", "buildings"].includes(kind))
     throw new Error("Unsupported industrial catalogue: " + kind);
   const canonicalRecords = catalogue.collection(kind);
+  // Parts use their registered review columns as an allow-list. Keep canonical
+  // audit provenance, field-level approval decisions and artwork metadata in
+  // data/ without exposing those implementation fields in the review grid.
+  const partColumns = kind === "parts" ? new Set(catalogue.collection("columnDefinitions")
+    .filter(definition => definition.table === "parts")
+    .map(definition => definition.fieldKey)) : null;
   const aliases = new Map(canonicalRecords
     .filter(record => record.provenance?.androidDiscoveryWorkingId)
     .map(record => [record.provenance.androidDiscoveryWorkingId, record.id]));
@@ -172,18 +172,21 @@ export function industrialReviewRows(kind, catalogue, reference) {
   const canonicalRows = canonicalRecords.map(record => {
     const fields = flatten(record);
     fields.catalogueStatus = "Canonical";
-    if (kind === "parts")
-      fields.partImage = record.image?.generated && ["generated", "approved"].includes(record.image.status)
-        ? "Available" : "Not generated";
-    // Parts have now reconciled these discovery inputs into canonical, typed
+     // Parts have now reconciled these discovery inputs into canonical, typed
     // fields. Keep the frozen Android snapshot for history, not duplicate columns.
     if (kind !== "parts" && source.has(record.id))
       flatten(source.get(record.id), "review", fields);
-    if (kind === "parts") fields.massReview = partMassReview(record);
     const summary = approvalSummary(kind, record, fields, catalogue);
     fields.approval = summary.approval;
     fields.needsApproval = summary.needsApproval;
-    return { id: record.id, record, collection: kind, fields, canonical: true };
+    if (partColumns) {
+      for (const field of Object.keys(fields))
+        if (!partColumns.has(field)) delete fields[field];
+    }
+    const pendingColumnKeys = Object.entries(summary.fieldStates)
+      .filter(([, status]) => status !== "Approved")
+      .map(([field]) => field);
+    return { id: record.id, record, collection: kind, fields, canonical: true, pendingColumnKeys };
   });
   // Any still-unmapped proposal remains visibly non-canonical.
   const reviewRows = [...candidates.values()].map(candidate => {
