@@ -50,7 +50,8 @@ const configurations = {
       group("Machines & Usage", "machineIds"),
       group("Production & Prices",
         "massReview planningReference.finishedMassKg planningReference.manufacturerCostCC planningReference.baseManufacturerQuoteCC planningReference.status planningReference.basis"),
-      group("Discovery & Approval", "approval needsApproval materialApprovalStatus"),
+      group("Discovery & Approval",
+        "approval needsApproval fieldApprovalStatuses.partRole fieldApprovalStatuses.finishedUnitCount fieldApprovalStatuses.finishedUnitDescription fieldApprovalStatuses.materialInputs fieldApprovalStatuses.planningReference.finishedMassKg fieldApprovalStatuses.planningReference.manufacturerCostCC fieldApprovalStatuses.planningReference.baseManufacturerQuoteCC"),
       group("Canon & Provenance", "canonStatus provenance.desktopPath planningReference.sourceSection"),
       group("Artwork & Visuals", "partImage image.key image.generated image.status image.promptDescription image.notes"),
       group("Description", "description")
