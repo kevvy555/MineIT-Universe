@@ -58,6 +58,28 @@ for (const kind of ["substances", "parts", "machines", "buildings"]) {
     kind + ": Needs Approval should contain readable field names");
 }
 
+const partDefinitions = definitions.filter(d => d.table === "parts");
+const partRequired = partDefinitions.filter(d => d.requiresApproval).map(d => d.fieldKey);
+assert.deepEqual(new Set(partRequired), new Set([
+  "partRole", "finishedUnitCount", "finishedUnitDescription", "materialInputs",
+  "planningReference.finishedMassKg", "planningReference.manufacturerCostCC",
+  "planningReference.baseManufacturerQuoteCC"
+]));
+assert.ok(!partDefinitions.some(d => d.fieldKey === "materialApprovalStatus"),
+  "Old Part-specific approval column must be retired from the shared registry");
+assert.equal(partDefinitions.length, 48);
+for (const part of collections.parts) {
+  assert.ok(validApprovalStatuses.has(part.approval));
+  assert.equal(Object.hasOwn(part, "materialApprovalStatus"), false);
+  assert.equal(Object.hasOwn(part, "needsApproval"), false,
+    "Needs Approval must be derived, never saved as a competing status");
+  assert.deepEqual(new Set(Object.keys(part.fieldApprovalStatuses || {})),
+    new Set(partRequired), part.id + " must persist every explicit field decision");
+  assert.ok(Object.values(part.fieldApprovalStatuses).every(value => validApprovalStatuses.has(value)));
+}
+assert.equal(collections.parts.filter(p => p.approval === "Blocked").length, 1);
+assert.equal(collections.parts.filter(p => p.approval === "In Review").length, 18);
+
 const parts = industrialReviewRows("parts", catalogue, industrialReference);
 const battery = parts.find(row => row.id === "part-lithium-based-battery-module");
 const nuclear = parts.find(row => row.id === "part-nuclear-fuel-assembly");
@@ -82,6 +104,16 @@ const fission = substanceRows(catalogue, resourceReference)
 assert.equal(fission.fields.approval, "In Review");
 assert.deepEqual(fission.fields.needsApproval, ["Classification Status"]);
 assert.equal(approvalSummary("parts", battery.record, battery.fields, catalogue).approval, "In Review");
+assert.throws(() => approvalSummary("parts",
+  { ...battery.record, approval: "Approved" }, battery.fields, catalogue),
+  /disagrees with explicit field statuses/,
+  "Authoritative overall Approval cannot drift away from persisted field statuses");
+const incomplete = { ...battery.record, fieldApprovalStatuses:
+  { ...battery.record.fieldApprovalStatuses } };
+delete incomplete.fieldApprovalStatuses.materialInputs;
+assert.throws(() => approvalSummary("parts", incomplete, battery.fields, catalogue),
+  /missing or invalid explicit approval/,
+  "A missing field decision must fail rather than silently inheriting old approval");
 assert.match(partMassReview(concrete.record), /reconcile/);
 console.log("Approval governance validated: " + statuses.length + " statuses, " +
   definitions.length + " registered columns, 4 grids, 2 reference tables, and pending decisions preserved.");
