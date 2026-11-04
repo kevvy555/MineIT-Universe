@@ -1,6 +1,6 @@
 [
   {
-    "id": "column-definition-buildings-approval",
+    "id": "column-definition-buildings-approval-67fc390b",
     "name": "Approval",
     "table": "buildings",
     "fieldKey": "approval",
@@ -9,7 +9,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-buildingType",
+    "id": "column-definition-buildings-building-type-414f51a8",
     "name": "Building Type",
     "table": "buildings",
     "fieldKey": "buildingType",
@@ -18,7 +18,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-canonStatus",
+    "id": "column-definition-buildings-canon-status-4728bcf5",
     "name": "Canon Status",
     "table": "buildings",
     "fieldKey": "canonStatus",
@@ -27,7 +27,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-catalogueStatus",
+    "id": "column-definition-buildings-catalogue-status-ac27160b",
     "name": "Catalogue Status",
     "table": "buildings",
     "fieldKey": "catalogueStatus",
@@ -36,7 +36,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-categories",
+    "id": "column-definition-buildings-categories-06f53124",
     "name": "Categories",
     "table": "buildings",
     "fieldKey": "categories",
@@ -45,7 +45,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-category",
+    "id": "column-definition-buildings-category-e10db8f0",
     "name": "Category",
     "table": "buildings",
     "fieldKey": "category",
@@ -54,7 +54,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-description",
+    "id": "column-definition-buildings-description-98ef97d2",
     "name": "Description",
     "table": "buildings",
     "fieldKey": "description",
@@ -63,7 +63,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-entityType",
+    "id": "column-definition-buildings-entity-type-7ce7d79b",
     "name": "Entity Type",
     "table": "buildings",
     "fieldKey": "entityType",
@@ -72,7 +72,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-fitOutSubstanceIds",
+    "id": "column-definition-buildings-fit-out-substance-ids-aa38bf85",
     "name": "Fit Out Substance IDs",
     "table": "buildings",
     "fieldKey": "fitOutSubstanceIds",
@@ -81,7 +81,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-id",
+    "id": "column-definition-buildings-id-155bd5c5",
     "name": "ID",
     "table": "buildings",
     "fieldKey": "id",
@@ -90,7 +90,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-image.generated",
+    "id": "column-definition-buildings-image-generated-e023b91e",
     "name": "Image / generated",
     "table": "buildings",
     "fieldKey": "image.generated",
@@ -99,7 +99,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-image.key",
+    "id": "column-definition-buildings-image-key-215c8ab8",
     "name": "Image / key",
     "table": "buildings",
     "fieldKey": "image.key",
@@ -108,7 +108,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-image.modelPrompt",
+    "id": "column-definition-buildings-image-model-prompt-73ecb7cc",
     "name": "Image / model Prompt",
     "table": "buildings",
     "fieldKey": "image.modelPrompt",
@@ -117,7 +117,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-image.notes",
+    "id": "column-definition-buildings-image-notes-4e4e02ae",
     "name": "Image / notes",
     "table": "buildings",
     "fieldKey": "image.notes",
@@ -126,7 +126,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-image.promptDescription",
+    "id": "column-definition-buildings-image-prompt-description-fc4514d3",
     "name": "Image / prompt Description",
     "table": "buildings",
     "fieldKey": "image.promptDescription",
@@ -135,7 +135,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-image.status",
+    "id": "column-definition-buildings-image-status-6dccb553",
     "name": "Image / status",
     "table": "buildings",
     "fieldKey": "image.status",
@@ -144,7 +144,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-machineIds",
+    "id": "column-definition-buildings-machine-ids-6d534331",
     "name": "Machine IDs",
     "table": "buildings",
     "fieldKey": "machineIds",
@@ -153,7 +153,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-mobileLevelAtlas.frameHeight",
+    "id": "column-definition-buildings-mobile-level-atlas-frame-height-26c70edb",
     "name": "Mobile Level Atlas / frame Height",
     "table": "buildings",
     "fieldKey": "mobileLevelAtlas.frameHeight",
@@ -162,7 +162,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-mobileLevelAtlas.frameOrder",
+    "id": "column-definition-buildings-mobile-level-atlas-frame-order-6559a018",
     "name": "Mobile Level Atlas / frame Order",
     "table": "buildings",
     "fieldKey": "mobileLevelAtlas.frameOrder",
@@ -171,7 +171,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-mobileLevelAtlas.frameWidth",
+    "id": "column-definition-buildings-mobile-level-atlas-frame-width-f954856c",
     "name": "Mobile Level Atlas / frame Width",
     "table": "buildings",
     "fieldKey": "mobileLevelAtlas.frameWidth",
@@ -180,7 +180,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-mobileLevelAtlas.generated",
+    "id": "column-definition-buildings-mobile-level-atlas-generated-de9ede50",
     "name": "Mobile Level Atlas / generated",
     "table": "buildings",
     "fieldKey": "mobileLevelAtlas.generated",
@@ -189,7 +189,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-mobileLevelAtlas.key",
+    "id": "column-definition-buildings-mobile-level-atlas-key-0b47ef82",
     "name": "Mobile Level Atlas / key",
     "table": "buildings",
     "fieldKey": "mobileLevelAtlas.key",
@@ -198,7 +198,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-mobileLevelAtlas.notes",
+    "id": "column-definition-buildings-mobile-level-atlas-notes-c334b2b8",
     "name": "Mobile Level Atlas / notes",
     "table": "buildings",
     "fieldKey": "mobileLevelAtlas.notes",
@@ -207,7 +207,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-mobileLevelAtlas.status",
+    "id": "column-definition-buildings-mobile-level-atlas-status-947b1a0d",
     "name": "Mobile Level Atlas / status",
     "table": "buildings",
     "fieldKey": "mobileLevelAtlas.status",
@@ -216,7 +216,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-name",
+    "id": "column-definition-buildings-name-5c8e9bbb",
     "name": "Name",
     "table": "buildings",
     "fieldKey": "name",
@@ -225,7 +225,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-needsApproval",
+    "id": "column-definition-buildings-needs-approval-3e4b86ee",
     "name": "Needs Approval",
     "table": "buildings",
     "fieldKey": "needsApproval",
@@ -234,7 +234,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-provenance.desktopPath",
+    "id": "column-definition-buildings-provenance-desktop-path-b36c7db6",
     "name": "Provenance / desktop Path",
     "table": "buildings",
     "fieldKey": "provenance.desktopPath",
@@ -243,7 +243,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-provenance.mobile.displayName",
+    "id": "column-definition-buildings-provenance-mobile-display-name-abe9e7ee",
     "name": "Provenance / mobile / display Name",
     "table": "buildings",
     "fieldKey": "provenance.mobile.displayName",
@@ -252,7 +252,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-provenance.mobile.kind",
+    "id": "column-definition-buildings-provenance-mobile-kind-368ff44b",
     "name": "Provenance / mobile / kind",
     "table": "buildings",
     "fieldKey": "provenance.mobile.kind",
@@ -261,7 +261,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-provenance.mobile.path",
+    "id": "column-definition-buildings-provenance-mobile-path-d2c8b85e",
     "name": "Provenance / mobile / path",
     "table": "buildings",
     "fieldKey": "provenance.mobile.path",
@@ -270,7 +270,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-provenance.scope",
+    "id": "column-definition-buildings-provenance-scope-c3369c4d",
     "name": "Provenance / scope",
     "table": "buildings",
     "fieldKey": "provenance.scope",
@@ -279,7 +279,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-review.bomCoverage.building_name",
+    "id": "column-definition-buildings-review-bom-coverage-building-name-3d865356",
     "name": "Review / bom Coverage / building name",
     "table": "buildings",
     "fieldKey": "review.bomCoverage.building_name",
@@ -288,7 +288,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-review.bomCoverage.condition_and_title_valuation_status",
+    "id": "column-definition-buildings-review-bom-coverage-condition-and-title-valuation-status-b2b5ecb5",
     "name": "Review / bom Coverage / condition and title valuation status",
     "table": "buildings",
     "fieldKey": "review.bomCoverage.condition_and_title_valuation_status",
@@ -297,7 +297,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-review.bomCoverage.installed_machine_counts_status",
+    "id": "column-definition-buildings-review-bom-coverage-installed-machine-counts-status-ad2edd14",
     "name": "Review / bom Coverage / installed machine counts status",
     "table": "buildings",
     "fieldKey": "review.bomCoverage.installed_machine_counts_status",
@@ -306,7 +306,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-review.bomCoverage.review_status",
+    "id": "column-definition-buildings-review-bom-coverage-review-status-ea3043f3",
     "name": "Review / bom Coverage / review status",
     "table": "buildings",
     "fieldKey": "review.bomCoverage.review_status",
@@ -315,7 +315,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-review.bomCoverage.shell_construction_material_quantities_status",
+    "id": "column-definition-buildings-review-bom-coverage-shell-construction-material-quantities-status-aa141125",
     "name": "Review / bom Coverage / shell construction material quantities status",
     "table": "buildings",
     "fieldKey": "review.bomCoverage.shell_construction_material_quantities_status",
@@ -324,7 +324,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-review.bomCoverage.site_specific_notes",
+    "id": "column-definition-buildings-review-bom-coverage-site-specific-notes-1a80c86e",
     "name": "Review / bom Coverage / site specific notes",
     "table": "buildings",
     "fieldKey": "review.bomCoverage.site_specific_notes",
@@ -333,7 +333,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-review.bomCoverage.source_candidate_installed_machine_ids_not_all_mandatory",
+    "id": "column-definition-buildings-review-bom-coverage-source-candidate-installed-machine-ids-not-all-m-14a62e1f",
     "name": "Review / bom Coverage / source candidate installed machine IDs not all mandatory",
     "table": "buildings",
     "fieldKey": "review.bomCoverage.source_candidate_installed_machine_ids_not_all_mandatory",
@@ -342,7 +342,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-review.bomCoverage.source_fit_out_substance_ids_unquantified",
+    "id": "column-definition-buildings-review-bom-coverage-source-fit-out-substance-ids-unquantified-a83c7072",
     "name": "Review / bom Coverage / source fit out substance IDs unquantified",
     "table": "buildings",
     "fieldKey": "review.bomCoverage.source_fit_out_substance_ids_unquantified",
@@ -351,7 +351,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-review.bomCoverage.source_shell_substance_ids_unquantified",
+    "id": "column-definition-buildings-review-bom-coverage-source-shell-substance-ids-unquantified-2a4eefec",
     "name": "Review / bom Coverage / source shell substance IDs unquantified",
     "table": "buildings",
     "fieldKey": "review.bomCoverage.source_shell_substance_ids_unquantified",
@@ -360,7 +360,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-review.quantitativeBOM.approval_status",
+    "id": "column-definition-buildings-review-quantitative-bom-approval-status-90a25cbd",
     "name": "Review / quantitative BOM / approval status",
     "table": "buildings",
     "fieldKey": "review.quantitativeBOM.approval_status",
@@ -369,7 +369,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-review.quantitativeBOM.building_name",
+    "id": "column-definition-buildings-review-quantitative-bom-building-name-285933ad",
     "name": "Review / quantitative BOM / building name",
     "table": "buildings",
     "fieldKey": "review.quantitativeBOM.building_name",
@@ -378,7 +378,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-review.quantitativeBOM.direct_material_cost_CC_status",
+    "id": "column-definition-buildings-review-quantitative-bom-direct-material-cost-cc-status-373fac72",
     "name": "Review / quantitative BOM / direct material cost CC status",
     "table": "buildings",
     "fieldKey": "review.quantitativeBOM.direct_material_cost_CC_status",
@@ -387,7 +387,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-review.quantitativeBOM.installed_structure_material_mass_kg",
+    "id": "column-definition-buildings-review-quantitative-bom-installed-structure-material-mass-kg-7852799d",
     "name": "Review / quantitative BOM / installed structure material mass kg",
     "table": "buildings",
     "fieldKey": "review.quantitativeBOM.installed_structure_material_mass_kg",
@@ -396,7 +396,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-review.quantitativeBOM.labour_cost_CC_partial",
+    "id": "column-definition-buildings-review-quantitative-bom-labour-cost-cc-partial-8e8987ab",
     "name": "Review / quantitative BOM / labour cost CC partial",
     "table": "buildings",
     "fieldKey": "review.quantitativeBOM.labour_cost_CC_partial",
@@ -405,7 +405,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-review.quantitativeBOM.optional_machine_ids_conditional",
+    "id": "column-definition-buildings-review-quantitative-bom-optional-machine-ids-conditional-7cdcfcc1",
     "name": "Review / quantitative BOM / optional machine IDs conditional",
     "table": "buildings",
     "fieldKey": "review.quantitativeBOM.optional_machine_ids_conditional",
@@ -414,7 +414,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-review.quantitativeBOM.proposed_required_machine_ids_and_counts",
+    "id": "column-definition-buildings-review-quantitative-bom-proposed-required-machine-ids-and-counts-ac2d7055",
     "name": "Review / quantitative BOM / proposed required machine IDs and counts",
     "table": "buildings",
     "fieldKey": "review.quantitativeBOM.proposed_required_machine_ids_and_counts",
@@ -423,7 +423,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-review.quantitativeBOM.site_construction_labour_hours",
+    "id": "column-definition-buildings-review-quantitative-bom-site-construction-labour-hours-efd6b43c",
     "name": "Review / quantitative BOM / site construction labour hours",
     "table": "buildings",
     "fieldKey": "review.quantitativeBOM.site_construction_labour_hours",
@@ -432,7 +432,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-review.quantitativeBOM.source_android_gameplay_cost_and_constraints",
+    "id": "column-definition-buildings-review-quantitative-bom-source-android-gameplay-cost-and-constraints-afcd4af2",
     "name": "Review / quantitative BOM / source android gameplay cost and constraints",
     "table": "buildings",
     "fieldKey": "review.quantitativeBOM.source_android_gameplay_cost_and_constraints",
@@ -441,7 +441,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-review.quantitativeBOM.structural_shell_and_fit_out_inputs_kg",
+    "id": "column-definition-buildings-review-quantitative-bom-structural-shell-and-fit-out-inputs-kg-780983e9",
     "name": "Review / quantitative BOM / structural shell and fit out inputs kg",
     "table": "buildings",
     "fieldKey": "review.quantitativeBOM.structural_shell_and_fit_out_inputs_kg",
@@ -451,7 +451,7 @@
     "description": "Designer review required for this field; source-derived draft values are not automatically approved."
   },
   {
-    "id": "column-definition-buildings-review.quantitativeBOM.transportable_nonlocal_material_mass_kg_if_aggregate_locally_sourced",
+    "id": "column-definition-buildings-review-quantitative-bom-transportable-nonlocal-material-mass-kg-if-a-e7785884",
     "name": "Review / quantitative BOM / transportable nonlocal material mass kg if aggregate locally sourced",
     "table": "buildings",
     "fieldKey": "review.quantitativeBOM.transportable_nonlocal_material_mass_kg_if_aggregate_locally_sourced",
@@ -460,7 +460,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-review.quantitativeBOM.unit_definition",
+    "id": "column-definition-buildings-review-quantitative-bom-unit-definition-03d5ba59",
     "name": "Review / quantitative BOM / unit definition",
     "table": "buildings",
     "fieldKey": "review.quantitativeBOM.unit_definition",
@@ -469,7 +469,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-review.quantitativeBOM.unresolved_dependencies",
+    "id": "column-definition-buildings-review-quantitative-bom-unresolved-dependencies-402e4c6a",
     "name": "Review / quantitative BOM / unresolved dependencies",
     "table": "buildings",
     "fieldKey": "review.quantitativeBOM.unresolved_dependencies",
@@ -478,7 +478,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-review.systematicReview.building_name",
+    "id": "column-definition-buildings-review-systematic-review-building-name-3e00c806",
     "name": "Review / systematic Review / building name",
     "table": "buildings",
     "fieldKey": "review.systematicReview.building_name",
@@ -487,7 +487,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-review.systematicReview.key_system_or_asset_issue",
+    "id": "column-definition-buildings-review-systematic-review-key-system-or-asset-issue-78c859a0",
     "name": "Review / systematic Review / key system or asset issue",
     "table": "buildings",
     "fieldKey": "review.systematicReview.key_system_or_asset_issue",
@@ -496,7 +496,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-review.systematicReview.numeric_bom_reference",
+    "id": "column-definition-buildings-review-systematic-review-numeric-bom-reference-84de4340",
     "name": "Review / systematic Review / numeric bom reference",
     "table": "buildings",
     "fieldKey": "review.systematicReview.numeric_bom_reference",
@@ -505,7 +505,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-review.systematicReview.proposed_required_machine_direction",
+    "id": "column-definition-buildings-review-systematic-review-proposed-required-machine-direction-d3fd592e",
     "name": "Review / systematic Review / proposed required machine direction",
     "table": "buildings",
     "fieldKey": "review.systematicReview.proposed_required_machine_direction",
@@ -514,7 +514,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-review.systematicReview.review_order",
+    "id": "column-definition-buildings-review-systematic-review-review-order-2089a713",
     "name": "Review / systematic Review / review order",
     "table": "buildings",
     "fieldKey": "review.systematicReview.review_order",
@@ -523,7 +523,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-review.systematicReview.review_status",
+    "id": "column-definition-buildings-review-systematic-review-review-status-031bdd03",
     "name": "Review / systematic Review / review status",
     "table": "buildings",
     "fieldKey": "review.systematicReview.review_status",
@@ -532,7 +532,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-review.systematicReview.source_candidate_machine_ids_not_obligatory",
+    "id": "column-definition-buildings-review-systematic-review-source-candidate-machine-ids-not-obligatory-9cf580a9",
     "name": "Review / systematic Review / source candidate machine IDs not obligatory",
     "table": "buildings",
     "fieldKey": "review.systematicReview.source_candidate_machine_ids_not_obligatory",
@@ -541,7 +541,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-sources",
+    "id": "column-definition-buildings-sources-63e2b89a",
     "name": "Sources",
     "table": "buildings",
     "fieldKey": "sources",
@@ -550,7 +550,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-structuralShellSubstanceIds",
+    "id": "column-definition-buildings-structural-shell-substance-ids-69146c7f",
     "name": "Structural Shell Substance IDs",
     "table": "buildings",
     "fieldKey": "structuralShellSubstanceIds",
@@ -559,7 +559,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-amenityProfile.approval",
+    "id": "column-definition-machines-amenity-profile-approval-1f212dd8",
     "name": "Amenity Profile / approval",
     "table": "machines",
     "fieldKey": "amenityProfile.approval",
@@ -568,7 +568,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-amenityProfile.category",
+    "id": "column-definition-machines-amenity-profile-category-fce7b437",
     "name": "Amenity Profile / category",
     "table": "machines",
     "fieldKey": "amenityProfile.category",
@@ -577,7 +577,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-amenityProfile.floorAreaM2",
+    "id": "column-definition-machines-amenity-profile-floor-area-m2-3807948d",
     "name": "Amenity Profile / floor Area M2",
     "table": "machines",
     "fieldKey": "amenityProfile.floorAreaM2",
@@ -586,7 +586,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-amenityProfile.operatingPowerUnits",
+    "id": "column-definition-machines-amenity-profile-operating-power-units-e48f62ee",
     "name": "Amenity Profile / operating Power Units",
     "table": "machines",
     "fieldKey": "amenityProfile.operatingPowerUnits",
@@ -595,7 +595,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-amenityProfile.residentServiceSlotsPerDay",
+    "id": "column-definition-machines-amenity-profile-resident-service-slots-per-day-ab9b8168",
     "name": "Amenity Profile / resident Service Slots Per Day",
     "table": "machines",
     "fieldKey": "amenityProfile.residentServiceSlotsPerDay",
@@ -604,7 +604,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-approval",
+    "id": "column-definition-machines-approval-9f4f8684",
     "name": "Approval",
     "table": "machines",
     "fieldKey": "approval",
@@ -613,7 +613,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-approvedPhysicalBOM.approval",
+    "id": "column-definition-machines-approved-physical-bom-approval-4677a76e",
     "name": "Approved Physical BOM / approval",
     "table": "machines",
     "fieldKey": "approvedPhysicalBOM.approval",
@@ -622,7 +622,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-approvedPhysicalBOM.assemblyLabourHours",
+    "id": "column-definition-machines-approved-physical-bom-assembly-labour-hours-6ecfbab9",
     "name": "Approved Physical BOM / assembly Labour Hours",
     "table": "machines",
     "fieldKey": "approvedPhysicalBOM.assemblyLabourHours",
@@ -631,7 +631,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-approvedPhysicalBOM.directMaterialInputs",
+    "id": "column-definition-machines-approved-physical-bom-direct-material-inputs-55842970",
     "name": "Approved Physical BOM / direct Material Inputs",
     "table": "machines",
     "fieldKey": "approvedPhysicalBOM.directMaterialInputs",
@@ -641,7 +641,7 @@
     "description": "Designer review required for this field; source-derived draft values are not automatically approved."
   },
   {
-    "id": "column-definition-machines-approvedPhysicalBOM.factoryShopHours",
+    "id": "column-definition-machines-approved-physical-bom-factory-shop-hours-f2343d40",
     "name": "Approved Physical BOM / factory Shop Hours",
     "table": "machines",
     "fieldKey": "approvedPhysicalBOM.factoryShopHours",
@@ -650,7 +650,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-approvedPhysicalBOM.finishedPartInputs",
+    "id": "column-definition-machines-approved-physical-bom-finished-part-inputs-01426b0b",
     "name": "Approved Physical BOM / finished Part Inputs",
     "table": "machines",
     "fieldKey": "approvedPhysicalBOM.finishedPartInputs",
@@ -659,7 +659,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-approvedPhysicalBOM.qualificationTestHours",
+    "id": "column-definition-machines-approved-physical-bom-qualification-test-hours-42e332e9",
     "name": "Approved Physical BOM / qualification Test Hours",
     "table": "machines",
     "fieldKey": "approvedPhysicalBOM.qualificationTestHours",
@@ -668,7 +668,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-approvedPhysicalBOM.targetGoodUnitYield",
+    "id": "column-definition-machines-approved-physical-bom-target-good-unit-yield-0d96ca44",
     "name": "Approved Physical BOM / target Good Unit Yield",
     "table": "machines",
     "fieldKey": "approvedPhysicalBOM.targetGoodUnitYield",
@@ -677,7 +677,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-canonStatus",
+    "id": "column-definition-machines-canon-status-e485cad8",
     "name": "Canon Status",
     "table": "machines",
     "fieldKey": "canonStatus",
@@ -686,7 +686,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-catalogueStatus",
+    "id": "column-definition-machines-catalogue-status-eb302c8a",
     "name": "Catalogue Status",
     "table": "machines",
     "fieldKey": "catalogueStatus",
@@ -695,7 +695,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-category",
+    "id": "column-definition-machines-category-220390fb",
     "name": "Category",
     "table": "machines",
     "fieldKey": "category",
@@ -704,7 +704,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-description",
+    "id": "column-definition-machines-description-fb3211cb",
     "name": "Description",
     "table": "machines",
     "fieldKey": "description",
@@ -713,7 +713,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-entityType",
+    "id": "column-definition-machines-entity-type-da1607a8",
     "name": "Entity Type",
     "table": "machines",
     "fieldKey": "entityType",
@@ -722,7 +722,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-fuelType",
+    "id": "column-definition-machines-fuel-type-f2f98a43",
     "name": "Fuel Type",
     "table": "machines",
     "fieldKey": "fuelType",
@@ -731,7 +731,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-id",
+    "id": "column-definition-machines-id-d9c353ea",
     "name": "ID",
     "table": "machines",
     "fieldKey": "id",
@@ -740,7 +740,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-image.generated",
+    "id": "column-definition-machines-image-generated-5f160937",
     "name": "Image / generated",
     "table": "machines",
     "fieldKey": "image.generated",
@@ -749,7 +749,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-image.key",
+    "id": "column-definition-machines-image-key-093cff2d",
     "name": "Image / key",
     "table": "machines",
     "fieldKey": "image.key",
@@ -758,7 +758,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-image.notes",
+    "id": "column-definition-machines-image-notes-6bf6a5d3",
     "name": "Image / notes",
     "table": "machines",
     "fieldKey": "image.notes",
@@ -767,7 +767,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-image.promptDescription",
+    "id": "column-definition-machines-image-prompt-description-b0a2b2d6",
     "name": "Image / prompt Description",
     "table": "machines",
     "fieldKey": "image.promptDescription",
@@ -776,7 +776,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-image.status",
+    "id": "column-definition-machines-image-status-2b752238",
     "name": "Image / status",
     "table": "machines",
     "fieldKey": "image.status",
@@ -785,7 +785,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-inputSummary",
+    "id": "column-definition-machines-input-summary-34aa34f3",
     "name": "Input Summary",
     "table": "machines",
     "fieldKey": "inputSummary",
@@ -794,7 +794,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-manufacturingDesignNotes",
+    "id": "column-definition-machines-manufacturing-design-notes-6d715926",
     "name": "Manufacturing Design Notes",
     "table": "machines",
     "fieldKey": "manufacturingDesignNotes",
@@ -803,7 +803,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-manufacturingDesignStatus",
+    "id": "column-definition-machines-manufacturing-design-status-236e3b1b",
     "name": "Manufacturing Design Status",
     "table": "machines",
     "fieldKey": "manufacturingDesignStatus",
@@ -812,7 +812,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-name",
+    "id": "column-definition-machines-name-8717a224",
     "name": "Name",
     "table": "machines",
     "fieldKey": "name",
@@ -821,7 +821,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-needsApproval",
+    "id": "column-definition-machines-needs-approval-d56fe44b",
     "name": "Needs Approval",
     "table": "machines",
     "fieldKey": "needsApproval",
@@ -830,7 +830,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-outputSummary",
+    "id": "column-definition-machines-output-summary-ca1f3156",
     "name": "Output Summary",
     "table": "machines",
     "fieldKey": "outputSummary",
@@ -839,7 +839,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-partIds",
+    "id": "column-definition-machines-part-ids-03d4914c",
     "name": "Part IDs",
     "table": "machines",
     "fieldKey": "partIds",
@@ -848,7 +848,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-pendingPartCompatibility",
+    "id": "column-definition-machines-pending-part-compatibility-38abd145",
     "name": "Pending Part Compatibility",
     "table": "machines",
     "fieldKey": "pendingPartCompatibility",
@@ -857,7 +857,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-principalMaterialIds",
+    "id": "column-definition-machines-principal-material-ids-69c5068c",
     "name": "Principal Material IDs",
     "table": "machines",
     "fieldKey": "principalMaterialIds",
@@ -866,7 +866,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-provenance.androidDiscoveryWorkingId",
+    "id": "column-definition-machines-provenance-android-discovery-working-id-a605e89d",
     "name": "Provenance / android Discovery Working ID",
     "table": "machines",
     "fieldKey": "provenance.androidDiscoveryWorkingId",
@@ -875,7 +875,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-provenance.authoredFor",
+    "id": "column-definition-machines-provenance-authored-for-1c46596f",
     "name": "Provenance / authored For",
     "table": "machines",
     "fieldKey": "provenance.authoredFor",
@@ -884,7 +884,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-provenance.desktopPath",
+    "id": "column-definition-machines-provenance-desktop-path-a93622bd",
     "name": "Provenance / desktop Path",
     "table": "machines",
     "fieldKey": "provenance.desktopPath",
@@ -893,7 +893,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-provenance.lorePath",
+    "id": "column-definition-machines-provenance-lore-path-b43ade59",
     "name": "Provenance / lore Path",
     "table": "machines",
     "fieldKey": "provenance.lorePath",
@@ -902,7 +902,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-provenance.sourceCommit",
+    "id": "column-definition-machines-provenance-source-commit-85b6168a",
     "name": "Provenance / source Commit",
     "table": "machines",
     "fieldKey": "provenance.sourceCommit",
@@ -911,7 +911,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-provenance.sourcePath",
+    "id": "column-definition-machines-provenance-source-path-39c0f554",
     "name": "Provenance / source Path",
     "table": "machines",
     "fieldKey": "provenance.sourcePath",
@@ -920,7 +920,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-provenance.sourceRepository",
+    "id": "column-definition-machines-provenance-source-repository-e3669577",
     "name": "Provenance / source Repository",
     "table": "machines",
     "fieldKey": "provenance.sourceRepository",
@@ -929,7 +929,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-provenance.sourceState",
+    "id": "column-definition-machines-provenance-source-state-58c91fc4",
     "name": "Provenance / source State",
     "table": "machines",
     "fieldKey": "provenance.sourceState",
@@ -938,7 +938,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.electricMotors.approval_status",
+    "id": "column-definition-machines-review-electric-motors-approval-status-9502786e",
     "name": "Review / electric Motors / approval status",
     "table": "machines",
     "fieldKey": "review.electricMotors.approval_status",
@@ -947,7 +947,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.electricMotors.approved_principal_materials",
+    "id": "column-definition-machines-review-electric-motors-approved-principal-materials-d2250eb7",
     "name": "Review / electric Motors / approved principal materials",
     "table": "machines",
     "fieldKey": "review.electricMotors.approved_principal_materials",
@@ -956,7 +956,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.electricMotors.existing_manufacturing_destination",
+    "id": "column-definition-machines-review-electric-motors-existing-manufacturing-destination-1114730b",
     "name": "Review / electric Motors / existing manufacturing destination",
     "table": "machines",
     "fieldKey": "review.electricMotors.existing_manufacturing_destination",
@@ -965,7 +965,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.electricMotors.intended_machine_consumers",
+    "id": "column-definition-machines-review-electric-motors-intended-machine-consumers-0063cedf",
     "name": "Review / electric Motors / intended machine consumers",
     "table": "machines",
     "fieldKey": "review.electricMotors.intended_machine_consumers",
@@ -974,7 +974,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.electricMotors.pricing_and_units",
+    "id": "column-definition-machines-review-electric-motors-pricing-and-units-67fc5250",
     "name": "Review / electric Motors / pricing and units",
     "table": "machines",
     "fieldKey": "review.electricMotors.pricing_and_units",
@@ -983,7 +983,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.electricMotors.product_kind",
+    "id": "column-definition-machines-review-electric-motors-product-kind-73b86cb2",
     "name": "Review / electric Motors / product kind",
     "table": "machines",
     "fieldKey": "review.electricMotors.product_kind",
@@ -992,7 +992,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.electricMotors.product_name",
+    "id": "column-definition-machines-review-electric-motors-product-name-da248333",
     "name": "Review / electric Motors / product name",
     "table": "machines",
     "fieldKey": "review.electricMotors.product_name",
@@ -1001,7 +1001,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.electricMotors.unresolved_requirements",
+    "id": "column-definition-machines-review-electric-motors-unresolved-requirements-5c5ccabc",
     "name": "Review / electric Motors / unresolved requirements",
     "table": "machines",
     "fieldKey": "review.electricMotors.unresolved_requirements",
@@ -1010,7 +1010,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.luxuryBOM.accounted_direct_and_part_input_mass_kg",
+    "id": "column-definition-machines-review-luxury-bom-accounted-direct-and-part-input-mass-kg-7e532521",
     "name": "Review / luxury BOM / accounted direct and part input mass kg",
     "table": "machines",
     "fieldKey": "review.luxuryBOM.accounted_direct_and_part_input_mass_kg",
@@ -1019,7 +1019,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.luxuryBOM.amenity_category",
+    "id": "column-definition-machines-review-luxury-bom-amenity-category-ab2c87a2",
     "name": "Review / luxury BOM / amenity category",
     "table": "machines",
     "fieldKey": "review.luxuryBOM.amenity_category",
@@ -1028,7 +1028,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.luxuryBOM.approval_status",
+    "id": "column-definition-machines-review-luxury-bom-approval-status-b60ba304",
     "name": "Review / luxury BOM / approval status",
     "table": "machines",
     "fieldKey": "review.luxuryBOM.approval_status",
@@ -1037,7 +1037,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.luxuryBOM.footprint_m2_APPROVED",
+    "id": "column-definition-machines-review-luxury-bom-footprint-m2-approved-0ea420a5",
     "name": "Review / luxury BOM / footprint m2 APPROVED",
     "table": "machines",
     "fieldKey": "review.luxuryBOM.footprint_m2_APPROVED",
@@ -1046,7 +1046,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.luxuryBOM.housing_tech_unlock",
+    "id": "column-definition-machines-review-luxury-bom-housing-tech-unlock-7a96d7c7",
     "name": "Review / luxury BOM / housing tech unlock",
     "table": "machines",
     "fieldKey": "review.luxuryBOM.housing_tech_unlock",
@@ -1055,7 +1055,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.luxuryBOM.name",
+    "id": "column-definition-machines-review-luxury-bom-name-a61c61c9",
     "name": "Review / luxury BOM / name",
     "table": "machines",
     "fieldKey": "review.luxuryBOM.name",
@@ -1064,7 +1064,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.luxuryBOM.operating_consumables_and_maintenance",
+    "id": "column-definition-machines-review-luxury-bom-operating-consumables-and-maintenance-0ef72bf0",
     "name": "Review / luxury BOM / operating consumables and maintenance",
     "table": "machines",
     "fieldKey": "review.luxuryBOM.operating_consumables_and_maintenance",
@@ -1073,7 +1073,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.luxuryBOM.operating_power_units_APPROVED",
+    "id": "column-definition-machines-review-luxury-bom-operating-power-units-approved-6ff02897",
     "name": "Review / luxury BOM / operating power units APPROVED",
     "table": "machines",
     "fieldKey": "review.luxuryBOM.operating_power_units_APPROVED",
@@ -1082,7 +1082,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.luxuryBOM.proposed_assembly_labour_h",
+    "id": "column-definition-machines-review-luxury-bom-proposed-assembly-labour-h-ba31abf2",
     "name": "Review / luxury BOM / proposed assembly labour h",
     "table": "machines",
     "fieldKey": "review.luxuryBOM.proposed_assembly_labour_h",
@@ -1091,7 +1091,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.luxuryBOM.proposed_direct_finished_part_counts",
+    "id": "column-definition-machines-review-luxury-bom-proposed-direct-finished-part-counts-6e2edd3e",
     "name": "Review / luxury BOM / proposed direct finished part counts",
     "table": "machines",
     "fieldKey": "review.luxuryBOM.proposed_direct_finished_part_counts",
@@ -1100,7 +1100,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.luxuryBOM.proposed_direct_processed_materials_kg",
+    "id": "column-definition-machines-review-luxury-bom-proposed-direct-processed-materials-kg-12ce9f21",
     "name": "Review / luxury BOM / proposed direct processed materials kg",
     "table": "machines",
     "fieldKey": "review.luxuryBOM.proposed_direct_processed_materials_kg",
@@ -1109,7 +1109,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.luxuryBOM.proposed_factory_shop_h",
+    "id": "column-definition-machines-review-luxury-bom-proposed-factory-shop-h-39f29921",
     "name": "Review / luxury BOM / proposed factory shop h",
     "table": "machines",
     "fieldKey": "review.luxuryBOM.proposed_factory_shop_h",
@@ -1118,7 +1118,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.luxuryBOM.proposed_good_unit_yield",
+    "id": "column-definition-machines-review-luxury-bom-proposed-good-unit-yield-65fc38ad",
     "name": "Review / luxury BOM / proposed good unit yield",
     "table": "machines",
     "fieldKey": "review.luxuryBOM.proposed_good_unit_yield",
@@ -1127,7 +1127,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.luxuryBOM.proposed_qualification_test_h",
+    "id": "column-definition-machines-review-luxury-bom-proposed-qualification-test-h-a2364f50",
     "name": "Review / luxury BOM / proposed qualification test h",
     "table": "machines",
     "fieldKey": "review.luxuryBOM.proposed_qualification_test_h",
@@ -1136,7 +1136,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.luxuryBOM.provisional_direct_material_cost_CC",
+    "id": "column-definition-machines-review-luxury-bom-provisional-direct-material-cost-cc-b94dbbf7",
     "name": "Review / luxury BOM / provisional direct material cost CC",
     "table": "machines",
     "fieldKey": "review.luxuryBOM.provisional_direct_material_cost_CC",
@@ -1145,7 +1145,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.luxuryBOM.provisional_factory_and_test_cost_CC",
+    "id": "column-definition-machines-review-luxury-bom-provisional-factory-and-test-cost-cc-1bcf4997",
     "name": "Review / luxury BOM / provisional factory and test cost CC",
     "table": "machines",
     "fieldKey": "review.luxuryBOM.provisional_factory_and_test_cost_CC",
@@ -1154,7 +1154,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.luxuryBOM.provisional_labour_cost_CC",
+    "id": "column-definition-machines-review-luxury-bom-provisional-labour-cost-cc-c4a2d159",
     "name": "Review / luxury BOM / provisional labour cost CC",
     "table": "machines",
     "fieldKey": "review.luxuryBOM.provisional_labour_cost_CC",
@@ -1163,7 +1163,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.luxuryBOM.provisional_manufacturer_cost_CC",
+    "id": "column-definition-machines-review-luxury-bom-provisional-manufacturer-cost-cc-e5fa0843",
     "name": "Review / luxury BOM / provisional manufacturer cost CC",
     "table": "machines",
     "fieldKey": "review.luxuryBOM.provisional_manufacturer_cost_CC",
@@ -1172,7 +1172,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.luxuryBOM.provisional_manufacturer_sell_quote_CC",
+    "id": "column-definition-machines-review-luxury-bom-provisional-manufacturer-sell-quote-cc-21b106ed",
     "name": "Review / luxury BOM / provisional manufacturer sell quote CC",
     "table": "machines",
     "fieldKey": "review.luxuryBOM.provisional_manufacturer_sell_quote_CC",
@@ -1181,7 +1181,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.luxuryBOM.reference_part_factory_cost_CC",
+    "id": "column-definition-machines-review-luxury-bom-reference-part-factory-cost-cc-911ef9b3",
     "name": "Review / luxury BOM / reference part factory cost CC",
     "table": "machines",
     "fieldKey": "review.luxuryBOM.reference_part_factory_cost_CC",
@@ -1190,7 +1190,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.luxuryBOM.resident_service_slots_per_day_APPROVED",
+    "id": "column-definition-machines-review-luxury-bom-resident-service-slots-per-day-approved-926365a1",
     "name": "Review / luxury BOM / resident service slots per day APPROVED",
     "table": "machines",
     "fieldKey": "review.luxuryBOM.resident_service_slots_per_day_APPROVED",
@@ -1199,7 +1199,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.luxuryBOM.unresolved_engineering_and_pricing_constraints",
+    "id": "column-definition-machines-review-luxury-bom-unresolved-engineering-and-pricing-constraints-f9cfb925",
     "name": "Review / luxury BOM / unresolved engineering and pricing constraints",
     "table": "machines",
     "fieldKey": "review.luxuryBOM.unresolved_engineering_and_pricing_constraints",
@@ -1208,7 +1208,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.luxuryRatings.amenity_category",
+    "id": "column-definition-machines-review-luxury-ratings-amenity-category-e13c0eea",
     "name": "Review / luxury Ratings / amenity category",
     "table": "machines",
     "fieldKey": "review.luxuryRatings.amenity_category",
@@ -1217,7 +1217,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.luxuryRatings.approval_status",
+    "id": "column-definition-machines-review-luxury-ratings-approval-status-d231bafc",
     "name": "Review / luxury Ratings / approval status",
     "table": "machines",
     "fieldKey": "review.luxuryRatings.approval_status",
@@ -1226,7 +1226,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.luxuryRatings.candidate_machine_name",
+    "id": "column-definition-machines-review-luxury-ratings-candidate-machine-name-94410d01",
     "name": "Review / luxury Ratings / candidate machine name",
     "table": "machines",
     "fieldKey": "review.luxuryRatings.candidate_machine_name",
@@ -1235,7 +1235,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.luxuryRatings.finished_part_inputs_approved_2026_11_02",
+    "id": "column-definition-machines-review-luxury-ratings-finished-part-inputs-approved-2026-11-02-5a02c69f",
     "name": "Review / luxury Ratings / finished part inputs approved 2026 11 02",
     "table": "machines",
     "fieldKey": "review.luxuryRatings.finished_part_inputs_approved_2026_11_02",
@@ -1244,7 +1244,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.luxuryRatings.notes",
+    "id": "column-definition-machines-review-luxury-ratings-notes-44b32a6f",
     "name": "Review / luxury Ratings / notes",
     "table": "machines",
     "fieldKey": "review.luxuryRatings.notes",
@@ -1253,7 +1253,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.luxuryRatings.proposed_machine_footprint_m2",
+    "id": "column-definition-machines-review-luxury-ratings-proposed-machine-footprint-m2-1274a660",
     "name": "Review / luxury Ratings / proposed machine footprint m2",
     "table": "machines",
     "fieldKey": "review.luxuryRatings.proposed_machine_footprint_m2",
@@ -1262,7 +1262,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.luxuryRatings.proposed_operating_consumables",
+    "id": "column-definition-machines-review-luxury-ratings-proposed-operating-consumables-02a4c4ff",
     "name": "Review / luxury Ratings / proposed operating consumables",
     "table": "machines",
     "fieldKey": "review.luxuryRatings.proposed_operating_consumables",
@@ -1271,7 +1271,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.luxuryRatings.proposed_operating_power_units",
+    "id": "column-definition-machines-review-luxury-ratings-proposed-operating-power-units-ac81c35a",
     "name": "Review / luxury Ratings / proposed operating power units",
     "table": "machines",
     "fieldKey": "review.luxuryRatings.proposed_operating_power_units",
@@ -1280,7 +1280,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.luxuryRatings.proposed_resident_service_equivalents_per_day",
+    "id": "column-definition-machines-review-luxury-ratings-proposed-resident-service-equivalents-per-day-a30ffe4a",
     "name": "Review / luxury Ratings / proposed resident service equivalents per day",
     "table": "machines",
     "fieldKey": "review.luxuryRatings.proposed_resident_service_equivalents_per_day",
@@ -1289,7 +1289,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.luxuryRatings.required_housing_tech_level",
+    "id": "column-definition-machines-review-luxury-ratings-required-housing-tech-level-9a3d8939",
     "name": "Review / luxury Ratings / required housing tech level",
     "table": "machines",
     "fieldKey": "review.luxuryRatings.required_housing_tech_level",
@@ -1298,7 +1298,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.manufacturingBOM.accounted_material_subassembly_mass_kg_partial_if_blocked",
+    "id": "column-definition-machines-review-manufacturing-bom-accounted-material-subassembly-mass-kg-part-0ee999a7",
     "name": "Review / manufacturing BOM / accounted material subassembly mass kg partial if blocked",
     "table": "machines",
     "fieldKey": "review.manufacturingBOM.accounted_material_subassembly_mass_kg_partial_if_blocked",
@@ -1307,7 +1307,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.manufacturingBOM.approval_status",
+    "id": "column-definition-machines-review-manufacturing-bom-approval-status-5279654f",
     "name": "Review / manufacturing BOM / approval status",
     "table": "machines",
     "fieldKey": "review.manufacturingBOM.approval_status",
@@ -1316,7 +1316,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.manufacturingBOM.canonical_source_part_ids",
+    "id": "column-definition-machines-review-manufacturing-bom-canonical-source-part-ids-490ad57e",
     "name": "Review / manufacturing BOM / canonical source part IDs",
     "table": "machines",
     "fieldKey": "review.manufacturingBOM.canonical_source_part_ids",
@@ -1325,7 +1325,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.manufacturingBOM.category",
+    "id": "column-definition-machines-review-manufacturing-bom-category-319e9d97",
     "name": "Review / manufacturing BOM / category",
     "table": "machines",
     "fieldKey": "review.manufacturingBOM.category",
@@ -1334,7 +1334,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.manufacturingBOM.direct_processed_material_cost_CC",
+    "id": "column-definition-machines-review-manufacturing-bom-direct-processed-material-cost-cc-b3d672e0",
     "name": "Review / manufacturing BOM / direct processed material cost CC",
     "table": "machines",
     "fieldKey": "review.manufacturingBOM.direct_processed_material_cost_CC",
@@ -1343,7 +1343,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.manufacturingBOM.embedded_parts_factory_cost_CC",
+    "id": "column-definition-machines-review-manufacturing-bom-embedded-parts-factory-cost-cc-fec78ba6",
     "name": "Review / manufacturing BOM / embedded parts factory cost CC",
     "table": "machines",
     "fieldKey": "review.manufacturingBOM.embedded_parts_factory_cost_CC",
@@ -1352,7 +1352,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.manufacturingBOM.estimated_finished_freight_mass_kg",
+    "id": "column-definition-machines-review-manufacturing-bom-estimated-finished-freight-mass-kg-87dfb346",
     "name": "Review / manufacturing BOM / estimated finished freight mass kg",
     "table": "machines",
     "fieldKey": "review.manufacturingBOM.estimated_finished_freight_mass_kg",
@@ -1361,7 +1361,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.manufacturingBOM.machine_name",
+    "id": "column-definition-machines-review-manufacturing-bom-machine-name-9c42e55e",
     "name": "Review / manufacturing BOM / machine name",
     "table": "machines",
     "fieldKey": "review.manufacturingBOM.machine_name",
@@ -1370,7 +1370,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.manufacturingBOM.nested_machine_factory_cost_CC",
+    "id": "column-definition-machines-review-manufacturing-bom-nested-machine-factory-cost-cc-30e4b6fc",
     "name": "Review / manufacturing BOM / nested machine factory cost CC",
     "table": "machines",
     "fieldKey": "review.manufacturingBOM.nested_machine_factory_cost_CC",
@@ -1379,7 +1379,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.manufacturingBOM.proposed_assembly_labour_hours",
+    "id": "column-definition-machines-review-manufacturing-bom-proposed-assembly-labour-hours-08453cec",
     "name": "Review / manufacturing BOM / proposed assembly labour hours",
     "table": "machines",
     "fieldKey": "review.manufacturingBOM.proposed_assembly_labour_hours",
@@ -1388,7 +1388,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.manufacturingBOM.proposed_base_sell_quote_CC",
+    "id": "column-definition-machines-review-manufacturing-bom-proposed-base-sell-quote-cc-90407f6a",
     "name": "Review / manufacturing BOM / proposed base sell quote CC",
     "table": "machines",
     "fieldKey": "review.manufacturingBOM.proposed_base_sell_quote_CC",
@@ -1397,7 +1397,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.manufacturingBOM.proposed_direct_processed_materials_kg",
+    "id": "column-definition-machines-review-manufacturing-bom-proposed-direct-processed-materials-kg-84991144",
     "name": "Review / manufacturing BOM / proposed direct processed materials kg",
     "table": "machines",
     "fieldKey": "review.manufacturingBOM.proposed_direct_processed_materials_kg",
@@ -1407,7 +1407,7 @@
     "description": "Designer review required for this field; source-derived draft values are not automatically approved."
   },
   {
-    "id": "column-definition-machines-review.manufacturingBOM.proposed_factory_equipment_hours",
+    "id": "column-definition-machines-review-manufacturing-bom-proposed-factory-equipment-hours-43560d4b",
     "name": "Review / manufacturing BOM / proposed factory equipment hours",
     "table": "machines",
     "fieldKey": "review.manufacturingBOM.proposed_factory_equipment_hours",
@@ -1416,7 +1416,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.manufacturingBOM.proposed_finished_part_ids_and_counts",
+    "id": "column-definition-machines-review-manufacturing-bom-proposed-finished-part-ids-and-counts-772db900",
     "name": "Review / manufacturing BOM / proposed finished part IDs and counts",
     "table": "machines",
     "fieldKey": "review.manufacturingBOM.proposed_finished_part_ids_and_counts",
@@ -1426,7 +1426,7 @@
     "description": "Designer review required for this field; source-derived draft values are not automatically approved."
   },
   {
-    "id": "column-definition-machines-review.manufacturingBOM.proposed_good_unit_yield",
+    "id": "column-definition-machines-review-manufacturing-bom-proposed-good-unit-yield-b39d257c",
     "name": "Review / manufacturing BOM / proposed good unit yield",
     "table": "machines",
     "fieldKey": "review.manufacturingBOM.proposed_good_unit_yield",
@@ -1435,7 +1435,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.manufacturingBOM.proposed_manufacturer_cost_CC",
+    "id": "column-definition-machines-review-manufacturing-bom-proposed-manufacturer-cost-cc-6229e894",
     "name": "Review / manufacturing BOM / proposed manufacturer cost CC",
     "table": "machines",
     "fieldKey": "review.manufacturingBOM.proposed_manufacturer_cost_CC",
@@ -1445,7 +1445,7 @@
     "description": "Designer review required for this field; source-derived draft values are not automatically approved."
   },
   {
-    "id": "column-definition-machines-review.manufacturingBOM.proposed_nested_machine_ids_and_counts",
+    "id": "column-definition-machines-review-manufacturing-bom-proposed-nested-machine-ids-and-counts-264e4e1d",
     "name": "Review / manufacturing BOM / proposed nested machine IDs and counts",
     "table": "machines",
     "fieldKey": "review.manufacturingBOM.proposed_nested_machine_ids_and_counts",
@@ -1454,7 +1454,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.manufacturingBOM.proposed_test_hours",
+    "id": "column-definition-machines-review-manufacturing-bom-proposed-test-hours-a2f9251e",
     "name": "Review / manufacturing BOM / proposed test hours",
     "table": "machines",
     "fieldKey": "review.manufacturingBOM.proposed_test_hours",
@@ -1463,7 +1463,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-review.manufacturingBOM.unresolved_design_constraints",
+    "id": "column-definition-machines-review-manufacturing-bom-unresolved-design-constraints-612fdc20",
     "name": "Review / manufacturing BOM / unresolved design constraints",
     "table": "machines",
     "fieldKey": "review.manufacturingBOM.unresolved_design_constraints",
@@ -1472,7 +1472,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-sources",
+    "id": "column-definition-machines-sources-15cf13d3",
     "name": "Sources",
     "table": "machines",
     "fieldKey": "sources",
@@ -1481,7 +1481,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-machines-subCategory",
+    "id": "column-definition-machines-sub-category-b6bae68f",
     "name": "Sub Category",
     "table": "machines",
     "fieldKey": "subCategory",
@@ -1490,7 +1490,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-approval",
+    "id": "column-definition-parts-approval-58a62b0e",
     "name": "Approval",
     "table": "parts",
     "fieldKey": "approval",
@@ -1499,7 +1499,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-canonStatus",
+    "id": "column-definition-parts-canon-status-0673337a",
     "name": "Canon Status",
     "table": "parts",
     "fieldKey": "canonStatus",
@@ -1508,7 +1508,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-catalogueStatus",
+    "id": "column-definition-parts-catalogue-status-b1352970",
     "name": "Catalogue Status",
     "table": "parts",
     "fieldKey": "catalogueStatus",
@@ -1517,7 +1517,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-category",
+    "id": "column-definition-parts-category-da6e3ad9",
     "name": "Category",
     "table": "parts",
     "fieldKey": "category",
@@ -1526,7 +1526,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-description",
+    "id": "column-definition-parts-description-d09f22c1",
     "name": "Description",
     "table": "parts",
     "fieldKey": "description",
@@ -1535,7 +1535,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-entityType",
+    "id": "column-definition-parts-entity-type-c632ac42",
     "name": "Entity Type",
     "table": "parts",
     "fieldKey": "entityType",
@@ -1544,7 +1544,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-finishedUnitCount",
+    "id": "column-definition-parts-finished-unit-count-2b82c3d8",
     "name": "Finished Unit Count",
     "table": "parts",
     "fieldKey": "finishedUnitCount",
@@ -1553,7 +1553,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-finishedUnitDescription",
+    "id": "column-definition-parts-finished-unit-description-2a8439c5",
     "name": "Finished Unit Description",
     "table": "parts",
     "fieldKey": "finishedUnitDescription",
@@ -1562,7 +1562,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-id",
+    "id": "column-definition-parts-id-ef455358",
     "name": "ID",
     "table": "parts",
     "fieldKey": "id",
@@ -1571,7 +1571,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-image.generated",
+    "id": "column-definition-parts-image-generated-48d166d5",
     "name": "Image / generated",
     "table": "parts",
     "fieldKey": "image.generated",
@@ -1580,7 +1580,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-image.key",
+    "id": "column-definition-parts-image-key-01880d13",
     "name": "Image / key",
     "table": "parts",
     "fieldKey": "image.key",
@@ -1589,7 +1589,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-image.notes",
+    "id": "column-definition-parts-image-notes-4bab4849",
     "name": "Image / notes",
     "table": "parts",
     "fieldKey": "image.notes",
@@ -1598,7 +1598,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-image.promptDescription",
+    "id": "column-definition-parts-image-prompt-description-bb038894",
     "name": "Image / prompt Description",
     "table": "parts",
     "fieldKey": "image.promptDescription",
@@ -1607,7 +1607,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-image.status",
+    "id": "column-definition-parts-image-status-3cf5479e",
     "name": "Image / status",
     "table": "parts",
     "fieldKey": "image.status",
@@ -1616,7 +1616,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-machineIds",
+    "id": "column-definition-parts-machine-ids-8692ca18",
     "name": "Machine IDs",
     "table": "parts",
     "fieldKey": "machineIds",
@@ -1625,7 +1625,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-massReview",
+    "id": "column-definition-parts-mass-review-084f6115",
     "name": "Mass Review",
     "table": "parts",
     "fieldKey": "massReview",
@@ -1634,7 +1634,7 @@
     "description": "Derived comparison of required input weights with the existing finished-weight reference; no silent changes to source quantities."
   },
   {
-    "id": "column-definition-parts-materialApprovalStatus",
+    "id": "column-definition-parts-material-approval-status-ec2a09dd",
     "name": "Material Approval Status",
     "table": "parts",
     "fieldKey": "materialApprovalStatus",
@@ -1643,7 +1643,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-materialInputs",
+    "id": "column-definition-parts-material-inputs-0d309d8d",
     "name": "Material Inputs",
     "table": "parts",
     "fieldKey": "materialInputs",
@@ -1653,7 +1653,7 @@
     "description": "Designer review required for this field; source-derived draft values are not automatically approved."
   },
   {
-    "id": "column-definition-parts-name",
+    "id": "column-definition-parts-name-32163bce",
     "name": "Name",
     "table": "parts",
     "fieldKey": "name",
@@ -1662,7 +1662,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-needsApproval",
+    "id": "column-definition-parts-needs-approval-52f69c61",
     "name": "Needs Approval",
     "table": "parts",
     "fieldKey": "needsApproval",
@@ -1671,7 +1671,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-partImage",
+    "id": "column-definition-parts-part-image-f6052899",
     "name": "Part Image",
     "table": "parts",
     "fieldKey": "partImage",
@@ -1680,7 +1680,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-partRole",
+    "id": "column-definition-parts-part-role-1ddfba84",
     "name": "Part Role",
     "table": "parts",
     "fieldKey": "partRole",
@@ -1689,7 +1689,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-planningReference.baseManufacturerQuoteCC",
+    "id": "column-definition-parts-planning-reference-base-manufacturer-quote-cc-2c997e89",
     "name": "Manufacturer Quote Cost (CC)",
     "table": "parts",
     "fieldKey": "planningReference.baseManufacturerQuoteCC",
@@ -1699,7 +1699,7 @@
     "description": "Designer review required for this field; source-derived draft values are not automatically approved."
   },
   {
-    "id": "column-definition-parts-planningReference.basis",
+    "id": "column-definition-parts-planning-reference-basis-11183555",
     "name": "Planning Reference / basis",
     "table": "parts",
     "fieldKey": "planningReference.basis",
@@ -1708,7 +1708,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-planningReference.finishedMassKg",
+    "id": "column-definition-parts-planning-reference-finished-mass-kg-01321bd9",
     "name": "Weight (kg)",
     "table": "parts",
     "fieldKey": "planningReference.finishedMassKg",
@@ -1718,7 +1718,7 @@
     "description": "Designer review required for this field; source-derived draft values are not automatically approved."
   },
   {
-    "id": "column-definition-parts-planningReference.manufacturerCostCC",
+    "id": "column-definition-parts-planning-reference-manufacturer-cost-cc-c4fe955b",
     "name": "Manufacturer Cost (CC)",
     "table": "parts",
     "fieldKey": "planningReference.manufacturerCostCC",
@@ -1728,7 +1728,7 @@
     "description": "Designer review required for this field; source-derived draft values are not automatically approved."
   },
   {
-    "id": "column-definition-parts-planningReference.sourceSection",
+    "id": "column-definition-parts-planning-reference-source-section-e77be0a7",
     "name": "Planning Reference / source Section",
     "table": "parts",
     "fieldKey": "planningReference.sourceSection",
@@ -1737,7 +1737,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-planningReference.status",
+    "id": "column-definition-parts-planning-reference-status-5cf89697",
     "name": "Planning Reference / status",
     "table": "parts",
     "fieldKey": "planningReference.status",
@@ -1746,7 +1746,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-provenance.androidDiscoveryWorkingId",
+    "id": "column-definition-parts-provenance-android-discovery-working-id-2c5e50cf",
     "name": "Provenance / android Discovery Working ID",
     "table": "parts",
     "fieldKey": "provenance.androidDiscoveryWorkingId",
@@ -1755,7 +1755,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-provenance.authoredFor",
+    "id": "column-definition-parts-provenance-authored-for-255b93ad",
     "name": "Provenance / authored For",
     "table": "parts",
     "fieldKey": "provenance.authoredFor",
@@ -1764,7 +1764,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-provenance.desktopPath",
+    "id": "column-definition-parts-provenance-desktop-path-d976d33b",
     "name": "Provenance / desktop Path",
     "table": "parts",
     "fieldKey": "provenance.desktopPath",
@@ -1773,7 +1773,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-provenance.partsDiscovery.repository",
+    "id": "column-definition-parts-provenance-parts-discovery-repository-7f910042",
     "name": "Provenance / parts Discovery / repository",
     "table": "parts",
     "fieldKey": "provenance.partsDiscovery.repository",
@@ -1782,7 +1782,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-provenance.partsDiscovery.sourceCommit",
+    "id": "column-definition-parts-provenance-parts-discovery-source-commit-5f3a62b6",
     "name": "Provenance / parts Discovery / source Commit",
     "table": "parts",
     "fieldKey": "provenance.partsDiscovery.sourceCommit",
@@ -1791,7 +1791,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-provenance.partsDiscovery.sourceSections",
+    "id": "column-definition-parts-provenance-parts-discovery-source-sections-50f75eeb",
     "name": "Provenance / parts Discovery / source Sections",
     "table": "parts",
     "fieldKey": "provenance.partsDiscovery.sourceSections",
@@ -1800,7 +1800,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-provenance.sourceCommit",
+    "id": "column-definition-parts-provenance-source-commit-f0f3bef0",
     "name": "Provenance / source Commit",
     "table": "parts",
     "fieldKey": "provenance.sourceCommit",
@@ -1809,7 +1809,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-provenance.sourcePath",
+    "id": "column-definition-parts-provenance-source-path-8d1b47b2",
     "name": "Provenance / source Path",
     "table": "parts",
     "fieldKey": "provenance.sourcePath",
@@ -1818,7 +1818,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-provenance.sourceRepository",
+    "id": "column-definition-parts-provenance-source-repository-027948c9",
     "name": "Provenance / source Repository",
     "table": "parts",
     "fieldKey": "provenance.sourceRepository",
@@ -1827,7 +1827,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-sources",
+    "id": "column-definition-parts-sources-cff2ab99",
     "name": "Sources",
     "table": "parts",
     "fieldKey": "sources",
@@ -1836,7 +1836,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-subCategories",
+    "id": "column-definition-parts-sub-categories-4ebb7fb5",
     "name": "Sub Categories",
     "table": "parts",
     "fieldKey": "subCategories",
@@ -1845,7 +1845,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-subCategory",
+    "id": "column-definition-parts-sub-category-898cc339",
     "name": "Sub Category",
     "table": "parts",
     "fieldKey": "subCategory",
@@ -1854,7 +1854,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-substanceIds",
+    "id": "column-definition-parts-substance-ids-5b78dfc1",
     "name": "Substance IDs",
     "table": "parts",
     "fieldKey": "substanceIds",
@@ -1863,7 +1863,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-unresolvedMaterialInputs",
+    "id": "column-definition-parts-unresolved-material-inputs-3a5122b2",
     "name": "Unresolved Material Inputs",
     "table": "parts",
     "fieldKey": "unresolvedMaterialInputs",
@@ -1872,7 +1872,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-allowedCelestialBodyKindIds",
+    "id": "column-definition-substances-allowed-celestial-body-kind-ids-f344ac16",
     "name": "Allowed Celestial Body Kind IDs",
     "table": "substances",
     "fieldKey": "allowedCelestialBodyKindIds",
@@ -1881,7 +1881,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-android.baselineExtractionFamily",
+    "id": "column-definition-substances-android-baseline-extraction-family-c98d68a1",
     "name": "Android / baseline Extraction Family",
     "table": "substances",
     "fieldKey": "android.baselineExtractionFamily",
@@ -1890,7 +1890,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-android.baselineExtractionMethod",
+    "id": "column-definition-substances-android-baseline-extraction-method-b9c2b598",
     "name": "Android / baseline Extraction Method",
     "table": "substances",
     "fieldKey": "android.baselineExtractionMethod",
@@ -1899,7 +1899,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-android.basePrice",
+    "id": "column-definition-substances-android-base-price-5e67122f",
     "name": "Android / base Price",
     "table": "substances",
     "fieldKey": "android.basePrice",
@@ -1908,7 +1908,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-android.baseScan",
+    "id": "column-definition-substances-android-base-scan-8a22a02b",
     "name": "Android / base Scan",
     "table": "substances",
     "fieldKey": "android.baseScan",
@@ -1917,7 +1917,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-android.legacyAliases",
+    "id": "column-definition-substances-android-legacy-aliases-d4209094",
     "name": "Android / legacy Aliases",
     "table": "substances",
     "fieldKey": "android.legacyAliases",
@@ -1926,7 +1926,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-android.operationalTags",
+    "id": "column-definition-substances-android-operational-tags-cad172f8",
     "name": "Android / operational Tags",
     "table": "substances",
     "fieldKey": "android.operationalTags",
@@ -1935,7 +1935,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-android.qualityBias",
+    "id": "column-definition-substances-android-quality-bias-d3159add",
     "name": "Android / quality Bias",
     "table": "substances",
     "fieldKey": "android.qualityBias",
@@ -1944,7 +1944,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-android.rarity",
+    "id": "column-definition-substances-android-rarity-0097c7d8",
     "name": "Android / rarity",
     "table": "substances",
     "fieldKey": "android.rarity",
@@ -1953,7 +1953,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-android.resourceId",
+    "id": "column-definition-substances-android-resource-id-03c76272",
     "name": "Android / resource ID",
     "table": "substances",
     "fieldKey": "android.resourceId",
@@ -1962,7 +1962,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-android.weight",
+    "id": "column-definition-substances-android-weight-9f75de4f",
     "name": "Android / weight",
     "table": "substances",
     "fieldKey": "android.weight",
@@ -1971,7 +1971,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-approval",
+    "id": "column-definition-substances-approval-7728988b",
     "name": "Approval",
     "table": "substances",
     "fieldKey": "approval",
@@ -1980,7 +1980,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-archetype",
+    "id": "column-definition-substances-archetype-56e08757",
     "name": "Archetype",
     "table": "substances",
     "fieldKey": "archetype",
@@ -1989,7 +1989,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-canonStatus",
+    "id": "column-definition-substances-canon-status-8cef3775",
     "name": "Canon Status",
     "table": "substances",
     "fieldKey": "canonStatus",
@@ -1998,7 +1998,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-classificationStatus",
+    "id": "column-definition-substances-classification-status-e901c9a2",
     "name": "Classification Status",
     "table": "substances",
     "fieldKey": "classificationStatus",
@@ -2008,7 +2008,7 @@
     "description": "Designer review required for this field; source-derived draft values are not automatically approved."
   },
   {
-    "id": "column-definition-substances-controlledAgricultureAllowed",
+    "id": "column-definition-substances-controlled-agriculture-allowed-fd3339bd",
     "name": "Controlled Agriculture Allowed",
     "table": "substances",
     "fieldKey": "controlledAgricultureAllowed",
@@ -2017,7 +2017,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-description",
+    "id": "column-definition-substances-description-deb61252",
     "name": "Description",
     "table": "substances",
     "fieldKey": "description",
@@ -2026,7 +2026,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-discoveryStatus",
+    "id": "column-definition-substances-discovery-status-0d6091c4",
     "name": "Discovery Status",
     "table": "substances",
     "fieldKey": "discoveryStatus",
@@ -2035,7 +2035,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-dominantArchetype",
+    "id": "column-definition-substances-dominant-archetype-8a15990b",
     "name": "Dominant Archetype",
     "table": "substances",
     "fieldKey": "dominantArchetype",
@@ -2044,7 +2044,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-entityType",
+    "id": "column-definition-substances-entity-type-9a9e031b",
     "name": "Entity Type",
     "table": "substances",
     "fieldKey": "entityType",
@@ -2053,7 +2053,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-excludedLandformIds",
+    "id": "column-definition-substances-excluded-landform-ids-d227286d",
     "name": "Excluded Landform IDs",
     "table": "substances",
     "fieldKey": "excludedLandformIds",
@@ -2062,7 +2062,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-gameId",
+    "id": "column-definition-substances-game-id-ec44f527",
     "name": "Game ID",
     "table": "substances",
     "fieldKey": "gameId",
@@ -2071,7 +2071,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-gameplayCategory",
+    "id": "column-definition-substances-gameplay-category-604bd40c",
     "name": "Gameplay Category",
     "table": "substances",
     "fieldKey": "gameplayCategory",
@@ -2080,7 +2080,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-genericClassName",
+    "id": "column-definition-substances-generic-class-name-abda232c",
     "name": "Generic Class Name",
     "table": "substances",
     "fieldKey": "genericClassName",
@@ -2089,7 +2089,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-genericSubstanceId",
+    "id": "column-definition-substances-generic-substance-id-8be3ddc0",
     "name": "Generic Substance ID",
     "table": "substances",
     "fieldKey": "genericSubstanceId",
@@ -2098,7 +2098,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-id",
+    "id": "column-definition-substances-id-d0361145",
     "name": "ID",
     "table": "substances",
     "fieldKey": "id",
@@ -2107,7 +2107,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-image.generated",
+    "id": "column-definition-substances-image-generated-68775b9e",
     "name": "Image / generated",
     "table": "substances",
     "fieldKey": "image.generated",
@@ -2116,7 +2116,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-image.key",
+    "id": "column-definition-substances-image-key-8436e138",
     "name": "Image / key",
     "table": "substances",
     "fieldKey": "image.key",
@@ -2125,7 +2125,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-image.notes",
+    "id": "column-definition-substances-image-notes-94147d2e",
     "name": "Image / notes",
     "table": "substances",
     "fieldKey": "image.notes",
@@ -2134,7 +2134,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-image.promptDescription",
+    "id": "column-definition-substances-image-prompt-description-aada8753",
     "name": "Image / prompt Description",
     "table": "substances",
     "fieldKey": "image.promptDescription",
@@ -2143,7 +2143,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-image.status",
+    "id": "column-definition-substances-image-status-c53f8cd3",
     "name": "Image / status",
     "table": "substances",
     "fieldKey": "image.status",
@@ -2152,7 +2152,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-industrialRole",
+    "id": "column-definition-substances-industrial-role-c8e50877",
     "name": "Industrial Role",
     "table": "substances",
     "fieldKey": "industrialRole",
@@ -2161,7 +2161,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-introducedAgricultureAllowed",
+    "id": "column-definition-substances-introduced-agriculture-allowed-c57a1c14",
     "name": "Introduced Agriculture Allowed",
     "table": "substances",
     "fieldKey": "introducedAgricultureAllowed",
@@ -2170,7 +2170,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-kind",
+    "id": "column-definition-substances-kind-771befaa",
     "name": "Kind",
     "table": "substances",
     "fieldKey": "kind",
@@ -2179,7 +2179,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-knowledgeScope",
+    "id": "column-definition-substances-knowledge-scope-a90128d8",
     "name": "Knowledge Scope",
     "table": "substances",
     "fieldKey": "knowledgeScope",
@@ -2188,7 +2188,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-manufactured",
+    "id": "column-definition-substances-manufactured-c29d2537",
     "name": "Manufactured",
     "table": "substances",
     "fieldKey": "manufactured",
@@ -2197,7 +2197,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-materialStage",
+    "id": "column-definition-substances-material-stage-13ee05f9",
     "name": "Material Stage",
     "table": "substances",
     "fieldKey": "materialStage",
@@ -2206,7 +2206,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-mobileKey",
+    "id": "column-definition-substances-mobile-key-ac13ad59",
     "name": "Mobile Key",
     "table": "substances",
     "fieldKey": "mobileKey",
@@ -2215,7 +2215,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-name",
+    "id": "column-definition-substances-name-776c033b",
     "name": "Name",
     "table": "substances",
     "fieldKey": "name",
@@ -2224,7 +2224,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-naturalOccurrence",
+    "id": "column-definition-substances-natural-occurrence-a8735a0c",
     "name": "Natural Occurrence",
     "table": "substances",
     "fieldKey": "naturalOccurrence",
@@ -2233,7 +2233,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-naturalOccurrenceAllowed",
+    "id": "column-definition-substances-natural-occurrence-allowed-a93a1754",
     "name": "Natural Occurrence Allowed",
     "table": "substances",
     "fieldKey": "naturalOccurrenceAllowed",
@@ -2242,7 +2242,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-naturalWorldTypeIds",
+    "id": "column-definition-substances-natural-world-type-ids-5c3f2593",
     "name": "Natural World Type IDs",
     "table": "substances",
     "fieldKey": "naturalWorldTypeIds",
@@ -2251,7 +2251,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-needsApproval",
+    "id": "column-definition-substances-needs-approval-6814c56e",
     "name": "Needs Approval",
     "table": "substances",
     "fieldKey": "needsApproval",
@@ -2260,7 +2260,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-notes",
+    "id": "column-definition-substances-notes-96a6e385",
     "name": "Notes",
     "table": "substances",
     "fieldKey": "notes",
@@ -2269,7 +2269,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-occurrence.allowedCelestialBodyKindIds",
+    "id": "column-definition-substances-occurrence-allowed-celestial-body-kind-ids-f510cab9",
     "name": "Occurrence / allowed Celestial Body Kind IDs",
     "table": "substances",
     "fieldKey": "occurrence.allowedCelestialBodyKindIds",
@@ -2278,7 +2278,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-occurrence.canonStatus",
+    "id": "column-definition-substances-occurrence-canon-status-54816106",
     "name": "Occurrence / canon Status",
     "table": "substances",
     "fieldKey": "occurrence.canonStatus",
@@ -2287,7 +2287,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-occurrence.eligibleWorldTypeIds",
+    "id": "column-definition-substances-occurrence-eligible-world-type-ids-73e6eaa2",
     "name": "Occurrence / eligible World Type IDs",
     "table": "substances",
     "fieldKey": "occurrence.eligibleWorldTypeIds",
@@ -2296,7 +2296,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-occurrence.excludedAtmosphereTypeIds",
+    "id": "column-definition-substances-occurrence-excluded-atmosphere-type-ids-609e7263",
     "name": "Occurrence / excluded Atmosphere Type IDs",
     "table": "substances",
     "fieldKey": "occurrence.excludedAtmosphereTypeIds",
@@ -2305,7 +2305,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-occurrence.excludedWorldTypeIds",
+    "id": "column-definition-substances-occurrence-excluded-world-type-ids-6b08a6d5",
     "name": "Occurrence / excluded World Type IDs",
     "table": "substances",
     "fieldKey": "occurrence.excludedWorldTypeIds",
@@ -2314,7 +2314,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-occurrence.id",
+    "id": "column-definition-substances-occurrence-id-74a758f4",
     "name": "Occurrence / ID",
     "table": "substances",
     "fieldKey": "occurrence.id",
@@ -2323,7 +2323,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-occurrence.knowledgeScope",
+    "id": "column-definition-substances-occurrence-knowledge-scope-041db59d",
     "name": "Occurrence / knowledge Scope",
     "table": "substances",
     "fieldKey": "occurrence.knowledgeScope",
@@ -2332,7 +2332,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-occurrence.name",
+    "id": "column-definition-substances-occurrence-name-d9c24c1a",
     "name": "Occurrence / name",
     "table": "substances",
     "fieldKey": "occurrence.name",
@@ -2341,7 +2341,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-occurrence.naturalOccurrence",
+    "id": "column-definition-substances-occurrence-natural-occurrence-97cd5a73",
     "name": "Occurrence / natural Occurrence",
     "table": "substances",
     "fieldKey": "occurrence.naturalOccurrence",
@@ -2350,7 +2350,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-occurrence.notes",
+    "id": "column-definition-substances-occurrence-notes-c0481b7e",
     "name": "Occurrence / notes",
     "table": "substances",
     "fieldKey": "occurrence.notes",
@@ -2359,7 +2359,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-occurrence.occurrenceClass",
+    "id": "column-definition-substances-occurrence-occurrence-class-dacab1c4",
     "name": "Occurrence / occurrence Class",
     "table": "substances",
     "fieldKey": "occurrence.occurrenceClass",
@@ -2368,7 +2368,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-occurrence.preferredGeologyProvinceIds",
+    "id": "column-definition-substances-occurrence-preferred-geology-province-ids-d65c7474",
     "name": "Occurrence / preferred Geology Province IDs",
     "table": "substances",
     "fieldKey": "occurrence.preferredGeologyProvinceIds",
@@ -2377,7 +2377,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-occurrence.preferredWorldTypeIds",
+    "id": "column-definition-substances-occurrence-preferred-world-type-ids-06f0a248",
     "name": "Occurrence / preferred World Type IDs",
     "table": "substances",
     "fieldKey": "occurrence.preferredWorldTypeIds",
@@ -2386,7 +2386,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-occurrence.primaryExtractionZoneIds",
+    "id": "column-definition-substances-occurrence-primary-extraction-zone-ids-80b75e98",
     "name": "Occurrence / primary Extraction Zone IDs",
     "table": "substances",
     "fieldKey": "occurrence.primaryExtractionZoneIds",
@@ -2395,7 +2395,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-occurrence.requiredBiomeIds",
+    "id": "column-definition-substances-occurrence-required-biome-ids-40e65162",
     "name": "Occurrence / required Biome IDs",
     "table": "substances",
     "fieldKey": "occurrence.requiredBiomeIds",
@@ -2404,7 +2404,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-occurrence.requiredHydrosphereIds",
+    "id": "column-definition-substances-occurrence-required-hydrosphere-ids-8e7c2093",
     "name": "Occurrence / required Hydrosphere IDs",
     "table": "substances",
     "fieldKey": "occurrence.requiredHydrosphereIds",
@@ -2413,7 +2413,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-occurrence.resourceId",
+    "id": "column-definition-substances-occurrence-resource-id-161db494",
     "name": "Occurrence / resource ID",
     "table": "substances",
     "fieldKey": "occurrence.resourceId",
@@ -2422,7 +2422,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-occurrence.secondaryExtractionZoneIds",
+    "id": "column-definition-substances-occurrence-secondary-extraction-zone-ids-15256b98",
     "name": "Occurrence / secondary Extraction Zone IDs",
     "table": "substances",
     "fieldKey": "occurrence.secondaryExtractionZoneIds",
@@ -2431,7 +2431,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-occurrence.worldTypeEligibility",
+    "id": "column-definition-substances-occurrence-world-type-eligibility-caca80b4",
     "name": "Occurrence / world Type Eligibility",
     "table": "substances",
     "fieldKey": "occurrence.worldTypeEligibility",
@@ -2440,7 +2440,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-openAgricultureWorldTypeIds",
+    "id": "column-definition-substances-open-agriculture-world-type-ids-f46baacf",
     "name": "Open Agriculture World Type IDs",
     "table": "substances",
     "fieldKey": "openAgricultureWorldTypeIds",
@@ -2449,7 +2449,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-provenance.approvedDate",
+    "id": "column-definition-substances-provenance-approved-date-796d80c4",
     "name": "Provenance / approved Date",
     "table": "substances",
     "fieldKey": "provenance.approvedDate",
@@ -2458,7 +2458,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-provenance.sourcePath",
+    "id": "column-definition-substances-provenance-source-path-6737eb59",
     "name": "Provenance / source Path",
     "table": "substances",
     "fieldKey": "provenance.sourcePath",
@@ -2467,7 +2467,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-provenance.sourceRepository",
+    "id": "column-definition-substances-provenance-source-repository-5ea084ca",
     "name": "Provenance / source Repository",
     "table": "substances",
     "fieldKey": "provenance.sourceRepository",
@@ -2476,7 +2476,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-renewable",
+    "id": "column-definition-substances-renewable-14736f2d",
     "name": "Renewable",
     "table": "substances",
     "fieldKey": "renewable",
@@ -2485,7 +2485,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-requiredNaturalBiomeIds",
+    "id": "column-definition-substances-required-natural-biome-ids-0434e37c",
     "name": "Required Natural Biome IDs",
     "table": "substances",
     "fieldKey": "requiredNaturalBiomeIds",
@@ -2494,7 +2494,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-requiredNaturalHydrosphereIds",
+    "id": "column-definition-substances-required-natural-hydrosphere-ids-c7e2dae5",
     "name": "Required Natural Hydrosphere IDs",
     "table": "substances",
     "fieldKey": "requiredNaturalHydrosphereIds",
@@ -2503,7 +2503,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-sourceProvenance.path",
+    "id": "column-definition-substances-source-provenance-path-37ee673b",
     "name": "Source Provenance / path",
     "table": "substances",
     "fieldKey": "sourceProvenance.path",
@@ -2512,7 +2512,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-sourceProvenance.repository",
+    "id": "column-definition-substances-source-provenance-repository-2b1738a0",
     "name": "Source Provenance / repository",
     "table": "substances",
     "fieldKey": "sourceProvenance.repository",
@@ -2521,7 +2521,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-sourceProvenance.workingId",
+    "id": "column-definition-substances-source-provenance-working-id-aee3013a",
     "name": "Source Provenance / working ID",
     "table": "substances",
     "fieldKey": "sourceProvenance.workingId",
@@ -2530,7 +2530,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-sourceRawResourceIds",
+    "id": "column-definition-substances-source-raw-resource-ids-ea65d67d",
     "name": "Source Raw Resource IDs",
     "table": "substances",
     "fieldKey": "sourceRawResourceIds",
@@ -2539,7 +2539,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-stockBehaviour",
+    "id": "column-definition-substances-stock-behaviour-aa380615",
     "name": "Stock Behaviour",
     "table": "substances",
     "fieldKey": "stockBehaviour",
@@ -2548,7 +2548,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-upstreamInputDescription",
+    "id": "column-definition-substances-upstream-input-description-f6639e3f",
     "name": "Upstream Input Description",
     "table": "substances",
     "fieldKey": "upstreamInputDescription",
@@ -2557,7 +2557,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-upstreamMaterialIds",
+    "id": "column-definition-substances-upstream-material-ids-802f98ea",
     "name": "Upstream Material IDs",
     "table": "substances",
     "fieldKey": "upstreamMaterialIds",
@@ -2566,7 +2566,7 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-visualDescription",
+    "id": "column-definition-substances-visual-description-1324383e",
     "name": "Visual Description",
     "table": "substances",
     "fieldKey": "visualDescription",
