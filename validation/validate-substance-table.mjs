@@ -121,7 +121,11 @@ assert.ok(scanChoice.some(x => x.token === "number:1"));
 assert.ok(scanChoice.some(x => x.token === "blank"));
 const combined = applySubstanceTable(rows, ["kind", "name"], {name:"iron"}, "name", 1, catalogue,
   {kind:new Set([valueToken("Named material")])});
-assert.deepEqual(combined.map(x=>x.record.name), ["Refined Iron"]);
+assert.ok(combined.length >= 2 && combined.some(row => row.record.name === "Refined Iron"),
+  "Combined filters retain matching named refined materials");
+assert.ok(combined.every(row => row.fields.kind === "Named material" &&
+  row.record.name.toLowerCase().includes("iron")),
+  "Combined filters match all named materials containing iron, including LFP cathode");
 
 const directoryCss = readFileSync(new URL("../css/substance-table.css", import.meta.url), "utf8");
 const directoryApp = readFileSync(new URL("../js/universe-app.js", import.meta.url), "utf8");
