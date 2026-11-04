@@ -400,6 +400,29 @@
     }
   },
   {
+    "id": "named-substance-fission-fuel-material",
+    "name": "Fission Fuel Material",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": null,
+    "dominantArchetype": "Metal",
+    "classificationStatus": "requires-generic-class-review",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [],
+    "upstreamMaterialIds": [
+      "named-substance-uranium-concentrate"
+    ],
+    "upstreamInputDescription": "Processed from Uranium Concentrate; detailed fuel grade, processing and quantity requirements are not yet specified.",
+    "industrialRole": "Refined fission fuel feedstock used to manufacture Nuclear Fuel Assemblies, distinct from Fusion Fuel.",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Universe",
+      "path": "docs/IndustrialCatalogueConsolidationReview.md",
+      "workingId": "nuclear-fuel-material-selection-approved-2026-11-04"
+    }
+  },
+  {
     "id": "named-substance-fresh-concrete",
     "name": "Fresh Concrete",
     "entityType": "NamedSubstance",
