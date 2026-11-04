@@ -717,11 +717,19 @@ function fieldsFor(collection, entity) {
   if (collection === 'parts') {
     const economic = entity.planningReference;
     const status = approvalSummary('parts', entity, {
+      partRole: entity.partRole,
+      finishedUnitCount: entity.finishedUnitCount,
+      finishedUnitDescription: entity.finishedUnitDescription,
       materialInputs: entity.materialInputs,
       'planningReference.finishedMassKg': economic?.finishedMassKg,
       'planningReference.manufacturerCostCC': economic?.manufacturerCostCC,
       'planningReference.baseManufacturerQuoteCC': economic?.baseManufacturerQuoteCC
     }, state.catalogue);
+    const fieldNames = new Map(state.catalogue.collection('columnDefinitions')
+      .filter(item => item.table === 'parts' && item.requiresApproval)
+      .map(item => [item.fieldKey, item.name]));
+    const fieldApprovals = Object.entries(status.fieldStates).map(([key, value]) =>
+      (fieldNames.get(key) || key) + ': ' + value);
     fields.push(
       field('Part role', esc(entity.partRole === 'legacy-compatibility' ?
         'Legacy compatibility — not separate trade stock' : 'Finished product')),
@@ -732,6 +740,7 @@ function fieldsFor(collection, entity) {
       field('Approved / candidate material inputs', partMaterialLinks(entity.materialInputs)),
       field('Approval', esc(status.approval)),
        field('Needs Approval', esc(status.needsApproval.join(', ') || 'None')),
+       field('Field Approvals', esc(fieldApprovals.join(' • '))),
        field('Mass Review', esc(partMassReview(entity))),
       field('FinishedUnitCount', esc(entity.finishedUnitCount)),
       field('Finished Unit Description', esc(entity.finishedUnitDescription)),
