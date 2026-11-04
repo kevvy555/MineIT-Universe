@@ -21,6 +21,7 @@ export async function loadAndroidResourceReference() {
 }
 
 export function createSubstanceTable(config = {}) {
+  const labelFor = key => config.columnLabels?.[key] || fieldLabel(key);
   let selected = [...(config.defaultColumns || DEFAULT_COLUMNS)];
   let textFilters = {};
   let valueFilters = {};
@@ -63,10 +64,10 @@ export function createSubstanceTable(config = {}) {
     const picker = groups.map(group => {
       const checked = group.fields.filter(key => ordered.includes(key)).length;
       const options = group.fields.map(key =>
-        '<label class="substance-choice" title="' + esc(group.name + ' — ' + fieldLabel(key)) +
-        '"><input type="checkbox" aria-label="' + esc(group.name + ': ' + fieldLabel(key)) +
+        '<label class="substance-choice" title="' + esc(group.name + ' — ' + labelFor(key)) +
+        '"><input type="checkbox" aria-label="' + esc(group.name + ': ' + labelFor(key)) +
         '" data-column="' + esc(key) + '" ' + (ordered.includes(key) ? "checked " : "") +
-        (key === "name" ? "disabled " : "") + '><span>' + esc(fieldLabel(key)) +
+        (key === "name" ? "disabled " : "") + '><span>' + esc(labelFor(key)) +
         '</span></label>').join("");
       return '<section class="substance-column-category" data-column-group="' + esc(group.name) +
         '"><div class="substance-category-heading"><strong>' + esc(group.name) +
@@ -120,7 +121,7 @@ export function createSubstanceTable(config = {}) {
         const count = valueFilters[key]?.size || 0;
         button.textContent = count ? "Values (" + count + ") ▾" : "Values ▾";
         button.classList.toggle("has-selection", count > 0);
-        button.setAttribute("aria-label", "Select values for " + fieldLabel(key) +
+        button.setAttribute("aria-label", "Select values for " + labelFor(key) +
           (count ? ", " + count + " selected" : ""));
       }
     }
@@ -132,10 +133,10 @@ export function createSubstanceTable(config = {}) {
       button.setAttribute("aria-expanded", "true");
       const choices = uniqueColumnValues(rows, key, catalogue);
       popup.innerHTML = '<div class="substance-popup-heading"><strong>' +
-        esc(fieldLabel(key)) + '</strong><button type="button" data-close aria-label="Close filter">×</button></div>' +
+        esc(labelFor(key)) + '</strong><button type="button" data-close aria-label="Close filter">×</button></div>' +
         '<input type="search" class="substance-popup-search" aria-label="Find values" placeholder="Search values…">' +
         '<div class="substance-popup-options" role="group" aria-label="Values for ' +
-        esc(fieldLabel(key)) + '"></div>' +
+        esc(labelFor(key)) + '"></div>' +
         '<div class="substance-popup-actions"><button type="button" data-select>Choose shown</button>' +
         '<button type="button" data-clear>Clear selection</button></div>';
       const search = popup.querySelector(".substance-popup-search");
@@ -192,8 +193,8 @@ export function createSubstanceTable(config = {}) {
       const button = document.createElement("button");
       button.className = "substance-sort";
       button.type = "button";
-      button.title = "Sort by " + fieldLabel(key);
-      button.textContent = fieldLabel(key) + (sortKey === key ?
+      button.title = "Sort by " + labelFor(key);
+      button.textContent = labelFor(key) + (sortKey === key ?
         (direction > 0 ? " ▲" : " ▼") : " ↕");
       button.onclick = () => {
         if (sortKey === key) direction = -direction;
@@ -211,7 +212,7 @@ export function createSubstanceTable(config = {}) {
       input.type = "search";
       input.placeholder = "Text filter";
       input.value = textFilters[key] || "";
-      input.setAttribute("aria-label", "Text filter " + fieldLabel(key));
+      input.setAttribute("aria-label", "Text filter " + labelFor(key));
       input.addEventListener("input", () => {
         textFilters[key] = input.value;
         updateRows();
@@ -228,8 +229,32 @@ export function createSubstanceTable(config = {}) {
       filterRow.append(filterCell);
     }
 
-    function renderLinkedCell(raw) {
-      const links = (Array.isArray(raw) ? raw : [raw]).filter(Boolean).map(item => {
+    function renderLinkedCell(raw, key) {
+      const items = (Array.isArray(raw) ? raw : [raw]).filter(Boolean);
+      if (key === "materialInputs") {
+        const lines = items.map(item => {
+          const id = item.substanceId;
+          const target = id && catalogue.get(id);
+          const label = target?.name || id || "Unresolved";
+          const material = target
+            ? '<button class="substance-item substance-reference" type="button" data-entity-id="' +
+              esc(id) + '" title="Open ' + esc(label) + '">' + esc(label) + '</button>'
+            : '<span class="status error">Broken: ' + esc(label) + '</span>';
+          const quantity = Number.isFinite(item.quantityKg)
+            ? esc(item.quantityKg + " kg") : "—";
+          const requirement = item.requirement?.startsWith("conditional") ? "Conditional" :
+            item.requirement?.startsWith("upstream") ? "Upstream" :
+            item.requirement === "candidate" ? "Candidate" : "Required";
+          const approval = item.approval === "planning-only-unqualified"
+            ? " · needs qualification" : "";
+          return '<div class="part-material-row"><span>' + material +
+            '</span><span class="part-material-quantity">' + quantity +
+            '</span><span class="part-material-requirement">' +
+            esc(requirement + approval) + '</span></div>';
+        });
+        return '<div class="part-material-list">' + (lines.join("") || "—") + '</div>';
+      }
+      const links = items.map(item => {
         const id = typeof item === "string" ? item :
           item.substanceId || item.materialId || item.partId || item.machineId;
         const label = fieldText(item, catalogue);
@@ -241,6 +266,18 @@ export function createSubstanceTable(config = {}) {
           esc(id) + '" title="Open ' + esc(target.name) + '">' + esc(label) + '</button>';
       });
       return '<div class="substance-ref-list">' + (links.join("") || "—") + '</div>';
+    }
+
+    function renderPartImage(row) {
+      const image = row.record.image;
+      if (!image?.generated || !["generated", "approved"].includes(image.status))
+        return '<span class="substance-unlinked">Not generated</span>';
+      if (!/^assets\\/art\\/universe\\/parts\\/[a-zA-Z0-9_-]+\\.webp$/.test(image.key))
+        return '<span class="status error">Invalid art path</span>';
+      return '<button type="button" class="part-image-button" data-item-id="' +
+        esc(row.id) + '" title="Open ' + esc(row.record.name) + ' details">' +
+        '<img class="part-image-thumb" src="./' + esc(image.key) +
+        '" alt="' + esc(row.record.name) + '" loading="lazy"></button>';
     }
 
     function updateRows() {
@@ -257,7 +294,9 @@ export function createSubstanceTable(config = {}) {
           ' title="' + esc(value) + '">' + (key === "name" && row.canonical !== false ?
           '<button class="substance-item" type="button" data-item-id="' +
           esc(row.id) + '">' + esc(label) + '</button>' :
-          linked ? renderLinkedCell(row.fields[key]) : esc(label)) + '</td>';
+          linked ? renderLinkedCell(row.fields[key], key) :
+          (key === "partImage" && config.imagePreviewField === "partImage")
+            ? renderPartImage(row) : esc(label)) + '</td>';
       }).join("") + '</tr>').join("") ||
         '<tr><td colspan="' + ordered.length + '" class="substance-no-results">No matching ' +
         esc(config.title || "substances") + '</td></tr>';
