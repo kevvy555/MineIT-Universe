@@ -80,7 +80,7 @@ assert.ok(collections.parts.every(p => !p.unresolvedMaterialInputs?.length),
 const fission = substanceRows(catalogue, resourceReference)
   .find(row => row.id === "named-substance-fission-fuel-material");
 assert.equal(fission.fields.approval, "In Review");
-assert.deepEqual(fission.fields.needsApproval, ["classificationStatus"]);
+assert.deepEqual(fission.fields.needsApproval, ["Classification Status"]);
 assert.equal(approvalSummary("parts", battery.record, battery.fields, catalogue).approval, "In Review");
 assert.match(partMassReview(concrete.record), /reconcile/);
 console.log("Approval governance validated: " + statuses.length + " statuses, " +
