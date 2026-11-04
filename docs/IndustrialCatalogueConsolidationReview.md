@@ -336,3 +336,45 @@ Regression checks enforce that all retired IDs are absent from the
 canonical Part collection, every active candidate reference resolves to one
 of the surviving Parts, and all 14 Machine and six research migration
 questions remain plainly flagged pending.
+
+
+## Parts review UI refinements — 4 November 2026
+
+The designer clarified the following *implemented* Parts display/data decisions:
+
+- The catalogue manufacturing unit is always exactly one finished Part.
+  One canonical `finishedUnitCount: 1` replaces redundant
+  `finishedUnit.count` + `finishedUnit.unit: "each"`.
+  The detailed unit description remains `finishedUnitDescription`.
+- `materialInputs[].quantityKg` replaces `planningQuantityKg` for 58
+  linked Substance inputs. The values are numeric kg per finished Part,
+  with existing material requirement/qualification and provenance retained.
+  **Renaming does not promote discovery planning values into certified
+  final engineering recipes.**
+- The existing table displays material name, numeric quantity and
+  required/conditional/upstream/candidate qualifier on separate aligned
+  lines, with linked canonical Substance detail navigation.
+- Column labels are `Weight (kg)` for `planningReference.finishedMassKg`
+  and `Manufacturer Quote Cost (CC)` for
+  `planningReference.baseManufacturerQuoteCC` (approved planning
+  reference numbers, not game-live quotes).
+- A selectable `Part Image` column shows actual generated/approved art
+  thumbnails when available; otherwise it clearly says "Not generated".
+  Artwork metadata and generated state remain canonical in the existing
+  per-Part `image` object; **no images are invented or newly generated**.
+
+**Pending approval-model design (not yet migrated):** The designer wants one
+row-level Approval column, a derived Needs Approval column, and two common
+admin reference tables: an approval-status vocabulary and a registry of
+all table fields indicating which require approval. The earlier
+`Approved in Principle` and `Approved for Planning` suggestions were
+rejected as unnecessarily complex. Until the field-level decision and
+migration rules are clarified, the existing status/provenance fields are
+retained rather than silently conflating material approval with pricing
+readiness.
+
+**Unresolved physical material selections remain pending user decisions:**
+lithium cathode and electrolyte, concrete sand and water, nuclear fuel
+form/cladding, and 11 linked candidate inputs with unqualified material
+grades. Keep them visibly pending, without inventing confirmed substance
+IDs or erasing planning allowances.
