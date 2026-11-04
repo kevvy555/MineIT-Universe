@@ -1,0 +1,66 @@
+[
+  {
+    "id": "approval-status-not-reviewed",
+    "name": "Not Reviewed",
+    "description": "No documented decision or active review yet.",
+    "sortOrder": 1,
+    "canonStatus": "working canon",
+    "scope": "shared catalogue and review statuses"
+  },
+  {
+    "id": "approval-status-draft",
+    "name": "Draft",
+    "description": "Working content is being prepared; not ready for approval.",
+    "sortOrder": 2,
+    "canonStatus": "working canon",
+    "scope": "shared catalogue and review statuses"
+  },
+  {
+    "id": "approval-status-proposed",
+    "name": "Proposed",
+    "description": "Specific candidate awaits a decision.",
+    "sortOrder": 3,
+    "canonStatus": "working canon",
+    "scope": "shared catalogue and review statuses"
+  },
+  {
+    "id": "approval-status-in-review",
+    "name": "In Review",
+    "description": "Partially decided, qualified or awaiting remaining field approvals.",
+    "sortOrder": 4,
+    "canonStatus": "working canon",
+    "scope": "shared catalogue and review statuses"
+  },
+  {
+    "id": "approval-status-approved",
+    "name": "Approved",
+    "description": "All required fields in the stated approval scope are approved.",
+    "sortOrder": 5,
+    "canonStatus": "working canon",
+    "scope": "shared catalogue and review statuses"
+  },
+  {
+    "id": "approval-status-blocked",
+    "name": "Blocked",
+    "description": "Cannot complete review until a dependency or missing specification is resolved.",
+    "sortOrder": 6,
+    "canonStatus": "working canon",
+    "scope": "shared catalogue and review statuses"
+  },
+  {
+    "id": "approval-status-rejected",
+    "name": "Rejected",
+    "description": "Reviewed proposal is explicitly not accepted.",
+    "sortOrder": 7,
+    "canonStatus": "working canon",
+    "scope": "shared catalogue and review statuses"
+  },
+  {
+    "id": "approval-status-superseded",
+    "name": "Superseded",
+    "description": "Replaced by a newer, explicitly linked canonical choice.",
+    "sortOrder": 8,
+    "canonStatus": "working canon",
+    "scope": "shared catalogue and review statuses"
+  }
+]
