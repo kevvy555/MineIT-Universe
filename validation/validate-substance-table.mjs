@@ -27,12 +27,12 @@ assert.deepEqual(new Set(reference.resources.map(r => r.resourceId)),
 assert.equal(new Set(reference.resources.map(r => r.resourceId)).size, 42);
 
 const rows = substanceRows(catalogue, reference);
-assert.equal(rows.length, 113, "42 natural + 64 named + 7 biological");
+assert.equal(rows.length, 114, "42 natural + 65 named + 7 biological");
 assert.ok(rows.every(row => row.collection !== "substances"));
 assert.equal(collections.substances.length, 80);
 assert.equal(new Set(rows.map(row => row.id)).size, rows.length, "No duplicated resources");
 assert.equal(rows.filter(row => row.fields.kind === "Biological food").length, 7);
-assert.equal(rows.filter(row => row.fields.kind === "Named material").length, 64);
+assert.equal(rows.filter(row => row.fields.kind === "Named material").length, 65);
 assert.equal(rows.filter(row => row.fields.kind === "Natural resource").length, 42);
 assert.equal(rows.find(row => row.id === "mobile-resource-iron-ore").fields.genericClassName,
   "Structural Metal Ore");
@@ -51,6 +51,11 @@ assert.ok(lfpMaterialRows.every(row => row.fields.materialStage === "processed" 
   row.fields.stockBehaviour === "stockable"));
 assert.deepEqual(rows.find(row => row.id === "named-substance-lfp-cathode-material").fields.upstreamMaterialIds,
   ["named-substance-lithium-carbonate"]);
+assert.deepEqual(rows.find(row => row.id === "named-substance-fission-fuel-material").fields.upstreamMaterialIds,
+  ["named-substance-uranium-concentrate"]);
+const fissionFuel = rows.find(row => row.id === "named-substance-fission-fuel-material");
+assert.equal(fissionFuel.fields.materialStage, "processed");
+assert.equal(fissionFuel.fields.stockBehaviour, "stockable");
 const filtered = applySubstanceTable(rows, ["name", "android.baseScan"],
   { "android.baseScan": ">=6" }, "android.baseScan", -1, catalogue);
 assert.ok(filtered.length > 0);
