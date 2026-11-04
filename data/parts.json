@@ -1353,7 +1353,7 @@
       "named-substance-cement",
       "named-substance-graded-aggregate"
     ],
-    "description": "Factory-cast concrete structural sections transported and installed as finished construction components, rather than loose bulk cement or aggregate.",
+    "description": "Factory-cast concrete structural sections manufactured from cement, graded aggregate, silica sand and process water; steel reinforcement is conditional for reinforced sections. Transported and installed as finished construction components rather than loose bulk ingredients.",
     "canonStatus": "working canon",
     "provenance": {
       "sourceRepository": "kevvy555/MineIT-Android",
@@ -1395,18 +1395,20 @@
         "approval": "approved-conditional-family",
         "planningNote": "for reinforced example",
         "quantityKg": 25
-      }
-    ],
-    "unresolvedMaterialInputs": [
-      {
-        "label": "Suitable Sand",
-        "planningAllowanceKg": 300,
-        "status": "unresolved-material-identity"
       },
       {
-        "label": "Process Water",
-        "planningAllowanceKg": 75,
-        "status": "unresolved-process-input"
+        "substanceId": "mobile-resource-silica-sand",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "quantityKg": 300,
+        "planningNote": "Existing natural Silica Sand resource selected for concrete input."
+      },
+      {
+        "substanceId": "substance-fresh-water",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "quantityKg": 75,
+        "planningNote": "Process water input; manufacturing consumption is not necessarily equal to water retained in cured finished section."
       }
     ],
     "planningReference": {
