@@ -46,7 +46,7 @@ const configurations = {
       group("Identity & Classification",
         "name id partRole category subCategory subCategories sources finishedUnitCount finishedUnitDescription"),
       group("Materials & Construction",
-        "substanceIds materialInputs unresolvedMaterialInputs"),
+        "substanceIds materialInputs"),
       group("Machines & Usage", "machineIds"),
       group("Production & Prices",
         "massReview planningReference.finishedMassKg planningReference.manufacturerCostCC planningReference.baseManufacturerQuoteCC planningReference.status planningReference.basis"),
