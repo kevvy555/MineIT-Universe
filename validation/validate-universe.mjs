@@ -128,7 +128,7 @@ const arrayRefs = {
   operations: ['managerPersonIds', 'procurementPersonIds', 'shipIds', 'productIds', 'shipClassIds'],
   products: ['producerOrganisationIds'],
   people: ['operationIds', 'shipIds'],
-  namedSubstances: ['sourceRawResourceIds'],
+  namedSubstances: ['sourceRawResourceIds', 'upstreamMaterialIds'],
   parts: ['substanceIds', 'machineIds'],
   machines: ['partIds'],
   buildings: ['structuralShellSubstanceIds', 'fitOutSubstanceIds', 'machineIds'],
