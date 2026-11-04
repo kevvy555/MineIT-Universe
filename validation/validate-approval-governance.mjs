@@ -106,7 +106,7 @@ assert.ok(battery.fields.needsApproval.includes("Manufacturer Cost (CC)"));
 assert.ok(battery.fields.needsApproval.includes("Manufacturer Quote Cost (CC)"));
 assert.ok(!Object.hasOwn(battery.fields, "massReview"));
 assert.ok(!Object.hasOwn(battery.fields, "partImage"));
-assert.equal(battery.fields["image.generated"], false);
+assert.equal(battery.fields["image.generated"], true);
 assert.equal(nuclear.fields.approval, "Blocked",
   "Nuclear reactor quantities/price must not be treated as approved");
 assert.ok(nuclear.fields.needsApproval.includes("Material Inputs"));

@@ -32,9 +32,9 @@
     ],
     "image": {
       "key": "assets/art/universe/parts/part-generator-parts.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "Workshop kit photograph of generator parts: copper-wound stator segments, magnetic cores, structural metal housings and shaft couplings laid on a scarred metal bench. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile part UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art from the established elevated three-quarter angle, with pale ceramic/composite housings, charcoal metal, vivid orange retaining clips, restrained electric-blue highlights, warm amber details, crisp bevels and a strong silhouette at 128x128. Centre one coherent Generator Parts service cluster: a copper-wound stator segment, magnetic rotor core, compact shaft coupling and insulated terminal block, visibly separate replaceable components rather than a complete generator. No platform, bench, floor, room, opaque backdrop, complete machine, people, readable text, logos, UI, border or watermark. Not photorealistic.",
       "notes": "Identity-neutral spare-part kit; not a complete machine."
     },
     "partRole": "finished-product",
@@ -142,9 +142,9 @@
     ],
     "image": {
       "key": "assets/art/universe/parts/part-power-electronics.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "Workshop kit photograph of power electronics: glass-insulated inverter boards, conductive busbars and ceramic control modules, no readable labels. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile part UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art from the established elevated three-quarter angle, with pale ceramic insulation, charcoal frames, vivid orange protective corners, restrained electric-blue indicators, copper busbars, crisp bevels and a strong silhouette at 128x128. Centre one coherent Power Electronics component cluster: a compact inverter board, insulated switching module, visible copper busbars and heat-sink fins, joined as a tidy service assembly but not a complete machine. No platform, bench, floor, room, opaque backdrop, people, readable screens or text, logos, UI, border or watermark. Not photorealistic.",
       "notes": "Identity-neutral spare-part kit; not a complete machine."
     },
     "partRole": "finished-product",
@@ -244,10 +244,10 @@
     ],
     "image": {
       "key": "assets/art/universe/parts/part-mechanical-parts.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "Workshop kit photograph of mechanical parts: greased gears, bearings and shafts in charcoal structural metal, lubricant sheen, spare-kit layout. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Identity-neutral spare-part kit; not a complete machine."
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile part UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: pale ceramic/composite wear surfaces, charcoal structural metal, vivid orange retaining clips and safety accents, restrained electric-blue highlights, crisp bevels, controlled detail and a strong readable silhouette at 128x128. Centre one compact coherent Mechanical Parts inventory symbol with comfortable transparent margin: two interlocking gears, a clearly visible bearing race and one short keyed drive shaft assembled into a tidy service cluster, not a complete machine and not scattered loose items. Add subtle lubricant sheen and light practical wear while keeping it well maintained. No bench, floor, wall, crate, tray, room, opaque backdrop, complete machine, people, readable text, labels, logos, UI chrome, border or watermark. Not photorealistic.",
+      "notes": "MineIT Mobile UI/catalogue part asset. Preserve the established isometric pale/charcoal/orange/blue visual language while keeping the part type distinct from a complete machine. Store the native PNG at assets/art/universe/parts/Originals/part-mechanical-parts.png and the published WebP at this key."
     },
     "partRole": "finished-product",
     "materialInputs": [
@@ -344,10 +344,10 @@
     ],
     "image": {
       "key": "assets/art/universe/parts/part-control-and-sensor-parts.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "Workshop kit photograph of control and sensor parts: insulated instrument housings, sensor heads and compact automation modules without screens of readable text. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Identity-neutral spare-part kit; not a complete machine."
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile part UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: pale ceramic/composite housings, charcoal structural frames, vivid orange protective corners, restrained electric-blue sensor illumination, small warm amber indicators, crisp bevels and a strong readable silhouette at 128x128. Centre one coherent Control & Sensor Parts inventory symbol with comfortable transparent margin: a compact automation controller module flanked by two distinct sensor heads, one optical lens and one short probe, linked by tidy protected connectors. It must read as serviceable components rather than a complete control console or machine. No bench, floor, wall, crate, tray, room, opaque backdrop, people, readable screens, text, labels, logos, UI chrome, border or watermark. Not photorealistic.",
+      "notes": "MineIT Mobile UI/catalogue part asset. Preserve the established isometric pale/charcoal/orange/blue visual language while keeping the part type distinct from a complete machine. Store the native PNG at assets/art/universe/parts/Originals/part-control-and-sensor-parts.png and the published WebP at this key."
     },
     "partRole": "finished-product",
     "materialInputs": [
@@ -447,9 +447,9 @@
     ],
     "image": {
       "key": "assets/art/universe/parts/part-structural-components.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "Workshop kit photograph of structural components: charcoal metal frames, panels and dark fasteners, the same kit used across Commonwealth machines. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile part UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art from the established elevated three-quarter angle, with pale ceramic/composite panels, charcoal structural steel, vivid orange corner brackets, dark fasteners, crisp bevels and a strong silhouette at 128x128. Centre one compact Structural Components kit: one short rectangular frame, two overlapping armour panels, a cross-brace and oversized fasteners, clearly construction components rather than a building or machine. No platform, bench, floor, room, opaque backdrop, people, text, logos, UI, border or watermark. Not photorealistic.",
       "notes": "Identity-neutral spare-part kit; not a complete machine."
     },
     "partRole": "finished-product",
@@ -521,9 +521,9 @@
     ],
     "image": {
       "key": "assets/art/universe/parts/part-hydraulic-parts.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "Workshop kit photograph of hydraulic parts: pistons, cylinders and pressure fittings in structural metal with lubricant sheen for heavy-force work. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile part UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art from the established elevated three-quarter angle, with pale ceramic collars, charcoal cylinders, vivid orange protective fittings, restrained blue pressure indicators, polished piston rods and a strong silhouette at 128x128. Centre one coherent Hydraulic Parts cluster: two compact hydraulic cylinders, one exposed piston rod, a pressure manifold, hose couplings and seals, visibly serviceable parts rather than a complete machine. Add subtle clean lubricant sheen. No platform, bench, floor, room, opaque backdrop, people, text, logos, UI, border or watermark. Not photorealistic.",
       "notes": "Identity-neutral spare-part kit; not a complete machine."
     },
     "partRole": "finished-product",
@@ -604,9 +604,9 @@
     ],
     "image": {
       "key": "assets/art/universe/parts/part-extraction-parts.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "Workshop kit photograph of extraction parts: ceramic-tipped drill bits, cutting heads and boring tools with structural-metal collars. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile part UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art from the established elevated three-quarter angle, with charcoal tool steel, pale ceramic wear surfaces, vivid orange mounting collars, restrained blue accents, crisp carbide edges and a strong silhouette at 128x128. Centre one coherent Extraction Parts cluster: a large conical drill bit, compact toothed cutting head and short boring-tool segment with visibly hard tungsten-carbide tips, clearly replaceable tooling rather than a mining machine. No platform, bench, floor, rock, terrain, room, opaque backdrop, people, text, logos, UI, border or watermark. Not photorealistic.",
       "notes": "Identity-neutral spare-part kit; not a complete machine."
     },
     "partRole": "finished-product",
@@ -678,9 +678,9 @@
     ],
     "image": {
       "key": "assets/art/universe/parts/part-processing-parts.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "Workshop kit photograph of processing parts: ceramic crucibles, heating-chamber liners and glass separation elements. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile part UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art from the established elevated three-quarter angle, with pale refractory ceramic, charcoal stainless frames, vivid orange retaining bands, restrained blue details, warm amber heat glow and a strong silhouette at 128x128. Centre one coherent Processing Parts cluster: a ceramic crucible, curved heating-chamber liner and compact glass-and-metal separation element, visibly replaceable process internals rather than a furnace or refinery. No platform, bench, floor, room, opaque backdrop, people, text, logos, UI, border or watermark. Not photorealistic.",
       "notes": "Identity-neutral spare-part kit; not a complete machine."
     },
     "partRole": "finished-product",
@@ -761,9 +761,9 @@
     ],
     "image": {
       "key": "assets/art/universe/parts/part-computing-parts.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "Workshop kit photograph of computing parts: logic boards, data-storage modules and dark glass display slabs with no readable UI text. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile part UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art from the established elevated three-quarter angle, with pale ceramic circuit housings, charcoal frames, vivid orange protective clips, restrained electric-blue traces and indicators, dark glass and a strong silhouette at 128x128. Centre one coherent Computing Parts cluster: a logic board, two compact data-storage cartridges, processor package and small blank dark-glass display slab, clearly service modules rather than a computer terminal. No platform, bench, floor, room, opaque backdrop, people, readable UI or text, logos, border or watermark. Not photorealistic.",
       "notes": "Identity-neutral spare-part kit; not a complete machine."
     },
     "partRole": "finished-product",
@@ -851,9 +851,9 @@
     ],
     "image": {
       "key": "assets/art/universe/parts/part-fluid-handling-parts.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "Workshop kit photograph of fluid-handling parts: pipes, valves, seals and ceramic-lined filters for water, brine and process fluids. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile part UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art from the established elevated three-quarter angle, with pale ceramic linings, charcoal stainless pipework, vivid orange valve handles and clamps, restrained blue flow indicators, crisp seals and a strong silhouette at 128x128. Centre one coherent Fluid Handling Parts cluster: two short joined pipe elbows, a prominent valve body, ring seals and a ceramic-lined cylindrical filter, clearly service components rather than a pumping machine. No platform, bench, floor, room, liquid spill, opaque backdrop, people, text, logos, UI, border or watermark. Not photorealistic.",
       "notes": "Identity-neutral spare-part kit; not a complete machine."
     },
     "partRole": "finished-product",
@@ -936,7 +936,7 @@
       "key": "assets/art/universe/parts/part-bulk-handling-parts.webp",
       "generated": true,
       "status": "generated",
-      "promptDescription": "Workshop kit photograph of bulk-handling parts: hoppers, chutes, screening decks, grabs and pallet forks in charcoal structural metal with ceramic wear lips. Year-5326 Koplin Commonwealth frontier industrial realism. Shared visual kit: charcoal weathered structural metal, pale ceramic wear surfaces, dark exposed fasteners, practical colony lighting. No readable text, logos, names, company marks or registration numbers.",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile part UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art from the established elevated three-quarter angle, with pale ceramic wear lips, charcoal structural metal, vivid orange guards and attachment points, restrained blue accents, crisp bevels and a strong silhouette at 128x128. Centre one coherent Bulk Handling Parts cluster: a compact hopper, curved chute segment, screening deck, grab attachment and short pallet-fork interface nested into one readable service-kit composition, not a complete handler or warehouse machine. No platform, bench, floor, room, loose bulk material, opaque backdrop, people, text, logos, UI, border or watermark. Not photorealistic.",
       "notes": "Identity-neutral spare-part kit; not a complete machine."
     },
     "partRole": "finished-product",
@@ -1010,9 +1010,9 @@
     "machineIds": [],
     "image": {
       "key": "assets/art/universe/parts/part-lead-acid-battery-module.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "Studio product photograph of lead-acid battery module: physically plausible industrial component kit or assembled module, safely labelled only by shape, practical exposed material details, neutral background, Year-5326 Koplin industrial realism. No readable text, branding, logos, people or watermark.",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile part UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art from the established elevated three-quarter angle, with pale acid-resistant casing, charcoal structural housing, vivid orange lifting handles and impact corners, restrained blue charge indicator, crisp bevels and a strong silhouette at 128x128. Centre one heavy Lead-Acid Battery Module: a squat transportable industrial pack with protected positive and negative terminals, six implied cell caps beneath a safety cover, polymer case and copper connector details. Distinguish it from the sleeker LFP module; it is a finished component, not a generator. No platform, bench, floor, room, opaque backdrop, people, text, logos, UI, border or watermark. Not photorealistic.",
       "notes": "Art not yet generated; candidate identity reconciled from Android industrial discovery."
     },
     "partRole": "finished-product",
@@ -1097,10 +1097,10 @@
     "machineIds": [],
     "image": {
       "key": "assets/art/universe/parts/part-lithium-based-battery-module.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "Studio product photograph of lithium-based battery module: physically plausible industrial component kit or assembled module, safely labelled only by shape, practical exposed material details, neutral background, Year-5326 Koplin industrial realism. No readable text, branding, logos, people or watermark.",
-      "notes": "Art not yet generated; candidate identity reconciled from Android industrial discovery."
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile part UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: pale ceramic/composite armour, charcoal structural casing, vivid orange impact corners and lifting grips, restrained electric-blue charge indicators, small warm amber service lights, crisp bevels and a strong readable silhouette at 128x128. Centre one complete but clearly modular Lithium-Based Battery Module with comfortable transparent margin: a compact rectangular stainless-steel LFP pack with a protected terminal pair, visible segmented cell architecture behind one small dark-glass inspection panel, polymer insulation, cooling ribs and an integrated battery-management electronics pod. It is a transportable finished component, not a generator or complete machine. No bench, floor, wall, crate, tray, room, opaque backdrop, people, readable text, labels, logos, UI chrome, border or watermark. Not photorealistic.",
+      "notes": "MineIT Mobile UI/catalogue part asset. Preserve the established isometric pale/charcoal/orange/blue visual language while keeping the battery a transportable finished component rather than a machine. Store the native PNG at assets/art/universe/parts/Originals/part-lithium-based-battery-module.png and the published WebP at this key."
     },
     "partRole": "finished-product",
     "materialInputs": [
@@ -1200,9 +1200,9 @@
     ],
     "image": {
       "key": "assets/art/universe/parts/part-thermal-parts.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "Studio product photograph of thermal parts: physically plausible industrial component kit or assembled module, safely labelled only by shape, practical exposed material details, neutral background, Year-5326 Koplin industrial realism. No readable text, branding, logos, people or watermark.",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile part UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art from the established elevated three-quarter angle, with pale ceramic insulation, charcoal stainless metal, vivid orange retaining clips, restrained blue cold-side accents, warm amber hot-side glow and a strong silhouette at 128x128. Centre one coherent Thermal Parts cluster: a finned heat exchanger, insulated transfer plate, short heat-pipe loop and curved ceramic heat shield, visibly serviceable components rather than a heater or complete machine. No platform, bench, floor, room, flame, opaque backdrop, people, text, logos, UI, border or watermark. Not photorealistic.",
       "notes": "Art not yet generated; candidate identity reconciled from Android industrial discovery."
     },
     "partRole": "finished-product",
@@ -1279,9 +1279,9 @@
     ],
     "image": {
       "key": "assets/art/universe/parts/part-optical-parts.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "Studio product photograph of optical parts: physically plausible industrial component kit or assembled module, safely labelled only by shape, practical exposed material details, neutral background, Year-5326 Koplin industrial realism. No readable text, branding, logos, people or watermark.",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile part UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art from the established elevated three-quarter angle, with pale ceramic lens mounts, charcoal frames, vivid orange protective rings, restrained electric-blue reflections, clear glass and sapphire optics, crisp bevels and a strong silhouette at 128x128. Centre one coherent Optical Parts cluster: one large convex lens, smaller faceted sapphire optic, angled mirror and compact focusing barrel, clearly replaceable optical assemblies rather than a camera or sensor machine. No platform, bench, floor, room, opaque backdrop, people, text, logos, UI, border or watermark. Not photorealistic.",
       "notes": "Art not yet generated; candidate identity reconciled from Android industrial discovery."
     },
     "partRole": "finished-product",
@@ -1360,9 +1360,9 @@
     "machineIds": [],
     "image": {
       "key": "assets/art/universe/parts/part-forming-cutting-tooling.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "Studio product photograph of forming & cutting tooling: physically plausible industrial component kit or assembled module, safely labelled only by shape, practical exposed material details, neutral background, Year-5326 Koplin industrial realism. No readable text, branding, logos, people or watermark.",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile part UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art from the established elevated three-quarter angle, with charcoal tool steel, pale ceramic wear faces, vivid orange mounting collars, restrained blue accents, sharp carbide edges and a strong silhouette at 128x128. Centre one coherent Forming & Cutting Tooling cluster: a matched press-die pair, toothed circular cutter and compact forming punch with tungsten-carbide cutting inserts, clearly replaceable fabrication tooling rather than a machine. No platform, bench, floor, room, sparks, opaque backdrop, people, text, logos, UI, border or watermark. Not photorealistic.",
       "notes": "Art not yet generated; candidate identity reconciled from Android industrial discovery."
     },
     "partRole": "finished-product",
@@ -1430,9 +1430,9 @@
     "machineIds": [],
     "image": {
       "key": "assets/art/universe/parts/part-welding-parts.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "Studio product photograph of welding parts: physically plausible industrial component kit or assembled module, safely labelled only by shape, practical exposed material details, neutral background, Year-5326 Koplin industrial realism. No readable text, branding, logos, people or watermark.",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile part UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art from the established elevated three-quarter angle, with pale ceramic insulation, charcoal steel, vivid orange protective grips, copper contacts, restrained electric-blue indicators, warm amber nozzle glow and a strong silhouette at 128x128. Centre one coherent Welding Parts cluster: two replaceable welding heads, copper electrical contacts, ceramic nozzle cups and a compact joining-equipment connector block, service components rather than a welding machine. No platform, bench, floor, room, active arc or sparks, opaque backdrop, people, text, logos, UI, border or watermark. Not photorealistic.",
       "notes": "Art not yet generated; candidate identity reconciled from Android industrial discovery."
     },
     "partRole": "finished-product",
@@ -1506,9 +1506,9 @@
     "machineIds": [],
     "image": {
       "key": "assets/art/universe/parts/part-precast-concrete-sections.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "Studio product photograph of precast concrete sections: physically plausible industrial component kit or assembled module, safely labelled only by shape, practical exposed material details, neutral background, Year-5326 Koplin industrial realism. No readable text, branding, logos, people or watermark.",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile part UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art from the established elevated three-quarter angle, matching the pale/charcoal/orange MineIT construction language with crisp simplified forms and a strong silhouette at 128x128. Centre one coherent set of Precast Concrete Sections: a short reinforced wall panel, compact beam and interlocking slab section nested together, pale grey concrete with subtle aggregate texture, small exposed steel lifting loops and vivid orange transport protectors. These are finished construction components, not a building or pile of raw material. No platform, yard, terrain, room, opaque backdrop, people, text, logos, UI, border or watermark. Not photorealistic.",
       "notes": "Art not yet generated; candidate identity reconciled from Android industrial discovery."
     },
     "partRole": "finished-product",
@@ -1598,9 +1598,9 @@
     "machineIds": [],
     "image": {
       "key": "assets/art/universe/parts/part-nuclear-fuel-assembly.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "Studio product photograph of nuclear fuel assembly: physically plausible industrial component kit or assembled module, safely labelled only by shape, practical exposed material details, neutral background, Year-5326 Koplin industrial realism. No readable text, branding, logos, people or watermark.",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile part UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art from the established elevated three-quarter angle, with pale ceramic insulation, charcoal stainless structure, vivid orange handling guards, restrained electric-blue monitoring details, crisp bevels and a strong silhouette at 128x128. Centre one complete Nuclear Fuel Assembly component: a tall compact rectangular lattice of sealed metallic fuel rods held by spacer grids, ceramic end fittings and protected lifting head, physically plausible and clearly a removable reactor assembly rather than a reactor. No radiation symbols, platform, room, opaque backdrop, glow implying leakage, people, text, logos, UI, border or watermark. Not photorealistic.",
       "notes": "Art not yet generated; candidate identity reconciled from Android industrial discovery."
     },
     "partRole": "finished-product",

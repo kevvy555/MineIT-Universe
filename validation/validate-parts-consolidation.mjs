@@ -174,8 +174,8 @@ assert.ok(reviewed.every(row => !("review.materialBOM.product_name" in row.field
   !("review.quantities.approved_planning_input_materials_kg_per_finished_unit" in row.fields)));
 assert.ok(reviewed.every(row => row.fields.finishedUnitCount === 1));
 assert.ok(reviewed.every(row => typeof row.fields["image.generated"] === "boolean"));
-assert.equal(reviewed.filter(row => row.fields["image.generated"] === true).length, 1,
-  "Only one Part has generated artwork; use a single Yes/No field");
+assert.ok(reviewed.every(row => row.fields["image.generated"] === true),
+  "Every canonical Part must have generated artwork projected through the single Image Generated Yes/No field");
 assert.ok(reviewed.every(row => !Object.hasOwn(row.fields, "partImage")),
   "Remove the duplicate Part Image availability column");
 assert.ok(reviewed.every(row => !("finishedUnit.count" in row.fields)));
