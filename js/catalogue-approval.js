@@ -1,13 +1,5 @@
 // Read-only approval projection from canonical records and the shared column registry.
 // Historic discovery statuses remain evidence, not automatically approved prices/recipes.
-const display = fieldKey => ({
-  materialInputs: "Material Inputs",
-  "planningReference.finishedMassKg": "Weight (kg)",
-  "planningReference.manufacturerCostCC": "Manufacturer Cost (CC)",
-  "planningReference.baseManufacturerQuoteCC": "Manufacturer Quote Cost (CC)"
-})[fieldKey] || fieldKey.replace(/([a-z])([A-Z])/g, "$1 $2")
-  .replaceAll(".", " / ").replaceAll("_", " ");
-
 export const validApprovalStatuses = new Set([
   "Not Reviewed", "Draft", "Proposed", "In Review",
   "Approved", "Blocked", "Rejected", "Superseded"
@@ -48,7 +40,7 @@ export function approvalSummary(kind, record, fields, catalogue) {
     if (kind !== "parts" && (value === undefined || value === null || value === "")) continue;
     const state = fieldState(kind, record, key, value);
     states[key] = state;
-    if (state !== "Approved") pending.push(display(key));
+    if (state !== "Approved") pending.push(definition.name);
   }
   const values = Object.values(states);
   const approval = values.length === 0 ? "Not Reviewed" :
