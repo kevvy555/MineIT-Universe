@@ -213,8 +213,8 @@ export function fieldText(value, catalogue) {
       " × " + value.quantityKg + " kg";
     if (value.substanceId) {
       const name = catalogue?.get(value.substanceId)?.name || value.substanceId;
-      const qty = Number.isFinite(value.planningQuantityKg) ?
-        " · " + value.planningQuantityKg + " kg planning" : "";
+      const qty = Number.isFinite(value.quantityKg) ?
+        " · " + value.quantityKg + " kg" : "";
       const use = value.requirement?.startsWith("conditional") ? " (conditional)" :
         value.approval === "planning-only-unqualified" ? " (unqualified)" :
         value.requirement?.startsWith("upstream") ? " (upstream)" : "";
