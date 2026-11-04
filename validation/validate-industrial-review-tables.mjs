@@ -14,7 +14,7 @@ const expected = {
   buildings: { original: 24, reconciled: 0, total: 24 }
 };
 const collections = Object.fromEntries(["parts", "machines", "buildings", "columnDefinitions", "approvalStatuses"].map(kind =>
-  [kind, load("data/" + kind + ".json")]));
+  [kind, load("data/" + ({columnDefinitions:"column-definitions",approvalStatuses:"approval-statuses"}[kind] || kind) + ".json")]));
 const allById = new Map(Object.values(collections).flat().map(r => [r.id, r]));
 const catalogue = {
   collection: kind => collections[kind] || [],
