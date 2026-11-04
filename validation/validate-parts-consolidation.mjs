@@ -8,8 +8,10 @@ const parts = load("data/parts.json");
 const machines = load("data/machines.json");
 const materials = [...load("data/substances.json"), ...load("data/named-substances.json"), ...load("data/mobile-resource-definitions.json")];
 const reference = load("game-specs/mineit-mobile/industrial-discovery-reference.json");
+const definitions = load("data/column-definitions.json");
 const byId = new Map([...parts, ...machines, ...materials].map(r => [r.id, r]));
-const catalogue = { collection: kind => kind === "parts" ? parts : [],
+const catalogue = { collection: kind => kind === "parts" ? parts :
+  kind === "columnDefinitions" ? definitions : [],
   get: id => byId.get(id) };
 assert.equal(parts.length, 19);
 assert.equal(new Set(parts.map(p => p.id)).size, parts.length);
@@ -20,10 +22,10 @@ assert.equal(legacy.length, 0);
 assert.equal(finished.length, 19);
 const retiredIds = new Set(["part-battery-parts", "part-thermal-optical-parts", "part-fabrication-parts"]);
 assert.ok(parts.every(p => !retiredIds.has(p.id)), "Superseded identities must not appear as Parts");
-assert.equal(finished.filter(p => p.materialApprovalStatus === "APPROVED_INPUT_FAMILIES").length, 17);
-assert.equal(finished.filter(p => p.materialApprovalStatus === "APPROVED_PRODUCT_BOM_PENDING").length, 1);
-assert.equal(finished.filter(p => p.materialApprovalStatus === "APPROVED").length, 1);
-assert.ok(parts.every(p => p.materialApprovalStatus !== "SOURCE_REFERENCE_SPLIT_APPROVED"));
+assert.equal(finished.filter(p => p.approval === "In Review").length, 18);
+assert.equal(finished.filter(p => p.approval === "Blocked").length, 1);
+assert.ok(parts.every(p => !Object.hasOwn(p, "materialApprovalStatus")),
+  "Legacy materialApprovalStatus is migrated, not an independent authority");
 assert.ok(finished.every(p => p.finishedUnitCount === 1 &&
   typeof p.finishedUnitDescription === "string" && p.finishedUnitDescription.length > 0));
 assert.ok(parts.every(p => p.finishedUnit === undefined),
@@ -39,7 +41,10 @@ const allowedApprovals = new Set(["approved-input-family", "approved-conditional
   "approved-upstream-source", "planning-only-unqualified"]);
 for (const part of parts) {
   assert.ok(part.id.startsWith("part-"));
-  assert.ok(typeof part.materialApprovalStatus === "string");
+  assert.ok(["In Review", "Blocked"].includes(part.approval));
+  assert.ok(part.fieldApprovalStatuses && typeof part.fieldApprovalStatuses === "object");
+  assert.equal(part.fieldApprovalStatuses.partRole, "Approved");
+  assert.equal(part.fieldApprovalStatuses.finishedUnitCount, "Approved");
   assert.ok(!(part.subCategories?.length === 1 && part.subCategories[0] === part.subCategory),
     part.id + " duplicates the primary subcategory");
   for (const id of part.substanceIds) {
@@ -89,7 +94,9 @@ const nuclear = byId.get("part-nuclear-fuel-assembly");
 assert.equal(nuclear.planningReference.status, "blocked-pending-engineering");
 assert.equal(nuclear.planningReference.manufacturerCostCC, undefined);
 assert.equal(nuclear.planningReference.finishedMassKg, undefined);
-assert.equal(nuclear.materialApprovalStatus, "APPROVED_INPUT_FAMILIES");
+assert.equal(nuclear.approval, "Blocked");
+assert.equal(nuclear.fieldApprovalStatuses.materialInputs, "In Review");
+assert.equal(nuclear.fieldApprovalStatuses["planningReference.finishedMassKg"], "Blocked");
 assert.equal(nuclear.unresolvedMaterialInputs, undefined,
   "All three approved nuclear input identities must replace the unresolved placeholder");
 const nuclearMaterials = ["named-substance-fission-fuel-material",
@@ -130,7 +137,10 @@ const approvedLfpBOM = [
   ["named-substance-polymer-feedstock", 3],
   ["named-substance-stainless-steel", 3]
 ];
-assert.equal(lithium.materialApprovalStatus, "APPROVED");
+assert.equal(lithium.approval, "In Review");
+assert.equal(lithium.fieldApprovalStatuses.materialInputs, "Approved");
+assert.equal(lithium.fieldApprovalStatuses["planningReference.finishedMassKg"], "Approved");
+assert.equal(lithium.fieldApprovalStatuses["planningReference.manufacturerCostCC"], "In Review");
 assert.deepEqual(lithium.materialInputs.map(input => [input.substanceId, input.quantityKg]), approvedLfpBOM);
 assert.ok(lithium.materialInputs.every(input => input.requirement === "standard" &&
   input.approval === "approved-input-family"), "The user-approved LFP recipe uses seven resolved inputs");
@@ -172,6 +182,8 @@ assert.equal(reviewed.find(row => row.id === "part-extraction-parts")
   .fields["planningReference.manufacturerCostCC"], 1917.63);
 assert.equal(reviewed.find(row => row.id === "part-precast-concrete-sections")
   .fields["planningReference.finishedMassKg"], 1160);
-assert.ok(reviewed.every(row => row.fields.materialApprovalStatus));
+assert.ok(reviewed.every(row => ["In Review", "Blocked"].includes(row.fields.approval)));
+assert.ok(reviewed.every(row => !Object.hasOwn(row.fields, "materialApprovalStatus")));
+assert.ok(reviewed.every(row => Array.isArray(row.fields.needsApproval)));
 console.log("Parts consolidation validated: 19 finished, zero legacy, 67 linked inputs, " +
   "62 material quantities, zero unresolved material identity placeholders, 18 reference prices.");
