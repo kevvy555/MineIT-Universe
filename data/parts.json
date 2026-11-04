@@ -39,29 +39,24 @@
     },
     "partRole": "finished-product",
     "materialApprovalStatus": "APPROVED_INPUT_FAMILIES",
-    "finishedUnit": {
-      "count": 1,
-      "unit": "each",
-      "description": "one standard generator service kit (mass/rating pending)"
-    },
     "materialInputs": [
       {
         "substanceId": "named-substance-refined-copper",
         "requirement": "standard",
         "approval": "approved-input-family",
-        "planningQuantityKg": 6
+        "quantityKg": 6
       },
       {
         "substanceId": "named-substance-steel",
         "requirement": "standard",
         "approval": "approved-input-family",
-        "planningQuantityKg": 18
+        "quantityKg": 18
       },
       {
         "substanceId": "named-substance-mica-insulation-sheets",
         "requirement": "standard",
         "approval": "approved-input-family",
-        "planningQuantityKg": 0.6
+        "quantityKg": 0.6
       }
     ],
     "unresolvedMaterialInputs": [],
@@ -72,7 +67,9 @@
       "sourceSection": "galaxy-economic-foundation.md §59",
       "manufacturerCostCC": 1456.19,
       "baseManufacturerQuoteCC": 1850
-    }
+    },
+    "finishedUnitCount": 1,
+    "finishedUnitDescription": "one standard generator service kit (mass/rating pending)"
   },
   {
     "id": "part-power-electronics",
@@ -144,35 +141,30 @@
     },
     "partRole": "finished-product",
     "materialApprovalStatus": "APPROVED_INPUT_FAMILIES",
-    "finishedUnit": {
-      "count": 1,
-      "unit": "each",
-      "description": "electronic power module"
-    },
     "materialInputs": [
       {
         "substanceId": "named-substance-electronic-grade-silicon",
         "requirement": "standard",
         "approval": "approved-input-family",
-        "planningQuantityKg": 0.28
+        "quantityKg": 0.28
       },
       {
         "substanceId": "named-substance-refined-copper",
         "requirement": "standard",
         "approval": "approved-input-family",
-        "planningQuantityKg": 3.5
+        "quantityKg": 3.5
       },
       {
         "substanceId": "named-substance-mica-insulation-sheets",
         "requirement": "standard",
         "approval": "approved-input-family",
-        "planningQuantityKg": 1
+        "quantityKg": 1
       },
       {
         "substanceId": "substance-glass",
         "requirement": "standard",
         "approval": "approved-input-family",
-        "planningQuantityKg": 2
+        "quantityKg": 2
       }
     ],
     "unresolvedMaterialInputs": [],
@@ -183,7 +175,9 @@
       "sourceSection": "galaxy-economic-foundation.md §59",
       "manufacturerCostCC": 2650.54,
       "baseManufacturerQuoteCC": 3350
-    }
+    },
+    "finishedUnitCount": 1,
+    "finishedUnitDescription": "electronic power module"
   },
   {
     "id": "part-mechanical-parts",
@@ -241,29 +235,24 @@
     },
     "partRole": "finished-product",
     "materialApprovalStatus": "APPROVED_INPUT_FAMILIES",
-    "finishedUnit": {
-      "count": 1,
-      "unit": "each",
-      "description": "bearing/gear service kit"
-    },
     "materialInputs": [
       {
         "substanceId": "named-substance-steel",
         "requirement": "standard",
         "approval": "approved-input-family",
-        "planningQuantityKg": 15
+        "quantityKg": 15
       },
       {
         "substanceId": "named-substance-bronze",
         "requirement": "standard",
         "approval": "approved-input-family",
-        "planningQuantityKg": 4
+        "quantityKg": 4
       },
       {
         "substanceId": "substance-refined-lubricant",
         "requirement": "standard",
         "approval": "approved-input-family",
-        "planningQuantityKg": 0.6
+        "quantityKg": 0.6
       }
     ],
     "unresolvedMaterialInputs": [],
@@ -274,7 +263,9 @@
       "sourceSection": "galaxy-economic-foundation.md §59",
       "manufacturerCostCC": 1350,
       "baseManufacturerQuoteCC": 1700
-    }
+    },
+    "finishedUnitCount": 1,
+    "finishedUnitDescription": "bearing/gear service kit"
   },
   {
     "id": "part-control-and-sensor-parts",
@@ -336,35 +327,30 @@
     },
     "partRole": "finished-product",
     "materialApprovalStatus": "APPROVED_INPUT_FAMILIES",
-    "finishedUnit": {
-      "count": 1,
-      "unit": "each",
-      "description": "sensor/control module"
-    },
     "materialInputs": [
       {
         "substanceId": "named-substance-electronic-grade-silicon",
         "requirement": "standard",
         "approval": "approved-input-family",
-        "planningQuantityKg": 0.12
+        "quantityKg": 0.12
       },
       {
         "substanceId": "named-substance-refined-copper",
         "requirement": "standard",
         "approval": "approved-input-family",
-        "planningQuantityKg": 1.2
+        "quantityKg": 1.2
       },
       {
         "substanceId": "substance-glass",
         "requirement": "standard",
         "approval": "approved-input-family",
-        "planningQuantityKg": 1
+        "quantityKg": 1
       },
       {
         "substanceId": "named-substance-mica-insulation-sheets",
         "requirement": "standard",
         "approval": "approved-input-family",
-        "planningQuantityKg": 0.3
+        "quantityKg": 0.3
       }
     ],
     "unresolvedMaterialInputs": [],
@@ -375,7 +361,9 @@
       "sourceSection": "galaxy-economic-foundation.md §59",
       "manufacturerCostCC": 2983,
       "baseManufacturerQuoteCC": 3750
-    }
+    },
+    "finishedUnitCount": 1,
+    "finishedUnitDescription": "sensor/control module"
   },
   {
     "id": "part-structural-components",
@@ -434,17 +422,12 @@
     },
     "partRole": "finished-product",
     "materialApprovalStatus": "APPROVED_INPUT_FAMILIES",
-    "finishedUnit": {
-      "count": 1,
-      "unit": "each",
-      "description": "structural kit"
-    },
     "materialInputs": [
       {
         "substanceId": "named-substance-steel",
         "requirement": "standard",
         "approval": "approved-input-family",
-        "planningQuantityKg": 80
+        "quantityKg": 80
       },
       {
         "substanceId": "named-substance-aluminium-alloy",
@@ -460,7 +443,9 @@
       "sourceSection": "galaxy-economic-foundation.md §59",
       "manufacturerCostCC": 1956.67,
       "baseManufacturerQuoteCC": 2450
-    }
+    },
+    "finishedUnitCount": 1,
+    "finishedUnitDescription": "structural kit"
   },
   {
     "id": "part-hydraulic-parts",
@@ -503,35 +488,30 @@
     },
     "partRole": "finished-product",
     "materialApprovalStatus": "APPROVED_INPUT_FAMILIES",
-    "finishedUnit": {
-      "count": 1,
-      "unit": "each",
-      "description": "one standard hydraulic service/pressure kit (rating and mass TBD)"
-    },
     "materialInputs": [
       {
         "substanceId": "named-substance-steel",
         "requirement": "standard",
         "approval": "approved-input-family",
-        "planningQuantityKg": 30
+        "quantityKg": 30
       },
       {
         "substanceId": "named-substance-bronze",
         "requirement": "standard",
         "approval": "approved-input-family",
-        "planningQuantityKg": 4
+        "quantityKg": 4
       },
       {
         "substanceId": "substance-refined-lubricant",
         "requirement": "standard",
         "approval": "approved-input-family",
-        "planningQuantityKg": 1
+        "quantityKg": 1
       },
       {
         "substanceId": "substance-polymer",
         "requirement": "candidate",
         "approval": "planning-only-unqualified",
-        "planningQuantityKg": 1.5
+        "quantityKg": 1.5
       }
     ],
     "unresolvedMaterialInputs": [],
@@ -542,7 +522,9 @@
       "sourceSection": "galaxy-economic-foundation.md §59",
       "manufacturerCostCC": 2306.28,
       "baseManufacturerQuoteCC": 2900
-    }
+    },
+    "finishedUnitCount": 1,
+    "finishedUnitDescription": "one standard hydraulic service/pressure kit (rating and mass TBD)"
   },
   {
     "id": "part-extraction-parts",
@@ -581,23 +563,18 @@
     },
     "partRole": "finished-product",
     "materialApprovalStatus": "APPROVED_INPUT_FAMILIES",
-    "finishedUnit": {
-      "count": 1,
-      "unit": "each",
-      "description": "one standard drill/cutting-head kit (size and mass pending)"
-    },
     "materialInputs": [
       {
         "substanceId": "named-substance-steel",
         "requirement": "standard",
         "approval": "approved-input-family",
-        "planningQuantityKg": 8
+        "quantityKg": 8
       },
       {
         "substanceId": "named-substance-cemented-tungsten-carbide",
         "requirement": "standard",
         "approval": "approved-input-family",
-        "planningQuantityKg": 2
+        "quantityKg": 2
       }
     ],
     "unresolvedMaterialInputs": [],
@@ -608,7 +585,9 @@
       "sourceSection": "galaxy-economic-foundation.md §59",
       "manufacturerCostCC": 1917.63,
       "baseManufacturerQuoteCC": 2400
-    }
+    },
+    "finishedUnitCount": 1,
+    "finishedUnitDescription": "one standard drill/cutting-head kit (size and mass pending)"
   },
   {
     "id": "part-processing-parts",
@@ -650,29 +629,24 @@
     },
     "partRole": "finished-product",
     "materialApprovalStatus": "APPROVED_INPUT_FAMILIES",
-    "finishedUnit": {
-      "count": 1,
-      "unit": "each",
-      "description": "processing liner/crucible kit"
-    },
     "materialInputs": [
       {
         "substanceId": "substance-refined-ceramic",
         "requirement": "standard",
         "approval": "approved-input-family",
-        "planningQuantityKg": 18
+        "quantityKg": 18
       },
       {
         "substanceId": "named-substance-stainless-steel",
         "requirement": "standard",
         "approval": "approved-input-family",
-        "planningQuantityKg": 10
+        "quantityKg": 10
       },
       {
         "substanceId": "substance-glass",
         "requirement": "standard",
         "approval": "approved-input-family",
-        "planningQuantityKg": 2
+        "quantityKg": 2
       }
     ],
     "unresolvedMaterialInputs": [],
@@ -683,7 +657,9 @@
       "sourceSection": "galaxy-economic-foundation.md §59",
       "manufacturerCostCC": 2311.58,
       "baseManufacturerQuoteCC": 2900
-    }
+    },
+    "finishedUnitCount": 1,
+    "finishedUnitDescription": "processing liner/crucible kit"
   },
   {
     "id": "part-computing-parts",
@@ -728,35 +704,30 @@
     },
     "partRole": "finished-product",
     "materialApprovalStatus": "APPROVED_INPUT_FAMILIES",
-    "finishedUnit": {
-      "count": 1,
-      "unit": "each",
-      "description": "computing module"
-    },
     "materialInputs": [
       {
         "substanceId": "named-substance-electronic-grade-silicon",
         "requirement": "standard",
         "approval": "approved-input-family",
-        "planningQuantityKg": 0.6
+        "quantityKg": 0.6
       },
       {
         "substanceId": "named-substance-refined-copper",
         "requirement": "standard",
         "approval": "approved-input-family",
-        "planningQuantityKg": 2
+        "quantityKg": 2
       },
       {
         "substanceId": "substance-glass",
         "requirement": "standard",
         "approval": "approved-input-family",
-        "planningQuantityKg": 1.5
+        "quantityKg": 1.5
       },
       {
         "substanceId": "named-substance-mica-insulation-sheets",
         "requirement": "standard",
         "approval": "approved-input-family",
-        "planningQuantityKg": 0.6
+        "quantityKg": 0.6
       }
     ],
     "unresolvedMaterialInputs": [],
@@ -767,7 +738,9 @@
       "sourceSection": "galaxy-economic-foundation.md §59",
       "manufacturerCostCC": 5116.09,
       "baseManufacturerQuoteCC": 6400
-    }
+    },
+    "finishedUnitCount": 1,
+    "finishedUnitDescription": "computing module"
   },
   {
     "id": "part-fluid-handling-parts",
@@ -813,35 +786,30 @@
     },
     "partRole": "finished-product",
     "materialApprovalStatus": "APPROVED_INPUT_FAMILIES",
-    "finishedUnit": {
-      "count": 1,
-      "unit": "each",
-      "description": "one finished pipe/valve/filter service kit (mass/rating TBD)"
-    },
     "materialInputs": [
       {
         "substanceId": "named-substance-stainless-steel",
         "requirement": "standard",
         "approval": "approved-input-family",
-        "planningQuantityKg": 15
+        "quantityKg": 15
       },
       {
         "substanceId": "named-substance-brass",
         "requirement": "standard",
         "approval": "approved-input-family",
-        "planningQuantityKg": 5
+        "quantityKg": 5
       },
       {
         "substanceId": "substance-refined-ceramic",
         "requirement": "standard",
         "approval": "approved-input-family",
-        "planningQuantityKg": 5
+        "quantityKg": 5
       },
       {
         "substanceId": "substance-polymer",
         "requirement": "candidate",
         "approval": "planning-only-unqualified",
-        "planningQuantityKg": 1.5
+        "quantityKg": 1.5
       }
     ],
     "unresolvedMaterialInputs": [],
@@ -852,7 +820,9 @@
       "sourceSection": "galaxy-economic-foundation.md §59",
       "manufacturerCostCC": 2066.06,
       "baseManufacturerQuoteCC": 2600
-    }
+    },
+    "finishedUnitCount": 1,
+    "finishedUnitDescription": "one finished pipe/valve/filter service kit (mass/rating TBD)"
   },
   {
     "id": "part-bulk-handling-parts",
@@ -891,29 +861,24 @@
     },
     "partRole": "finished-product",
     "materialApprovalStatus": "APPROVED_INPUT_FAMILIES",
-    "finishedUnit": {
-      "count": 1,
-      "unit": "each",
-      "description": "conveyor/handling wear kit"
-    },
     "materialInputs": [
       {
         "substanceId": "named-substance-steel",
         "requirement": "standard",
         "approval": "approved-input-family",
-        "planningQuantityKg": 35
+        "quantityKg": 35
       },
       {
         "substanceId": "substance-refined-ceramic",
         "requirement": "standard",
         "approval": "approved-input-family",
-        "planningQuantityKg": 8
+        "quantityKg": 8
       },
       {
         "substanceId": "named-substance-bronze",
         "requirement": "standard",
         "approval": "approved-input-family",
-        "planningQuantityKg": 3
+        "quantityKg": 3
       }
     ],
     "unresolvedMaterialInputs": [],
@@ -924,7 +889,9 @@
       "sourceSection": "galaxy-economic-foundation.md §59",
       "manufacturerCostCC": 1889.47,
       "baseManufacturerQuoteCC": 2400
-    }
+    },
+    "finishedUnitCount": 1,
+    "finishedUnitDescription": "conveyor/handling wear kit"
   },
   {
     "id": "part-lead-acid-battery-module",
@@ -962,35 +929,30 @@
     },
     "partRole": "finished-product",
     "materialApprovalStatus": "APPROVED_PRODUCT_BOM_PENDING",
-    "finishedUnit": {
-      "count": 1,
-      "unit": "each",
-      "description": "one finished stationary lead-acid battery module (capacity and mass TBD)"
-    },
     "materialInputs": [
       {
         "substanceId": "named-substance-refined-lead",
         "requirement": "upstream-source",
         "approval": "approved-upstream-source",
-        "planningQuantityKg": 36
+        "quantityKg": 36
       },
       {
         "substanceId": "named-substance-sulfuric-acid",
         "requirement": "upstream-source",
         "approval": "approved-upstream-source",
-        "planningQuantityKg": 10
+        "quantityKg": 10
       },
       {
         "substanceId": "named-substance-refined-copper",
         "requirement": "candidate",
         "approval": "planning-only-unqualified",
-        "planningQuantityKg": 1
+        "quantityKg": 1
       },
       {
         "substanceId": "substance-polymer",
         "requirement": "candidate",
         "approval": "planning-only-unqualified",
-        "planningQuantityKg": 4
+        "quantityKg": 4
       }
     ],
     "unresolvedMaterialInputs": [],
@@ -1001,7 +963,9 @@
       "sourceSection": "galaxy-economic-foundation.md §59",
       "manufacturerCostCC": 1410.83,
       "baseManufacturerQuoteCC": 1800
-    }
+    },
+    "finishedUnitCount": 1,
+    "finishedUnitDescription": "one finished stationary lead-acid battery module (capacity and mass TBD)"
   },
   {
     "id": "part-lithium-based-battery-module",
@@ -1040,41 +1004,36 @@
     },
     "partRole": "finished-product",
     "materialApprovalStatus": "APPROVED_PRODUCT_BOM_PENDING",
-    "finishedUnit": {
-      "count": 1,
-      "unit": "each",
-      "description": "one finished lithium-based rechargeable battery module (capacity and mass TBD)"
-    },
     "materialInputs": [
       {
         "substanceId": "named-substance-lithium-carbonate",
         "requirement": "upstream-precursor",
         "approval": "approved-upstream-source",
-        "planningQuantityKg": 1.5
+        "quantityKg": 1.5
       },
       {
         "substanceId": "substance-refined-graphite",
         "requirement": "candidate",
         "approval": "planning-only-unqualified",
-        "planningQuantityKg": 2.5
+        "quantityKg": 2.5
       },
       {
         "substanceId": "named-substance-refined-copper",
         "requirement": "candidate",
         "approval": "planning-only-unqualified",
-        "planningQuantityKg": 2
+        "quantityKg": 2
       },
       {
         "substanceId": "substance-polymer",
         "requirement": "candidate",
         "approval": "planning-only-unqualified",
-        "planningQuantityKg": 3
+        "quantityKg": 3
       },
       {
         "substanceId": "named-substance-stainless-steel",
         "requirement": "candidate",
         "approval": "planning-only-unqualified",
-        "planningQuantityKg": 3
+        "quantityKg": 3
       }
     ],
     "unresolvedMaterialInputs": [
@@ -1096,7 +1055,9 @@
       "sourceSection": "galaxy-economic-foundation.md §59",
       "manufacturerCostCC": 3508.91,
       "baseManufacturerQuoteCC": 4400
-    }
+    },
+    "finishedUnitCount": 1,
+    "finishedUnitDescription": "one finished lithium-based rechargeable battery module (capacity and mass TBD)"
   },
   {
     "id": "part-thermal-parts",
@@ -1137,29 +1098,24 @@
     },
     "partRole": "finished-product",
     "materialApprovalStatus": "APPROVED_INPUT_FAMILIES",
-    "finishedUnit": {
-      "count": 1,
-      "unit": "each",
-      "description": "one finished Thermal Part or service module (size and mass TBD)"
-    },
     "materialInputs": [
       {
         "substanceId": "named-substance-stainless-steel",
         "requirement": "standard",
         "approval": "approved-input-family",
-        "planningQuantityKg": 24
+        "quantityKg": 24
       },
       {
         "substanceId": "substance-refined-ceramic",
         "requirement": "standard",
         "approval": "approved-input-family",
-        "planningQuantityKg": 10
+        "quantityKg": 10
       },
       {
         "substanceId": "named-substance-mica-insulation-sheets",
         "requirement": "candidate",
         "approval": "planning-only-unqualified",
-        "planningQuantityKg": 2.5
+        "quantityKg": 2.5
       }
     ],
     "unresolvedMaterialInputs": [],
@@ -1170,7 +1126,9 @@
       "sourceSection": "galaxy-economic-foundation.md §59",
       "manufacturerCostCC": 2450.53,
       "baseManufacturerQuoteCC": 3100
-    }
+    },
+    "finishedUnitCount": 1,
+    "finishedUnitDescription": "one finished Thermal Part or service module (size and mass TBD)"
   },
   {
     "id": "part-optical-parts",
@@ -1211,23 +1169,18 @@
     },
     "partRole": "finished-product",
     "materialApprovalStatus": "APPROVED_INPUT_FAMILIES",
-    "finishedUnit": {
-      "count": 1,
-      "unit": "each",
-      "description": "one finished optical component or service module (size and mass TBD)"
-    },
     "materialInputs": [
       {
         "substanceId": "substance-glass",
         "requirement": "standard",
         "approval": "approved-input-family",
-        "planningQuantityKg": 6
+        "quantityKg": 6
       },
       {
         "substanceId": "substance-refined-ceramic",
         "requirement": "standard",
         "approval": "approved-input-family",
-        "planningQuantityKg": 3
+        "quantityKg": 3
       },
       {
         "substanceId": "named-substance-optical-sapphire",
@@ -1238,7 +1191,7 @@
         "substanceId": "named-substance-steel",
         "requirement": "candidate",
         "approval": "planning-only-unqualified",
-        "planningQuantityKg": 4
+        "quantityKg": 4
       }
     ],
     "unresolvedMaterialInputs": [],
@@ -1249,7 +1202,9 @@
       "sourceSection": "galaxy-economic-foundation.md §59",
       "manufacturerCostCC": 2404.07,
       "baseManufacturerQuoteCC": 3050
-    }
+    },
+    "finishedUnitCount": 1,
+    "finishedUnitDescription": "one finished optical component or service module (size and mass TBD)"
   },
   {
     "id": "part-forming-cutting-tooling",
@@ -1287,23 +1242,18 @@
     },
     "partRole": "finished-product",
     "materialApprovalStatus": "APPROVED_INPUT_FAMILIES",
-    "finishedUnit": {
-      "count": 1,
-      "unit": "each",
-      "description": "one finished forming/cutting tool or standard service tooling kit (size/rating TBD)"
-    },
     "materialInputs": [
       {
         "substanceId": "named-substance-steel",
         "requirement": "standard",
         "approval": "approved-input-family",
-        "planningQuantityKg": 12
+        "quantityKg": 12
       },
       {
         "substanceId": "named-substance-cemented-tungsten-carbide",
         "requirement": "standard",
         "approval": "approved-input-family",
-        "planningQuantityKg": 3
+        "quantityKg": 3
       }
     ],
     "unresolvedMaterialInputs": [],
@@ -1314,7 +1264,9 @@
       "sourceSection": "galaxy-economic-foundation.md §59",
       "manufacturerCostCC": 3176.45,
       "baseManufacturerQuoteCC": 4000
-    }
+    },
+    "finishedUnitCount": 1,
+    "finishedUnitDescription": "one finished forming/cutting tool or standard service tooling kit (size/rating TBD)"
   },
   {
     "id": "part-welding-parts",
@@ -1352,29 +1304,24 @@
     },
     "partRole": "finished-product",
     "materialApprovalStatus": "APPROVED_INPUT_FAMILIES",
-    "finishedUnit": {
-      "count": 1,
-      "unit": "each",
-      "description": "one finished welding head/contact/consumable service kit (type/rating TBD)"
-    },
     "materialInputs": [
       {
         "substanceId": "named-substance-refined-copper",
         "requirement": "standard",
         "approval": "approved-input-family",
-        "planningQuantityKg": 4
+        "quantityKg": 4
       },
       {
         "substanceId": "named-substance-steel",
         "requirement": "standard",
         "approval": "approved-input-family",
-        "planningQuantityKg": 8
+        "quantityKg": 8
       },
       {
         "substanceId": "named-substance-mica-insulation-sheets",
         "requirement": "candidate",
         "approval": "planning-only-unqualified",
-        "planningQuantityKg": 1
+        "quantityKg": 1
       }
     ],
     "unresolvedMaterialInputs": [],
@@ -1385,7 +1332,9 @@
       "sourceSection": "galaxy-economic-foundation.md §59",
       "manufacturerCostCC": 1868.94,
       "baseManufacturerQuoteCC": 2350
-    }
+    },
+    "finishedUnitCount": 1,
+    "finishedUnitDescription": "one finished welding head/contact/consumable service kit (type/rating TBD)"
   },
   {
     "id": "part-precast-concrete-sections",
@@ -1423,30 +1372,25 @@
     },
     "partRole": "finished-product",
     "materialApprovalStatus": "APPROVED_INPUT_FAMILIES",
-    "finishedUnit": {
-      "count": 1,
-      "unit": "each",
-      "description": "one finished cured transportable section (size TBD)"
-    },
     "materialInputs": [
       {
         "substanceId": "named-substance-cement",
         "requirement": "standard",
         "approval": "approved-input-family",
-        "planningQuantityKg": 175
+        "quantityKg": 175
       },
       {
         "substanceId": "named-substance-graded-aggregate",
         "requirement": "standard",
         "approval": "approved-input-family",
-        "planningQuantityKg": 600
+        "quantityKg": 600
       },
       {
         "substanceId": "named-substance-steel",
         "requirement": "conditional-reinforcement",
         "approval": "approved-conditional-family",
-        "planningQuantityKg": 25,
-        "planningNote": "for reinforced example"
+        "planningNote": "for reinforced example",
+        "quantityKg": 25
       }
     ],
     "unresolvedMaterialInputs": [
@@ -1468,7 +1412,9 @@
       "sourceSection": "galaxy-economic-foundation.md §59",
       "manufacturerCostCC": 2511.39,
       "baseManufacturerQuoteCC": 3150
-    }
+    },
+    "finishedUnitCount": 1,
+    "finishedUnitDescription": "one finished cured transportable section (size TBD)"
   },
   {
     "id": "part-nuclear-fuel-assembly",
@@ -1505,11 +1451,6 @@
     },
     "partRole": "finished-product",
     "materialApprovalStatus": "APPROVED_PRODUCT_BOM_PENDING",
-    "finishedUnit": {
-      "count": 1,
-      "unit": "each",
-      "description": "one finished compatible fission-reactor consumable assembly (rating and service life TBD)"
-    },
     "materialInputs": [
       {
         "substanceId": "named-substance-uranium-concentrate",
@@ -1527,6 +1468,8 @@
       "status": "blocked-pending-engineering",
       "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
       "sourceSection": "galaxy-economic-foundation.md §59"
-    }
+    },
+    "finishedUnitCount": 1,
+    "finishedUnitDescription": "one finished compatible fission-reactor consumable assembly (rating and service life TBD)"
   }
 ]
