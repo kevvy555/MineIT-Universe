@@ -23,7 +23,10 @@ assert.ok(parts.every(p => !retiredIds.has(p.id)), "Superseded identities must n
 assert.equal(finished.filter(p => p.materialApprovalStatus === "APPROVED_INPUT_FAMILIES").length, 16);
 assert.equal(finished.filter(p => p.materialApprovalStatus === "APPROVED_PRODUCT_BOM_PENDING").length, 3);
 assert.ok(parts.every(p => p.materialApprovalStatus !== "SOURCE_REFERENCE_SPLIT_APPROVED"));
-assert.ok(finished.every(p => p.finishedUnit?.unit === "each" && p.finishedUnit.count === 1));
+assert.ok(finished.every(p => p.finishedUnitCount === 1 &&
+  typeof p.finishedUnitDescription === "string" && p.finishedUnitDescription.length > 0));
+assert.ok(parts.every(p => p.finishedUnit === undefined),
+  "Separate count/unit object should not be reintroduced");
 assert.ok(parts.every(p => !p.legacyReplacementPartIds));
 assert.ok(parts.every(p => !p.materialDesignStatus && !p.materialDesignNotes));
 
@@ -52,8 +55,8 @@ for (const part of parts) {
     inputIds.add(input.substanceId);
     assert.ok(allowedRequirements.has(input.requirement), part.id + " invalid requirement");
     assert.ok(allowedApprovals.has(input.approval), part.id + " invalid input approval");
-    if (input.planningQuantityKg != null) {
-      assert.ok(Number.isFinite(input.planningQuantityKg) && input.planningQuantityKg > 0);
+    if (input.quantityKg != null) {
+      assert.ok(Number.isFinite(input.quantityKg) && input.quantityKg > 0);
       planningInputCount++;
     }
     inputCount++;
@@ -88,7 +91,7 @@ assert.ok(nuclear.materialInputs.every(input => input.requirement === "upstream-
 const steel = byId.get("part-precast-concrete-sections").materialInputs
   .find(input => input.substanceId === "named-substance-steel");
 assert.equal(steel.requirement, "conditional-reinforcement");
-assert.equal(steel.planningQuantityKg, 25);
+assert.equal(steel.quantityKg, 25);
 const lithium = byId.get("part-lithium-based-battery-module");
 assert.equal(lithium.materialInputs.find(i =>
   i.substanceId === "named-substance-lithium-carbonate").requirement, "upstream-precursor");
@@ -98,12 +101,18 @@ assert.deepEqual(new Set(source.materialInputs.map(i => i.substanceId)),
   new Set(["named-substance-steel", "named-substance-cemented-tungsten-carbide"]));
 const readable = fieldText(source.materialInputs[0], catalogue);
 assert.match(readable, /Steel/);
-assert.match(readable, /kg planning/);
+assert.match(readable, /kg/);
 const reviewed = industrialReviewRows("parts", catalogue, reference);
 assert.equal(reviewed.length, 19);
 assert.ok(reviewed.every(row => row.canonical && row.fields.partRole));
 assert.ok(reviewed.every(row => !("review.materialBOM.product_name" in row.fields) &&
   !("review.quantities.approved_planning_input_materials_kg_per_finished_unit" in row.fields)));
+assert.ok(reviewed.every(row => row.fields.finishedUnitCount === 1));
+assert.ok(reviewed.every(row => ["Available", "Not generated"].includes(row.fields.partImage)));
+assert.equal(reviewed.filter(row => row.fields.partImage === "Available").length, 1);
+assert.ok(reviewed.every(row => !("finishedUnit.count" in row.fields)));
+assert.equal(reviewed.find(row => row.id === "part-precast-concrete-sections")
+  .fields.materialInputs.find(i => i.substanceId === "named-substance-cement").quantityKg, 175);
 assert.equal(reviewed.find(row => row.id === "part-extraction-parts")
   .fields["planningReference.manufacturerCostCC"], 1917.63);
 assert.equal(reviewed.find(row => row.id === "part-precast-concrete-sections")
