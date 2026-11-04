@@ -96,7 +96,8 @@ assert.deepEqual(kindOptions.map(x => x.label), ["Biological food", "Named mater
 assert.equal(kindOptions.reduce((sum, entry) => sum + entry.count, 0), rows.length);
 const selectedKinds = { kind: new Set([valueToken("Natural resource"), valueToken("Named material")]) };
 const included = applySubstanceTable(rows, ["kind"], {}, "name", 1, catalogue, selectedKinds);
-assert.equal(included.length, 104, "Selected dropdown values combine with OR within one column");
+assert.equal(included.length, rows.length - collections.mobileBiologicalResources.length,
+  "Selected dropdown values combine with OR within one column");
 const metalsOnly = applySubstanceTable(rows, ["kind", "archetype"], {}, "name", 1, catalogue,
   { kind: new Set([valueToken("Natural resource")]), archetype: new Set([valueToken("Metal")]) });
 assert.ok(metalsOnly.length > 0 && metalsOnly.length < 42);
@@ -113,7 +114,8 @@ assert.ok(withTag.every(row => row.fields["android.operationalTags"]?.includes("
 assert.deepEqual(rowValueTokens([]), ["blank"]);
 const missingScan = applySubstanceTable(rows, ["android.baseScan"], {}, "name", 1, catalogue,
   { "android.baseScan": new Set(["blank"]) });
-assert.equal(missingScan.length, 111 - 42, "The no-value option filters missing Android fields");
+assert.equal(missingScan.length, rows.length - reference.resources.length,
+  "The no-value option filters missing Android fields");
 const scanChoice = uniqueColumnValues(rows, "android.baseScan", catalogue);
 assert.ok(scanChoice.some(x => x.token === "number:1"));
 assert.ok(scanChoice.some(x => x.token === "blank"));
