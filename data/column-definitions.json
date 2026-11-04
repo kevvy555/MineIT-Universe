@@ -1544,13 +1544,77 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
+    "id": "column-definition-parts-field-approval-statuses-finished-unit-count-bcd29527",
+    "name": "Finished Unit Count — Status",
+    "table": "parts",
+    "fieldKey": "fieldApprovalStatuses.finishedUnitCount",
+    "category": "Discovery & Approval",
+    "requiresApproval": false,
+    "description": "Explicit status of the related approval-requiring canonical Part field; not a second overall approval."
+  },
+  {
+    "id": "column-definition-parts-field-approval-statuses-finished-unit-description-fc201302",
+    "name": "Finished Unit Description — Status",
+    "table": "parts",
+    "fieldKey": "fieldApprovalStatuses.finishedUnitDescription",
+    "category": "Discovery & Approval",
+    "requiresApproval": false,
+    "description": "Explicit status of the related approval-requiring canonical Part field; not a second overall approval."
+  },
+  {
+    "id": "column-definition-parts-field-approval-statuses-material-inputs-60296994",
+    "name": "Material Inputs — Status",
+    "table": "parts",
+    "fieldKey": "fieldApprovalStatuses.materialInputs",
+    "category": "Discovery & Approval",
+    "requiresApproval": false,
+    "description": "Explicit status of the related approval-requiring canonical Part field; not a second overall approval."
+  },
+  {
+    "id": "column-definition-parts-field-approval-statuses-part-role-9c44f439",
+    "name": "Part Role — Status",
+    "table": "parts",
+    "fieldKey": "fieldApprovalStatuses.partRole",
+    "category": "Discovery & Approval",
+    "requiresApproval": false,
+    "description": "Explicit status of the related approval-requiring canonical Part field; not a second overall approval."
+  },
+  {
+    "id": "column-definition-parts-field-approval-statuses-planning-reference-base-manufacturer-quote-c-84966cc2",
+    "name": "Manufacturer Quote Cost (CC) — Status",
+    "table": "parts",
+    "fieldKey": "fieldApprovalStatuses.planningReference.baseManufacturerQuoteCC",
+    "category": "Discovery & Approval",
+    "requiresApproval": false,
+    "description": "Explicit status of the related approval-requiring canonical Part field; not a second overall approval."
+  },
+  {
+    "id": "column-definition-parts-field-approval-statuses-planning-reference-finished-mass-kg-4992bdb0",
+    "name": "Weight (kg) — Status",
+    "table": "parts",
+    "fieldKey": "fieldApprovalStatuses.planningReference.finishedMassKg",
+    "category": "Discovery & Approval",
+    "requiresApproval": false,
+    "description": "Explicit status of the related approval-requiring canonical Part field; not a second overall approval."
+  },
+  {
+    "id": "column-definition-parts-field-approval-statuses-planning-reference-manufacturer-cost-cc-2821208a",
+    "name": "Manufacturer Cost (CC) — Status",
+    "table": "parts",
+    "fieldKey": "fieldApprovalStatuses.planningReference.manufacturerCostCC",
+    "category": "Discovery & Approval",
+    "requiresApproval": false,
+    "description": "Explicit status of the related approval-requiring canonical Part field; not a second overall approval."
+  },
+  {
     "id": "column-definition-parts-finished-unit-count-2b82c3d8",
     "name": "Finished Unit Count",
     "table": "parts",
     "fieldKey": "finishedUnitCount",
     "category": "Identity & Classification",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
+    "requiresApproval": true,
+    "description": "Requires explicit approval of the Part's canonical finished unit count; migration retains accepted decisions without approving unreviewed specifications.",
+    "approvalPolicy": "parts-unit-count"
   },
   {
     "id": "column-definition-parts-finished-unit-description-2a8439c5",
@@ -1558,8 +1622,9 @@
     "table": "parts",
     "fieldKey": "finishedUnitDescription",
     "category": "Identity & Classification",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
+    "requiresApproval": true,
+    "description": "Requires explicit approval of the Part's canonical finished unit description; migration retains accepted decisions without approving unreviewed specifications.",
+    "approvalPolicy": "parts-unit-definition"
   },
   {
     "id": "column-definition-parts-id-ef455358",
@@ -1634,15 +1699,6 @@
     "description": "Derived comparison of required input weights with the existing finished-weight reference; no silent changes to source quantities."
   },
   {
-    "id": "column-definition-parts-material-approval-status-ec2a09dd",
-    "name": "Material Approval Status",
-    "table": "parts",
-    "fieldKey": "materialApprovalStatus",
-    "category": "Discovery & Approval",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
     "id": "column-definition-parts-material-inputs-0d309d8d",
     "name": "Material Inputs",
     "table": "parts",
@@ -1685,8 +1741,9 @@
     "table": "parts",
     "fieldKey": "partRole",
     "category": "Identity & Classification",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
+    "requiresApproval": true,
+    "description": "Requires explicit approval of the Part's canonical part role; migration retains accepted decisions without approving unreviewed specifications.",
+    "approvalPolicy": "parts-role"
   },
   {
     "id": "column-definition-parts-planning-reference-base-manufacturer-quote-cc-2c997e89",
