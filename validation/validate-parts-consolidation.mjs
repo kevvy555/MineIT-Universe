@@ -20,8 +20,8 @@ assert.equal(legacy.length, 0);
 assert.equal(finished.length, 19);
 const retiredIds = new Set(["part-battery-parts", "part-thermal-optical-parts", "part-fabrication-parts"]);
 assert.ok(parts.every(p => !retiredIds.has(p.id)), "Superseded identities must not appear as Parts");
-assert.equal(finished.filter(p => p.materialApprovalStatus === "APPROVED_INPUT_FAMILIES").length, 16);
-assert.equal(finished.filter(p => p.materialApprovalStatus === "APPROVED_PRODUCT_BOM_PENDING").length, 2);
+assert.equal(finished.filter(p => p.materialApprovalStatus === "APPROVED_INPUT_FAMILIES").length, 17);
+assert.equal(finished.filter(p => p.materialApprovalStatus === "APPROVED_PRODUCT_BOM_PENDING").length, 1);
 assert.equal(finished.filter(p => p.materialApprovalStatus === "APPROVED").length, 1);
 assert.ok(parts.every(p => p.materialApprovalStatus !== "SOURCE_REFERENCE_SPLIT_APPROVED"));
 assert.ok(finished.every(p => p.finishedUnitCount === 1 &&
@@ -79,16 +79,33 @@ for (const part of parts) {
   assert.ok(part.manufacturerCostCC == null && part.baseSellQuoteCC == null,
     "Planning references must not become live manufacturer prices");
 }
-assert.equal(inputCount, 65);
+assert.equal(inputCount, 67);
 assert.equal(planningInputCount, 62);
-assert.equal(unresolvedCount, 1);
+assert.equal(unresolvedCount, 0);
 assert.equal(finished.filter(p => Number.isFinite(p.planningReference.finishedMassKg)).length, 18);
 assert.equal(finished.filter(p => Number.isFinite(p.planningReference.manufacturerCostCC)).length, 18);
 assert.equal(finished.filter(p => Number.isFinite(p.planningReference.baseManufacturerQuoteCC)).length, 18);
 const nuclear = byId.get("part-nuclear-fuel-assembly");
 assert.equal(nuclear.planningReference.status, "blocked-pending-engineering");
 assert.equal(nuclear.planningReference.manufacturerCostCC, undefined);
-assert.ok(nuclear.materialInputs.every(input => input.requirement === "upstream-precursor"));
+assert.equal(nuclear.planningReference.finishedMassKg, undefined);
+assert.equal(nuclear.materialApprovalStatus, "APPROVED_INPUT_FAMILIES");
+assert.equal(nuclear.unresolvedMaterialInputs, undefined,
+  "All three approved nuclear input identities must replace the unresolved placeholder");
+const nuclearMaterials = ["named-substance-fission-fuel-material",
+  "named-substance-stainless-steel", "substance-refined-ceramic"];
+assert.deepEqual(nuclear.materialInputs.map(input => input.substanceId), nuclearMaterials);
+assert.deepEqual(nuclear.substanceIds, nuclearMaterials);
+assert.ok(nuclear.materialInputs.every(input => input.requirement === "standard" &&
+  input.approval === "approved-input-family" && input.quantityKg === undefined),
+  "Only nuclear material identities are approved, not engineering quantities");
+const fissionMaterial = byId.get("named-substance-fission-fuel-material");
+assert.ok(fissionMaterial, "Refined fission feedstock must have its own canonical material identity");
+assert.equal(fissionMaterial.materialStage, "processed");
+assert.equal(fissionMaterial.stockBehaviour, "stockable");
+assert.deepEqual(fissionMaterial.upstreamMaterialIds, ["named-substance-uranium-concentrate"]);
+assert.ok(!nuclear.materialInputs.some(input => input.substanceId === "named-substance-uranium-concentrate"),
+  "Do not count uranium precursor as an additional direct assembly material");
 const steel = byId.get("part-precast-concrete-sections").materialInputs
   .find(input => input.substanceId === "named-substance-steel");
 assert.equal(steel.requirement, "conditional-reinforcement");
@@ -156,5 +173,5 @@ assert.equal(reviewed.find(row => row.id === "part-extraction-parts")
 assert.equal(reviewed.find(row => row.id === "part-precast-concrete-sections")
   .fields["planningReference.finishedMassKg"], 1160);
 assert.ok(reviewed.every(row => row.fields.materialApprovalStatus));
-console.log("Parts consolidation validated: 19 finished, zero legacy, 65 linked inputs, " +
-  "62 material quantities, 1 unresolved input description, 18 reference prices.");
+console.log("Parts consolidation validated: 19 finished, zero legacy, 67 linked inputs, " +
+  "62 material quantities, zero unresolved material identity placeholders, 18 reference prices.");
