@@ -33,7 +33,7 @@ const configurations = {
 export function createApprovalReferenceTables() {
   return Object.fromEntries(Object.entries(configurations).map(([kind, config]) =>
     [kind, createSubstanceTable({
-      ...config, storageKey: "mineitApprovalReference-" + kind,
+      ...config, tableKind: kind, storageKey: "mineitApprovalReference-" + kind,
       rows(catalogue) {
         return catalogue.collection(kind).map(record => ({
           id: record.id, record, collection: kind, canonical: true,
