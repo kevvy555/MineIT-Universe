@@ -60,7 +60,7 @@ export function approvalSummary(kind, record, fields, catalogue) {
 export function partMassReview(part) {
   const inputs = part.materialInputs || [];
   const required = inputs.filter(input => !input.requirement?.startsWith("conditional") &&
-    !input.requirement?.startsWith("upstream"));
+    input.requirement !== "upstream-precursor");
   if (!required.length || required.some(input => !Number.isFinite(input.quantityKg)))
     return "Pending material quantities";
   const inputKg = required.reduce((sum, input) => sum + input.quantityKg, 0);
