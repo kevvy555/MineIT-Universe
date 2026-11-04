@@ -1432,9 +1432,11 @@
       "Manufactured"
     ],
     "substanceIds": [
-      "named-substance-uranium-concentrate"
+      "named-substance-fission-fuel-material",
+      "named-substance-stainless-steel",
+      "substance-refined-ceramic"
     ],
-    "description": "A qualified manufactured fission-fuel assembly consumed in a compatible nuclear reactor and ultimately yielding spent nuclear fuel; it is distinct from fusion fuel.",
+    "description": "Manufactured fission-reactor nuclear fuel assembly. Approved direct material identities are refined Fission Fuel Material, Stainless Steel for structural components, and Refined Ceramic for insulation. Material quantities, finished mass, reactor fit and reference pricing are still pending.",
     "canonStatus": "working canon",
     "provenance": {
       "sourceRepository": "kevvy555/MineIT-Android",
@@ -1456,18 +1458,22 @@
       "notes": "Art not yet generated; candidate identity reconciled from Android industrial discovery."
     },
     "partRole": "finished-product",
-    "materialApprovalStatus": "APPROVED_PRODUCT_BOM_PENDING",
+    "materialApprovalStatus": "APPROVED_INPUT_FAMILIES",
     "materialInputs": [
       {
-        "substanceId": "named-substance-uranium-concentrate",
-        "requirement": "upstream-precursor",
-        "approval": "approved-upstream-source"
-      }
-    ],
-    "unresolvedMaterialInputs": [
+        "substanceId": "named-substance-fission-fuel-material",
+        "requirement": "standard",
+        "approval": "approved-input-family"
+      },
       {
-        "label": "Uranium Concentrate plus fuel and cladding materials TBD",
-        "status": "design-unresolved"
+        "substanceId": "named-substance-stainless-steel",
+        "requirement": "standard",
+        "approval": "approved-input-family"
+      },
+      {
+        "substanceId": "substance-refined-ceramic",
+        "requirement": "standard",
+        "approval": "approved-input-family"
       }
     ],
     "planningReference": {
