@@ -58,7 +58,6 @@
         "quantityKg": 0.6
       }
     ],
-    "unresolvedMaterialInputs": [],
     "planningReference": {
       "status": "approved-discovery-planning-not-live",
       "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
@@ -175,7 +174,6 @@
         "quantityKg": 2
       }
     ],
-    "unresolvedMaterialInputs": [],
     "planningReference": {
       "status": "approved-discovery-planning-not-live",
       "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
@@ -272,7 +270,6 @@
         "quantityKg": 0.6
       }
     ],
-    "unresolvedMaterialInputs": [],
     "planningReference": {
       "status": "approved-discovery-planning-not-live",
       "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
@@ -379,7 +376,6 @@
         "quantityKg": 0.3
       }
     ],
-    "unresolvedMaterialInputs": [],
     "planningReference": {
       "status": "approved-discovery-planning-not-live",
       "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
@@ -470,7 +466,6 @@
         "approval": "approved-conditional-family"
       }
     ],
-    "unresolvedMaterialInputs": [],
     "planningReference": {
       "status": "approved-discovery-planning-not-live",
       "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
@@ -558,7 +553,6 @@
         "quantityKg": 1.5
       }
     ],
-    "unresolvedMaterialInputs": [],
     "planningReference": {
       "status": "approved-discovery-planning-not-live",
       "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
@@ -630,7 +624,6 @@
         "quantityKg": 2
       }
     ],
-    "unresolvedMaterialInputs": [],
     "planningReference": {
       "status": "approved-discovery-planning-not-live",
       "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
@@ -711,7 +704,6 @@
         "quantityKg": 2
       }
     ],
-    "unresolvedMaterialInputs": [],
     "planningReference": {
       "status": "approved-discovery-planning-not-live",
       "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
@@ -801,7 +793,6 @@
         "quantityKg": 0.6
       }
     ],
-    "unresolvedMaterialInputs": [],
     "planningReference": {
       "status": "approved-discovery-planning-not-live",
       "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
@@ -892,7 +883,6 @@
         "quantityKg": 1.5
       }
     ],
-    "unresolvedMaterialInputs": [],
     "planningReference": {
       "status": "approved-discovery-planning-not-live",
       "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
@@ -970,7 +960,6 @@
         "quantityKg": 3
       }
     ],
-    "unresolvedMaterialInputs": [],
     "planningReference": {
       "status": "approved-discovery-planning-not-live",
       "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
@@ -1053,7 +1042,6 @@
         "quantityKg": 4
       }
     ],
-    "unresolvedMaterialInputs": [],
     "planningReference": {
       "status": "approved-discovery-planning-not-live",
       "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
@@ -1238,7 +1226,6 @@
         "quantityKg": 2.5
       }
     ],
-    "unresolvedMaterialInputs": [],
     "planningReference": {
       "status": "approved-discovery-planning-not-live",
       "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
@@ -1323,7 +1310,6 @@
         "quantityKg": 4
       }
     ],
-    "unresolvedMaterialInputs": [],
     "planningReference": {
       "status": "approved-discovery-planning-not-live",
       "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
@@ -1394,7 +1380,6 @@
         "quantityKg": 3
       }
     ],
-    "unresolvedMaterialInputs": [],
     "planningReference": {
       "status": "approved-discovery-planning-not-live",
       "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
@@ -1471,7 +1456,6 @@
         "quantityKg": 1
       }
     ],
-    "unresolvedMaterialInputs": [],
     "planningReference": {
       "status": "approved-discovery-planning-not-live",
       "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
