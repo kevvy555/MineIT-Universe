@@ -156,6 +156,6 @@ const broken = { ...machines.find(m => m.amenityProfile),
   fieldApprovalStatuses: { ...machines.find(m => m.amenityProfile).fieldApprovalStatuses,
     "manufacturing.manufacturerQuoteCC": "Approved" } };
 assert.throws(() => approvalSummary("machines", broken, flatten(broken), catalogue),
-  /disagrees|cannot approve/,
+  /disagrees|cannot approve|requires approved price evidence/,
   "Provisional quote must never be treated as approved");
 console.log("Machines consolidated: 42 canonical, 26 review fields, 5 approved physical BOMs, 35 provisional CC scenarios, 7 blocked designs, 14 pending compatibility edges.");

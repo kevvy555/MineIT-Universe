@@ -172,7 +172,7 @@ const changed = { ...luxury.record, fieldApprovalStatuses:
   { ...luxury.record.fieldApprovalStatuses,
     "manufacturing.manufacturerCostCC": "Approved" }};
 assert.throws(() => approvalSummary("machines", changed, luxury.fields, catalogue),
-  /cannot approve absent Machine field|disagrees with explicit field statuses/,
+  /cannot approve absent Machine field|disagrees with explicit field statuses|requires approved price evidence/,
   "Manufacturer cost must not be approved from a missing or provisional record");
 const possible = partDefinitions.map(definition => definition.fieldKey);
 assert.deepEqual(pendingColumnSelection(parts, possible, battery.id), [
