@@ -1508,15 +1508,6 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-catalogue-status-b1352970",
-    "name": "Catalogue Status",
-    "table": "parts",
-    "fieldKey": "catalogueStatus",
-    "category": "Identity & Classification",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
     "id": "column-definition-parts-category-da6e3ad9",
     "name": "Category",
     "table": "parts",
@@ -1533,78 +1524,6 @@
     "category": "Description",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-parts-entity-type-c632ac42",
-    "name": "Entity Type",
-    "table": "parts",
-    "fieldKey": "entityType",
-    "category": "Identity & Classification",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-parts-field-approval-statuses-finished-unit-count-bcd29527",
-    "name": "Finished Unit Count — Status",
-    "table": "parts",
-    "fieldKey": "fieldApprovalStatuses.finishedUnitCount",
-    "category": "Discovery & Approval",
-    "requiresApproval": false,
-    "description": "Explicit status of the related approval-requiring canonical Part field; not a second overall approval."
-  },
-  {
-    "id": "column-definition-parts-field-approval-statuses-finished-unit-description-fc201302",
-    "name": "Finished Unit Description — Status",
-    "table": "parts",
-    "fieldKey": "fieldApprovalStatuses.finishedUnitDescription",
-    "category": "Discovery & Approval",
-    "requiresApproval": false,
-    "description": "Explicit status of the related approval-requiring canonical Part field; not a second overall approval."
-  },
-  {
-    "id": "column-definition-parts-field-approval-statuses-material-inputs-60296994",
-    "name": "Material Inputs — Status",
-    "table": "parts",
-    "fieldKey": "fieldApprovalStatuses.materialInputs",
-    "category": "Discovery & Approval",
-    "requiresApproval": false,
-    "description": "Explicit status of the related approval-requiring canonical Part field; not a second overall approval."
-  },
-  {
-    "id": "column-definition-parts-field-approval-statuses-part-role-9c44f439",
-    "name": "Part Role — Status",
-    "table": "parts",
-    "fieldKey": "fieldApprovalStatuses.partRole",
-    "category": "Discovery & Approval",
-    "requiresApproval": false,
-    "description": "Explicit status of the related approval-requiring canonical Part field; not a second overall approval."
-  },
-  {
-    "id": "column-definition-parts-field-approval-statuses-planning-reference-base-manufacturer-quote-c-84966cc2",
-    "name": "Manufacturer Quote Cost (CC) — Status",
-    "table": "parts",
-    "fieldKey": "fieldApprovalStatuses.planningReference.baseManufacturerQuoteCC",
-    "category": "Discovery & Approval",
-    "requiresApproval": false,
-    "description": "Explicit status of the related approval-requiring canonical Part field; not a second overall approval."
-  },
-  {
-    "id": "column-definition-parts-field-approval-statuses-planning-reference-finished-mass-kg-4992bdb0",
-    "name": "Weight (kg) — Status",
-    "table": "parts",
-    "fieldKey": "fieldApprovalStatuses.planningReference.finishedMassKg",
-    "category": "Discovery & Approval",
-    "requiresApproval": false,
-    "description": "Explicit status of the related approval-requiring canonical Part field; not a second overall approval."
-  },
-  {
-    "id": "column-definition-parts-field-approval-statuses-planning-reference-manufacturer-cost-cc-2821208a",
-    "name": "Manufacturer Cost (CC) — Status",
-    "table": "parts",
-    "fieldKey": "fieldApprovalStatuses.planningReference.manufacturerCostCC",
-    "category": "Discovery & Approval",
-    "requiresApproval": false,
-    "description": "Explicit status of the related approval-requiring canonical Part field; not a second overall approval."
   },
   {
     "id": "column-definition-parts-finished-unit-count-2b82c3d8",
@@ -1645,42 +1564,6 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-image-key-01880d13",
-    "name": "Image / key",
-    "table": "parts",
-    "fieldKey": "image.key",
-    "category": "Artwork & Visuals",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-parts-image-notes-4bab4849",
-    "name": "Image / notes",
-    "table": "parts",
-    "fieldKey": "image.notes",
-    "category": "Artwork & Visuals",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-parts-image-prompt-description-bb038894",
-    "name": "Image / prompt Description",
-    "table": "parts",
-    "fieldKey": "image.promptDescription",
-    "category": "Artwork & Visuals",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-parts-image-status-3cf5479e",
-    "name": "Image / status",
-    "table": "parts",
-    "fieldKey": "image.status",
-    "category": "Artwork & Visuals",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
     "id": "column-definition-parts-machine-ids-8692ca18",
     "name": "Machine IDs",
     "table": "parts",
@@ -1688,15 +1571,6 @@
     "category": "Machines & Usage",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-parts-mass-review-084f6115",
-    "name": "Mass Review",
-    "table": "parts",
-    "fieldKey": "massReview",
-    "category": "Production & Prices",
-    "requiresApproval": false,
-    "description": "Derived comparison of required input weights with the existing finished-weight reference; no silent changes to source quantities."
   },
   {
     "id": "column-definition-parts-material-inputs-0d309d8d",
@@ -1727,15 +1601,6 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-part-image-f6052899",
-    "name": "Part Image",
-    "table": "parts",
-    "fieldKey": "partImage",
-    "category": "Artwork & Visuals",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
     "id": "column-definition-parts-part-role-1ddfba84",
     "name": "Part Role",
     "table": "parts",
@@ -1756,15 +1621,6 @@
     "description": "Designer review required for this field; source-derived draft values are not automatically approved."
   },
   {
-    "id": "column-definition-parts-planning-reference-basis-11183555",
-    "name": "Planning Reference / basis",
-    "table": "parts",
-    "fieldKey": "planningReference.basis",
-    "category": "Production & Prices",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
     "id": "column-definition-parts-planning-reference-finished-mass-kg-01321bd9",
     "name": "Weight (kg)",
     "table": "parts",
@@ -1783,105 +1639,6 @@
     "requiresApproval": true,
     "approvalPolicy": "parts-cost",
     "description": "Designer review required for this field; source-derived draft values are not automatically approved."
-  },
-  {
-    "id": "column-definition-parts-planning-reference-source-section-e77be0a7",
-    "name": "Planning Reference / source Section",
-    "table": "parts",
-    "fieldKey": "planningReference.sourceSection",
-    "category": "Canon & Provenance",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-parts-planning-reference-status-5cf89697",
-    "name": "Planning Reference / status",
-    "table": "parts",
-    "fieldKey": "planningReference.status",
-    "category": "Production & Prices",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-parts-provenance-android-discovery-working-id-2c5e50cf",
-    "name": "Provenance / android Discovery Working ID",
-    "table": "parts",
-    "fieldKey": "provenance.androidDiscoveryWorkingId",
-    "category": "Canon & Provenance",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-parts-provenance-authored-for-255b93ad",
-    "name": "Provenance / authored For",
-    "table": "parts",
-    "fieldKey": "provenance.authoredFor",
-    "category": "Canon & Provenance",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-parts-provenance-desktop-path-d976d33b",
-    "name": "Provenance / desktop Path",
-    "table": "parts",
-    "fieldKey": "provenance.desktopPath",
-    "category": "Canon & Provenance",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-parts-provenance-parts-discovery-repository-7f910042",
-    "name": "Provenance / parts Discovery / repository",
-    "table": "parts",
-    "fieldKey": "provenance.partsDiscovery.repository",
-    "category": "Canon & Provenance",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-parts-provenance-parts-discovery-source-commit-5f3a62b6",
-    "name": "Provenance / parts Discovery / source Commit",
-    "table": "parts",
-    "fieldKey": "provenance.partsDiscovery.sourceCommit",
-    "category": "Canon & Provenance",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-parts-provenance-parts-discovery-source-sections-50f75eeb",
-    "name": "Provenance / parts Discovery / source Sections",
-    "table": "parts",
-    "fieldKey": "provenance.partsDiscovery.sourceSections",
-    "category": "Canon & Provenance",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-parts-provenance-source-commit-f0f3bef0",
-    "name": "Provenance / source Commit",
-    "table": "parts",
-    "fieldKey": "provenance.sourceCommit",
-    "category": "Canon & Provenance",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-parts-provenance-source-path-8d1b47b2",
-    "name": "Provenance / source Path",
-    "table": "parts",
-    "fieldKey": "provenance.sourcePath",
-    "category": "Canon & Provenance",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-parts-provenance-source-repository-027948c9",
-    "name": "Provenance / source Repository",
-    "table": "parts",
-    "fieldKey": "provenance.sourceRepository",
-    "category": "Canon & Provenance",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
     "id": "column-definition-parts-sources-cff2ab99",
@@ -1915,15 +1672,6 @@
     "name": "Substance IDs",
     "table": "parts",
     "fieldKey": "substanceIds",
-    "category": "Materials & Construction",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-parts-unresolved-material-inputs-3a5122b2",
-    "name": "Unresolved Material Inputs",
-    "table": "parts",
-    "fieldKey": "unresolvedMaterialInputs",
     "category": "Materials & Construction",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
