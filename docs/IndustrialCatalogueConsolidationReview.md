@@ -492,3 +492,113 @@ Separate follow-up work still includes qualifying provisional candidates
 elsewhere in the Parts list and the approved but not-yet-implemented common
 Approval/Needs Approval column system. Material identity resolution must not
 be confused with full engineering/commercial sign-off.
+
+
+## Common approval governance and Part mass audit — 4 November 2026
+
+The **read-only** Universe Directory now has two separate reference tables:
+**Approval Statuses** (eight shared states) and **Column Definitions**
+(one named entry per selectable column of Substances, Parts, Machines and
+Buildings, each marking whether it requires an approval). Both collections
+are canonical manifest data; the four bulk grids derive a single
+**Approval** column and **Needs Approval** list from that registry and
+their canonical records. Existing legacy source review codes remain
+available as historical context and are not automatically treated as
+final decisions. The browser does **not** provide a write-back approval
+button: approvals are authored through canonical data review.
+
+The Parts grid also displays a derived **Mass Review** field comparing
+the total of mandatory/direct inputs against the preserved finished-weight
+planning reference. Conditional alternatives and reinforcing inputs are
+displayed separately. An input-vs-finished difference is **not automatically
+an error**, because real processing can involve scrap, evaporation, offcuts
+and different optional designs. Historical CC prices remain planning-only.
+
+### Material qualification tasks still needing decisions
+
+There are **7 candidate-linked material inputs** which retain
+their original `planning-only-unqualified` status. No one has approved their
+specific grade/suitability, so the implementation does not silently upgrade
+them to an approved BOM:
+
+| Part | Material ID | Current planning quantity (kg) |
+| --- | --- | ---: |
+| Hydraulic Parts | `substance-polymer` | 1.5 |
+| Fluid Handling Parts | `substance-polymer` | 1.5 |
+| Lead-Acid Battery Module | `named-substance-refined-copper` | 1 |
+| Lead-Acid Battery Module | `substance-polymer` | 4 |
+| Thermal Parts | `named-substance-mica-insulation-sheets` | 2.5 |
+| Optical Parts | `named-substance-steel` | 4 |
+| Welding Parts | `named-substance-mica-insulation-sheets` | 1 |
+
+There are **5 inputs with no numeric quantity** (two optional
+variants and three nuclear fuel/structural inputs). These remain unpriced,
+unweighted quantity decisions:
+
+| Part | Material ID | Requirement |
+| --- | --- | --- |
+| Structural Components | `named-substance-aluminium-alloy` | conditional-alternative |
+| Optical Parts | `named-substance-optical-sapphire` | conditional-specialist |
+| Nuclear Fuel Assembly | `named-substance-fission-fuel-material` | standard |
+| Nuclear Fuel Assembly | `named-substance-stainless-steel` | standard |
+| Nuclear Fuel Assembly | `substance-refined-ceramic` | standard |
+
+### All Part finished-weight comparisons
+
+Mandatory input quantities below are planning consumptions, not
+guaranteed retained weight. The *difference* is input kg minus
+reference finished kg. Optional reinforcement is excluded from the
+mandatory input total and shown in its own column.
+
+| Part | Mandatory inputs kg | Finished reference kg | Difference kg | Optional kg |
+| --- | ---: | ---: | ---: | ---: |
+| Generator Parts | 24.6 | 23.5 | +1.1 | — |
+| Power Electronics | 6.78 | 6.3 | +0.48 | — |
+| Mechanical Parts | 19.6 | 18.8 | +0.8 | — |
+| Control & Sensor Parts | 2.62 | 2.4 | +0.22 | — |
+| Structural Components | 80 | 76 | +4 | — |
+| Hydraulic Parts | 36.5 | 35 | +1.5 | — |
+| Extraction Parts | 10 | 9.2 | +0.8 | — |
+| Processing Parts | 30 | 28 | +2 | — |
+| Computing Parts | 4.7 | 4.35 | +0.35 | — |
+| Fluid Handling Parts | 26.5 | 25 | +1.5 | — |
+| Bulk Handling Parts | 46 | 44 | +2 | — |
+| Lead-Acid Battery Module | 51 | 50 | +1 | — |
+| Lithium-Based Battery Module | 18 | 18 | 0 | — |
+| Thermal Parts | 36.5 | 35 | +1.5 | — |
+| Optical Parts | 13 | 12 | +1 | — |
+| Forming & Cutting Tooling | 15 | 13.8 | +1.2 | — |
+| Welding Parts | 13 | 12 | +1 | — |
+| Precast Concrete Sections | 1150 | 1160 | -10 | 25 |
+| Nuclear Fuel Assembly | Pending | Pending | Pending | — |
+
+**17** of the **18** products with a recorded
+finished weight have differing mandatory input totals; **1** matches
+exactly (the approved 18 kg LFP module). The nuclear assembly remains without
+quantity or finished mass. These must be reconciled deliberately with
+manufacturing yield/waste assumptions and optional design scope before
+promoting weight planning to fully approved physical engineering values.
+
+**Approval boundary:** A resolved material identity is not automatically a
+fully approved quantitative recipe. For example, the LFP recipe and its
+18 kg planning weight are approved, but its older manufacturer price/quote
+have not been recalculated; its overall row therefore remains In Review.
+The nuclear selection is linked and identity-complete but retains
+Blocked pricing, mass and engineering decisions. All 19 Part identities
+have **zero unresolved material-ID placeholders**; downstream Machine/research
+compatibility reviews remain independent pending work.
+
+### Registry and status decisions
+
+- Shared states: Not Reviewed, Draft, Proposed, In Review, Approved,
+  Blocked, Rejected, Superseded.
+- Per-column `requiresApproval` is canonically recorded; label/category,
+  approval policy, and table ownership use stable field identifiers.
+- A grid's overall Approval is derived from field status. In Review and
+  Blocked preserve unapproved reference costs and missing quantities.
+- Substance generic-class review for new LFP cathode, nonaqueous LFP
+  electrolyte and Fission Fuel Material remains visible; the generic
+  aqueous Electrolyte Solution cannot be reused as the nonaqueous category.
+- Field status will only advance from evidence or an explicit design
+  decision; the approval tables are reference/admin **views**, not
+  an authoring UI or a substitute for decisions.
