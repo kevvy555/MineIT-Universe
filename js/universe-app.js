@@ -1181,19 +1181,40 @@ function installDivider() {
   const explorerPane = workspace.querySelector('.explorerPane');
   const isPortrait = () => window.matchMedia('(max-width: 700px)').matches;
   const storageKey = () => isPortrait() ? 'mineitUniverseSplitMobile' : 'mineitUniverseSplitSide';
+
+  // Desktop users may collapse the entire explorer to give the catalogue
+  // almost all available width. The 10px divider stays visible to reopen it.
+  // Keep the established mobile portrait sizing limits for touch usability.
+  const bounds = () => isPortrait()
+    ? { min: 25, max: 70, initial: 40 }
+    : { min: 0, max: Math.max(0, 100 - (divider.offsetWidth / (workspace.clientWidth || 1)) * 100), initial: 32 };
+
   const apply = (percent, save = true) => {
-    const min = isPortrait() ? 25 : 24;
-    const max = isPortrait() ? 70 : 60;
+    const { min, max } = bounds();
     const value = Math.max(min, Math.min(max, percent));
     explorerPane.style.flexBasis = `${value}%`;
-    if (save) sessionStorage.setItem(storageKey(), String(value));
+    divider.setAttribute('aria-valuemin', String(Math.round(min)));
+    divider.setAttribute('aria-valuemax', String(Math.round(max)));
+    divider.setAttribute('aria-valuenow', String(Math.round(value)));
+    if (save) {
+      try { sessionStorage.setItem(storageKey(), String(value)); }
+      catch { /* browser storage may be unavailable */ }
+    }
   };
+
   const restore = () => {
-    const saved = Number(sessionStorage.getItem(storageKey()));
-    apply(saved >= 24 && saved <= 70 ? saved : (isPortrait() ? 40 : 32), false);
+    let saved = null;
+    try { saved = sessionStorage.getItem(storageKey()); }
+    catch { /* browser storage may be unavailable */ }
+    const value = saved === null ? NaN : Number(saved);
+    apply(Number.isFinite(value) ? value : bounds().initial, false);
     divider.setAttribute('aria-orientation', isPortrait() ? 'horizontal' : 'vertical');
   };
+
+  divider.tabIndex = 0;
+  divider.setAttribute('aria-controls', 'tree detail');
   divider.onpointerdown = event => {
+    if (event.button !== 0) return;
     dragging = true;
     divider.classList.add('dragging');
     divider.setPointerCapture(event.pointerId);
@@ -1207,12 +1228,27 @@ function installDivider() {
     apply(percent);
   };
   const stop = event => {
+    if (!dragging) return;
     dragging = false;
     divider.classList.remove('dragging');
     try { divider.releasePointerCapture(event.pointerId); } catch { /* already released */ }
   };
   divider.onpointerup = stop;
   divider.onpointercancel = stop;
+  // Keyboard accessibility: arrows resize, Home collapses and End maximises.
+  divider.onkeydown = event => {
+    const portrait = isPortrait();
+    const { min, max } = bounds();
+    const current = Number.parseFloat(explorerPane.style.flexBasis) || 0;
+    const step = event.shiftKey ? 10 : 2;
+    const delta = portrait
+      ? ({ ArrowUp: -step, ArrowDown: step })[event.key]
+      : ({ ArrowLeft: -step, ArrowRight: step })[event.key];
+    if (delta === undefined && event.key !== 'Home' && event.key !== 'End') return;
+    event.preventDefault();
+    apply(event.key === 'Home' ? min : event.key === 'End' ? max : current + delta);
+  };
+  divider.ondblclick = () => apply(bounds().initial);
   window.addEventListener('resize', restore);
   restore();
 }
