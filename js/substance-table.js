@@ -291,7 +291,8 @@ export function createSubstanceTable(config = {}) {
       tbody.innerHTML = result.map(row => '<tr>' + ordered.map(key => {
         const value = fieldText(row.fields[key], catalogue);
         const label = value || "—";
-        const linked = config.linkedFields?.includes(key) && Array.isArray(row.fields[key]);
+        const linked = (config.linkedFields || ["upstreamMaterialIds"]).includes(key) &&
+          Array.isArray(row.fields[key]);
         return '<td' + (linked ? ' class="substance-link-cell"' : '') +
           ' title="' + esc(value) + '">' + (key === "name" && row.canonical !== false ?
           '<button class="substance-item" type="button" data-item-id="' +
