@@ -426,3 +426,35 @@ its earlier review state.
 This decision reduces the currently unresolved Part material descriptions
 from five to **three** (two concrete inputs and the nuclear fuel/cladding
 description). Other provisional input qualifications elsewhere remain pending.
+
+
+## Precast concrete sand and water inputs approved — 4 November 2026
+
+The user approved resolving both open Precast Concrete Sections inputs by
+reusing **existing canonical resources**, not creating duplicate materials:
+
+| Concrete direct input | Canonical resource identity | kg per finished section |
+| --- | --- | ---: |
+| Cement | `named-substance-cement` | 175 |
+| Graded Aggregate | `named-substance-graded-aggregate` | 600 |
+| Silica Sand | `mobile-resource-silica-sand` | 300 |
+| Fresh Water (process input) | `substance-fresh-water` | 75 |
+| Steel (conditional reinforced example) | `named-substance-steel` | 25 |
+
+The two former `unresolvedMaterialInputs` placeholders are removed from
+this Part. Silica Sand points to the **existing Mobile natural resource identity**
+rather than inventing a refined sand product, while Fresh Water refers to its
+existing generic Substance identity. Both resolve in the shared Universe graph.
+The 75 kg water figure is a **process input**, and must not be assumed to
+remain entirely in the cured output.
+
+The previous `planningReference.finishedMassKg = 1160` and price/quote figures
+are retained as discovery references, not silently revised: these quantities
+total 1150 kg excluding the optional 25 kg steel, and 1175 kg including it.
+The approved additions settle **what inputs are consumed**, not the separate
+mass-balance or product-size specification; those need their own review if the
+design is later taken beyond planning.
+
+This leaves **one** unresolved Part material description, for the nuclear
+assembly fuel/cladding design. The shared approval-system migration and
+other unqualified Part inputs remain pending separately.
