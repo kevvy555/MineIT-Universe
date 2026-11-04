@@ -11,6 +11,15 @@ function fieldState(kind, record, key, value) {
     if (!validApprovalStatuses.has(recorded)) {
       throw new Error(record.id + ": missing or invalid explicit approval for " + key);
     }
+    if (recorded === "Approved") {
+      const missing = value === undefined || value === null || value === "" ||
+        (Array.isArray(value) && value.length === 0);
+      if (missing) throw new Error(record.id + ": cannot approve absent field " + key);
+      if (key === "materialInputs" && value.some(input =>
+        input.approval === "planning-only-unqualified" ||
+        (input.requirement === "standard" && !Number.isFinite(input.quantityKg))))
+        throw new Error(record.id + ": cannot approve incomplete material recipe");
+    }
     return recorded;
   }
   if (recorded && validApprovalStatuses.has(recorded)) return recorded;
