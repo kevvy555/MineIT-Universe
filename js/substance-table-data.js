@@ -217,8 +217,13 @@ export function fieldText(value, catalogue) {
   if (value && typeof value === "object") {
     if (value.partId) return (catalogue?.get(value.partId)?.name || value.partId) +
       " × " + value.quantity;
+    if (value.machineId) return (catalogue?.get(value.machineId)?.name || value.machineId) +
+      " × " + value.quantity;
+    if (Number.isFinite(value.quantity) && value.unit)
+      return value.quantity + " " + value.unit;
     if (value.materialId) return (catalogue?.get(value.materialId)?.name || value.materialId) +
-      " × " + value.quantityKg + " kg";
+      " × " + value.quantityKg + " kg" +
+      (value.qualification === "grade-tbd" ? " (grade TBD)" : "");
     if (value.substanceId) {
       const name = catalogue?.get(value.substanceId)?.name || value.substanceId;
       const qty = Number.isFinite(value.quantityKg) ?

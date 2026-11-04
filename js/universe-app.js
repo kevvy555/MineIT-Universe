@@ -355,6 +355,17 @@ function partMaterialLinks(inputs) {
 }
 
 
+function machineRecipeLinks(inputs, idKey, quantityKey, suffix = '') {
+  if (!inputs?.length) return '—';
+  return '<div class="multiLinks">' + inputs.map(input => {
+    const id = input[idKey];
+    const target = state.catalogue.get(id);
+    const amount = input[quantityKey];
+    const grade = input.qualification === 'grade-tbd' ? ' (grade TBD)' : '';
+    return link(id, (target?.name || id) + ' × ' + amount + suffix + grade);
+  }).join('') + '</div>';
+}
+
 function field(label, value) {
   return `<div class="field"><div class="fieldLabel">${esc(label)}</div><div class="fieldValue">${value ?? '—'}</div></div>`;
 }
@@ -752,9 +763,41 @@ function fieldsFor(collection, entity) {
       field('Category', esc(entity.category)),
       field('Sub-category', esc(entity.subCategory)),
       field('Sources', tags(entity.sources)),
-      field('Construction parts', links(entity.partIds)),
+      field('Compatible Parts (source)', links(entity.partIds)),
       field('Unapproved Part compatibility candidates', pendingPartReviews(entity.pendingPartCompatibility)),
-      field('Installed in buildings', links(relatedIds('buildings', building => (building.machineIds || []).includes(entity.id)))),
+      field('Installed in buildings (possible compatibility)', links(relatedIds('buildings', building => (building.machineIds || []).includes(entity.id)))),
+      field('Approval', esc(entity.approval)),
+      field('Needs Approval', esc(approvalSummary('machines', entity, {
+        ...Object.fromEntries(Object.entries(entity.manufacturing || {}).map(([key, value]) =>
+          ['manufacturing.' + key, value])),
+        ...Object.fromEntries(Object.entries(entity.operatingProfile || {}).map(([key, value]) =>
+          ['operatingProfile.' + key, value])),
+        pendingPartCompatibility: entity.pendingPartCompatibility || [],
+        inputSummary: entity.inputSummary,
+        outputSummary: entity.outputSummary
+      }, state.catalogue).needsApproval.join(', '))),
+      field('Manufacturing authority', esc(entity.manufacturing?.authority || 'Unspecified')),
+      field('Finished Parts per machine', machineRecipeLinks(entity.manufacturing?.finishedPartInputs, 'partId', 'quantity')),
+      field('Direct materials per machine', machineRecipeLinks(entity.manufacturing?.directMaterialInputs, 'materialId', 'quantityKg', ' kg')),
+      field('Nested Machines per machine', machineRecipeLinks(entity.manufacturing?.nestedMachineInputs, 'machineId', 'quantity')),
+      field('Assembly / factory / test hours',
+        [entity.manufacturing?.assemblyHours, entity.manufacturing?.factoryHours, entity.manufacturing?.testHours]
+          .map(value => value == null ? 'TBD' : esc(value)).join(' / ')),
+      field('Good unit yield', Number.isFinite(entity.manufacturing?.goodUnitYield) ?
+        esc(entity.manufacturing.goodUnitYield) : 'TBD'),
+      field('Finished weight (kg)', Number.isFinite(entity.manufacturing?.finishedMassKg) ?
+        esc(entity.manufacturing.finishedMassKg + ' — provisional') : 'TBD'),
+      field('Manufacturer Cost (CC)', Number.isFinite(entity.manufacturing?.manufacturerCostCC) ?
+        esc(entity.manufacturing.manufacturerCostCC + ' — provisional') : 'TBD'),
+      field('Manufacturer Quote (CC)', Number.isFinite(entity.manufacturing?.manufacturerQuoteCC) ?
+        esc(entity.manufacturing.manufacturerQuoteCC + ' — provisional') : 'TBD'),
+      field('Manufacturing review blockers', esc(entity.manufacturing?.reviewNotes || entity.manufacturingDesignNotes || '—')),
+      field('Rated service capacity', entity.operatingProfile?.ratedCapacity ?
+        esc(entity.operatingProfile.ratedCapacity.quantity + ' ' + entity.operatingProfile.ratedCapacity.unit) : 'TBD'),
+      field('Operating power', entity.operatingProfile?.operatingPowerUnits == null ?
+        'TBD' : esc(entity.operatingProfile.operatingPowerUnits)),
+      field('Machine footprint (m²)', entity.operatingProfile?.footprintM2 == null ?
+        'TBD' : esc(entity.operatingProfile.footprintM2)),
       field('Input', esc(entity.inputSummary)),
       field('Output', esc(entity.outputSummary)),
       field('Fuel type', esc(entity.fuelType))

@@ -22,15 +22,41 @@ function fieldState(kind, record, key, value) {
     }
     return recorded;
   }
+  if (kind === "machines") {
+    if (!validApprovalStatuses.has(recorded))
+      throw new Error(record.id + ": missing or invalid explicit approval for " + key);
+    // A no-replacement decision is not an automatic approval. A field can be
+    // explicitly inapplicable only when its data does not contradict that claim.
+    if (record.fieldApplicability?.[key] === false) {
+      const empty = value == null || value === "" ||
+        (Array.isArray(value) && value.length === 0);
+      if (!empty) throw new Error(record.id + ": inapplicable field contains data: " + key);
+      return null;
+    }
+    if (recorded === "Approved") {
+      const missing = value == null || value === "" ||
+        (Array.isArray(value) && value.length === 0);
+      if (missing) throw new Error(record.id + ": cannot approve absent Machine field " + key);
+      if (key === "manufacturing.directMaterialInputs" &&
+        value.some(input => input.qualification === "grade-tbd" ||
+          !Number.isFinite(input.quantityKg) || input.quantityKg <= 0))
+        throw new Error(record.id + ": cannot approve unqualified Machine material BOM");
+      if (key === "operatingProfile.ratedCapacity" &&
+        (!(value.quantity > 0) || !value.unit))
+        throw new Error(record.id + ": invalid approved capacity and unit");
+      if (key === "manufacturing.goodUnitYield" && !(value > 0 && value <= 1))
+        throw new Error(record.id + ": invalid approved manufacturing yield");
+      if (key === "pendingPartCompatibility")
+        throw new Error(record.id + ": pending compatibility cannot be approved while unresolved");
+    }
+    return recorded;
+  }
   if (recorded && validApprovalStatuses.has(recorded)) return recorded;
   if (kind === "substances") {
     return key === "classificationStatus" && record.classificationStatus === "classified"
       ? "Approved" : "In Review";
   }
-  // A proposal in the imported Android discovery snapshot is not a canonical
-  // authorisation. Missing fields are not automatically assumed required.
-  if (kind === "machines" && key === "approvedPhysicalBOM.directMaterialInputs" &&
-    /^APPROVED/i.test(record.approvedPhysicalBOM?.approval || "")) return "Approved";
+  // Building and Substance reference snapshots still use projected statuses.
   return "In Review";
 }
 
@@ -42,10 +68,12 @@ export function approvalSummary(kind, record, fields, catalogue) {
   for (const definition of definitions) {
     const key = definition.fieldKey;
     const value = fields[key];
-    // Only parts require every declared review field. Legacy Machine/Building
-    // fields may not apply, and natural resources have no classification field.
-    if (kind !== "parts" && (value === undefined || value === null || value === "")) continue;
+    // Parts and Machines require explicit decisions even for missing values.
+    // Buildings/Substances retain legacy optional projection rules.
+    if (!["parts", "machines"].includes(kind) &&
+        (value === undefined || value === null || value === "")) continue;
     const state = fieldState(kind, record, key, value);
+    if (state === null) continue; // Explicitly non-applicable, not approved.
     states[key] = state;
     if (state !== "Approved") pending.push(definition.name);
   }
@@ -59,16 +87,16 @@ export function approvalSummary(kind, record, fields, catalogue) {
     values.every(value => ["Draft", "Not Reviewed"].includes(value)) ? "Draft" :
     values.every(value => ["Proposed", "Not Reviewed"].includes(value)) ? "Proposed" :
     "In Review";
-  if (kind === "parts") {
+  if (kind === "parts" || kind === "machines") {
     if (!validApprovalStatuses.has(record.approval)) {
-      throw new Error(record.id + ": missing or invalid canonical Part approval");
+      throw new Error(record.id + ": missing or invalid canonical " + kind + " approval");
     }
     if (record.approval !== derived) {
       throw new Error(record.id + ": canonical Approval " + record.approval +
         " disagrees with explicit field statuses (" + derived + ")");
     }
   }
-  return { approval: kind === "parts" ? record.approval : derived,
+  return { approval: ["parts", "machines"].includes(kind) ? record.approval : derived,
     needsApproval: pending, fieldStates: states };
 }
 
