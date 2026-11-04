@@ -47,7 +47,9 @@ for (const [kind, totals] of Object.entries(expected)) {
   const rows = industrialReviewRows(kind, catalogue, reference);
   assert.equal(rows.length, canonical.length, "No duplicate candidate review rows");
   assert.equal(new Set(rows.map(row => row.id)).size, rows.length);
-  assert.ok(rows.every(row => row.canonical && row.fields.catalogueStatus === "Canonical"));
+  assert.ok(rows.every(row => row.canonical &&
+    (kind === "parts" ? !Object.hasOwn(row.fields, "catalogueStatus") :
+      row.fields.catalogueStatus === "Canonical")));
   assert.ok(rows.every(row => row.fields.name === row.record.name));
   assert.ok(rows.every(row => ["Not Reviewed", "In Review", "Approved", "Blocked"].includes(row.fields.approval)),
     kind + " should expose consistent shared Approval labels");
@@ -59,8 +61,10 @@ for (const [kind, totals] of Object.entries(expected)) {
         "Consolidated Part exposes a single canonical overall Approval");
       assert.ok(!Object.hasOwn(row.fields, "materialApprovalStatus"),
         "Legacy competing status column must not reappear");
-      assert.equal(row.fields["fieldApprovalStatuses.partRole"], "Approved",
-        "Accepted finished-product role retained as explicit field decision");
+      assert.equal(row.record.fieldApprovalStatuses.partRole, "Approved",
+        "Accepted finished-product role remains in canonical data without UI status columns");
+      assert.ok(!Object.keys(row.fields).some(key => key.startsWith("fieldApprovalStatuses.")),
+        "The Parts review grid must have just one Approval and one Needs Approval column");
       assert.ok(!("review.materialBOM.review_status" in row.fields),
         "Parts should not duplicate historic status and canonical status columns");
     } else {
@@ -69,7 +73,8 @@ for (const [kind, totals] of Object.entries(expected)) {
     }
   }
   assert.equal(applySubstanceTable(rows, ["name"], {}, "name", 1, catalogue).length, rows.length);
-  assert.equal(uniqueColumnValues(rows, "catalogueStatus", catalogue).length, 1);
+  assert.equal(uniqueColumnValues(rows, kind === "parts" ? "approval" : "catalogueStatus",
+    catalogue).length, kind === "parts" ? 2 : 1);
 }
 const buildings = industrialReviewRows("buildings", catalogue, reference);
 const camp = buildings.find(row => row.id === "building-collection-camp");
