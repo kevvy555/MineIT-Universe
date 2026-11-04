@@ -123,8 +123,10 @@ for (const id of reconciledPartIds) {
   if (!part) { errors.push(`Canonical discovery Part missing: ${id}`); continue; }
   if (!part.provenance?.androidDiscoveryWorkingId?.startsWith('candidate-'))
     errors.push(`${id}: missing stable Android discovery crosswalk`);
-  if (!part.materialDesignStatus)
-    errors.push(`${id}: source material-design approval state required`);
+  if (!part.approval || !part.fieldApprovalStatuses?.materialInputs)
+    errors.push(`${id}: canonical Part approval and explicit material-input decision required`);
+  if (part.materialApprovalStatus !== undefined)
+    errors.push(`${id}: superseded materialApprovalStatus must not reappear`);
 }
 for (const id of reconciledMachineIds) {
   const machine = machineById.get(id);
@@ -134,9 +136,49 @@ for (const id of reconciledMachineIds) {
   if (!machine.manufacturingDesignStatus)
     errors.push(`${id}: source manufacturing-design status required`);
 }
-for (const id of ['part-battery-parts', 'part-thermal-optical-parts', 'part-fabrication-parts']) {
-  if (!partById.has(id)) errors.push(`Legacy broad Part identity missing: ${id}`);
+// Breaking legacy identity retirement is approved with migration review:
+const retiredIds = new Set(['part-battery-parts', 'part-thermal-optical-parts', 'part-fabrication-parts']);
+if (parts.length !== 19) errors.push(`Expected 19 finished Parts after retirement, found ${parts.length}`);
+for (const id of retiredIds) {
+  if (partById.has(id)) errors.push(`Superseded Part is still present: ${id}`);
 }
+let pendingConsumerEdges = 0;
+for (const machine of machines) {
+  for (const id of machine.partIds || []) {
+    if (retiredIds.has(id)) errors.push(`${machine.id}: obsolete Part reference ${id}`);
+  }
+  for (const review of machine.pendingPartCompatibility || []) {
+    if (review.reviewStatus !== 'unapproved-consumer-mapping')
+      errors.push(`${machine.id}: pending mapping incorrectly approved`);
+    if (!review.supersededFamily || !review.notes)
+      errors.push(`${machine.id}: pending mapping needs a family and explanation`);
+    for (const id of review.candidatePartIds || []) {
+      if (!partById.has(id)) errors.push(`${machine.id}: unknown candidate Part ${id}`);
+    }
+    pendingConsumerEdges++;
+  }
+}
+if (pendingConsumerEdges !== 14)
+  errors.push(`Expected 14 pending Part consumer decisions, got ${pendingConsumerEdges}`);
+const researchTechs = await readFile(resolve(dataRoot, 'research-technologies.json'), 'utf8').then(JSON.parse);
+let pendingResearchEdges = 0;
+for (const technology of researchTechs) {
+  for (const id of technology.unlockedPartIds || []) {
+    if (!partById.has(id)) errors.push(`${technology.id}: unknown unlock Part ${id}`);
+  }
+  for (const review of technology.partUnlockReview || []) {
+    if (review.reviewStatus !== 'unapproved-technology-mapping')
+      errors.push(`${technology.id}: pending unlock mapping incorrectly approved`);
+    if (!review.supersededFamily || !review.notes)
+      errors.push(`${technology.id}: pending unlock mapping needs explanation`);
+    for (const id of review.candidatePartIds || []) {
+      if (!partById.has(id)) errors.push(`${technology.id}: unknown candidate unlock Part ${id}`);
+    }
+    pendingResearchEdges++;
+  }
+}
+if (pendingResearchEdges !== 6)
+  errors.push(`Expected 6 pending Part research unlock decisions, got ${pendingResearchEdges}`);
 const [genericMaterials, namedMaterials] = await Promise.all([
   readFile(resolve(dataRoot, 'substances.json'), 'utf8').then(JSON.parse),
   readFile(resolve(dataRoot, 'named-substances.json'), 'utf8').then(JSON.parse)

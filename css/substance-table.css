@@ -83,3 +83,27 @@
   .substance-category-heading{align-items:flex-start}
   .substance-category-actions{margin-left:0}
 }
+
+/* Linked entity references in existing bulk review table; preserve table dimensions. */
+.substance-review-table td.substance-link-cell{white-space:normal;min-width:180px;max-width:360px;overflow:visible}
+.substance-ref-list{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px}
+.substance-reference{display:inline-block;font-weight:500;white-space:normal;line-height:1.35;
+  color:var(--accent);text-decoration:underline;text-decoration-color:#35637d;text-underline-offset:3px}
+.substance-reference:hover,.substance-reference:focus-visible{text-decoration-color:currentColor}
+.substance-unlinked{color:var(--muted);font-size:inherit}
+
+/* Structured Part BOM display: linked material, mass and requirement stay aligned. */
+.part-material-list{display:grid;gap:3px;min-width:240px;max-width:460px}
+.part-material-row{display:grid;grid-template-columns:minmax(85px,1fr) auto minmax(65px,auto);
+  align-items:start;gap:10px;padding:3px 0;border-bottom:1px solid #243944}
+.part-material-row:last-child{border-bottom:0}
+.part-material-quantity{font-variant-numeric:tabular-nums;color:#e7f0f5;white-space:nowrap;text-align:right}
+.part-material-requirement{color:var(--muted);font-size:10px;text-align:left;max-width:142px;line-height:1.4}
+
+/* Keep the pending field names readable and the per-row review action visible,
+   even when the grid is horizontally scrollable on a narrow phone. */
+.substance-pending-review{display:flex;align-items:center;gap:7px;max-width:340px;min-width:0}
+.substance-pending-text{flex:1;min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.substance-pending-button{flex:0 0 auto;border:1px solid #35576a;background:#113248;
+  color:#dff4ff;border-radius:5px;padding:5px 7px;font-size:10px;font-weight:800}
+.substance-pending-button:hover,.substance-pending-button:focus-visible{border-color:var(--accent)}

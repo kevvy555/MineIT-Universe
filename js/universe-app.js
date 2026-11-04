@@ -2,6 +2,8 @@ import { loadUniverse } from './universe-data.js';
 import { bindOriginalImageOpener } from './image-lightbox.js';
 import { createSubstanceTable, loadAndroidResourceReference } from './substance-table.js';
 import { createIndustrialTables, loadIndustrialDiscoveryReference } from './industrial-table.js';
+import { createApprovalReferenceTables } from './approval-tables.js';
+import { approvalSummary } from './catalogue-approval.js';
 
 const state = {
   catalogue: null,
@@ -24,6 +26,7 @@ const workspace = document.getElementById('workspace');
 const divider = document.getElementById('divider');
 const substanceTable = createSubstanceTable();
 const industrialTables = createIndustrialTables();
+const approvalReferenceTables = createApprovalReferenceTables();
 
 const DIRECTORY = {
   regions: 'Regions',
@@ -54,7 +57,7 @@ const ICONS = {
   landscapeTilesets: '▦', landscapeTiles: '▪', worldAtlases: '▣', worldAtlasTiles: '▫',
   settlements: '⬡', organisations: 'O',
   organisationUnits: '▦', facilities: '⌂', operations: '⚙', products: '◆', substances: '▣',
-  namedSubstances: '◆', parts: '⧉', machines: '⚒', buildings: '⌂', researchTechnologies: '⌬', substanceArchetypes: '◈', substanceProperties: '≋', rarityBands: '⋄', geologyProcesses: '⌁', depositShapes: '⬢', depositStates: '◐', stellarTypes: '✶', cometTypes: '☄', ringSystemTypes: '◎', starSystemTypes: '✦', species: 'S',
+  namedSubstances: '◆', parts: '⧉', machines: '⚒', buildings: '⌂', approvalStatuses: '✓', columnDefinitions: '▤', researchTechnologies: '⌬', substanceArchetypes: '◈', substanceProperties: '≋', rarityBands: '⋄', geologyProcesses: '⌁', depositShapes: '⬢', depositStates: '◐', stellarTypes: '✶', cometTypes: '☄', ringSystemTypes: '◎', starSystemTypes: '✦', species: 'S',
   people: 'P', shipClasses: '△', ships: '▲', projects: '◇', events: '◷', relationships: '↔',
   currencies: '¤', loreDocuments: '▤', loreTopics: 'i', mobileResourceDefinitions: '◈', mobileResourceOccurrenceProfiles: '⌖', mobileBiologicalResources: '⚘'
 };
@@ -237,6 +240,8 @@ function buildResearchDirectoryNode() {
 
 function buildReferenceCataloguesNode() {
   return category('Reference Catalogues', [
+    { ...category('Approval Statuses', nodes(state.catalogue.collection('approvalStatuses'))), action: 'approvalStatuses-table' },
+    { ...category('Column Definitions', nodes(state.catalogue.collection('columnDefinitions'))), action: 'columnDefinitions-table' },
     category('Substance Archetypes', nodes(state.catalogue.collection('substanceArchetypes'))),
     category('Substance Properties', groupRecords(state.catalogue.collection('substanceProperties'), record => record.propertyKind).map(([label, items]) => category(label, nodes(items)))),
     category('Rarity Bands', nodes(state.catalogue.collection('rarityBands'))),
@@ -318,6 +323,37 @@ function links(ids) {
 function tags(values) {
   return values?.length ? `<div class="tagList">${values.map(value => `<span class="tag">${esc(value)}</span>`).join('')}</div>` : '—';
 }
+
+// Pending candidate IDs remain navigable, but are explicitly NOT adopted
+// as required fitted Parts or automatic research unlocks.
+function pendingPartReviews(entries) {
+  if (!entries?.length) return '—';
+  return '<div class="multiLinks">' + entries.map(entry => {
+    const candidates = (entry.candidatePartIds || []).length
+      ? links(entry.candidatePartIds)
+      : '<em>No candidate assigned</em>';
+    return '<div><strong>' + esc(entry.supersededFamily) + '</strong>' +
+      ' — <span class="status">' + esc(entry.reviewStatus) +
+      '</span><div>' + candidates + '</div><small>' +
+      esc(entry.notes || 'Engineering review required') + '</small></div>';
+  }).join('') + '</div>';
+}
+
+function partMaterialLinks(inputs) {
+  if (!inputs?.length) return '—';
+  const display = input => {
+    const target = state.catalogue.get(input.substanceId);
+    const name = target?.name || input.substanceId;
+    const kg = Number.isFinite(input.quantityKg)
+      ? ` · ${input.quantityKg} kg` : '';
+    const qualifier = input.requirement?.startsWith('conditional') ? ' (conditional)' :
+      input.approval === 'planning-only-unqualified' ? ' (unqualified)' :
+      input.requirement?.startsWith('upstream') ? ' (upstream)' : '';
+    return link(input.substanceId, name + kg + qualifier);
+  };
+  return '<div class="multiLinks">' + inputs.map(display).join('') + '</div>';
+}
+
 
 function field(label, value) {
   return `<div class="field"><div class="fieldLabel">${esc(label)}</div><div class="fieldValue">${value ?? '—'}</div></div>`;
@@ -641,7 +677,9 @@ function fieldsFor(collection, entity) {
       field('Industrial role', esc(entity.industrialRole)),
       field('Named natural resources in this category', links(relatedIds('mobileResourceDefinitions', resource => resource.genericSubstanceId === entity.id))),
       field('Named materials in this category', links(relatedIds('namedSubstances', material => material.genericSubstanceId === entity.id))),
-      field('Used by parts', links(relatedIds('parts', part => (part.substanceIds || []).includes(entity.id)))),
+      field('Used by parts', links(relatedIds('parts', part =>
+        (part.substanceIds || []).includes(entity.id) ||
+        (part.materialInputs || []).some(input => input.substanceId === entity.id)))),
       field('Building shell uses', links(relatedIds('buildings', building => (building.structuralShellSubstanceIds || []).includes(entity.id)))),
       field('Building fit-out uses', links(relatedIds('buildings', building => (building.fitOutSubstanceIds || []).includes(entity.id)))),
       field('Find sites', links(relatedIds('findSites', site => (site.substanceIds || []).includes(entity.id)))),
@@ -655,20 +693,58 @@ function fieldsFor(collection, entity) {
       field('Material stage', esc(entity.materialStage)),
       field('Stock handling', esc(entity.stockBehaviour)),
       field('Originating natural resources', links(entity.sourceRawResourceIds)),
+      field('Upstream refined materials', links(entity.upstreamMaterialIds)),
       field('Upstream inputs (discovery)', esc(entity.upstreamInputDescription)),
       field('Industrial use', esc(entity.industrialRole)),
+      field('Used in Part manufacturing', links(relatedIds('parts', part =>
+        (part.materialInputs || []).some(input => input.substanceId === entity.id)))),
       field('Identity approval', esc(entity.discoveryStatus)),
       field('Class mapping', esc(entity.classificationStatus)),
       field('Discovery source', esc([entity.sourceProvenance?.repository, entity.sourceProvenance?.path].filter(Boolean).join('/')))
     );
   }
+  if (collection === 'approvalStatuses') {
+    fields.push(field('Meaning', esc(entity.description)), field('Order', esc(entity.sortOrder)),
+      field('Scope', esc(entity.scope)));
+  }
+  if (collection === 'columnDefinitions') {
+    fields.push(field('Catalogue table', esc(entity.table)), field('Field key', esc(entity.fieldKey)),
+      field('Category', esc(entity.category)),
+      field('Requires Approval', entity.requiresApproval ? 'Yes' : 'No'),
+      field('Approval Policy', esc(entity.approvalPolicy || 'Not required')),
+      field('Purpose', esc(entity.description)));
+  }
   if (collection === 'parts') {
+    const economic = entity.planningReference;
+    const status = approvalSummary('parts', entity, {
+      partRole: entity.partRole,
+      finishedUnitCount: entity.finishedUnitCount,
+      finishedUnitDescription: entity.finishedUnitDescription,
+      materialInputs: entity.materialInputs,
+      'planningReference.finishedMassKg': economic?.finishedMassKg,
+      'planningReference.manufacturerCostCC': economic?.manufacturerCostCC,
+      'planningReference.baseManufacturerQuoteCC': economic?.baseManufacturerQuoteCC
+    }, state.catalogue);
     fields.push(
+      field('Part role', esc(entity.partRole === 'legacy-compatibility' ?
+        'Legacy compatibility — not separate trade stock' : 'Finished product')),
       field('Category', esc(entity.category)),
       field('Sub-category', esc((entity.subCategories || [entity.subCategory]).filter(Boolean).join(', '))),
       field('Sources', tags(entity.sources)),
-      field('Substances', links(entity.substanceIds)),
-      field('Used in machines', links(entity.machineIds))
+      field('Generic material classifications', links(entity.substanceIds)),
+      field('Approved / candidate material inputs', partMaterialLinks(entity.materialInputs)),
+      field('Approval', esc(status.approval)),
+       field('Needs Approval', esc(status.needsApproval.join(', ') || 'None')),
+      field('FinishedUnitCount', esc(entity.finishedUnitCount)),
+      field('Finished Unit Description', esc(entity.finishedUnitDescription)),
+      field('Weight (kg)', Number.isFinite(economic?.finishedMassKg) ?
+        esc(economic.finishedMassKg + ' — planning reference') : '—'),
+      field('Manufacturer Cost (CC)', Number.isFinite(economic?.manufacturerCostCC) ?
+        esc(economic.manufacturerCostCC + ' — planning reference') : '—'),
+      field('Manufacturer Quote Cost (CC)', Number.isFinite(economic?.baseManufacturerQuoteCC) ?
+        esc(economic.baseManufacturerQuoteCC + ' — planning reference') : '—'),
+      field('Used in machines (compatibility)', links(entity.machineIds)),
+      field('Legacy replacements', links(entity.legacyReplacementPartIds))
     );
   }
   if (collection === 'machines') {
@@ -677,6 +753,7 @@ function fieldsFor(collection, entity) {
       field('Sub-category', esc(entity.subCategory)),
       field('Sources', tags(entity.sources)),
       field('Construction parts', links(entity.partIds)),
+      field('Unapproved Part compatibility candidates', pendingPartReviews(entity.pendingPartCompatibility)),
       field('Installed in buildings', links(relatedIds('buildings', building => (building.machineIds || []).includes(entity.id)))),
       field('Input', esc(entity.inputSummary)),
       field('Output', esc(entity.outputSummary)),
@@ -840,6 +917,7 @@ function fieldsFor(collection, entity) {
       field('Category', esc(entity.category)),
       field('Prerequisites', links(entity.prerequisiteTechnologyIds)),
       field('Unlocks parts', links(entity.unlockedPartIds)),
+      field('Unapproved replacement Part unlocks', pendingPartReviews(entity.partUnlockReview)),
       field('Unlocks machines', links(entity.unlockedMachineIds)),
       field('Unlocks buildings', links(entity.unlockedBuildingIds)),
       field('Unlocks substances', links(entity.unlockedSubstanceIds)),
@@ -1037,9 +1115,11 @@ function returnToCatalogueTree() {
 function renderDetail() {
   substanceTable.close();
   Object.values(industrialTables).forEach(table => table.close());
+  Object.values(approvalReferenceTables).forEach(table => table.close());
   if (state.activeCatalogueTable) {
     const kind = state.activeCatalogueTable;
-    const table = kind === 'substances' ? substanceTable : industrialTables[kind];
+    const table = kind === 'substances' ? substanceTable :
+      (industrialTables[kind] || approvalReferenceTables[kind]);
     if (table) table.render(detailEl, state.catalogue,
       kind === 'substances' ? state.androidResourceReference : state.industrialDiscoveryReference,
       selectEntity, returnToCatalogueTree);
@@ -1087,7 +1167,7 @@ function selectEntity(id) {
 }
 
 function showCatalogueTable(kind) {
-  if (!['substances', 'parts', 'machines', 'buildings'].includes(kind)) return;
+  if (!['substances', 'parts', 'machines', 'buildings', 'approvalStatuses', 'columnDefinitions'].includes(kind)) return;
   state.activeView = 'directory';
   state.activeCatalogueTable = kind;
   state.openNodes.add('label:Directory');
@@ -1125,19 +1205,42 @@ function installDivider() {
   const explorerPane = workspace.querySelector('.explorerPane');
   const isPortrait = () => window.matchMedia('(max-width: 700px)').matches;
   const storageKey = () => isPortrait() ? 'mineitUniverseSplitMobile' : 'mineitUniverseSplitSide';
+
+  // Desktop users may collapse the entire explorer to give the catalogue
+  // almost all available width. The 10px divider stays visible to reopen it.
+  // Keep the established mobile portrait sizing limits for touch usability.
+  const bounds = () => isPortrait()
+    ? { min: 25, max: 70, initial: 40 }
+    : { min: 0, max: Math.max(0, 100 - (divider.offsetWidth / (workspace.clientWidth || 1)) * 100), initial: 32 };
+
   const apply = (percent, save = true) => {
-    const min = isPortrait() ? 25 : 24;
-    const max = isPortrait() ? 70 : 60;
+    const { min, max } = bounds();
     const value = Math.max(min, Math.min(max, percent));
     explorerPane.style.flexBasis = `${value}%`;
-    if (save) sessionStorage.setItem(storageKey(), String(value));
+    // Padding otherwise reserves space even when the flex basis reaches 0.
+    explorerPane.classList.toggle('collapsed', !isPortrait() && value === 0);
+    divider.setAttribute('aria-valuemin', String(Math.round(min)));
+    divider.setAttribute('aria-valuemax', String(Math.round(max)));
+    divider.setAttribute('aria-valuenow', String(Math.round(value)));
+    if (save) {
+      try { sessionStorage.setItem(storageKey(), String(value)); }
+      catch { /* browser storage may be unavailable */ }
+    }
   };
+
   const restore = () => {
-    const saved = Number(sessionStorage.getItem(storageKey()));
-    apply(saved >= 24 && saved <= 70 ? saved : (isPortrait() ? 40 : 32), false);
+    let saved = null;
+    try { saved = sessionStorage.getItem(storageKey()); }
+    catch { /* browser storage may be unavailable */ }
+    const value = saved === null ? NaN : Number(saved);
+    apply(Number.isFinite(value) ? value : bounds().initial, false);
     divider.setAttribute('aria-orientation', isPortrait() ? 'horizontal' : 'vertical');
   };
+
+  divider.tabIndex = 0;
+  divider.setAttribute('aria-controls', 'tree detail');
   divider.onpointerdown = event => {
+    if (event.button !== 0) return;
     dragging = true;
     divider.classList.add('dragging');
     divider.setPointerCapture(event.pointerId);
@@ -1151,12 +1254,27 @@ function installDivider() {
     apply(percent);
   };
   const stop = event => {
+    if (!dragging) return;
     dragging = false;
     divider.classList.remove('dragging');
     try { divider.releasePointerCapture(event.pointerId); } catch { /* already released */ }
   };
   divider.onpointerup = stop;
   divider.onpointercancel = stop;
+  // Keyboard accessibility: arrows resize, Home collapses and End maximises.
+  divider.onkeydown = event => {
+    const portrait = isPortrait();
+    const { min, max } = bounds();
+    const current = Number.parseFloat(explorerPane.style.flexBasis) || 0;
+    const step = event.shiftKey ? 10 : 2;
+    const delta = portrait
+      ? ({ ArrowUp: -step, ArrowDown: step })[event.key]
+      : ({ ArrowLeft: -step, ArrowRight: step })[event.key];
+    if (delta === undefined && event.key !== 'Home' && event.key !== 'End') return;
+    event.preventDefault();
+    apply(event.key === 'Home' ? min : event.key === 'End' ? max : current + delta);
+  };
+  divider.ondblclick = () => apply(bounds().initial);
   window.addEventListener('resize', restore);
   restore();
 }
@@ -1183,7 +1301,7 @@ async function start() {
     const focusCollection = params.get('focus');
     const focusedRecords = focusCollection ? catalogue.collection(focusCollection) : [];
     const requestedId = params.get('id');
-    state.activeCatalogueTable = ['substances', 'parts', 'machines', 'buildings'].includes(focusCollection) && !requestedId ? focusCollection : false;
+    state.activeCatalogueTable = ['substances', 'parts', 'machines', 'buildings', 'approvalStatuses', 'columnDefinitions'].includes(focusCollection) && !requestedId ? focusCollection : false;
     state.selectedId = (requestedId && catalogue.get(requestedId) ? requestedId : null)
       || focusedRecords[0]?.id
       || catalogue.collection('regions')[0]?.id

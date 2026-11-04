@@ -36,8 +36,16 @@ jobs:
         run: node --check js/universe-data.js
       - name: Validate unified Substance catalogue and Android audit crosswalk
         run: node validation/validate-substance-table.mjs
+      - name: Validate consolidated Parts roles, material links, and reference costs
+        run: node validation/validate-parts-consolidation.mjs
       - name: Validate industrial Parts, Machines and Buildings review tables
         run: node validation/validate-industrial-review-tables.mjs
+      - name: Validate shared catalogue approvals and reference tables
+        run: node validation/validate-approval-governance.mjs
+      - name: Syntax check approval derivation
+        run: node --check js/catalogue-approval.js
+      - name: Syntax check approval reference tables
+        run: node --check js/approval-tables.js
       - name: Syntax check industrial review module
         run: node --check js/industrial-table.js
       - name: Syntax check Substance table data

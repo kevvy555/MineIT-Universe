@@ -5,6 +5,15 @@ import { substanceRows, allSubstanceFields, DEFAULT_COLUMNS, columnGroup,
 const esc = value => String(value ?? "").replaceAll("&", "&amp;").replaceAll("<", "&lt;")
   .replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#039;");
 
+// Stable field keys drive both global and per-Part pending-column shortcuts.
+export function pendingColumnSelection(rows, possible, rowId = null) {
+  const relevant = rowId === null ? rows : rows.filter(row => row.id === rowId);
+  const keys = relevant.flatMap(row => row.pendingColumnKeys || []);
+  const available = new Set(possible);
+  return [...new Set(["name", "approval", "needsApproval", ...keys])]
+    .filter(key => available.has(key));
+}
+
 export async function loadAndroidResourceReference() {
   try {
     const response = await fetch("./game-specs/mineit-mobile/resource-balance-reference.json",
@@ -21,6 +30,8 @@ export async function loadAndroidResourceReference() {
 }
 
 export function createSubstanceTable(config = {}) {
+  let displayLabels = config.columnLabels || {};
+  const labelFor = key => displayLabels[key] || fieldLabel(key);
   let selected = [...(config.defaultColumns || DEFAULT_COLUMNS)];
   let textFilters = {};
   let valueFilters = {};
@@ -35,12 +46,20 @@ export function createSubstanceTable(config = {}) {
 
   function render(container, catalogue, reference, onSelect, onBack) {
     cleanupListeners();
+    // The manifest column registry governs the displayed field names, including
+    // the Approval and Needs Approval columns, across all catalogue grids.
+    displayLabels = Object.fromEntries(catalogue.collection("columnDefinitions")
+      .filter(definition => definition.table === (config.tableKind || "substances"))
+      .map(definition => [definition.fieldKey, definition.name]));
+    Object.assign(displayLabels, config.columnLabels || {});
     const previousScroll = container.querySelector(".substance-review-scroll");
     const scrollLeft = previousScroll?.scrollLeft || 0;
     const scrollTop = previousScroll?.scrollTop || 0;
     const wasOpen = container.querySelector("#substanceColumnPicker")?.open || false;
     const rows = config.rows ? config.rows(catalogue, reference) : substanceRows(catalogue, reference);
-    const availableFields = new Set(rows.flatMap(row => Object.keys(row.fields)));
+    const hidden = new Set(config.hiddenFields || []);
+    const availableFields = new Set(rows.flatMap(row => Object.keys(row.fields))
+      .filter(key => !hidden.has(key)));
     const possible = config.groups
       ? [...new Set([...config.groups.flatMap(group => group.fields)
         .filter(key => availableFields.has(key)), ...availableFields])]
@@ -61,10 +80,10 @@ export function createSubstanceTable(config = {}) {
     const picker = groups.map(group => {
       const checked = group.fields.filter(key => ordered.includes(key)).length;
       const options = group.fields.map(key =>
-        '<label class="substance-choice" title="' + esc(group.name + ' — ' + fieldLabel(key)) +
-        '"><input type="checkbox" aria-label="' + esc(group.name + ': ' + fieldLabel(key)) +
+        '<label class="substance-choice" title="' + esc(group.name + ' — ' + labelFor(key)) +
+        '"><input type="checkbox" aria-label="' + esc(group.name + ': ' + labelFor(key)) +
         '" data-column="' + esc(key) + '" ' + (ordered.includes(key) ? "checked " : "") +
-        (key === "name" ? "disabled " : "") + '><span>' + esc(fieldLabel(key)) +
+        (key === "name" ? "disabled " : "") + '><span>' + esc(labelFor(key)) +
         '</span></label>').join("");
       return '<section class="substance-column-category" data-column-group="' + esc(group.name) +
         '"><div class="substance-category-heading"><strong>' + esc(group.name) +
@@ -89,6 +108,8 @@ export function createSubstanceTable(config = {}) {
       ')</summary><div class="substance-column-actions">' +
       '<button type="button" id="substanceSelectAll">Select all</button>' +
       '<button type="button" id="substanceClearColumns">Deselect all</button>' +
+      (config.pendingColumnAction ?
+        '<button type="button" id="substanceShowPendingColumns" title="Show all fields with outstanding Part approvals">Show all pending fields</button>' : '') +
       '<span>Name stays visible to open details.</span></div>' +
       '<div class="substance-pick-grid">' + picker + '</div></details></div>' +
       '<p class="substance-source-note">' + (config.sourceNote ? esc(config.sourceNote(reference)) : reference ?
@@ -118,7 +139,7 @@ export function createSubstanceTable(config = {}) {
         const count = valueFilters[key]?.size || 0;
         button.textContent = count ? "Values (" + count + ") ▾" : "Values ▾";
         button.classList.toggle("has-selection", count > 0);
-        button.setAttribute("aria-label", "Select values for " + fieldLabel(key) +
+        button.setAttribute("aria-label", "Select values for " + labelFor(key) +
           (count ? ", " + count + " selected" : ""));
       }
     }
@@ -130,10 +151,10 @@ export function createSubstanceTable(config = {}) {
       button.setAttribute("aria-expanded", "true");
       const choices = uniqueColumnValues(rows, key, catalogue);
       popup.innerHTML = '<div class="substance-popup-heading"><strong>' +
-        esc(fieldLabel(key)) + '</strong><button type="button" data-close aria-label="Close filter">×</button></div>' +
+        esc(labelFor(key)) + '</strong><button type="button" data-close aria-label="Close filter">×</button></div>' +
         '<input type="search" class="substance-popup-search" aria-label="Find values" placeholder="Search values…">' +
         '<div class="substance-popup-options" role="group" aria-label="Values for ' +
-        esc(fieldLabel(key)) + '"></div>' +
+        esc(labelFor(key)) + '"></div>' +
         '<div class="substance-popup-actions"><button type="button" data-select>Choose shown</button>' +
         '<button type="button" data-clear>Clear selection</button></div>';
       const search = popup.querySelector(".substance-popup-search");
@@ -190,8 +211,8 @@ export function createSubstanceTable(config = {}) {
       const button = document.createElement("button");
       button.className = "substance-sort";
       button.type = "button";
-      button.title = "Sort by " + fieldLabel(key);
-      button.textContent = fieldLabel(key) + (sortKey === key ?
+      button.title = "Sort by " + labelFor(key);
+      button.textContent = labelFor(key) + (sortKey === key ?
         (direction > 0 ? " ▲" : " ▼") : " ↕");
       button.onclick = () => {
         if (sortKey === key) direction = -direction;
@@ -209,7 +230,7 @@ export function createSubstanceTable(config = {}) {
       input.type = "search";
       input.placeholder = "Text filter";
       input.value = textFilters[key] || "";
-      input.setAttribute("aria-label", "Text filter " + fieldLabel(key));
+      input.setAttribute("aria-label", "Text filter " + labelFor(key));
       input.addEventListener("input", () => {
         textFilters[key] = input.value;
         updateRows();
@@ -226,6 +247,58 @@ export function createSubstanceTable(config = {}) {
       filterRow.append(filterCell);
     }
 
+    function renderLinkedCell(raw, key) {
+      const items = (Array.isArray(raw) ? raw : [raw]).filter(Boolean);
+      if (key === "materialInputs") {
+        const lines = items.map(item => {
+          const id = item.substanceId;
+          const target = id && catalogue.get(id);
+          const label = target?.name || id || "Unresolved";
+          const material = target
+            ? '<button class="substance-item substance-reference" type="button" data-entity-id="' +
+              esc(id) + '" title="Open ' + esc(label) + '">' + esc(label) + '</button>'
+            : '<span class="status error">Broken: ' + esc(label) + '</span>';
+          const quantity = Number.isFinite(item.quantityKg)
+            ? esc(item.quantityKg + " kg") : "—";
+          const requirement = item.requirement?.startsWith("conditional") ? "Conditional" :
+            item.requirement?.startsWith("upstream") ? "Upstream" :
+            item.requirement === "candidate" ? "Candidate" : "Required";
+          const approval = item.approval === "planning-only-unqualified"
+            ? " · needs qualification" : "";
+          return '<div class="part-material-row"><span>' + material +
+            '</span><span class="part-material-quantity">' + quantity +
+            '</span><span class="part-material-requirement">' +
+            esc(requirement + approval) + '</span></div>';
+        });
+        return '<div class="part-material-list">' + (lines.join("") || "—") + '</div>';
+      }
+      const links = items.map(item => {
+        const id = typeof item === "string" ? item :
+          item.substanceId || item.materialId || item.partId || item.machineId;
+        const label = fieldText(item, catalogue);
+        if (!id) return '<span class="substance-unlinked">' + esc(label) + '</span>';
+        const target = catalogue.get(id);
+        if (!target) return '<span class="status error" title="Unresolved canonical ID">' +
+          esc(id) + '</span>';
+        return '<button class="substance-item substance-reference" type="button" data-entity-id="' +
+          esc(id) + '" title="Open ' + esc(target.name) + '">' + esc(label) + '</button>';
+      });
+      return '<div class="substance-ref-list">' + (links.join("") || "—") + '</div>';
+    }
+
+    function renderPendingApprovalCell(row) {
+      const labels = row.fields.needsApproval || [];
+      const readable = Array.isArray(labels) ? labels.join(", ") : String(labels);
+      const pending = row.pendingColumnKeys || [];
+      return '<div class="substance-pending-review"><span class="substance-pending-text" title="' +
+        esc(readable) + '">' + esc(readable || "None") + '</span>' +
+        (pending.length ?
+          '<button type="button" class="substance-pending-button" data-pending-for="' +
+          esc(row.id) + '" title="Show pending fields for ' + esc(row.record.name) +
+          '" aria-label="Show pending fields for ' + esc(row.record.name) +
+          '">Show fields</button>' : '') + '</div>';
+    }
+
     function updateRows() {
       const result = applySubstanceTable(rows, ordered, textFilters,
         sortKey, direction, catalogue, valueFilters);
@@ -235,14 +308,32 @@ export function createSubstanceTable(config = {}) {
       tbody.innerHTML = result.map(row => '<tr>' + ordered.map(key => {
         const value = fieldText(row.fields[key], catalogue);
         const label = value || "—";
-        return '<td title="' + esc(value) + '">' + (key === "name" && row.canonical !== false ?
+        const linked = (config.linkedFields || ["upstreamMaterialIds"]).includes(key) &&
+          Array.isArray(row.fields[key]);
+        return '<td' + (linked ? ' class="substance-link-cell"' : '') +
+          ' title="' + esc(value) + '">' + (key === "name" && row.canonical !== false ?
           '<button class="substance-item" type="button" data-item-id="' +
-          esc(row.id) + '">' + esc(label) + '</button>' : esc(label)) + '</td>';
+          esc(row.id) + '">' + esc(label) + '</button>' :
+          linked ? renderLinkedCell(row.fields[key], key) :
+          (key === "needsApproval" && config.pendingColumnAction)
+            ? renderPendingApprovalCell(row) : esc(label)) + '</td>';
       }).join("") + '</tr>').join("") ||
         '<tr><td colspan="' + ordered.length + '" class="substance-no-results">No matching ' +
         esc(config.title || "substances") + '</td></tr>';
       tbody.querySelectorAll("[data-item-id]").forEach(button =>
         button.onclick = () => onSelect(button.dataset.itemId));
+      tbody.querySelectorAll("[data-entity-id]").forEach(button =>
+        button.onclick = () => onSelect(button.dataset.entityId));
+      if (config.pendingColumnAction)
+        tbody.querySelectorAll("[data-pending-for]").forEach(button => button.onclick = () => {
+          const target = rows.find(row => row.id === button.dataset.pendingFor);
+          if (!target) return;
+          // Focus the selected Part and all fields still awaiting its approval.
+          textFilters = { name: target.record.name };
+          valueFilters = {};
+          container.querySelector(".substance-review-scroll").scrollTop = 0;
+          setColumns(pendingColumnSelection(rows, possible, target.id));
+        });
     }
 
     function setColumns(keys) {
@@ -258,6 +349,14 @@ export function createSubstanceTable(config = {}) {
     });
     container.querySelector("#substanceSelectAll").onclick = () => setColumns(possible);
     container.querySelector("#substanceClearColumns").onclick = () => setColumns(["name"]);
+    if (config.pendingColumnAction)
+      container.querySelector("#substanceShowPendingColumns").onclick = () => {
+        // The global shortcut restores all Parts after a row-specific review.
+        textFilters = {};
+        valueFilters = {};
+        container.querySelector(".substance-review-scroll").scrollTop = 0;
+        setColumns(pendingColumnSelection(rows, possible));
+      };
     container.querySelectorAll("[data-group-select]").forEach(button => button.onclick = () => {
       const group = groups.find(item => item.name === button.dataset.groupSelect);
       if (group) setColumns(selectionForCategory(selected, group.fields, true));

@@ -93,11 +93,8 @@
     ],
     "partIds": [
       "part-generator-parts",
-      "part-battery-parts",
       "part-power-electronics",
-      "part-thermal-optical-parts",
       "part-control-and-sensor-parts",
-      "part-fabrication-parts",
       "part-structural-components"
     ],
     "description": "A compact high-output fusion reactor designed to provide sustained electrical power for a spacecraft and, where connections permit, nearby surface infrastructure.",
@@ -112,7 +109,29 @@
       "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A compact high-output fusion reactor designed to provide sustained electrical power for a spacecraft and, where connections permit, nearby surface infrastructure. Specific visual requirements: a compact shipboard fusion reactor module: shielded housing, thermal exchangers, battery banks and generator assemblies, unlabelled. Output context: Shipboard electrical power. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
       "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
-    }
+    },
+    "pendingPartCompatibility": [
+      {
+        "supersededFamily": "Battery Parts",
+        "candidatePartIds": [],
+        "reviewStatus": "unapproved-consumer-mapping",
+        "notes": "Fusion Ship Reactor does not establish a lead-acid/lithium storage requirement; electrical buffering design unresolved."
+      },
+      {
+        "supersededFamily": "Thermal / Optical Parts",
+        "candidatePartIds": [
+          "part-thermal-parts"
+        ],
+        "reviewStatus": "unapproved-consumer-mapping",
+        "notes": "Evaluate thermal control only if physically justified; no optical requirement or count assumed."
+      },
+      {
+        "supersededFamily": "Fabrication Parts",
+        "candidatePartIds": [],
+        "reviewStatus": "unapproved-consumer-mapping",
+        "notes": "Old generic fabrication service kit had no established reactor-specific use; no replacement Part assumed."
+      }
+    ]
   },
   {
     "id": "machine-ship-life-support",
@@ -185,7 +204,6 @@
       "part-mechanical-parts",
       "part-hydraulic-parts",
       "part-power-electronics",
-      "part-thermal-optical-parts",
       "part-structural-components"
     ],
     "description": "A compact onboard materials-processing unit capable of basic thermal reduction, crushing and separation where full-scale refinery infrastructure is unavailable.",
@@ -201,7 +219,17 @@
       "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A compact onboard materials-processing unit capable of basic thermal reduction, crushing and separation where full-scale refinery infrastructure is unavailable. Specific visual requirements: a compact ship refinery unit: small crusher, thermal chamber and hydraulic rams on a tight structural skid. Input context: Raw mineral feedstock. Output context: Limited-throughput refined substances. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
       "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
-    }
+    },
+    "pendingPartCompatibility": [
+      {
+        "supersededFamily": "Thermal / Optical Parts",
+        "candidatePartIds": [
+          "part-thermal-parts"
+        ],
+        "reviewStatus": "unapproved-consumer-mapping",
+        "notes": "Thermal processing/refining design may require heat management; specific Part ratings and quantities unapproved."
+      }
+    ]
   },
   {
     "id": "machine-drill-machine",
@@ -334,7 +362,6 @@
     ],
     "partIds": [
       "part-processing-parts",
-      "part-thermal-optical-parts",
       "part-structural-components",
       "part-power-electronics",
       "part-fluid-handling-parts"
@@ -352,7 +379,17 @@
       "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and rails, restrained electric-blue emissive indicators, controlled amber furnace glow, crisp bevels, compact modular construction and a strong readable silhouette at 128x128. Centre one complete physically plausible industrial smelter with comfortable transparent margin: a squat ceramic-lined high-temperature furnace vessel, protected mineral-feed opening, sealed processing chamber, compact thermal exhaust stack, visible fluid-cooling loops and heat exchangers, structural housing and a guarded tapping/output port. Make the furnace, cooling circuit and material flow immediately understandable without turning the asset into a refinery building. Keep the machine visually dominant and lightly worn but well maintained. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
       "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping the smelter a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
-    }
+    },
+    "pendingPartCompatibility": [
+      {
+        "supersededFamily": "Thermal / Optical Parts",
+        "candidatePartIds": [
+          "part-thermal-parts"
+        ],
+        "reviewStatus": "unapproved-consumer-mapping",
+        "notes": "High-temperature control suggests thermal protection; do not assume optical components."
+      }
+    ]
   },
   {
     "id": "machine-crude-chemical-battery",
@@ -364,7 +401,6 @@
       "Manufactured"
     ],
     "partIds": [
-      "part-battery-parts",
       "part-power-electronics",
       "part-structural-components"
     ],
@@ -381,7 +417,18 @@
       "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A modular industrial electrochemical storage bank assembled from robust battery cells, conductive busbars and protected electrolyte reservoirs. Specific visual requirements: a modular chemical battery bank: cell stacks, busbars and protected electrolyte reservoirs in a structural rack. Input context: Electrolyte solution and refined reactive metal. Output context: Stored electrical power. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
       "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
-    }
+    },
+    "pendingPartCompatibility": [
+      {
+        "supersededFamily": "Battery Parts",
+        "candidatePartIds": [
+          "part-lead-acid-battery-module",
+          "part-lithium-based-battery-module"
+        ],
+        "reviewStatus": "unapproved-consumer-mapping",
+        "notes": "Chemical storage bank chemistry and electrical ratings unresolved; do not presume lead-acid or lithium suitability."
+      }
+    ]
   },
   {
     "id": "machine-wind-generator",
@@ -455,9 +502,7 @@
       "Manufactured"
     ],
     "partIds": [
-      "part-thermal-optical-parts",
-      "part-power-electronics",
-      "part-battery-parts"
+      "part-power-electronics"
     ],
     "description": "A compact thermoelectric generator that turns a maintained temperature differential into low-output electrical power.",
     "canonStatus": "source-canonical",
@@ -472,7 +517,23 @@
       "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A compact thermoelectric generator that turns a maintained temperature differential into low-output electrical power. Specific visual requirements: a compact thermoelectric trickler: ceramic heat plates, power electronics and a small battery pack on a portable pad. Input context: Heat source from suitable solid, liquid or gaseous fuel. Output context: Power. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
       "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
-    }
+    },
+    "pendingPartCompatibility": [
+      {
+        "supersededFamily": "Thermal / Optical Parts",
+        "candidatePartIds": [
+          "part-thermal-parts"
+        ],
+        "reviewStatus": "unapproved-consumer-mapping",
+        "notes": "Direct heat-to-electricity conversion may use thermal management, not automatically optical assemblies."
+      },
+      {
+        "supersededFamily": "Battery Parts",
+        "candidatePartIds": [],
+        "reviewStatus": "unapproved-consumer-mapping",
+        "notes": "A thermoelectric generator may need a buffer, but storage chemistry or buffer presence is not approved."
+      }
+    ]
   },
   {
     "id": "machine-solar-thermal-generator",
@@ -487,7 +548,6 @@
       "part-generator-parts",
       "part-mechanical-parts",
       "part-power-electronics",
-      "part-thermal-optical-parts",
       "part-control-and-sensor-parts",
       "part-structural-components"
     ],
@@ -504,7 +564,18 @@
       "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A solar-thermal generation system using tracked reflectors and a central receiver to heat working fluid and produce electrical power. Specific visual requirements: a solar-thermal generator: tracked mirrors, central receiver, thermal plumbing and generator housing. Input context: Sunlight and working fluid. Output context: Power. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
       "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
-    }
+    },
+    "pendingPartCompatibility": [
+      {
+        "supersededFamily": "Thermal / Optical Parts",
+        "candidatePartIds": [
+          "part-thermal-parts",
+          "part-optical-parts"
+        ],
+        "reviewStatus": "unapproved-consumer-mapping",
+        "notes": "Reflector optics and heat collection are distinct functions; candidate Thermal/Optical requirements both need per-model sign-off."
+      }
+    ]
   },
   {
     "id": "machine-power-distribution-system",
@@ -575,7 +646,6 @@
       "Manufactured"
     ],
     "partIds": [
-      "part-thermal-optical-parts",
       "part-mechanical-parts",
       "part-power-electronics",
       "part-control-and-sensor-parts"
@@ -593,7 +663,17 @@
       "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A local environmental-control unit providing heating, cooling, ventilation, humidity management and particulate filtration in occupied structures. Specific visual requirements: a wall-mountable climate-control machine: thermal exchanger, fans and sensor pack for heating, cooling and filtration. Input context: Power. Output context: Temperature and humidity regulation. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
       "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
-    }
+    },
+    "pendingPartCompatibility": [
+      {
+        "supersededFamily": "Thermal / Optical Parts",
+        "candidatePartIds": [
+          "part-thermal-parts"
+        ],
+        "reviewStatus": "unapproved-consumer-mapping",
+        "notes": "Heating and cooling use thermally rated assemblies; optical use requires separate evidence."
+      }
+    ]
   },
   {
     "id": "machine-irrigation-system",
@@ -634,7 +714,6 @@
       "Manufactured"
     ],
     "partIds": [
-      "part-thermal-optical-parts",
       "part-control-and-sensor-parts",
       "part-power-electronics"
     ],
@@ -651,7 +730,18 @@
       "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A cultivation-control system coordinating grow lighting, atmospheric conditions and biological monitoring to maintain productive growing environments. Specific visual requirements: a growth-management system: grow-lighting bars, atmospheric sensors and thermal-optical housings over cultivation trays. Input context: Power. Output context: Managed growing conditions. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
       "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
-    }
+    },
+    "pendingPartCompatibility": [
+      {
+        "supersededFamily": "Thermal / Optical Parts",
+        "candidatePartIds": [
+          "part-thermal-parts",
+          "part-optical-parts"
+        ],
+        "reviewStatus": "unapproved-consumer-mapping",
+        "notes": "Growth lighting, sensors and thermal regulation must be mapped to specific assemblies; neither is automatically approved."
+      }
+    ]
   },
   {
     "id": "machine-pump-machine",
@@ -751,7 +841,6 @@
       "Manufactured"
     ],
     "partIds": [
-      "part-fabrication-parts",
       "part-mechanical-parts",
       "part-power-electronics",
       "part-structural-components"
@@ -769,7 +858,18 @@
       "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A precision industrial machining and forming system that shapes refined metals, ceramics and composites into standardised parts and components. Specific visual requirements: a fabrication machine: forming dies, mechanical axes and structural enclosure for machining parts. Input context: Refined substances and power. Output context: Fabricated components. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
       "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
-    }
+    },
+    "pendingPartCompatibility": [
+      {
+        "supersededFamily": "Fabrication Parts",
+        "candidatePartIds": [
+          "part-forming-cutting-tooling",
+          "part-welding-parts"
+        ],
+        "reviewStatus": "unapproved-consumer-mapping",
+        "notes": "Forming and cutting processes are likely consumers of Forming & Cutting Tooling; tool geometry/count unapproved."
+      }
+    ]
   },
   {
     "id": "machine-assembly-crane",
@@ -812,9 +912,7 @@
       "Manufactured"
     ],
     "partIds": [
-      "part-fabrication-parts",
-      "part-power-electronics",
-      "part-thermal-optical-parts"
+      "part-power-electronics"
     ],
     "description": "A heavy industrial welding system using high-current arc and directed-energy emitters to form durable structural joints.",
     "canonStatus": "source-canonical",
@@ -829,7 +927,26 @@
       "status": "generated",
       "promptDescription": "Perfect 1:1 square MineIT Mobile machine UI/catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent elevated three-quarter angle, matching the established Mobile building and machine language: clean pale ceramic/composite armour panels, charcoal structural frame, vivid orange safety trim and guards, restrained electric-blue emissive indicators, small warm amber functional lights, crisp bevels, compact modular construction, controlled detail and a strong readable silhouette at 128x128. Centre one complete physically plausible independent machine with comfortable transparent margin. Keep the machine visually dominant, lightly worn but well maintained, and make its functional components and material flow immediately understandable. Machine identity and canonical function: A heavy industrial welding system using high-current arc and directed-energy emitters to form durable structural joints. Specific visual requirements: a heavy welding machine: directed-energy head, fabrication tooling and thermal shielding on a structural cart. Input context: Power and appropriate joining consumables. Output context: Welded structural joints. No yard, terrain, sky, horizon, room, building, opaque backdrop, people, readable text, labels, logos, company marks, registration numbers, UI chrome, border or watermark. Not photorealistic and not environmental concept art.",
       "notes": "MineIT Mobile UI/catalogue machine asset. Preserve the established isometric palette and rendering language while keeping this identity a distinct, physically plausible machine rather than a building or environmental scene. Transferable industrial machine assembled from canonical parts."
-    }
+    },
+    "pendingPartCompatibility": [
+      {
+        "supersededFamily": "Fabrication Parts",
+        "candidatePartIds": [
+          "part-forming-cutting-tooling",
+          "part-welding-parts"
+        ],
+        "reviewStatus": "unapproved-consumer-mapping",
+        "notes": "Conductive welding heads/contacts likely consume Welding Parts; physical rating, wear and quantity unresolved."
+      },
+      {
+        "supersededFamily": "Thermal / Optical Parts",
+        "candidatePartIds": [
+          "part-thermal-parts"
+        ],
+        "reviewStatus": "unapproved-consumer-mapping",
+        "notes": "Heat protection/management may use thermal assemblies; optical requirement needs separate evidence."
+      }
+    ]
   },
   {
     "id": "machine-crude-steam-piston-generator",

@@ -400,6 +400,29 @@
     }
   },
   {
+    "id": "named-substance-fission-fuel-material",
+    "name": "Fission Fuel Material",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": null,
+    "dominantArchetype": "Metal",
+    "classificationStatus": "requires-generic-class-review",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [],
+    "upstreamMaterialIds": [
+      "named-substance-uranium-concentrate"
+    ],
+    "upstreamInputDescription": "Processed from Uranium Concentrate; detailed fuel grade, processing and quantity requirements are not yet specified.",
+    "industrialRole": "Refined fission fuel feedstock used to manufacture Nuclear Fuel Assemblies, distinct from Fusion Fuel.",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Universe",
+      "path": "docs/IndustrialCatalogueConsolidationReview.md",
+      "workingId": "nuclear-fuel-material-selection-approved-2026-11-04"
+    }
+  },
+  {
     "id": "named-substance-fresh-concrete",
     "name": "Fresh Concrete",
     "entityType": "NamedSubstance",
@@ -500,6 +523,49 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-gemstone-catalogue.csv",
       "workingId": "mobile-resource-diamond"
+    }
+  },
+  {
+    "id": "named-substance-lfp-battery-electrolyte",
+    "name": "LFP Battery Electrolyte",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": null,
+    "dominantArchetype": "Carbon",
+    "classificationStatus": "requires-generic-class-review",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [],
+    "upstreamInputDescription": "Lithium hexafluorophosphate (LiPF6) dissolved in organic carbonate solvents; process-feedstock quantities not yet specified.",
+    "industrialRole": "Nonaqueous refined electrolyte for conventional LFP battery modules; not an aqueous electrolyte.",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Universe",
+      "path": "docs/IndustrialCatalogueConsolidationReview.md",
+      "workingId": "lfp-battery-bom-approved-2026-11-04"
+    }
+  },
+  {
+    "id": "named-substance-lfp-cathode-material",
+    "name": "Lithium Iron Phosphate (LFP) Cathode Material",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": null,
+    "dominantArchetype": "Salt",
+    "classificationStatus": "requires-generic-class-review",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [],
+    "upstreamMaterialIds": [
+      "named-substance-lithium-carbonate"
+    ],
+    "upstreamInputDescription": "Lithium Carbonate and suitable iron/phosphate processing inputs; upstream quantities are not part of the finished battery module BOM.",
+    "industrialRole": "Refined LFP cathode powder used to manufacture lithium iron phosphate battery modules.",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Universe",
+      "path": "docs/IndustrialCatalogueConsolidationReview.md",
+      "workingId": "lfp-battery-bom-approved-2026-11-04"
     }
   },
   {

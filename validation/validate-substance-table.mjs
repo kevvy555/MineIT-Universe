@@ -10,7 +10,9 @@ const collections = {
   mobileResourceDefinitions: load("data/mobile-resource-definitions.json"),
   mobileResourceOccurrenceProfiles: load("data/mobile-resource-occurrence-profiles.json"),
   mobileBiologicalResources: load("data/mobile-biological-resources.json"),
-  namedSubstances: load("data/named-substances.json")
+  namedSubstances: load("data/named-substances.json"),
+  approvalStatuses: load("data/approval-statuses.json"),
+  columnDefinitions: load("data/column-definitions.json")
 };
 const all = Object.values(collections).flat();
 const byId = new Map(all.map(record => [record.id, record]));
@@ -27,12 +29,12 @@ assert.deepEqual(new Set(reference.resources.map(r => r.resourceId)),
 assert.equal(new Set(reference.resources.map(r => r.resourceId)).size, 42);
 
 const rows = substanceRows(catalogue, reference);
-assert.equal(rows.length, 111, "42 natural + 62 named + 7 biological");
+assert.equal(rows.length, 114, "42 natural + 65 named + 7 biological");
 assert.ok(rows.every(row => row.collection !== "substances"));
 assert.equal(collections.substances.length, 80);
 assert.equal(new Set(rows.map(row => row.id)).size, rows.length, "No duplicated resources");
 assert.equal(rows.filter(row => row.fields.kind === "Biological food").length, 7);
-assert.equal(rows.filter(row => row.fields.kind === "Named material").length, 62);
+assert.equal(rows.filter(row => row.fields.kind === "Named material").length, 65);
 assert.equal(rows.filter(row => row.fields.kind === "Natural resource").length, 42);
 assert.equal(rows.find(row => row.id === "mobile-resource-iron-ore").fields.genericClassName,
   "Structural Metal Ore");
@@ -43,6 +45,23 @@ assert.ok(keys.includes("android.basePrice"));
 assert.ok(keys.includes("occurrence.eligibleWorldTypeIds"));
 assert.ok(keys.includes("image.status"));
 assert.ok(keys.includes("sourceProvenance.path"));
+assert.ok(keys.includes("upstreamMaterialIds"), "LFP cathode source links must remain reviewable");
+assert.ok(keys.includes("approval") && keys.includes("needsApproval"),
+  "Every substance row exposes the shared review columns");
+assert.equal(rows.find(row => row.id === "named-substance-fission-fuel-material").fields.approval,
+  "In Review", "Unclassified fission fuel must not be silently approved");
+const lfpMaterialRows = rows.filter(row => row.id === "named-substance-lfp-cathode-material" ||
+  row.id === "named-substance-lfp-battery-electrolyte");
+assert.equal(lfpMaterialRows.length, 2, "Both stockable refined battery materials must appear");
+assert.ok(lfpMaterialRows.every(row => row.fields.materialStage === "processed" &&
+  row.fields.stockBehaviour === "stockable"));
+assert.deepEqual(rows.find(row => row.id === "named-substance-lfp-cathode-material").fields.upstreamMaterialIds,
+  ["named-substance-lithium-carbonate"]);
+assert.deepEqual(rows.find(row => row.id === "named-substance-fission-fuel-material").fields.upstreamMaterialIds,
+  ["named-substance-uranium-concentrate"]);
+const fissionFuel = rows.find(row => row.id === "named-substance-fission-fuel-material");
+assert.equal(fissionFuel.fields.materialStage, "processed");
+assert.equal(fissionFuel.fields.stockBehaviour, "stockable");
 const filtered = applySubstanceTable(rows, ["name", "android.baseScan"],
   { "android.baseScan": ">=6" }, "android.baseScan", -1, catalogue);
 assert.ok(filtered.length > 0);
@@ -60,8 +79,8 @@ assert.deepEqual(SUBSTANCE_COLUMN_GROUPS.map(group => group.name), [
   "Sources & Provenance", "Artwork & Visuals"
 ]);
 const groupedFields = SUBSTANCE_COLUMN_GROUPS.flatMap(group => group.fields);
-assert.equal(groupedFields.length, 75, "The full current column set is preserved");
-assert.equal(new Set(groupedFields).size, 75, "Every field belongs to one category");
+assert.equal(groupedFields.length, 78, "The full current column set is preserved");
+assert.equal(new Set(groupedFields).size, 78, "Every field belongs to one category");
 assert.deepEqual(new Set(groupedFields), new Set(keys), "No missing or extra field definitions");
 assert.ok(SUBSTANCE_COLUMN_GROUPS.every(group => group.fields.length > 0));
 for (const group of SUBSTANCE_COLUMN_GROUPS) {
@@ -88,7 +107,8 @@ assert.deepEqual(kindOptions.map(x => x.label), ["Biological food", "Named mater
 assert.equal(kindOptions.reduce((sum, entry) => sum + entry.count, 0), rows.length);
 const selectedKinds = { kind: new Set([valueToken("Natural resource"), valueToken("Named material")]) };
 const included = applySubstanceTable(rows, ["kind"], {}, "name", 1, catalogue, selectedKinds);
-assert.equal(included.length, 104, "Selected dropdown values combine with OR within one column");
+assert.equal(included.length, rows.length - collections.mobileBiologicalResources.length,
+  "Selected dropdown values combine with OR within one column");
 const metalsOnly = applySubstanceTable(rows, ["kind", "archetype"], {}, "name", 1, catalogue,
   { kind: new Set([valueToken("Natural resource")]), archetype: new Set([valueToken("Metal")]) });
 assert.ok(metalsOnly.length > 0 && metalsOnly.length < 42);
@@ -105,13 +125,18 @@ assert.ok(withTag.every(row => row.fields["android.operationalTags"]?.includes("
 assert.deepEqual(rowValueTokens([]), ["blank"]);
 const missingScan = applySubstanceTable(rows, ["android.baseScan"], {}, "name", 1, catalogue,
   { "android.baseScan": new Set(["blank"]) });
-assert.equal(missingScan.length, 111 - 42, "The no-value option filters missing Android fields");
+assert.equal(missingScan.length, rows.length - reference.resources.length,
+  "The no-value option filters missing Android fields");
 const scanChoice = uniqueColumnValues(rows, "android.baseScan", catalogue);
 assert.ok(scanChoice.some(x => x.token === "number:1"));
 assert.ok(scanChoice.some(x => x.token === "blank"));
 const combined = applySubstanceTable(rows, ["kind", "name"], {name:"iron"}, "name", 1, catalogue,
   {kind:new Set([valueToken("Named material")])});
-assert.deepEqual(combined.map(x=>x.record.name), ["Refined Iron"]);
+assert.ok(combined.length >= 2 && combined.some(row => row.record.name === "Refined Iron"),
+  "Combined filters retain matching named refined materials");
+assert.ok(combined.every(row => row.fields.kind === "Named material" &&
+  row.record.name.toLowerCase().includes("iron")),
+  "Combined filters match all named materials containing iron, including LFP cathode");
 
 const directoryCss = readFileSync(new URL("../css/substance-table.css", import.meta.url), "utf8");
 const directoryApp = readFileSync(new URL("../js/universe-app.js", import.meta.url), "utf8");
