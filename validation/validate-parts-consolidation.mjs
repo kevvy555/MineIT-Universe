@@ -21,7 +21,8 @@ assert.equal(finished.length, 19);
 const retiredIds = new Set(["part-battery-parts", "part-thermal-optical-parts", "part-fabrication-parts"]);
 assert.ok(parts.every(p => !retiredIds.has(p.id)), "Superseded identities must not appear as Parts");
 assert.equal(finished.filter(p => p.materialApprovalStatus === "APPROVED_INPUT_FAMILIES").length, 16);
-assert.equal(finished.filter(p => p.materialApprovalStatus === "APPROVED_PRODUCT_BOM_PENDING").length, 3);
+assert.equal(finished.filter(p => p.materialApprovalStatus === "APPROVED_PRODUCT_BOM_PENDING").length, 2);
+assert.equal(finished.filter(p => p.materialApprovalStatus === "APPROVED").length, 1);
 assert.ok(parts.every(p => p.materialApprovalStatus !== "SOURCE_REFERENCE_SPLIT_APPROVED"));
 assert.ok(finished.every(p => p.finishedUnitCount === 1 &&
   typeof p.finishedUnitDescription === "string" && p.finishedUnitDescription.length > 0));
@@ -78,9 +79,9 @@ for (const part of parts) {
   assert.ok(part.manufacturerCostCC == null && part.baseSellQuoteCC == null,
     "Planning references must not become live manufacturer prices");
 }
-assert.equal(inputCount, 61);
-assert.equal(planningInputCount, 58);
-assert.equal(unresolvedCount, 5);
+assert.equal(inputCount, 63);
+assert.equal(planningInputCount, 60);
+assert.equal(unresolvedCount, 3);
 assert.equal(finished.filter(p => Number.isFinite(p.planningReference.finishedMassKg)).length, 18);
 assert.equal(finished.filter(p => Number.isFinite(p.planningReference.manufacturerCostCC)).length, 18);
 assert.equal(finished.filter(p => Number.isFinite(p.planningReference.baseManufacturerQuoteCC)).length, 18);
@@ -93,9 +94,36 @@ const steel = byId.get("part-precast-concrete-sections").materialInputs
 assert.equal(steel.requirement, "conditional-reinforcement");
 assert.equal(steel.quantityKg, 25);
 const lithium = byId.get("part-lithium-based-battery-module");
-assert.equal(lithium.materialInputs.find(i =>
-  i.substanceId === "named-substance-lithium-carbonate").requirement, "upstream-precursor");
-assert.ok(lithium.unresolvedMaterialInputs.some(x => x.label.includes("cathode")));
+const approvedLfpBOM = [
+  ["named-substance-lfp-cathode-material", 5],
+  ["substance-refined-graphite", 2.5],
+  ["named-substance-lfp-battery-electrolyte", 2],
+  ["named-substance-refined-copper", 2],
+  ["named-substance-aluminium", 0.5],
+  ["named-substance-polymer-feedstock", 3],
+  ["named-substance-stainless-steel", 3]
+];
+assert.equal(lithium.materialApprovalStatus, "APPROVED");
+assert.deepEqual(lithium.materialInputs.map(input => [input.substanceId, input.quantityKg]), approvedLfpBOM);
+assert.ok(lithium.materialInputs.every(input => input.requirement === "standard" &&
+  input.approval === "approved-input-family"), "The user-approved LFP recipe uses seven resolved inputs");
+assert.ok(!lithium.unresolvedMaterialInputs?.length);
+assert.ok(!lithium.substanceIds.includes("named-substance-lithium-carbonate"),
+  "Lithium carbonate is a cathode precursor, never an extra finished-module input");
+assert.deepEqual(lithium.substanceIds, approvedLfpBOM.map(([id]) => id));
+assert.equal(approvedLfpBOM.reduce((sum, [, kg]) => sum + kg, 0), lithium.planningReference.finishedMassKg);
+assert.equal(lithium.planningReference.finishedMassKg, 18);
+for (const id of ["named-substance-lfp-cathode-material", "named-substance-lfp-battery-electrolyte"]) {
+  const material = byId.get(id);
+  assert.equal(material?.materialStage, "processed", id + " must be refined");
+  assert.equal(material?.stockBehaviour, "stockable", id + " must be tradable stock");
+}
+const cathode = byId.get("named-substance-lfp-cathode-material");
+assert.deepEqual(cathode.upstreamMaterialIds, ["named-substance-lithium-carbonate"]);
+const electrolyte = byId.get("named-substance-lfp-battery-electrolyte");
+assert.match(electrolyte.upstreamInputDescription, /LiPF6/);
+assert.equal(electrolyte.classificationStatus, "requires-generic-class-review",
+  "Nonaqueous electrolyte must not inherit the source-canonical aqueous electrolyte class");
 const source = byId.get("part-extraction-parts");
 assert.deepEqual(new Set(source.materialInputs.map(i => i.substanceId)),
   new Set(["named-substance-steel", "named-substance-cemented-tungsten-carbide"]));
@@ -118,5 +146,5 @@ assert.equal(reviewed.find(row => row.id === "part-extraction-parts")
 assert.equal(reviewed.find(row => row.id === "part-precast-concrete-sections")
   .fields["planningReference.finishedMassKg"], 1160);
 assert.ok(reviewed.every(row => row.fields.materialApprovalStatus));
-console.log("Parts consolidation validated: 19 finished, zero legacy, 61 linked inputs, " +
-  "58 planning quantities, 5 unresolved input descriptions, 18 reference prices.");
+console.log("Parts consolidation validated: 19 finished, zero legacy, 63 linked inputs, " +
+  "60 material quantities, 3 unresolved input descriptions, 18 reference prices.");
