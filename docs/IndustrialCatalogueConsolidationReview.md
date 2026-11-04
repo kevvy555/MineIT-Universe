@@ -644,12 +644,11 @@ context, or **derived** review indicators. These do **not** each require an
 independent product/manufacturing sign-off. The image-review workflow and
 Machine/technology compatibility approvals remain their own processes.
 
-The canonical **Column Definitions** table now also exposes seven
-`fieldApprovalStatuses.*` fields under **Discovery & Approval**, so each
-saved field decision can be individually inspected in the Parts table.
-The overall Approval and Needs Approval columns remain visible by default.
-Individual Part details display all seven statuses, the overall state
-and the pending field names.
+**Historical implementation note (superseded later on 4 November):**
+The initial UI exposed seven `fieldApprovalStatuses.*` table columns.
+The designer subsequently removed these redundant review-grid columns.
+The seven field decisions remain persisted canonically to derive the
+single Approval and Needs Approval columns.
 
 Migration rules are intentionally conservative: family-level approval and
 source planning data did not become blanket recipe/weight/price approval.
@@ -669,3 +668,66 @@ Part, and the previously approved LFP/nuclear decisions.
 **Publication boundary:** The Directory remains a read-only catalogue;
 this change does not introduce a browser-side approval editor, editable
 source copies, gameplay prices, or any unreviewed new numerical choices.
+
+
+## Final Parts review-table simplification — 4 November 2026
+
+After reviewing the expanded selector, the designer approved a further
+cleanup so the Parts grid stays a focused product review tool, rather than
+an exposed view of import and implementation metadata.
+
+**The Parts table now offers only 20 columns**, grouped into product
+identity/classification, material inputs, Machine relationships, planned
+weight and prices, **Approval** and **Needs Approval**, the single
+**Image Generated** boolean, Canon Status, and description. Seven individual
+`fieldApprovalStatuses.*` columns were removed from this table and the
+shared Column Definitions registry; the underlying canonical
+`data/parts.json` field-level decisions remain intact for governance.
+The current row-level Approval and derived Needs Approval remain.
+
+The following redundant selectable columns were retired from the Parts
+review grid:
+
+- The seven exposed field-status columns. They duplicate the consolidated
+  Approval / Needs Approval summary and remain available in canonical data
+  if audit detail is required.
+- All import/source-provenance columns, including original Desktop and
+  Android file references, repositories, commits, paths, authored-for
+  metadata and historical discovery-section links.
+- The historical planning Reference / basis, Reference / status and source
+  section (only manufacturer weight, cost and quote remain reviewable).
+- Mass Review, Unresolved Material Inputs and the duplicate Part Image
+  preview/availability field.
+- Artwork detail keys, generation prompt/notes and asset state were removed
+  from the review **grid**, leaving the single Image Generated **Yes/No**
+  column. Original artwork metadata remains on the Part detail/source record
+  to comply with asset-generation validation.
+
+**Why provenance is retained in canonical JSON:** A stable record of source
+crosswalks/aliases and import provenance can help audit decisions, resolve
+migration discrepancies, and reproduce a historical reference. These fields
+are not a separate authoritative CSV catalogue, not game state and not
+useful to a designer reviewing product recipes daily. This change removes
+them from the Parts selector and Column Definitions *without destructively
+stripping the useful historical provenance from the canonical records*.
+
+The final empty `unresolvedMaterialInputs: []` properties were deleted
+from 16 Parts. No unresolved manufacturing material **identities** remain.
+
+### Needs Approval review shortcuts
+
+The **Needs Approval** column continues to show the readable names of
+pending fields. Each Part's row now includes a **Show fields** button.
+Selecting it changes the visible grid columns to Name, Approval, Needs
+Approval and only that Part's outstanding fields, while filtering the
+rows to that Part by name. The shared column chooser also includes a
+**Show all pending fields** button, which clears row-specific filters
+and displays the union of not-yet-approved columns across Parts.
+All this is a read-only review-navigation feature; it does not itself
+approve any value or edit data.
+
+The shared eight-state vocabulary and seven *underlying* required Part
+approval policies have not changed. The previous list of 17 nonmatching
+planning input/finished weights remains in the written audit, but Mass
+Review no longer consumes a permanent grid column. Manufacturer costs and
+quotes still await separate pricing approval.
