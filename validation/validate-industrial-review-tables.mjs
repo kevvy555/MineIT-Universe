@@ -68,9 +68,9 @@ for (const [kind, totals] of Object.entries(expected)) {
       assert.ok(!("review.materialBOM.review_status" in row.fields),
         "Parts should not duplicate historic status and canonical status columns");
     } else {
-      assert.ok(row.fields["manufacturing.finishedPartInputs"] != null ||
-        row.fields["manufacturing.directMaterialInputs"] != null,
-        "Machine design proposals are consolidated into typed canonical fields");
+      assert.ok("manufacturing.finishedPartInputs" in row.fields &&
+        "manufacturing.directMaterialInputs" in row.fields,
+        "Machine designs remain typed even when a blocked BOM is deliberately unresolved");
       assert.ok(!Object.keys(row.fields).some(key =>
         key.startsWith("review.") || key.startsWith("provenance.") ||
         key.startsWith("fieldApprovalStatuses.")),
