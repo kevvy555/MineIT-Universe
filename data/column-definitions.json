@@ -1690,7 +1690,7 @@
   },
   {
     "id": "column-definition-parts-planningReference.baseManufacturerQuoteCC",
-    "name": "Planning Reference / base Manufacturer Quote CC",
+    "name": "Manufacturer Quote Cost (CC)",
     "table": "parts",
     "fieldKey": "planningReference.baseManufacturerQuoteCC",
     "category": "Production & Prices",
@@ -1709,7 +1709,7 @@
   },
   {
     "id": "column-definition-parts-planningReference.finishedMassKg",
-    "name": "Planning Reference / finished Mass Kg",
+    "name": "Weight (kg)",
     "table": "parts",
     "fieldKey": "planningReference.finishedMassKg",
     "category": "Production & Prices",
@@ -1719,7 +1719,7 @@
   },
   {
     "id": "column-definition-parts-planningReference.manufacturerCostCC",
-    "name": "Planning Reference / manufacturer Cost CC",
+    "name": "Manufacturer Cost (CC)",
     "table": "parts",
     "fieldKey": "planningReference.manufacturerCostCC",
     "category": "Production & Prices",
@@ -1975,7 +1975,7 @@
     "name": "Approval",
     "table": "substances",
     "fieldKey": "approval",
-    "category": "Discovery & Approval",
+    "category": "Governance & Approval",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
@@ -2255,7 +2255,7 @@
     "name": "Needs Approval",
     "table": "substances",
     "fieldKey": "needsApproval",
-    "category": "Discovery & Approval",
+    "category": "Governance & Approval",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
