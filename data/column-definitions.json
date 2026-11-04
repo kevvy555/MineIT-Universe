@@ -1,1077 +1,560 @@
 [
   {
-    "id": "column-definition-substances-allowedCelestialBodyKindIds",
-    "name": "Allowed Celestial Body Kind IDs",
-    "table": "substances",
-    "fieldKey": "allowedCelestialBodyKindIds",
-    "category": "Biology & Agriculture",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-android.basePrice",
-    "name": "Android / base Price",
-    "table": "substances",
-    "fieldKey": "android.basePrice",
-    "category": "Game Balancing — Android",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-android.baseScan",
-    "name": "Android / base Scan",
-    "table": "substances",
-    "fieldKey": "android.baseScan",
-    "category": "Game Balancing — Android",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-android.baselineExtractionFamily",
-    "name": "Android / baseline Extraction Family",
-    "table": "substances",
-    "fieldKey": "android.baselineExtractionFamily",
-    "category": "Game Balancing — Android",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-android.baselineExtractionMethod",
-    "name": "Android / baseline Extraction Method",
-    "table": "substances",
-    "fieldKey": "android.baselineExtractionMethod",
-    "category": "Game Balancing — Android",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-android.legacyAliases",
-    "name": "Android / legacy Aliases",
-    "table": "substances",
-    "fieldKey": "android.legacyAliases",
-    "category": "Game Balancing — Android",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-android.operationalTags",
-    "name": "Android / operational Tags",
-    "table": "substances",
-    "fieldKey": "android.operationalTags",
-    "category": "Game Balancing — Android",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-android.qualityBias",
-    "name": "Android / quality Bias",
-    "table": "substances",
-    "fieldKey": "android.qualityBias",
-    "category": "Game Balancing — Android",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-android.rarity",
-    "name": "Android / rarity",
-    "table": "substances",
-    "fieldKey": "android.rarity",
-    "category": "Game Balancing — Android",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-android.resourceId",
-    "name": "Android / resource ID",
-    "table": "substances",
-    "fieldKey": "android.resourceId",
-    "category": "Game Balancing — Android",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-android.weight",
-    "name": "Android / weight",
-    "table": "substances",
-    "fieldKey": "android.weight",
-    "category": "Game Balancing — Android",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-approval",
+    "id": "column-definition-buildings-approval",
     "name": "Approval",
-    "table": "substances",
+    "table": "buildings",
     "fieldKey": "approval",
     "category": "Discovery & Approval",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-archetype",
-    "name": "Archetype",
-    "table": "substances",
-    "fieldKey": "archetype",
+    "id": "column-definition-buildings-buildingType",
+    "name": "Building Type",
+    "table": "buildings",
+    "fieldKey": "buildingType",
     "category": "Identity & Classification",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-canonStatus",
+    "id": "column-definition-buildings-canonStatus",
     "name": "Canon Status",
-    "table": "substances",
-    "fieldKey": "canonStatus",
-    "category": "Governance & Approval",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-classificationStatus",
-    "name": "Classification Status",
-    "table": "substances",
-    "fieldKey": "classificationStatus",
-    "category": "Identity & Classification",
-    "requiresApproval": true,
-    "approvalPolicy": "material-classification",
-    "description": "Designer review required for this field; source-derived draft values are not automatically approved."
-  },
-  {
-    "id": "column-definition-substances-controlledAgricultureAllowed",
-    "name": "Controlled Agriculture Allowed",
-    "table": "substances",
-    "fieldKey": "controlledAgricultureAllowed",
-    "category": "Biology & Agriculture",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-description",
-    "name": "Description",
-    "table": "substances",
-    "fieldKey": "description",
-    "category": "Properties & Applications",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-discoveryStatus",
-    "name": "Discovery Status",
-    "table": "substances",
-    "fieldKey": "discoveryStatus",
-    "category": "Governance & Approval",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-dominantArchetype",
-    "name": "Dominant Archetype",
-    "table": "substances",
-    "fieldKey": "dominantArchetype",
-    "category": "Identity & Classification",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-entityType",
-    "name": "Entity Type",
-    "table": "substances",
-    "fieldKey": "entityType",
-    "category": "Identity & Classification",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-excludedLandformIds",
-    "name": "Excluded Landform IDs",
-    "table": "substances",
-    "fieldKey": "excludedLandformIds",
-    "category": "Biology & Agriculture",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-gameId",
-    "name": "Game ID",
-    "table": "substances",
-    "fieldKey": "gameId",
-    "category": "Game Integration",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-gameplayCategory",
-    "name": "Gameplay Category",
-    "table": "substances",
-    "fieldKey": "gameplayCategory",
-    "category": "Game Integration",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-genericClassName",
-    "name": "Generic Class Name",
-    "table": "substances",
-    "fieldKey": "genericClassName",
-    "category": "Identity & Classification",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-genericSubstanceId",
-    "name": "Generic Substance ID",
-    "table": "substances",
-    "fieldKey": "genericSubstanceId",
-    "category": "Identity & Classification",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-id",
-    "name": "ID",
-    "table": "substances",
-    "fieldKey": "id",
-    "category": "Identity & Classification",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-image.generated",
-    "name": "Image / generated",
-    "table": "substances",
-    "fieldKey": "image.generated",
-    "category": "Artwork & Visuals",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-image.key",
-    "name": "Image / key",
-    "table": "substances",
-    "fieldKey": "image.key",
-    "category": "Artwork & Visuals",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-image.notes",
-    "name": "Image / notes",
-    "table": "substances",
-    "fieldKey": "image.notes",
-    "category": "Artwork & Visuals",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-image.promptDescription",
-    "name": "Image / prompt Description",
-    "table": "substances",
-    "fieldKey": "image.promptDescription",
-    "category": "Artwork & Visuals",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-image.status",
-    "name": "Image / status",
-    "table": "substances",
-    "fieldKey": "image.status",
-    "category": "Artwork & Visuals",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-industrialRole",
-    "name": "Industrial Role",
-    "table": "substances",
-    "fieldKey": "industrialRole",
-    "category": "Properties & Applications",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-introducedAgricultureAllowed",
-    "name": "Introduced Agriculture Allowed",
-    "table": "substances",
-    "fieldKey": "introducedAgricultureAllowed",
-    "category": "Biology & Agriculture",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-kind",
-    "name": "Kind",
-    "table": "substances",
-    "fieldKey": "kind",
-    "category": "Identity & Classification",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-knowledgeScope",
-    "name": "Knowledge Scope",
-    "table": "substances",
-    "fieldKey": "knowledgeScope",
-    "category": "Governance & Approval",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-manufactured",
-    "name": "Manufactured",
-    "table": "substances",
-    "fieldKey": "manufactured",
-    "category": "Biology & Agriculture",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-materialStage",
-    "name": "Material Stage",
-    "table": "substances",
-    "fieldKey": "materialStage",
-    "category": "Identity & Classification",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-mobileKey",
-    "name": "Mobile Key",
-    "table": "substances",
-    "fieldKey": "mobileKey",
-    "category": "Game Integration",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-name",
-    "name": "Name",
-    "table": "substances",
-    "fieldKey": "name",
-    "category": "Identity & Classification",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-naturalOccurrence",
-    "name": "Natural Occurrence",
-    "table": "substances",
-    "fieldKey": "naturalOccurrence",
-    "category": "Properties & Applications",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-naturalOccurrenceAllowed",
-    "name": "Natural Occurrence Allowed",
-    "table": "substances",
-    "fieldKey": "naturalOccurrenceAllowed",
-    "category": "Biology & Agriculture",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-naturalWorldTypeIds",
-    "name": "Natural World Type IDs",
-    "table": "substances",
-    "fieldKey": "naturalWorldTypeIds",
-    "category": "Biology & Agriculture",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-needsApproval",
-    "name": "Needs Approval",
-    "table": "substances",
-    "fieldKey": "needsApproval",
-    "category": "Discovery & Approval",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-notes",
-    "name": "Notes",
-    "table": "substances",
-    "fieldKey": "notes",
-    "category": "Biology & Agriculture",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-occurrence.allowedCelestialBodyKindIds",
-    "name": "Occurrence / allowed Celestial Body Kind IDs",
-    "table": "substances",
-    "fieldKey": "occurrence.allowedCelestialBodyKindIds",
-    "category": "Geological Occurrence",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-occurrence.canonStatus",
-    "name": "Occurrence / canon Status",
-    "table": "substances",
-    "fieldKey": "occurrence.canonStatus",
-    "category": "Geological Occurrence",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-occurrence.eligibleWorldTypeIds",
-    "name": "Occurrence / eligible World Type IDs",
-    "table": "substances",
-    "fieldKey": "occurrence.eligibleWorldTypeIds",
-    "category": "Geological Occurrence",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-occurrence.excludedAtmosphereTypeIds",
-    "name": "Occurrence / excluded Atmosphere Type IDs",
-    "table": "substances",
-    "fieldKey": "occurrence.excludedAtmosphereTypeIds",
-    "category": "Geological Occurrence",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-occurrence.excludedWorldTypeIds",
-    "name": "Occurrence / excluded World Type IDs",
-    "table": "substances",
-    "fieldKey": "occurrence.excludedWorldTypeIds",
-    "category": "Geological Occurrence",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-occurrence.id",
-    "name": "Occurrence / ID",
-    "table": "substances",
-    "fieldKey": "occurrence.id",
-    "category": "Geological Occurrence",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-occurrence.knowledgeScope",
-    "name": "Occurrence / knowledge Scope",
-    "table": "substances",
-    "fieldKey": "occurrence.knowledgeScope",
-    "category": "Geological Occurrence",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-occurrence.name",
-    "name": "Occurrence / name",
-    "table": "substances",
-    "fieldKey": "occurrence.name",
-    "category": "Geological Occurrence",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-occurrence.naturalOccurrence",
-    "name": "Occurrence / natural Occurrence",
-    "table": "substances",
-    "fieldKey": "occurrence.naturalOccurrence",
-    "category": "Geological Occurrence",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-occurrence.notes",
-    "name": "Occurrence / notes",
-    "table": "substances",
-    "fieldKey": "occurrence.notes",
-    "category": "Geological Occurrence",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-occurrence.occurrenceClass",
-    "name": "Occurrence / occurrence Class",
-    "table": "substances",
-    "fieldKey": "occurrence.occurrenceClass",
-    "category": "Geological Occurrence",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-occurrence.preferredGeologyProvinceIds",
-    "name": "Occurrence / preferred Geology Province IDs",
-    "table": "substances",
-    "fieldKey": "occurrence.preferredGeologyProvinceIds",
-    "category": "Geological Occurrence",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-occurrence.preferredWorldTypeIds",
-    "name": "Occurrence / preferred World Type IDs",
-    "table": "substances",
-    "fieldKey": "occurrence.preferredWorldTypeIds",
-    "category": "Geological Occurrence",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-occurrence.primaryExtractionZoneIds",
-    "name": "Occurrence / primary Extraction Zone IDs",
-    "table": "substances",
-    "fieldKey": "occurrence.primaryExtractionZoneIds",
-    "category": "Geological Occurrence",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-occurrence.requiredBiomeIds",
-    "name": "Occurrence / required Biome IDs",
-    "table": "substances",
-    "fieldKey": "occurrence.requiredBiomeIds",
-    "category": "Geological Occurrence",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-occurrence.requiredHydrosphereIds",
-    "name": "Occurrence / required Hydrosphere IDs",
-    "table": "substances",
-    "fieldKey": "occurrence.requiredHydrosphereIds",
-    "category": "Geological Occurrence",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-occurrence.resourceId",
-    "name": "Occurrence / resource ID",
-    "table": "substances",
-    "fieldKey": "occurrence.resourceId",
-    "category": "Geological Occurrence",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-occurrence.secondaryExtractionZoneIds",
-    "name": "Occurrence / secondary Extraction Zone IDs",
-    "table": "substances",
-    "fieldKey": "occurrence.secondaryExtractionZoneIds",
-    "category": "Geological Occurrence",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-occurrence.worldTypeEligibility",
-    "name": "Occurrence / world Type Eligibility",
-    "table": "substances",
-    "fieldKey": "occurrence.worldTypeEligibility",
-    "category": "Geological Occurrence",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-openAgricultureWorldTypeIds",
-    "name": "Open Agriculture World Type IDs",
-    "table": "substances",
-    "fieldKey": "openAgricultureWorldTypeIds",
-    "category": "Biology & Agriculture",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-provenance.approvedDate",
-    "name": "Provenance / approved Date",
-    "table": "substances",
-    "fieldKey": "provenance.approvedDate",
-    "category": "Sources & Provenance",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-provenance.sourcePath",
-    "name": "Provenance / source Path",
-    "table": "substances",
-    "fieldKey": "provenance.sourcePath",
-    "category": "Sources & Provenance",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-provenance.sourceRepository",
-    "name": "Provenance / source Repository",
-    "table": "substances",
-    "fieldKey": "provenance.sourceRepository",
-    "category": "Sources & Provenance",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-renewable",
-    "name": "Renewable",
-    "table": "substances",
-    "fieldKey": "renewable",
-    "category": "Properties & Applications",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-requiredNaturalBiomeIds",
-    "name": "Required Natural Biome IDs",
-    "table": "substances",
-    "fieldKey": "requiredNaturalBiomeIds",
-    "category": "Biology & Agriculture",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-requiredNaturalHydrosphereIds",
-    "name": "Required Natural Hydrosphere IDs",
-    "table": "substances",
-    "fieldKey": "requiredNaturalHydrosphereIds",
-    "category": "Biology & Agriculture",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-sourceProvenance.path",
-    "name": "Source Provenance / path",
-    "table": "substances",
-    "fieldKey": "sourceProvenance.path",
-    "category": "Sources & Provenance",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-sourceProvenance.repository",
-    "name": "Source Provenance / repository",
-    "table": "substances",
-    "fieldKey": "sourceProvenance.repository",
-    "category": "Sources & Provenance",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-sourceProvenance.workingId",
-    "name": "Source Provenance / working ID",
-    "table": "substances",
-    "fieldKey": "sourceProvenance.workingId",
-    "category": "Sources & Provenance",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-sourceRawResourceIds",
-    "name": "Source Raw Resource IDs",
-    "table": "substances",
-    "fieldKey": "sourceRawResourceIds",
-    "category": "Production & Materials",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-stockBehaviour",
-    "name": "Stock Behaviour",
-    "table": "substances",
-    "fieldKey": "stockBehaviour",
-    "category": "Properties & Applications",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-upstreamInputDescription",
-    "name": "Upstream Input Description",
-    "table": "substances",
-    "fieldKey": "upstreamInputDescription",
-    "category": "Production & Materials",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-upstreamMaterialIds",
-    "name": "Upstream Material IDs",
-    "table": "substances",
-    "fieldKey": "upstreamMaterialIds",
-    "category": "Production & Materials",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-visualDescription",
-    "name": "Visual Description",
-    "table": "substances",
-    "fieldKey": "visualDescription",
-    "category": "Properties & Applications",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-parts-approval",
-    "name": "Approval",
-    "table": "parts",
-    "fieldKey": "approval",
-    "category": "Discovery & Approval",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-parts-canonStatus",
-    "name": "Canon Status",
-    "table": "parts",
+    "table": "buildings",
     "fieldKey": "canonStatus",
     "category": "Canon & Provenance",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-catalogueStatus",
+    "id": "column-definition-buildings-catalogueStatus",
     "name": "Catalogue Status",
-    "table": "parts",
+    "table": "buildings",
     "fieldKey": "catalogueStatus",
     "category": "Identity & Classification",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-category",
+    "id": "column-definition-buildings-categories",
+    "name": "Categories",
+    "table": "buildings",
+    "fieldKey": "categories",
+    "category": "Identity & Classification",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-buildings-category",
     "name": "Category",
-    "table": "parts",
+    "table": "buildings",
     "fieldKey": "category",
     "category": "Identity & Classification",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-description",
+    "id": "column-definition-buildings-description",
     "name": "Description",
-    "table": "parts",
+    "table": "buildings",
     "fieldKey": "description",
     "category": "Description",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-entityType",
+    "id": "column-definition-buildings-entityType",
     "name": "Entity Type",
-    "table": "parts",
+    "table": "buildings",
     "fieldKey": "entityType",
     "category": "Identity & Classification",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-finishedUnitCount",
-    "name": "Finished Unit Count",
-    "table": "parts",
-    "fieldKey": "finishedUnitCount",
-    "category": "Identity & Classification",
+    "id": "column-definition-buildings-fitOutSubstanceIds",
+    "name": "Fit Out Substance IDs",
+    "table": "buildings",
+    "fieldKey": "fitOutSubstanceIds",
+    "category": "Structural Shell & Fit-out",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-finishedUnitDescription",
-    "name": "Finished Unit Description",
-    "table": "parts",
-    "fieldKey": "finishedUnitDescription",
-    "category": "Identity & Classification",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-parts-id",
+    "id": "column-definition-buildings-id",
     "name": "ID",
-    "table": "parts",
+    "table": "buildings",
     "fieldKey": "id",
     "category": "Identity & Classification",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-image.generated",
+    "id": "column-definition-buildings-image.generated",
     "name": "Image / generated",
-    "table": "parts",
+    "table": "buildings",
     "fieldKey": "image.generated",
     "category": "Artwork & Visuals",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-image.key",
+    "id": "column-definition-buildings-image.key",
     "name": "Image / key",
-    "table": "parts",
+    "table": "buildings",
     "fieldKey": "image.key",
     "category": "Artwork & Visuals",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-image.notes",
-    "name": "Image / notes",
-    "table": "parts",
-    "fieldKey": "image.notes",
+    "id": "column-definition-buildings-image.modelPrompt",
+    "name": "Image / model Prompt",
+    "table": "buildings",
+    "fieldKey": "image.modelPrompt",
     "category": "Artwork & Visuals",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-image.promptDescription",
+    "id": "column-definition-buildings-image.notes",
+    "name": "Image / notes",
+    "table": "buildings",
+    "fieldKey": "image.notes",
+    "category": "Canon & Provenance",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-buildings-image.promptDescription",
     "name": "Image / prompt Description",
-    "table": "parts",
+    "table": "buildings",
     "fieldKey": "image.promptDescription",
     "category": "Artwork & Visuals",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-image.status",
+    "id": "column-definition-buildings-image.status",
     "name": "Image / status",
-    "table": "parts",
+    "table": "buildings",
     "fieldKey": "image.status",
     "category": "Artwork & Visuals",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-machineIds",
+    "id": "column-definition-buildings-machineIds",
     "name": "Machine IDs",
-    "table": "parts",
+    "table": "buildings",
     "fieldKey": "machineIds",
-    "category": "Machines & Usage",
+    "category": "Machinery & Installation",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-materialApprovalStatus",
-    "name": "Material Approval Status",
-    "table": "parts",
-    "fieldKey": "materialApprovalStatus",
-    "category": "Discovery & Approval",
+    "id": "column-definition-buildings-mobileLevelAtlas.frameHeight",
+    "name": "Mobile Level Atlas / frame Height",
+    "table": "buildings",
+    "fieldKey": "mobileLevelAtlas.frameHeight",
+    "category": "Artwork & Visuals",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-materialInputs",
-    "name": "Material Inputs",
-    "table": "parts",
-    "fieldKey": "materialInputs",
-    "category": "Materials & Construction",
-    "requiresApproval": true,
-    "approvalPolicy": "parts-inputs",
-    "description": "Designer review required for this field; source-derived draft values are not automatically approved."
+    "id": "column-definition-buildings-mobileLevelAtlas.frameOrder",
+    "name": "Mobile Level Atlas / frame Order",
+    "table": "buildings",
+    "fieldKey": "mobileLevelAtlas.frameOrder",
+    "category": "Artwork & Visuals",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-name",
+    "id": "column-definition-buildings-mobileLevelAtlas.frameWidth",
+    "name": "Mobile Level Atlas / frame Width",
+    "table": "buildings",
+    "fieldKey": "mobileLevelAtlas.frameWidth",
+    "category": "Artwork & Visuals",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-buildings-mobileLevelAtlas.generated",
+    "name": "Mobile Level Atlas / generated",
+    "table": "buildings",
+    "fieldKey": "mobileLevelAtlas.generated",
+    "category": "Artwork & Visuals",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-buildings-mobileLevelAtlas.key",
+    "name": "Mobile Level Atlas / key",
+    "table": "buildings",
+    "fieldKey": "mobileLevelAtlas.key",
+    "category": "Artwork & Visuals",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-buildings-mobileLevelAtlas.notes",
+    "name": "Mobile Level Atlas / notes",
+    "table": "buildings",
+    "fieldKey": "mobileLevelAtlas.notes",
+    "category": "Artwork & Visuals",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-buildings-mobileLevelAtlas.status",
+    "name": "Mobile Level Atlas / status",
+    "table": "buildings",
+    "fieldKey": "mobileLevelAtlas.status",
+    "category": "Artwork & Visuals",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-buildings-name",
     "name": "Name",
-    "table": "parts",
+    "table": "buildings",
     "fieldKey": "name",
     "category": "Identity & Classification",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-needsApproval",
+    "id": "column-definition-buildings-needsApproval",
     "name": "Needs Approval",
-    "table": "parts",
+    "table": "buildings",
     "fieldKey": "needsApproval",
     "category": "Discovery & Approval",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-partImage",
-    "name": "Part Image",
-    "table": "parts",
-    "fieldKey": "partImage",
-    "category": "Artwork & Visuals",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-parts-partRole",
-    "name": "Part Role",
-    "table": "parts",
-    "fieldKey": "partRole",
-    "category": "Identity & Classification",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-parts-planningReference.baseManufacturerQuoteCC",
-    "name": "Planning Reference / base Manufacturer Quote CC",
-    "table": "parts",
-    "fieldKey": "planningReference.baseManufacturerQuoteCC",
-    "category": "Production & Prices",
-    "requiresApproval": true,
-    "approvalPolicy": "parts-quote",
-    "description": "Designer review required for this field; source-derived draft values are not automatically approved."
-  },
-  {
-    "id": "column-definition-parts-planningReference.basis",
-    "name": "Planning Reference / basis",
-    "table": "parts",
-    "fieldKey": "planningReference.basis",
-    "category": "Production & Prices",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-parts-planningReference.finishedMassKg",
-    "name": "Planning Reference / finished Mass Kg",
-    "table": "parts",
-    "fieldKey": "planningReference.finishedMassKg",
-    "category": "Production & Prices",
-    "requiresApproval": true,
-    "approvalPolicy": "parts-weight",
-    "description": "Designer review required for this field; source-derived draft values are not automatically approved."
-  },
-  {
-    "id": "column-definition-parts-planningReference.manufacturerCostCC",
-    "name": "Planning Reference / manufacturer Cost CC",
-    "table": "parts",
-    "fieldKey": "planningReference.manufacturerCostCC",
-    "category": "Production & Prices",
-    "requiresApproval": true,
-    "approvalPolicy": "parts-cost",
-    "description": "Designer review required for this field; source-derived draft values are not automatically approved."
-  },
-  {
-    "id": "column-definition-parts-planningReference.sourceSection",
-    "name": "Planning Reference / source Section",
-    "table": "parts",
-    "fieldKey": "planningReference.sourceSection",
-    "category": "Canon & Provenance",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-parts-planningReference.status",
-    "name": "Planning Reference / status",
-    "table": "parts",
-    "fieldKey": "planningReference.status",
-    "category": "Production & Prices",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-parts-provenance.androidDiscoveryWorkingId",
-    "name": "Provenance / android Discovery Working ID",
-    "table": "parts",
-    "fieldKey": "provenance.androidDiscoveryWorkingId",
-    "category": "Canon & Provenance",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-parts-provenance.authoredFor",
-    "name": "Provenance / authored For",
-    "table": "parts",
-    "fieldKey": "provenance.authoredFor",
-    "category": "Canon & Provenance",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-parts-provenance.desktopPath",
+    "id": "column-definition-buildings-provenance.desktopPath",
     "name": "Provenance / desktop Path",
-    "table": "parts",
+    "table": "buildings",
     "fieldKey": "provenance.desktopPath",
     "category": "Canon & Provenance",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-provenance.partsDiscovery.repository",
-    "name": "Provenance / parts Discovery / repository",
-    "table": "parts",
-    "fieldKey": "provenance.partsDiscovery.repository",
+    "id": "column-definition-buildings-provenance.mobile.displayName",
+    "name": "Provenance / mobile / display Name",
+    "table": "buildings",
+    "fieldKey": "provenance.mobile.displayName",
     "category": "Canon & Provenance",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-provenance.partsDiscovery.sourceCommit",
-    "name": "Provenance / parts Discovery / source Commit",
-    "table": "parts",
-    "fieldKey": "provenance.partsDiscovery.sourceCommit",
+    "id": "column-definition-buildings-provenance.mobile.kind",
+    "name": "Provenance / mobile / kind",
+    "table": "buildings",
+    "fieldKey": "provenance.mobile.kind",
     "category": "Canon & Provenance",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-provenance.partsDiscovery.sourceSections",
-    "name": "Provenance / parts Discovery / source Sections",
-    "table": "parts",
-    "fieldKey": "provenance.partsDiscovery.sourceSections",
+    "id": "column-definition-buildings-provenance.mobile.path",
+    "name": "Provenance / mobile / path",
+    "table": "buildings",
+    "fieldKey": "provenance.mobile.path",
     "category": "Canon & Provenance",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-provenance.sourceCommit",
-    "name": "Provenance / source Commit",
-    "table": "parts",
-    "fieldKey": "provenance.sourceCommit",
+    "id": "column-definition-buildings-provenance.scope",
+    "name": "Provenance / scope",
+    "table": "buildings",
+    "fieldKey": "provenance.scope",
     "category": "Canon & Provenance",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-provenance.sourcePath",
-    "name": "Provenance / source Path",
-    "table": "parts",
-    "fieldKey": "provenance.sourcePath",
-    "category": "Canon & Provenance",
+    "id": "column-definition-buildings-review.bomCoverage.building_name",
+    "name": "Review / bom Coverage / building name",
+    "table": "buildings",
+    "fieldKey": "review.bomCoverage.building_name",
+    "category": "Identity & Classification",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-provenance.sourceRepository",
-    "name": "Provenance / source Repository",
-    "table": "parts",
-    "fieldKey": "provenance.sourceRepository",
-    "category": "Canon & Provenance",
+    "id": "column-definition-buildings-review.bomCoverage.condition_and_title_valuation_status",
+    "name": "Review / bom Coverage / condition and title valuation status",
+    "table": "buildings",
+    "fieldKey": "review.bomCoverage.condition_and_title_valuation_status",
+    "category": "Condition & Ownership",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-sources",
+    "id": "column-definition-buildings-review.bomCoverage.installed_machine_counts_status",
+    "name": "Review / bom Coverage / installed machine counts status",
+    "table": "buildings",
+    "fieldKey": "review.bomCoverage.installed_machine_counts_status",
+    "category": "Machinery & Installation",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-buildings-review.bomCoverage.review_status",
+    "name": "Review / bom Coverage / review status",
+    "table": "buildings",
+    "fieldKey": "review.bomCoverage.review_status",
+    "category": "Discovery & Approval",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-buildings-review.bomCoverage.shell_construction_material_quantities_status",
+    "name": "Review / bom Coverage / shell construction material quantities status",
+    "table": "buildings",
+    "fieldKey": "review.bomCoverage.shell_construction_material_quantities_status",
+    "category": "Discovery & Approval",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-buildings-review.bomCoverage.site_specific_notes",
+    "name": "Review / bom Coverage / site specific notes",
+    "table": "buildings",
+    "fieldKey": "review.bomCoverage.site_specific_notes",
+    "category": "Production, Capacity & Progression",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-buildings-review.bomCoverage.source_candidate_installed_machine_ids_not_all_mandatory",
+    "name": "Review / bom Coverage / source candidate installed machine IDs not all mandatory",
+    "table": "buildings",
+    "fieldKey": "review.bomCoverage.source_candidate_installed_machine_ids_not_all_mandatory",
+    "category": "Machinery & Installation",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-buildings-review.bomCoverage.source_fit_out_substance_ids_unquantified",
+    "name": "Review / bom Coverage / source fit out substance IDs unquantified",
+    "table": "buildings",
+    "fieldKey": "review.bomCoverage.source_fit_out_substance_ids_unquantified",
+    "category": "Structural Shell & Fit-out",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-buildings-review.bomCoverage.source_shell_substance_ids_unquantified",
+    "name": "Review / bom Coverage / source shell substance IDs unquantified",
+    "table": "buildings",
+    "fieldKey": "review.bomCoverage.source_shell_substance_ids_unquantified",
+    "category": "Structural Shell & Fit-out",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-buildings-review.quantitativeBOM.approval_status",
+    "name": "Review / quantitative BOM / approval status",
+    "table": "buildings",
+    "fieldKey": "review.quantitativeBOM.approval_status",
+    "category": "Discovery & Approval",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-buildings-review.quantitativeBOM.building_name",
+    "name": "Review / quantitative BOM / building name",
+    "table": "buildings",
+    "fieldKey": "review.quantitativeBOM.building_name",
+    "category": "Identity & Classification",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-buildings-review.quantitativeBOM.direct_material_cost_CC_status",
+    "name": "Review / quantitative BOM / direct material cost CC status",
+    "table": "buildings",
+    "fieldKey": "review.quantitativeBOM.direct_material_cost_CC_status",
+    "category": "Economics & Valuation",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-buildings-review.quantitativeBOM.installed_structure_material_mass_kg",
+    "name": "Review / quantitative BOM / installed structure material mass kg",
+    "table": "buildings",
+    "fieldKey": "review.quantitativeBOM.installed_structure_material_mass_kg",
+    "category": "Construction BOM & Labour",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-buildings-review.quantitativeBOM.labour_cost_CC_partial",
+    "name": "Review / quantitative BOM / labour cost CC partial",
+    "table": "buildings",
+    "fieldKey": "review.quantitativeBOM.labour_cost_CC_partial",
+    "category": "Economics & Valuation",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-buildings-review.quantitativeBOM.optional_machine_ids_conditional",
+    "name": "Review / quantitative BOM / optional machine IDs conditional",
+    "table": "buildings",
+    "fieldKey": "review.quantitativeBOM.optional_machine_ids_conditional",
+    "category": "Machinery & Installation",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-buildings-review.quantitativeBOM.proposed_required_machine_ids_and_counts",
+    "name": "Review / quantitative BOM / proposed required machine IDs and counts",
+    "table": "buildings",
+    "fieldKey": "review.quantitativeBOM.proposed_required_machine_ids_and_counts",
+    "category": "Machinery & Installation",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-buildings-review.quantitativeBOM.site_construction_labour_hours",
+    "name": "Review / quantitative BOM / site construction labour hours",
+    "table": "buildings",
+    "fieldKey": "review.quantitativeBOM.site_construction_labour_hours",
+    "category": "Construction BOM & Labour",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-buildings-review.quantitativeBOM.source_android_gameplay_cost_and_constraints",
+    "name": "Review / quantitative BOM / source android gameplay cost and constraints",
+    "table": "buildings",
+    "fieldKey": "review.quantitativeBOM.source_android_gameplay_cost_and_constraints",
+    "category": "Production, Capacity & Progression",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-buildings-review.quantitativeBOM.structural_shell_and_fit_out_inputs_kg",
+    "name": "Review / quantitative BOM / structural shell and fit out inputs kg",
+    "table": "buildings",
+    "fieldKey": "review.quantitativeBOM.structural_shell_and_fit_out_inputs_kg",
+    "category": "Construction BOM & Labour",
+    "requiresApproval": true,
+    "approvalPolicy": "construction-design",
+    "description": "Designer review required for this field; source-derived draft values are not automatically approved."
+  },
+  {
+    "id": "column-definition-buildings-review.quantitativeBOM.transportable_nonlocal_material_mass_kg_if_aggregate_locally_sourced",
+    "name": "Review / quantitative BOM / transportable nonlocal material mass kg if aggregate locally sourced",
+    "table": "buildings",
+    "fieldKey": "review.quantitativeBOM.transportable_nonlocal_material_mass_kg_if_aggregate_locally_sourced",
+    "category": "Construction BOM & Labour",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-buildings-review.quantitativeBOM.unit_definition",
+    "name": "Review / quantitative BOM / unit definition",
+    "table": "buildings",
+    "fieldKey": "review.quantitativeBOM.unit_definition",
+    "category": "Construction BOM & Labour",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-buildings-review.quantitativeBOM.unresolved_dependencies",
+    "name": "Review / quantitative BOM / unresolved dependencies",
+    "table": "buildings",
+    "fieldKey": "review.quantitativeBOM.unresolved_dependencies",
+    "category": "Discovery & Approval",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-buildings-review.systematicReview.building_name",
+    "name": "Review / systematic Review / building name",
+    "table": "buildings",
+    "fieldKey": "review.systematicReview.building_name",
+    "category": "Identity & Classification",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-buildings-review.systematicReview.key_system_or_asset_issue",
+    "name": "Review / systematic Review / key system or asset issue",
+    "table": "buildings",
+    "fieldKey": "review.systematicReview.key_system_or_asset_issue",
+    "category": "Production, Capacity & Progression",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-buildings-review.systematicReview.numeric_bom_reference",
+    "name": "Review / systematic Review / numeric bom reference",
+    "table": "buildings",
+    "fieldKey": "review.systematicReview.numeric_bom_reference",
+    "category": "Discovery & Approval",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-buildings-review.systematicReview.proposed_required_machine_direction",
+    "name": "Review / systematic Review / proposed required machine direction",
+    "table": "buildings",
+    "fieldKey": "review.systematicReview.proposed_required_machine_direction",
+    "category": "Machinery & Installation",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-buildings-review.systematicReview.review_order",
+    "name": "Review / systematic Review / review order",
+    "table": "buildings",
+    "fieldKey": "review.systematicReview.review_order",
+    "category": "Discovery & Approval",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-buildings-review.systematicReview.review_status",
+    "name": "Review / systematic Review / review status",
+    "table": "buildings",
+    "fieldKey": "review.systematicReview.review_status",
+    "category": "Discovery & Approval",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-buildings-review.systematicReview.source_candidate_machine_ids_not_obligatory",
+    "name": "Review / systematic Review / source candidate machine IDs not obligatory",
+    "table": "buildings",
+    "fieldKey": "review.systematicReview.source_candidate_machine_ids_not_obligatory",
+    "category": "Machinery & Installation",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-buildings-sources",
     "name": "Sources",
-    "table": "parts",
+    "table": "buildings",
     "fieldKey": "sources",
     "category": "Identity & Classification",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-parts-subCategories",
-    "name": "Sub Categories",
-    "table": "parts",
-    "fieldKey": "subCategories",
-    "category": "Identity & Classification",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-parts-subCategory",
-    "name": "Sub Category",
-    "table": "parts",
-    "fieldKey": "subCategory",
-    "category": "Identity & Classification",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-parts-substanceIds",
-    "name": "Substance IDs",
-    "table": "parts",
-    "fieldKey": "substanceIds",
-    "category": "Materials & Construction",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-parts-unresolvedMaterialInputs",
-    "name": "Unresolved Material Inputs",
-    "table": "parts",
-    "fieldKey": "unresolvedMaterialInputs",
-    "category": "Materials & Construction",
+    "id": "column-definition-buildings-structuralShellSubstanceIds",
+    "name": "Structural Shell Substance IDs",
+    "table": "buildings",
+    "fieldKey": "structuralShellSubstanceIds",
+    "category": "Structural Shell & Fit-out",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
@@ -2007,561 +1490,1087 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-approval",
+    "id": "column-definition-parts-approval",
     "name": "Approval",
-    "table": "buildings",
+    "table": "parts",
     "fieldKey": "approval",
     "category": "Discovery & Approval",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-buildingType",
-    "name": "Building Type",
-    "table": "buildings",
-    "fieldKey": "buildingType",
-    "category": "Identity & Classification",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-buildings-canonStatus",
+    "id": "column-definition-parts-canonStatus",
     "name": "Canon Status",
-    "table": "buildings",
+    "table": "parts",
     "fieldKey": "canonStatus",
     "category": "Canon & Provenance",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-catalogueStatus",
+    "id": "column-definition-parts-catalogueStatus",
     "name": "Catalogue Status",
-    "table": "buildings",
+    "table": "parts",
     "fieldKey": "catalogueStatus",
     "category": "Identity & Classification",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-categories",
-    "name": "Categories",
-    "table": "buildings",
-    "fieldKey": "categories",
-    "category": "Identity & Classification",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-buildings-category",
+    "id": "column-definition-parts-category",
     "name": "Category",
-    "table": "buildings",
+    "table": "parts",
     "fieldKey": "category",
     "category": "Identity & Classification",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-description",
+    "id": "column-definition-parts-description",
     "name": "Description",
-    "table": "buildings",
+    "table": "parts",
     "fieldKey": "description",
     "category": "Description",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-entityType",
+    "id": "column-definition-parts-entityType",
     "name": "Entity Type",
-    "table": "buildings",
+    "table": "parts",
     "fieldKey": "entityType",
     "category": "Identity & Classification",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-fitOutSubstanceIds",
-    "name": "Fit Out Substance IDs",
-    "table": "buildings",
-    "fieldKey": "fitOutSubstanceIds",
-    "category": "Structural Shell & Fit-out",
+    "id": "column-definition-parts-finishedUnitCount",
+    "name": "Finished Unit Count",
+    "table": "parts",
+    "fieldKey": "finishedUnitCount",
+    "category": "Identity & Classification",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-id",
+    "id": "column-definition-parts-finishedUnitDescription",
+    "name": "Finished Unit Description",
+    "table": "parts",
+    "fieldKey": "finishedUnitDescription",
+    "category": "Identity & Classification",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-parts-id",
     "name": "ID",
-    "table": "buildings",
+    "table": "parts",
     "fieldKey": "id",
     "category": "Identity & Classification",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-image.generated",
+    "id": "column-definition-parts-image.generated",
     "name": "Image / generated",
-    "table": "buildings",
+    "table": "parts",
     "fieldKey": "image.generated",
     "category": "Artwork & Visuals",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-image.key",
+    "id": "column-definition-parts-image.key",
     "name": "Image / key",
-    "table": "buildings",
+    "table": "parts",
     "fieldKey": "image.key",
     "category": "Artwork & Visuals",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-image.modelPrompt",
-    "name": "Image / model Prompt",
-    "table": "buildings",
-    "fieldKey": "image.modelPrompt",
+    "id": "column-definition-parts-image.notes",
+    "name": "Image / notes",
+    "table": "parts",
+    "fieldKey": "image.notes",
     "category": "Artwork & Visuals",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-image.notes",
-    "name": "Image / notes",
-    "table": "buildings",
-    "fieldKey": "image.notes",
-    "category": "Canon & Provenance",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-buildings-image.promptDescription",
+    "id": "column-definition-parts-image.promptDescription",
     "name": "Image / prompt Description",
-    "table": "buildings",
+    "table": "parts",
     "fieldKey": "image.promptDescription",
     "category": "Artwork & Visuals",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-image.status",
+    "id": "column-definition-parts-image.status",
     "name": "Image / status",
-    "table": "buildings",
+    "table": "parts",
     "fieldKey": "image.status",
     "category": "Artwork & Visuals",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-machineIds",
+    "id": "column-definition-parts-machineIds",
     "name": "Machine IDs",
-    "table": "buildings",
+    "table": "parts",
     "fieldKey": "machineIds",
-    "category": "Machinery & Installation",
+    "category": "Machines & Usage",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-mobileLevelAtlas.frameHeight",
-    "name": "Mobile Level Atlas / frame Height",
-    "table": "buildings",
-    "fieldKey": "mobileLevelAtlas.frameHeight",
-    "category": "Artwork & Visuals",
+    "id": "column-definition-parts-massReview",
+    "name": "Mass Review",
+    "table": "parts",
+    "fieldKey": "massReview",
+    "category": "Production & Prices",
+    "requiresApproval": false,
+    "description": "Derived comparison of required input weights with the existing finished-weight reference; no silent changes to source quantities."
+  },
+  {
+    "id": "column-definition-parts-materialApprovalStatus",
+    "name": "Material Approval Status",
+    "table": "parts",
+    "fieldKey": "materialApprovalStatus",
+    "category": "Discovery & Approval",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-mobileLevelAtlas.frameOrder",
-    "name": "Mobile Level Atlas / frame Order",
-    "table": "buildings",
-    "fieldKey": "mobileLevelAtlas.frameOrder",
-    "category": "Artwork & Visuals",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
+    "id": "column-definition-parts-materialInputs",
+    "name": "Material Inputs",
+    "table": "parts",
+    "fieldKey": "materialInputs",
+    "category": "Materials & Construction",
+    "requiresApproval": true,
+    "approvalPolicy": "parts-inputs",
+    "description": "Designer review required for this field; source-derived draft values are not automatically approved."
   },
   {
-    "id": "column-definition-buildings-mobileLevelAtlas.frameWidth",
-    "name": "Mobile Level Atlas / frame Width",
-    "table": "buildings",
-    "fieldKey": "mobileLevelAtlas.frameWidth",
-    "category": "Artwork & Visuals",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-buildings-mobileLevelAtlas.generated",
-    "name": "Mobile Level Atlas / generated",
-    "table": "buildings",
-    "fieldKey": "mobileLevelAtlas.generated",
-    "category": "Artwork & Visuals",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-buildings-mobileLevelAtlas.key",
-    "name": "Mobile Level Atlas / key",
-    "table": "buildings",
-    "fieldKey": "mobileLevelAtlas.key",
-    "category": "Artwork & Visuals",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-buildings-mobileLevelAtlas.notes",
-    "name": "Mobile Level Atlas / notes",
-    "table": "buildings",
-    "fieldKey": "mobileLevelAtlas.notes",
-    "category": "Artwork & Visuals",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-buildings-mobileLevelAtlas.status",
-    "name": "Mobile Level Atlas / status",
-    "table": "buildings",
-    "fieldKey": "mobileLevelAtlas.status",
-    "category": "Artwork & Visuals",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-buildings-name",
+    "id": "column-definition-parts-name",
     "name": "Name",
-    "table": "buildings",
+    "table": "parts",
     "fieldKey": "name",
     "category": "Identity & Classification",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-needsApproval",
+    "id": "column-definition-parts-needsApproval",
     "name": "Needs Approval",
-    "table": "buildings",
+    "table": "parts",
     "fieldKey": "needsApproval",
     "category": "Discovery & Approval",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-provenance.desktopPath",
+    "id": "column-definition-parts-partImage",
+    "name": "Part Image",
+    "table": "parts",
+    "fieldKey": "partImage",
+    "category": "Artwork & Visuals",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-parts-partRole",
+    "name": "Part Role",
+    "table": "parts",
+    "fieldKey": "partRole",
+    "category": "Identity & Classification",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-parts-planningReference.baseManufacturerQuoteCC",
+    "name": "Planning Reference / base Manufacturer Quote CC",
+    "table": "parts",
+    "fieldKey": "planningReference.baseManufacturerQuoteCC",
+    "category": "Production & Prices",
+    "requiresApproval": true,
+    "approvalPolicy": "parts-quote",
+    "description": "Designer review required for this field; source-derived draft values are not automatically approved."
+  },
+  {
+    "id": "column-definition-parts-planningReference.basis",
+    "name": "Planning Reference / basis",
+    "table": "parts",
+    "fieldKey": "planningReference.basis",
+    "category": "Production & Prices",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-parts-planningReference.finishedMassKg",
+    "name": "Planning Reference / finished Mass Kg",
+    "table": "parts",
+    "fieldKey": "planningReference.finishedMassKg",
+    "category": "Production & Prices",
+    "requiresApproval": true,
+    "approvalPolicy": "parts-weight",
+    "description": "Designer review required for this field; source-derived draft values are not automatically approved."
+  },
+  {
+    "id": "column-definition-parts-planningReference.manufacturerCostCC",
+    "name": "Planning Reference / manufacturer Cost CC",
+    "table": "parts",
+    "fieldKey": "planningReference.manufacturerCostCC",
+    "category": "Production & Prices",
+    "requiresApproval": true,
+    "approvalPolicy": "parts-cost",
+    "description": "Designer review required for this field; source-derived draft values are not automatically approved."
+  },
+  {
+    "id": "column-definition-parts-planningReference.sourceSection",
+    "name": "Planning Reference / source Section",
+    "table": "parts",
+    "fieldKey": "planningReference.sourceSection",
+    "category": "Canon & Provenance",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-parts-planningReference.status",
+    "name": "Planning Reference / status",
+    "table": "parts",
+    "fieldKey": "planningReference.status",
+    "category": "Production & Prices",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-parts-provenance.androidDiscoveryWorkingId",
+    "name": "Provenance / android Discovery Working ID",
+    "table": "parts",
+    "fieldKey": "provenance.androidDiscoveryWorkingId",
+    "category": "Canon & Provenance",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-parts-provenance.authoredFor",
+    "name": "Provenance / authored For",
+    "table": "parts",
+    "fieldKey": "provenance.authoredFor",
+    "category": "Canon & Provenance",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-parts-provenance.desktopPath",
     "name": "Provenance / desktop Path",
-    "table": "buildings",
+    "table": "parts",
     "fieldKey": "provenance.desktopPath",
     "category": "Canon & Provenance",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-provenance.mobile.displayName",
-    "name": "Provenance / mobile / display Name",
-    "table": "buildings",
-    "fieldKey": "provenance.mobile.displayName",
+    "id": "column-definition-parts-provenance.partsDiscovery.repository",
+    "name": "Provenance / parts Discovery / repository",
+    "table": "parts",
+    "fieldKey": "provenance.partsDiscovery.repository",
     "category": "Canon & Provenance",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-provenance.mobile.kind",
-    "name": "Provenance / mobile / kind",
-    "table": "buildings",
-    "fieldKey": "provenance.mobile.kind",
+    "id": "column-definition-parts-provenance.partsDiscovery.sourceCommit",
+    "name": "Provenance / parts Discovery / source Commit",
+    "table": "parts",
+    "fieldKey": "provenance.partsDiscovery.sourceCommit",
     "category": "Canon & Provenance",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-provenance.mobile.path",
-    "name": "Provenance / mobile / path",
-    "table": "buildings",
-    "fieldKey": "provenance.mobile.path",
+    "id": "column-definition-parts-provenance.partsDiscovery.sourceSections",
+    "name": "Provenance / parts Discovery / source Sections",
+    "table": "parts",
+    "fieldKey": "provenance.partsDiscovery.sourceSections",
     "category": "Canon & Provenance",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-provenance.scope",
-    "name": "Provenance / scope",
-    "table": "buildings",
-    "fieldKey": "provenance.scope",
+    "id": "column-definition-parts-provenance.sourceCommit",
+    "name": "Provenance / source Commit",
+    "table": "parts",
+    "fieldKey": "provenance.sourceCommit",
     "category": "Canon & Provenance",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-review.bomCoverage.building_name",
-    "name": "Review / bom Coverage / building name",
-    "table": "buildings",
-    "fieldKey": "review.bomCoverage.building_name",
-    "category": "Identity & Classification",
+    "id": "column-definition-parts-provenance.sourcePath",
+    "name": "Provenance / source Path",
+    "table": "parts",
+    "fieldKey": "provenance.sourcePath",
+    "category": "Canon & Provenance",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-review.bomCoverage.condition_and_title_valuation_status",
-    "name": "Review / bom Coverage / condition and title valuation status",
-    "table": "buildings",
-    "fieldKey": "review.bomCoverage.condition_and_title_valuation_status",
-    "category": "Condition & Ownership",
+    "id": "column-definition-parts-provenance.sourceRepository",
+    "name": "Provenance / source Repository",
+    "table": "parts",
+    "fieldKey": "provenance.sourceRepository",
+    "category": "Canon & Provenance",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-review.bomCoverage.installed_machine_counts_status",
-    "name": "Review / bom Coverage / installed machine counts status",
-    "table": "buildings",
-    "fieldKey": "review.bomCoverage.installed_machine_counts_status",
-    "category": "Machinery & Installation",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-buildings-review.bomCoverage.review_status",
-    "name": "Review / bom Coverage / review status",
-    "table": "buildings",
-    "fieldKey": "review.bomCoverage.review_status",
-    "category": "Discovery & Approval",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-buildings-review.bomCoverage.shell_construction_material_quantities_status",
-    "name": "Review / bom Coverage / shell construction material quantities status",
-    "table": "buildings",
-    "fieldKey": "review.bomCoverage.shell_construction_material_quantities_status",
-    "category": "Discovery & Approval",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-buildings-review.bomCoverage.site_specific_notes",
-    "name": "Review / bom Coverage / site specific notes",
-    "table": "buildings",
-    "fieldKey": "review.bomCoverage.site_specific_notes",
-    "category": "Production, Capacity & Progression",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-buildings-review.bomCoverage.source_candidate_installed_machine_ids_not_all_mandatory",
-    "name": "Review / bom Coverage / source candidate installed machine IDs not all mandatory",
-    "table": "buildings",
-    "fieldKey": "review.bomCoverage.source_candidate_installed_machine_ids_not_all_mandatory",
-    "category": "Machinery & Installation",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-buildings-review.bomCoverage.source_fit_out_substance_ids_unquantified",
-    "name": "Review / bom Coverage / source fit out substance IDs unquantified",
-    "table": "buildings",
-    "fieldKey": "review.bomCoverage.source_fit_out_substance_ids_unquantified",
-    "category": "Structural Shell & Fit-out",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-buildings-review.bomCoverage.source_shell_substance_ids_unquantified",
-    "name": "Review / bom Coverage / source shell substance IDs unquantified",
-    "table": "buildings",
-    "fieldKey": "review.bomCoverage.source_shell_substance_ids_unquantified",
-    "category": "Structural Shell & Fit-out",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-buildings-review.quantitativeBOM.approval_status",
-    "name": "Review / quantitative BOM / approval status",
-    "table": "buildings",
-    "fieldKey": "review.quantitativeBOM.approval_status",
-    "category": "Discovery & Approval",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-buildings-review.quantitativeBOM.building_name",
-    "name": "Review / quantitative BOM / building name",
-    "table": "buildings",
-    "fieldKey": "review.quantitativeBOM.building_name",
-    "category": "Identity & Classification",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-buildings-review.quantitativeBOM.direct_material_cost_CC_status",
-    "name": "Review / quantitative BOM / direct material cost CC status",
-    "table": "buildings",
-    "fieldKey": "review.quantitativeBOM.direct_material_cost_CC_status",
-    "category": "Economics & Valuation",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-buildings-review.quantitativeBOM.installed_structure_material_mass_kg",
-    "name": "Review / quantitative BOM / installed structure material mass kg",
-    "table": "buildings",
-    "fieldKey": "review.quantitativeBOM.installed_structure_material_mass_kg",
-    "category": "Construction BOM & Labour",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-buildings-review.quantitativeBOM.labour_cost_CC_partial",
-    "name": "Review / quantitative BOM / labour cost CC partial",
-    "table": "buildings",
-    "fieldKey": "review.quantitativeBOM.labour_cost_CC_partial",
-    "category": "Economics & Valuation",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-buildings-review.quantitativeBOM.optional_machine_ids_conditional",
-    "name": "Review / quantitative BOM / optional machine IDs conditional",
-    "table": "buildings",
-    "fieldKey": "review.quantitativeBOM.optional_machine_ids_conditional",
-    "category": "Machinery & Installation",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-buildings-review.quantitativeBOM.proposed_required_machine_ids_and_counts",
-    "name": "Review / quantitative BOM / proposed required machine IDs and counts",
-    "table": "buildings",
-    "fieldKey": "review.quantitativeBOM.proposed_required_machine_ids_and_counts",
-    "category": "Machinery & Installation",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-buildings-review.quantitativeBOM.site_construction_labour_hours",
-    "name": "Review / quantitative BOM / site construction labour hours",
-    "table": "buildings",
-    "fieldKey": "review.quantitativeBOM.site_construction_labour_hours",
-    "category": "Construction BOM & Labour",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-buildings-review.quantitativeBOM.source_android_gameplay_cost_and_constraints",
-    "name": "Review / quantitative BOM / source android gameplay cost and constraints",
-    "table": "buildings",
-    "fieldKey": "review.quantitativeBOM.source_android_gameplay_cost_and_constraints",
-    "category": "Production, Capacity & Progression",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-buildings-review.quantitativeBOM.structural_shell_and_fit_out_inputs_kg",
-    "name": "Review / quantitative BOM / structural shell and fit out inputs kg",
-    "table": "buildings",
-    "fieldKey": "review.quantitativeBOM.structural_shell_and_fit_out_inputs_kg",
-    "category": "Construction BOM & Labour",
-    "requiresApproval": true,
-    "approvalPolicy": "construction-design",
-    "description": "Designer review required for this field; source-derived draft values are not automatically approved."
-  },
-  {
-    "id": "column-definition-buildings-review.quantitativeBOM.transportable_nonlocal_material_mass_kg_if_aggregate_locally_sourced",
-    "name": "Review / quantitative BOM / transportable nonlocal material mass kg if aggregate locally sourced",
-    "table": "buildings",
-    "fieldKey": "review.quantitativeBOM.transportable_nonlocal_material_mass_kg_if_aggregate_locally_sourced",
-    "category": "Construction BOM & Labour",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-buildings-review.quantitativeBOM.unit_definition",
-    "name": "Review / quantitative BOM / unit definition",
-    "table": "buildings",
-    "fieldKey": "review.quantitativeBOM.unit_definition",
-    "category": "Construction BOM & Labour",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-buildings-review.quantitativeBOM.unresolved_dependencies",
-    "name": "Review / quantitative BOM / unresolved dependencies",
-    "table": "buildings",
-    "fieldKey": "review.quantitativeBOM.unresolved_dependencies",
-    "category": "Discovery & Approval",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-buildings-review.systematicReview.building_name",
-    "name": "Review / systematic Review / building name",
-    "table": "buildings",
-    "fieldKey": "review.systematicReview.building_name",
-    "category": "Identity & Classification",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-buildings-review.systematicReview.key_system_or_asset_issue",
-    "name": "Review / systematic Review / key system or asset issue",
-    "table": "buildings",
-    "fieldKey": "review.systematicReview.key_system_or_asset_issue",
-    "category": "Production, Capacity & Progression",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-buildings-review.systematicReview.numeric_bom_reference",
-    "name": "Review / systematic Review / numeric bom reference",
-    "table": "buildings",
-    "fieldKey": "review.systematicReview.numeric_bom_reference",
-    "category": "Discovery & Approval",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-buildings-review.systematicReview.proposed_required_machine_direction",
-    "name": "Review / systematic Review / proposed required machine direction",
-    "table": "buildings",
-    "fieldKey": "review.systematicReview.proposed_required_machine_direction",
-    "category": "Machinery & Installation",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-buildings-review.systematicReview.review_order",
-    "name": "Review / systematic Review / review order",
-    "table": "buildings",
-    "fieldKey": "review.systematicReview.review_order",
-    "category": "Discovery & Approval",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-buildings-review.systematicReview.review_status",
-    "name": "Review / systematic Review / review status",
-    "table": "buildings",
-    "fieldKey": "review.systematicReview.review_status",
-    "category": "Discovery & Approval",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-buildings-review.systematicReview.source_candidate_machine_ids_not_obligatory",
-    "name": "Review / systematic Review / source candidate machine IDs not obligatory",
-    "table": "buildings",
-    "fieldKey": "review.systematicReview.source_candidate_machine_ids_not_obligatory",
-    "category": "Machinery & Installation",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-buildings-sources",
+    "id": "column-definition-parts-sources",
     "name": "Sources",
-    "table": "buildings",
+    "table": "parts",
     "fieldKey": "sources",
     "category": "Identity & Classification",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-buildings-structuralShellSubstanceIds",
-    "name": "Structural Shell Substance IDs",
-    "table": "buildings",
-    "fieldKey": "structuralShellSubstanceIds",
-    "category": "Structural Shell & Fit-out",
+    "id": "column-definition-parts-subCategories",
+    "name": "Sub Categories",
+    "table": "parts",
+    "fieldKey": "subCategories",
+    "category": "Identity & Classification",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-parts-subCategory",
+    "name": "Sub Category",
+    "table": "parts",
+    "fieldKey": "subCategory",
+    "category": "Identity & Classification",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-parts-substanceIds",
+    "name": "Substance IDs",
+    "table": "parts",
+    "fieldKey": "substanceIds",
+    "category": "Materials & Construction",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-parts-unresolvedMaterialInputs",
+    "name": "Unresolved Material Inputs",
+    "table": "parts",
+    "fieldKey": "unresolvedMaterialInputs",
+    "category": "Materials & Construction",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-allowedCelestialBodyKindIds",
+    "name": "Allowed Celestial Body Kind IDs",
+    "table": "substances",
+    "fieldKey": "allowedCelestialBodyKindIds",
+    "category": "Biology & Agriculture",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-android.baselineExtractionFamily",
+    "name": "Android / baseline Extraction Family",
+    "table": "substances",
+    "fieldKey": "android.baselineExtractionFamily",
+    "category": "Game Balancing — Android",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-android.baselineExtractionMethod",
+    "name": "Android / baseline Extraction Method",
+    "table": "substances",
+    "fieldKey": "android.baselineExtractionMethod",
+    "category": "Game Balancing — Android",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-android.basePrice",
+    "name": "Android / base Price",
+    "table": "substances",
+    "fieldKey": "android.basePrice",
+    "category": "Game Balancing — Android",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-android.baseScan",
+    "name": "Android / base Scan",
+    "table": "substances",
+    "fieldKey": "android.baseScan",
+    "category": "Game Balancing — Android",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-android.legacyAliases",
+    "name": "Android / legacy Aliases",
+    "table": "substances",
+    "fieldKey": "android.legacyAliases",
+    "category": "Game Balancing — Android",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-android.operationalTags",
+    "name": "Android / operational Tags",
+    "table": "substances",
+    "fieldKey": "android.operationalTags",
+    "category": "Game Balancing — Android",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-android.qualityBias",
+    "name": "Android / quality Bias",
+    "table": "substances",
+    "fieldKey": "android.qualityBias",
+    "category": "Game Balancing — Android",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-android.rarity",
+    "name": "Android / rarity",
+    "table": "substances",
+    "fieldKey": "android.rarity",
+    "category": "Game Balancing — Android",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-android.resourceId",
+    "name": "Android / resource ID",
+    "table": "substances",
+    "fieldKey": "android.resourceId",
+    "category": "Game Balancing — Android",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-android.weight",
+    "name": "Android / weight",
+    "table": "substances",
+    "fieldKey": "android.weight",
+    "category": "Game Balancing — Android",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-approval",
+    "name": "Approval",
+    "table": "substances",
+    "fieldKey": "approval",
+    "category": "Discovery & Approval",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-archetype",
+    "name": "Archetype",
+    "table": "substances",
+    "fieldKey": "archetype",
+    "category": "Identity & Classification",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-canonStatus",
+    "name": "Canon Status",
+    "table": "substances",
+    "fieldKey": "canonStatus",
+    "category": "Governance & Approval",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-classificationStatus",
+    "name": "Classification Status",
+    "table": "substances",
+    "fieldKey": "classificationStatus",
+    "category": "Identity & Classification",
+    "requiresApproval": true,
+    "approvalPolicy": "material-classification",
+    "description": "Designer review required for this field; source-derived draft values are not automatically approved."
+  },
+  {
+    "id": "column-definition-substances-controlledAgricultureAllowed",
+    "name": "Controlled Agriculture Allowed",
+    "table": "substances",
+    "fieldKey": "controlledAgricultureAllowed",
+    "category": "Biology & Agriculture",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-description",
+    "name": "Description",
+    "table": "substances",
+    "fieldKey": "description",
+    "category": "Properties & Applications",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-discoveryStatus",
+    "name": "Discovery Status",
+    "table": "substances",
+    "fieldKey": "discoveryStatus",
+    "category": "Governance & Approval",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-dominantArchetype",
+    "name": "Dominant Archetype",
+    "table": "substances",
+    "fieldKey": "dominantArchetype",
+    "category": "Identity & Classification",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-entityType",
+    "name": "Entity Type",
+    "table": "substances",
+    "fieldKey": "entityType",
+    "category": "Identity & Classification",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-excludedLandformIds",
+    "name": "Excluded Landform IDs",
+    "table": "substances",
+    "fieldKey": "excludedLandformIds",
+    "category": "Biology & Agriculture",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-gameId",
+    "name": "Game ID",
+    "table": "substances",
+    "fieldKey": "gameId",
+    "category": "Game Integration",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-gameplayCategory",
+    "name": "Gameplay Category",
+    "table": "substances",
+    "fieldKey": "gameplayCategory",
+    "category": "Game Integration",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-genericClassName",
+    "name": "Generic Class Name",
+    "table": "substances",
+    "fieldKey": "genericClassName",
+    "category": "Identity & Classification",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-genericSubstanceId",
+    "name": "Generic Substance ID",
+    "table": "substances",
+    "fieldKey": "genericSubstanceId",
+    "category": "Identity & Classification",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-id",
+    "name": "ID",
+    "table": "substances",
+    "fieldKey": "id",
+    "category": "Identity & Classification",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-image.generated",
+    "name": "Image / generated",
+    "table": "substances",
+    "fieldKey": "image.generated",
+    "category": "Artwork & Visuals",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-image.key",
+    "name": "Image / key",
+    "table": "substances",
+    "fieldKey": "image.key",
+    "category": "Artwork & Visuals",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-image.notes",
+    "name": "Image / notes",
+    "table": "substances",
+    "fieldKey": "image.notes",
+    "category": "Artwork & Visuals",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-image.promptDescription",
+    "name": "Image / prompt Description",
+    "table": "substances",
+    "fieldKey": "image.promptDescription",
+    "category": "Artwork & Visuals",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-image.status",
+    "name": "Image / status",
+    "table": "substances",
+    "fieldKey": "image.status",
+    "category": "Artwork & Visuals",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-industrialRole",
+    "name": "Industrial Role",
+    "table": "substances",
+    "fieldKey": "industrialRole",
+    "category": "Properties & Applications",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-introducedAgricultureAllowed",
+    "name": "Introduced Agriculture Allowed",
+    "table": "substances",
+    "fieldKey": "introducedAgricultureAllowed",
+    "category": "Biology & Agriculture",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-kind",
+    "name": "Kind",
+    "table": "substances",
+    "fieldKey": "kind",
+    "category": "Identity & Classification",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-knowledgeScope",
+    "name": "Knowledge Scope",
+    "table": "substances",
+    "fieldKey": "knowledgeScope",
+    "category": "Governance & Approval",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-manufactured",
+    "name": "Manufactured",
+    "table": "substances",
+    "fieldKey": "manufactured",
+    "category": "Biology & Agriculture",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-materialStage",
+    "name": "Material Stage",
+    "table": "substances",
+    "fieldKey": "materialStage",
+    "category": "Identity & Classification",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-mobileKey",
+    "name": "Mobile Key",
+    "table": "substances",
+    "fieldKey": "mobileKey",
+    "category": "Game Integration",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-name",
+    "name": "Name",
+    "table": "substances",
+    "fieldKey": "name",
+    "category": "Identity & Classification",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-naturalOccurrence",
+    "name": "Natural Occurrence",
+    "table": "substances",
+    "fieldKey": "naturalOccurrence",
+    "category": "Properties & Applications",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-naturalOccurrenceAllowed",
+    "name": "Natural Occurrence Allowed",
+    "table": "substances",
+    "fieldKey": "naturalOccurrenceAllowed",
+    "category": "Biology & Agriculture",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-naturalWorldTypeIds",
+    "name": "Natural World Type IDs",
+    "table": "substances",
+    "fieldKey": "naturalWorldTypeIds",
+    "category": "Biology & Agriculture",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-needsApproval",
+    "name": "Needs Approval",
+    "table": "substances",
+    "fieldKey": "needsApproval",
+    "category": "Discovery & Approval",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-notes",
+    "name": "Notes",
+    "table": "substances",
+    "fieldKey": "notes",
+    "category": "Biology & Agriculture",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-occurrence.allowedCelestialBodyKindIds",
+    "name": "Occurrence / allowed Celestial Body Kind IDs",
+    "table": "substances",
+    "fieldKey": "occurrence.allowedCelestialBodyKindIds",
+    "category": "Geological Occurrence",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-occurrence.canonStatus",
+    "name": "Occurrence / canon Status",
+    "table": "substances",
+    "fieldKey": "occurrence.canonStatus",
+    "category": "Geological Occurrence",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-occurrence.eligibleWorldTypeIds",
+    "name": "Occurrence / eligible World Type IDs",
+    "table": "substances",
+    "fieldKey": "occurrence.eligibleWorldTypeIds",
+    "category": "Geological Occurrence",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-occurrence.excludedAtmosphereTypeIds",
+    "name": "Occurrence / excluded Atmosphere Type IDs",
+    "table": "substances",
+    "fieldKey": "occurrence.excludedAtmosphereTypeIds",
+    "category": "Geological Occurrence",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-occurrence.excludedWorldTypeIds",
+    "name": "Occurrence / excluded World Type IDs",
+    "table": "substances",
+    "fieldKey": "occurrence.excludedWorldTypeIds",
+    "category": "Geological Occurrence",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-occurrence.id",
+    "name": "Occurrence / ID",
+    "table": "substances",
+    "fieldKey": "occurrence.id",
+    "category": "Geological Occurrence",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-occurrence.knowledgeScope",
+    "name": "Occurrence / knowledge Scope",
+    "table": "substances",
+    "fieldKey": "occurrence.knowledgeScope",
+    "category": "Geological Occurrence",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-occurrence.name",
+    "name": "Occurrence / name",
+    "table": "substances",
+    "fieldKey": "occurrence.name",
+    "category": "Geological Occurrence",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-occurrence.naturalOccurrence",
+    "name": "Occurrence / natural Occurrence",
+    "table": "substances",
+    "fieldKey": "occurrence.naturalOccurrence",
+    "category": "Geological Occurrence",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-occurrence.notes",
+    "name": "Occurrence / notes",
+    "table": "substances",
+    "fieldKey": "occurrence.notes",
+    "category": "Geological Occurrence",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-occurrence.occurrenceClass",
+    "name": "Occurrence / occurrence Class",
+    "table": "substances",
+    "fieldKey": "occurrence.occurrenceClass",
+    "category": "Geological Occurrence",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-occurrence.preferredGeologyProvinceIds",
+    "name": "Occurrence / preferred Geology Province IDs",
+    "table": "substances",
+    "fieldKey": "occurrence.preferredGeologyProvinceIds",
+    "category": "Geological Occurrence",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-occurrence.preferredWorldTypeIds",
+    "name": "Occurrence / preferred World Type IDs",
+    "table": "substances",
+    "fieldKey": "occurrence.preferredWorldTypeIds",
+    "category": "Geological Occurrence",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-occurrence.primaryExtractionZoneIds",
+    "name": "Occurrence / primary Extraction Zone IDs",
+    "table": "substances",
+    "fieldKey": "occurrence.primaryExtractionZoneIds",
+    "category": "Geological Occurrence",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-occurrence.requiredBiomeIds",
+    "name": "Occurrence / required Biome IDs",
+    "table": "substances",
+    "fieldKey": "occurrence.requiredBiomeIds",
+    "category": "Geological Occurrence",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-occurrence.requiredHydrosphereIds",
+    "name": "Occurrence / required Hydrosphere IDs",
+    "table": "substances",
+    "fieldKey": "occurrence.requiredHydrosphereIds",
+    "category": "Geological Occurrence",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-occurrence.resourceId",
+    "name": "Occurrence / resource ID",
+    "table": "substances",
+    "fieldKey": "occurrence.resourceId",
+    "category": "Geological Occurrence",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-occurrence.secondaryExtractionZoneIds",
+    "name": "Occurrence / secondary Extraction Zone IDs",
+    "table": "substances",
+    "fieldKey": "occurrence.secondaryExtractionZoneIds",
+    "category": "Geological Occurrence",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-occurrence.worldTypeEligibility",
+    "name": "Occurrence / world Type Eligibility",
+    "table": "substances",
+    "fieldKey": "occurrence.worldTypeEligibility",
+    "category": "Geological Occurrence",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-openAgricultureWorldTypeIds",
+    "name": "Open Agriculture World Type IDs",
+    "table": "substances",
+    "fieldKey": "openAgricultureWorldTypeIds",
+    "category": "Biology & Agriculture",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-provenance.approvedDate",
+    "name": "Provenance / approved Date",
+    "table": "substances",
+    "fieldKey": "provenance.approvedDate",
+    "category": "Sources & Provenance",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-provenance.sourcePath",
+    "name": "Provenance / source Path",
+    "table": "substances",
+    "fieldKey": "provenance.sourcePath",
+    "category": "Sources & Provenance",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-provenance.sourceRepository",
+    "name": "Provenance / source Repository",
+    "table": "substances",
+    "fieldKey": "provenance.sourceRepository",
+    "category": "Sources & Provenance",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-renewable",
+    "name": "Renewable",
+    "table": "substances",
+    "fieldKey": "renewable",
+    "category": "Properties & Applications",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-requiredNaturalBiomeIds",
+    "name": "Required Natural Biome IDs",
+    "table": "substances",
+    "fieldKey": "requiredNaturalBiomeIds",
+    "category": "Biology & Agriculture",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-requiredNaturalHydrosphereIds",
+    "name": "Required Natural Hydrosphere IDs",
+    "table": "substances",
+    "fieldKey": "requiredNaturalHydrosphereIds",
+    "category": "Biology & Agriculture",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-sourceProvenance.path",
+    "name": "Source Provenance / path",
+    "table": "substances",
+    "fieldKey": "sourceProvenance.path",
+    "category": "Sources & Provenance",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-sourceProvenance.repository",
+    "name": "Source Provenance / repository",
+    "table": "substances",
+    "fieldKey": "sourceProvenance.repository",
+    "category": "Sources & Provenance",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-sourceProvenance.workingId",
+    "name": "Source Provenance / working ID",
+    "table": "substances",
+    "fieldKey": "sourceProvenance.workingId",
+    "category": "Sources & Provenance",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-sourceRawResourceIds",
+    "name": "Source Raw Resource IDs",
+    "table": "substances",
+    "fieldKey": "sourceRawResourceIds",
+    "category": "Production & Materials",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-stockBehaviour",
+    "name": "Stock Behaviour",
+    "table": "substances",
+    "fieldKey": "stockBehaviour",
+    "category": "Properties & Applications",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-upstreamInputDescription",
+    "name": "Upstream Input Description",
+    "table": "substances",
+    "fieldKey": "upstreamInputDescription",
+    "category": "Production & Materials",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-upstreamMaterialIds",
+    "name": "Upstream Material IDs",
+    "table": "substances",
+    "fieldKey": "upstreamMaterialIds",
+    "category": "Production & Materials",
+    "requiresApproval": false,
+    "description": "Reference, identity or display field; no independent sign-off is required."
+  },
+  {
+    "id": "column-definition-substances-visualDescription",
+    "name": "Visual Description",
+    "table": "substances",
+    "fieldKey": "visualDescription",
+    "category": "Properties & Applications",
     "requiresApproval": false,
     "description": "Reference, identity or display field; no independent sign-off is required."
   }
