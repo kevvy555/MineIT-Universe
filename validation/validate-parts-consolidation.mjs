@@ -173,8 +173,11 @@ assert.ok(reviewed.every(row => row.canonical && row.fields.partRole));
 assert.ok(reviewed.every(row => !("review.materialBOM.product_name" in row.fields) &&
   !("review.quantities.approved_planning_input_materials_kg_per_finished_unit" in row.fields)));
 assert.ok(reviewed.every(row => row.fields.finishedUnitCount === 1));
-assert.ok(reviewed.every(row => ["Available", "Not generated"].includes(row.fields.partImage)));
-assert.equal(reviewed.filter(row => row.fields.partImage === "Available").length, 1);
+assert.ok(reviewed.every(row => typeof row.fields["image.generated"] === "boolean"));
+assert.equal(reviewed.filter(row => row.fields["image.generated"] === true).length, 1,
+  "Only one Part has generated artwork; use a single Yes/No field");
+assert.ok(reviewed.every(row => !Object.hasOwn(row.fields, "partImage")),
+  "Remove the duplicate Part Image availability column");
 assert.ok(reviewed.every(row => !("finishedUnit.count" in row.fields)));
 assert.equal(reviewed.find(row => row.id === "part-precast-concrete-sections")
   .fields.materialInputs.find(i => i.substanceId === "named-substance-cement").quantityKg, 175);
