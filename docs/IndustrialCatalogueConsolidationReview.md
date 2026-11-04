@@ -731,3 +731,7 @@ approval policies have not changed. The previous list of 17 nonmatching
 planning input/finished weights remains in the written audit, but Mass
 Review no longer consumes a permanent grid column. Manufacturer costs and
 quotes still await separate pricing approval.
+
+## Machines M01–M06 consolidated review — 4 November 2026
+
+A single 42-Machine typed manufacturing/approval review was implemented to replace the old 103-column combined historic-source grid. The comprehensive per-Machine audit, 25-field selector, five preserved approved physical BOMs, seven engineering/price blocks, 14 pending Part relationships, source provenance, validation, and exact approval boundaries are documented in [Machines Catalogue Consolidation Review](MachinesCatalogueConsolidationReview.md). This is an authority-bounded UI/structured-review migration, **not** automatic approval of historic Machine BOMs or CC quotes and not a change to the active Android H012 Mine discovery checkpoint.

@@ -186,9 +186,9 @@ assert.throws(() => approvalSummary("machines", {
   ...welcome.record, approval: "Approved"
 }, welcome.fields, catalogue), /disagrees with explicit field statuses/);
 assert.throws(() => approvalSummary("machines", {
-  ...welcome.record, fieldApprovalStatuses: {
-    ...welcome.record.fieldApprovalStatuses, "manufacturing.finishedPartInputs": "Not Reviewed"
-  }
-}, welcome.fields, catalogue), /disagrees with explicit field statuses|In Review/);
+  ...welcome.record, fieldApprovalStatuses: Object.fromEntries(
+    Object.entries(welcome.record.fieldApprovalStatuses)
+      .filter(([key]) => key !== "manufacturing.finishedPartInputs"))
+}, welcome.fields, catalogue), /missing or invalid explicit approval/);
 console.log("Machines consolidation valid: 42 IDs, 25 fields, 34 unapproved proposals, " +
   "5 approved physical BOMs, 29 provisional costs, 14 pending Part relationships.");
