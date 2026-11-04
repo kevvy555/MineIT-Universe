@@ -1,4 +1,5 @@
 // Substance bulk-view projections are read-only and generated from canonical manifest collections.
+import { approvalSummary } from "./catalogue-approval.js";
 const simple = value => Array.isArray(value) ? value.join(", ") :
   value === true ? "Yes" : value === false ? "No" :
   value == null ? "" : String(value);
@@ -27,6 +28,9 @@ export function substanceRows(catalogue, androidReference) {
       fields.genericClassName = generic?.name || "";
       if (occurrence.has(record.id)) flatten(occurrence.get(record.id), "occurrence", fields);
       if (tuning.has(record.id)) flatten(tuning.get(record.id), "android", fields);
+      const summary = approvalSummary("substances", record, fields, catalogue);
+      fields.approval = summary.approval;
+      fields.needsApproval = summary.needsApproval;
       result.push({ id: record.id, record, collection, fields });
     }
   };
@@ -38,7 +42,8 @@ export function substanceRows(catalogue, androidReference) {
 }
 
 export const DEFAULT_COLUMNS = ["name", "kind", "archetype", "genericClassName",
-  "gameplayCategory", "materialStage", "renewable", "canonStatus", "android.baseScan"];
+  "gameplayCategory", "materialStage", "approval", "needsApproval", "renewable",
+  "canonStatus", "android.baseScan"];
 
 // The ten designer-approved categories govern the UI and preserve the original JSON
 // field names. They do not create a second data source or change catalogue records.
@@ -88,6 +93,8 @@ export const SUBSTANCE_COLUMN_GROUPS = [
   {
     "name": "Governance & Approval",
     "fields": [
+      "approval",
+      "needsApproval",
       "canonStatus",
       "discoveryStatus",
       "knowledgeScope"
