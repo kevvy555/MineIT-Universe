@@ -2,6 +2,8 @@ import { loadUniverse } from './universe-data.js';
 import { bindOriginalImageOpener } from './image-lightbox.js';
 import { createSubstanceTable, loadAndroidResourceReference } from './substance-table.js';
 import { createIndustrialTables, loadIndustrialDiscoveryReference } from './industrial-table.js';
+import { createApprovalReferenceTables } from './approval-tables.js';
+import { approvalSummary, partMassReview } from './catalogue-approval.js';
 
 const state = {
   catalogue: null,
@@ -24,6 +26,7 @@ const workspace = document.getElementById('workspace');
 const divider = document.getElementById('divider');
 const substanceTable = createSubstanceTable();
 const industrialTables = createIndustrialTables();
+const approvalReferenceTables = createApprovalReferenceTables();
 
 const DIRECTORY = {
   regions: 'Regions',
@@ -54,7 +57,7 @@ const ICONS = {
   landscapeTilesets: '▦', landscapeTiles: '▪', worldAtlases: '▣', worldAtlasTiles: '▫',
   settlements: '⬡', organisations: 'O',
   organisationUnits: '▦', facilities: '⌂', operations: '⚙', products: '◆', substances: '▣',
-  namedSubstances: '◆', parts: '⧉', machines: '⚒', buildings: '⌂', researchTechnologies: '⌬', substanceArchetypes: '◈', substanceProperties: '≋', rarityBands: '⋄', geologyProcesses: '⌁', depositShapes: '⬢', depositStates: '◐', stellarTypes: '✶', cometTypes: '☄', ringSystemTypes: '◎', starSystemTypes: '✦', species: 'S',
+  namedSubstances: '◆', parts: '⧉', machines: '⚒', buildings: '⌂', approvalStatuses: '✓', columnDefinitions: '▤', researchTechnologies: '⌬', substanceArchetypes: '◈', substanceProperties: '≋', rarityBands: '⋄', geologyProcesses: '⌁', depositShapes: '⬢', depositStates: '◐', stellarTypes: '✶', cometTypes: '☄', ringSystemTypes: '◎', starSystemTypes: '✦', species: 'S',
   people: 'P', shipClasses: '△', ships: '▲', projects: '◇', events: '◷', relationships: '↔',
   currencies: '¤', loreDocuments: '▤', loreTopics: 'i', mobileResourceDefinitions: '◈', mobileResourceOccurrenceProfiles: '⌖', mobileBiologicalResources: '⚘'
 };
@@ -237,6 +240,8 @@ function buildResearchDirectoryNode() {
 
 function buildReferenceCataloguesNode() {
   return category('Reference Catalogues', [
+    { ...category('Approval Statuses', nodes(state.catalogue.collection('approvalStatuses'))), action: 'approvalStatuses-table' },
+    { ...category('Column Definitions', nodes(state.catalogue.collection('columnDefinitions'))), action: 'columnDefinitions-table' },
     category('Substance Archetypes', nodes(state.catalogue.collection('substanceArchetypes'))),
     category('Substance Properties', groupRecords(state.catalogue.collection('substanceProperties'), record => record.propertyKind).map(([label, items]) => category(label, nodes(items)))),
     category('Rarity Bands', nodes(state.catalogue.collection('rarityBands'))),
@@ -698,8 +703,25 @@ function fieldsFor(collection, entity) {
       field('Discovery source', esc([entity.sourceProvenance?.repository, entity.sourceProvenance?.path].filter(Boolean).join('/')))
     );
   }
+  if (collection === 'approvalStatuses') {
+    fields.push(field('Meaning', esc(entity.description)), field('Order', esc(entity.sortOrder)),
+      field('Scope', esc(entity.scope)));
+  }
+  if (collection === 'columnDefinitions') {
+    fields.push(field('Catalogue table', esc(entity.table)), field('Field key', esc(entity.fieldKey)),
+      field('Category', esc(entity.category)),
+      field('Requires Approval', entity.requiresApproval ? 'Yes' : 'No'),
+      field('Approval Policy', esc(entity.approvalPolicy || 'Not required')),
+      field('Purpose', esc(entity.description)));
+  }
   if (collection === 'parts') {
     const economic = entity.planningReference;
+    const status = approvalSummary('parts', entity, {
+      materialInputs: entity.materialInputs,
+      'planningReference.finishedMassKg': economic?.finishedMassKg,
+      'planningReference.manufacturerCostCC': economic?.manufacturerCostCC,
+      'planningReference.baseManufacturerQuoteCC': economic?.baseManufacturerQuoteCC
+    }, state.catalogue);
     const unresolved = (entity.unresolvedMaterialInputs || []).map(input =>
       input.label + (input.planningAllowanceKg == null ? '' :
         ' · ' + input.planningAllowanceKg + ' kg planning') + ' (' + input.status + ')');
@@ -712,7 +734,9 @@ function fieldsFor(collection, entity) {
       field('Generic material classifications', links(entity.substanceIds)),
       field('Approved / candidate material inputs', partMaterialLinks(entity.materialInputs)),
       field('Unresolved manufacturing inputs', unresolved.length ? esc(unresolved.join('; ')) : '—'),
-      field('Material approval', esc(entity.materialApprovalStatus)),
+      field('Approval', esc(status.approval)),
+       field('Needs Approval', esc(status.needsApproval.join(', ') || 'None')),
+       field('Mass Review', esc(partMassReview(entity))),
       field('FinishedUnitCount', esc(entity.finishedUnitCount)),
       field('Finished Unit Description', esc(entity.finishedUnitDescription)),
       field('Weight (kg)', Number.isFinite(economic?.finishedMassKg) ?
@@ -1094,9 +1118,11 @@ function returnToCatalogueTree() {
 function renderDetail() {
   substanceTable.close();
   Object.values(industrialTables).forEach(table => table.close());
+  Object.values(approvalReferenceTables).forEach(table => table.close());
   if (state.activeCatalogueTable) {
     const kind = state.activeCatalogueTable;
-    const table = kind === 'substances' ? substanceTable : industrialTables[kind];
+    const table = kind === 'substances' ? substanceTable :
+      (industrialTables[kind] || approvalReferenceTables[kind]);
     if (table) table.render(detailEl, state.catalogue,
       kind === 'substances' ? state.androidResourceReference : state.industrialDiscoveryReference,
       selectEntity, returnToCatalogueTree);
@@ -1144,7 +1170,7 @@ function selectEntity(id) {
 }
 
 function showCatalogueTable(kind) {
-  if (!['substances', 'parts', 'machines', 'buildings'].includes(kind)) return;
+  if (!['substances', 'parts', 'machines', 'buildings', 'approvalStatuses', 'columnDefinitions'].includes(kind)) return;
   state.activeView = 'directory';
   state.activeCatalogueTable = kind;
   state.openNodes.add('label:Directory');
@@ -1278,7 +1304,7 @@ async function start() {
     const focusCollection = params.get('focus');
     const focusedRecords = focusCollection ? catalogue.collection(focusCollection) : [];
     const requestedId = params.get('id');
-    state.activeCatalogueTable = ['substances', 'parts', 'machines', 'buildings'].includes(focusCollection) && !requestedId ? focusCollection : false;
+    state.activeCatalogueTable = ['substances', 'parts', 'machines', 'buildings', 'approvalStatuses', 'columnDefinitions'].includes(focusCollection) && !requestedId ? focusCollection : false;
     state.selectedId = (requestedId && catalogue.get(requestedId) ? requestedId : null)
       || focusedRecords[0]?.id
       || catalogue.collection('regions')[0]?.id
