@@ -113,6 +113,8 @@
     "visualAssets": "visual-assets-mobile-landscape.json",
     "worldAtlases": "world-atlases.json",
     "worldAtlasTiles": "world-atlas-tiles.json",
-    "namedSubstances": "named-substances.json"
+    "namedSubstances": "named-substances.json",
+    "approvalStatuses": "approval-statuses.json",
+    "columnDefinitions": "column-definitions.json"
   }
 }
