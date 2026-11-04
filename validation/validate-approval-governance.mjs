@@ -2,7 +2,8 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { industrialReviewRows } from "../js/industrial-table.js";
 import { substanceRows } from "../js/substance-table-data.js";
-import { approvalSummary, partMassReview, validApprovalStatuses } from "../js/catalogue-approval.js";
+import { approvalSummary, validApprovalStatuses } from "../js/catalogue-approval.js";
+import { pendingColumnSelection } from "../js/substance-table.js";
 import { createApprovalReferenceTables } from "../js/approval-tables.js";
 
 const load = path => JSON.parse(readFileSync(new URL("../" + path, import.meta.url), "utf8"));
@@ -67,7 +68,20 @@ assert.deepEqual(new Set(partRequired), new Set([
 ]));
 assert.ok(!partDefinitions.some(d => d.fieldKey === "materialApprovalStatus"),
   "Old Part-specific approval column must be retired from the shared registry");
-assert.equal(partDefinitions.length, 48);
+assert.equal(partDefinitions.length, 20,
+  "The Parts review table only exposes necessary designer-facing columns");
+const excluded = [
+  "massReview", "partImage", "unresolvedMaterialInputs",
+  "planningReference.basis", "planningReference.status", "planningReference.sourceSection",
+  "image.key", "image.status", "image.notes", "image.promptDescription"
+];
+assert.ok(!partDefinitions.some(d => excluded.includes(d.fieldKey) ||
+  d.fieldKey.startsWith("provenance.") ||
+  d.fieldKey.startsWith("fieldApprovalStatuses.")),
+  "Source audit metadata, duplicate status fields, and removed review columns stay out of Parts");
+assert.deepEqual(partDefinitions.filter(d => d.fieldKey.startsWith("image."))
+  .map(d => d.fieldKey), ["image.generated"],
+  "The Parts review grid keeps only Image Generated as a Yes/No field");
 for (const part of collections.parts) {
   assert.ok(validApprovalStatuses.has(part.approval));
   assert.equal(Object.hasOwn(part, "materialApprovalStatus"), false);
@@ -90,13 +104,15 @@ assert.ok(!battery.fields.needsApproval.includes("Material Inputs"));
 assert.ok(!battery.fields.needsApproval.includes("Weight (kg)"));
 assert.ok(battery.fields.needsApproval.includes("Manufacturer Cost (CC)"));
 assert.ok(battery.fields.needsApproval.includes("Manufacturer Quote Cost (CC)"));
-assert.equal(battery.fields.massReview, "Matched: 18 kg inputs vs 18 kg finished");
+assert.ok(!Object.hasOwn(battery.fields, "massReview"));
+assert.ok(!Object.hasOwn(battery.fields, "partImage"));
+assert.equal(battery.fields["image.generated"], false);
 assert.equal(nuclear.fields.approval, "Blocked",
   "Nuclear reactor quantities/price must not be treated as approved");
 assert.ok(nuclear.fields.needsApproval.includes("Material Inputs"));
-assert.match(nuclear.fields.massReview, /Pending material quantities/);
+assert.ok(!Object.hasOwn(nuclear.fields, "massReview"));
 assert.ok(concrete.fields.needsApproval.includes("Weight (kg)"));
-assert.match(concrete.fields.massReview, /conditional/);
+assert.ok(!Object.hasOwn(concrete.fields, "massReview"));
 assert.ok(collections.parts.every(p => !p.unresolvedMaterialInputs?.length),
   "The resolved material-identity placeholders may not return");
 const fission = substanceRows(catalogue, resourceReference)
@@ -114,6 +130,19 @@ delete incomplete.fieldApprovalStatuses.materialInputs;
 assert.throws(() => approvalSummary("parts", incomplete, battery.fields, catalogue),
   /missing or invalid explicit approval/,
   "A missing field decision must fail rather than silently inheriting old approval");
-assert.match(partMassReview(concrete.record), /reconcile/);
+const possible = partDefinitions.map(definition => definition.fieldKey);
+assert.deepEqual(pendingColumnSelection(parts, possible, battery.id), [
+  "name", "approval", "needsApproval",
+  "planningReference.baseManufacturerQuoteCC", "planningReference.manufacturerCostCC"
+], "Per-Part Show fields must select only the unapproved columns for that Part");
+assert.ok(pendingColumnSelection(parts, possible, nuclear.id).includes("materialInputs"));
+assert.ok(pendingColumnSelection(parts, possible, nuclear.id)
+  .includes("planningReference.finishedMassKg"));
+assert.ok(pendingColumnSelection(parts, possible).includes("finishedUnitDescription"),
+  "The global shortcut must select the union of unapproved fields across Parts");
+assert.ok(!pendingColumnSelection(parts, possible).includes("partRole"),
+  "Already-approved Part roles must not appear in pending-field column selections");
+assert.equal(pendingColumnSelection(parts, possible, "nonexistent").length, 3,
+  "An unrecognised row cannot expose unrelated pending columns");
 console.log("Approval governance validated: " + statuses.length + " statuses, " +
   definitions.length + " registered columns, 4 grids, 2 reference tables, and pending decisions preserved.");
