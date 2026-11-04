@@ -167,6 +167,10 @@ export function industrialReviewRows(kind, catalogue, reference) {
     if (kind === "buildings" && source.has(record.id))
       flatten(source.get(record.id), "review", fields);
     if (kind === "machines") {
+      // Missing capability summaries remain visible/approval-pending, not
+      // silently omitted from an individual Machine's 25-column review.
+      fields.inputSummary = record.inputSummary ?? null;
+      fields.outputSummary = record.outputSummary ?? null;
       fields["operatingProfile.ratedCapacity"] = record.operatingProfile?.ratedCapacity ?? null;
       fields.pendingPartCompatibility = (record.pendingPartCompatibility || [])
         .map(item => item.supersededFamily);
