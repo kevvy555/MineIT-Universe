@@ -350,8 +350,13 @@ export function createSubstanceTable(config = {}) {
     container.querySelector("#substanceSelectAll").onclick = () => setColumns(possible);
     container.querySelector("#substanceClearColumns").onclick = () => setColumns(["name"]);
     if (config.pendingColumnAction)
-      container.querySelector("#substanceShowPendingColumns").onclick = () =>
+      container.querySelector("#substanceShowPendingColumns").onclick = () => {
+        // The global shortcut restores all Parts after a row-specific review.
+        textFilters = {};
+        valueFilters = {};
+        container.querySelector(".substance-review-scroll").scrollTop = 0;
         setColumns(pendingColumnSelection(rows, possible));
+      };
     container.querySelectorAll("[data-group-select]").forEach(button => button.onclick = () => {
       const group = groups.find(item => item.name === button.dataset.groupSelect);
       if (group) setColumns(selectionForCategory(selected, group.fields, true));
