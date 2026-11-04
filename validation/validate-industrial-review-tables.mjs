@@ -55,8 +55,12 @@ for (const [kind, totals] of Object.entries(expected)) {
     kind + " should list fields awaiting approval");
   for (const row of rows.filter(row => row.record.provenance?.androidDiscoveryWorkingId)) {
     if (kind === "parts") {
-      assert.ok(row.fields.materialApprovalStatus,
-        "Consolidated Part must expose one canonical material approval status");
+      assert.ok(["In Review", "Blocked"].includes(row.fields.approval),
+        "Consolidated Part exposes a single canonical overall Approval");
+      assert.ok(!Object.hasOwn(row.fields, "materialApprovalStatus"),
+        "Legacy competing status column must not reappear");
+      assert.equal(row.fields["fieldApprovalStatuses.partRole"], "Approved",
+        "Accepted finished-product role retained as explicit field decision");
       assert.ok(!("review.materialBOM.review_status" in row.fields),
         "Parts should not duplicate historic status and canonical status columns");
     } else {
