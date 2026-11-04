@@ -38,6 +38,8 @@ jobs:
         run: node validation/validate-substance-table.mjs
       - name: Validate consolidated Parts roles, material links, and reference costs
         run: node validation/validate-parts-consolidation.mjs
+      - name: Validate consolidated Machine BOMs, references and approval boundaries
+        run: node validation/validate-machines-consolidation.mjs
       - name: Validate industrial Parts, Machines and Buildings review tables
         run: node validation/validate-industrial-review-tables.mjs
       - name: Validate shared catalogue approvals and reference tables

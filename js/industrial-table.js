@@ -56,24 +56,23 @@ const configurations = {
   },
   machines: {
     title: "Machines",
-    description: "Canonical Machines and Android manufacturing proposals. Parts BOMs and proposed prices remain review references until reconciled.",
-    defaultColumns: ["name", "category", "subCategory", "partIds",
-      "approval", "needsApproval", "review.manufacturingBOM.proposed_finished_part_ids_and_counts"],
+    description: "42 canonical Machines with typed manufacturing recipes and explicit field approvals. Reference quantities and CC proposals are not final game balance.",
+    defaultColumns: ["name", "category", "subCategory", "manufacturing.finishedPartInputs",
+      "approval", "needsApproval", "manufacturing.manufacturerCostCC"],
+    pendingColumnAction: true,
+    linkedFields: ["partIds", "manufacturing.finishedPartInputs",
+      "manufacturing.directMaterialInputs", "manufacturing.nestedMachineInputs",
+      "buildingCompatibility"],
     groups: [
-      common[0],
-      group("Parts & Materials",
-        "partIds pendingPartCompatibility review.manufacturingBOM.canonical_source_part_ids review.manufacturingBOM.proposed_finished_part_ids_and_counts review.manufacturingBOM.proposed_direct_processed_materials_kg review.luxuryBOM.proposed_direct_finished_part_counts review.luxuryBOM.proposed_direct_processed_materials_kg"),
-      group("Nested Machines & Capabilities",
-        "review.manufacturingBOM.proposed_nested_machine_ids_and_counts outputSummary inputSummary fuelType review.electricMotors.intended_machine_consumers review.electricMotors.existing_manufacturing_destination"),
-      group("Power & Service",
-        "review.luxuryRatings.required_housing_tech_level review.luxuryRatings.amenity_category review.luxuryRatings.proposed_resident_service_equivalents_per_day review.luxuryRatings.proposed_machine_footprint_m2 review.luxuryRatings.proposed_operating_power_units review.luxuryRatings.proposed_operating_consumables"),
-      group("Manufacturing & Quality",
-        "review.manufacturingBOM.proposed_assembly_labour_hours review.manufacturingBOM.proposed_factory_equipment_hours review.manufacturingBOM.proposed_test_hours review.manufacturingBOM.proposed_good_unit_yield review.manufacturingBOM.estimated_finished_freight_mass_kg review.manufacturingBOM.accounted_material_subassembly_mass_kg_partial_if_blocked"),
-      group("Costs & Reference Quotes",
-        "review.manufacturingBOM.embedded_parts_factory_cost_CC review.manufacturingBOM.direct_processed_material_cost_CC review.manufacturingBOM.nested_machine_factory_cost_CC review.manufacturingBOM.proposed_manufacturer_cost_CC review.manufacturingBOM.proposed_base_sell_quote_CC"),
-      group("Discovery & Approval",
-        "approval needsApproval review.manufacturingBOM.approval_status review.manufacturingBOM.unresolved_design_constraints"),
-      common[1], visuals, group("Description", "description")
+      group("Identity & Classification", "name category subCategory description"),
+      group("Physical Construction",
+        "partIds manufacturing.finishedPartInputs manufacturing.directMaterialInputs manufacturing.nestedMachineInputs pendingPartCompatibility"),
+      group("Operation & Capabilities",
+        "outputSummary inputSummary operating.ratedCapacity operating.powerUnits operating.footprintM2 buildingCompatibility operating.housingTechTier"),
+      group("Manufacturing & Pricing",
+        "manufacturing.assemblyHours manufacturing.factoryHours manufacturing.testHours manufacturing.goodUnitYield manufacturing.finishedMassKg manufacturing.manufacturerCostCC manufacturing.manufacturerQuoteCC"),
+      group("Discovery & Approval", "approval needsApproval"),
+      group("Artwork & Visuals", "image.generated")
     ]
   },
   buildings: {
@@ -105,15 +104,6 @@ const configurations = {
 
 // Source-specific fields are classified alongside their related primary attributes.
 const additionalGroupFields = {
-  machines: {
-    "Identity & Classification": "review.manufacturingBOM.machine_name review.manufacturingBOM.category review.luxuryRatings.candidate_machine_name review.luxuryBOM.name review.electricMotors.product_name review.electricMotors.product_kind",
-    "Parts & Materials": "review.luxuryRatings.finished_part_inputs_approved_2026_11_02 review.electricMotors.approved_principal_materials principalMaterialIds approvedPhysicalBOM.finishedPartInputs approvedPhysicalBOM.directMaterialInputs",
-    "Power & Service": "review.luxuryRatings.notes review.luxuryBOM.housing_tech_unlock review.luxuryBOM.amenity_category review.luxuryBOM.resident_service_slots_per_day_APPROVED review.luxuryBOM.footprint_m2_APPROVED review.luxuryBOM.operating_power_units_APPROVED review.luxuryBOM.operating_consumables_and_maintenance amenityProfile.approval amenityProfile.category amenityProfile.residentServiceSlotsPerDay amenityProfile.floorAreaM2 amenityProfile.operatingPowerUnits",
-    "Manufacturing & Quality": "review.luxuryBOM.proposed_assembly_labour_h review.luxuryBOM.proposed_factory_shop_h review.luxuryBOM.proposed_qualification_test_h review.luxuryBOM.proposed_good_unit_yield review.luxuryBOM.accounted_direct_and_part_input_mass_kg approvedPhysicalBOM.approval approvedPhysicalBOM.assemblyLabourHours approvedPhysicalBOM.factoryShopHours approvedPhysicalBOM.qualificationTestHours approvedPhysicalBOM.targetGoodUnitYield",
-    "Costs & Reference Quotes": "review.luxuryBOM.reference_part_factory_cost_CC review.luxuryBOM.provisional_direct_material_cost_CC review.luxuryBOM.provisional_labour_cost_CC review.luxuryBOM.provisional_factory_and_test_cost_CC review.luxuryBOM.provisional_manufacturer_cost_CC review.luxuryBOM.provisional_manufacturer_sell_quote_CC review.electricMotors.pricing_and_units",
-    "Discovery & Approval": "review.luxuryRatings.approval_status review.luxuryBOM.approval_status review.luxuryBOM.unresolved_engineering_and_pricing_constraints review.electricMotors.approval_status review.electricMotors.unresolved_requirements manufacturingDesignStatus manufacturingDesignNotes",
-    "Canon & Provenance": "provenance.authoredFor provenance.sourceState provenance.sourceRepository provenance.sourcePath provenance.sourceCommit provenance.androidDiscoveryWorkingId provenance.lorePath"
-  },
   buildings: {
     "Identity & Classification": "review.systematicReview.building_name review.bomCoverage.building_name review.quantitativeBOM.building_name",
     "Canon & Provenance": "provenance.mobile.path provenance.mobile.kind provenance.mobile.displayName provenance.scope",
@@ -143,8 +133,8 @@ export function industrialReviewRows(kind, catalogue, reference) {
   // Parts use their registered review columns as an allow-list. Keep canonical
   // audit provenance, field-level approval decisions and artwork metadata in
   // data/ without exposing those implementation fields in the review grid.
-  const partColumns = kind === "parts" ? new Set(catalogue.collection("columnDefinitions")
-    .filter(definition => definition.table === "parts")
+  const limitedColumns = ["parts", "machines"].includes(kind) ? new Set(catalogue.collection("columnDefinitions")
+    .filter(definition => definition.table === kind)
     .map(definition => definition.fieldKey)) : null;
   const aliases = new Map(canonicalRecords
     .filter(record => record.provenance?.androidDiscoveryWorkingId)
@@ -171,17 +161,23 @@ export function industrialReviewRows(kind, catalogue, reference) {
   }
   const canonicalRows = canonicalRecords.map(record => {
     const fields = flatten(record);
-    fields.catalogueStatus = "Canonical";
+    if (kind !== "parts" && kind !== "machines") fields.catalogueStatus = "Canonical";
+    if (kind === "machines") {
+      // Building entries are candidate compatibilities, not mandatory fit-out.
+      fields.buildingCompatibility = catalogue.collection("buildings")
+        .filter(building => (building.machineIds || []).includes(record.id))
+        .map(building => building.id);
+    }
     // Parts have now reconciled these discovery inputs into canonical, typed
     // fields. Keep the frozen Android snapshot for history, not duplicate columns.
-    if (kind !== "parts" && source.has(record.id))
+    if (kind === "buildings" && source.has(record.id))
       flatten(source.get(record.id), "review", fields);
     const summary = approvalSummary(kind, record, fields, catalogue);
     fields.approval = summary.approval;
     fields.needsApproval = summary.needsApproval;
-    if (partColumns) {
+    if (limitedColumns) {
       for (const field of Object.keys(fields))
-        if (!partColumns.has(field)) delete fields[field];
+        if (!limitedColumns.has(field)) delete fields[field];
     }
     const pendingColumnKeys = Object.entries(summary.fieldStates)
       .filter(([, status]) => status !== "Approved")
@@ -218,6 +214,7 @@ export function createIndustrialTables() {
       // A revised Parts column schema needs a fresh selection so the old
       // provenance-heavy preferences do not hide Approval/Needs Approval.
       storageKey: kind === "parts" ? "mineitPartsReviewColumns" :
+        kind === "machines" ? "mineitMachinesReviewColumnsV2" :
         "mineit" + config.title + "Columns",
       rows(catalogue, reference) {
         return industrialReviewRows(kind, catalogue, reference);
@@ -227,6 +224,8 @@ export function createIndustrialTables() {
           return "Parts identities, material links and planning data now come from canonical Universe data/parts.json. " +
             "The 18 CC reference prices and masses are discovery planning only, NOT live rates. " +
             "Three superseded generic identities have been removed; unresolved Machine/research mappings are marked for review. Material identities are resolved; qualification, quantity and pricing reviews remain visible in Needs Approval.";
+        if (kind === "machines")
+          return "Machines identities, typed BOMs, candidate Building compatibility and field decisions come from canonical Universe data/machines.json. Historic Android derived-cost scenarios remain explicitly provisional; five accommodation physical BOMs and ratings retain their approvals. No player prices or gameplay have changed.";
         return reference
           ? "Android discovery is a read-only review snapshot at " +
             reference.sourceCommit.slice(0, 8) +

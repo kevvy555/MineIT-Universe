@@ -130,6 +130,50 @@ delete incomplete.fieldApprovalStatuses.materialInputs;
 assert.throws(() => approvalSummary("parts", incomplete, battery.fields, catalogue),
   /missing or invalid explicit approval/,
   "A missing field decision must fail rather than silently inheriting old approval");
+const machineDefinitions = definitions.filter(d => d.table === "machines");
+assert.equal(machineDefinitions.length, 26,
+  "Machine review has exactly six compact groups and 26 selectable columns");
+assert.deepEqual(machineDefinitions.filter(d => d.fieldKey.startsWith("image."))
+  .map(d => d.fieldKey), ["image.generated"]);
+assert.ok(!machineDefinitions.some(d => d.fieldKey.startsWith("review.") ||
+  d.fieldKey.startsWith("provenance.") ||
+  d.fieldKey.startsWith("fieldApprovalStatuses.")),
+  "No historic Machine review/provenance/status columns");
+const machineRequired = machineDefinitions.filter(d => d.requiresApproval)
+  .map(d => d.fieldKey);
+const machineRows = industrialReviewRows("machines", catalogue, industrialReference);
+assert.equal(machineRows.length, 42);
+assert.equal(machineRows.filter(r => r.fields.approval === "Approved").length, 0,
+  "Approved amenity recipe is not blanket Machine approval");
+assert.equal(machineRows.filter(r => r.fields.approval === "Blocked").length, 7,
+  "All seven documented blocked machine cost scenarios remain visible");
+for (const machine of collections.machines) {
+  assert.deepEqual(new Set(Object.keys(machine.fieldApprovalStatuses || {})),
+    new Set(machineRequired), machine.id + " must track every mandatory approval field");
+  assert.ok(validApprovalStatuses.has(machine.approval));
+  assert.equal(machine.approvedPhysicalBOM, undefined,
+    "Parallel legacy Machine BOM cannot remain after consolidation");
+  assert.equal(machine.needsApproval, undefined,
+    "Needs Approval is projected, not saved");
+}
+const machinePendingColumns = pendingColumnSelection(machineRows,
+  machineDefinitions.map(x => x.fieldKey), "machine-ship-reactor");
+assert.ok(machinePendingColumns.includes("manufacturing.manufacturerCostCC"));
+assert.ok(machinePendingColumns.includes("pendingPartCompatibility"));
+assert.ok(!machinePendingColumns.includes("image.generated"));
+const luxury = machineRows.find(r => r.id === "machine-personal-recreation-terminal");
+assert.ok(luxury.fields.needsApproval.includes("Manufacturer Cost (CC)"));
+assert.ok(!luxury.fields.needsApproval.includes("Assembly Hours"),
+  "Approved 2 Nov accommodation BOM must remain approved");
+const machineBad = { ...luxury.record, approval: "Approved" };
+assert.throws(() => approvalSummary("machines", machineBad, luxury.fields, catalogue),
+  /disagrees with explicit field statuses/);
+const changed = { ...luxury.record, fieldApprovalStatuses:
+  { ...luxury.record.fieldApprovalStatuses,
+    "manufacturing.manufacturerCostCC": "Approved" }};
+assert.throws(() => approvalSummary("machines", changed, luxury.fields, catalogue),
+  /cannot approve absent Machine field|disagrees with explicit field statuses/,
+  "Manufacturer cost must not be approved from a missing or provisional record");
 const possible = partDefinitions.map(definition => definition.fieldKey);
 assert.deepEqual(pendingColumnSelection(parts, possible, battery.id), [
   "name", "approval", "needsApproval",

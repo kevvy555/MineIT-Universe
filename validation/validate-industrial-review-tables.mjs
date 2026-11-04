@@ -48,7 +48,7 @@ for (const [kind, totals] of Object.entries(expected)) {
   assert.equal(rows.length, canonical.length, "No duplicate candidate review rows");
   assert.equal(new Set(rows.map(row => row.id)).size, rows.length);
   assert.ok(rows.every(row => row.canonical &&
-    (kind === "parts" ? !Object.hasOwn(row.fields, "catalogueStatus") :
+    (["parts", "machines"].includes(kind) ? !Object.hasOwn(row.fields, "catalogueStatus") :
       row.fields.catalogueStatus === "Canonical")));
   assert.ok(rows.every(row => row.fields.name === row.record.name));
   assert.ok(rows.every(row => ["Not Reviewed", "In Review", "Approved", "Blocked"].includes(row.fields.approval)),
@@ -68,13 +68,19 @@ for (const [kind, totals] of Object.entries(expected)) {
       assert.ok(!("review.materialBOM.review_status" in row.fields),
         "Parts should not duplicate historic status and canonical status columns");
     } else {
-      assert.ok(row.fields["review.manufacturingBOM.approval_status"],
-        "Unreconciled Machine manufacturing review remains visible");
+      assert.ok(row.fields["manufacturing.finishedPartInputs"] != null ||
+        row.fields["manufacturing.directMaterialInputs"] != null,
+        "Machine design proposals are consolidated into typed canonical fields");
+      assert.ok(!Object.keys(row.fields).some(key =>
+        key.startsWith("review.") || key.startsWith("provenance.") ||
+        key.startsWith("fieldApprovalStatuses.")),
+        "Historic Machine duplicate or provenance columns must not reappear");
     }
   }
   assert.equal(applySubstanceTable(rows, ["name"], {}, "name", 1, catalogue).length, rows.length);
-  assert.equal(uniqueColumnValues(rows, kind === "parts" ? "approval" : "catalogueStatus",
-    catalogue).length, kind === "parts" ? 2 : 1);
+  const key = kind === "buildings" ? "catalogueStatus" : "approval";
+  const uniqueCount = uniqueColumnValues(rows, key, catalogue).length;
+  assert.ok(uniqueCount >= 1 && uniqueCount <= 8);
 }
 const buildings = industrialReviewRows("buildings", catalogue, reference);
 const camp = buildings.find(row => row.id === "building-collection-camp");

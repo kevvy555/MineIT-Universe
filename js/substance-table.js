@@ -5,7 +5,7 @@ import { substanceRows, allSubstanceFields, DEFAULT_COLUMNS, columnGroup,
 const esc = value => String(value ?? "").replaceAll("&", "&amp;").replaceAll("<", "&lt;")
   .replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#039;");
 
-// Stable field keys drive both global and per-Part pending-column shortcuts.
+// Stable field keys drive both global and per-item pending-column shortcuts.
 export function pendingColumnSelection(rows, possible, rowId = null) {
   const relevant = rowId === null ? rows : rows.filter(row => row.id === rowId);
   const keys = relevant.flatMap(row => row.pendingColumnKeys || []);
@@ -109,7 +109,7 @@ export function createSubstanceTable(config = {}) {
       '<button type="button" id="substanceSelectAll">Select all</button>' +
       '<button type="button" id="substanceClearColumns">Deselect all</button>' +
       (config.pendingColumnAction ?
-        '<button type="button" id="substanceShowPendingColumns" title="Show all fields with outstanding Part approvals">Show all pending fields</button>' : '') +
+        '<button type="button" id="substanceShowPendingColumns" title="Show all fields with outstanding approvals">Show all pending fields</button>' : '') +
       '<span>Name stays visible to open details.</span></div>' +
       '<div class="substance-pick-grid">' + picker + '</div></details></div>' +
       '<p class="substance-source-note">' + (config.sourceNote ? esc(config.sourceNote(reference)) : reference ?
@@ -328,7 +328,7 @@ export function createSubstanceTable(config = {}) {
         tbody.querySelectorAll("[data-pending-for]").forEach(button => button.onclick = () => {
           const target = rows.find(row => row.id === button.dataset.pendingFor);
           if (!target) return;
-          // Focus the selected Part and all fields still awaiting its approval.
+          // Focus the selected item and all fields still awaiting its approval.
           textFilters = { name: target.record.name };
           valueFilters = {};
           container.querySelector(".substance-review-scroll").scrollTop = 0;
@@ -351,7 +351,7 @@ export function createSubstanceTable(config = {}) {
     container.querySelector("#substanceClearColumns").onclick = () => setColumns(["name"]);
     if (config.pendingColumnAction)
       container.querySelector("#substanceShowPendingColumns").onclick = () => {
-        // The global shortcut restores all Parts after a row-specific review.
+        // The global shortcut restores all items after a row-specific review.
         textFilters = {};
         valueFilters = {};
         container.querySelector(".substance-review-scroll").scrollTop = 0;
