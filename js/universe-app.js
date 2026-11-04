@@ -1193,6 +1193,8 @@ function installDivider() {
     const { min, max } = bounds();
     const value = Math.max(min, Math.min(max, percent));
     explorerPane.style.flexBasis = `${value}%`;
+    // Padding otherwise reserves space even when the flex basis reaches 0.
+    explorerPane.classList.toggle('collapsed', !isPortrait() && value === 0);
     divider.setAttribute('aria-valuemin', String(Math.round(min)));
     divider.setAttribute('aria-valuemax', String(Math.round(max)));
     divider.setAttribute('aria-valuenow', String(Math.round(value)));
