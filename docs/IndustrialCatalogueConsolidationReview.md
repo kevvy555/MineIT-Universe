@@ -458,3 +458,37 @@ design is later taken beyond planning.
 This leaves **one** unresolved Part material description, for the nuclear
 assembly fuel/cladding design. The shared approval-system migration and
 other unqualified Part inputs remain pending separately.
+
+
+## Nuclear Fuel Assembly material selection approved — 4 November 2026
+
+The designer approved a deliberately simple three-material input list for
+`part-nuclear-fuel-assembly`, without introducing detailed internal reactor
+engineering or specifying unsupported numerical input quantities:
+
+| Direct input | Canonical material identity | Manufacturing role |
+| --- | --- | --- |
+| Fission Fuel Material | `named-substance-fission-fuel-material` | Refined fission-reactor fuel feedstock |
+| Stainless Steel | `named-substance-stainless-steel` | Structural components |
+| Refined Ceramic | `substance-refined-ceramic` | Insulation |
+
+**Fission Fuel Material is a new stockable Refined Material, not a Part.**
+Its typed `upstreamMaterialIds` links to existing
+`named-substance-uranium-concentrate`, rather than adding that precursor
+again as a direct input to the nuclear assembly. Its generic substance
+classification remains explicitly pending review; it does not inherit the
+fusion-fuel classification.
+
+The previously unresolved free-text nuclear material placeholder is retired.
+This brings **all 19 Parts to zero unresolved material-identity placeholders**.
+The nuclear Part records the approved input *families* as
+`materialApprovalStatus: APPROVED_INPUT_FAMILIES`; it is **not an approved
+quantitative manufacturing recipe**. No input quantities, assembly weight,
+reactor compatibility, fuel processing specification, manufacturer cost,
+or manufacturer quote were invented. The existing
+`planningReference.status: blocked-pending-engineering` remains in place.
+
+Separate follow-up work still includes qualifying provisional candidates
+elsewhere in the Parts list and the approved but not-yet-implemented common
+Approval/Needs Approval column system. Material identity resolution must not
+be confused with full engineering/commercial sign-off.
