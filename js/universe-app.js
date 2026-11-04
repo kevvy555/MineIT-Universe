@@ -722,9 +722,6 @@ function fieldsFor(collection, entity) {
       'planningReference.manufacturerCostCC': economic?.manufacturerCostCC,
       'planningReference.baseManufacturerQuoteCC': economic?.baseManufacturerQuoteCC
     }, state.catalogue);
-    const unresolved = (entity.unresolvedMaterialInputs || []).map(input =>
-      input.label + (input.planningAllowanceKg == null ? '' :
-        ' · ' + input.planningAllowanceKg + ' kg planning') + ' (' + input.status + ')');
     fields.push(
       field('Part role', esc(entity.partRole === 'legacy-compatibility' ?
         'Legacy compatibility — not separate trade stock' : 'Finished product')),
@@ -733,7 +730,6 @@ function fieldsFor(collection, entity) {
       field('Sources', tags(entity.sources)),
       field('Generic material classifications', links(entity.substanceIds)),
       field('Approved / candidate material inputs', partMaterialLinks(entity.materialInputs)),
-      field('Unresolved manufacturing inputs', unresolved.length ? esc(unresolved.join('; ')) : '—'),
       field('Approval', esc(status.approval)),
        field('Needs Approval', esc(status.needsApproval.join(', ') || 'None')),
        field('Mass Review', esc(partMassReview(entity))),
