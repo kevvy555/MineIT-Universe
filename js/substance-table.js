@@ -21,7 +21,8 @@ export async function loadAndroidResourceReference() {
 }
 
 export function createSubstanceTable(config = {}) {
-  const labelFor = key => config.columnLabels?.[key] || fieldLabel(key);
+  let displayLabels = config.columnLabels || {};
+  const labelFor = key => displayLabels[key] || fieldLabel(key);
   let selected = [...(config.defaultColumns || DEFAULT_COLUMNS)];
   let textFilters = {};
   let valueFilters = {};
@@ -36,6 +37,12 @@ export function createSubstanceTable(config = {}) {
 
   function render(container, catalogue, reference, onSelect, onBack) {
     cleanupListeners();
+    // The manifest column registry governs the displayed field names, including
+    // the Approval and Needs Approval columns, across all catalogue grids.
+    displayLabels = Object.fromEntries(catalogue.collection("columnDefinitions")
+      .filter(definition => definition.table === (config.tableKind || "substances"))
+      .map(definition => [definition.fieldKey, definition.name]));
+    Object.assign(displayLabels, config.columnLabels || {});
     const previousScroll = container.querySelector(".substance-review-scroll");
     const scrollLeft = previousScroll?.scrollLeft || 0;
     const scrollTop = previousScroll?.scrollTop || 0;
