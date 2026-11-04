@@ -73,6 +73,7 @@ export const SUBSTANCE_COLUMN_GROUPS = [
     "name": "Production & Materials",
     "fields": [
       "sourceRawResourceIds",
+      "upstreamMaterialIds",
       "upstreamInputDescription"
     ]
   },
