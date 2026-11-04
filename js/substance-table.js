@@ -5,6 +5,15 @@ import { substanceRows, allSubstanceFields, DEFAULT_COLUMNS, columnGroup,
 const esc = value => String(value ?? "").replaceAll("&", "&amp;").replaceAll("<", "&lt;")
   .replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#039;");
 
+// Stable field keys drive both global and per-Part pending-column shortcuts.
+export function pendingColumnSelection(rows, possible, rowId = null) {
+  const relevant = rowId === null ? rows : rows.filter(row => row.id === rowId);
+  const keys = relevant.flatMap(row => row.pendingColumnKeys || []);
+  const available = new Set(possible);
+  return [...new Set(["name", "approval", "needsApproval", ...keys])]
+    .filter(key => available.has(key));
+}
+
 export async function loadAndroidResourceReference() {
   try {
     const response = await fetch("./game-specs/mineit-mobile/resource-balance-reference.json",
@@ -99,6 +108,8 @@ export function createSubstanceTable(config = {}) {
       ')</summary><div class="substance-column-actions">' +
       '<button type="button" id="substanceSelectAll">Select all</button>' +
       '<button type="button" id="substanceClearColumns">Deselect all</button>' +
+      (config.pendingColumnAction ?
+        '<button type="button" id="substanceShowPendingColumns" title="Show all fields with outstanding Part approvals">Show all pending fields</button>' : '') +
       '<span>Name stays visible to open details.</span></div>' +
       '<div class="substance-pick-grid">' + picker + '</div></details></div>' +
       '<p class="substance-source-note">' + (config.sourceNote ? esc(config.sourceNote(reference)) : reference ?
@@ -275,18 +286,17 @@ export function createSubstanceTable(config = {}) {
       return '<div class="substance-ref-list">' + (links.join("") || "—") + '</div>';
     }
 
-    function renderPartImage(row) {
-      const image = row.record.image;
-      if (!image?.generated || !["generated", "approved"].includes(image.status))
-        return '<span class="substance-unlinked">Not generated</span>';
-      const key = image.key || "";
-      if (!key.startsWith("assets/art/universe/parts/") ||
-        !/^[a-z0-9_-]+[.]webp$/i.test(key.slice("assets/art/universe/parts/".length)))
-        return '<span class="status error">Invalid art path</span>';
-      return '<button type="button" class="part-image-button" data-item-id="' +
-        esc(row.id) + '" title="Open ' + esc(row.record.name) + ' details">' +
-        '<img class="part-image-thumb" src="./' + esc(image.key) +
-        '" alt="' + esc(row.record.name) + '" loading="lazy"></button>';
+    function renderPendingApprovalCell(row) {
+      const labels = row.fields.needsApproval || [];
+      const readable = Array.isArray(labels) ? labels.join(", ") : String(labels);
+      const pending = row.pendingColumnKeys || [];
+      return '<div class="substance-pending-review"><span class="substance-pending-text" title="' +
+        esc(readable) + '">' + esc(readable || "None") + '</span>' +
+        (pending.length ?
+          '<button type="button" class="substance-pending-button" data-pending-for="' +
+          esc(row.id) + '" title="Show pending fields for ' + esc(row.record.name) +
+          '" aria-label="Show pending fields for ' + esc(row.record.name) +
+          '">Show fields</button>' : '') + '</div>';
     }
 
     function updateRows() {
@@ -305,8 +315,8 @@ export function createSubstanceTable(config = {}) {
           '<button class="substance-item" type="button" data-item-id="' +
           esc(row.id) + '">' + esc(label) + '</button>' :
           linked ? renderLinkedCell(row.fields[key], key) :
-          (key === "partImage" && config.imagePreviewField === "partImage")
-            ? renderPartImage(row) : esc(label)) + '</td>';
+          (key === "needsApproval" && config.pendingColumnAction)
+            ? renderPendingApprovalCell(row) : esc(label)) + '</td>';
       }).join("") + '</tr>').join("") ||
         '<tr><td colspan="' + ordered.length + '" class="substance-no-results">No matching ' +
         esc(config.title || "substances") + '</td></tr>';
@@ -314,6 +324,16 @@ export function createSubstanceTable(config = {}) {
         button.onclick = () => onSelect(button.dataset.itemId));
       tbody.querySelectorAll("[data-entity-id]").forEach(button =>
         button.onclick = () => onSelect(button.dataset.entityId));
+      if (config.pendingColumnAction)
+        tbody.querySelectorAll("[data-pending-for]").forEach(button => button.onclick = () => {
+          const target = rows.find(row => row.id === button.dataset.pendingFor);
+          if (!target) return;
+          // Focus the selected Part and all fields still awaiting its approval.
+          textFilters = { name: target.record.name };
+          valueFilters = {};
+          container.querySelector(".substance-review-scroll").scrollTop = 0;
+          setColumns(pendingColumnSelection(rows, possible, target.id));
+        });
     }
 
     function setColumns(keys) {
@@ -329,6 +349,9 @@ export function createSubstanceTable(config = {}) {
     });
     container.querySelector("#substanceSelectAll").onclick = () => setColumns(possible);
     container.querySelector("#substanceClearColumns").onclick = () => setColumns(["name"]);
+    if (config.pendingColumnAction)
+      container.querySelector("#substanceShowPendingColumns").onclick = () =>
+        setColumns(pendingColumnSelection(rows, possible));
     container.querySelectorAll("[data-group-select]").forEach(button => button.onclick = () => {
       const group = groups.find(item => item.name === button.dataset.groupSelect);
       if (group) setColumns(selectionForCategory(selected, group.fields, true));
