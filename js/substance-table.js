@@ -272,7 +272,9 @@ export function createSubstanceTable(config = {}) {
       const image = row.record.image;
       if (!image?.generated || !["generated", "approved"].includes(image.status))
         return '<span class="substance-unlinked">Not generated</span>';
-      if (!/^assets\\/art\\/universe\\/parts\\/[a-zA-Z0-9_-]+\\.webp$/.test(image.key))
+      const key = image.key || "";
+      if (!key.startsWith("assets/art/universe/parts/") ||
+        !/^[a-z0-9_-]+[.]webp$/i.test(key.slice("assets/art/universe/parts/".length)))
         return '<span class="status error">Invalid art path</span>';
       return '<button type="button" class="part-image-button" data-item-id="' +
         esc(row.id) + '" title="Open ' + esc(row.record.name) + ' details">' +
