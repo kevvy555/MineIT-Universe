@@ -99,11 +99,6 @@
 .part-material-row:last-child{border-bottom:0}
 .part-material-quantity{font-variant-numeric:tabular-nums;color:#e7f0f5;white-space:nowrap;text-align:right}
 .part-material-requirement{color:var(--muted);font-size:10px;text-align:left;max-width:142px;line-height:1.4}
-.part-image-button{border:0;background:transparent;display:inline-flex;align-items:center;justify-content:center;
-  padding:2px;border-radius:6px;cursor:zoom-in}
-.part-image-button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.part-image-thumb{width:56px;height:56px;object-fit:contain;border:1px solid var(--line);
-  border-radius:5px;background:#0f1c23;display:block}
 
 /* Keep the pending field names readable and the per-row review action visible,
    even when the grid is horizontally scrollable on a narrow phone. */
