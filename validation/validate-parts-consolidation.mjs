@@ -6,7 +6,7 @@ import { fieldText } from "../js/substance-table-data.js";
 const load = file => JSON.parse(readFileSync(new URL("../" + file, import.meta.url), "utf8"));
 const parts = load("data/parts.json");
 const machines = load("data/machines.json");
-const materials = [...load("data/substances.json"), ...load("data/named-substances.json")];
+const materials = [...load("data/substances.json"), ...load("data/named-substances.json"), ...load("data/mobile-resource-definitions.json")];
 const reference = load("game-specs/mineit-mobile/industrial-discovery-reference.json");
 const byId = new Map([...parts, ...machines, ...materials].map(r => [r.id, r]));
 const catalogue = { collection: kind => kind === "parts" ? parts : [],
@@ -79,9 +79,9 @@ for (const part of parts) {
   assert.ok(part.manufacturerCostCC == null && part.baseSellQuoteCC == null,
     "Planning references must not become live manufacturer prices");
 }
-assert.equal(inputCount, 63);
-assert.equal(planningInputCount, 60);
-assert.equal(unresolvedCount, 3);
+assert.equal(inputCount, 65);
+assert.equal(planningInputCount, 62);
+assert.equal(unresolvedCount, 1);
 assert.equal(finished.filter(p => Number.isFinite(p.planningReference.finishedMassKg)).length, 18);
 assert.equal(finished.filter(p => Number.isFinite(p.planningReference.manufacturerCostCC)).length, 18);
 assert.equal(finished.filter(p => Number.isFinite(p.planningReference.baseManufacturerQuoteCC)).length, 18);
@@ -146,5 +146,5 @@ assert.equal(reviewed.find(row => row.id === "part-extraction-parts")
 assert.equal(reviewed.find(row => row.id === "part-precast-concrete-sections")
   .fields["planningReference.finishedMassKg"], 1160);
 assert.ok(reviewed.every(row => row.fields.materialApprovalStatus));
-console.log("Parts consolidation validated: 19 finished, zero legacy, 63 linked inputs, " +
-  "60 material quantities, 3 unresolved input descriptions, 18 reference prices.");
+console.log("Parts consolidation validated: 19 finished, zero legacy, 65 linked inputs, " +
+  "62 material quantities, 1 unresolved input description, 18 reference prices.");
