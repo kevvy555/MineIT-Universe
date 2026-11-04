@@ -93,6 +93,16 @@ const steel = byId.get("part-precast-concrete-sections").materialInputs
   .find(input => input.substanceId === "named-substance-steel");
 assert.equal(steel.requirement, "conditional-reinforcement");
 assert.equal(steel.quantityKg, 25);
+const concrete = byId.get("part-precast-concrete-sections");
+assert.equal(concrete.unresolvedMaterialInputs, undefined);
+for (const [id, kg] of [["mobile-resource-silica-sand", 300], ["substance-fresh-water", 75]]) {
+  const ingredient = concrete.materialInputs.find(input => input.substanceId === id);
+  assert.ok(ingredient, "Missing approved concrete material " + id);
+  assert.equal(ingredient.quantityKg, kg);
+  assert.equal(ingredient.requirement, "standard");
+  assert.ok(byId.has(id), "Concrete material must resolve to canonical resource " + id);
+}
+assert.equal(concrete.materialInputs.length, 5);
 const lithium = byId.get("part-lithium-based-battery-module");
 const approvedLfpBOM = [
   ["named-substance-lfp-cathode-material", 5],
