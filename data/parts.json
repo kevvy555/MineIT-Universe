@@ -977,11 +977,15 @@
       "Manufactured"
     ],
     "substanceIds": [
-      "named-substance-lithium-carbonate",
+      "named-substance-lfp-cathode-material",
       "substance-refined-graphite",
-      "named-substance-refined-copper"
+      "named-substance-lfp-battery-electrolyte",
+      "named-substance-refined-copper",
+      "named-substance-aluminium",
+      "named-substance-polymer-feedstock",
+      "named-substance-stainless-steel"
     ],
-    "description": "A complete lightweight lithium-based storage module intended for weight-sensitive mobile equipment; final cathode chemistry and thermal protection must be qualified.",
+    "description": "Complete rechargeable lithium iron phosphate (LFP) storage module manufactured from seven refined materials, including integrated battery-management electronics, polymer insulation and stainless-steel housing. Battery-grade graphite, copper and aluminium processing are handled within battery manufacture; no separate BMS Part is required.",
     "canonStatus": "working canon",
     "provenance": {
       "sourceRepository": "kevvy555/MineIT-Android",
@@ -1003,61 +1007,61 @@
       "notes": "Art not yet generated; candidate identity reconciled from Android industrial discovery."
     },
     "partRole": "finished-product",
-    "materialApprovalStatus": "APPROVED_PRODUCT_BOM_PENDING",
+    "materialApprovalStatus": "APPROVED",
     "materialInputs": [
       {
-        "substanceId": "named-substance-lithium-carbonate",
-        "requirement": "upstream-precursor",
-        "approval": "approved-upstream-source",
-        "quantityKg": 1.5
+        "substanceId": "named-substance-lfp-cathode-material",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "quantityKg": 5
       },
       {
         "substanceId": "substance-refined-graphite",
-        "requirement": "candidate",
-        "approval": "planning-only-unqualified",
+        "requirement": "standard",
+        "approval": "approved-input-family",
         "quantityKg": 2.5
       },
       {
-        "substanceId": "named-substance-refined-copper",
-        "requirement": "candidate",
-        "approval": "planning-only-unqualified",
+        "substanceId": "named-substance-lfp-battery-electrolyte",
+        "requirement": "standard",
+        "approval": "approved-input-family",
         "quantityKg": 2
       },
       {
-        "substanceId": "substance-polymer",
-        "requirement": "candidate",
-        "approval": "planning-only-unqualified",
+        "substanceId": "named-substance-refined-copper",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "quantityKg": 2
+      },
+      {
+        "substanceId": "named-substance-aluminium",
+        "requirement": "standard",
+        "approval": "approved-input-family",
+        "quantityKg": 0.5
+      },
+      {
+        "substanceId": "named-substance-polymer-feedstock",
+        "requirement": "standard",
+        "approval": "approved-input-family",
         "quantityKg": 3
       },
       {
         "substanceId": "named-substance-stainless-steel",
-        "requirement": "candidate",
-        "approval": "planning-only-unqualified",
+        "requirement": "standard",
+        "approval": "approved-input-family",
         "quantityKg": 3
-      }
-    ],
-    "unresolvedMaterialInputs": [
-      {
-        "label": "unresolved cathode allowance",
-        "planningAllowanceKg": 5,
-        "status": "unresolved-material-allowance"
-      },
-      {
-        "label": "unresolved electrolyte allowance",
-        "planningAllowanceKg": 2,
-        "status": "unresolved-material-allowance"
       }
     ],
     "planningReference": {
       "status": "approved-discovery-planning-not-live",
-      "basis": "CC per finished Part; physical kg planning, not certified finished recipe",
+      "basis": "CC per finished Part; quoted costs retain prior discovery planning assumptions and have not been recalculated for the approved seven-material LFP gameplay BOM",
       "finishedMassKg": 18,
       "sourceSection": "galaxy-economic-foundation.md §59",
       "manufacturerCostCC": 3508.91,
       "baseManufacturerQuoteCC": 4400
     },
     "finishedUnitCount": 1,
-    "finishedUnitDescription": "one finished lithium-based rechargeable battery module (capacity and mass TBD)"
+    "finishedUnitDescription": "one finished 18 kg lithium iron phosphate (LFP) battery module"
   },
   {
     "id": "part-thermal-parts",
