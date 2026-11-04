@@ -13,7 +13,7 @@ const expected = {
   machines: { original: 34, reconciled: 8, total: 42 },
   buildings: { original: 24, reconciled: 0, total: 24 }
 };
-const collections = Object.fromEntries(["parts", "machines", "buildings"].map(kind =>
+const collections = Object.fromEntries(["parts", "machines", "buildings", "columnDefinitions", "approvalStatuses"].map(kind =>
   [kind, load("data/" + kind + ".json")]));
 const allById = new Map(Object.values(collections).flat().map(r => [r.id, r]));
 const catalogue = {
@@ -49,6 +49,10 @@ for (const [kind, totals] of Object.entries(expected)) {
   assert.equal(new Set(rows.map(row => row.id)).size, rows.length);
   assert.ok(rows.every(row => row.canonical && row.fields.catalogueStatus === "Canonical"));
   assert.ok(rows.every(row => row.fields.name === row.record.name));
+  assert.ok(rows.every(row => ["Not Reviewed", "In Review", "Approved", "Blocked"].includes(row.fields.approval)),
+    kind + " should expose consistent shared Approval labels");
+  assert.ok(rows.every(row => Array.isArray(row.fields.needsApproval)),
+    kind + " should list fields awaiting approval");
   for (const row of rows.filter(row => row.record.provenance?.androidDiscoveryWorkingId)) {
     if (kind === "parts") {
       assert.ok(row.fields.materialApprovalStatus,
