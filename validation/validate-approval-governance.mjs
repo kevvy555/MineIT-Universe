@@ -94,6 +94,63 @@ for (const part of collections.parts) {
 assert.equal(collections.parts.filter(p => p.approval === "Blocked").length, 1);
 assert.equal(collections.parts.filter(p => p.approval === "In Review").length, 18);
 
+const machineDefinitions = definitions.filter(d => d.table === "machines");
+const machineRequired = machineDefinitions.filter(d => d.requiresApproval)
+  .map(d => d.fieldKey);
+assert.equal(machineDefinitions.length, 25,
+  "The Machines review offers exactly 25 designer-facing fields");
+assert.deepEqual(new Set(machineRequired), new Set([
+  "manufacturing.finishedPartInputs", "manufacturing.directMaterialInputs",
+  "manufacturing.nestedMachineInputs", "manufacturing.assemblyHours",
+  "manufacturing.factoryHours", "manufacturing.testHours",
+  "manufacturing.goodUnitYield", "manufacturing.finishedMassKg",
+  "manufacturing.manufacturerCostCC", "manufacturing.manufacturerQuoteCC",
+  "operatingProfile.ratedCapacity", "operatingProfile.operatingPowerUnits",
+  "operatingProfile.footprintM2", "pendingPartCompatibility",
+  "inputSummary", "outputSummary"
+]));
+assert.ok(machineDefinitions.every(d => !d.fieldKey.startsWith("review.") &&
+  !d.fieldKey.startsWith("provenance.") &&
+  !d.fieldKey.startsWith("fieldApprovalStatuses.") &&
+  !d.fieldKey.startsWith("approvedPhysicalBOM.") &&
+  !d.fieldKey.startsWith("amenityProfile.")));
+assert.deepEqual(machineDefinitions.filter(d => d.fieldKey.startsWith("image."))
+  .map(d => d.fieldKey), ["image.generated"]);
+for (const machine of collections.machines) {
+  assert.ok(validApprovalStatuses.has(machine.approval));
+  assert.deepEqual(new Set(Object.keys(machine.fieldApprovalStatuses || {})),
+    new Set(machineRequired), machine.id + " must persist every explicit field decision");
+  assert.ok(!Object.hasOwn(machine, "needsApproval"));
+  assert.ok(!Object.hasOwn(machine, "approvedPhysicalBOM"));
+  assert.ok(!Object.hasOwn(machine, "amenityProfile"));
+  assert.ok(!machine.manufacturing || machine.manufacturing.authority);
+}
+const machineRows = industrialReviewRows("machines", catalogue, industrialReference);
+assert.equal(machineRows.length, 42);
+assert.equal(machineRows.filter(row => row.fields.approval === "Blocked").length, 7);
+assert.equal(machineRows.filter(row => row.fields.approval === "In Review").length, 35);
+const terminal = machineRows.find(row => row.id === "machine-personal-recreation-terminal");
+assert.ok(!terminal.fields.needsApproval.includes("Direct Material Inputs"),
+  "Approved residential manufacturing materials are not awaiting reapproval");
+assert.ok(terminal.fields.needsApproval.includes("Manufacturer Cost (CC)"));
+assert.ok(terminal.fields.needsApproval.includes("Finished Weight (kg)"));
+const machinePossible = machineDefinitions.map(d => d.fieldKey);
+assert.ok(!pendingColumnSelection(machineRows, machinePossible, terminal.id)
+  .includes("manufacturing.finishedPartInputs"));
+assert.ok(pendingColumnSelection(machineRows, machinePossible, terminal.id)
+  .includes("manufacturing.manufacturerQuoteCC"));
+assert.ok(pendingColumnSelection(machineRows, machinePossible).includes("inputSummary"),
+  "Global outstanding shortcut includes still-missing operating design fields");
+assert.throws(() => approvalSummary("machines", {
+  ...terminal.record, approval: "Approved"
+}, terminal.fields, catalogue), /disagrees with explicit field statuses/);
+assert.throws(() => approvalSummary("machines", {
+  ...terminal.record, fieldApprovalStatuses: {
+    ...terminal.record.fieldApprovalStatuses,
+    "manufacturing.manufacturerCostCC": "Approved"
+  }
+}, terminal.fields, catalogue), /cannot approve absent Machine field/);
+
 const parts = industrialReviewRows("parts", catalogue, industrialReference);
 const battery = parts.find(row => row.id === "part-lithium-based-battery-module");
 const nuclear = parts.find(row => row.id === "part-nuclear-fuel-assembly");
