@@ -363,21 +363,18 @@ The designer clarified the following *implemented* Parts display/data decisions:
   Artwork metadata and generated state remain canonical in the existing
   per-Part `image` object; **no images are invented or newly generated**.
 
-**Pending approval-model design (not yet migrated):** The designer wants one
-row-level Approval column, a derived Needs Approval column, and two common
-admin reference tables: an approval-status vocabulary and a registry of
-all table fields indicating which require approval. The earlier
-`Approved in Principle` and `Approved for Planning` suggestions were
-rejected as unnecessarily complex. Until the field-level decision and
-migration rules are clarified, the existing status/provenance fields are
-retained rather than silently conflating material approval with pricing
-readiness.
+**Historical note — resolved 4 November 2026:** The designer approved one
+overall Approval column, a derived Needs Approval column, and two common
+reference tables for approval statuses and column definitions. The later
+explicit per-field Part migration is described in the final section below.
+`Approved in Principle` and `Approved for Planning` were deliberately
+excluded from the eight-state shared vocabulary.
 
-**Unresolved physical material selections remain pending user decisions:**
-lithium cathode and electrolyte, concrete sand and water, nuclear fuel
-form/cladding, and 11 linked candidate inputs with unqualified material
-grades. Keep them visibly pending, without inventing confirmed substance
-IDs or erasing planning allowances.
+**Historical note — material identities resolved 4 November 2026:** LFP,
+concrete, and nuclear material identities were subsequently selected and
+linked; the later audit lists the **seven remaining unqualified candidate
+inputs** and other open engineering decisions. The earlier unresolved
+identity allowances are no longer current.
 
 
 ## Approved LFP battery module manufacturing recipe — 4 November 2026
@@ -594,11 +591,81 @@ compatibility reviews remain independent pending work.
   Blocked, Rejected, Superseded.
 - Per-column `requiresApproval` is canonically recorded; label/category,
   approval policy, and table ownership use stable field identifiers.
-- A grid's overall Approval is derived from field status. In Review and
-  Blocked preserve unapproved reference costs and missing quantities.
+- Overall Approval in Substances, Machines and Buildings is a read-only
+  projection of evidence. **Parts now store one canonical overall Approval**
+  verified against explicit per-field status values. In Review and Blocked
+  preserve unapproved reference costs and missing quantities.
 - Substance generic-class review for new LFP cathode, nonaqueous LFP
   electrolyte and Fission Fuel Material remains visible; the generic
   aqueous Electrolyte Solution cannot be reused as the nonaqueous category.
 - Field status will only advance from evidence or an explicit design
   decision; the approval tables are reference/admin **views**, not
   an authoring UI or a substitute for decisions.
+
+
+## Final Parts approval consolidation — 4 November 2026
+
+The designer explicitly approved finishing the previously planned status
+consolidation. `data/parts.json` is authoritative for all 19 finished Parts:
+
+- **`approval`** is the **single overall canonical Part approval**.
+  Every Part has exactly one shared-vocabulary value (currently 18
+  **In Review**, one **Blocked**).
+- **`fieldApprovalStatuses`** maps each approval-requiring field's
+  **stable, literal field key** to its explicit approval state.
+  This is subordinate evidence behind the overall Approval, not an
+  independently competing overall status.
+- **`needsApproval`** is **never persisted**; it is derived from
+  `fieldApprovalStatuses` and the canonically registered labels of
+  non-approved fields.
+- The old `materialApprovalStatus` property and corresponding selectable
+  column-definition record were retired by this explicit migration decision.
+  The individual `materialInputs[].approval` qualifiers remain, because they
+  describe **ingredient-family qualification** rather than the overall
+  approval of the complete material BOM.
+
+### Field-approval policy after review
+
+Seven Part columns require approval:
+
+| Part field | Approval purpose | Migration treatment |
+| --- | --- | --- |
+| `partRole` | Whether the record is an independently countable finished Part | Approved for all 19, matching the accepted 19-product consolidation |
+| `finishedUnitCount` | Quantity of finished Parts produced per declared batch | Approved (one) for all 19 |
+| `finishedUnitDescription` | Scope and definition of one finished unit | Approved for the agreed 18 kg LFP module; In Review elsewhere, where size/rating or detail remains provisional |
+| `materialInputs` | Complete typed manufacturing input recipe | Approved for the seven-material LFP recipe; In Review elsewhere, including the nuclear identity-only selection and candidate inputs |
+| `planningReference.finishedMassKg` | Mass used by the planned manufacturer recipe | Approved for the reconciled 18 kg LFP recipe; In Review for other provisional weights; Blocked for nuclear pending numeric design |
+| `planningReference.manufacturerCostCC` | Manufacturing economics | In Review on the 18 historical reference costs, Blocked for unpriced nuclear |
+| `planningReference.baseManufacturerQuoteCC` | Manufacturer selling quote | In Review on historical quotes, Blocked for unpriced nuclear |
+
+Other Part columns are identity labels, classification, descriptions,
+inventory links, source provenance, artwork metadata, legacy planning
+context, or **derived** review indicators. These do **not** each require an
+independent product/manufacturing sign-off. The image-review workflow and
+Machine/technology compatibility approvals remain their own processes.
+
+The canonical **Column Definitions** table now also exposes seven
+`fieldApprovalStatuses.*` fields under **Discovery & Approval**, so each
+saved field decision can be individually inspected in the Parts table.
+The overall Approval and Needs Approval columns remain visible by default.
+Individual Part details display all seven statuses, the overall state
+and the pending field names.
+
+Migration rules are intentionally conservative: family-level approval and
+source planning data did not become blanket recipe/weight/price approval.
+The fully agreed LFP **material inputs, one-module unit definition and
+18 kg weight** remain Approved, but its old manufacturer CC prices remain
+In Review, leaving the Part overall In Review. Nuclear Fuel Assembly has
+three approved **material identities** but no complete quantitative
+recipe, finished mass or approved prices, so its overall Part Approval
+remains Blocked.
+
+The implementation rejects inconsistent overall and field statuses,
+unknown or missing approval states and attempts to mark missing or
+unqualified required material recipes Approved. Automated regression
+tests assert the removal of the old status, field coverage for every
+Part, and the previously approved LFP/nuclear decisions.
+
+**Publication boundary:** The Directory remains a read-only catalogue;
+this change does not introduce a browser-side approval editor, editable
+source copies, gameplay prices, or any unreviewed new numerical choices.
