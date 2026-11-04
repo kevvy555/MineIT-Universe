@@ -133,8 +133,8 @@ for (const id of reconciledMachineIds) {
   if (!machine) { errors.push(`Canonical discovery Machine missing: ${id}`); continue; }
   if (!machine.provenance?.androidDiscoveryWorkingId?.startsWith('candidate-'))
     errors.push(`${id}: missing stable Android discovery crosswalk`);
-  if (!machine.manufacturingDesignStatus)
-    errors.push(`${id}: source manufacturing-design status required`);
+  if (!machine.manufacturing?.reviewBasis || !machine.fieldApprovalStatuses)
+    errors.push(`${id}: consolidated manufacturing review and field approvals required`);
 }
 // Breaking legacy identity retirement is approved with migration review:
 const retiredIds = new Set(['part-battery-parts', 'part-thermal-optical-parts', 'part-fabrication-parts']);
@@ -196,36 +196,44 @@ for (const machine of machines) {
     if (!materialIds.has(materialId))
       errors.push(`${machine.id}: unknown principal material ${materialId}`);
   }
-  const bom = machine.approvedPhysicalBOM;
-  if (!bom) continue;
+  const bom = machine.manufacturing;
+  if (!bom) { errors.push(`${machine.id}: missing consolidated manufacturing record`); continue; }
+  if (machine.approvedPhysicalBOM !== undefined)
+    errors.push(`${machine.id}: retired parallel approvedPhysicalBOM cannot return`);
+  if (!machine.amenityProfile) continue;
   approvedLuxuryCount++;
-  if (bom.approval !== 'approved-physical-bom-2026-11-02')
-    errors.push(`${machine.id}: unexpected physical BOM approval`);
-  if (!machine.amenityProfile || machine.amenityProfile.approval !== 'approved-discovery-2026-11-02')
-    errors.push(`${machine.id}: approved physical BOM missing approved amenity rating`);
+  if (machine.amenityProfile.approval !== 'approved-discovery-2026-11-02')
+    errors.push(`${machine.id}: approved amenity rating lost`);
   const linkedParts = new Set(machine.partIds || []);
   for (const entry of bom.finishedPartInputs || []) {
     if (!partById.has(entry.partId) || !linkedParts.has(entry.partId) ||
         !Number.isInteger(entry.quantity) || entry.quantity <= 0)
-      errors.push(`${machine.id}: invalid finished Part input ${JSON.stringify(entry)}`);
+      errors.push(`${machine.id}: invalid approved finished Part input ${JSON.stringify(entry)}`);
   }
   for (const entry of bom.directMaterialInputs || []) {
     if (!materialIds.has(entry.materialId) || !Number.isFinite(entry.quantityKg) ||
         entry.quantityKg <= 0)
-      errors.push(`${machine.id}: invalid direct material input ${JSON.stringify(entry)}`);
+      errors.push(`${machine.id}: invalid approved material ${JSON.stringify(entry)}`);
   }
-  for (const field of ['assemblyLabourHours', 'factoryShopHours', 'qualificationTestHours']) {
-    if (!Number.isFinite(bom[field]) || bom[field] < 0)
-      errors.push(`${machine.id}: invalid approved manufacturing ${field}`);
+  for (const field of ['assemblyHours', 'factoryHours', 'testHours']) {
+    if (!Number.isFinite(bom[field]) || bom[field] < 0 ||
+        machine.fieldApprovalStatuses['manufacturing.' + field] !== 'Approved')
+      errors.push(`${machine.id}: approved manufacturing ${field} must survive migration`);
   }
-  if (!(bom.targetGoodUnitYield > 0 && bom.targetGoodUnitYield <= 1))
-    errors.push(`${machine.id}: invalid approved production yield`);
-  for (const field of ['residentServiceSlotsPerDay', 'floorAreaM2', 'operatingPowerUnits']) {
-    if (!(machine.amenityProfile[field] > 0))
-      errors.push(`${machine.id}: invalid approved amenity rating ${field}`);
+  if (!(bom.goodUnitYield > 0 && bom.goodUnitYield <= 1))
+    errors.push(`${machine.id}: approved production yield invalid`);
+  for (const [legacy,field] of [['residentServiceSlotsPerDay','ratedCapacity'],
+                                ['floorAreaM2','footprintM2'],
+                                ['operatingPowerUnits','powerUnits']]) {
+    if (!(machine.operating?.[field] > 0) ||
+        machine.operating[field] !== machine.amenityProfile[legacy])
+      errors.push(`${machine.id}: invalid approved amenity ${field}`);
   }
-  if (machine.manufacturerCostCC != null || machine.baseSellQuoteCC != null)
-    errors.push(`${machine.id}: provisional prices must not be canonicalised`);
+  if (machine.fieldApprovalStatuses['manufacturing.manufacturerCostCC'] === 'Approved' ||
+      machine.fieldApprovalStatuses['manufacturing.manufacturerQuoteCC'] === 'Approved')
+    errors.push(`${machine.id}: provisional CC must not be approved`);
+  if (machine.approval === 'Approved')
+    errors.push(`${machine.id}: physical BOM approval is not blanket Machine approval`);
 }
 if (approvedLuxuryCount !== 5)
   errors.push(`Expected five approved physical amenity BOMs, found ${approvedLuxuryCount}`);

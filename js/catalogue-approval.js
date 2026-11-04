@@ -22,6 +22,39 @@ function fieldState(kind, record, key, value) {
     }
     return recorded;
   }
+  if (kind === "machines") {
+    if (!validApprovalStatuses.has(recorded)) {
+      throw new Error(record.id + ": missing or invalid explicit Machine approval for " + key);
+    }
+    if (recorded === "Approved") {
+      // Explicitly empty sets can be approved: no nested equipment, no
+      // outstanding compatibility mappings or no finished Part ingredients.
+      const validEmpty = new Set([
+        "partIds", "pendingPartCompatibility",
+        "manufacturing.finishedPartInputs",
+        "manufacturing.directMaterialInputs",
+        "manufacturing.nestedMachineInputs"
+      ]);
+      if (value === undefined || value === null || value === "" ||
+          (Array.isArray(value) && !value.length && !validEmpty.has(key)))
+        throw new Error(record.id + ": cannot approve absent Machine field " + key);
+      if (key === "pendingPartCompatibility" && value.length)
+        throw new Error(record.id + ": unresolved Part compatibility cannot be approved");
+      // Imported scenario numbers are not signed-off values. A later reviewer
+      // can approve them only alongside documented mass/economic evidence,
+      // not by changing the status column while keeping provisional inputs.
+      if (["manufacturing.manufacturerCostCC", "manufacturing.manufacturerQuoteCC"].includes(key) &&
+          !record.manufacturing?.approvedPriceEvidence?.trim())
+        throw new Error(record.id + ": provisional Machine CC requires approved price evidence");
+      if (key === "manufacturing.finishedMassKg" &&
+          !record.manufacturing?.approvedMassEvidence?.trim())
+        throw new Error(record.id + ": estimated Machine mass requires approved mass evidence");
+      if (key === "manufacturing.directMaterialInputs" &&
+          value.some(input => input.qualification === "planning-only-unqualified"))
+        throw new Error(record.id + ": unqualified Machine material cannot be approved");
+    }
+    return recorded;
+  }
   if (recorded && validApprovalStatuses.has(recorded)) return recorded;
   if (kind === "substances") {
     return key === "classificationStatus" && record.classificationStatus === "classified"
@@ -44,7 +77,11 @@ export function approvalSummary(kind, record, fields, catalogue) {
     const value = fields[key];
     // Only parts require every declared review field. Legacy Machine/Building
     // fields may not apply, and natural resources have no classification field.
-    if (kind !== "parts" && (value === undefined || value === null || value === "")) continue;
+    // Housing technology tier is only applicable to residential amenity Machines.
+    if (kind === "machines" && key === "operating.housingTechTier" && !record.amenityProfile)
+      continue;
+    if (kind !== "parts" && kind !== "machines" &&
+        (value === undefined || value === null || value === "")) continue;
     const state = fieldState(kind, record, key, value);
     states[key] = state;
     if (state !== "Approved") pending.push(definition.name);
@@ -59,7 +96,7 @@ export function approvalSummary(kind, record, fields, catalogue) {
     values.every(value => ["Draft", "Not Reviewed"].includes(value)) ? "Draft" :
     values.every(value => ["Proposed", "Not Reviewed"].includes(value)) ? "Proposed" :
     "In Review";
-  if (kind === "parts") {
+  if (kind === "parts" || kind === "machines") {
     if (!validApprovalStatuses.has(record.approval)) {
       throw new Error(record.id + ": missing or invalid canonical Part approval");
     }
@@ -68,7 +105,7 @@ export function approvalSummary(kind, record, fields, catalogue) {
         " disagrees with explicit field statuses (" + derived + ")");
     }
   }
-  return { approval: kind === "parts" ? record.approval : derived,
+  return { approval: kind === "parts" || kind === "machines" ? record.approval : derived,
     needsApproval: pending, fieldStates: states };
 }
 

@@ -215,6 +215,11 @@ export function fieldText(value, catalogue) {
   if (Array.isArray(value)) return value.map(item => fieldText(item, catalogue)).filter(Boolean).join(", ");
   if (typeof value === "string" && catalogue?.get(value)) return catalogue.get(value).name;
   if (value && typeof value === "object") {
+    if (value.supersededFamily && Array.isArray(value.candidatePartIds))
+      return value.supersededFamily + ": " + value.candidatePartIds
+        .map(id => catalogue?.get(id)?.name || id).join(" / ") + " (pending)";
+    if (value.machineId) return (catalogue?.get(value.machineId)?.name || value.machineId) +
+      " × " + value.quantity;
     if (value.partId) return (catalogue?.get(value.partId)?.name || value.partId) +
       " × " + value.quantity;
     if (value.materialId) return (catalogue?.get(value.materialId)?.name || value.materialId) +
