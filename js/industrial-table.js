@@ -1,4 +1,5 @@
 import { createSubstanceTable } from "./substance-table.js";
+import { approvalSummary, partMassReview } from "./catalogue-approval.js";
 
 // This is a read-only projection, not an independently authored industrial catalogue.
 // Canonical identities and relationships are loaded from the Universe manifest.
@@ -25,7 +26,7 @@ const configurations = {
     title: "Parts",
     description: "19 finished Part products. Three superseded generic Parts were retired; unresolved Machine and research relationships remain pending review. Quantities, masses and CC prices are discovery planning references, not live game recipes or prices.",
     defaultColumns: ["name", "category", "subCategory", "finishedUnitCount", "materialInputs",
-      "materialApprovalStatus", "planningReference.finishedMassKg",
+      "approval", "needsApproval", "massReview", "planningReference.finishedMassKg",
       "planningReference.manufacturerCostCC", "planningReference.baseManufacturerQuoteCC"],
     imagePreviewField: "partImage",
     columnLabels: {
@@ -34,7 +35,10 @@ const configurations = {
       "planningReference.finishedMassKg": "Weight (kg)",
       "planningReference.manufacturerCostCC": "Manufacturer Cost (CC)",
       "planningReference.baseManufacturerQuoteCC": "Manufacturer Quote Cost (CC)",
-      partImage: "Part Image"
+      partImage: "Part Image",
+      approval: "Approval",
+      needsApproval: "Needs Approval",
+      massReview: "Mass Review"
     },
     hiddenFields: ["entityType", "catalogueStatus"],
     linkedFields: ["substanceIds", "materialInputs", "machineIds"],
@@ -45,8 +49,8 @@ const configurations = {
         "substanceIds materialInputs unresolvedMaterialInputs"),
       group("Machines & Usage", "machineIds"),
       group("Production & Prices",
-        "planningReference.finishedMassKg planningReference.manufacturerCostCC planningReference.baseManufacturerQuoteCC planningReference.status planningReference.basis"),
-      group("Discovery & Approval", "materialApprovalStatus"),
+        "massReview planningReference.finishedMassKg planningReference.manufacturerCostCC planningReference.baseManufacturerQuoteCC planningReference.status planningReference.basis"),
+      group("Discovery & Approval", "approval needsApproval materialApprovalStatus"),
       group("Canon & Provenance", "canonStatus provenance.desktopPath planningReference.sourceSection"),
       group("Artwork & Visuals", "partImage image.key image.generated image.status image.promptDescription image.notes"),
       group("Description", "description")
@@ -56,8 +60,7 @@ const configurations = {
     title: "Machines",
     description: "Canonical Machines and Android manufacturing proposals. Parts BOMs and proposed prices remain review references until reconciled.",
     defaultColumns: ["name", "category", "subCategory", "partIds",
-      "review.manufacturingBOM.proposed_finished_part_ids_and_counts",
-      "review.manufacturingBOM.approval_status"],
+      "approval", "needsApproval", "review.manufacturingBOM.proposed_finished_part_ids_and_counts"],
     groups: [
       common[0],
       group("Parts & Materials",
@@ -71,7 +74,7 @@ const configurations = {
       group("Costs & Reference Quotes",
         "review.manufacturingBOM.embedded_parts_factory_cost_CC review.manufacturingBOM.direct_processed_material_cost_CC review.manufacturingBOM.nested_machine_factory_cost_CC review.manufacturingBOM.proposed_manufacturer_cost_CC review.manufacturingBOM.proposed_base_sell_quote_CC"),
       group("Discovery & Approval",
-        "review.manufacturingBOM.approval_status review.manufacturingBOM.unresolved_design_constraints"),
+        "approval needsApproval review.manufacturingBOM.approval_status review.manufacturingBOM.unresolved_design_constraints"),
       common[1], visuals, group("Description", "description")
     ]
   },
@@ -79,7 +82,7 @@ const configurations = {
     title: "Buildings",
     description: "Canonical Buildings with Android construction BOMs, machine-fit proposals, costs and review states. No provisional proposal is gameplay canon.",
     defaultColumns: ["name", "category", "buildingType", "machineIds",
-      "review.systematicReview.review_status",
+      "approval", "needsApproval",
       "review.quantitativeBOM.structural_shell_and_fit_out_inputs_kg",
       "review.quantitativeBOM.site_construction_labour_hours"],
     groups: [
@@ -96,7 +99,7 @@ const configurations = {
       group("Economics & Valuation",
         "review.quantitativeBOM.direct_material_cost_CC_status review.quantitativeBOM.labour_cost_CC_partial review.quantitativeBOM.base_installed_construction_cost_CC review.quantitativeBOM.base_new_build_sell_quote_CC"),
       group("Discovery & Approval",
-        "review.systematicReview.review_order review.systematicReview.review_status review.systematicReview.numeric_bom_reference review.bomCoverage.review_status review.bomCoverage.shell_construction_material_quantities_status review.quantitativeBOM.approval_status review.quantitativeBOM.unresolved_dependencies"),
+        "approval needsApproval review.systematicReview.review_order review.systematicReview.review_status review.systematicReview.numeric_bom_reference review.bomCoverage.review_status review.bomCoverage.shell_construction_material_quantities_status review.quantitativeBOM.approval_status review.quantitativeBOM.unresolved_dependencies"),
       common[1], visuals, group("Description", "description")
     ]
   }
@@ -175,6 +178,10 @@ export function industrialReviewRows(kind, catalogue, reference) {
     // fields. Keep the frozen Android snapshot for history, not duplicate columns.
     if (kind !== "parts" && source.has(record.id))
       flatten(source.get(record.id), "review", fields);
+    if (kind === "parts") fields.massReview = partMassReview(record);
+    const summary = approvalSummary(kind, record, fields, catalogue);
+    fields.approval = summary.approval;
+    fields.needsApproval = summary.needsApproval;
     return { id: record.id, record, collection: kind, fields, canonical: true };
   });
   // Any still-unmapped proposal remains visibly non-canonical.
@@ -185,6 +192,8 @@ export function industrialReviewRows(kind, catalogue, reference) {
     };
     const fields = flatten(record);
     flatten(candidate.review, "review", fields);
+    fields.approval = "Proposed";
+    fields.needsApproval = ["Canonical identity"];
     return { id: candidate.id, record, collection: kind,
       fields, canonical: false };
   });
@@ -209,7 +218,7 @@ export function createIndustrialTables() {
         if (kind === "parts")
           return "Parts identities, material links and planning data now come from canonical Universe data/parts.json. " +
             "The 18 CC reference prices and masses are discovery planning only, NOT live rates. " +
-            "Three superseded generic identities have been removed; unresolved Machine/research mappings are marked for review. Unknown input materials remain explicitly unresolved.";
+            "Three superseded generic identities have been removed; unresolved Machine/research mappings are marked for review. Material identities are resolved; qualification, quantity and pricing reviews remain visible in Needs Approval.";
         return reference
           ? "Android discovery is a read-only review snapshot at " +
             reference.sourceCommit.slice(0, 8) +
