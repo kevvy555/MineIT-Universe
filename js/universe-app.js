@@ -688,6 +688,7 @@ function fieldsFor(collection, entity) {
       field('Material stage', esc(entity.materialStage)),
       field('Stock handling', esc(entity.stockBehaviour)),
       field('Originating natural resources', links(entity.sourceRawResourceIds)),
+      field('Upstream refined materials', links(entity.upstreamMaterialIds)),
       field('Upstream inputs (discovery)', esc(entity.upstreamInputDescription)),
       field('Industrial use', esc(entity.industrialRole)),
       field('Used in Part manufacturing', links(relatedIds('parts', part =>
