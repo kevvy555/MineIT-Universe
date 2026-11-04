@@ -7,18 +7,16 @@ export const validApprovalStatuses = new Set([
 
 function fieldState(kind, record, key, value) {
   const recorded = record.fieldApprovalStatuses?.[key];
+  if (kind === "parts") {
+    if (!validApprovalStatuses.has(recorded)) {
+      throw new Error(record.id + ": missing or invalid explicit approval for " + key);
+    }
+    return recorded;
+  }
   if (recorded && validApprovalStatuses.has(recorded)) return recorded;
   if (kind === "substances") {
     return key === "classificationStatus" && record.classificationStatus === "classified"
       ? "Approved" : "In Review";
-  }
-  if (kind === "parts") {
-    if (key === "materialInputs")
-      return record.materialApprovalStatus === "APPROVED" ? "Approved" : "In Review";
-    if (key === "planningReference.finishedMassKg")
-      return record.materialApprovalStatus === "APPROVED" && Number.isFinite(value)
-        ? "Approved" : Number.isFinite(value) ? "In Review" : "Blocked";
-    return Number.isFinite(value) ? "In Review" : "Blocked";
   }
   // A proposal in the imported Android discovery snapshot is not a canonical
   // authorisation. Missing fields are not automatically assumed required.
@@ -43,10 +41,26 @@ export function approvalSummary(kind, record, fields, catalogue) {
     if (state !== "Approved") pending.push(definition.name);
   }
   const values = Object.values(states);
-  const approval = values.length === 0 ? "Not Reviewed" :
+  const derived = values.length === 0 || values.every(value => value === "Not Reviewed")
+    ? "Not Reviewed" :
     values.every(value => value === "Approved") ? "Approved" :
-    values.includes("Blocked") ? "Blocked" : "In Review";
-  return { approval, needsApproval: pending, fieldStates: states };
+    values.includes("Blocked") ? "Blocked" :
+    values.includes("Rejected") ? "Rejected" :
+    values.every(value => value === "Superseded") ? "Superseded" :
+    values.every(value => ["Draft", "Not Reviewed"].includes(value)) ? "Draft" :
+    values.every(value => ["Proposed", "Not Reviewed"].includes(value)) ? "Proposed" :
+    "In Review";
+  if (kind === "parts") {
+    if (!validApprovalStatuses.has(record.approval)) {
+      throw new Error(record.id + ": missing or invalid canonical Part approval");
+    }
+    if (record.approval !== derived) {
+      throw new Error(record.id + ": canonical Approval " + record.approval +
+        " disagrees with explicit field statuses (" + derived + ")");
+    }
+  }
+  return { approval: kind === "parts" ? record.approval : derived,
+    needsApproval: pending, fieldStates: states };
 }
 
 export function partMassReview(part) {
