@@ -10,7 +10,9 @@ const collections = {
   mobileResourceDefinitions: load("data/mobile-resource-definitions.json"),
   mobileResourceOccurrenceProfiles: load("data/mobile-resource-occurrence-profiles.json"),
   mobileBiologicalResources: load("data/mobile-biological-resources.json"),
-  namedSubstances: load("data/named-substances.json")
+  namedSubstances: load("data/named-substances.json"),
+  approvalStatuses: load("data/approval-statuses.json"),
+  columnDefinitions: load("data/column-definitions.json")
 };
 const all = Object.values(collections).flat();
 const byId = new Map(all.map(record => [record.id, record]));
@@ -44,6 +46,10 @@ assert.ok(keys.includes("occurrence.eligibleWorldTypeIds"));
 assert.ok(keys.includes("image.status"));
 assert.ok(keys.includes("sourceProvenance.path"));
 assert.ok(keys.includes("upstreamMaterialIds"), "LFP cathode source links must remain reviewable");
+assert.ok(keys.includes("approval") && keys.includes("needsApproval"),
+  "Every substance row exposes the shared review columns");
+assert.equal(rows.find(row => row.id === "named-substance-fission-fuel-material").fields.approval,
+  "In Review", "Unclassified fission fuel must not be silently approved");
 const lfpMaterialRows = rows.filter(row => row.id === "named-substance-lfp-cathode-material" ||
   row.id === "named-substance-lfp-battery-electrolyte");
 assert.equal(lfpMaterialRows.length, 2, "Both stockable refined battery materials must appear");
@@ -73,8 +79,8 @@ assert.deepEqual(SUBSTANCE_COLUMN_GROUPS.map(group => group.name), [
   "Sources & Provenance", "Artwork & Visuals"
 ]);
 const groupedFields = SUBSTANCE_COLUMN_GROUPS.flatMap(group => group.fields);
-assert.equal(groupedFields.length, 76, "The full current column set is preserved");
-assert.equal(new Set(groupedFields).size, 76, "Every field belongs to one category");
+assert.equal(groupedFields.length, 78, "The full current column set is preserved");
+assert.equal(new Set(groupedFields).size, 78, "Every field belongs to one category");
 assert.deepEqual(new Set(groupedFields), new Set(keys), "No missing or extra field definitions");
 assert.ok(SUBSTANCE_COLUMN_GROUPS.every(group => group.fields.length > 0));
 for (const group of SUBSTANCE_COLUMN_GROUPS) {
