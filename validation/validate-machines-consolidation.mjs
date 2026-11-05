@@ -123,6 +123,44 @@ for (const machine of machines) {
   assert.ok(Number.isInteger(machine.operating.housingTechTier));
   assert.equal(machine.fieldApprovalStatuses["operating.housingTechTier"], "Approved");
 }
+
+/**
+ * A nested Machine BOM must be a directed acyclic graph: cycles would make
+ * manufacturing quantities recursively infinite. Keep a full path in errors.
+ */
+function assertAcyclicMachineBoms(graph) {
+  const visited = new Set();
+  const active = new Set();
+  const path = [];
+  function visit(id) {
+    if (active.has(id)) {
+      const cycleStart = path.indexOf(id);
+      throw new Error("Cyclic nested Machine BOM: " +
+        [...path.slice(cycleStart), id].join(" -> "));
+    }
+    if (visited.has(id)) return;
+    assert.ok(graph.has(id), "Nested Machine BOM references missing Machine " + id);
+    active.add(id);
+    path.push(id);
+    for (const child of graph.get(id)) visit(child);
+    path.pop();
+    active.delete(id);
+    visited.add(id);
+  }
+  for (const id of graph.keys()) visit(id);
+}
+
+// Exercise direct and indirect cycles, not just the current (valid) catalogue.
+assert.throws(() => assertAcyclicMachineBoms(new Map([["a", ["a"]]])),
+  /Cyclic nested Machine BOM: a -> a/);
+assert.throws(() => assertAcyclicMachineBoms(new Map([
+  ["a", ["b"]], ["b", ["c"]], ["c", ["a"]]
+])), /Cyclic nested Machine BOM: a -> b -> c -> a/);
+assertAcyclicMachineBoms(new Map([["a", ["b"]], ["b", []], ["c", ["b"]]]));
+assertAcyclicMachineBoms(new Map(machines.map(machine => [
+  machine.id, (machine.manufacturing.nestedMachineInputs || []).map(input => input.machineId)
+])));
+
 assert.equal(pending, 14, "14 deliberate compatibility reviews must survive");
 assert.equal(fullyApprovedBoms, 5, "Five approved accommodation physical BOMs must survive");
 assert.equal(blocked, 7, "Seven blocked price designs must remain blocked");

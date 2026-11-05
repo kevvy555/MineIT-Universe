@@ -355,6 +355,45 @@ function partMaterialLinks(inputs) {
 }
 
 
+
+/**
+ * Keep a null (unresolved) BOM different from an explicit empty list.
+ * All recipe identities must resolve through the canonical catalogue.
+ */
+function machineRecipeLinks(inputs, idKey, quantityKey, unit = '') {
+  if (inputs == null) return 'TBD — input list not yet reviewed';
+  if (!inputs.length) return 'None recorded — verify field approval';
+  return '<div class="multiLinks">' + inputs.map(input => {
+    const id = input[idKey];
+    const amount = Number.isFinite(input[quantityKey]) ? input[quantityKey] : 'TBD';
+    const qualifier = input.qualification === 'planning-only-unqualified'
+      ? ' (material grade unqualified)' : '';
+    const label = (state.catalogue.get(id)?.name || id) +
+      ' × ' + amount + unit + qualifier;
+    return link(id, label);
+  }).join('') + '</div>';
+}
+
+function machineReviewSummary(entity) {
+  const fields = {
+    partIds: entity.partIds,
+    pendingPartCompatibility: entity.pendingPartCompatibility || [],
+    inputSummary: entity.inputSummary,
+    outputSummary: entity.outputSummary
+  };
+  for (const [key, value] of Object.entries(entity.manufacturing || {}))
+    fields['manufacturing.' + key] = value;
+  for (const [key, value] of Object.entries(entity.operating || {}))
+    fields['operating.' + key] = value;
+  return approvalSummary('machines', entity, fields, state.catalogue);
+}
+
+function machineNumeric(value, unit = '', approval = 'In Review') {
+  if (!Number.isFinite(value)) return 'TBD — review required';
+  return esc(value + unit + (approval === 'Approved' ? ' (approved)' : ' (provisional)'));
+}
+
+
 function field(label, value) {
   return `<div class="field"><div class="fieldLabel">${esc(label)}</div><div class="fieldValue">${value ?? '—'}</div></div>`;
 }
@@ -748,16 +787,45 @@ function fieldsFor(collection, entity) {
     );
   }
   if (collection === 'machines') {
+    const bom = entity.manufacturing || {};
+    const operating = entity.operating || {};
+    const status = entity.fieldApprovalStatuses || {};
+    const review = machineReviewSummary(entity);
     fields.push(
       field('Category', esc(entity.category)),
       field('Sub-category', esc(entity.subCategory)),
       field('Sources', tags(entity.sources)),
-      field('Construction parts', links(entity.partIds)),
+      field('Approval', esc(review.approval)),
+      field('Needs Approval', esc(review.needsApproval.join(', ') || 'None')),
+      field('Source-linked compatible Parts (not BOM quantities)', links(entity.partIds)),
       field('Unapproved Part compatibility candidates', pendingPartReviews(entity.pendingPartCompatibility)),
-      field('Installed in buildings', links(relatedIds('buildings', building => (building.machineIds || []).includes(entity.id)))),
+      field('Possible building installations', links(relatedIds('buildings', building =>
+        (building.machineIds || []).includes(entity.id)))),
+      field('Finished Parts per machine', machineRecipeLinks(bom.finishedPartInputs, 'partId', 'quantity')),
+      field('Direct materials per machine', machineRecipeLinks(bom.directMaterialInputs, 'materialId', 'quantityKg', ' kg')),
+      field('Nested Machines per machine', machineRecipeLinks(bom.nestedMachineInputs, 'machineId', 'quantity')),
+      field('Assembly hours', machineNumeric(bom.assemblyHours, ' h', status['manufacturing.assemblyHours'])),
+      field('Factory hours', machineNumeric(bom.factoryHours, ' h', status['manufacturing.factoryHours'])),
+      field('Test hours', machineNumeric(bom.testHours, ' h', status['manufacturing.testHours'])),
+      field('Good unit yield', machineNumeric(bom.goodUnitYield, '', status['manufacturing.goodUnitYield'])),
+      field('Finished mass', machineNumeric(bom.finishedMassKg, ' kg', status['manufacturing.finishedMassKg'])),
+      field('Manufacturer Cost (CC)', machineNumeric(bom.manufacturerCostCC, ' CC', status['manufacturing.manufacturerCostCC'])),
+      field('Manufacturer Quote (CC)', machineNumeric(bom.manufacturerQuoteCC, ' CC', status['manufacturing.manufacturerQuoteCC'])),
+      field('Rated capacity', machineNumeric(operating.ratedCapacity,
+        entity.amenityProfile ? ' resident service slots/day' : '',
+        status['operating.ratedCapacity'])),
+      field('Operating power', machineNumeric(operating.powerUnits, ' power units', status['operating.powerUnits'])),
+      field('Footprint', machineNumeric(operating.footprintM2, ' m²', status['operating.footprintM2'])),
+      ...(entity.amenityProfile ? [
+        field('Housing technology tier', machineNumeric(operating.housingTechTier, '',
+          status['operating.housingTechTier'])),
+        field('Physical BOM approval', esc(entity.amenityProfile.approval))
+      ] : []),
       field('Input', esc(entity.inputSummary)),
       field('Output', esc(entity.outputSummary)),
-      field('Fuel type', esc(entity.fuelType))
+      field('Fuel type', esc(entity.fuelType)),
+      field('Manufacturing review basis', esc(bom.reviewBasis)),
+      field('Unresolved design constraints', esc(bom.unresolvedDesignConstraints))
     );
   }
   if (collection === 'buildings') {
