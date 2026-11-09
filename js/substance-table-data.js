@@ -24,10 +24,10 @@ export function substanceRows(catalogue, androidReference) {
       const fields = flatten(record);
       fields["image.preview"] = record.image?.generated && record.image?.key
         ? "Available" : record.image ? "Not generated" : "No image metadata";
-      fields.kind = kind;
+      fields.kind = typeof kind === "function" ? kind(record) : kind;
       fields.archetype = record.dominantArchetype || generic?.dominantArchetype ||
         (collection === "mobileBiologicalResources" ? "Organic" : "");
-      fields.genericClassName = generic?.name || "";
+      fields.genericClassName = collection === "substances" ? record.name : generic?.name || "";
       if (occurrence.has(record.id)) flatten(occurrence.get(record.id), "occurrence", fields);
       if (tuning.has(record.id)) flatten(tuning.get(record.id), "android", fields);
       const summary = approvalSummary("substances", record, fields, catalogue);
@@ -36,7 +36,11 @@ export function substanceRows(catalogue, androidReference) {
       result.push({ id: record.id, record, collection, fields });
     }
   };
-  // Generic classes remain classification parents, not physical resource rows.
+  // Generic raw/refined categories own the canonical material art under
+  // assets/art/universe/substances, so they are first-class review rows.
+  add("substances", record => record.canonStatus === "source-canonical"
+    ? (record.refined ? "Refined substance category" : "Raw substance category")
+    : "Ontology parent category");
   add("mobileResourceDefinitions", "Natural resource");
   add("namedSubstances", "Named material");
   add("mobileBiologicalResources", "Biological food");
@@ -62,7 +66,12 @@ export const SUBSTANCE_COLUMN_GROUPS = [
       "genericClassName",
       "genericSubstanceId",
       "classificationStatus",
-      "materialStage"
+      "materialStage",
+      "substanceType",
+      "standardState",
+      "form",
+      "refined",
+      "tier"
     ]
   },
   {
@@ -73,6 +82,7 @@ export const SUBSTANCE_COLUMN_GROUPS = [
       "stockBehaviour",
       "renewable",
       "naturalOccurrence",
+      "thermalBehaviour",
       "visualDescription"
     ]
   },
@@ -165,7 +175,9 @@ export const SUBSTANCE_COLUMN_GROUPS = [
       "provenance.approvedDate",
       "sourceProvenance.repository",
       "sourceProvenance.path",
-      "sourceProvenance.workingId"
+      "sourceProvenance.workingId",
+      "sourceDocumentId",
+      "sourceSection"
     ]
   },
   {

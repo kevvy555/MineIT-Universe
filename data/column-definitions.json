@@ -981,6 +981,78 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
+    "id": "column-definition-substances-form-5f30f4a2",
+    "name": "Form",
+    "table": "substances",
+    "fieldKey": "form",
+    "category": "Identity & Classification",
+    "requiresApproval": false,
+    "description": "Canonical physical form of a generic raw or refined substance category."
+  },
+  {
+    "id": "column-definition-substances-refined-8b45c102",
+    "name": "Refined",
+    "table": "substances",
+    "fieldKey": "refined",
+    "category": "Identity & Classification",
+    "requiresApproval": false,
+    "description": "Whether the generic substance category is refined or processed stock."
+  },
+  {
+    "id": "column-definition-substances-source-document-id-a31d6e2f",
+    "name": "Source Document ID",
+    "table": "substances",
+    "fieldKey": "sourceDocumentId",
+    "category": "Sources & Provenance",
+    "requiresApproval": false,
+    "description": "Canonical lore document that owns the generic substance category."
+  },
+  {
+    "id": "column-definition-substances-source-section-c9e83a44",
+    "name": "Source Section",
+    "table": "substances",
+    "fieldKey": "sourceSection",
+    "category": "Sources & Provenance",
+    "requiresApproval": false,
+    "description": "Section of the canonical lore document defining the generic category."
+  },
+  {
+    "id": "column-definition-substances-standard-state-4bd6ad19",
+    "name": "Standard State",
+    "table": "substances",
+    "fieldKey": "standardState",
+    "category": "Identity & Classification",
+    "requiresApproval": false,
+    "description": "Dominant physical state near standard temperature and pressure."
+  },
+  {
+    "id": "column-definition-substances-substance-type-6a2f148c",
+    "name": "Substance Type",
+    "table": "substances",
+    "fieldKey": "substanceType",
+    "category": "Identity & Classification",
+    "requiresApproval": false,
+    "description": "Element, compound, alloy, composite or mixture classification."
+  },
+  {
+    "id": "column-definition-substances-thermal-behaviour-3cd491e7",
+    "name": "Thermal Behaviour",
+    "table": "substances",
+    "fieldKey": "thermalBehaviour",
+    "category": "Properties & Applications",
+    "requiresApproval": false,
+    "description": "Dominant authored response to heating: state change, decomposition or burning."
+  },
+  {
+    "id": "column-definition-substances-tier-0f92ab65",
+    "name": "Tier",
+    "table": "substances",
+    "fieldKey": "tier",
+    "category": "Identity & Classification",
+    "requiresApproval": false,
+    "description": "Desktop-aligned P0 or P1 industrial catalogue tier."
+  },
+  {
     "id": "column-definition-substances-image-preview-add1f318",
     "name": "Image",
     "table": "substances",

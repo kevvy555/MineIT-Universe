@@ -201,12 +201,12 @@ Dense, strong, conductive; very low energy content. Raw ores are impure mixtures
 | Refined light | Metal | Element | ChangesState | Solid | Yes | P1 | Lightweight structures |
 | Refined heavy | Metal | Element | ChangesState | Solid | Yes | P1 | Shielding, ballast |
 | Refined rare | Metal | Element | ChangesState | Solid | Yes | P1 | Advanced electronics, catalysts |
-| Structural alloy | Alloy | Alloy | ChangesState | Solid | No | P1 | High tensile strength |
-| Conductive alloy | Alloy | Alloy | ChangesState | Solid | No | P1 | Optimised conductivity |
-| Heat-resistant alloy | Alloy | Alloy | ChangesState | Solid | No | P1 | High thermal tolerance |
-| Lightweight alloy | Alloy | Alloy | ChangesState | Solid | No | P1 | Low mass, structural |
-| Magnetic alloy | Alloy | Alloy | ChangesState | Solid | No | P1 | Enhanced magnetic properties |
-| Corrosion-resistant alloy | Alloy | Alloy | ChangesState | Solid | No | P1 | Chemical and atmospheric durability |
+| Structural alloy | Alloy | Alloy | ChangesState | Solid | Yes | P1 | High tensile strength |
+| Conductive alloy | Alloy | Alloy | ChangesState | Solid | Yes | P1 | Optimised conductivity |
+| Heat-resistant alloy | Alloy | Alloy | ChangesState | Solid | Yes | P1 | High thermal tolerance |
+| Lightweight alloy | Alloy | Alloy | ChangesState | Solid | Yes | P1 | Low mass, structural |
+| Magnetic alloy | Alloy | Alloy | ChangesState | Solid | Yes | P1 | Enhanced magnetic properties |
+| Corrosion-resistant alloy | Alloy | Alloy | ChangesState | Solid | Yes | P1 | Chemical and atmospheric durability |
 | Catalytic | Compound | Compound | ChangesState | Solid | Yes | P1 | Accelerates chemical reactions (Metal approximation) |
 
 ## 11.2 Silicate
@@ -224,8 +224,8 @@ Stone, glass and ceramic minerals; hard and heat-tolerant with negligible energy
 | Glass | Solid | Compound | ChangesState | Solid | Yes | P0 | Optics, windows, vessels |
 | Refined ceramic | Ceramic | Compound | ChangesState | Solid | Yes | P0 | Crucibles, insulators, pipes |
 | Refined insulator | Insulator | Compound | ChangesState | Solid | Yes | P0 | Electrical insulation |
-| Structural composite (+ Metal / Carbon) | Composite | Composite | Decomposes | Solid | No | P1 | High-performance structures |
-| Thermal composite (+ Metal) | Composite | Composite | ChangesState | Solid | No | P1 | Engine linings, heat resistance |
+| Structural composite (+ Metal / Carbon) | Composite | Composite | Decomposes | Solid | Yes | P1 | High-performance structures |
+| Thermal composite (+ Metal) | Composite | Composite | ChangesState | Solid | Yes | P1 | Engine linings, heat resistance |
 
 ## 11.3 Carbon
 
@@ -243,9 +243,9 @@ Carbon-rich minerals, hydrocarbons and synthetic polymers; moderate-to-high ener
 | Refined liquid fuel | Liquid | Mixture | Burns | Liquid | Yes | P1 | Clean combustion |
 | Polymer | Solid | Compound | Decomposes | Solid | Yes | P1 | Seals, coatings |
 | Adhesive | Compound | Compound | Decomposes | Solid | Yes | P1 | Bonding, sealing |
-| Explosive | Compound | Compound | Burns | Solid | No | P1 | Blasting, accelerated mining |
+| Explosive | Compound | Compound | Burns | Solid | Yes | P1 | Blasting, accelerated mining |
 | Chemical solvent | Solvent | Compound | Decomposes | Liquid | Yes | P1 | Cleaning, dissolution |
-| Liquid propellant (+ Volatile oxidizer) | Mixture | Mixture | Burns | Liquid | No | P1 | Rocket engines |
+| Liquid propellant (+ Volatile oxidizer) | Mixture | Mixture | Burns | Liquid | Yes | P1 | Rocket engines |
 
 ## 11.4 Organic
 
@@ -268,7 +268,7 @@ Aqueous liquids and dissolved-component solutions. Solutions with a secondary ar
 | Acidic | Liquid | Mixture | ChangesState | Liquid | No | P0 | Electrolytes, chemical processing |
 | Alkaline | Liquid | Mixture | ChangesState | Liquid | No | P0 | Electrolytes, chemical processing |
 | Mineral-rich water (+ Salt) | Liquid | Mixture | ChangesState | Liquid | No | P1 | Dissolved mineral extraction |
-| Electrolyte solution (+ Salt) | Liquid | Mixture | ChangesState | Liquid | No | P0 | Batteries |
+| Electrolyte solution (+ Salt) | Liquid | Mixture | ChangesState | Liquid | Yes | P0 | Batteries |
 | Coolant | Liquid | Compound | ChangesState | Liquid | Yes | P1 | Thermal management |
 | Chemical reagent | Liquid | Mixture | ChangesState | Liquid | No | P1 | Laboratory and manufacturing |
 | Concentrated acid | Liquid | Mixture | ChangesState | Liquid | No | P1 | Etching, processing |

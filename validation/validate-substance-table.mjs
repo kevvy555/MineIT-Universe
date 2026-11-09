@@ -29,13 +29,16 @@ assert.deepEqual(new Set(reference.resources.map(r => r.resourceId)),
 assert.equal(new Set(reference.resources.map(r => r.resourceId)).size, 42);
 
 const rows = substanceRows(catalogue, reference);
-assert.equal(rows.length, 114, "42 natural + 65 named + 7 biological");
-assert.ok(rows.every(row => row.collection !== "substances"));
+assert.equal(rows.length, 194, "80 generic + 42 natural + 65 named + 7 biological");
+assert.equal(rows.filter(row => row.collection === "substances").length, 80);
 assert.equal(collections.substances.length, 80);
 assert.equal(new Set(rows.map(row => row.id)).size, rows.length, "No duplicated resources");
 assert.equal(rows.filter(row => row.fields.kind === "Biological food").length, 7);
 assert.equal(rows.filter(row => row.fields.kind === "Named material").length, 65);
 assert.equal(rows.filter(row => row.fields.kind === "Natural resource").length, 42);
+assert.equal(rows.filter(row => row.fields.kind === "Raw substance category").length, 41);
+assert.equal(rows.filter(row => row.fields.kind === "Refined substance category").length, 34);
+assert.equal(rows.filter(row => row.fields.kind === "Ontology parent category").length, 5);
 assert.equal(rows.find(row => row.id === "mobile-resource-iron-ore").fields.genericClassName,
   "Structural Metal Ore");
 assert.ok(rows.find(row => row.id === "mobile-resource-iron-ore").fields["android.baseScan"]);
@@ -49,6 +52,10 @@ assert.equal(rows.find(row => row.id === "mobile-resource-iron-ore").fields["ima
   "Available");
 assert.equal(rows.find(row => row.id === "named-substance-aluminium").fields["image.preview"],
   "No image metadata");
+assert.equal(rows.find(row => row.id === "substance-refined-structural-metal").fields["image.preview"],
+  "Available");
+assert.equal(rows.find(row => row.id === "substance-carbonate-mineral").fields["image.preview"],
+  "Not generated");
 assert.ok(keys.includes("sourceProvenance.path"));
 assert.ok(keys.includes("upstreamMaterialIds"), "LFP cathode source links must remain reviewable");
 assert.ok(keys.includes("approval") && keys.includes("needsApproval"),
@@ -84,8 +91,8 @@ assert.deepEqual(SUBSTANCE_COLUMN_GROUPS.map(group => group.name), [
   "Sources & Provenance", "Artwork & Visuals"
 ]);
 const groupedFields = SUBSTANCE_COLUMN_GROUPS.flatMap(group => group.fields);
-assert.equal(groupedFields.length, 79, "The full current column set is preserved");
-assert.equal(new Set(groupedFields).size, 79, "Every field belongs to one category");
+assert.equal(groupedFields.length, 87, "The full current column set is preserved");
+assert.equal(new Set(groupedFields).size, 87, "Every field belongs to one category");
 assert.deepEqual(new Set(groupedFields), new Set(keys), "No missing or extra field definitions");
 assert.ok(SUBSTANCE_COLUMN_GROUPS.every(group => group.fields.length > 0));
 for (const group of SUBSTANCE_COLUMN_GROUPS) {
@@ -108,11 +115,15 @@ assert.deepEqual(selectionForCategory(keys, keys, false), ["name"],
   "Global deselect leaves only the required Name column");
 
 const kindOptions = uniqueColumnValues(rows, "kind", catalogue);
-assert.deepEqual(kindOptions.map(x => x.label), ["Biological food", "Named material", "Natural resource"]);
+assert.deepEqual(kindOptions.map(x => x.label), [
+  "Biological food", "Named material", "Natural resource", "Ontology parent category",
+  "Raw substance category", "Refined substance category"
+]);
 assert.equal(kindOptions.reduce((sum, entry) => sum + entry.count, 0), rows.length);
 const selectedKinds = { kind: new Set([valueToken("Natural resource"), valueToken("Named material")]) };
 const included = applySubstanceTable(rows, ["kind"], {}, "name", 1, catalogue, selectedKinds);
-assert.equal(included.length, rows.length - collections.mobileBiologicalResources.length,
+assert.equal(included.length,
+  collections.mobileResourceDefinitions.length + collections.namedSubstances.length,
   "Selected dropdown values combine with OR within one column");
 const metalsOnly = applySubstanceTable(rows, ["kind", "archetype"], {}, "name", 1, catalogue,
   { kind: new Set([valueToken("Natural resource")]), archetype: new Set([valueToken("Metal")]) });

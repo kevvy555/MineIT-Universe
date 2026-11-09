@@ -446,6 +446,24 @@ for (const substance of collections.substances ?? []) {
 if ((collections.substances ?? []).length !== 80) {
   errors.push(`Substance catalogue must contain 75 source categories plus 5 Mobile integration parent categories; found ${(collections.substances ?? []).length}.`);
 }
+const sourceSubstances = (collections.substances ?? [])
+  .filter(substance => substance.canonStatus === 'source-canonical');
+const expectedSourceSubstanceCounts = [
+  ['P0', false, 17],
+  ['P0', true, 11],
+  ['P1', false, 24],
+  ['P1', true, 23]
+];
+if (sourceSubstances.length !== 75) {
+  errors.push(`Source substance catalogue must contain 75 Desktop-aligned categories; found ${sourceSubstances.length}.`);
+}
+for (const [tier, refined, expected] of expectedSourceSubstanceCounts) {
+  const actual = sourceSubstances.filter(substance =>
+    substance.tier === tier && substance.refined === refined).length;
+  if (actual !== expected) {
+    errors.push(`Source substance catalogue must contain ${expected} ${tier} ${refined ? 'refined' : 'raw'} categories; found ${actual}.`);
+  }
+}
 for (const part of collections.parts ?? []) {
   if (!part.category) errors.push(`${part.id}: category missing.`);
   if (!Array.isArray(part.substanceIds)) errors.push(`${part.id}: substanceIds must be an array.`);

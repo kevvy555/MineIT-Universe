@@ -97,7 +97,7 @@ export function createSubstanceTable(config = {}) {
     container.innerHTML = '<div class="substance-review">' +
       '<div class="substance-review-title"><div><div class="eyebrow">Universe Catalogue / bulk review</div>' +
       '<h1>' + esc(config.title || "Substances") + '</h1><p>' +
-      esc(config.description || "Individual natural resources and processed materials in one table. Choose columns, filter individual values, or click a name to open its details.") +
+      esc(config.description || "Generic raw/refined substance categories, natural resources, processed materials and biological resources in one table. Choose columns, filter individual values, or click a name to open its details.") +
       '</p></div>' +
       '<strong id="substanceCount"></strong></div>' +
       '<div class="substance-review-tools"><div class="substance-tool-actions">' +
