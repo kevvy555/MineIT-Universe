@@ -2,7 +2,8 @@
 
 ## GitHub Pages
 
-Publish the repository from `main` / root using GitHub Pages.
+Publish the `develop` branch with the GitHub Actions workflow in
+`.github/workflows/deploy-pages.yml`.
 
 Expected public site:
 
@@ -17,6 +18,12 @@ https://kevvy555.github.io/MineIT-Universe/data/manifest.json
 ```
 
 The root `index.html` is the standalone Universe Directory. `.nojekyll` ensures the repository is served as a plain static application without Jekyll processing.
+
+The publication workflow stages the repository as static content but excludes every
+`Originals/` directory. Lossless originals remain canonical repository assets for
+authoring and regeneration; the website serves the published WebP assets referenced by
+canonical `image.key` fields. This keeps the Pages artifact below GitHub's 1 GB limit
+without moving or duplicating canonical artwork.
 
 ## Canonical consumer flow
 
