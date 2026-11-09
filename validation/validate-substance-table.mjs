@@ -51,11 +51,13 @@ assert.ok(keys.includes("image.preview"));
 assert.equal(rows.find(row => row.id === "mobile-resource-iron-ore").fields["image.preview"],
   "Available");
 assert.equal(rows.find(row => row.id === "named-substance-aluminium").fields["image.preview"],
-  "No image metadata");
+  "Available");
 assert.equal(rows.find(row => row.id === "substance-refined-structural-metal").fields["image.preview"],
   "Available");
 assert.equal(rows.find(row => row.id === "substance-carbonate-mineral").fields["image.preview"],
-  "Not generated");
+  "Available");
+assert.ok(rows.every(row => row.fields["image.preview"] === "Available"),
+  "Every substance-table row must have a generated catalogue image");
 assert.ok(keys.includes("sourceProvenance.path"));
 assert.ok(keys.includes("upstreamMaterialIds"), "LFP cathode source links must remain reviewable");
 assert.ok(keys.includes("approval") && keys.includes("needsApproval"),

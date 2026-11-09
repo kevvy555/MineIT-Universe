@@ -46,7 +46,7 @@ Stable fields on each substance:
 - `dominantArchetype`, `form`, `refined`, `tier`
 - `industrialRole`
 - `sourceDocumentId`, `sourceSection`, `canonStatus`
-- optional `image` — catalog-still generation state (`generated`, `status`, `key`, `promptDescription`, `notes`). The 75 source P0/P1 categories currently carry generated 1:1 full-bleed stills; the five Mobile integration parent categories are ontology records and do not require identity art.
+- optional `image` — catalog-still generation state (`generated`, `status`, `key`, `promptDescription`, `notes`). All 80 current generic categories now carry generated 1:1 catalogue art, including the five Mobile integration parent categories, so every row in the combined Substances table has a directly owned image.
 
 No mutable prices, reserves, contract terms or quality rolls. Image prompts describe an identity-neutral full-bleed representation of the category itself, not objects on a background, a named local deposit, company brand or Veyrite.
 

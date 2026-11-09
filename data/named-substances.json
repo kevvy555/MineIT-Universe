@@ -18,6 +18,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-metal-catalogue.csv",
       "workingId": "candidate-processed-aluminium"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-aluminium.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Aluminium. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact bright silver aluminium billet with a curled lightweight sheet edge, clean satin metal. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-aluminium.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -38,6 +45,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-alloy-material-catalogue.csv",
       "workingId": "candidate-processed-aluminium-alloy"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-aluminium-alloy.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Aluminium Alloy. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact interlocking pair of lightweight silver alloy structural extrusions with subtle blue-grey facets. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-aluminium-alloy.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -60,6 +74,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-fuel-material-catalogue.csv",
       "workingId": "candidate-processed-biochar"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-biochar.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Biochar. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact cluster of porous matte-black charcoal fragments with visible cellular texture and a few earthy brown edges. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-biochar.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -82,6 +103,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-fuel-material-catalogue.csv",
       "workingId": "candidate-processed-biomass-pellets"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-biomass-pellets.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Biomass Pellets. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a tight unified bundle of warm tan compressed plant-fibre pellets with fibrous cut ends. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-biomass-pellets.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -102,6 +130,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-alloy-material-catalogue.csv",
       "workingId": "candidate-processed-brass"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-brass.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Brass. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact golden brass valve-like fitting and machined ring fused into one clear material symbol. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-brass.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -122,6 +157,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-alloy-material-catalogue.csv",
       "workingId": "candidate-processed-bronze"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-bronze.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Bronze. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact warm bronze bearing ring with a matching cast bushing, rich brown-gold patina. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-bronze.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -144,6 +186,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-construction-material-catalogue.csv",
       "workingId": "candidate-processed-cement"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-cement.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Cement. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact sculpted mound of fine cool-grey cement powder with one clean compressed fractured face. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-cement.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -164,6 +213,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-engineered-material-catalogue.csv",
       "workingId": "candidate-processed-cemented-tungsten-carbide"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-cemented-tungsten-carbide.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Cemented Tungsten Carbide. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact cluster of dark gunmetal carbide cutting inserts and one stout drill tip, extremely hard and dense. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-cemented-tungsten-carbide.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -186,6 +242,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-fuel-material-catalogue.csv",
       "workingId": "candidate-processed-coke"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-coke.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Coke. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact cluster of porous black metallurgical coke chunks with subtle steel-blue highlights. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-coke.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -208,6 +271,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-fuel-material-catalogue.csv",
       "workingId": "candidate-processed-compressed-hydrogen"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-compressed-hydrogen.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Compressed Hydrogen. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact iconic swirling pale-blue hydrogen volume compressed into a dense luminous spherical knot, no vessel. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-compressed-hydrogen.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -229,6 +299,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-gemstone-catalogue.csv",
       "workingId": "mobile-resource-diamond"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-cut-diamond.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Cut Diamond. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict one centred precision-cut colourless diamond with a bold faceted silhouette and crisp white highlights, not jewellery. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-cut-diamond.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -250,6 +327,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-gemstone-catalogue.csv",
       "workingId": "mobile-resource-emerald"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-cut-emerald.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Cut Emerald. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict one centred precision-cut vivid green emerald gemstone with a bold faceted silhouette, not jewellery. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-cut-emerald.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -271,6 +355,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-gemstone-catalogue.csv",
       "workingId": "mobile-resource-ruby"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-cut-ruby.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Cut Ruby. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict one centred precision-cut deep red ruby gemstone with a bold faceted silhouette, not jewellery. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-cut-ruby.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -292,6 +383,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-gemstone-catalogue.csv",
       "workingId": "mobile-resource-sapphire"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-cut-sapphire.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Cut Sapphire. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict one centred precision-cut royal-blue sapphire gemstone with a bold faceted silhouette, not jewellery. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-cut-sapphire.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -314,6 +412,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-construction-material-catalogue.csv",
       "workingId": "candidate-processed-cut-stone-blocks"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-cut-stone-blocks.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Cut Stone Blocks. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict three compact precisely cut pale-grey masonry blocks interlocked into one strong silhouette. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-cut-stone-blocks.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -336,6 +441,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-fuel-material-catalogue.csv",
       "workingId": "candidate-processed-peat-briquettes"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-dried-peat-briquettes.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Dried Peat Briquettes. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact stack of dark brown compressed peat briquettes with fibrous earthy texture. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-dried-peat-briquettes.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -357,6 +469,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-nonmetallic-minerals-catalogue.csv",
       "workingId": "candidate-processed-electronic-grade-silicon"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-electronic-grade-silicon.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Electronic-Grade Silicon. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact mirror-dark silicon crystal boule segment with one iridescent sliced wafer leaning against it. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-electronic-grade-silicon.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -375,6 +494,13 @@
     "sourceProvenance": {
       "repository": "kevvy555/MineIT-Android",
       "path": "docs/discovery/galaxy-economic-foundation.md"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-engineered-veyrite-lattice.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Engineered Veyrite Lattice. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact exotic metallic crystalline lattice grown into a precise geometric cage, dark silver with restrained violet-cyan energy refraction. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-engineered-veyrite-lattice.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -397,6 +523,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-construction-material-catalogue.csv",
       "workingId": "candidate-processed-fired-bricks"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-fired-bricks.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Fired Bricks. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact interlocked stack of three warm terracotta fired bricks with crisp edges and subtle kiln texture. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-fired-bricks.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -420,6 +553,13 @@
       "repository": "kevvy555/MineIT-Universe",
       "path": "docs/IndustrialCatalogueConsolidationReview.md",
       "workingId": "nuclear-fuel-material-selection-approved-2026-11-04"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-fission-fuel-material.webp",
+      "generated": true,
+      "status": "approved",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Fission Fuel Material, a processed stockable feedstock used to manufacture nuclear fuel assemblies and distinct from fusion fuel. One compact centred cluster of dense dark ceramic fission-fuel pellets: several short graphite-black cylindrical pellets stacked into a stable geometric bundle, with one pellet slightly separated to reveal a subtle warm amber-gold inner face. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art, strong silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo, cool rim lighting, crisp highlights and restrained luminous edge. Readable at 128×128. No radiation trefoil, warning sign, text, element symbols, labels, logos, UI, border, container, reactor, machinery, explosion, smoke, green glow or watermark.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-fission-fuel-material.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -438,6 +578,13 @@
     "sourceProvenance": {
       "repository": "kevvy555/MineIT-Android",
       "path": "docs/discovery/galaxy-economic-foundation.md"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-fresh-concrete.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Fresh Concrete. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact cohesive mound of wet grey concrete with visible fine aggregate and one smooth trowelled ridge, no container. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-fresh-concrete.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -460,6 +607,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-fuel-material-catalogue.csv",
       "workingId": "fusion-fuel"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-fusion-fuel.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Fusion Fuel. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact iconic intertwined pair of luminous blue-white plasma-like fuel spheres with restrained magenta accents, no vessel. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-fusion-fuel.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -482,6 +636,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-construction-material-catalogue.csv",
       "workingId": "candidate-processed-graded-aggregate"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-graded-aggregate.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Graded Aggregate. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact balanced cluster of consistently graded angular grey stone chips forming one unified symbol. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-graded-aggregate.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -502,6 +663,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-alloy-material-catalogue.csv",
       "workingId": "candidate-processed-high-temperature-nickel-alloy"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-high-temperature-nickel-alloy.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for High-Temperature Nickel Alloy. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact nickel-alloy turbine blade and heat-resistant ingot fused into one strong silver-grey symbol with subtle warm heat tint. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-high-temperature-nickel-alloy.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -523,6 +691,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-gemstone-catalogue.csv",
       "workingId": "mobile-resource-diamond"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-industrial-diamond-grit.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Industrial Diamond Grit. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact sparkling mound of coarse translucent diamond abrasive grains with sharp angular facets. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-industrial-diamond-grit.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -543,6 +718,13 @@
       "repository": "kevvy555/MineIT-Universe",
       "path": "docs/IndustrialCatalogueConsolidationReview.md",
       "workingId": "lfp-battery-bom-approved-2026-11-04"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-lfp-battery-electrolyte.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for LFP Battery Electrolyte. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact floating amber-gold nonaqueous electrolyte droplet with layered molecular-like ripples, no bottle or container. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-lfp-battery-electrolyte.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -566,6 +748,13 @@
       "repository": "kevvy555/MineIT-Universe",
       "path": "docs/IndustrialCatalogueConsolidationReview.md",
       "workingId": "lfp-battery-bom-approved-2026-11-04"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-lfp-cathode-material.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Lithium Iron Phosphate (LFP) Cathode Material. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact mound of fine dark charcoal LFP cathode powder with olive-green crystalline facets and a clean strong silhouette. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-lfp-cathode-material.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -587,6 +776,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-metal-catalogue.csv",
       "workingId": "candidate-processed-lithium-carbonate"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-lithium-carbonate.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Lithium Carbonate. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact cluster of fine white lithium carbonate crystals and powder with cool pearly highlights. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-lithium-carbonate.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -608,6 +804,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-nonmetallic-minerals-catalogue.csv",
       "workingId": "candidate-processed-mica-insulation-sheets"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-mica-insulation-sheets.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Mica Insulation Sheets. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact fan of thin translucent amber mica insulation sheets with layered mineral cleavage. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-mica-insulation-sheets.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -626,6 +829,13 @@
     "sourceProvenance": {
       "repository": "kevvy555/MineIT-Android",
       "path": "docs/discovery/galaxy-economic-foundation.md"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-natural-veyrite.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Natural Veyrite. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict one compact rare raw Veyrite crystal cluster, dark metallic facets with restrained violet and cyan internal refraction, clearly natural rather than engineered. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-natural-veyrite.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -647,6 +857,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-gemstone-catalogue.csv",
       "workingId": "mobile-resource-sapphire"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-optical-sapphire.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Optical Sapphire. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict one compact transparent colourless sapphire optical disc with a precise curved lens face and subtle blue refraction. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-optical-sapphire.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -668,6 +885,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-nonmetallic-minerals-catalogue.csv",
       "workingId": "candidate-processed-phosphate-fertiliser"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-phosphate-fertiliser.webp",
+      "generated": true,
+      "status": "approved",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Phosphate Fertiliser. One compact, centred sculpted cluster of pale ivory and warm ochre phosphate fertiliser granules or prills, arranged into a strong unified mound-like symbol with a few larger faceted phosphate mineral forms integrated into it. It must clearly read as processed agricultural nutrient material, not raw rock, food, seeds or sand. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art, simplified sculpted or faceted forms, strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo, cool rim lighting, crisp highlights and restrained luminous edge. Readable at 128×128. No bag, sack, bottle, container, scoop, table, landscape, farm scene, machinery, people, text, numbers, logos, UI, border or watermark.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-phosphate-fertiliser.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -690,6 +914,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-construction-material-catalogue.csv",
       "workingId": "candidate-processed-plaster"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-plaster.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Plaster. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact soft white plaster powder mound with one smooth hardened fragment showing a chalky texture. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-plaster.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -712,6 +943,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-fuel-material-catalogue.csv",
       "workingId": "candidate-processed-polymer-feedstock"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-polymer-feedstock.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Polymer Feedstock. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact cluster of translucent polymer resin pellets in clear, pale blue and amber tones. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-polymer-feedstock.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -734,6 +972,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-construction-material-catalogue.csv",
       "workingId": "candidate-processed-processed-fibre"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-processed-fibre.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Processed Fibre. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact neatly twisted bundle of pale processed industrial fibres with clean cut ends. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-processed-fibre.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -754,6 +999,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-fuel-material-catalogue.csv",
       "workingId": "propellant"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-propellant.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Propellant. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact energetic amber and blue propellant gel-like core wrapped by controlled flowing bands, no container and no flame. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-propellant.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -776,6 +1028,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-fuel-material-catalogue.csv",
       "workingId": "candidate-processed-purified-helium-3"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-purified-helium-3.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Purified Helium-3. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact iconic pale cyan noble-gas orb with three subtle orbiting luminous lobes, no vessel, no text or isotope symbol. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-purified-helium-3.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -799,6 +1058,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-fuel-material-catalogue.csv",
       "workingId": "candidate-processed-purified-methane"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-purified-methane.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Purified Methane. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact iconic cool-blue methane volume formed as a dense faceted gaseous cluster with subtle tetrahedral geometry, no vessel. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-purified-methane.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -821,6 +1087,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-construction-material-catalogue.csv",
       "workingId": "candidate-processed-purified-silica"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-purified-silica.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Purified Silica. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact cluster of high-purity clear quartz-like silica pieces and fine white grains. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-purified-silica.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -843,6 +1116,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-construction-material-catalogue.csv",
       "workingId": "candidate-processed-quicklime"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-quicklime.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Quicklime. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact cluster of bright white quicklime chunks with dry porous fractured surfaces and a little pale powder. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-quicklime.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -863,6 +1143,13 @@
     "sourceProvenance": {
       "repository": "kevvy555/MineIT-Android",
       "path": "docs/discovery/galaxy-economic-foundation.md"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-rare-earth-magnet-alloy.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Rare Earth Magnet Alloy. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact pair of dark silver permanent-magnet alloy arcs locked into one circular form with restrained red-blue edge accents, no symbols. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-rare-earth-magnet-alloy.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -884,6 +1171,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-metal-catalogue.csv",
       "workingId": "candidate-processed-refined-chromium"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-refined-chromium.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Refined Chromium. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict one compact mirror-bright chromium ingot with angular facets and cool blue-white reflections. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-refined-chromium.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -905,6 +1199,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-metal-catalogue.csv",
       "workingId": "candidate-processed-refined-cobalt"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-refined-cobalt.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Refined Cobalt. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict one compact dense cobalt ingot with a distinctive cool blue-grey metallic surface and crystalline edge. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-refined-cobalt.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -926,6 +1227,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-metal-catalogue.csv",
       "workingId": "candidate-processed-refined-copper"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-refined-copper.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Refined Copper. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict one compact warm copper billet with a short curled strip, rich orange-red metallic sheen. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-refined-copper.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -946,6 +1254,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-precious-metals-catalogue.csv",
       "workingId": "mobile-resource-gold"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-refined-gold.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Refined Gold. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict one compact refined gold ingot with softly rounded cast edges and rich warm highlights, no stamp. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-refined-gold.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -967,6 +1282,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-metal-catalogue.csv",
       "workingId": "candidate-processed-refined-iron"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-refined-iron.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Refined Iron. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict one compact dark silver refined iron billet with a rough cast top and clean machined side. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-refined-iron.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -988,6 +1310,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-metal-catalogue.csv",
       "workingId": "candidate-processed-refined-lead"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-refined-lead.webp",
+      "generated": true,
+      "status": "approved",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Refined Lead. One compact, centred refined lead metal form: a dense low rectangular ingot with softly rounded cast edges and one smaller offset slab fused into a single strong silhouette. The metal looks unmistakably heavy, dull bluish-grey, soft, dense and freshly refined, with subtle cast texture and restrained polished edge highlights. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art, dark navy-to-black radial vignette, soft electric-blue/cyan halo, cool rim lighting, crisp highlights and restrained luminous edge. Readable at 128×128. No stamped words, element symbols, numbers, hazard marks, labels, logos, UI, border, container, machinery, people, ore rock or watermark.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-refined-lead.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -1009,6 +1338,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-metal-catalogue.csv",
       "workingId": "candidate-processed-refined-nickel"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-refined-nickel.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Refined Nickel. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict one compact pale silver nickel ingot with a subtle crystalline cast texture and warm-grey undertone. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-refined-nickel.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -1029,6 +1365,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-precious-metals-catalogue.csv",
       "workingId": "mobile-resource-palladium"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-refined-palladium.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Refined Palladium. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict one compact refined palladium ingot with a cool pale-grey sheen and crisp understated facets. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-refined-palladium.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -1049,6 +1392,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-precious-metals-catalogue.csv",
       "workingId": "mobile-resource-platinum"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-refined-platinum.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Refined Platinum. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict one compact heavy platinum ingot with a dense blue-white metallic sheen and softly rounded edges. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-refined-platinum.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -1069,6 +1419,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-precious-metals-catalogue.csv",
       "workingId": "mobile-resource-silver"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-refined-silver.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Refined Silver. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict one compact brilliant silver ingot with clean white reflections and a smooth cast surface. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-refined-silver.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -1090,6 +1447,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-metal-catalogue.csv",
       "workingId": "candidate-processed-refined-tin"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-refined-tin.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Refined Tin. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict one compact pale tin ingot with a distinctive softly crystalline frost-like metal surface. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-refined-tin.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -1111,6 +1475,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-metal-catalogue.csv",
       "workingId": "candidate-processed-refined-titanium"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-refined-titanium.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Refined Titanium. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict one compact titanium billet with a light charcoal-silver satin finish and subtle blue-violet oxide edge. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-refined-titanium.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -1132,6 +1503,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-metal-catalogue.csv",
       "workingId": "candidate-processed-refined-tungsten"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-refined-tungsten.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Refined Tungsten. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict one compact extremely dense dark tungsten billet with sharp machined edges and restrained steel highlights. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-refined-tungsten.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -1153,6 +1531,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-metal-catalogue.csv",
       "workingId": "candidate-processed-refined-zinc"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-refined-zinc.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Refined Zinc. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict one compact zinc slab with a pale blue-grey crystalline spangle surface and clean cast edges. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-refined-zinc.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -1175,6 +1560,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-construction-material-catalogue.csv",
       "workingId": "candidate-processed-sawn-lumber"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-sawn-lumber.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Sawn Lumber. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact neat stack of freshly sawn pale timber boards with visible grain and squared ends. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-sawn-lumber.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -1197,6 +1589,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-fuel-material-catalogue.csv",
       "workingId": "candidate-waste-spent-nuclear-fuel"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-spent-nuclear-fuel.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Spent Nuclear Fuel. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact cluster of dark used ceramic fuel pellets with cracked dull surfaces and restrained fading amber heat, no warning symbol or container. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-spent-nuclear-fuel.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -1217,6 +1616,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-alloy-material-catalogue.csv",
       "workingId": "candidate-processed-stainless-steel"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-stainless-steel.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Stainless Steel. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact stainless-steel plate and curved tube section fused into one clean corrosion-resistant material symbol. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-stainless-steel.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -1237,6 +1643,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-alloy-material-catalogue.csv",
       "workingId": "candidate-processed-steel"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-steel.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Steel. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact structural steel I-beam offcut crossed with a solid dark-grey billet, one unified silhouette. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-steel.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -1258,6 +1671,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-nonmetallic-minerals-catalogue.csv",
       "workingId": "candidate-processed-sulfuric-acid"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-sulfuric-acid.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Sulfuric Acid. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact heavy clear-to-pale-amber acid droplet with dense glossy folds and subtle corrosive-looking highlights, no container or hazard symbol. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-sulfuric-acid.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -1278,6 +1698,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-alloy-material-catalogue.csv",
       "workingId": "candidate-processed-titanium-alloy"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-titanium-alloy.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Titanium Alloy. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact lightweight titanium-alloy structural bracket with precise facets and a blue-grey satin finish. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-titanium-alloy.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -1300,6 +1727,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-construction-material-catalogue.csv",
       "workingId": "candidate-processed-treated-structural-timber"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-treated-structural-timber.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Treated Structural Timber. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact interlocked pair of dark treated structural timber beams with deep grain and sealed green-brown tint. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-treated-structural-timber.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -1322,6 +1756,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-fuel-material-catalogue.csv",
       "workingId": "candidate-processed-uranium-concentrate"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-uranium-concentrate.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Uranium Concentrate. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact mound of dense mustard-yellow uranium concentrate powder with a few granular clumps, no container or radiation symbol. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-uranium-concentrate.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -1344,6 +1785,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-fuel-material-catalogue.csv",
       "workingId": "candidate-processed-washed-coal"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-washed-coal.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Washed Coal. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact cluster of clean glossy black coal chunks with reduced dust and cool blue highlights. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-washed-coal.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -1366,6 +1814,13 @@
       "repository": "kevvy555/MineIT-Android",
       "path": "/docs/discovery/processed-construction-material-catalogue.csv",
       "workingId": "candidate-processed-woven-industrial-fabric"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-woven-industrial-fabric.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Woven Industrial Fabric. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact folded swatch of heavy dark woven industrial fabric with a clearly visible reinforced weave. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-woven-industrial-fabric.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   }
 ]

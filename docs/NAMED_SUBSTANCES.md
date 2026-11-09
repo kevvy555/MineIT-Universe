@@ -22,6 +22,8 @@ Click the **Substances** text in the Directory tree (or the header SUBSTANCES li
 
 The table has a per-column filter and ascending/descending sort. Its column picker lists every currently present source field, including nested image metadata, provenance, occurrence profile fields and Android reference values; the initial visible columns are a temporary default until a designer selects the final set. Selected columns are remembered for the browser session. Names link back to the ordinary read-only details.
 
+All 194 current table rows now own generated catalogue artwork. The 80 generic categories and 65 named materials use canonical assets under `assets/art/universe/substances/`; the 42 natural resources and seven biological Food records retain their canonical resource assets under `assets/art/universe/resources/`. Named-material and newly completed category images follow the established Crops/Emerald icon language while remaining distinct stable-ID assets.
+
 ### Android source reconciliation
 
 `game-specs/mineit-mobile/resource-balance-reference.json` is a **reference-only snapshot** of the Android-owned `app/src/main/assets/gameplay/resource-balance.json`, pinning an exact Android `develop` commit and source path. It adds a *view* of Android rarity, occurrence weight, quality bias, base scan level, baseline extraction method/family, reference base price, historical aliases and operational tags. This snapshot is not authored Universe canon and must never become Android's gameplay runtime input; Android remains authoritative for game-specific balance. It has no duplicated names, descriptions or occurrence-zone definitions. The snapshot is referenced by stable canonical resource IDs and validated against the existing 42 natural resources.

@@ -1741,10 +1741,10 @@
     "sourceSection": "Mobile familiar-resource integration",
     "image": {
       "key": "assets/art/universe/substances/substance-carbonate-mineral.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "1:1 full-bleed close-up of raw carbonate mineral as one continuous pale limestone-like rock face filling the frame: dense sedimentary carbonate for construction and chemical feedstock, unrefined. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
-      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-carbonate-mineral.png and a same-pixel-size catalog WebP at this key."
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Carbonate Mineral. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact pale limestone-like carbonate mineral specimen with layered sedimentary fracture and chalk-white facets. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/substance-carbonate-mineral.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -1764,10 +1764,10 @@
     "sourceSection": "Mobile familiar-resource integration",
     "image": {
       "key": "assets/art/universe/substances/substance-sulfate-mineral.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "1:1 full-bleed close-up of raw sulfate mineral as one continuous soft gypsum-like evaporite face filling the frame: pale crystalline sulfate for construction, cement and chemical feedstock, unrefined. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
-      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-sulfate-mineral.png and a same-pixel-size catalog WebP at this key."
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Sulfate Mineral. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact pale gypsum-like sulfate crystal cluster with soft translucent blades and powdery white edges. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/substance-sulfate-mineral.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -1787,10 +1787,10 @@
     "sourceSection": "Mobile familiar-resource integration",
     "image": {
       "key": "assets/art/universe/substances/substance-frozen-volatile-deposit.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "1:1 full-bleed close-up of a frozen volatile deposit as one continuous cryogenic ice face filling the frame: cloudy methane-rich ice and clathrate texture, cold fuel feedstock, no flame and no container. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
-      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-frozen-volatile-deposit.png and a same-pixel-size catalog WebP at this key."
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Frozen Volatile Deposit. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact cloudy methane-rich ice and clathrate chunk with frosted blue-white facets and trapped bubbles. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/substance-frozen-volatile-deposit.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -1810,10 +1810,10 @@
     "sourceSection": "Mobile familiar-resource integration",
     "image": {
       "key": "assets/art/universe/substances/substance-native-carbon-mineral.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "1:1 full-bleed close-up of native carbon mineral as one continuous hard carbon-bearing rock face filling the frame: dense host with embedded industrial diamond-grade carbon crystal character, cutting feedstock, not jewellery and not a gem on velvet. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
-      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-native-carbon-mineral.png and a same-pixel-size catalog WebP at this key."
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Native Carbon Mineral. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact hard carbon-bearing host rock with embedded raw industrial diamond-grade carbon crystals, not jewellery. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/substance-native-carbon-mineral.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   },
   {
@@ -1833,10 +1833,10 @@
     "sourceSection": "Mobile familiar-resource integration",
     "image": {
       "key": "assets/art/universe/substances/substance-precious-metal-ore.webp",
-      "generated": false,
-      "status": "not-generated",
-      "promptDescription": "1:1 full-bleed close-up of raw precious-metal ore as a single continuous rock face filling the frame: dark host rock with sparse bright gold, silver and platinum-group metallic flecks, unrefined high-value feedstock. Fill the entire 1:1 square edge-to-edge. The substance itself is the only subject: one continuous material, not objects arranged on a background. No tray, table, dish, jar, bottle, glass, cylinder, room, warehouse, or product-photography set. Photorealistic macro, grounded Year-5326 industrial material, no readable labels, company names, logos, stamps, registration numbers, hazard symbols or text.",
-      "notes": "Full-bleed material face, not a still-life. Generate 1:1. Store native lossless PNG at assets/art/universe/substances/Originals/substance-precious-metal-ore.png and a same-pixel-size catalog WebP at this key."
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Precious Metal Ore. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact dark ore specimen with sparse distinct gold, silver and platinum-group metallic flecks. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/substance-precious-metal-ore.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
     }
   }
 ]
