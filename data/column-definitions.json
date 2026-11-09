@@ -981,6 +981,15 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
+    "id": "column-definition-substances-image-preview-add1f318",
+    "name": "Image",
+    "table": "substances",
+    "fieldKey": "image.preview",
+    "category": "Artwork & Visuals",
+    "requiresApproval": false,
+    "description": "Read-only thumbnail availability derived from canonical image metadata; no independent sign-off is required."
+  },
+  {
     "id": "column-definition-substances-image-generated-68775b9e",
     "name": "Image / generated",
     "table": "substances",

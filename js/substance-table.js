@@ -299,6 +299,20 @@ export function createSubstanceTable(config = {}) {
           '">Show fields</button>' : '') + '</div>';
     }
 
+    function renderImageCell(row) {
+      const image = row.record.image;
+      if (!image?.generated || !image.key) {
+        const status = image?.status === "not-generated" ? "Not generated" : "No image metadata";
+        return '<span class="substance-image-missing">' + esc(status) + '</span>';
+      }
+      const source = catalogue.assetUrl(image.key);
+      return '<button class="substance-image-button" type="button" data-item-id="' +
+        esc(row.id) + '" title="Open ' + esc(row.record.name) +
+        ' details" aria-label="Open ' + esc(row.record.name) + ' details">' +
+        '<img class="substance-image-preview" src="' + esc(source) + '" alt="' +
+        esc(row.record.name) + '" loading="lazy" decoding="async"></button>';
+    }
+
     function updateRows() {
       const result = applySubstanceTable(rows, ordered, textFilters,
         sortKey, direction, catalogue, valueFilters);
@@ -310,10 +324,14 @@ export function createSubstanceTable(config = {}) {
         const label = value || "—";
         const linked = (config.linkedFields || ["upstreamMaterialIds"]).includes(key) &&
           Array.isArray(row.fields[key]);
-        return '<td' + (linked ? ' class="substance-link-cell"' : '') +
+        const imagePreview = key === "image.preview";
+        const cellClass = linked ? "substance-link-cell" :
+          imagePreview ? "substance-image-cell" : "";
+        return '<td' + (cellClass ? ' class="' + cellClass + '"' : '') +
           ' title="' + esc(value) + '">' + (key === "name" && row.canonical !== false ?
           '<button class="substance-item" type="button" data-item-id="' +
           esc(row.id) + '">' + esc(label) + '</button>' :
+          imagePreview ? renderImageCell(row) :
           linked ? renderLinkedCell(row.fields[key], key) :
           (key === "needsApproval" && config.pendingColumnAction)
             ? renderPendingApprovalCell(row) : esc(label)) + '</td>';

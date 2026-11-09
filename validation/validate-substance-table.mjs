@@ -44,6 +44,11 @@ const keys = allSubstanceFields(rows);
 assert.ok(keys.includes("android.basePrice"));
 assert.ok(keys.includes("occurrence.eligibleWorldTypeIds"));
 assert.ok(keys.includes("image.status"));
+assert.ok(keys.includes("image.preview"));
+assert.equal(rows.find(row => row.id === "mobile-resource-iron-ore").fields["image.preview"],
+  "Available");
+assert.equal(rows.find(row => row.id === "named-substance-aluminium").fields["image.preview"],
+  "No image metadata");
 assert.ok(keys.includes("sourceProvenance.path"));
 assert.ok(keys.includes("upstreamMaterialIds"), "LFP cathode source links must remain reviewable");
 assert.ok(keys.includes("approval") && keys.includes("needsApproval"),
@@ -79,8 +84,8 @@ assert.deepEqual(SUBSTANCE_COLUMN_GROUPS.map(group => group.name), [
   "Sources & Provenance", "Artwork & Visuals"
 ]);
 const groupedFields = SUBSTANCE_COLUMN_GROUPS.flatMap(group => group.fields);
-assert.equal(groupedFields.length, 78, "The full current column set is preserved");
-assert.equal(new Set(groupedFields).size, 78, "Every field belongs to one category");
+assert.equal(groupedFields.length, 79, "The full current column set is preserved");
+assert.equal(new Set(groupedFields).size, 79, "Every field belongs to one category");
 assert.deepEqual(new Set(groupedFields), new Set(keys), "No missing or extra field definitions");
 assert.ok(SUBSTANCE_COLUMN_GROUPS.every(group => group.fields.length > 0));
 for (const group of SUBSTANCE_COLUMN_GROUPS) {
@@ -157,6 +162,8 @@ assert.match(tableApp, /data-group-clear/,
   "Every category has a Deselect all control");
 assert.match(tableApp, /data-column-group/,
   "Group headings must be visible in the expanded column chooser");
+assert.match(tableApp, /renderImageCell/,
+  "The substance table must render canonical image assets as previews");
 assert.match(directoryCss, /\.substance-pick-grid\{width:100%;max-height:none;overflow:visible/,
   "The category chooser must remain unscrollable");
 assert.match(directoryCss,

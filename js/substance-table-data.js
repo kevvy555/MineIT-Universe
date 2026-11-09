@@ -22,6 +22,8 @@ export function substanceRows(catalogue, androidReference) {
     for (const record of catalogue.collection(collection)) {
       const generic = record.genericSubstanceId ? catalogue.get(record.genericSubstanceId) : null;
       const fields = flatten(record);
+      fields["image.preview"] = record.image?.generated && record.image?.key
+        ? "Available" : record.image ? "Not generated" : "No image metadata";
       fields.kind = kind;
       fields.archetype = record.dominantArchetype || generic?.dominantArchetype ||
         (collection === "mobileBiologicalResources" ? "Organic" : "");
@@ -41,7 +43,7 @@ export function substanceRows(catalogue, androidReference) {
   return result.sort((a, b) => a.record.name.localeCompare(b.record.name));
 }
 
-export const DEFAULT_COLUMNS = ["name", "kind", "archetype", "genericClassName",
+export const DEFAULT_COLUMNS = ["name", "image.preview", "kind", "archetype", "genericClassName",
   "gameplayCategory", "materialStage", "approval", "needsApproval", "renewable",
   "canonStatus", "android.baseScan"];
 
@@ -169,6 +171,7 @@ export const SUBSTANCE_COLUMN_GROUPS = [
   {
     "name": "Artwork & Visuals",
     "fields": [
+      "image.preview",
       "image.key",
       "image.generated",
       "image.status",
