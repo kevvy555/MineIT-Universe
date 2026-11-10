@@ -401,10 +401,11 @@ not Parts. The LFP cathode has a typed upstream link to the already existing
 Lithium Carbonate; the 1.5 kg precursor formerly recorded on the battery itself
 was removed to avoid double counting. Its iron/phosphate precursor recipe and
 upstream quantities are **not** being finalised here. The electrolyte is
-LiPF6 dissolved in carbonate solvents. Both new materials need future
-generic-class taxonomy review: the existing generic Electrolyte Solution
-belongs to the canonical **aqueous / Water** archetype and must not be
-incorrectly assigned to this **nonaqueous** processed product.
+LiPF6 dissolved in carbonate solvents. Their generic-class taxonomy was
+approved on 10 November 2026: the cathode uses `substance-battery-cathode-compound`
+and the electrolyte uses `substance-nonaqueous-electrolyte`. The existing generic
+Electrolyte Solution remains the canonical **aqueous / Water** archetype and is
+not assigned to this **nonaqueous** processed product.
 
 Refined Graphite must meet battery-grade quality, and Refined Copper/Aluminium
 foil processing, microporous PE/PP separator formation from Polymer Feedstock,
@@ -595,9 +596,10 @@ compatibility reviews remain independent pending work.
   projection of evidence. **Parts now store one canonical overall Approval**
   verified against explicit per-field status values. In Review and Blocked
   preserve unapproved reference costs and missing quantities.
-- Substance generic-class review for new LFP cathode, nonaqueous LFP
-  electrolyte and Fission Fuel Material remains visible; the generic
-  aqueous Electrolyte Solution cannot be reused as the nonaqueous category.
+- The generic-class review for the LFP cathode, nonaqueous LFP electrolyte
+  and Fission Fuel Material was resolved on 10 November 2026 with distinct
+  approved classification extensions; the aqueous Electrolyte Solution was
+  not reused for the nonaqueous category.
 - Field status will only advance from evidence or an explicit design
   decision; the approval tables are reference/admin **views**, not
   an authoring UI or a substitute for decisions.

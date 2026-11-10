@@ -117,8 +117,8 @@ assert.ok(collections.parts.every(p => !p.unresolvedMaterialInputs?.length),
   "The resolved material-identity placeholders may not return");
 const fission = substanceRows(catalogue, resourceReference)
   .find(row => row.id === "named-substance-fission-fuel-material");
-assert.equal(fission.fields.approval, "In Review");
-assert.deepEqual(fission.fields.needsApproval, ["Classification Status"]);
+assert.equal(fission.fields.approval, "Approved");
+assert.deepEqual(fission.fields.needsApproval, []);
 assert.equal(approvalSummary("parts", battery.record, battery.fields, catalogue).approval, "In Review");
 assert.throws(() => approvalSummary("parts",
   { ...battery.record, approval: "Approved" }, battery.fields, catalogue),

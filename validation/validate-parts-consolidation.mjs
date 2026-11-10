@@ -159,8 +159,9 @@ const cathode = byId.get("named-substance-lfp-cathode-material");
 assert.deepEqual(cathode.upstreamMaterialIds, ["named-substance-lithium-carbonate"]);
 const electrolyte = byId.get("named-substance-lfp-battery-electrolyte");
 assert.match(electrolyte.upstreamInputDescription, /LiPF6/);
-assert.equal(electrolyte.classificationStatus, "requires-generic-class-review",
-  "Nonaqueous electrolyte must not inherit the source-canonical aqueous electrolyte class");
+assert.equal(electrolyte.classificationStatus, "classified");
+assert.equal(electrolyte.genericSubstanceId, "substance-nonaqueous-electrolyte",
+  "Nonaqueous electrolyte must use its approved class, not the aqueous electrolyte class");
 const source = byId.get("part-extraction-parts");
 assert.deepEqual(new Set(source.materialInputs.map(i => i.substanceId)),
   new Set(["named-substance-steel", "named-substance-cemented-tungsten-carbide"]));

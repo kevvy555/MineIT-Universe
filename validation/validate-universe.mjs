@@ -443,8 +443,8 @@ for (const substance of collections.substances ?? []) {
   if (!substance.industrialRole) errors.push(`${substance.id}: industrialRole missing.`);
   if (!substance.sourceDocumentId) errors.push(`${substance.id}: sourceDocumentId missing.`);
 }
-if ((collections.substances ?? []).length !== 80) {
-  errors.push(`Substance catalogue must contain 75 source categories plus 5 Mobile integration parent categories; found ${(collections.substances ?? []).length}.`);
+if ((collections.substances ?? []).length !== 92) {
+  errors.push(`Substance catalogue must contain 75 source categories, 5 Mobile integration parent categories and 12 approved named-material classification extensions; found ${(collections.substances ?? []).length}.`);
 }
 const sourceSubstances = (collections.substances ?? [])
   .filter(substance => substance.canonStatus === 'source-canonical');

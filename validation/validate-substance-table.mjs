@@ -29,15 +29,15 @@ assert.deepEqual(new Set(reference.resources.map(r => r.resourceId)),
 assert.equal(new Set(reference.resources.map(r => r.resourceId)).size, 42);
 
 const rows = substanceRows(catalogue, reference);
-assert.equal(rows.length, 194, "80 generic + 42 natural + 65 named + 7 biological");
-assert.equal(rows.filter(row => row.collection === "substances").length, 80);
-assert.equal(collections.substances.length, 80);
+assert.equal(rows.length, 206, "92 generic + 42 natural + 65 named + 7 biological");
+assert.equal(rows.filter(row => row.collection === "substances").length, 92);
+assert.equal(collections.substances.length, 92);
 assert.equal(new Set(rows.map(row => row.id)).size, rows.length, "No duplicated resources");
 assert.equal(rows.filter(row => row.fields.kind === "Biological food").length, 7);
 assert.equal(rows.filter(row => row.fields.kind === "Named material").length, 65);
 assert.equal(rows.filter(row => row.fields.kind === "Natural resource").length, 42);
-assert.equal(rows.filter(row => row.fields.kind === "Raw substance category").length, 41);
-assert.equal(rows.filter(row => row.fields.kind === "Refined substance category").length, 34);
+assert.equal(rows.filter(row => row.fields.kind === "Raw substance category").length, 42);
+assert.equal(rows.filter(row => row.fields.kind === "Refined substance category").length, 45);
 assert.equal(rows.filter(row => row.fields.kind === "Ontology parent category").length, 5);
 assert.equal(rows.find(row => row.id === "mobile-resource-iron-ore").fields.genericClassName,
   "Structural Metal Ore");
@@ -74,7 +74,32 @@ for (const duplicateField of ["entityType", "dominantArchetype", "genericSubstan
   assert.ok(!keys.includes(duplicateField), duplicateField + " is consolidated in the table projection");
 }
 assert.equal(rows.find(row => row.id === "named-substance-fission-fuel-material").fields.approval,
-  "In Review", "Unclassified fission fuel must not be silently approved");
+  "Approved", "Approved fission-fuel classification must resolve through the shared class");
+const approvedClassificationLinks = new Map([
+  ["named-substance-cement", "substance-hydraulic-binder"],
+  ["named-substance-cemented-tungsten-carbide", "substance-cemented-carbide-composite"],
+  ["named-substance-electronic-grade-silicon", "substance-refined-semiconductor-material"],
+  ["named-substance-engineered-veyrite-lattice", "substance-engineered-phase-coherent-lattice"],
+  ["named-substance-fission-fuel-material", "substance-refined-fission-fuel"],
+  ["named-substance-fusion-fuel", "substance-manufactured-fusion-fuel"],
+  ["named-substance-lfp-battery-electrolyte", "substance-nonaqueous-electrolyte"],
+  ["named-substance-lfp-cathode-material", "substance-battery-cathode-compound"],
+  ["named-substance-lithium-carbonate", "substance-refined-carbonate-salt"],
+  ["named-substance-natural-veyrite", "substance-phase-coherent-mineral"],
+  ["named-substance-refined-gold", "substance-refined-precious-metal"],
+  ["named-substance-refined-palladium", "substance-refined-precious-metal"],
+  ["named-substance-refined-platinum", "substance-refined-precious-metal"],
+  ["named-substance-refined-silver", "substance-refined-precious-metal"],
+  ["named-substance-spent-nuclear-fuel", "substance-irradiated-nuclear-material"]
+]);
+for (const [recordId, genericId] of approvedClassificationLinks) {
+  const record = collections.namedSubstances.find(item => item.id === recordId);
+  assert.equal(record.genericSubstanceId, genericId, recordId + " uses the approved generic class");
+  assert.equal(record.classificationStatus, "classified", recordId + " is no longer a data gap");
+  assert.ok(collections.substances.some(item => item.id === genericId), genericId + " must resolve");
+}
+assert.equal(collections.namedSubstances.filter(record => !record.genericSubstanceId).length, 0,
+  "Every current named material has an approved generic class");
 const lfpMaterialRows = rows.filter(row => row.id === "named-substance-lfp-cathode-material" ||
   row.id === "named-substance-lfp-battery-electrolyte");
 assert.equal(lfpMaterialRows.length, 2, "Both stockable refined battery materials must appear");

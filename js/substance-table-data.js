@@ -49,9 +49,9 @@ export function substanceRows(catalogue, androidReference) {
   };
   // Generic raw/refined categories own the canonical material art under
   // assets/art/universe/substances, so they are first-class review rows.
-  add("substances", record => record.canonStatus === "source-canonical"
-    ? (record.refined ? "Refined substance category" : "Raw substance category")
-    : "Ontology parent category");
+  add("substances", record => record.sourceSection === "Mobile familiar-resource integration"
+    ? "Ontology parent category"
+    : (record.refined ? "Refined substance category" : "Raw substance category"));
   add("mobileResourceDefinitions", "Natural resource");
   add("namedSubstances", "Named material");
   add("mobileBiologicalResources", "Biological food");
