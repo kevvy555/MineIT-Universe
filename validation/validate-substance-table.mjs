@@ -41,6 +41,14 @@ assert.equal(rows.filter(row => row.fields.kind === "Refined substance category"
 assert.equal(rows.filter(row => row.fields.kind === "Ontology parent category").length, 5);
 assert.equal(rows.find(row => row.id === "mobile-resource-iron-ore").fields.genericClassName,
   "Structural Metal Ore");
+assert.equal(rows.find(row => row.id === "substance-structural-metal-ore").fields.materialStage,
+  "raw", "Raw generic categories use the consolidated material-stage field");
+assert.equal(rows.find(row => row.id === "substance-refined-structural-metal").fields.materialStage,
+  "refined", "Refined generic categories use the consolidated material-stage field");
+assert.equal(rows.find(row => row.id === "mobile-resource-iron-ore").fields.materialStage,
+  "raw", "Natural resources use the consolidated material-stage field");
+assert.equal(rows.find(row => row.id === "mobile-food-crops").fields.materialStage, undefined,
+  "Biological foods do not receive an inapplicable material stage");
 assert.ok(rows.find(row => row.id === "mobile-resource-iron-ore").fields["android.baseScan"]);
 assert.ok(rows.find(row => row.id === "mobile-resource-iron-ore").fields["occurrence.primaryExtractionZoneIds"]);
 const keys = allSubstanceFields(rows);
@@ -62,6 +70,9 @@ assert.ok(keys.includes("sourceProvenance.path"));
 assert.ok(keys.includes("upstreamMaterialIds"), "LFP cathode source links must remain reviewable");
 assert.ok(keys.includes("approval") && keys.includes("needsApproval"),
   "Every substance row exposes the shared review columns");
+for (const duplicateField of ["entityType", "dominantArchetype", "genericSubstanceId", "refined"]) {
+  assert.ok(!keys.includes(duplicateField), duplicateField + " is consolidated in the table projection");
+}
 assert.equal(rows.find(row => row.id === "named-substance-fission-fuel-material").fields.approval,
   "In Review", "Unclassified fission fuel must not be silently approved");
 const lfpMaterialRows = rows.filter(row => row.id === "named-substance-lfp-cathode-material" ||
@@ -93,8 +104,8 @@ assert.deepEqual(SUBSTANCE_COLUMN_GROUPS.map(group => group.name), [
   "Sources & Provenance", "Artwork & Visuals"
 ]);
 const groupedFields = SUBSTANCE_COLUMN_GROUPS.flatMap(group => group.fields);
-assert.equal(groupedFields.length, 87, "The full current column set is preserved");
-assert.equal(new Set(groupedFields).size, 87, "Every field belongs to one category");
+assert.equal(groupedFields.length, 83, "The consolidated current column set is preserved");
+assert.equal(new Set(groupedFields).size, 83, "Every field belongs to one category");
 assert.deepEqual(new Set(groupedFields), new Set(keys), "No missing or extra field definitions");
 assert.ok(SUBSTANCE_COLUMN_GROUPS.every(group => group.fields.length > 0));
 for (const group of SUBSTANCE_COLUMN_GROUPS) {
@@ -109,6 +120,10 @@ assert.ok(geological.fields.every(field => geologySelected.includes(field)));
 assert.deepEqual(new Set(selectionForCategory(geologySelected, geological.fields, false)),
   new Set(baseline), "Deselecting one category must preserve selections in other categories");
 const identity = SUBSTANCE_COLUMN_GROUPS.find(group => group.name === "Identity & Classification");
+assert.deepEqual(identity.fields, [
+  "name", "id", "kind", "archetype", "genericClassName", "classificationStatus",
+  "materialStage", "substanceType", "standardState", "form", "tier"
+], "Identity & Classification exposes one field per review concept");
 assert.deepEqual(selectionForCategory(identity.fields, identity.fields, false), ["name"],
   "Name cannot be deselected, including by category clear");
 assert.deepEqual(new Set(selectionForCategory([], keys, true)), new Set(keys),

@@ -909,24 +909,6 @@
     "description": "Reference, identity or display field; no independent sign-off is required."
   },
   {
-    "id": "column-definition-substances-dominant-archetype-8a15990b",
-    "name": "Dominant Archetype",
-    "table": "substances",
-    "fieldKey": "dominantArchetype",
-    "category": "Identity & Classification",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-entity-type-9a9e031b",
-    "name": "Entity Type",
-    "table": "substances",
-    "fieldKey": "entityType",
-    "category": "Identity & Classification",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
     "id": "column-definition-substances-excluded-landform-ids-d227286d",
     "name": "Excluded Landform IDs",
     "table": "substances",
@@ -955,21 +937,12 @@
   },
   {
     "id": "column-definition-substances-generic-class-name-abda232c",
-    "name": "Generic Class Name",
+    "name": "Generic Class",
     "table": "substances",
     "fieldKey": "genericClassName",
     "category": "Identity & Classification",
     "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
-  },
-  {
-    "id": "column-definition-substances-generic-substance-id-8be3ddc0",
-    "name": "Generic Substance ID",
-    "table": "substances",
-    "fieldKey": "genericSubstanceId",
-    "category": "Identity & Classification",
-    "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
+    "description": "Resolved generic substance class for the row; generic categories display their own class name."
   },
   {
     "id": "column-definition-substances-id-d0361145",
@@ -988,15 +961,6 @@
     "category": "Identity & Classification",
     "requiresApproval": false,
     "description": "Canonical physical form of a generic raw or refined substance category."
-  },
-  {
-    "id": "column-definition-substances-refined-8b45c102",
-    "name": "Refined",
-    "table": "substances",
-    "fieldKey": "refined",
-    "category": "Identity & Classification",
-    "requiresApproval": false,
-    "description": "Whether the generic substance category is refined or processed stock."
   },
   {
     "id": "column-definition-substances-source-document-id-a31d6e2f",
@@ -1158,7 +1122,7 @@
     "fieldKey": "materialStage",
     "category": "Identity & Classification",
     "requiresApproval": false,
-    "description": "Reference, identity or display field; no independent sign-off is required."
+    "description": "Normalized raw or refined stage for generic categories and natural resources, preserving the authored stage for named materials; intentionally blank for biological food."
   },
   {
     "id": "column-definition-substances-mobile-key-ac13ad59",

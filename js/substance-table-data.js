@@ -28,6 +28,17 @@ export function substanceRows(catalogue, androidReference) {
       fields.archetype = record.dominantArchetype || generic?.dominantArchetype ||
         (collection === "mobileBiologicalResources" ? "Organic" : "");
       fields.genericClassName = collection === "substances" ? record.name : generic?.name || "";
+      if (collection === "substances") fields.materialStage = record.refined ? "refined" : "raw";
+      else if (collection === "mobileResourceDefinitions") fields.materialStage = "raw";
+      else if (collection === "mobileBiologicalResources") delete fields.materialStage;
+
+      // The bulk review table presents one normalized value for each classification
+      // concept. The canonical records retain these source fields for consumers that
+      // need their exact schema-specific representation.
+      delete fields.entityType;
+      delete fields.dominantArchetype;
+      delete fields.genericSubstanceId;
+      delete fields.refined;
       if (occurrence.has(record.id)) flatten(occurrence.get(record.id), "occurrence", fields);
       if (tuning.has(record.id)) flatten(tuning.get(record.id), "android", fields);
       const summary = approvalSummary("substances", record, fields, catalogue);
@@ -60,17 +71,13 @@ export const SUBSTANCE_COLUMN_GROUPS = [
       "name",
       "id",
       "kind",
-      "entityType",
       "archetype",
-      "dominantArchetype",
       "genericClassName",
-      "genericSubstanceId",
       "classificationStatus",
       "materialStage",
       "substanceType",
       "standardState",
       "form",
-      "refined",
       "tier"
     ]
   },
@@ -219,6 +226,7 @@ export function selectionForCategory(current, fields, selected) {
 }
 
 export function fieldLabel(key) {
+  if (key === "genericClassName") return "Generic Class";
   const label = key.replace(/([a-z])([A-Z])/g, "$1 $2").replace(/\./g, " / ").replace(/_/g, " ")
     .replace(/Ids\b/g, "IDs").replace(/\bId\b/g, "ID")
     .replace(/\bmobile\b/gi, "Mobile");
