@@ -22,8 +22,11 @@ The root `index.html` is the standalone Universe Directory. `.nojekyll` ensures 
 The publication workflow stages the repository as static content but excludes every
 `Originals/` directory. Lossless originals remain canonical repository assets for
 authoring and regeneration; the website serves the published WebP assets referenced by
-canonical `image.key` fields. This keeps the Pages artifact below GitHub's 1 GB limit
-without moving or duplicating canonical artwork.
+canonical `image.key` fields. It also excludes `assets/art/universe/buildings/mobile-levels-3d/`:
+those GLB files are game-facing model sources, are not referenced by the static website,
+and remain canonical repository assets for downstream game consumers. This keeps the
+Pages artifact small enough to deploy reliably without moving or duplicating canonical
+artwork.
 
 ## Canonical consumer flow
 

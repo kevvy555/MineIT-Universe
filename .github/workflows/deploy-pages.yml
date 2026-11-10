@@ -34,6 +34,7 @@ jobs:
             --exclude='.github/' \
             --exclude='_site/' \
             --exclude='Originals/' \
+            --exclude='assets/art/universe/buildings/mobile-levels-3d/' \
             ./ _site/
 
           published_bytes=$(du -sb _site | cut -f1)
@@ -59,5 +60,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
-        with:
-          timeout: 1200000
