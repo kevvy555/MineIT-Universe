@@ -1,0 +1,282 @@
+[
+  {
+    "id": "visual-terrain-material-barren-rock-01",
+    "name": "Barren Rock 3D Terrain Material 01",
+    "seriesId": "visual-series-desktop-terrain-materials",
+    "assetType": "seamless-terrain-material",
+    "intendedGameId": "game-mineit-mobile",
+    "identityNeutral": true,
+    "biomeId": "biome-barren-rock",
+    "variant": 1,
+    "pixelSize": 1024,
+    "seamless": true,
+    "repeatMetresHint": 25,
+    "provenance": {
+      "sourceArchive": "Ground.zip",
+      "sourceArchiveSha256": "ffff953f86324c0d7adb98ac7d7d3e66ddc2ded09b9a6df00341dbf9f18ec3fa",
+      "sourcePath": "Ground/Biome/RockyOutcrop.png",
+      "sourceSha256": "02a662a8946a4fb95fa40c18a15b25d815c0fd7b4dfe7db5033c0668e86d4735",
+      "sourceBytes": 3868427,
+      "processing": "Centre-square crop, Lanczos resize to 1024px, periodic-plus-smooth boundary correction with distributed edge ramp, RGB WebP quality 86."
+    },
+    "image": {
+      "key": "assets/art/visual-library/terrain/materials/visual-terrain-material-barren-rock-01.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Identity-neutral close-up exposed rock and regolith material derived from the MineIT Desktop RockyOutcrop source for world-aligned 3D ground.",
+      "notes": "Lossless processed PNG is retained under Originals. Physical-device visual acceptance remains separate."
+    }
+  },
+  {
+    "id": "visual-terrain-material-desert-01",
+    "name": "Desert 3D Terrain Material 01",
+    "seriesId": "visual-series-desktop-terrain-materials",
+    "assetType": "seamless-terrain-material",
+    "intendedGameId": "game-mineit-mobile",
+    "identityNeutral": true,
+    "biomeId": "biome-desert",
+    "variant": 1,
+    "pixelSize": 1024,
+    "seamless": true,
+    "repeatMetresHint": 25,
+    "provenance": {
+      "sourceArchive": "Ground.zip",
+      "sourceArchiveSha256": "ffff953f86324c0d7adb98ac7d7d3e66ddc2ded09b9a6df00341dbf9f18ec3fa",
+      "sourcePath": "Ground/Biome/BeachSand.png",
+      "sourceSha256": "a8dc17b4fbbd631037552652e5f5f88d268679f8879d8a65fbc6339277124c4d",
+      "sourceBytes": 3692780,
+      "processing": "Centre-square crop, Lanczos resize to 1024px, periodic-plus-smooth boundary correction with distributed edge ramp, RGB WebP quality 86."
+    },
+    "image": {
+      "key": "assets/art/visual-library/terrain/materials/visual-terrain-material-desert-01.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Identity-neutral close-up pale sand and fine mineral grains derived from the MineIT Desktop BeachSand source for world-aligned 3D ground.",
+      "notes": "Lossless processed PNG is retained under Originals. Physical-device visual acceptance remains separate."
+    }
+  },
+  {
+    "id": "visual-terrain-material-grassland-01",
+    "name": "Grassland 3D Terrain Material 01",
+    "seriesId": "visual-series-desktop-terrain-materials",
+    "assetType": "seamless-terrain-material",
+    "intendedGameId": "game-mineit-mobile",
+    "identityNeutral": true,
+    "biomeId": "biome-grassland",
+    "variant": 1,
+    "pixelSize": 1024,
+    "seamless": true,
+    "repeatMetresHint": 25,
+    "provenance": {
+      "sourceArchive": "Ground.zip",
+      "sourceArchiveSha256": "ffff953f86324c0d7adb98ac7d7d3e66ddc2ded09b9a6df00341dbf9f18ec3fa",
+      "sourcePath": "Ground/Biome/Grassland.png",
+      "sourceSha256": "f83240b96c28b1b70554128b5261af2276d3f58865c62c144e5ac13786b73c72",
+      "sourceBytes": 3750820,
+      "processing": "Centre-square crop, Lanczos resize to 1024px, periodic-plus-smooth boundary correction with distributed edge ramp, RGB WebP quality 86."
+    },
+    "image": {
+      "key": "assets/art/visual-library/terrain/materials/visual-terrain-material-grassland-01.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Identity-neutral close-up natural grass cover derived from the MineIT Desktop Grassland source for world-aligned 3D ground.",
+      "notes": "Lossless processed PNG is retained under Originals. Physical-device visual acceptance remains separate."
+    }
+  },
+  {
+    "id": "visual-terrain-material-forest-01",
+    "name": "Forest 3D Terrain Material 01",
+    "seriesId": "visual-series-desktop-terrain-materials",
+    "assetType": "seamless-terrain-material",
+    "intendedGameId": "game-mineit-mobile",
+    "identityNeutral": true,
+    "biomeId": "biome-forest",
+    "variant": 1,
+    "pixelSize": 1024,
+    "seamless": true,
+    "repeatMetresHint": 25,
+    "provenance": {
+      "sourceArchive": "Ground.zip",
+      "sourceArchiveSha256": "ffff953f86324c0d7adb98ac7d7d3e66ddc2ded09b9a6df00341dbf9f18ec3fa",
+      "sourcePath": "Ground/Biome/ForrestFloor.png",
+      "sourceSha256": "6f0b3d046b5dc5f3b2f683817f983708586694b5a725a77a1d3dcfb4cf89c2bd",
+      "sourceBytes": 3826898,
+      "processing": "Centre-square crop, Lanczos resize to 1024px, periodic-plus-smooth boundary correction with distributed edge ramp, RGB WebP quality 86."
+    },
+    "image": {
+      "key": "assets/art/visual-library/terrain/materials/visual-terrain-material-forest-01.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Identity-neutral close-up leaf litter, moss and soil derived from the MineIT Desktop ForrestFloor source for world-aligned 3D ground.",
+      "notes": "The Desktop source retains its original ForrestFloor spelling in provenance. Lossless processed PNG is retained under Originals."
+    }
+  },
+  {
+    "id": "visual-terrain-material-wetland-01",
+    "name": "Wetland 3D Terrain Material 01",
+    "seriesId": "visual-series-desktop-terrain-materials",
+    "assetType": "seamless-terrain-material",
+    "intendedGameId": "game-mineit-mobile",
+    "identityNeutral": true,
+    "biomeId": "biome-wetland",
+    "variant": 1,
+    "pixelSize": 1024,
+    "seamless": true,
+    "repeatMetresHint": 25,
+    "provenance": {
+      "sourceArchive": "Ground.zip",
+      "sourceArchiveSha256": "ffff953f86324c0d7adb98ac7d7d3e66ddc2ded09b9a6df00341dbf9f18ec3fa",
+      "sourcePath": "Ground/Biome/Wetland.png",
+      "sourceSha256": "04082a84691f8b66842de156dd4c4a241398711afcac853fd23e7295bc892226",
+      "sourceBytes": 3705890,
+      "processing": "Centre-square crop, Lanczos resize to 1024px, periodic-plus-smooth boundary correction with distributed edge ramp, RGB WebP quality 86."
+    },
+    "image": {
+      "key": "assets/art/visual-library/terrain/materials/visual-terrain-material-wetland-01.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Identity-neutral close-up damp soil, reeds and low vegetation derived from the MineIT Desktop Wetland source for world-aligned 3D ground.",
+      "notes": "Lossless processed PNG is retained under Originals. Physical-device visual acceptance remains separate."
+    }
+  },
+  {
+    "id": "visual-terrain-material-tundra-01",
+    "name": "Tundra 3D Terrain Material 01",
+    "seriesId": "visual-series-desktop-terrain-materials",
+    "assetType": "seamless-terrain-material",
+    "intendedGameId": "game-mineit-mobile",
+    "identityNeutral": true,
+    "biomeId": "biome-tundra",
+    "variant": 1,
+    "pixelSize": 1024,
+    "seamless": true,
+    "repeatMetresHint": 25,
+    "provenance": {
+      "sourceArchive": "Ground.zip",
+      "sourceArchiveSha256": "ffff953f86324c0d7adb98ac7d7d3e66ddc2ded09b9a6df00341dbf9f18ec3fa",
+      "sourcePath": "Ground/Biome/Tundra.png",
+      "sourceSha256": "2b953baf2a8d815e6a151a37e18e201da648aa919122f6b53f9b371030ea7ca1",
+      "sourceBytes": 4033991,
+      "processing": "Centre-square crop, Lanczos resize to 1024px, periodic-plus-smooth boundary correction with distributed edge ramp, RGB WebP quality 86."
+    },
+    "image": {
+      "key": "assets/art/visual-library/terrain/materials/visual-terrain-material-tundra-01.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Identity-neutral close-up cold scrub, lichen and frost-muted ground derived from the MineIT Desktop Tundra source for world-aligned 3D ground.",
+      "notes": "Lossless processed PNG is retained under Originals. Physical-device visual acceptance remains separate."
+    }
+  },
+  {
+    "id": "visual-terrain-material-ice-sheet-01",
+    "name": "Ice Sheet 3D Terrain Material 01",
+    "seriesId": "visual-series-desktop-terrain-materials",
+    "assetType": "seamless-terrain-material",
+    "intendedGameId": "game-mineit-mobile",
+    "identityNeutral": true,
+    "biomeId": "biome-ice-sheet",
+    "variant": 1,
+    "pixelSize": 1024,
+    "seamless": true,
+    "repeatMetresHint": 25,
+    "provenance": {
+      "sourceArchive": "Ground.zip",
+      "sourceArchiveSha256": "ffff953f86324c0d7adb98ac7d7d3e66ddc2ded09b9a6df00341dbf9f18ec3fa",
+      "sourcePath": "Ground/Biome/CryogenicField.png",
+      "sourceSha256": "425987b68a2d59b68218a351bcf01809f66d949713da33fe0f6d974ecfc4c1b3",
+      "sourceBytes": 3432759,
+      "processing": "Centre-square crop, Lanczos resize to 1024px, periodic-plus-smooth boundary correction with distributed edge ramp, RGB WebP quality 86."
+    },
+    "image": {
+      "key": "assets/art/visual-library/terrain/materials/visual-terrain-material-ice-sheet-01.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Identity-neutral close-up cryogenic ice surface derived from the MineIT Desktop CryogenicField source for world-aligned 3D ground.",
+      "notes": "Lossless processed PNG is retained under Originals. Physical-device visual acceptance remains separate."
+    }
+  },
+  {
+    "id": "visual-terrain-material-volcanic-field-01",
+    "name": "Volcanic Field 3D Terrain Material 01",
+    "seriesId": "visual-series-desktop-terrain-materials",
+    "assetType": "seamless-terrain-material",
+    "intendedGameId": "game-mineit-mobile",
+    "identityNeutral": true,
+    "biomeId": "biome-volcanic-field",
+    "variant": 1,
+    "pixelSize": 1024,
+    "seamless": true,
+    "repeatMetresHint": 25,
+    "provenance": {
+      "sourceArchive": "Ground.zip",
+      "sourceArchiveSha256": "ffff953f86324c0d7adb98ac7d7d3e66ddc2ded09b9a6df00341dbf9f18ec3fa",
+      "sourcePath": "Ground/Biome/VolcanicRock.png",
+      "sourceSha256": "f15ec64481a6ebbbb96a05dbe69f1e5dfcfaab5656956d64400b9400aa431813",
+      "sourceBytes": 3953478,
+      "processing": "Centre-square crop, Lanczos resize to 1024px, periodic-plus-smooth boundary correction with distributed edge ramp, RGB WebP quality 86."
+    },
+    "image": {
+      "key": "assets/art/visual-library/terrain/materials/visual-terrain-material-volcanic-field-01.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Identity-neutral close-up rough cooled volcanic rock derived from the MineIT Desktop VolcanicRock source for world-aligned 3D ground.",
+      "notes": "Lossless processed PNG is retained under Originals. Physical-device visual acceptance remains separate."
+    }
+  },
+  {
+    "id": "visual-terrain-material-lava-field-01",
+    "name": "Lava Field 3D Terrain Material 01",
+    "seriesId": "visual-series-desktop-terrain-materials",
+    "assetType": "seamless-terrain-material",
+    "intendedGameId": "game-mineit-mobile",
+    "identityNeutral": true,
+    "biomeId": "biome-lava-field",
+    "variant": 1,
+    "pixelSize": 1024,
+    "seamless": true,
+    "repeatMetresHint": 25,
+    "provenance": {
+      "sourceArchive": "Ground.zip",
+      "sourceArchiveSha256": "ffff953f86324c0d7adb98ac7d7d3e66ddc2ded09b9a6df00341dbf9f18ec3fa",
+      "sourcePath": "Ground/Biome/LavaPlain.png",
+      "sourceSha256": "250ff587c61657dd62c371a4f1c7c75582d0e89b046b4f1715ba980357c4072f",
+      "sourceBytes": 3544644,
+      "processing": "Centre-square crop, Lanczos resize to 1024px, periodic-plus-smooth boundary correction with distributed edge ramp, RGB WebP quality 86."
+    },
+    "image": {
+      "key": "assets/art/visual-library/terrain/materials/visual-terrain-material-lava-field-01.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Identity-neutral close-up cooled crust with glowing lava fissures derived from the MineIT Desktop LavaPlain source for world-aligned 3D ground.",
+      "notes": "Lossless processed PNG is retained under Originals. The current mobile renderer consumes this as base colour without an emissive channel."
+    }
+  },
+  {
+    "id": "visual-terrain-material-toxic-wasteland-01",
+    "name": "Toxic Wasteland 3D Terrain Material 01",
+    "seriesId": "visual-series-desktop-terrain-materials",
+    "assetType": "seamless-terrain-material",
+    "intendedGameId": "game-mineit-mobile",
+    "identityNeutral": true,
+    "biomeId": "biome-toxic-wasteland",
+    "variant": 1,
+    "pixelSize": 1024,
+    "seamless": true,
+    "repeatMetresHint": 25,
+    "provenance": {
+      "sourceArchive": "Ground.zip",
+      "sourceArchiveSha256": "ffff953f86324c0d7adb98ac7d7d3e66ddc2ded09b9a6df00341dbf9f18ec3fa",
+      "sourcePath": "Ground/Biome/ToxicWasteland.png",
+      "sourceSha256": "a002a663e6bae63d703990e9460079e0b5903fdb2ae1d56e8f540e0324210dfe",
+      "sourceBytes": 3640067,
+      "processing": "Centre-square crop, Lanczos resize to 1024px, periodic-plus-smooth boundary correction with distributed edge ramp, RGB WebP quality 86."
+    },
+    "image": {
+      "key": "assets/art/visual-library/terrain/materials/visual-terrain-material-toxic-wasteland-01.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Identity-neutral close-up chemically stained toxic ground derived from the MineIT Desktop ToxicWasteland source for world-aligned 3D ground.",
+      "notes": "Lossless processed PNG is retained under Originals. Physical-device visual acceptance remains separate."
+    }
+  }
+]

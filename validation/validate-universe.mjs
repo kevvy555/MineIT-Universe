@@ -29,7 +29,8 @@ const imageStatuses = new Set(['not-generated', 'in-progress', 'generated', 'app
 // Mobile canonical artwork must retain the original lossless PNG alongside its WebP.
 const mobileOriginalCollections = new Set([
   'mobileResourceDefinitions', 'mobileBiologicalResources', 'buildings',
-  'buildingMobileLevelImages', 'landscapeTiles', 'visualAssets', 'shipClasses',
+  'buildingMobileLevelImages', 'landscapeTiles', 'visualAssets', 'terrainMaterials',
+  'shipClasses',
 ]);
 
 if (!Number.isInteger(manifest.canonicalYear)) errors.push('manifest.canonicalYear must be an integer.');
@@ -106,6 +107,7 @@ const scalarRefs = {
   economicSectors: ['anchorOrganisationId'],
   visualAssetSeries: ['generationSourceId', 'intendedGameId'],
   visualAssets: ['seriesId', 'intendedGameId', 'landformId', 'biomeId', 'hydrosphereId'],
+  terrainMaterials: ['seriesId', 'intendedGameId', 'biomeId'],
   shipLines: ['manufacturerOrganisationId', 'flagshipYardFacilityId'],
   shipClasses: ['manufacturerOrganisationId', 'shipLineId'],
   ships: ['organisationId', 'shipClassId', 'homePortLocationId'],
@@ -586,7 +588,7 @@ console.log(`Canonical Year ${manifest.canonicalYear}; civilisation baseline Yea
 console.log(`${byId.size} entities across ${Object.keys(collections).length} logical collections and ${Object.values(collectionFiles).flat().length} JSON shards.`);
 console.log(`${retailClasses.length} factory-new ship classes across ${retailManufacturerIds.size} manufacturers.`);
 console.log(`${commercialContacts.length} commercial contacts across ${sectors.length} economic sectors and ${commercialOperations.length} procurement operations.`);
-console.log(`${(collections.games ?? []).length} games; ${(collections.surfaceLandforms ?? []).length} landforms; ${(collections.surfaceBiomes ?? []).length} biomes; ${(collections.findSites ?? []).length} P0 find sites; ${(collections.landscapeTilesets ?? []).length} authored landscape tilesets; ${(collections.landscapeTiles ?? []).length} authored landscape tiles; ${(collections.visualAssets ?? []).length} reusable visual assets; ${(collections.worldAtlases ?? []).length} world atlases; ${(collections.worldAtlasTiles ?? []).length} world atlas tiles.`);
+console.log(`${(collections.games ?? []).length} games; ${(collections.surfaceLandforms ?? []).length} landforms; ${(collections.surfaceBiomes ?? []).length} biomes; ${(collections.findSites ?? []).length} P0 find sites; ${(collections.landscapeTilesets ?? []).length} authored landscape tilesets; ${(collections.landscapeTiles ?? []).length} authored landscape tiles; ${(collections.visualAssets ?? []).length} reusable visual assets; ${(collections.terrainMaterials ?? []).length} seamless terrain materials; ${(collections.worldAtlases ?? []).length} world atlases; ${(collections.worldAtlasTiles ?? []).length} world atlas tiles.`);
 if (warnings.length) { console.log(`\nWarnings (${warnings.length}):`); warnings.forEach(w => console.log(`- ${w}`)); }
 
 // MineIT Mobile canonical resource/environment boundary.
@@ -712,6 +714,28 @@ for (const asset of mobileLandscapeAssets) {
   if (asset.identityNeutral !== true) errors.push(`${asset.id}: generated landscape asset must be identity-neutral.`);
   if (!asset.image) errors.push(`${asset.id}: generated landscape asset requires image metadata.`);
   if (!asset.image?.key?.startsWith('assets/art/visual-library/landscape/mobile/')) errors.push(`${asset.id}: generated landscape asset must live under assets/art/visual-library/landscape/mobile/.`);
+}
+
+const terrainMaterials = collections.terrainMaterials ?? [];
+const terrainMaterialSeriesId = 'visual-series-desktop-terrain-materials';
+if (!(collections.visualAssetSeries ?? []).some(series => series.id === terrainMaterialSeriesId)) {
+  errors.push(`Missing ${terrainMaterialSeriesId}.`);
+}
+if (terrainMaterials.length !== (collections.surfaceBiomes ?? []).length) {
+  errors.push(`3D terrain material library must contain one material per surface biome; found ${terrainMaterials.length}.`);
+}
+for (const biome of collections.surfaceBiomes ?? []) {
+  const matches = terrainMaterials.filter(material => material.biomeId === biome.id);
+  if (matches.length !== 1) errors.push(`3D terrain material library requires exactly one material for ${biome.id}; found ${matches.length}.`);
+}
+for (const material of terrainMaterials) {
+  if (material.seriesId !== terrainMaterialSeriesId) errors.push(`${material.id}: terrain material must use ${terrainMaterialSeriesId}.`);
+  if (material.assetType !== 'seamless-terrain-material') errors.push(`${material.id}: terrain material assetType is invalid.`);
+  if (material.intendedGameId !== 'game-mineit-mobile') errors.push(`${material.id}: terrain material must target game-mineit-mobile.`);
+  if (material.identityNeutral !== true) errors.push(`${material.id}: terrain material must be identity-neutral.`);
+  if (material.pixelSize !== 1024) errors.push(`${material.id}: terrain material must declare 1024px Android output.`);
+  if (material.seamless !== true) errors.push(`${material.id}: terrain material must be edge-matched.`);
+  if (!material.image?.key?.startsWith('assets/art/visual-library/terrain/materials/')) errors.push(`${material.id}: terrain material must live under assets/art/visual-library/terrain/materials/.`);
 }
 
 const requiredMobileParentSubstances = [
