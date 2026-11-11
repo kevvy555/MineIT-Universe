@@ -1,0 +1,65 @@
+[
+  {
+    "id": "mineit-mobile-industrial-alignment-reference",
+    "name": "MineIT Android industrial alignment reference",
+    "authority": "reference-only-platform-balance-not-canonical-universe-facts",
+    "sourceRepository": "kevvy555/MineIT-Android",
+    "sourceCommit": "3f91c7a4d2a215d99f739165041bfa0e3b50f14b",
+    "sourceFiles": [
+      "app/src/main/java/com/mineit/android/domain/spatial/LandExtractionCapabilities.kt",
+      "app/src/main/java/com/mineit/android/domain/colony/InfrastructureRules.kt",
+      "app/src/main/java/com/mineit/android/domain/colony/SiteOperationRules.kt",
+      "app/src/main/java/com/mineit/android/domain/config/MineItConfig.kt"
+    ],
+    "extractionFacilityPowerByLevel": {
+      "building-quarry": [
+        4,
+        9,
+        17,
+        29,
+        46
+      ],
+      "building-extraction-rig": [
+        4,
+        10,
+        19,
+        33,
+        52
+      ],
+      "building-simple-pit-mine": [
+        5,
+        12,
+        23,
+        40,
+        64
+      ],
+      "building-deep-mine": [
+        7,
+        16,
+        31,
+        54,
+        86
+      ]
+    },
+    "outputByLevel": [
+      10,
+      18,
+      30,
+      48,
+      72
+    ],
+    "workforceFormula": "ceil(12 * pow(1.60, level - 1) * methodComplexity * methodWorkforceEfficiency * intensityFactor * operatingModeMultiplier)",
+    "interimProvisioningPolicy": {
+      "newFacilityEquipmentConditionPct": 100,
+      "newInstalledPartConditionPct": 100,
+      "procurementRequired": false,
+      "playerRepairAvailable": false,
+      "playerPartReplacementAvailable": false,
+      "wornFacilityRemedy": "demolish-and-rebuild",
+      "preserveDepletedReserve": true,
+      "preserveTerrainGrading": true,
+      "approval": "Approved gameplay direction"
+    },
+    "approvalDecision": "Approved as part of the complete industrial alignment on 2026-11-11; platform balance remains Android-owned."
+  }
+]

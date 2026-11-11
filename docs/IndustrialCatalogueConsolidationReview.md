@@ -1,5 +1,10 @@
 # Parts, Machines and Buildings — consolidated review (3 November 2026)
 
+> **Superseded for current review:** the complete schema-13 alignment and its
+> consolidated 24-Building / 45-Machine / 19-Part catalogue report are in
+> [IndustrialCatalogueAlignmentReview.md](IndustrialCatalogueAlignmentReview.md).
+> This document remains historical evidence for the earlier consolidation.
+
 > **Current Parts catalogue state (3 November 2026, feature PR #24):** **19 active
 > finished Parts**, zero active legacy Part records. The old Battery Parts,
 > Thermal / Optical Parts and Fabrication Parts IDs were explicitly retired

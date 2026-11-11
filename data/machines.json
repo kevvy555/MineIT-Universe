@@ -11,7 +11,10 @@
     "partIds": [
       "part-mechanical-parts",
       "part-power-electronics",
-      "part-structural-components"
+      "part-structural-components",
+      "part-control-and-sensor-parts",
+      "part-computing-parts",
+      "part-lithium-based-battery-module"
     ],
     "description": "A rugged six-wheeled all-terrain exploration rover equipped with geological sampling equipment, sensors and a pressurised cabin for frontier survey work.",
     "canonStatus": "source-canonical",
@@ -110,16 +113,90 @@
       "manufacturing.finishedMassKg": "Not Reviewed",
       "manufacturing.manufacturerCostCC": "Blocked",
       "manufacturing.manufacturerQuoteCC": "Blocked",
-      "partIds": "In Review",
+      "partIds": "Approved",
       "pendingPartCompatibility": "Approved",
       "outputSummary": "Not Reviewed",
       "inputSummary": "Not Reviewed",
       "operating.ratedCapacity": "Not Reviewed",
       "operating.powerUnits": "Not Reviewed",
       "operating.footprintM2": "Not Reviewed",
-      "operating.housingTechTier": "Not Reviewed"
+      "operating.housingTechTier": "Not Reviewed",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved"
     },
-    "approval": "Blocked"
+    "approval": "Blocked",
+    "servicePartRequirements": [
+      {
+        "partId": "part-mechanical-parts",
+        "quantity": 4,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-power-electronics",
+        "quantity": 2,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-structural-components",
+        "quantity": 4,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-control-and-sensor-parts",
+        "quantity": 3,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-computing-parts",
+        "quantity": 1,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-lithium-based-battery-module",
+        "quantity": 12,
+        "role": "installed-serviceable-component",
+        "criticality": "functional",
+        "conditionWeight": 1,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "terrain-survey",
+      "geological-sampling",
+      "surface-transport"
+    ],
+    "capabilityConfigurations": [],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    }
   },
   {
     "id": "machine-ship-scanner",
@@ -133,7 +210,9 @@
     "partIds": [
       "part-power-electronics",
       "part-control-and-sensor-parts",
-      "part-structural-components"
+      "part-structural-components",
+      "part-computing-parts",
+      "part-optical-parts"
     ],
     "description": "An integrated long-range ship sensor suite combining radar, seismic and thermal techniques to map planetary surfaces and shallow subsurface structures.",
     "canonStatus": "source-canonical",
@@ -217,16 +296,80 @@
       "manufacturing.finishedMassKg": "Proposed",
       "manufacturing.manufacturerCostCC": "Proposed",
       "manufacturing.manufacturerQuoteCC": "Proposed",
-      "partIds": "In Review",
+      "partIds": "Approved",
       "pendingPartCompatibility": "Approved",
       "outputSummary": "Not Reviewed",
       "inputSummary": "Not Reviewed",
       "operating.ratedCapacity": "Not Reviewed",
       "operating.powerUnits": "Not Reviewed",
       "operating.footprintM2": "Not Reviewed",
-      "operating.housingTechTier": "Not Reviewed"
+      "operating.housingTechTier": "Not Reviewed",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved"
     },
-    "approval": "In Review"
+    "approval": "In Review",
+    "servicePartRequirements": [
+      {
+        "partId": "part-power-electronics",
+        "quantity": 4,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-control-and-sensor-parts",
+        "quantity": 5,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-structural-components",
+        "quantity": 2,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-computing-parts",
+        "quantity": 4,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-optical-parts",
+        "quantity": 2,
+        "role": "installed-serviceable-component",
+        "criticality": "functional",
+        "conditionWeight": 1,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "remote-survey",
+      "navigation-scan"
+    ],
+    "capabilityConfigurations": [],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    }
   },
   {
     "id": "machine-substance-analyser",
@@ -241,7 +384,9 @@
       "part-power-electronics",
       "part-control-and-sensor-parts",
       "part-extraction-parts",
-      "part-structural-components"
+      "part-structural-components",
+      "part-optical-parts",
+      "part-computing-parts"
     ],
     "description": "A close-range spectrographic and geological inspection system used to identify composition, density and structural properties of sampled deposits.",
     "canonStatus": "source-canonical",
@@ -325,16 +470,103 @@
       "manufacturing.finishedMassKg": "Proposed",
       "manufacturing.manufacturerCostCC": "Proposed",
       "manufacturing.manufacturerQuoteCC": "Proposed",
-      "partIds": "In Review",
+      "partIds": "Approved",
       "pendingPartCompatibility": "Approved",
       "outputSummary": "Not Reviewed",
       "inputSummary": "Not Reviewed",
       "operating.ratedCapacity": "Not Reviewed",
       "operating.powerUnits": "Not Reviewed",
       "operating.footprintM2": "Not Reviewed",
-      "operating.housingTechTier": "Not Reviewed"
+      "operating.housingTechTier": "Not Reviewed",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved"
     },
-    "approval": "In Review"
+    "approval": "In Review",
+    "servicePartRequirements": [
+      {
+        "partId": "part-power-electronics",
+        "quantity": 2,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-control-and-sensor-parts",
+        "quantity": 4,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-extraction-parts",
+        "quantity": 1,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-structural-components",
+        "quantity": 1,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-optical-parts",
+        "quantity": 2,
+        "role": "installed-serviceable-component",
+        "criticality": "functional",
+        "conditionWeight": 1,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-computing-parts",
+        "quantity": 2,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "material-analysis",
+      "precision-extraction-control"
+    ],
+    "capabilityConfigurations": [
+      {
+        "id": "precision-extraction-control",
+        "name": "Precision extraction control",
+        "supportedFunction": "precision-extraction-control",
+        "compatibleBuildingIds": [
+          "building-simple-pit-mine",
+          "building-deep-mine"
+        ],
+        "maximumDepthM": null,
+        "technologyRequirement": "precision-extraction",
+        "approval": "Approved",
+        "notes": "Requires a separate operational depth-qualified underground mining system; control equipment never increases physical reach."
+      }
+    ],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    }
   },
   {
     "id": "machine-ship-reactor",
@@ -349,7 +581,11 @@
       "part-generator-parts",
       "part-power-electronics",
       "part-control-and-sensor-parts",
-      "part-structural-components"
+      "part-structural-components",
+      "part-thermal-parts",
+      "part-mechanical-parts",
+      "part-fluid-handling-parts",
+      "part-computing-parts"
     ],
     "description": "A compact high-output fusion reactor designed to provide sustained electrical power for a spacecraft and, where connections permit, nearby surface infrastructure.",
     "canonStatus": "source-canonical",
@@ -459,16 +695,106 @@
       "manufacturing.finishedMassKg": "Not Reviewed",
       "manufacturing.manufacturerCostCC": "Blocked",
       "manufacturing.manufacturerQuoteCC": "Blocked",
-      "partIds": "In Review",
+      "partIds": "Approved",
       "pendingPartCompatibility": "In Review",
       "outputSummary": "In Review",
       "inputSummary": "Not Reviewed",
       "operating.ratedCapacity": "Not Reviewed",
       "operating.powerUnits": "Not Reviewed",
       "operating.footprintM2": "Not Reviewed",
-      "operating.housingTechTier": "Not Reviewed"
+      "operating.housingTechTier": "Not Reviewed",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved"
     },
-    "approval": "Blocked"
+    "approval": "Blocked",
+    "servicePartRequirements": [
+      {
+        "partId": "part-generator-parts",
+        "quantity": 1,
+        "role": "compatible-service-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-power-electronics",
+        "quantity": 8,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-control-and-sensor-parts",
+        "quantity": 6,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-structural-components",
+        "quantity": 8,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-thermal-parts",
+        "quantity": 4,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-mechanical-parts",
+        "quantity": 4,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-fluid-handling-parts",
+        "quantity": 4,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-computing-parts",
+        "quantity": 3,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "ship-power-generation"
+    ],
+    "capabilityConfigurations": [],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    }
   },
   {
     "id": "machine-ship-life-support",
@@ -483,7 +809,9 @@
       "part-fluid-handling-parts",
       "part-mechanical-parts",
       "part-power-electronics",
-      "part-control-and-sensor-parts"
+      "part-control-and-sensor-parts",
+      "part-thermal-parts",
+      "part-computing-parts"
     ],
     "description": "A shipboard environmental management system controlling oxygen circulation, water recycling, humidity, temperature and atmospheric pressure.",
     "canonStatus": "source-canonical",
@@ -569,16 +897,89 @@
       "manufacturing.finishedMassKg": "Proposed",
       "manufacturing.manufacturerCostCC": "Proposed",
       "manufacturing.manufacturerQuoteCC": "Proposed",
-      "partIds": "In Review",
+      "partIds": "Approved",
       "pendingPartCompatibility": "Approved",
       "outputSummary": "In Review",
       "inputSummary": "Not Reviewed",
       "operating.ratedCapacity": "Not Reviewed",
       "operating.powerUnits": "Not Reviewed",
       "operating.footprintM2": "Not Reviewed",
-      "operating.housingTechTier": "Not Reviewed"
+      "operating.housingTechTier": "Not Reviewed",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved"
     },
-    "approval": "In Review"
+    "approval": "In Review",
+    "servicePartRequirements": [
+      {
+        "partId": "part-fluid-handling-parts",
+        "quantity": 8,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-mechanical-parts",
+        "quantity": 5,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-power-electronics",
+        "quantity": 4,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-control-and-sensor-parts",
+        "quantity": 4,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-thermal-parts",
+        "quantity": 2,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-computing-parts",
+        "quantity": 2,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "atmosphere-recycling",
+      "life-support"
+    ],
+    "capabilityConfigurations": [],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    }
   },
   {
     "id": "machine-ship-computer",
@@ -592,7 +993,8 @@
     "partIds": [
       "part-computing-parts",
       "part-power-electronics",
-      "part-control-and-sensor-parts"
+      "part-control-and-sensor-parts",
+      "part-structural-components"
     ],
     "description": "A spacecraft navigation, systems-control and data-processing mainframe capable of supporting engineering, scientific and operational workloads.",
     "canonStatus": "source-canonical",
@@ -665,16 +1067,71 @@
       "manufacturing.finishedMassKg": "Proposed",
       "manufacturing.manufacturerCostCC": "Proposed",
       "manufacturing.manufacturerQuoteCC": "Proposed",
-      "partIds": "In Review",
+      "partIds": "Approved",
       "pendingPartCompatibility": "Approved",
       "outputSummary": "In Review",
       "inputSummary": "Not Reviewed",
       "operating.ratedCapacity": "Not Reviewed",
       "operating.powerUnits": "Not Reviewed",
       "operating.footprintM2": "Not Reviewed",
-      "operating.housingTechTier": "Not Reviewed"
+      "operating.housingTechTier": "Not Reviewed",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved"
     },
-    "approval": "In Review"
+    "approval": "In Review",
+    "servicePartRequirements": [
+      {
+        "partId": "part-computing-parts",
+        "quantity": 12,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-power-electronics",
+        "quantity": 4,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-control-and-sensor-parts",
+        "quantity": 6,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-structural-components",
+        "quantity": 2,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "ship-control",
+      "navigation-computing"
+    ],
+    "capabilityConfigurations": [],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    }
   },
   {
     "id": "machine-ship-refinery-unit",
@@ -690,7 +1147,10 @@
       "part-mechanical-parts",
       "part-hydraulic-parts",
       "part-power-electronics",
-      "part-structural-components"
+      "part-structural-components",
+      "part-thermal-parts",
+      "part-fluid-handling-parts",
+      "part-forming-cutting-tooling"
     ],
     "description": "A compact onboard materials-processing unit capable of basic thermal reduction, crushing and separation where full-scale refinery infrastructure is unavailable.",
     "canonStatus": "source-canonical",
@@ -798,16 +1258,107 @@
       "manufacturing.finishedMassKg": "Proposed",
       "manufacturing.manufacturerCostCC": "Proposed",
       "manufacturing.manufacturerQuoteCC": "Proposed",
-      "partIds": "In Review",
+      "partIds": "Approved",
       "pendingPartCompatibility": "In Review",
       "outputSummary": "In Review",
       "inputSummary": "In Review",
       "operating.ratedCapacity": "Not Reviewed",
       "operating.powerUnits": "Not Reviewed",
       "operating.footprintM2": "Not Reviewed",
-      "operating.housingTechTier": "Not Reviewed"
+      "operating.housingTechTier": "Not Reviewed",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved"
     },
-    "approval": "In Review"
+    "approval": "In Review",
+    "servicePartRequirements": [
+      {
+        "partId": "part-processing-parts",
+        "quantity": 10,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-mechanical-parts",
+        "quantity": 8,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-hydraulic-parts",
+        "quantity": 4,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-power-electronics",
+        "quantity": 4,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-structural-components",
+        "quantity": 8,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-thermal-parts",
+        "quantity": 5,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-fluid-handling-parts",
+        "quantity": 3,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-forming-cutting-tooling",
+        "quantity": 2,
+        "role": "installed-serviceable-component",
+        "criticality": "functional",
+        "conditionWeight": 1,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "mobile-material-processing",
+      "mobile-refining"
+    ],
+    "capabilityConfigurations": [],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    }
   },
   {
     "id": "machine-drill-machine",
@@ -823,7 +1374,8 @@
       "part-mechanical-parts",
       "part-hydraulic-parts",
       "part-power-electronics",
-      "part-structural-components"
+      "part-structural-components",
+      "part-control-and-sensor-parts"
     ],
     "description": "A heavy rotary boring system using hardened cutting assemblies to break rock and access subsurface deposit seams.",
     "canonStatus": "source-canonical",
@@ -910,16 +1462,102 @@
       "manufacturing.finishedMassKg": "Proposed",
       "manufacturing.manufacturerCostCC": "Proposed",
       "manufacturing.manufacturerQuoteCC": "Proposed",
-      "partIds": "In Review",
+      "partIds": "Approved",
       "pendingPartCompatibility": "Approved",
       "outputSummary": "In Review",
       "inputSummary": "In Review",
       "operating.ratedCapacity": "Not Reviewed",
       "operating.powerUnits": "Not Reviewed",
       "operating.footprintM2": "Not Reviewed",
-      "operating.housingTechTier": "Not Reviewed"
+      "operating.housingTechTier": "Not Reviewed",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved"
     },
-    "approval": "In Review"
+    "approval": "In Review",
+    "servicePartRequirements": [
+      {
+        "partId": "part-extraction-parts",
+        "quantity": 12,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-mechanical-parts",
+        "quantity": 6,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-hydraulic-parts",
+        "quantity": 8,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-power-electronics",
+        "quantity": 3,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-structural-components",
+        "quantity": 8,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-control-and-sensor-parts",
+        "quantity": 2,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "quarry-excavation",
+      "bench-drilling"
+    ],
+    "capabilityConfigurations": [
+      {
+        "id": "quarry-bench-drilling",
+        "name": "Quarry bench drilling",
+        "supportedFunction": "quarry-excavation",
+        "compatibleBuildingIds": [
+          "building-quarry"
+        ],
+        "maximumDepthM": 50,
+        "technologyRequirement": "quarrying",
+        "approval": "Approved",
+        "notes": "Preserves the MineIT Android Quarry Excavation physical reach. This configuration does not support shaft, deep-mine or well-drilling methods."
+      }
+    ],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    }
   },
   {
     "id": "machine-conveyor-machine",
@@ -934,7 +1572,8 @@
       "part-mechanical-parts",
       "part-power-electronics",
       "part-structural-components",
-      "part-bulk-handling-parts"
+      "part-bulk-handling-parts",
+      "part-control-and-sensor-parts"
     ],
     "description": "An automated heavy-duty material transport system for moving loose minerals and industrial feedstock between extraction, processing and storage areas.",
     "canonStatus": "source-canonical",
@@ -1018,16 +1657,79 @@
       "manufacturing.finishedMassKg": "Proposed",
       "manufacturing.manufacturerCostCC": "Proposed",
       "manufacturing.manufacturerQuoteCC": "Proposed",
-      "partIds": "In Review",
+      "partIds": "Approved",
       "pendingPartCompatibility": "Approved",
       "outputSummary": "In Review",
       "inputSummary": "In Review",
       "operating.ratedCapacity": "Not Reviewed",
       "operating.powerUnits": "Not Reviewed",
       "operating.footprintM2": "Not Reviewed",
-      "operating.housingTechTier": "Not Reviewed"
+      "operating.housingTechTier": "Not Reviewed",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved"
     },
-    "approval": "In Review"
+    "approval": "In Review",
+    "servicePartRequirements": [
+      {
+        "partId": "part-mechanical-parts",
+        "quantity": 4,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-power-electronics",
+        "quantity": 2,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-structural-components",
+        "quantity": 8,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-bulk-handling-parts",
+        "quantity": 8,
+        "role": "installed-serviceable-component",
+        "criticality": "functional",
+        "conditionWeight": 1,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-control-and-sensor-parts",
+        "quantity": 1,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "continuous-bulk-transport"
+    ],
+    "capabilityConfigurations": [],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    }
   },
   {
     "id": "machine-mine-ventilation",
@@ -1041,7 +1743,8 @@
     "partIds": [
       "part-mechanical-parts",
       "part-fluid-handling-parts",
-      "part-power-electronics"
+      "part-power-electronics",
+      "part-structural-components"
     ],
     "description": "A high-capacity fan, filtration and duct system that circulates breathable air and controls dust, contaminants and heat in underground workings.",
     "canonStatus": "source-canonical",
@@ -1121,16 +1824,71 @@
       "manufacturing.finishedMassKg": "Proposed",
       "manufacturing.manufacturerCostCC": "Proposed",
       "manufacturing.manufacturerQuoteCC": "Proposed",
-      "partIds": "In Review",
+      "partIds": "Approved",
       "pendingPartCompatibility": "Approved",
       "outputSummary": "In Review",
       "inputSummary": "In Review",
       "operating.ratedCapacity": "Not Reviewed",
       "operating.powerUnits": "Not Reviewed",
       "operating.footprintM2": "Not Reviewed",
-      "operating.housingTechTier": "Not Reviewed"
+      "operating.housingTechTier": "Not Reviewed",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved"
     },
-    "approval": "In Review"
+    "approval": "In Review",
+    "servicePartRequirements": [
+      {
+        "partId": "part-mechanical-parts",
+        "quantity": 4,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-fluid-handling-parts",
+        "quantity": 4,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-power-electronics",
+        "quantity": 2,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-structural-components",
+        "quantity": 3,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "underground-ventilation",
+      "hazardous-gas-removal"
+    ],
+    "capabilityConfigurations": [],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    }
   },
   {
     "id": "machine-crusher-machine",
@@ -1145,7 +1903,8 @@
       "part-mechanical-parts",
       "part-processing-parts",
       "part-structural-components",
-      "part-power-electronics"
+      "part-power-electronics",
+      "part-forming-cutting-tooling"
     ],
     "description": "A heavy mechanical crusher that reduces mined rock and mineral feedstock to controlled particle sizes for downstream processing.",
     "canonStatus": "source-canonical",
@@ -1228,16 +1987,80 @@
       "manufacturing.finishedMassKg": "Proposed",
       "manufacturing.manufacturerCostCC": "Proposed",
       "manufacturing.manufacturerQuoteCC": "Proposed",
-      "partIds": "In Review",
+      "partIds": "Approved",
       "pendingPartCompatibility": "Approved",
       "outputSummary": "In Review",
       "inputSummary": "In Review",
       "operating.ratedCapacity": "Not Reviewed",
       "operating.powerUnits": "Not Reviewed",
       "operating.footprintM2": "Not Reviewed",
-      "operating.housingTechTier": "Not Reviewed"
+      "operating.housingTechTier": "Not Reviewed",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved"
     },
-    "approval": "In Review"
+    "approval": "In Review",
+    "servicePartRequirements": [
+      {
+        "partId": "part-mechanical-parts",
+        "quantity": 8,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-processing-parts",
+        "quantity": 6,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-structural-components",
+        "quantity": 10,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-power-electronics",
+        "quantity": 3,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-forming-cutting-tooling",
+        "quantity": 2,
+        "role": "installed-serviceable-component",
+        "criticality": "functional",
+        "conditionWeight": 1,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "size-reduction",
+      "ore-crushing"
+    ],
+    "capabilityConfigurations": [],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    }
   },
   {
     "id": "machine-smelter-machine",
@@ -1252,7 +2075,9 @@
       "part-processing-parts",
       "part-structural-components",
       "part-power-electronics",
-      "part-fluid-handling-parts"
+      "part-fluid-handling-parts",
+      "part-thermal-parts",
+      "part-control-and-sensor-parts"
     ],
     "description": "An industrial high-temperature furnace with refractory lining, controlled heating and cooling systems for reducing and refining mineral feedstock.",
     "canonStatus": "source-canonical",
@@ -1347,16 +2172,89 @@
       "manufacturing.finishedMassKg": "Proposed",
       "manufacturing.manufacturerCostCC": "Proposed",
       "manufacturing.manufacturerQuoteCC": "Proposed",
-      "partIds": "In Review",
+      "partIds": "Approved",
       "pendingPartCompatibility": "In Review",
       "outputSummary": "In Review",
       "inputSummary": "In Review",
       "operating.ratedCapacity": "Not Reviewed",
       "operating.powerUnits": "Not Reviewed",
       "operating.footprintM2": "Not Reviewed",
-      "operating.housingTechTier": "Not Reviewed"
+      "operating.housingTechTier": "Not Reviewed",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved"
     },
-    "approval": "In Review"
+    "approval": "In Review",
+    "servicePartRequirements": [
+      {
+        "partId": "part-processing-parts",
+        "quantity": 12,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-structural-components",
+        "quantity": 10,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-power-electronics",
+        "quantity": 4,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-fluid-handling-parts",
+        "quantity": 6,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-thermal-parts",
+        "quantity": 10,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-control-and-sensor-parts",
+        "quantity": 3,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "thermal-refining",
+      "metal-smelting"
+    ],
+    "capabilityConfigurations": [],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    }
   },
   {
     "id": "machine-crude-chemical-battery",
@@ -1369,7 +2267,9 @@
     ],
     "partIds": [
       "part-power-electronics",
-      "part-structural-components"
+      "part-structural-components",
+      "part-lead-acid-battery-module",
+      "part-fluid-handling-parts"
     ],
     "description": "A modular industrial electrochemical storage bank assembled from robust battery cells, conductive busbars and protected electrolyte reservoirs.",
     "canonStatus": "source-canonical",
@@ -1458,16 +2358,70 @@
       "manufacturing.finishedMassKg": "Proposed",
       "manufacturing.manufacturerCostCC": "Proposed",
       "manufacturing.manufacturerQuoteCC": "Proposed",
-      "partIds": "In Review",
+      "partIds": "Approved",
       "pendingPartCompatibility": "In Review",
       "outputSummary": "In Review",
       "inputSummary": "In Review",
       "operating.ratedCapacity": "Not Reviewed",
       "operating.powerUnits": "Not Reviewed",
       "operating.footprintM2": "Not Reviewed",
-      "operating.housingTechTier": "Not Reviewed"
+      "operating.housingTechTier": "Not Reviewed",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved"
     },
-    "approval": "In Review"
+    "approval": "In Review",
+    "servicePartRequirements": [
+      {
+        "partId": "part-power-electronics",
+        "quantity": 3,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-structural-components",
+        "quantity": 4,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-lead-acid-battery-module",
+        "quantity": 12,
+        "role": "installed-serviceable-component",
+        "criticality": "functional",
+        "conditionWeight": 1,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-fluid-handling-parts",
+        "quantity": 1,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "stationary-energy-storage"
+    ],
+    "capabilityConfigurations": [],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    }
   },
   {
     "id": "machine-wind-generator",
@@ -1565,16 +2519,79 @@
       "manufacturing.finishedMassKg": "Proposed",
       "manufacturing.manufacturerCostCC": "Proposed",
       "manufacturing.manufacturerQuoteCC": "Proposed",
-      "partIds": "In Review",
+      "partIds": "Approved",
       "pendingPartCompatibility": "Approved",
       "outputSummary": "In Review",
       "inputSummary": "In Review",
       "operating.ratedCapacity": "Not Reviewed",
       "operating.powerUnits": "Not Reviewed",
       "operating.footprintM2": "Not Reviewed",
-      "operating.housingTechTier": "Not Reviewed"
+      "operating.housingTechTier": "Not Reviewed",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved"
     },
-    "approval": "In Review"
+    "approval": "In Review",
+    "servicePartRequirements": [
+      {
+        "partId": "part-generator-parts",
+        "quantity": 8,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-mechanical-parts",
+        "quantity": 6,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-power-electronics",
+        "quantity": 5,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-structural-components",
+        "quantity": 12,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-control-and-sensor-parts",
+        "quantity": 3,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "wind-power-generation"
+    ],
+    "capabilityConfigurations": [],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    }
   },
   {
     "id": "machine-water-wheel-generator",
@@ -1668,16 +2685,79 @@
       "manufacturing.finishedMassKg": "Proposed",
       "manufacturing.manufacturerCostCC": "Proposed",
       "manufacturing.manufacturerQuoteCC": "Proposed",
-      "partIds": "In Review",
+      "partIds": "Approved",
       "pendingPartCompatibility": "Approved",
       "outputSummary": "In Review",
       "inputSummary": "In Review",
       "operating.ratedCapacity": "Not Reviewed",
       "operating.powerUnits": "Not Reviewed",
       "operating.footprintM2": "Not Reviewed",
-      "operating.housingTechTier": "Not Reviewed"
+      "operating.housingTechTier": "Not Reviewed",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved"
     },
-    "approval": "In Review"
+    "approval": "In Review",
+    "servicePartRequirements": [
+      {
+        "partId": "part-generator-parts",
+        "quantity": 6,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-mechanical-parts",
+        "quantity": 8,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-power-electronics",
+        "quantity": 3,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-structural-components",
+        "quantity": 12,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-control-and-sensor-parts",
+        "quantity": 2,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "water-power-generation"
+    ],
+    "capabilityConfigurations": [],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    }
   },
   {
     "id": "machine-thermoelectric-trickler",
@@ -1689,7 +2769,11 @@
       "Manufactured"
     ],
     "partIds": [
-      "part-power-electronics"
+      "part-power-electronics",
+      "part-thermal-parts",
+      "part-control-and-sensor-parts",
+      "part-structural-components",
+      "part-lead-acid-battery-module"
     ],
     "description": "A compact thermoelectric generator that turns a maintained temperature differential into low-output electrical power.",
     "canonStatus": "source-canonical",
@@ -1782,16 +2866,79 @@
       "manufacturing.finishedMassKg": "Not Reviewed",
       "manufacturing.manufacturerCostCC": "Blocked",
       "manufacturing.manufacturerQuoteCC": "Blocked",
-      "partIds": "In Review",
+      "partIds": "Approved",
       "pendingPartCompatibility": "In Review",
       "outputSummary": "In Review",
       "inputSummary": "In Review",
       "operating.ratedCapacity": "Not Reviewed",
       "operating.powerUnits": "Not Reviewed",
       "operating.footprintM2": "Not Reviewed",
-      "operating.housingTechTier": "Not Reviewed"
+      "operating.housingTechTier": "Not Reviewed",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved"
     },
-    "approval": "Blocked"
+    "approval": "Blocked",
+    "servicePartRequirements": [
+      {
+        "partId": "part-power-electronics",
+        "quantity": 2,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-thermal-parts",
+        "quantity": 3,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-control-and-sensor-parts",
+        "quantity": 2,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-structural-components",
+        "quantity": 1,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-lead-acid-battery-module",
+        "quantity": 1,
+        "role": "installed-serviceable-component",
+        "criticality": "functional",
+        "conditionWeight": 1,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "low-grade-heat-power-generation"
+    ],
+    "capabilityConfigurations": [],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    }
   },
   {
     "id": "machine-solar-thermal-generator",
@@ -1807,7 +2954,9 @@
       "part-mechanical-parts",
       "part-power-electronics",
       "part-control-and-sensor-parts",
-      "part-structural-components"
+      "part-structural-components",
+      "part-thermal-parts",
+      "part-optical-parts"
     ],
     "description": "A solar-thermal generation system using tracked reflectors and a central receiver to heat working fluid and produce electrical power.",
     "canonStatus": "source-canonical",
@@ -1912,16 +3061,97 @@
       "manufacturing.finishedMassKg": "Proposed",
       "manufacturing.manufacturerCostCC": "Proposed",
       "manufacturing.manufacturerQuoteCC": "Proposed",
-      "partIds": "In Review",
+      "partIds": "Approved",
       "pendingPartCompatibility": "In Review",
       "outputSummary": "In Review",
       "inputSummary": "In Review",
       "operating.ratedCapacity": "Not Reviewed",
       "operating.powerUnits": "Not Reviewed",
       "operating.footprintM2": "Not Reviewed",
-      "operating.housingTechTier": "Not Reviewed"
+      "operating.housingTechTier": "Not Reviewed",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved"
     },
-    "approval": "In Review"
+    "approval": "In Review",
+    "servicePartRequirements": [
+      {
+        "partId": "part-generator-parts",
+        "quantity": 6,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-mechanical-parts",
+        "quantity": 6,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-power-electronics",
+        "quantity": 5,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-control-and-sensor-parts",
+        "quantity": 5,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-structural-components",
+        "quantity": 12,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-thermal-parts",
+        "quantity": 8,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-optical-parts",
+        "quantity": 16,
+        "role": "installed-serviceable-component",
+        "criticality": "functional",
+        "conditionWeight": 1,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "solar-thermal-power-generation"
+    ],
+    "capabilityConfigurations": [],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    }
   },
   {
     "id": "machine-power-distribution-system",
@@ -1935,7 +3165,8 @@
     "partIds": [
       "part-power-electronics",
       "part-control-and-sensor-parts",
-      "part-structural-components"
+      "part-structural-components",
+      "part-computing-parts"
     ],
     "description": "A switchyard, transformer and control system that safely routes electrical power between generation sources, storage and colony facilities.",
     "canonStatus": "source-canonical",
@@ -2009,16 +3240,71 @@
       "manufacturing.finishedMassKg": "Proposed",
       "manufacturing.manufacturerCostCC": "Proposed",
       "manufacturing.manufacturerQuoteCC": "Proposed",
-      "partIds": "In Review",
+      "partIds": "Approved",
       "pendingPartCompatibility": "Approved",
       "outputSummary": "In Review",
       "inputSummary": "In Review",
       "operating.ratedCapacity": "Not Reviewed",
       "operating.powerUnits": "Not Reviewed",
       "operating.footprintM2": "Not Reviewed",
-      "operating.housingTechTier": "Not Reviewed"
+      "operating.housingTechTier": "Not Reviewed",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved"
     },
-    "approval": "In Review"
+    "approval": "In Review",
+    "servicePartRequirements": [
+      {
+        "partId": "part-power-electronics",
+        "quantity": 15,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-control-and-sensor-parts",
+        "quantity": 8,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-structural-components",
+        "quantity": 10,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-computing-parts",
+        "quantity": 2,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "power-distribution",
+      "load-control"
+    ],
+    "capabilityConfigurations": [],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    }
   },
   {
     "id": "machine-life-support-machine",
@@ -2033,7 +3319,8 @@
       "part-fluid-handling-parts",
       "part-mechanical-parts",
       "part-power-electronics",
-      "part-control-and-sensor-parts"
+      "part-control-and-sensor-parts",
+      "part-thermal-parts"
     ],
     "description": "A modular habitat environmental system providing air recycling, carbon-dioxide removal and water-management support.",
     "canonStatus": "source-canonical",
@@ -2116,16 +3403,80 @@
       "manufacturing.finishedMassKg": "Proposed",
       "manufacturing.manufacturerCostCC": "Proposed",
       "manufacturing.manufacturerQuoteCC": "Proposed",
-      "partIds": "In Review",
+      "partIds": "Approved",
       "pendingPartCompatibility": "Approved",
       "outputSummary": "In Review",
       "inputSummary": "In Review",
       "operating.ratedCapacity": "Not Reviewed",
       "operating.powerUnits": "Not Reviewed",
       "operating.footprintM2": "Not Reviewed",
-      "operating.housingTechTier": "Not Reviewed"
+      "operating.housingTechTier": "Not Reviewed",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved"
     },
-    "approval": "In Review"
+    "approval": "In Review",
+    "servicePartRequirements": [
+      {
+        "partId": "part-fluid-handling-parts",
+        "quantity": 7,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-mechanical-parts",
+        "quantity": 5,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-power-electronics",
+        "quantity": 4,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-control-and-sensor-parts",
+        "quantity": 5,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-thermal-parts",
+        "quantity": 2,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "atmosphere-recycling",
+      "life-support"
+    ],
+    "capabilityConfigurations": [],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    }
   },
   {
     "id": "machine-climate-control-machine",
@@ -2139,7 +3490,9 @@
     "partIds": [
       "part-mechanical-parts",
       "part-power-electronics",
-      "part-control-and-sensor-parts"
+      "part-control-and-sensor-parts",
+      "part-thermal-parts",
+      "part-structural-components"
     ],
     "description": "A local environmental-control unit providing heating, cooling, ventilation, humidity management and particulate filtration in occupied structures.",
     "canonStatus": "source-canonical",
@@ -2236,16 +3589,80 @@
       "manufacturing.finishedMassKg": "Proposed",
       "manufacturing.manufacturerCostCC": "Proposed",
       "manufacturing.manufacturerQuoteCC": "Proposed",
-      "partIds": "In Review",
+      "partIds": "Approved",
       "pendingPartCompatibility": "In Review",
       "outputSummary": "In Review",
       "inputSummary": "In Review",
       "operating.ratedCapacity": "Not Reviewed",
       "operating.powerUnits": "Not Reviewed",
       "operating.footprintM2": "Not Reviewed",
-      "operating.housingTechTier": "Not Reviewed"
+      "operating.housingTechTier": "Not Reviewed",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved"
     },
-    "approval": "In Review"
+    "approval": "In Review",
+    "servicePartRequirements": [
+      {
+        "partId": "part-mechanical-parts",
+        "quantity": 5,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-power-electronics",
+        "quantity": 5,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-control-and-sensor-parts",
+        "quantity": 5,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-thermal-parts",
+        "quantity": 6,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-structural-components",
+        "quantity": 4,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "temperature-control",
+      "humidity-control"
+    ],
+    "capabilityConfigurations": [],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    }
   },
   {
     "id": "machine-irrigation-system",
@@ -2259,7 +3676,9 @@
     "partIds": [
       "part-fluid-handling-parts",
       "part-mechanical-parts",
-      "part-power-electronics"
+      "part-power-electronics",
+      "part-control-and-sensor-parts",
+      "part-structural-components"
     ],
     "description": "An automated water-distribution network equipped with moisture monitoring and nutrient-dosing controls for managed cultivation.",
     "canonStatus": "source-canonical",
@@ -2347,16 +3766,80 @@
       "manufacturing.finishedMassKg": "Proposed",
       "manufacturing.manufacturerCostCC": "Proposed",
       "manufacturing.manufacturerQuoteCC": "Proposed",
-      "partIds": "In Review",
+      "partIds": "Approved",
       "pendingPartCompatibility": "Approved",
       "outputSummary": "In Review",
       "inputSummary": "In Review",
       "operating.ratedCapacity": "Not Reviewed",
       "operating.powerUnits": "Not Reviewed",
       "operating.footprintM2": "Not Reviewed",
-      "operating.housingTechTier": "Not Reviewed"
+      "operating.housingTechTier": "Not Reviewed",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved"
     },
-    "approval": "In Review"
+    "approval": "In Review",
+    "servicePartRequirements": [
+      {
+        "partId": "part-fluid-handling-parts",
+        "quantity": 6,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-mechanical-parts",
+        "quantity": 4,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-power-electronics",
+        "quantity": 3,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-control-and-sensor-parts",
+        "quantity": 3,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-structural-components",
+        "quantity": 3,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "water-distribution",
+      "crop-irrigation"
+    ],
+    "capabilityConfigurations": [],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    }
   },
   {
     "id": "machine-growth-management-system",
@@ -2369,7 +3852,10 @@
     ],
     "partIds": [
       "part-control-and-sensor-parts",
-      "part-power-electronics"
+      "part-power-electronics",
+      "part-thermal-parts",
+      "part-optical-parts",
+      "part-computing-parts"
     ],
     "description": "A cultivation-control system coordinating grow lighting, atmospheric conditions and biological monitoring to maintain productive growing environments.",
     "canonStatus": "source-canonical",
@@ -2457,16 +3943,80 @@
       "manufacturing.finishedMassKg": "Proposed",
       "manufacturing.manufacturerCostCC": "Proposed",
       "manufacturing.manufacturerQuoteCC": "Proposed",
-      "partIds": "In Review",
+      "partIds": "Approved",
       "pendingPartCompatibility": "In Review",
       "outputSummary": "In Review",
       "inputSummary": "In Review",
       "operating.ratedCapacity": "Not Reviewed",
       "operating.powerUnits": "Not Reviewed",
       "operating.footprintM2": "Not Reviewed",
-      "operating.housingTechTier": "Not Reviewed"
+      "operating.housingTechTier": "Not Reviewed",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved"
     },
-    "approval": "In Review"
+    "approval": "In Review",
+    "servicePartRequirements": [
+      {
+        "partId": "part-control-and-sensor-parts",
+        "quantity": 6,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-power-electronics",
+        "quantity": 5,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-thermal-parts",
+        "quantity": 3,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-optical-parts",
+        "quantity": 8,
+        "role": "installed-serviceable-component",
+        "criticality": "functional",
+        "conditionWeight": 1,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-computing-parts",
+        "quantity": 3,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "growth-monitoring",
+      "controlled-agriculture"
+    ],
+    "capabilityConfigurations": [],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    }
   },
   {
     "id": "machine-pump-machine",
@@ -2481,7 +4031,8 @@
       "part-hydraulic-parts",
       "part-mechanical-parts",
       "part-power-electronics",
-      "part-structural-components"
+      "part-structural-components",
+      "part-fluid-handling-parts"
     ],
     "description": "A high-pressure industrial pump for recovering and transferring water, brines, liquids or suitable gases between deposits, processing systems and storage.",
     "canonStatus": "source-canonical",
@@ -2568,16 +4119,81 @@
       "manufacturing.finishedMassKg": "Proposed",
       "manufacturing.manufacturerCostCC": "Proposed",
       "manufacturing.manufacturerQuoteCC": "Proposed",
-      "partIds": "In Review",
+      "partIds": "Approved",
       "pendingPartCompatibility": "Approved",
       "outputSummary": "In Review",
       "inputSummary": "In Review",
       "operating.ratedCapacity": "Not Reviewed",
       "operating.powerUnits": "Not Reviewed",
       "operating.footprintM2": "Not Reviewed",
-      "operating.housingTechTier": "Not Reviewed"
+      "operating.housingTechTier": "Not Reviewed",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved"
     },
-    "approval": "In Review"
+    "approval": "In Review",
+    "servicePartRequirements": [
+      {
+        "partId": "part-hydraulic-parts",
+        "quantity": 6,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-mechanical-parts",
+        "quantity": 5,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-power-electronics",
+        "quantity": 3,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-structural-components",
+        "quantity": 5,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-fluid-handling-parts",
+        "quantity": 4,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "fluid-transfer",
+      "dewatering",
+      "well-lift"
+    ],
+    "capabilityConfigurations": [],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    }
   },
   {
     "id": "machine-filtration-machine",
@@ -2591,7 +4207,9 @@
     "partIds": [
       "part-fluid-handling-parts",
       "part-processing-parts",
-      "part-structural-components"
+      "part-structural-components",
+      "part-control-and-sensor-parts",
+      "part-power-electronics"
     ],
     "description": "A modular mechanical and chemical filtration bank for separating salts, particulates and other contaminants from raw fluid streams.",
     "canonStatus": "source-canonical",
@@ -2674,16 +4292,94 @@
       "manufacturing.finishedMassKg": "Proposed",
       "manufacturing.manufacturerCostCC": "Proposed",
       "manufacturing.manufacturerQuoteCC": "Proposed",
-      "partIds": "In Review",
+      "partIds": "Approved",
       "pendingPartCompatibility": "Approved",
       "outputSummary": "In Review",
       "inputSummary": "In Review",
       "operating.ratedCapacity": "Not Reviewed",
       "operating.powerUnits": "Not Reviewed",
       "operating.footprintM2": "Not Reviewed",
-      "operating.housingTechTier": "Not Reviewed"
+      "operating.housingTechTier": "Not Reviewed",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved"
     },
-    "approval": "In Review"
+    "approval": "In Review",
+    "servicePartRequirements": [
+      {
+        "partId": "part-fluid-handling-parts",
+        "quantity": 10,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-processing-parts",
+        "quantity": 8,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-structural-components",
+        "quantity": 4,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-control-and-sensor-parts",
+        "quantity": 2,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-power-electronics",
+        "quantity": 2,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "fluid-filtration",
+      "exotic-matter-separation"
+    ],
+    "capabilityConfigurations": [
+      {
+        "id": "exotic-separation",
+        "name": "Exotic matter separation train",
+        "supportedFunction": "exotic-matter-separation",
+        "compatibleBuildingIds": [
+          "building-simple-pit-mine",
+          "building-deep-mine"
+        ],
+        "maximumDepthM": null,
+        "technologyRequirement": "exotic-matter-separation",
+        "approval": "Approved",
+        "notes": "Advanced qualified configuration of filtration/separation equipment. Requires a separate operational depth-qualified underground mining system."
+      }
+    ],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    }
   },
   {
     "id": "machine-research-computer",
@@ -2697,7 +4393,9 @@
     "partIds": [
       "part-computing-parts",
       "part-power-electronics",
-      "part-control-and-sensor-parts"
+      "part-control-and-sensor-parts",
+      "part-structural-components",
+      "part-optical-parts"
     ],
     "description": "An advanced scientific workstation for processing samples, running engineering models and compiling technical analyses and designs.",
     "canonStatus": "source-canonical",
@@ -2779,16 +4477,80 @@
       "manufacturing.finishedMassKg": "Proposed",
       "manufacturing.manufacturerCostCC": "Proposed",
       "manufacturing.manufacturerQuoteCC": "Proposed",
-      "partIds": "In Review",
+      "partIds": "Approved",
       "pendingPartCompatibility": "Approved",
       "outputSummary": "In Review",
       "inputSummary": "In Review",
       "operating.ratedCapacity": "Not Reviewed",
       "operating.powerUnits": "Not Reviewed",
       "operating.footprintM2": "Not Reviewed",
-      "operating.housingTechTier": "Not Reviewed"
+      "operating.housingTechTier": "Not Reviewed",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved"
     },
-    "approval": "In Review"
+    "approval": "In Review",
+    "servicePartRequirements": [
+      {
+        "partId": "part-computing-parts",
+        "quantity": 18,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-power-electronics",
+        "quantity": 5,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-control-and-sensor-parts",
+        "quantity": 8,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-structural-components",
+        "quantity": 3,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-optical-parts",
+        "quantity": 3,
+        "role": "installed-serviceable-component",
+        "criticality": "functional",
+        "conditionWeight": 1,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "scientific-computing",
+      "research-analysis"
+    ],
+    "capabilityConfigurations": [],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    }
   },
   {
     "id": "machine-fabrication-machine",
@@ -2802,7 +4564,9 @@
     "partIds": [
       "part-mechanical-parts",
       "part-power-electronics",
-      "part-structural-components"
+      "part-structural-components",
+      "part-forming-cutting-tooling",
+      "part-control-and-sensor-parts"
     ],
     "description": "A precision industrial machining and forming system that shapes refined metals, ceramics and composites into standardised parts and components.",
     "canonStatus": "source-canonical",
@@ -2895,16 +4659,81 @@
       "manufacturing.finishedMassKg": "Proposed",
       "manufacturing.manufacturerCostCC": "Proposed",
       "manufacturing.manufacturerQuoteCC": "Proposed",
-      "partIds": "In Review",
+      "partIds": "Approved",
       "pendingPartCompatibility": "In Review",
       "outputSummary": "In Review",
       "inputSummary": "In Review",
       "operating.ratedCapacity": "Not Reviewed",
       "operating.powerUnits": "Not Reviewed",
       "operating.footprintM2": "Not Reviewed",
-      "operating.housingTechTier": "Not Reviewed"
+      "operating.housingTechTier": "Not Reviewed",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved"
     },
-    "approval": "In Review"
+    "approval": "In Review",
+    "servicePartRequirements": [
+      {
+        "partId": "part-mechanical-parts",
+        "quantity": 8,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-power-electronics",
+        "quantity": 5,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-structural-components",
+        "quantity": 10,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-forming-cutting-tooling",
+        "quantity": 8,
+        "role": "installed-serviceable-component",
+        "criticality": "functional",
+        "conditionWeight": 1,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-control-and-sensor-parts",
+        "quantity": 4,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "machining",
+      "forming",
+      "part-fabrication"
+    ],
+    "capabilityConfigurations": [],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    }
   },
   {
     "id": "machine-assembly-crane",
@@ -2920,7 +4749,8 @@
       "part-mechanical-parts",
       "part-power-electronics",
       "part-structural-components",
-      "part-control-and-sensor-parts"
+      "part-control-and-sensor-parts",
+      "part-bulk-handling-parts"
     ],
     "description": "A heavy gantry crane and powered manipulator used in industrial, shipyard and port facilities to position structural sections, machinery and cargo.",
     "canonStatus": "source-canonical",
@@ -3003,16 +4833,89 @@
       "manufacturing.finishedMassKg": "Proposed",
       "manufacturing.manufacturerCostCC": "Proposed",
       "manufacturing.manufacturerQuoteCC": "Proposed",
-      "partIds": "In Review",
+      "partIds": "Approved",
       "pendingPartCompatibility": "Approved",
       "outputSummary": "In Review",
       "inputSummary": "In Review",
       "operating.ratedCapacity": "Not Reviewed",
       "operating.powerUnits": "Not Reviewed",
       "operating.footprintM2": "Not Reviewed",
-      "operating.housingTechTier": "Not Reviewed"
+      "operating.housingTechTier": "Not Reviewed",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved"
     },
-    "approval": "In Review"
+    "approval": "In Review",
+    "servicePartRequirements": [
+      {
+        "partId": "part-hydraulic-parts",
+        "quantity": 12,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-mechanical-parts",
+        "quantity": 12,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-power-electronics",
+        "quantity": 6,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-structural-components",
+        "quantity": 25,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-control-and-sensor-parts",
+        "quantity": 5,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-bulk-handling-parts",
+        "quantity": 4,
+        "role": "installed-serviceable-component",
+        "criticality": "functional",
+        "conditionWeight": 1,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "heavy-lift",
+      "industrial-assembly"
+    ],
+    "capabilityConfigurations": [],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    }
   },
   {
     "id": "machine-welding-machine",
@@ -3024,7 +4927,11 @@
       "Manufactured"
     ],
     "partIds": [
-      "part-power-electronics"
+      "part-power-electronics",
+      "part-welding-parts",
+      "part-thermal-parts",
+      "part-control-and-sensor-parts",
+      "part-structural-components"
     ],
     "description": "A heavy industrial welding system using high-current arc and directed-energy emitters to form durable structural joints.",
     "canonStatus": "source-canonical",
@@ -3120,16 +5027,80 @@
       "manufacturing.finishedMassKg": "Proposed",
       "manufacturing.manufacturerCostCC": "Proposed",
       "manufacturing.manufacturerQuoteCC": "Proposed",
-      "partIds": "In Review",
+      "partIds": "Approved",
       "pendingPartCompatibility": "In Review",
       "outputSummary": "In Review",
       "inputSummary": "In Review",
       "operating.ratedCapacity": "Not Reviewed",
       "operating.powerUnits": "Not Reviewed",
       "operating.footprintM2": "Not Reviewed",
-      "operating.housingTechTier": "Not Reviewed"
+      "operating.housingTechTier": "Not Reviewed",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved"
     },
-    "approval": "In Review"
+    "approval": "In Review",
+    "servicePartRequirements": [
+      {
+        "partId": "part-power-electronics",
+        "quantity": 6,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-welding-parts",
+        "quantity": 10,
+        "role": "installed-serviceable-component",
+        "criticality": "functional",
+        "conditionWeight": 1,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-thermal-parts",
+        "quantity": 4,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-control-and-sensor-parts",
+        "quantity": 3,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-structural-components",
+        "quantity": 5,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "structural-joining",
+      "repair-welding"
+    ],
+    "capabilityConfigurations": [],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    }
   },
   {
     "id": "machine-crude-steam-piston-generator",
@@ -3140,7 +5111,15 @@
     "sources": [
       "Desktop legacy industrial design"
     ],
-    "partIds": [],
+    "partIds": [
+      "part-generator-parts",
+      "part-mechanical-parts",
+      "part-hydraulic-parts",
+      "part-power-electronics",
+      "part-thermal-parts",
+      "part-structural-components",
+      "part-fluid-handling-parts"
+    ],
     "description": "Legacy Desktop power-generation archetype retained because the technology catalogue explicitly unlocks Crude Steam Piston Generator. Detailed construction parts and operating model remain intentionally undefined until that machine is designed.",
     "canonStatus": "designer placeholder",
     "provenance": {
@@ -3224,16 +5203,97 @@
       "manufacturing.finishedMassKg": "Not Reviewed",
       "manufacturing.manufacturerCostCC": "Blocked",
       "manufacturing.manufacturerQuoteCC": "Blocked",
-      "partIds": "Not Reviewed",
+      "partIds": "Approved",
       "pendingPartCompatibility": "Approved",
       "outputSummary": "Not Reviewed",
       "inputSummary": "Not Reviewed",
       "operating.ratedCapacity": "Not Reviewed",
       "operating.powerUnits": "Not Reviewed",
       "operating.footprintM2": "Not Reviewed",
-      "operating.housingTechTier": "Not Reviewed"
+      "operating.housingTechTier": "Not Reviewed",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved"
     },
-    "approval": "Blocked"
+    "approval": "Blocked",
+    "servicePartRequirements": [
+      {
+        "partId": "part-generator-parts",
+        "quantity": 4,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-mechanical-parts",
+        "quantity": 6,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-hydraulic-parts",
+        "quantity": 4,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-power-electronics",
+        "quantity": 3,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-thermal-parts",
+        "quantity": 6,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-structural-components",
+        "quantity": 10,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-fluid-handling-parts",
+        "quantity": 3,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "steam-power-generation"
+    ],
+    "capabilityConfigurations": [],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    }
   },
   {
     "id": "machine-crude-combustion-generator",
@@ -3244,7 +5304,14 @@
     "sources": [
       "Desktop legacy industrial design"
     ],
-    "partIds": [],
+    "partIds": [
+      "part-generator-parts",
+      "part-mechanical-parts",
+      "part-power-electronics",
+      "part-thermal-parts",
+      "part-structural-components",
+      "part-fluid-handling-parts"
+    ],
     "description": "Legacy Desktop power-generation archetype retained because the technology catalogue explicitly unlocks Crude Combustion Generator. Detailed construction parts and operating model remain intentionally undefined until that machine is designed.",
     "canonStatus": "designer placeholder",
     "provenance": {
@@ -3324,16 +5391,88 @@
       "manufacturing.finishedMassKg": "Not Reviewed",
       "manufacturing.manufacturerCostCC": "Blocked",
       "manufacturing.manufacturerQuoteCC": "Blocked",
-      "partIds": "Not Reviewed",
+      "partIds": "Approved",
       "pendingPartCompatibility": "Approved",
       "outputSummary": "Not Reviewed",
       "inputSummary": "Not Reviewed",
       "operating.ratedCapacity": "Not Reviewed",
       "operating.powerUnits": "Not Reviewed",
       "operating.footprintM2": "Not Reviewed",
-      "operating.housingTechTier": "Not Reviewed"
+      "operating.housingTechTier": "Not Reviewed",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved"
     },
-    "approval": "Blocked"
+    "approval": "Blocked",
+    "servicePartRequirements": [
+      {
+        "partId": "part-generator-parts",
+        "quantity": 5,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-mechanical-parts",
+        "quantity": 8,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-power-electronics",
+        "quantity": 4,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-thermal-parts",
+        "quantity": 6,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-structural-components",
+        "quantity": 8,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-fluid-handling-parts",
+        "quantity": 4,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "combustion-power-generation"
+    ],
+    "capabilityConfigurations": [],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    }
   },
   {
     "id": "machine-livestock-handling-system",
@@ -3348,7 +5487,9 @@
       "part-mechanical-parts",
       "part-structural-components",
       "part-fluid-handling-parts",
-      "part-control-and-sensor-parts"
+      "part-control-and-sensor-parts",
+      "part-power-electronics",
+      "part-bulk-handling-parts"
     ],
     "description": "A transferable yard system of crushes, gates, watering points and sensors used to breed and harvest local colony herd animals for food.",
     "canonStatus": "source-canonical",
@@ -3431,16 +5572,89 @@
       "manufacturing.finishedMassKg": "Proposed",
       "manufacturing.manufacturerCostCC": "Proposed",
       "manufacturing.manufacturerQuoteCC": "Proposed",
-      "partIds": "In Review",
+      "partIds": "Approved",
       "pendingPartCompatibility": "Approved",
       "outputSummary": "In Review",
       "inputSummary": "In Review",
       "operating.ratedCapacity": "Not Reviewed",
       "operating.powerUnits": "Not Reviewed",
       "operating.footprintM2": "Not Reviewed",
-      "operating.housingTechTier": "Not Reviewed"
+      "operating.housingTechTier": "Not Reviewed",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved"
     },
-    "approval": "In Review"
+    "approval": "In Review",
+    "servicePartRequirements": [
+      {
+        "partId": "part-mechanical-parts",
+        "quantity": 4,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-structural-components",
+        "quantity": 8,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-fluid-handling-parts",
+        "quantity": 3,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-control-and-sensor-parts",
+        "quantity": 2,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-power-electronics",
+        "quantity": 2,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-bulk-handling-parts",
+        "quantity": 2,
+        "role": "installed-serviceable-component",
+        "criticality": "functional",
+        "conditionWeight": 1,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "livestock-handling",
+      "animal-care-support"
+    ],
+    "capabilityConfigurations": [],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    }
   },
   {
     "id": "machine-colony-operations-computer",
@@ -3454,7 +5668,8 @@
     "partIds": [
       "part-computing-parts",
       "part-power-electronics",
-      "part-control-and-sensor-parts"
+      "part-control-and-sensor-parts",
+      "part-structural-components"
     ],
     "description": "A transferable colony coordination computer that runs mining-settlement operations, staffing and efficiency control from assembled computing parts.",
     "canonStatus": "source-canonical",
@@ -3528,16 +5743,71 @@
       "manufacturing.finishedMassKg": "Proposed",
       "manufacturing.manufacturerCostCC": "Proposed",
       "manufacturing.manufacturerQuoteCC": "Proposed",
-      "partIds": "In Review",
+      "partIds": "Approved",
       "pendingPartCompatibility": "Approved",
       "outputSummary": "In Review",
       "inputSummary": "In Review",
       "operating.ratedCapacity": "Not Reviewed",
       "operating.powerUnits": "Not Reviewed",
       "operating.footprintM2": "Not Reviewed",
-      "operating.housingTechTier": "Not Reviewed"
+      "operating.housingTechTier": "Not Reviewed",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved"
     },
-    "approval": "In Review"
+    "approval": "In Review",
+    "servicePartRequirements": [
+      {
+        "partId": "part-computing-parts",
+        "quantity": 14,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-power-electronics",
+        "quantity": 5,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-control-and-sensor-parts",
+        "quantity": 8,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-structural-components",
+        "quantity": 3,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "colony-control",
+      "logistics-coordination"
+    ],
+    "capabilityConfigurations": [],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    }
   },
   {
     "id": "machine-bulk-stacker",
@@ -3553,7 +5823,8 @@
       "part-hydraulic-parts",
       "part-mechanical-parts",
       "part-structural-components",
-      "part-power-electronics"
+      "part-power-electronics",
+      "part-control-and-sensor-parts"
     ],
     "description": "A transferable open-yard stacker-reclaimer that loads, stacks and reclaims loose bulk at a stockpile, wearing with use and movable to another yard.",
     "canonStatus": "source-canonical",
@@ -3636,16 +5907,89 @@
       "manufacturing.finishedMassKg": "Proposed",
       "manufacturing.manufacturerCostCC": "Proposed",
       "manufacturing.manufacturerQuoteCC": "Proposed",
-      "partIds": "In Review",
+      "partIds": "Approved",
       "pendingPartCompatibility": "Approved",
       "outputSummary": "In Review",
       "inputSummary": "In Review",
       "operating.ratedCapacity": "Not Reviewed",
       "operating.powerUnits": "Not Reviewed",
       "operating.footprintM2": "Not Reviewed",
-      "operating.housingTechTier": "Not Reviewed"
+      "operating.housingTechTier": "Not Reviewed",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved"
     },
-    "approval": "In Review"
+    "approval": "In Review",
+    "servicePartRequirements": [
+      {
+        "partId": "part-bulk-handling-parts",
+        "quantity": 12,
+        "role": "installed-serviceable-component",
+        "criticality": "functional",
+        "conditionWeight": 1,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-hydraulic-parts",
+        "quantity": 8,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-mechanical-parts",
+        "quantity": 8,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-structural-components",
+        "quantity": 18,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-power-electronics",
+        "quantity": 4,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-control-and-sensor-parts",
+        "quantity": 3,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "bulk-stacking",
+      "bulk-reclaiming"
+    ],
+    "capabilityConfigurations": [],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    }
   },
   {
     "id": "machine-warehouse-handler",
@@ -3745,16 +6089,89 @@
       "manufacturing.finishedMassKg": "Proposed",
       "manufacturing.manufacturerCostCC": "Proposed",
       "manufacturing.manufacturerQuoteCC": "Proposed",
-      "partIds": "In Review",
+      "partIds": "Approved",
       "pendingPartCompatibility": "Approved",
       "outputSummary": "In Review",
       "inputSummary": "In Review",
       "operating.ratedCapacity": "Not Reviewed",
       "operating.powerUnits": "Not Reviewed",
       "operating.footprintM2": "Not Reviewed",
-      "operating.housingTechTier": "Not Reviewed"
+      "operating.housingTechTier": "Not Reviewed",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved"
     },
-    "approval": "In Review"
+    "approval": "In Review",
+    "servicePartRequirements": [
+      {
+        "partId": "part-bulk-handling-parts",
+        "quantity": 5,
+        "role": "installed-serviceable-component",
+        "criticality": "functional",
+        "conditionWeight": 1,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-hydraulic-parts",
+        "quantity": 4,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-mechanical-parts",
+        "quantity": 5,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-structural-components",
+        "quantity": 8,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-power-electronics",
+        "quantity": 3,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-control-and-sensor-parts",
+        "quantity": 3,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "pallet-handling",
+      "warehouse-logistics"
+    ],
+    "capabilityConfigurations": [],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    }
   },
   {
     "id": "machine-conventional-electric-motor",
@@ -3765,7 +6182,12 @@
     "sources": [
       "Manufactured"
     ],
-    "partIds": [],
+    "partIds": [
+      "part-mechanical-parts",
+      "part-power-electronics",
+      "part-control-and-sensor-parts",
+      "part-structural-components"
+    ],
     "description": "A conventional electromagnetic rotary drive for pumps, conveyors, bulk handling and general industrial machinery, designed around copper windings and a structural metal frame.",
     "canonStatus": "working canon",
     "provenance": {
@@ -3830,16 +6252,70 @@
       "manufacturing.finishedMassKg": "Proposed",
       "manufacturing.manufacturerCostCC": "Proposed",
       "manufacturing.manufacturerQuoteCC": "Proposed",
-      "partIds": "Not Reviewed",
+      "partIds": "Approved",
       "pendingPartCompatibility": "Approved",
       "outputSummary": "Not Reviewed",
       "inputSummary": "Not Reviewed",
       "operating.ratedCapacity": "Not Reviewed",
       "operating.powerUnits": "Not Reviewed",
       "operating.footprintM2": "Not Reviewed",
-      "operating.housingTechTier": "Not Reviewed"
+      "operating.housingTechTier": "Not Reviewed",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved"
     },
-    "approval": "In Review"
+    "approval": "In Review",
+    "servicePartRequirements": [
+      {
+        "partId": "part-mechanical-parts",
+        "quantity": 1,
+        "role": "compatible-service-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-power-electronics",
+        "quantity": 1,
+        "role": "compatible-service-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-control-and-sensor-parts",
+        "quantity": 1,
+        "role": "compatible-service-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-structural-components",
+        "quantity": 1,
+        "role": "compatible-service-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "electric-drive"
+    ],
+    "capabilityConfigurations": [],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    }
   },
   {
     "id": "machine-rare-earth-permanent-magnet-motor",
@@ -3850,7 +6326,12 @@
     "sources": [
       "Manufactured"
     ],
-    "partIds": [],
+    "partIds": [
+      "part-mechanical-parts",
+      "part-power-electronics",
+      "part-control-and-sensor-parts",
+      "part-structural-components"
+    ],
     "description": "A specialised electric motor using rare-earth permanent magnet material for applications that justify its higher performance and material demand.",
     "canonStatus": "working canon",
     "provenance": {
@@ -3920,16 +6401,70 @@
       "manufacturing.finishedMassKg": "Not Reviewed",
       "manufacturing.manufacturerCostCC": "Blocked",
       "manufacturing.manufacturerQuoteCC": "Blocked",
-      "partIds": "Not Reviewed",
+      "partIds": "Approved",
       "pendingPartCompatibility": "Approved",
       "outputSummary": "Not Reviewed",
       "inputSummary": "Not Reviewed",
       "operating.ratedCapacity": "Not Reviewed",
       "operating.powerUnits": "Not Reviewed",
       "operating.footprintM2": "Not Reviewed",
-      "operating.housingTechTier": "Not Reviewed"
+      "operating.housingTechTier": "Not Reviewed",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved"
     },
-    "approval": "Blocked"
+    "approval": "Blocked",
+    "servicePartRequirements": [
+      {
+        "partId": "part-mechanical-parts",
+        "quantity": 1,
+        "role": "compatible-service-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-power-electronics",
+        "quantity": 1,
+        "role": "compatible-service-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-control-and-sensor-parts",
+        "quantity": 1,
+        "role": "compatible-service-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-structural-components",
+        "quantity": 1,
+        "role": "compatible-service-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "high-efficiency-electric-drive"
+    ],
+    "capabilityConfigurations": [],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    }
   },
   {
     "id": "machine-vector-exchange-drive",
@@ -3940,7 +6475,14 @@
     "sources": [
       "Manufactured"
     ],
-    "partIds": [],
+    "partIds": [
+      "part-mechanical-parts",
+      "part-power-electronics",
+      "part-control-and-sensor-parts",
+      "part-computing-parts",
+      "part-structural-components",
+      "part-thermal-parts"
+    ],
     "description": "An advanced Veyrite-dependent interstellar propulsion system whose existence is established in the Koplin universe; its internal engineered lattice and manufacturing bill remain strategic and unresolved.",
     "canonStatus": "source-canonical",
     "provenance": {
@@ -3989,16 +6531,88 @@
       "manufacturing.finishedMassKg": "Not Reviewed",
       "manufacturing.manufacturerCostCC": "Blocked",
       "manufacturing.manufacturerQuoteCC": "Blocked",
-      "partIds": "Not Reviewed",
+      "partIds": "Approved",
       "pendingPartCompatibility": "Approved",
       "outputSummary": "Not Reviewed",
       "inputSummary": "Not Reviewed",
       "operating.ratedCapacity": "Not Reviewed",
       "operating.powerUnits": "Not Reviewed",
       "operating.footprintM2": "Not Reviewed",
-      "operating.housingTechTier": "Not Reviewed"
+      "operating.housingTechTier": "Not Reviewed",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved"
     },
-    "approval": "Blocked"
+    "approval": "Blocked",
+    "servicePartRequirements": [
+      {
+        "partId": "part-mechanical-parts",
+        "quantity": 1,
+        "role": "compatible-service-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-power-electronics",
+        "quantity": 1,
+        "role": "compatible-service-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-control-and-sensor-parts",
+        "quantity": 1,
+        "role": "compatible-service-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-computing-parts",
+        "quantity": 1,
+        "role": "compatible-service-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-structural-components",
+        "quantity": 1,
+        "role": "compatible-service-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-thermal-parts",
+        "quantity": 1,
+        "role": "compatible-service-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "vector-exchange-propulsion"
+    ],
+    "capabilityConfigurations": [],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    }
   },
   {
     "id": "machine-personal-recreation-terminal",
@@ -4088,16 +6702,43 @@
       "manufacturing.finishedMassKg": "Proposed",
       "manufacturing.manufacturerCostCC": "Proposed",
       "manufacturing.manufacturerQuoteCC": "Proposed",
-      "partIds": "In Review",
+      "partIds": "Approved",
       "pendingPartCompatibility": "Approved",
       "outputSummary": "Not Reviewed",
       "inputSummary": "Not Reviewed",
       "operating.ratedCapacity": "Approved",
       "operating.powerUnits": "Approved",
       "operating.footprintM2": "Approved",
-      "operating.housingTechTier": "Approved"
+      "operating.housingTechTier": "Approved",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved"
     },
-    "approval": "In Review"
+    "approval": "In Review",
+    "servicePartRequirements": [
+      {
+        "partId": "part-computing-parts",
+        "quantity": 1,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "personal-recreation-service"
+    ],
+    "capabilityConfigurations": [],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    }
   },
   {
     "id": "machine-communal-fitness-leisure-system",
@@ -4197,16 +6838,62 @@
       "manufacturing.finishedMassKg": "Proposed",
       "manufacturing.manufacturerCostCC": "Proposed",
       "manufacturing.manufacturerQuoteCC": "Proposed",
-      "partIds": "In Review",
+      "partIds": "Approved",
       "pendingPartCompatibility": "Approved",
       "outputSummary": "Not Reviewed",
       "inputSummary": "Not Reviewed",
       "operating.ratedCapacity": "Approved",
       "operating.powerUnits": "Approved",
       "operating.footprintM2": "Approved",
-      "operating.housingTechTier": "Approved"
+      "operating.housingTechTier": "Approved",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved"
     },
-    "approval": "In Review"
+    "approval": "In Review",
+    "servicePartRequirements": [
+      {
+        "partId": "part-mechanical-parts",
+        "quantity": 2,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-power-electronics",
+        "quantity": 1,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-control-and-sensor-parts",
+        "quantity": 1,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "fitness-service",
+      "social-recreation-service"
+    ],
+    "capabilityConfigurations": [],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    }
   },
   {
     "id": "machine-advanced-entertainment-system",
@@ -4311,16 +6998,70 @@
       "manufacturing.finishedMassKg": "Proposed",
       "manufacturing.manufacturerCostCC": "Proposed",
       "manufacturing.manufacturerQuoteCC": "Proposed",
-      "partIds": "In Review",
+      "partIds": "Approved",
       "pendingPartCompatibility": "Approved",
       "outputSummary": "Not Reviewed",
       "inputSummary": "Not Reviewed",
       "operating.ratedCapacity": "Approved",
       "operating.powerUnits": "Approved",
       "operating.footprintM2": "Approved",
-      "operating.housingTechTier": "Approved"
+      "operating.housingTechTier": "Approved",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved"
     },
-    "approval": "In Review"
+    "approval": "In Review",
+    "servicePartRequirements": [
+      {
+        "partId": "part-computing-parts",
+        "quantity": 2,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-power-electronics",
+        "quantity": 1,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-control-and-sensor-parts",
+        "quantity": 1,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-optical-parts",
+        "quantity": 1,
+        "role": "installed-serviceable-component",
+        "criticality": "functional",
+        "conditionWeight": 1,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "cultural-entertainment-service"
+    ],
+    "capabilityConfigurations": [],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    }
   },
   {
     "id": "machine-immersive-recreation-suite",
@@ -4439,16 +7180,88 @@
       "manufacturing.finishedMassKg": "Proposed",
       "manufacturing.manufacturerCostCC": "Proposed",
       "manufacturing.manufacturerQuoteCC": "Proposed",
-      "partIds": "In Review",
+      "partIds": "Approved",
       "pendingPartCompatibility": "Approved",
       "outputSummary": "Not Reviewed",
       "inputSummary": "Not Reviewed",
       "operating.ratedCapacity": "Approved",
       "operating.powerUnits": "Approved",
       "operating.footprintM2": "Approved",
-      "operating.housingTechTier": "Approved"
+      "operating.housingTechTier": "Approved",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved"
     },
-    "approval": "In Review"
+    "approval": "In Review",
+    "servicePartRequirements": [
+      {
+        "partId": "part-computing-parts",
+        "quantity": 6,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-control-and-sensor-parts",
+        "quantity": 4,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-optical-parts",
+        "quantity": 3,
+        "role": "installed-serviceable-component",
+        "criticality": "functional",
+        "conditionWeight": 1,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-thermal-parts",
+        "quantity": 1,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-power-electronics",
+        "quantity": 3,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-structural-components",
+        "quantity": 1,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "immersive-recreation-service"
+    ],
+    "capabilityConfigurations": [],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    }
   },
   {
     "id": "machine-integrated-wellness-leisure-system",
@@ -4576,15 +7389,642 @@
       "manufacturing.finishedMassKg": "Proposed",
       "manufacturing.manufacturerCostCC": "Proposed",
       "manufacturing.manufacturerQuoteCC": "Proposed",
-      "partIds": "In Review",
+      "partIds": "Approved",
       "pendingPartCompatibility": "Approved",
       "outputSummary": "Not Reviewed",
       "inputSummary": "Not Reviewed",
       "operating.ratedCapacity": "Approved",
       "operating.powerUnits": "Approved",
       "operating.footprintM2": "Approved",
-      "operating.housingTechTier": "Approved"
+      "operating.housingTechTier": "Approved",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved"
     },
-    "approval": "In Review"
+    "approval": "In Review",
+    "servicePartRequirements": [
+      {
+        "partId": "part-fluid-handling-parts",
+        "quantity": 4,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-thermal-parts",
+        "quantity": 3,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-computing-parts",
+        "quantity": 2,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-power-electronics",
+        "quantity": 2,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-structural-components",
+        "quantity": 3,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-mechanical-parts",
+        "quantity": 3,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-control-and-sensor-parts",
+        "quantity": 2,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "wellness-service",
+      "leisure-service"
+    ],
+    "capabilityConfigurations": [],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    }
+  },
+  {
+    "entityType": "Machine",
+    "category": "Extraction",
+    "sources": [
+      "Canonical industrial alignment proposal"
+    ],
+    "canonStatus": "working canon",
+    "provenance": {
+      "alignmentReview": "docs/IndustrialCatalogueAlignmentReview.md",
+      "androidSourceCommit": "3f91c7a4d2a215d99f739165041bfa0e3b50f14b",
+      "androidSourcePath": "app/src/main/java/com/mineit/android/domain/spatial/LandExtractionCapabilities.kt"
+    },
+    "inputSummary": "Power, qualified operators and method-specific consumables",
+    "outputSummary": "Access to a depth-qualified geological extraction method",
+    "operating": {
+      "ratedCapacity": null,
+      "powerUnits": null,
+      "footprintM2": null,
+      "housingTechTier": null
+    },
+    "pendingPartCompatibility": [],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    },
+    "approval": "Blocked",
+    "id": "machine-underground-mining-system",
+    "name": "Underground Mining System",
+    "subCategory": "Shaft and Hard-Rock Mining",
+    "description": "A modular underground cutting, shaft-development and ground-support machinery system distinct from a surface quarry drill and from a fluid well rig.",
+    "partIds": [
+      "part-extraction-parts",
+      "part-mechanical-parts",
+      "part-hydraulic-parts",
+      "part-power-electronics",
+      "part-control-and-sensor-parts",
+      "part-structural-components",
+      "part-fluid-handling-parts"
+    ],
+    "image": {
+      "key": "assets/art/universe/machines/machine-underground-mining-system.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Perfect 1:1 square MineIT machine catalogue asset on a transparent background: one modular underground hard-rock mining system with compact cutter head, shaft-development boom, ground-support manipulators, hydraulic drives and guarded cable reels; white composite covers, charcoal frame, orange safety trim, blue indicators; no mine scene, people, text, logo, border or watermark.",
+      "notes": "Canonical identity art is queued. The absent image does not change machine identity or capability."
+    },
+    "manufacturing": {
+      "finishedPartInputs": null,
+      "directMaterialInputs": null,
+      "nestedMachineInputs": null,
+      "assemblyHours": null,
+      "factoryHours": null,
+      "testHours": null,
+      "goodUnitYield": null,
+      "finishedMassKg": null,
+      "manufacturerCostCC": null,
+      "manufacturerQuoteCC": null,
+      "reviewBasis": "Specialist physical identity is required by the approved extraction compatibility boundary; engineering BOM, mass and price remain blocked pending review.",
+      "unresolvedDesignConstraints": "Qualified materials, rated capacity, footprint, power, manufacture and test programme require engineering approval."
+    },
+    "servicePartRequirements": [
+      {
+        "partId": "part-extraction-parts",
+        "quantity": 1,
+        "role": "minimum-service-kit-slot",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-mechanical-parts",
+        "quantity": 1,
+        "role": "minimum-service-kit-slot",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-hydraulic-parts",
+        "quantity": 1,
+        "role": "minimum-service-kit-slot",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-power-electronics",
+        "quantity": 1,
+        "role": "minimum-service-kit-slot",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-control-and-sensor-parts",
+        "quantity": 1,
+        "role": "minimum-service-kit-slot",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-structural-components",
+        "quantity": 1,
+        "role": "minimum-service-kit-slot",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-fluid-handling-parts",
+        "quantity": 1,
+        "role": "minimum-service-kit-slot",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "standard-shaft",
+      "deep-hard-rock",
+      "deep-core"
+    ],
+    "capabilityConfigurations": [
+      {
+        "id": "standard-shaft",
+        "name": "Standard shaft package",
+        "supportedFunction": "standard-shaft",
+        "compatibleBuildingIds": [
+          "building-simple-pit-mine",
+          "building-deep-mine"
+        ],
+        "maximumDepthM": 2000,
+        "technologyRequirement": "shaft-mining",
+        "approval": "Approved",
+        "notes": "Physical package identity is proposed; method/building/depth boundary preserves the approved Android restriction."
+      },
+      {
+        "id": "deep-hard-rock",
+        "name": "Deep hard-rock package",
+        "supportedFunction": "deep-hard-rock",
+        "compatibleBuildingIds": [
+          "building-simple-pit-mine",
+          "building-deep-mine"
+        ],
+        "maximumDepthM": 8000,
+        "technologyRequirement": "deep-mining",
+        "approval": "Approved",
+        "notes": "Physical package identity is proposed; method/building/depth boundary preserves the approved Android restriction."
+      },
+      {
+        "id": "deep-core",
+        "name": "Deep-core package",
+        "supportedFunction": "deep-core",
+        "compatibleBuildingIds": [
+          "building-simple-pit-mine",
+          "building-deep-mine"
+        ],
+        "maximumDepthM": 20000,
+        "technologyRequirement": "deep-core-extraction",
+        "approval": "Approved",
+        "notes": "Physical package identity is proposed; method/building/depth boundary preserves the approved Android restriction."
+      }
+    ],
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "Blocked",
+      "manufacturing.directMaterialInputs": "Blocked",
+      "manufacturing.nestedMachineInputs": "Blocked",
+      "manufacturing.assemblyHours": "Not Reviewed",
+      "manufacturing.factoryHours": "Not Reviewed",
+      "manufacturing.testHours": "Not Reviewed",
+      "manufacturing.goodUnitYield": "Not Reviewed",
+      "manufacturing.finishedMassKg": "Blocked",
+      "manufacturing.manufacturerCostCC": "Blocked",
+      "manufacturing.manufacturerQuoteCC": "Blocked",
+      "partIds": "Approved",
+      "pendingPartCompatibility": "Approved",
+      "outputSummary": "Approved",
+      "inputSummary": "Approved",
+      "operating.ratedCapacity": "Not Reviewed",
+      "operating.powerUnits": "Not Reviewed",
+      "operating.footprintM2": "Not Reviewed",
+      "operating.housingTechTier": "Not Reviewed",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved"
+    }
+  },
+  {
+    "entityType": "Machine",
+    "category": "Extraction",
+    "sources": [
+      "Canonical industrial alignment proposal"
+    ],
+    "canonStatus": "working canon",
+    "provenance": {
+      "alignmentReview": "docs/IndustrialCatalogueAlignmentReview.md",
+      "androidSourceCommit": "3f91c7a4d2a215d99f739165041bfa0e3b50f14b",
+      "androidSourcePath": "app/src/main/java/com/mineit/android/domain/spatial/LandExtractionCapabilities.kt"
+    },
+    "inputSummary": "Power, qualified operators and method-specific consumables",
+    "outputSummary": "Access to a depth-qualified geological extraction method",
+    "operating": {
+      "ratedCapacity": null,
+      "powerUnits": null,
+      "footprintM2": null,
+      "housingTechTier": null
+    },
+    "pendingPartCompatibility": [],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    },
+    "approval": "Blocked",
+    "id": "machine-well-drilling-system",
+    "name": "Well Drilling and Control System",
+    "subCategory": "Rotary and Pressure Well",
+    "description": "A well-oriented rotary drilling, mud circulation and pressure-control machinery system for liquid, gas and brine deposits; it is not an underground ore-mining machine.",
+    "partIds": [
+      "part-extraction-parts",
+      "part-mechanical-parts",
+      "part-hydraulic-parts",
+      "part-power-electronics",
+      "part-control-and-sensor-parts",
+      "part-structural-components",
+      "part-fluid-handling-parts"
+    ],
+    "image": {
+      "key": "assets/art/universe/machines/machine-well-drilling-system.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Perfect 1:1 square MineIT machine catalogue asset on a transparent background: one compact rotary well drilling and pressure-control skid with mast, rotary table, drill-string handling, mud pumps, sealed manifolds and blowout-prevention hardware; white composite covers, charcoal frame, orange safety trim, blue indicators; no landscape, people, text, logo, border or watermark.",
+      "notes": "Canonical identity art is queued. The absent image does not change machine identity or capability."
+    },
+    "manufacturing": {
+      "finishedPartInputs": null,
+      "directMaterialInputs": null,
+      "nestedMachineInputs": null,
+      "assemblyHours": null,
+      "factoryHours": null,
+      "testHours": null,
+      "goodUnitYield": null,
+      "finishedMassKg": null,
+      "manufacturerCostCC": null,
+      "manufacturerQuoteCC": null,
+      "reviewBasis": "Specialist physical identity is required by the approved extraction compatibility boundary; engineering BOM, mass and price remain blocked pending review.",
+      "unresolvedDesignConstraints": "Qualified materials, rated capacity, footprint, power, manufacture and test programme require engineering approval."
+    },
+    "servicePartRequirements": [
+      {
+        "partId": "part-extraction-parts",
+        "quantity": 1,
+        "role": "minimum-service-kit-slot",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-mechanical-parts",
+        "quantity": 1,
+        "role": "minimum-service-kit-slot",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-hydraulic-parts",
+        "quantity": 1,
+        "role": "minimum-service-kit-slot",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-power-electronics",
+        "quantity": 1,
+        "role": "minimum-service-kit-slot",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-control-and-sensor-parts",
+        "quantity": 1,
+        "role": "minimum-service-kit-slot",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-structural-components",
+        "quantity": 1,
+        "role": "minimum-service-kit-slot",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-fluid-handling-parts",
+        "quantity": 1,
+        "role": "minimum-service-kit-slot",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "rotary-well-control",
+      "high-pressure-drilling"
+    ],
+    "capabilityConfigurations": [
+      {
+        "id": "rotary-well-control",
+        "name": "Rotary well-control package",
+        "supportedFunction": "rotary-well-control",
+        "compatibleBuildingIds": [
+          "building-extraction-rig"
+        ],
+        "maximumDepthM": 8000,
+        "technologyRequirement": "rotary-drilling",
+        "approval": "Approved",
+        "notes": "Physical package identity is proposed; method/building/depth boundary preserves the approved Android restriction."
+      },
+      {
+        "id": "high-pressure-drilling",
+        "name": "High-pressure and brine package",
+        "supportedFunction": "high-pressure-drilling",
+        "compatibleBuildingIds": [
+          "building-extraction-rig"
+        ],
+        "maximumDepthM": 12000,
+        "technologyRequirement": "pressure-brine-drilling",
+        "approval": "Approved",
+        "notes": "Physical package identity is proposed; method/building/depth boundary preserves the approved Android restriction."
+      }
+    ],
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "Blocked",
+      "manufacturing.directMaterialInputs": "Blocked",
+      "manufacturing.nestedMachineInputs": "Blocked",
+      "manufacturing.assemblyHours": "Not Reviewed",
+      "manufacturing.factoryHours": "Not Reviewed",
+      "manufacturing.testHours": "Not Reviewed",
+      "manufacturing.goodUnitYield": "Not Reviewed",
+      "manufacturing.finishedMassKg": "Blocked",
+      "manufacturing.manufacturerCostCC": "Blocked",
+      "manufacturing.manufacturerQuoteCC": "Blocked",
+      "partIds": "Approved",
+      "pendingPartCompatibility": "Approved",
+      "outputSummary": "Approved",
+      "inputSummary": "Approved",
+      "operating.ratedCapacity": "Not Reviewed",
+      "operating.powerUnits": "Not Reviewed",
+      "operating.footprintM2": "Not Reviewed",
+      "operating.housingTechTier": "Not Reviewed",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved"
+    }
+  },
+  {
+    "entityType": "Machine",
+    "category": "Extraction",
+    "sources": [
+      "Canonical industrial alignment proposal"
+    ],
+    "canonStatus": "working canon",
+    "provenance": {
+      "alignmentReview": "docs/IndustrialCatalogueAlignmentReview.md",
+      "androidSourceCommit": "3f91c7a4d2a215d99f739165041bfa0e3b50f14b",
+      "androidSourcePath": "app/src/main/java/com/mineit/android/domain/spatial/LandExtractionCapabilities.kt"
+    },
+    "inputSummary": "Power, qualified operators and method-specific consumables",
+    "outputSummary": "Access to a depth-qualified geological extraction method",
+    "operating": {
+      "ratedCapacity": null,
+      "powerUnits": null,
+      "footprintM2": null,
+      "housingTechTier": null
+    },
+    "pendingPartCompatibility": [],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    },
+    "approval": "Blocked",
+    "id": "machine-quantum-bore-system",
+    "name": "Quantum Bore System",
+    "subCategory": "Extreme-Depth Bore",
+    "description": "A specialist extreme-depth bore system whose phase-controlled cutting and containment equipment is physically distinct from conventional rotary well machinery.",
+    "partIds": [
+      "part-extraction-parts",
+      "part-power-electronics",
+      "part-control-and-sensor-parts",
+      "part-computing-parts",
+      "part-structural-components",
+      "part-thermal-parts"
+    ],
+    "image": {
+      "key": "assets/art/universe/machines/machine-quantum-bore-system.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Perfect 1:1 square MineIT machine catalogue asset on a transparent background: one extreme-depth quantum bore system with a heavily shielded annular bore head, phase-control rings, thermal containment, redundant sensor clusters and power-conditioning cabinets; grounded industrial science-fiction design, white composite covers, charcoal frame, orange safety trim, blue-violet indicators; no landscape, people, text, logo, border or watermark.",
+      "notes": "Canonical identity art is queued. The absent image does not change machine identity or capability."
+    },
+    "manufacturing": {
+      "finishedPartInputs": null,
+      "directMaterialInputs": null,
+      "nestedMachineInputs": null,
+      "assemblyHours": null,
+      "factoryHours": null,
+      "testHours": null,
+      "goodUnitYield": null,
+      "finishedMassKg": null,
+      "manufacturerCostCC": null,
+      "manufacturerQuoteCC": null,
+      "reviewBasis": "Specialist physical identity is required by the approved extraction compatibility boundary; engineering BOM, mass and price remain blocked pending review.",
+      "unresolvedDesignConstraints": "Qualified materials, rated capacity, footprint, power, manufacture and test programme require engineering approval."
+    },
+    "servicePartRequirements": [
+      {
+        "partId": "part-extraction-parts",
+        "quantity": 1,
+        "role": "minimum-service-kit-slot",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-power-electronics",
+        "quantity": 1,
+        "role": "minimum-service-kit-slot",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-control-and-sensor-parts",
+        "quantity": 1,
+        "role": "minimum-service-kit-slot",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-computing-parts",
+        "quantity": 1,
+        "role": "minimum-service-kit-slot",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-structural-components",
+        "quantity": 1,
+        "role": "minimum-service-kit-slot",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-thermal-parts",
+        "quantity": 1,
+        "role": "minimum-service-kit-slot",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "quantum-boring"
+    ],
+    "capabilityConfigurations": [
+      {
+        "id": "quantum-boring",
+        "name": "Quantum bore package",
+        "supportedFunction": "quantum-boring",
+        "compatibleBuildingIds": [
+          "building-extraction-rig"
+        ],
+        "maximumDepthM": 70000,
+        "technologyRequirement": "quantum-bore-systems",
+        "approval": "Approved",
+        "notes": "Specialist Machine identity and engineering remain proposed; method/building/depth boundary preserves the approved Android restriction."
+      }
+    ],
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "Blocked",
+      "manufacturing.directMaterialInputs": "Blocked",
+      "manufacturing.nestedMachineInputs": "Blocked",
+      "manufacturing.assemblyHours": "Not Reviewed",
+      "manufacturing.factoryHours": "Not Reviewed",
+      "manufacturing.testHours": "Not Reviewed",
+      "manufacturing.goodUnitYield": "Not Reviewed",
+      "manufacturing.finishedMassKg": "Blocked",
+      "manufacturing.manufacturerCostCC": "Blocked",
+      "manufacturing.manufacturerQuoteCC": "Blocked",
+      "partIds": "Approved",
+      "pendingPartCompatibility": "Approved",
+      "outputSummary": "Approved",
+      "inputSummary": "Approved",
+      "operating.ratedCapacity": "Not Reviewed",
+      "operating.powerUnits": "Not Reviewed",
+      "operating.footprintM2": "Not Reviewed",
+      "operating.housingTechTier": "Not Reviewed",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved"
+    }
   }
 ]

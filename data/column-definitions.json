@@ -1744,5 +1744,115 @@
     "fieldKey": "image.generated",
     "category": "Artwork & Visuals",
     "requiresApproval": false
+  },
+  {
+    "id": "column-definition-parts-manufacturing-requirements-alignment",
+    "name": "Manufacturing Requirements",
+    "table": "parts",
+    "fieldKey": "manufacturingRequirements",
+    "category": "Production & Prices",
+    "requiresApproval": true,
+    "approvalPolicy": "Explicit catalogue field approval is required; proposed deterministic values remain visible without becoming approved canon.",
+    "description": "Industrial alignment field introduced by the complete Buildings, Machines and Parts review."
+  },
+  {
+    "id": "column-definition-parts-wear-profile-alignment",
+    "name": "Wear Profile",
+    "table": "parts",
+    "fieldKey": "wearProfile",
+    "category": "Condition & Maintenance",
+    "requiresApproval": true,
+    "approvalPolicy": "Explicit catalogue field approval is required; proposed deterministic values remain visible without becoming approved canon.",
+    "description": "Industrial alignment field introduced by the complete Buildings, Machines and Parts review."
+  },
+  {
+    "id": "column-definition-machines-service-part-requirements-alignment",
+    "name": "Service Part Requirements",
+    "table": "machines",
+    "fieldKey": "servicePartRequirements",
+    "category": "Physical Construction",
+    "requiresApproval": true,
+    "approvalPolicy": "Explicit catalogue field approval is required; proposed deterministic values remain visible without becoming approved canon.",
+    "description": "Industrial alignment field introduced by the complete Buildings, Machines and Parts review."
+  },
+  {
+    "id": "column-definition-machines-operating-functions-alignment",
+    "name": "Operating Functions",
+    "table": "machines",
+    "fieldKey": "operatingFunctions",
+    "category": "Operation & Capabilities",
+    "requiresApproval": true,
+    "approvalPolicy": "Explicit catalogue field approval is required; proposed deterministic values remain visible without becoming approved canon.",
+    "description": "Industrial alignment field introduced by the complete Buildings, Machines and Parts review."
+  },
+  {
+    "id": "column-definition-machines-capability-configurations-alignment",
+    "name": "Capability Configurations",
+    "table": "machines",
+    "fieldKey": "capabilityConfigurations",
+    "category": "Operation & Capabilities",
+    "requiresApproval": true,
+    "approvalPolicy": "Explicit catalogue field approval is required; proposed deterministic values remain visible without becoming approved canon.",
+    "description": "Industrial alignment field introduced by the complete Buildings, Machines and Parts review."
+  },
+  {
+    "id": "column-definition-machines-condition-model-alignment",
+    "name": "Condition Model",
+    "table": "machines",
+    "fieldKey": "conditionModel",
+    "category": "Condition & Maintenance",
+    "requiresApproval": true,
+    "approvalPolicy": "Explicit catalogue field approval is required; proposed deterministic values remain visible without becoming approved canon.",
+    "description": "Industrial alignment field introduced by the complete Buildings, Machines and Parts review."
+  },
+  {
+    "id": "column-definition-buildings-equipment-configurations-alignment",
+    "name": "Equipment Configurations",
+    "table": "buildings",
+    "fieldKey": "equipmentConfigurations",
+    "category": "Machinery & Installation",
+    "requiresApproval": true,
+    "approvalPolicy": "Explicit catalogue field approval is required; proposed deterministic values remain visible without becoming approved canon.",
+    "description": "Industrial alignment field introduced by the complete Buildings, Machines and Parts review."
+  },
+  {
+    "id": "column-definition-buildings-level-profiles-alignment",
+    "name": "Level Profiles",
+    "table": "buildings",
+    "fieldKey": "levelProfiles",
+    "category": "Production, Capacity & Progression",
+    "requiresApproval": true,
+    "approvalPolicy": "Explicit catalogue field approval is required; proposed deterministic values remain visible without becoming approved canon.",
+    "description": "Industrial alignment field introduced by the complete Buildings, Machines and Parts review."
+  },
+  {
+    "id": "column-definition-buildings-direct-part-requirements-alignment",
+    "name": "Direct Part Requirements",
+    "table": "buildings",
+    "fieldKey": "directPartRequirements",
+    "category": "Machinery & Installation",
+    "requiresApproval": true,
+    "approvalPolicy": "Explicit catalogue field approval is required; proposed deterministic values remain visible without becoming approved canon.",
+    "description": "Industrial alignment field introduced by the complete Buildings, Machines and Parts review."
+  },
+  {
+    "id": "column-definition-buildings-operating-requirements-alignment",
+    "name": "Operating Requirements",
+    "table": "buildings",
+    "fieldKey": "operatingRequirements",
+    "category": "Production, Capacity & Progression",
+    "requiresApproval": true,
+    "approvalPolicy": "Explicit catalogue field approval is required; proposed deterministic values remain visible without becoming approved canon.",
+    "description": "Industrial alignment field introduced by the complete Buildings, Machines and Parts review."
+  },
+  {
+    "id": "column-definition-buildings-wear-model-alignment",
+    "name": "Wear Model",
+    "table": "buildings",
+    "fieldKey": "wearModel",
+    "category": "Condition & Ownership",
+    "requiresApproval": true,
+    "approvalPolicy": "Explicit catalogue field approval is required; proposed deterministic values remain visible without becoming approved canon.",
+    "description": "Industrial alignment field introduced by the complete Buildings, Machines and Parts review."
   }
 ]

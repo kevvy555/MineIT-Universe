@@ -13,6 +13,7 @@ const flatten = (record, prefix = "", result = {}) => {
   }
   return result;
 };
+const valueAt = (record, key) => key.split('.').reduce((value, segment) => value?.[segment], record);
 const group = (name, fields) => ({ name, fields: fields.split(" ") });
 const common = [
   group("Identity & Classification", "name id catalogueStatus entityType category subCategory subCategories categories buildingType sources"),
@@ -24,7 +25,7 @@ const visuals = group("Artwork & Visuals",
 const configurations = {
   parts: {
     title: "Parts",
-    description: "19 finished Part products. Three superseded generic Parts were retired; unresolved Machine and research relationships remain pending review. Quantities, masses and CC prices are discovery planning references, not live game recipes or prices.",
+    description: "19 finished Part products with manufacturing requirements and deterministic proposed wear parameters. Three superseded generic Parts were retired; quantities, masses and CC prices remain discovery planning references, not live game recipes or prices.",
     defaultColumns: ["name", "category", "subCategory", "finishedUnitCount", "materialInputs",
       "approval", "needsApproval", "image.generated", "planningReference.finishedMassKg",
       "planningReference.manufacturerCostCC", "planningReference.baseManufacturerQuoteCC"],
@@ -47,7 +48,8 @@ const configurations = {
         "substanceIds materialInputs"),
       group("Machines & Usage", "machineIds"),
       group("Production & Prices",
-        "planningReference.finishedMassKg planningReference.manufacturerCostCC planningReference.baseManufacturerQuoteCC"),
+        "manufacturingRequirements planningReference.finishedMassKg planningReference.manufacturerCostCC planningReference.baseManufacturerQuoteCC"),
+      group("Condition & Maintenance", "wearProfile"),
       group("Discovery & Approval", "approval needsApproval"),
       group("Canon", "canonStatus"),
       group("Artwork & Visuals", "image.generated"),
@@ -56,7 +58,7 @@ const configurations = {
   },
   machines: {
     title: "Machines",
-    description: "42 canonical Machines with typed manufacturing recipes and explicit field approvals. Reference quantities and CC proposals are not final game balance.",
+    description: "45 canonical Machines with serviceable installed Parts, typed manufacturing recipes, operating functions and explicit field approvals. Reference quantities and CC proposals are not final game balance.",
     defaultColumns: ["name", "category", "subCategory", "manufacturing.finishedPartInputs",
       "approval", "needsApproval", "manufacturing.manufacturerCostCC"],
     pendingColumnAction: true,
@@ -66,9 +68,10 @@ const configurations = {
     groups: [
       group("Identity & Classification", "name category subCategory description"),
       group("Physical Construction",
-        "partIds manufacturing.finishedPartInputs manufacturing.directMaterialInputs manufacturing.nestedMachineInputs pendingPartCompatibility"),
+        "partIds servicePartRequirements manufacturing.finishedPartInputs manufacturing.directMaterialInputs manufacturing.nestedMachineInputs pendingPartCompatibility"),
       group("Operation & Capabilities",
-        "outputSummary inputSummary operating.ratedCapacity operating.powerUnits operating.footprintM2 buildingCompatibility operating.housingTechTier"),
+        "operatingFunctions capabilityConfigurations outputSummary inputSummary operating.ratedCapacity operating.powerUnits operating.footprintM2 buildingCompatibility operating.housingTechTier"),
+      group("Condition & Maintenance", "conditionModel"),
       group("Manufacturing & Pricing",
         "manufacturing.assemblyHours manufacturing.factoryHours manufacturing.testHours manufacturing.goodUnitYield manufacturing.finishedMassKg manufacturing.manufacturerCostCC manufacturing.manufacturerQuoteCC"),
       group("Discovery & Approval", "approval needsApproval"),
@@ -89,10 +92,10 @@ const configurations = {
       group("Construction BOM & Labour",
         "review.quantitativeBOM.unit_definition review.quantitativeBOM.structural_shell_and_fit_out_inputs_kg review.quantitativeBOM.site_construction_labour_hours review.quantitativeBOM.installed_structure_material_mass_kg review.quantitativeBOM.transportable_nonlocal_material_mass_kg_if_aggregate_locally_sourced"),
       group("Machinery & Installation",
-        "machineIds review.systematicReview.source_candidate_machine_ids_not_obligatory review.systematicReview.proposed_required_machine_direction review.bomCoverage.source_candidate_installed_machine_ids_not_all_mandatory review.bomCoverage.installed_machine_counts_status review.quantitativeBOM.proposed_required_machine_ids_and_counts review.quantitativeBOM.optional_machine_ids_conditional"),
+        "machineIds equipmentConfigurations directPartRequirements review.systematicReview.source_candidate_machine_ids_not_obligatory review.systematicReview.proposed_required_machine_direction review.bomCoverage.source_candidate_installed_machine_ids_not_all_mandatory review.bomCoverage.installed_machine_counts_status review.quantitativeBOM.proposed_required_machine_ids_and_counts review.quantitativeBOM.optional_machine_ids_conditional"),
       group("Production, Capacity & Progression",
-        "review.quantitativeBOM.source_android_gameplay_cost_and_constraints review.bomCoverage.site_specific_notes review.systematicReview.key_system_or_asset_issue"),
-      group("Condition & Ownership", "review.bomCoverage.condition_and_title_valuation_status"),
+        "levelProfiles operatingRequirements review.quantitativeBOM.source_android_gameplay_cost_and_constraints review.bomCoverage.site_specific_notes review.systematicReview.key_system_or_asset_issue"),
+      group("Condition & Ownership", "wearModel review.bomCoverage.condition_and_title_valuation_status"),
       group("Economics & Valuation",
         "review.quantitativeBOM.direct_material_cost_CC_status review.quantitativeBOM.labour_cost_CC_partial review.quantitativeBOM.base_installed_construction_cost_CC review.quantitativeBOM.base_new_build_sell_quote_CC"),
       group("Discovery & Approval",
@@ -130,12 +133,12 @@ export function industrialReviewRows(kind, catalogue, reference) {
   if (!["parts", "machines", "buildings"].includes(kind))
     throw new Error("Unsupported industrial catalogue: " + kind);
   const canonicalRecords = catalogue.collection(kind);
-  // Parts use their registered review columns as an allow-list. Keep canonical
-  // audit provenance, field-level approval decisions and artwork metadata in
-  // data/ without exposing those implementation fields in the review grid.
-  const limitedColumns = ["parts", "machines"].includes(kind) ? new Set(catalogue.collection("columnDefinitions")
+  // The registered review columns are an allow-list. Keep canonical audit
+  // provenance, field-level approval decisions and artwork metadata in data/
+  // without leaking implementation subfields into the review grids.
+  const limitedColumns = new Set(catalogue.collection("columnDefinitions")
     .filter(definition => definition.table === kind)
-    .map(definition => definition.fieldKey)) : null;
+    .map(definition => definition.fieldKey));
   const aliases = new Map(canonicalRecords
     .filter(record => record.provenance?.androidDiscoveryWorkingId)
     .map(record => [record.provenance.androidDiscoveryWorkingId, record.id]));
@@ -161,6 +164,12 @@ export function industrialReviewRows(kind, catalogue, reference) {
   }
   const canonicalRows = canonicalRecords.map(record => {
     const fields = flatten(record);
+    // Registered composite fields are intentionally presented as one review
+    // value instead of leaking every implementation subfield as a new column.
+    for (const field of limitedColumns) {
+      const value = valueAt(record, field);
+      if (value && typeof value === 'object') fields[field] = value;
+    }
     if (kind !== "parts" && kind !== "machines") fields.catalogueStatus = "Canonical";
     if (kind === "machines") {
       // Building entries are candidate compatibilities, not mandatory fit-out.
@@ -175,10 +184,8 @@ export function industrialReviewRows(kind, catalogue, reference) {
     const summary = approvalSummary(kind, record, fields, catalogue);
     fields.approval = summary.approval;
     fields.needsApproval = summary.needsApproval;
-    if (limitedColumns) {
-      for (const field of Object.keys(fields))
-        if (!limitedColumns.has(field)) delete fields[field];
-    }
+    for (const field of Object.keys(fields))
+      if (!limitedColumns.has(field)) delete fields[field];
     const pendingColumnKeys = Object.entries(summary.fieldStates)
       .filter(([, status]) => status !== "Approved")
       .map(([field]) => field);

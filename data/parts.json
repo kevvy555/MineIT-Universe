@@ -25,10 +25,12 @@
       }
     },
     "machineIds": [
-      "machine-wind-generator",
-      "machine-water-wheel-generator",
+      "machine-crude-combustion-generator",
+      "machine-crude-steam-piston-generator",
+      "machine-ship-reactor",
       "machine-solar-thermal-generator",
-      "machine-ship-reactor"
+      "machine-water-wheel-generator",
+      "machine-wind-generator"
     ],
     "image": {
       "key": "assets/art/universe/parts/part-generator-parts.webp",
@@ -76,7 +78,37 @@
       "materialInputs": "In Review",
       "planningReference.finishedMassKg": "In Review",
       "planningReference.manufacturerCostCC": "In Review",
-      "planningReference.baseManufacturerQuoteCC": "In Review"
+      "planningReference.baseManufacturerQuoteCC": "In Review",
+      "manufacturingRequirements": "Approved",
+      "wearProfile": "Approved"
+    },
+    "manufacturingRequirements": {
+      "requiredMachineIds": [
+        "machine-fabrication-machine",
+        "machine-welding-machine"
+      ],
+      "processCapabilities": [
+        "precision-forming",
+        "coil-winding",
+        "electrical-test"
+      ],
+      "labourHours": null,
+      "testHours": null,
+      "goodUnitYield": null,
+      "approval": "Approved",
+      "notes": "Process capability direction is explicit; labour, test duration, yield and final qualified recipe remain subject to engineering approval."
+    },
+    "wearProfile": {
+      "modelId": "industrial-wear-model-v1",
+      "wearBasis": "equivalent-full-load-hour",
+      "baseWearRatePctPerEquivalentFullLoadHour": 0.004,
+      "intensityExponent": 1.25,
+      "warningConditionPct": 30,
+      "failureConditionPct": 10,
+      "replacementUnitCount": 1,
+      "failureEffect": "reduced electrical output; complete failure disables generation",
+      "approval": "Approved",
+      "notes": "Deterministic first-pass parameter for review; per-save condition and accumulated operating hours belong to the consuming game."
     }
   },
   {
@@ -105,40 +137,50 @@
       }
     },
     "machineIds": [
-      "machine-crude-chemical-battery",
-      "machine-wind-generator",
-      "machine-water-wheel-generator",
-      "machine-thermoelectric-trickler",
-      "machine-solar-thermal-generator",
-      "machine-drill-machine",
-      "machine-conveyor-machine",
-      "machine-mine-ventilation",
-      "machine-crusher-machine",
-      "machine-smelter-machine",
-      "machine-research-computer",
-      "machine-fabrication-machine",
-      "machine-assembly-crane",
-      "machine-welding-machine",
-      "machine-life-support-machine",
-      "machine-climate-control-machine",
-      "machine-irrigation-system",
-      "machine-growth-management-system",
-      "machine-pump-machine",
-      "machine-power-distribution-system",
-      "machine-exploration-vehicle",
-      "machine-ship-scanner",
-      "machine-substance-analyser",
-      "machine-ship-reactor",
-      "machine-ship-life-support",
-      "machine-ship-computer",
-      "machine-ship-refinery-unit",
-      "machine-colony-operations-computer",
-      "machine-bulk-stacker",
-      "machine-warehouse-handler",
-      "machine-communal-fitness-leisure-system",
       "machine-advanced-entertainment-system",
+      "machine-assembly-crane",
+      "machine-bulk-stacker",
+      "machine-climate-control-machine",
+      "machine-colony-operations-computer",
+      "machine-communal-fitness-leisure-system",
+      "machine-conventional-electric-motor",
+      "machine-conveyor-machine",
+      "machine-crude-chemical-battery",
+      "machine-crude-combustion-generator",
+      "machine-crude-steam-piston-generator",
+      "machine-crusher-machine",
+      "machine-drill-machine",
+      "machine-exploration-vehicle",
+      "machine-fabrication-machine",
+      "machine-filtration-machine",
+      "machine-growth-management-system",
       "machine-immersive-recreation-suite",
-      "machine-integrated-wellness-leisure-system"
+      "machine-integrated-wellness-leisure-system",
+      "machine-irrigation-system",
+      "machine-life-support-machine",
+      "machine-livestock-handling-system",
+      "machine-mine-ventilation",
+      "machine-power-distribution-system",
+      "machine-pump-machine",
+      "machine-quantum-bore-system",
+      "machine-rare-earth-permanent-magnet-motor",
+      "machine-research-computer",
+      "machine-ship-computer",
+      "machine-ship-life-support",
+      "machine-ship-reactor",
+      "machine-ship-refinery-unit",
+      "machine-ship-scanner",
+      "machine-smelter-machine",
+      "machine-solar-thermal-generator",
+      "machine-substance-analyser",
+      "machine-thermoelectric-trickler",
+      "machine-underground-mining-system",
+      "machine-vector-exchange-drive",
+      "machine-warehouse-handler",
+      "machine-water-wheel-generator",
+      "machine-welding-machine",
+      "machine-well-drilling-system",
+      "machine-wind-generator"
     ],
     "image": {
       "key": "assets/art/universe/parts/part-power-electronics.webp",
@@ -192,7 +234,36 @@
       "materialInputs": "In Review",
       "planningReference.finishedMassKg": "In Review",
       "planningReference.manufacturerCostCC": "In Review",
-      "planningReference.baseManufacturerQuoteCC": "In Review"
+      "planningReference.baseManufacturerQuoteCC": "In Review",
+      "manufacturingRequirements": "Approved",
+      "wearProfile": "Approved"
+    },
+    "manufacturingRequirements": {
+      "requiredMachineIds": [
+        "machine-fabrication-machine"
+      ],
+      "processCapabilities": [
+        "electronics-fabrication",
+        "insulation-test",
+        "load-test"
+      ],
+      "labourHours": null,
+      "testHours": null,
+      "goodUnitYield": null,
+      "approval": "Approved",
+      "notes": "Process capability direction is explicit; labour, test duration, yield and final qualified recipe remain subject to engineering approval."
+    },
+    "wearProfile": {
+      "modelId": "industrial-wear-model-v1",
+      "wearBasis": "equivalent-full-load-hour",
+      "baseWearRatePctPerEquivalentFullLoadHour": 0.002,
+      "intensityExponent": 1.25,
+      "warningConditionPct": 30,
+      "failureConditionPct": 10,
+      "replacementUnitCount": 1,
+      "failureEffect": "unstable power conversion and progressive derating; failure disables powered operation",
+      "approval": "Approved",
+      "notes": "Deterministic first-pass parameter for review; per-save condition and accumulated operating hours belong to the consuming game."
     }
   },
   {
@@ -220,27 +291,35 @@
       }
     },
     "machineIds": [
-      "machine-wind-generator",
-      "machine-water-wheel-generator",
-      "machine-solar-thermal-generator",
-      "machine-drill-machine",
-      "machine-conveyor-machine",
-      "machine-mine-ventilation",
-      "machine-crusher-machine",
-      "machine-fabrication-machine",
       "machine-assembly-crane",
-      "machine-life-support-machine",
-      "machine-climate-control-machine",
-      "machine-irrigation-system",
-      "machine-pump-machine",
-      "machine-exploration-vehicle",
-      "machine-ship-life-support",
-      "machine-ship-refinery-unit",
-      "machine-livestock-handling-system",
       "machine-bulk-stacker",
-      "machine-warehouse-handler",
+      "machine-climate-control-machine",
       "machine-communal-fitness-leisure-system",
-      "machine-integrated-wellness-leisure-system"
+      "machine-conventional-electric-motor",
+      "machine-conveyor-machine",
+      "machine-crude-combustion-generator",
+      "machine-crude-steam-piston-generator",
+      "machine-crusher-machine",
+      "machine-drill-machine",
+      "machine-exploration-vehicle",
+      "machine-fabrication-machine",
+      "machine-integrated-wellness-leisure-system",
+      "machine-irrigation-system",
+      "machine-life-support-machine",
+      "machine-livestock-handling-system",
+      "machine-mine-ventilation",
+      "machine-pump-machine",
+      "machine-rare-earth-permanent-magnet-motor",
+      "machine-ship-life-support",
+      "machine-ship-reactor",
+      "machine-ship-refinery-unit",
+      "machine-solar-thermal-generator",
+      "machine-underground-mining-system",
+      "machine-vector-exchange-drive",
+      "machine-warehouse-handler",
+      "machine-water-wheel-generator",
+      "machine-well-drilling-system",
+      "machine-wind-generator"
     ],
     "image": {
       "key": "assets/art/universe/parts/part-mechanical-parts.webp",
@@ -288,7 +367,36 @@
       "materialInputs": "In Review",
       "planningReference.finishedMassKg": "In Review",
       "planningReference.manufacturerCostCC": "In Review",
-      "planningReference.baseManufacturerQuoteCC": "In Review"
+      "planningReference.baseManufacturerQuoteCC": "In Review",
+      "manufacturingRequirements": "Approved",
+      "wearProfile": "Approved"
+    },
+    "manufacturingRequirements": {
+      "requiredMachineIds": [
+        "machine-fabrication-machine"
+      ],
+      "processCapabilities": [
+        "machining",
+        "heat-treatment",
+        "dimensional-test"
+      ],
+      "labourHours": null,
+      "testHours": null,
+      "goodUnitYield": null,
+      "approval": "Approved",
+      "notes": "Process capability direction is explicit; labour, test duration, yield and final qualified recipe remain subject to engineering approval."
+    },
+    "wearProfile": {
+      "modelId": "industrial-wear-model-v1",
+      "wearBasis": "equivalent-full-load-hour",
+      "baseWearRatePctPerEquivalentFullLoadHour": 0.006,
+      "intensityExponent": 1.25,
+      "warningConditionPct": 30,
+      "failureConditionPct": 8,
+      "replacementUnitCount": 1,
+      "failureEffect": "increased friction and reduced throughput; seizure disables driven motion",
+      "approval": "Approved",
+      "notes": "Deterministic first-pass parameter for review; per-save condition and accumulated operating hours belong to the consuming game."
     }
   },
   {
@@ -320,27 +428,43 @@
       }
     },
     "machineIds": [
-      "machine-wind-generator",
-      "machine-water-wheel-generator",
-      "machine-solar-thermal-generator",
-      "machine-research-computer",
-      "machine-assembly-crane",
-      "machine-life-support-machine",
-      "machine-climate-control-machine",
-      "machine-growth-management-system",
-      "machine-power-distribution-system",
-      "machine-ship-scanner",
-      "machine-substance-analyser",
-      "machine-ship-reactor",
-      "machine-ship-life-support",
-      "machine-ship-computer",
-      "machine-livestock-handling-system",
-      "machine-colony-operations-computer",
-      "machine-warehouse-handler",
-      "machine-communal-fitness-leisure-system",
       "machine-advanced-entertainment-system",
+      "machine-assembly-crane",
+      "machine-bulk-stacker",
+      "machine-climate-control-machine",
+      "machine-colony-operations-computer",
+      "machine-communal-fitness-leisure-system",
+      "machine-conventional-electric-motor",
+      "machine-conveyor-machine",
+      "machine-drill-machine",
+      "machine-exploration-vehicle",
+      "machine-fabrication-machine",
+      "machine-filtration-machine",
+      "machine-growth-management-system",
       "machine-immersive-recreation-suite",
-      "machine-integrated-wellness-leisure-system"
+      "machine-integrated-wellness-leisure-system",
+      "machine-irrigation-system",
+      "machine-life-support-machine",
+      "machine-livestock-handling-system",
+      "machine-power-distribution-system",
+      "machine-quantum-bore-system",
+      "machine-rare-earth-permanent-magnet-motor",
+      "machine-research-computer",
+      "machine-ship-computer",
+      "machine-ship-life-support",
+      "machine-ship-reactor",
+      "machine-ship-scanner",
+      "machine-smelter-machine",
+      "machine-solar-thermal-generator",
+      "machine-substance-analyser",
+      "machine-thermoelectric-trickler",
+      "machine-underground-mining-system",
+      "machine-vector-exchange-drive",
+      "machine-warehouse-handler",
+      "machine-water-wheel-generator",
+      "machine-welding-machine",
+      "machine-well-drilling-system",
+      "machine-wind-generator"
     ],
     "image": {
       "key": "assets/art/universe/parts/part-control-and-sensor-parts.webp",
@@ -394,7 +518,36 @@
       "materialInputs": "In Review",
       "planningReference.finishedMassKg": "In Review",
       "planningReference.manufacturerCostCC": "In Review",
-      "planningReference.baseManufacturerQuoteCC": "In Review"
+      "planningReference.baseManufacturerQuoteCC": "In Review",
+      "manufacturingRequirements": "Approved",
+      "wearProfile": "Approved"
+    },
+    "manufacturingRequirements": {
+      "requiredMachineIds": [
+        "machine-fabrication-machine"
+      ],
+      "processCapabilities": [
+        "electronics-fabrication",
+        "sensor-calibration",
+        "control-test"
+      ],
+      "labourHours": null,
+      "testHours": null,
+      "goodUnitYield": null,
+      "approval": "Approved",
+      "notes": "Process capability direction is explicit; labour, test duration, yield and final qualified recipe remain subject to engineering approval."
+    },
+    "wearProfile": {
+      "modelId": "industrial-wear-model-v1",
+      "wearBasis": "equivalent-full-load-hour",
+      "baseWearRatePctPerEquivalentFullLoadHour": 0.0025,
+      "intensityExponent": 1.25,
+      "warningConditionPct": 30,
+      "failureConditionPct": 12,
+      "replacementUnitCount": 1,
+      "failureEffect": "loss of control accuracy and automation; failure disables safety-critical automatic operation",
+      "approval": "Approved",
+      "notes": "Deterministic first-pass parameter for review; per-save condition and accumulated operating hours belong to the consuming game."
     }
   },
   {
@@ -421,29 +574,45 @@
       }
     },
     "machineIds": [
-      "machine-crude-chemical-battery",
-      "machine-wind-generator",
-      "machine-water-wheel-generator",
-      "machine-solar-thermal-generator",
-      "machine-drill-machine",
-      "machine-conveyor-machine",
-      "machine-crusher-machine",
-      "machine-smelter-machine",
-      "machine-fabrication-machine",
       "machine-assembly-crane",
-      "machine-pump-machine",
-      "machine-filtration-machine",
-      "machine-power-distribution-system",
+      "machine-bulk-stacker",
+      "machine-climate-control-machine",
+      "machine-colony-operations-computer",
+      "machine-conventional-electric-motor",
+      "machine-conveyor-machine",
+      "machine-crude-chemical-battery",
+      "machine-crude-combustion-generator",
+      "machine-crude-steam-piston-generator",
+      "machine-crusher-machine",
+      "machine-drill-machine",
       "machine-exploration-vehicle",
-      "machine-ship-scanner",
-      "machine-substance-analyser",
+      "machine-fabrication-machine",
+      "machine-filtration-machine",
+      "machine-immersive-recreation-suite",
+      "machine-integrated-wellness-leisure-system",
+      "machine-irrigation-system",
+      "machine-livestock-handling-system",
+      "machine-mine-ventilation",
+      "machine-power-distribution-system",
+      "machine-pump-machine",
+      "machine-quantum-bore-system",
+      "machine-rare-earth-permanent-magnet-motor",
+      "machine-research-computer",
+      "machine-ship-computer",
       "machine-ship-reactor",
       "machine-ship-refinery-unit",
-      "machine-livestock-handling-system",
-      "machine-bulk-stacker",
+      "machine-ship-scanner",
+      "machine-smelter-machine",
+      "machine-solar-thermal-generator",
+      "machine-substance-analyser",
+      "machine-thermoelectric-trickler",
+      "machine-underground-mining-system",
+      "machine-vector-exchange-drive",
       "machine-warehouse-handler",
-      "machine-immersive-recreation-suite",
-      "machine-integrated-wellness-leisure-system"
+      "machine-water-wheel-generator",
+      "machine-welding-machine",
+      "machine-well-drilling-system",
+      "machine-wind-generator"
     ],
     "image": {
       "key": "assets/art/universe/parts/part-structural-components.webp",
@@ -484,7 +653,37 @@
       "materialInputs": "In Review",
       "planningReference.finishedMassKg": "In Review",
       "planningReference.manufacturerCostCC": "In Review",
-      "planningReference.baseManufacturerQuoteCC": "In Review"
+      "planningReference.baseManufacturerQuoteCC": "In Review",
+      "manufacturingRequirements": "Approved",
+      "wearProfile": "Approved"
+    },
+    "manufacturingRequirements": {
+      "requiredMachineIds": [
+        "machine-fabrication-machine",
+        "machine-welding-machine"
+      ],
+      "processCapabilities": [
+        "forming",
+        "joining",
+        "load-test"
+      ],
+      "labourHours": null,
+      "testHours": null,
+      "goodUnitYield": null,
+      "approval": "Approved",
+      "notes": "Process capability direction is explicit; labour, test duration, yield and final qualified recipe remain subject to engineering approval."
+    },
+    "wearProfile": {
+      "modelId": "industrial-wear-model-v1",
+      "wearBasis": "equivalent-full-load-hour",
+      "baseWearRatePctPerEquivalentFullLoadHour": 0.001,
+      "intensityExponent": 1.25,
+      "warningConditionPct": 30,
+      "failureConditionPct": 5,
+      "replacementUnitCount": 1,
+      "failureEffect": "reduced safe load rating; failure makes the supported machine unsafe to operate",
+      "approval": "Approved",
+      "notes": "Deterministic first-pass parameter for review; per-save condition and accumulated operating hours belong to the consuming game."
     }
   },
   {
@@ -512,12 +711,15 @@
       }
     },
     "machineIds": [
-      "machine-drill-machine",
       "machine-assembly-crane",
+      "machine-bulk-stacker",
+      "machine-crude-steam-piston-generator",
+      "machine-drill-machine",
       "machine-pump-machine",
       "machine-ship-refinery-unit",
-      "machine-bulk-stacker",
-      "machine-warehouse-handler"
+      "machine-underground-mining-system",
+      "machine-warehouse-handler",
+      "machine-well-drilling-system"
     ],
     "image": {
       "key": "assets/art/universe/parts/part-hydraulic-parts.webp",
@@ -571,7 +773,36 @@
       "materialInputs": "In Review",
       "planningReference.finishedMassKg": "In Review",
       "planningReference.manufacturerCostCC": "In Review",
-      "planningReference.baseManufacturerQuoteCC": "In Review"
+      "planningReference.baseManufacturerQuoteCC": "In Review",
+      "manufacturingRequirements": "Approved",
+      "wearProfile": "Approved"
+    },
+    "manufacturingRequirements": {
+      "requiredMachineIds": [
+        "machine-fabrication-machine"
+      ],
+      "processCapabilities": [
+        "precision-machining",
+        "seal-fitting",
+        "pressure-test"
+      ],
+      "labourHours": null,
+      "testHours": null,
+      "goodUnitYield": null,
+      "approval": "Approved",
+      "notes": "Process capability direction is explicit; labour, test duration, yield and final qualified recipe remain subject to engineering approval."
+    },
+    "wearProfile": {
+      "modelId": "industrial-wear-model-v1",
+      "wearBasis": "equivalent-full-load-hour",
+      "baseWearRatePctPerEquivalentFullLoadHour": 0.0065,
+      "intensityExponent": 1.25,
+      "warningConditionPct": 30,
+      "failureConditionPct": 10,
+      "replacementUnitCount": 1,
+      "failureEffect": "pressure loss and slower actuation; failure disables hydraulic functions",
+      "approval": "Approved",
+      "notes": "Deterministic first-pass parameter for review; per-save condition and accumulated operating hours belong to the consuming game."
     }
   },
   {
@@ -600,7 +831,10 @@
     },
     "machineIds": [
       "machine-drill-machine",
-      "machine-substance-analyser"
+      "machine-quantum-bore-system",
+      "machine-substance-analyser",
+      "machine-underground-mining-system",
+      "machine-well-drilling-system"
     ],
     "image": {
       "key": "assets/art/universe/parts/part-extraction-parts.webp",
@@ -642,7 +876,36 @@
       "materialInputs": "In Review",
       "planningReference.finishedMassKg": "In Review",
       "planningReference.manufacturerCostCC": "In Review",
-      "planningReference.baseManufacturerQuoteCC": "In Review"
+      "planningReference.baseManufacturerQuoteCC": "In Review",
+      "manufacturingRequirements": "Approved",
+      "wearProfile": "Approved"
+    },
+    "manufacturingRequirements": {
+      "requiredMachineIds": [
+        "machine-fabrication-machine"
+      ],
+      "processCapabilities": [
+        "tool-forming",
+        "carbide-bonding",
+        "hardness-test"
+      ],
+      "labourHours": null,
+      "testHours": null,
+      "goodUnitYield": null,
+      "approval": "Approved",
+      "notes": "Process capability direction is explicit; labour, test duration, yield and final qualified recipe remain subject to engineering approval."
+    },
+    "wearProfile": {
+      "modelId": "industrial-wear-model-v1",
+      "wearBasis": "equivalent-full-load-hour",
+      "baseWearRatePctPerEquivalentFullLoadHour": 0.0125,
+      "intensityExponent": 1.25,
+      "warningConditionPct": 30,
+      "failureConditionPct": 15,
+      "replacementUnitCount": 1,
+      "failureEffect": "falling cut rate and depth performance; failure disables extraction",
+      "approval": "Approved",
+      "notes": "Deterministic first-pass parameter for review; per-save condition and accumulated operating hours belong to the consuming game."
     }
   },
   {
@@ -672,9 +935,9 @@
     },
     "machineIds": [
       "machine-crusher-machine",
-      "machine-smelter-machine",
       "machine-filtration-machine",
-      "machine-ship-refinery-unit"
+      "machine-ship-refinery-unit",
+      "machine-smelter-machine"
     ],
     "image": {
       "key": "assets/art/universe/parts/part-processing-parts.webp",
@@ -722,7 +985,36 @@
       "materialInputs": "In Review",
       "planningReference.finishedMassKg": "In Review",
       "planningReference.manufacturerCostCC": "In Review",
-      "planningReference.baseManufacturerQuoteCC": "In Review"
+      "planningReference.baseManufacturerQuoteCC": "In Review",
+      "manufacturingRequirements": "Approved",
+      "wearProfile": "Approved"
+    },
+    "manufacturingRequirements": {
+      "requiredMachineIds": [
+        "machine-fabrication-machine"
+      ],
+      "processCapabilities": [
+        "ceramic-forming",
+        "chemical-compatibility-test",
+        "thermal-test"
+      ],
+      "labourHours": null,
+      "testHours": null,
+      "goodUnitYield": null,
+      "approval": "Approved",
+      "notes": "Process capability direction is explicit; labour, test duration, yield and final qualified recipe remain subject to engineering approval."
+    },
+    "wearProfile": {
+      "modelId": "industrial-wear-model-v1",
+      "wearBasis": "equivalent-full-load-hour",
+      "baseWearRatePctPerEquivalentFullLoadHour": 0.0075,
+      "intensityExponent": 1.25,
+      "warningConditionPct": 30,
+      "failureConditionPct": 12,
+      "replacementUnitCount": 1,
+      "failureEffect": "lower process yield and contamination control; failure disables the affected process path",
+      "approval": "Approved",
+      "notes": "Deterministic first-pass parameter for review; per-save condition and accumulated operating hours belong to the consuming game."
     }
   },
   {
@@ -751,13 +1043,22 @@
       }
     },
     "machineIds": [
+      "machine-advanced-entertainment-system",
+      "machine-colony-operations-computer",
+      "machine-exploration-vehicle",
+      "machine-growth-management-system",
+      "machine-immersive-recreation-suite",
+      "machine-integrated-wellness-leisure-system",
+      "machine-personal-recreation-terminal",
+      "machine-power-distribution-system",
+      "machine-quantum-bore-system",
       "machine-research-computer",
       "machine-ship-computer",
-      "machine-colony-operations-computer",
-      "machine-personal-recreation-terminal",
-      "machine-advanced-entertainment-system",
-      "machine-immersive-recreation-suite",
-      "machine-integrated-wellness-leisure-system"
+      "machine-ship-life-support",
+      "machine-ship-reactor",
+      "machine-ship-scanner",
+      "machine-substance-analyser",
+      "machine-vector-exchange-drive"
     ],
     "image": {
       "key": "assets/art/universe/parts/part-computing-parts.webp",
@@ -811,7 +1112,36 @@
       "materialInputs": "In Review",
       "planningReference.finishedMassKg": "In Review",
       "planningReference.manufacturerCostCC": "In Review",
-      "planningReference.baseManufacturerQuoteCC": "In Review"
+      "planningReference.baseManufacturerQuoteCC": "In Review",
+      "manufacturingRequirements": "Approved",
+      "wearProfile": "Approved"
+    },
+    "manufacturingRequirements": {
+      "requiredMachineIds": [
+        "machine-fabrication-machine"
+      ],
+      "processCapabilities": [
+        "electronics-fabrication",
+        "firmware-loading",
+        "compute-test"
+      ],
+      "labourHours": null,
+      "testHours": null,
+      "goodUnitYield": null,
+      "approval": "Approved",
+      "notes": "Process capability direction is explicit; labour, test duration, yield and final qualified recipe remain subject to engineering approval."
+    },
+    "wearProfile": {
+      "modelId": "industrial-wear-model-v1",
+      "wearBasis": "equivalent-full-load-hour",
+      "baseWearRatePctPerEquivalentFullLoadHour": 0.0015,
+      "intensityExponent": 1.25,
+      "warningConditionPct": 30,
+      "failureConditionPct": 10,
+      "replacementUnitCount": 1,
+      "failureEffect": "reduced compute/control availability; failure disables dependent control functions",
+      "approval": "Approved",
+      "notes": "Deterministic first-pass parameter for review; per-save condition and accumulated operating hours belong to the consuming game."
     }
   },
   {
@@ -840,14 +1170,22 @@
       }
     },
     "machineIds": [
-      "machine-mine-ventilation",
-      "machine-smelter-machine",
-      "machine-life-support-machine",
-      "machine-irrigation-system",
+      "machine-crude-chemical-battery",
+      "machine-crude-combustion-generator",
+      "machine-crude-steam-piston-generator",
       "machine-filtration-machine",
-      "machine-ship-life-support",
+      "machine-integrated-wellness-leisure-system",
+      "machine-irrigation-system",
+      "machine-life-support-machine",
       "machine-livestock-handling-system",
-      "machine-integrated-wellness-leisure-system"
+      "machine-mine-ventilation",
+      "machine-pump-machine",
+      "machine-ship-life-support",
+      "machine-ship-reactor",
+      "machine-ship-refinery-unit",
+      "machine-smelter-machine",
+      "machine-underground-mining-system",
+      "machine-well-drilling-system"
     ],
     "image": {
       "key": "assets/art/universe/parts/part-fluid-handling-parts.webp",
@@ -901,7 +1239,37 @@
       "materialInputs": "In Review",
       "planningReference.finishedMassKg": "In Review",
       "planningReference.manufacturerCostCC": "In Review",
-      "planningReference.baseManufacturerQuoteCC": "In Review"
+      "planningReference.baseManufacturerQuoteCC": "In Review",
+      "manufacturingRequirements": "Approved",
+      "wearProfile": "Approved"
+    },
+    "manufacturingRequirements": {
+      "requiredMachineIds": [
+        "machine-fabrication-machine",
+        "machine-welding-machine"
+      ],
+      "processCapabilities": [
+        "forming",
+        "seal-fitting",
+        "leak-test"
+      ],
+      "labourHours": null,
+      "testHours": null,
+      "goodUnitYield": null,
+      "approval": "Approved",
+      "notes": "Process capability direction is explicit; labour, test duration, yield and final qualified recipe remain subject to engineering approval."
+    },
+    "wearProfile": {
+      "modelId": "industrial-wear-model-v1",
+      "wearBasis": "equivalent-full-load-hour",
+      "baseWearRatePctPerEquivalentFullLoadHour": 0.006,
+      "intensityExponent": 1.25,
+      "warningConditionPct": 30,
+      "failureConditionPct": 12,
+      "replacementUnitCount": 1,
+      "failureEffect": "leakage and reduced flow; failure disables containment-critical service",
+      "approval": "Approved",
+      "notes": "Deterministic first-pass parameter for review; per-save condition and accumulated operating hours belong to the consuming game."
     }
   },
   {
@@ -928,8 +1296,10 @@
       }
     },
     "machineIds": [
-      "machine-conveyor-machine",
+      "machine-assembly-crane",
       "machine-bulk-stacker",
+      "machine-conveyor-machine",
+      "machine-livestock-handling-system",
       "machine-warehouse-handler"
     ],
     "image": {
@@ -978,7 +1348,37 @@
       "materialInputs": "In Review",
       "planningReference.finishedMassKg": "In Review",
       "planningReference.manufacturerCostCC": "In Review",
-      "planningReference.baseManufacturerQuoteCC": "In Review"
+      "planningReference.baseManufacturerQuoteCC": "In Review",
+      "manufacturingRequirements": "Approved",
+      "wearProfile": "Approved"
+    },
+    "manufacturingRequirements": {
+      "requiredMachineIds": [
+        "machine-fabrication-machine",
+        "machine-welding-machine"
+      ],
+      "processCapabilities": [
+        "forming",
+        "wear-surface-fitting",
+        "load-test"
+      ],
+      "labourHours": null,
+      "testHours": null,
+      "goodUnitYield": null,
+      "approval": "Approved",
+      "notes": "Process capability direction is explicit; labour, test duration, yield and final qualified recipe remain subject to engineering approval."
+    },
+    "wearProfile": {
+      "modelId": "industrial-wear-model-v1",
+      "wearBasis": "equivalent-full-load-hour",
+      "baseWearRatePctPerEquivalentFullLoadHour": 0.007,
+      "intensityExponent": 1.25,
+      "warningConditionPct": 30,
+      "failureConditionPct": 10,
+      "replacementUnitCount": 1,
+      "failureEffect": "lower handling rate and higher jam risk; failure stops the affected material path",
+      "approval": "Approved",
+      "notes": "Deterministic first-pass parameter for review; per-save condition and accumulated operating hours belong to the consuming game."
     }
   },
   {
@@ -1007,7 +1407,10 @@
         "sourceSections": "§§48-59"
       }
     },
-    "machineIds": [],
+    "machineIds": [
+      "machine-crude-chemical-battery",
+      "machine-thermoelectric-trickler"
+    ],
     "image": {
       "key": "assets/art/universe/parts/part-lead-acid-battery-module.webp",
       "generated": true,
@@ -1060,7 +1463,36 @@
       "materialInputs": "In Review",
       "planningReference.finishedMassKg": "In Review",
       "planningReference.manufacturerCostCC": "In Review",
-      "planningReference.baseManufacturerQuoteCC": "In Review"
+      "planningReference.baseManufacturerQuoteCC": "In Review",
+      "manufacturingRequirements": "Approved",
+      "wearProfile": "Approved"
+    },
+    "manufacturingRequirements": {
+      "requiredMachineIds": [
+        "machine-fabrication-machine"
+      ],
+      "processCapabilities": [
+        "cell-assembly",
+        "electrolyte-filling",
+        "charge-discharge-test"
+      ],
+      "labourHours": null,
+      "testHours": null,
+      "goodUnitYield": null,
+      "approval": "Approved",
+      "notes": "Process capability direction is explicit; labour, test duration, yield and final qualified recipe remain subject to engineering approval."
+    },
+    "wearProfile": {
+      "modelId": "industrial-wear-model-v1",
+      "wearBasis": "equivalent-full-load-hour",
+      "baseWearRatePctPerEquivalentFullLoadHour": 0.005,
+      "intensityExponent": 1.25,
+      "warningConditionPct": 30,
+      "failureConditionPct": 15,
+      "replacementUnitCount": 1,
+      "failureEffect": "reduced stored-energy capacity; failure removes the module from service",
+      "approval": "Approved",
+      "notes": "Deterministic first-pass parameter for review; per-save condition and accumulated operating hours belong to the consuming game."
     }
   },
   {
@@ -1094,7 +1526,9 @@
         "sourceSections": "§§48-59"
       }
     },
-    "machineIds": [],
+    "machineIds": [
+      "machine-exploration-vehicle"
+    ],
     "image": {
       "key": "assets/art/universe/parts/part-lithium-based-battery-module.webp",
       "generated": true,
@@ -1165,7 +1599,36 @@
       "materialInputs": "Approved",
       "planningReference.finishedMassKg": "Approved",
       "planningReference.manufacturerCostCC": "In Review",
-      "planningReference.baseManufacturerQuoteCC": "In Review"
+      "planningReference.baseManufacturerQuoteCC": "In Review",
+      "manufacturingRequirements": "Approved",
+      "wearProfile": "Approved"
+    },
+    "manufacturingRequirements": {
+      "requiredMachineIds": [
+        "machine-fabrication-machine"
+      ],
+      "processCapabilities": [
+        "dry-cell-assembly",
+        "electrolyte-filling",
+        "charge-discharge-test"
+      ],
+      "labourHours": null,
+      "testHours": null,
+      "goodUnitYield": null,
+      "approval": "Approved",
+      "notes": "Process capability direction is explicit; labour, test duration, yield and final qualified recipe remain subject to engineering approval."
+    },
+    "wearProfile": {
+      "modelId": "industrial-wear-model-v1",
+      "wearBasis": "equivalent-full-load-hour",
+      "baseWearRatePctPerEquivalentFullLoadHour": 0.004,
+      "intensityExponent": 1.25,
+      "warningConditionPct": 30,
+      "failureConditionPct": 15,
+      "replacementUnitCount": 1,
+      "failureEffect": "reduced stored-energy capacity and peak output; failure removes the module from service",
+      "approval": "Approved",
+      "notes": "Deterministic first-pass parameter for review; per-save condition and accumulated operating hours belong to the consuming game."
     }
   },
   {
@@ -1195,8 +1658,22 @@
       }
     },
     "machineIds": [
+      "machine-climate-control-machine",
+      "machine-crude-combustion-generator",
+      "machine-crude-steam-piston-generator",
+      "machine-growth-management-system",
       "machine-immersive-recreation-suite",
-      "machine-integrated-wellness-leisure-system"
+      "machine-integrated-wellness-leisure-system",
+      "machine-life-support-machine",
+      "machine-quantum-bore-system",
+      "machine-ship-life-support",
+      "machine-ship-reactor",
+      "machine-ship-refinery-unit",
+      "machine-smelter-machine",
+      "machine-solar-thermal-generator",
+      "machine-thermoelectric-trickler",
+      "machine-vector-exchange-drive",
+      "machine-welding-machine"
     ],
     "image": {
       "key": "assets/art/universe/parts/part-thermal-parts.webp",
@@ -1244,7 +1721,36 @@
       "materialInputs": "In Review",
       "planningReference.finishedMassKg": "In Review",
       "planningReference.manufacturerCostCC": "In Review",
-      "planningReference.baseManufacturerQuoteCC": "In Review"
+      "planningReference.baseManufacturerQuoteCC": "In Review",
+      "manufacturingRequirements": "Approved",
+      "wearProfile": "Approved"
+    },
+    "manufacturingRequirements": {
+      "requiredMachineIds": [
+        "machine-fabrication-machine"
+      ],
+      "processCapabilities": [
+        "thermal-interface-forming",
+        "insulation-fitting",
+        "thermal-cycle-test"
+      ],
+      "labourHours": null,
+      "testHours": null,
+      "goodUnitYield": null,
+      "approval": "Approved",
+      "notes": "Process capability direction is explicit; labour, test duration, yield and final qualified recipe remain subject to engineering approval."
+    },
+    "wearProfile": {
+      "modelId": "industrial-wear-model-v1",
+      "wearBasis": "equivalent-full-load-hour",
+      "baseWearRatePctPerEquivalentFullLoadHour": 0.003,
+      "intensityExponent": 1.25,
+      "warningConditionPct": 30,
+      "failureConditionPct": 12,
+      "replacementUnitCount": 1,
+      "failureEffect": "reduced heat-transfer or insulation performance; failure forces thermal shutdown",
+      "approval": "Approved",
+      "notes": "Deterministic first-pass parameter for review; per-save condition and accumulated operating hours belong to the consuming game."
     }
   },
   {
@@ -1275,7 +1781,12 @@
     },
     "machineIds": [
       "machine-advanced-entertainment-system",
-      "machine-immersive-recreation-suite"
+      "machine-growth-management-system",
+      "machine-immersive-recreation-suite",
+      "machine-research-computer",
+      "machine-ship-scanner",
+      "machine-solar-thermal-generator",
+      "machine-substance-analyser"
     ],
     "image": {
       "key": "assets/art/universe/parts/part-optical-parts.webp",
@@ -1328,7 +1839,36 @@
       "materialInputs": "In Review",
       "planningReference.finishedMassKg": "In Review",
       "planningReference.manufacturerCostCC": "In Review",
-      "planningReference.baseManufacturerQuoteCC": "In Review"
+      "planningReference.baseManufacturerQuoteCC": "In Review",
+      "manufacturingRequirements": "Approved",
+      "wearProfile": "Approved"
+    },
+    "manufacturingRequirements": {
+      "requiredMachineIds": [
+        "machine-fabrication-machine"
+      ],
+      "processCapabilities": [
+        "optical-forming",
+        "polishing",
+        "alignment-test"
+      ],
+      "labourHours": null,
+      "testHours": null,
+      "goodUnitYield": null,
+      "approval": "Approved",
+      "notes": "Process capability direction is explicit; labour, test duration, yield and final qualified recipe remain subject to engineering approval."
+    },
+    "wearProfile": {
+      "modelId": "industrial-wear-model-v1",
+      "wearBasis": "equivalent-full-load-hour",
+      "baseWearRatePctPerEquivalentFullLoadHour": 0.0025,
+      "intensityExponent": 1.25,
+      "warningConditionPct": 30,
+      "failureConditionPct": 15,
+      "replacementUnitCount": 1,
+      "failureEffect": "reduced optical accuracy or transmission; failure disables the optical function",
+      "approval": "Approved",
+      "notes": "Deterministic first-pass parameter for review; per-save condition and accumulated operating hours belong to the consuming game."
     }
   },
   {
@@ -1357,7 +1897,11 @@
         "sourceSections": "§§48-59"
       }
     },
-    "machineIds": [],
+    "machineIds": [
+      "machine-crusher-machine",
+      "machine-fabrication-machine",
+      "machine-ship-refinery-unit"
+    ],
     "image": {
       "key": "assets/art/universe/parts/part-forming-cutting-tooling.webp",
       "generated": true,
@@ -1398,7 +1942,36 @@
       "materialInputs": "In Review",
       "planningReference.finishedMassKg": "In Review",
       "planningReference.manufacturerCostCC": "In Review",
-      "planningReference.baseManufacturerQuoteCC": "In Review"
+      "planningReference.baseManufacturerQuoteCC": "In Review",
+      "manufacturingRequirements": "Approved",
+      "wearProfile": "Approved"
+    },
+    "manufacturingRequirements": {
+      "requiredMachineIds": [
+        "machine-fabrication-machine"
+      ],
+      "processCapabilities": [
+        "tool-forming",
+        "heat-treatment",
+        "dimensional-test"
+      ],
+      "labourHours": null,
+      "testHours": null,
+      "goodUnitYield": null,
+      "approval": "Approved",
+      "notes": "Process capability direction is explicit; labour, test duration, yield and final qualified recipe remain subject to engineering approval."
+    },
+    "wearProfile": {
+      "modelId": "industrial-wear-model-v1",
+      "wearBasis": "equivalent-full-load-hour",
+      "baseWearRatePctPerEquivalentFullLoadHour": 0.015,
+      "intensityExponent": 1.25,
+      "warningConditionPct": 30,
+      "failureConditionPct": 20,
+      "replacementUnitCount": 1,
+      "failureEffect": "loss of dimensional accuracy and forming rate; failure stops the tooling operation",
+      "approval": "Approved",
+      "notes": "Deterministic first-pass parameter for review; per-save condition and accumulated operating hours belong to the consuming game."
     }
   },
   {
@@ -1427,7 +2000,9 @@
         "sourceSections": "§§48-59"
       }
     },
-    "machineIds": [],
+    "machineIds": [
+      "machine-welding-machine"
+    ],
     "image": {
       "key": "assets/art/universe/parts/part-welding-parts.webp",
       "generated": true,
@@ -1474,7 +2049,36 @@
       "materialInputs": "In Review",
       "planningReference.finishedMassKg": "In Review",
       "planningReference.manufacturerCostCC": "In Review",
-      "planningReference.baseManufacturerQuoteCC": "In Review"
+      "planningReference.baseManufacturerQuoteCC": "In Review",
+      "manufacturingRequirements": "Approved",
+      "wearProfile": "Approved"
+    },
+    "manufacturingRequirements": {
+      "requiredMachineIds": [
+        "machine-fabrication-machine"
+      ],
+      "processCapabilities": [
+        "electrode-forming",
+        "insulation-fitting",
+        "weld-test"
+      ],
+      "labourHours": null,
+      "testHours": null,
+      "goodUnitYield": null,
+      "approval": "Approved",
+      "notes": "Process capability direction is explicit; labour, test duration, yield and final qualified recipe remain subject to engineering approval."
+    },
+    "wearProfile": {
+      "modelId": "industrial-wear-model-v1",
+      "wearBasis": "equivalent-full-load-hour",
+      "baseWearRatePctPerEquivalentFullLoadHour": 0.01,
+      "intensityExponent": 1.25,
+      "warningConditionPct": 30,
+      "failureConditionPct": 15,
+      "replacementUnitCount": 1,
+      "failureEffect": "poor joint quality and reduced duty cycle; failure stops welding",
+      "approval": "Approved",
+      "notes": "Deterministic first-pass parameter for review; per-save condition and accumulated operating hours belong to the consuming game."
     }
   },
   {
@@ -1565,7 +2169,36 @@
       "materialInputs": "In Review",
       "planningReference.finishedMassKg": "In Review",
       "planningReference.manufacturerCostCC": "In Review",
-      "planningReference.baseManufacturerQuoteCC": "In Review"
+      "planningReference.baseManufacturerQuoteCC": "In Review",
+      "manufacturingRequirements": "Approved",
+      "wearProfile": "Approved"
+    },
+    "manufacturingRequirements": {
+      "requiredMachineIds": [],
+      "processCapabilities": [
+        "batching",
+        "reinforcement-placement",
+        "casting",
+        "curing",
+        "load-test"
+      ],
+      "labourHours": null,
+      "testHours": null,
+      "goodUnitYield": null,
+      "approval": "Approved",
+      "notes": "Process capability direction is explicit; labour, test duration, yield and final qualified recipe remain subject to engineering approval."
+    },
+    "wearProfile": {
+      "modelId": "industrial-wear-model-v1",
+      "wearBasis": "equivalent-full-load-hour",
+      "baseWearRatePctPerEquivalentFullLoadHour": 0.0002,
+      "intensityExponent": 1.25,
+      "warningConditionPct": 30,
+      "failureConditionPct": 5,
+      "replacementUnitCount": 1,
+      "failureEffect": "loss of structural rating; failed sections require structural replacement",
+      "approval": "Approved",
+      "notes": "Deterministic first-pass parameter for review; per-save condition and accumulated operating hours belong to the consuming game."
     }
   },
   {
@@ -1636,7 +2269,35 @@
       "materialInputs": "In Review",
       "planningReference.finishedMassKg": "Blocked",
       "planningReference.manufacturerCostCC": "Blocked",
-      "planningReference.baseManufacturerQuoteCC": "Blocked"
+      "planningReference.baseManufacturerQuoteCC": "Blocked",
+      "manufacturingRequirements": "Blocked",
+      "wearProfile": "Approved"
+    },
+    "manufacturingRequirements": {
+      "requiredMachineIds": [],
+      "processCapabilities": [
+        "regulated-fuel-fabrication",
+        "cladding",
+        "non-destructive-test",
+        "criticality-assurance"
+      ],
+      "labourHours": null,
+      "testHours": null,
+      "goodUnitYield": null,
+      "approval": "Blocked",
+      "notes": "Process capability direction is explicit; labour, test duration, yield and final qualified recipe remain subject to engineering approval."
+    },
+    "wearProfile": {
+      "modelId": "industrial-wear-model-v1",
+      "wearBasis": "equivalent-full-load-hour",
+      "baseWearRatePctPerEquivalentFullLoadHour": 0.003,
+      "intensityExponent": 1.25,
+      "warningConditionPct": 30,
+      "failureConditionPct": 5,
+      "replacementUnitCount": 1,
+      "failureEffect": "fuel depletion reduces thermal output; exhaustion requires a qualified replacement assembly",
+      "approval": "Approved",
+      "notes": "Deterministic first-pass parameter for review; per-save condition and accumulated operating hours belong to the consuming game."
     }
   }
 ]

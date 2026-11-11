@@ -10,7 +10,7 @@ assert.match(reference.sourceCommit, /^[0-9a-f]{40}$/);
 assert.equal(reference.sourceFiles.length, 10);
 const expected = {
   parts: { original: 14, reconciled: 8, total: 19 },
-  machines: { original: 34, reconciled: 8, total: 42 },
+  machines: { original: 34, reconciled: 8, total: 45 },
   buildings: { original: 24, reconciled: 0, total: 24 }
 };
 const collections = Object.fromEntries(["parts", "machines", "buildings", "columnDefinitions", "approvalStatuses"].map(kind =>
@@ -51,7 +51,7 @@ for (const [kind, totals] of Object.entries(expected)) {
     (["parts", "machines"].includes(kind) ? !Object.hasOwn(row.fields, "catalogueStatus") :
       row.fields.catalogueStatus === "Canonical")));
   assert.ok(rows.every(row => row.fields.name === row.record.name));
-  assert.ok(rows.every(row => ["Not Reviewed", "In Review", "Approved", "Blocked"].includes(row.fields.approval)),
+  assert.ok(rows.every(row => ["Not Reviewed", "Draft", "Proposed", "In Review", "Approved", "Blocked"].includes(row.fields.approval)),
     kind + " should expose consistent shared Approval labels");
   assert.ok(rows.every(row => Array.isArray(row.fields.needsApproval)),
     kind + " should list fields awaiting approval");
@@ -88,4 +88,4 @@ assert.equal(camp.fields["review.quantitativeBOM.site_construction_labour_hours"
 assert.match(camp.fields["review.systematicReview.review_status"], /APPROVED/);
 const quarry = buildings.find(row => row.id === "building-quarry");
 assert.match(quarry.fields["review.quantitativeBOM.approval_status"], /UNAPPROVED/);
-console.log("Industrial review tables validated: 19 canonical Parts, 42 canonical Machines, 24 Buildings; three retired source IDs ignored.");
+console.log("Industrial review tables validated: 19 canonical Parts, 45 canonical Machines, 24 Buildings; three retired source IDs ignored.");

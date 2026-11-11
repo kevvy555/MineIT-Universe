@@ -4,6 +4,7 @@ export const validApprovalStatuses = new Set([
   "Not Reviewed", "Draft", "Proposed", "In Review",
   "Approved", "Blocked", "Rejected", "Superseded"
 ]);
+const valueAt = (record, key) => key.split('.').reduce((value, segment) => value?.[segment], record);
 
 function fieldState(kind, record, key, value) {
   const recorded = record.fieldApprovalStatuses?.[key];
@@ -33,7 +34,8 @@ function fieldState(kind, record, key, value) {
         "partIds", "pendingPartCompatibility",
         "manufacturing.finishedPartInputs",
         "manufacturing.directMaterialInputs",
-        "manufacturing.nestedMachineInputs"
+        "manufacturing.nestedMachineInputs",
+        "capabilityConfigurations"
       ]);
       if (value === undefined || value === null || value === "" ||
           (Array.isArray(value) && !value.length && !validEmpty.has(key)))
@@ -74,7 +76,7 @@ export function approvalSummary(kind, record, fields, catalogue) {
   const states = {};
   for (const definition of definitions) {
     const key = definition.fieldKey;
-    const value = fields[key];
+    const value = fields[key] ?? valueAt(record, key);
     // Only parts require every declared review field. Legacy Machine/Building
     // fields may not apply, and natural resources have no classification field.
     // Housing technology tier is only applicable to residential amenity Machines.

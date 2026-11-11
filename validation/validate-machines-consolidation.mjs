@@ -19,7 +19,7 @@ const ids = {
   parts: new Set(parts.map(p => p.id)),
   materials: new Set(materials.map(m => m.id))
 };
-assert.equal(machines.length, 42);
+assert.equal(machines.length, 45);
 assert.equal(ids.machines.size, machines.length);
 const all = [...machines, ...parts, ...buildings, ...materials];
 const byId = new Map(all.map(x => [x.id, x]));
@@ -28,10 +28,11 @@ const catalogue = {
   get: id => byId.get(id)
 };
 const selected = registry.filter(d => d.table === "machines");
-assert.equal(selected.length, 26);
+assert.equal(selected.length, 30);
 assert.deepEqual(new Set(selected.map(d => d.category)), new Set([
   "Identity & Classification", "Physical Construction", "Operation & Capabilities",
-  "Manufacturing & Pricing", "Discovery & Approval", "Artwork & Visuals"
+  "Manufacturing & Pricing", "Discovery & Approval", "Artwork & Visuals",
+  "Condition & Maintenance"
 ]));
 const required = selected.filter(d => d.requiresApproval).map(d => d.fieldKey);
 const flatten = (obj, prefix = "", out = {}) => {
@@ -46,8 +47,8 @@ const flatten = (obj, prefix = "", out = {}) => {
 let pending = 0, priceProposals = 0, fullyApprovedBoms = 0, blocked = 0;
 for (const machine of machines) {
   assert.equal(machine.entityType, "Machine");
-  assert.equal(machine.image?.generated, true, machine.id + " image retained");
-  assert.equal(machine.image?.status, "generated");
+  assert.equal(typeof machine.image?.generated, "boolean", machine.id + " image state retained");
+  assert.ok(["generated", "not-generated"].includes(machine.image?.status));
   assert.ok(machine.image?.key?.endsWith(machine.id + ".webp"));
   assert.equal(machine.approvedPhysicalBOM, undefined, "No parallel BOM");
   assert.equal(machine.manufacturingDesignStatus, undefined, "No parallel design status");
@@ -163,7 +164,7 @@ assertAcyclicMachineBoms(new Map(machines.map(machine => [
 
 assert.equal(pending, 14, "14 deliberate compatibility reviews must survive");
 assert.equal(fullyApprovedBoms, 5, "Five approved accommodation physical BOMs must survive");
-assert.equal(blocked, 7, "Seven blocked price designs must remain blocked");
+assert.equal(blocked, 10, "Seven prior blocked designs and three specialist engineering designs must remain blocked");
 assert.equal(priceProposals, 35, "29 source and 5 accommodation and 1 motor CC proposals survive");
 for (const row of reference.machines) assert.ok(ids.machines.has(row.id));
 const aliases = new Map(machines.filter(m => m.provenance?.androidDiscoveryWorkingId)
@@ -172,16 +173,17 @@ assert.equal(aliases.size, 8);
 for (const proposed of reference.unmappedCandidates.machines)
   assert.ok(aliases.has(proposed.id), "Unmapped discovery candidate: " + proposed.id);
 const rows = industrialReviewRows("machines", catalogue, reference);
-assert.equal(rows.length, 42);
+assert.equal(rows.length, 45);
 assert.deepEqual(new Set(rows.map(r => r.id)), ids.machines);
 const displayed = new Set(rows.flatMap(r => Object.keys(r.fields)));
 assert.deepEqual(displayed, new Set(selected.map(d => d.fieldKey)),
-  "The Machines grid must expose only its 26 registered columns");
+  "The Machines grid must expose only its 30 registered columns");
 assert.ok(rows.every(r => r.canonical && !("catalogueStatus" in r.fields)));
 assert.ok(rows.every(r => !Object.keys(r.fields).some(k =>
   k.startsWith("review.") || k.startsWith("provenance.") ||
   k.startsWith("fieldApprovalStatuses."))));
-assert.ok(rows.every(r => r.fields["image.generated"] === true));
+assert.equal(rows.filter(r => r.fields["image.generated"] === false).length, 3,
+  "The three new specialist Machine identities must visibly remain in the art queue");
 const individual = pendingColumnSelection(rows, [...displayed], "machine-ship-reactor");
 assert.ok(individual.includes("manufacturing.manufacturerCostCC"));
 assert.ok(individual.includes("pendingPartCompatibility"));
@@ -196,4 +198,4 @@ const broken = { ...machines.find(m => m.amenityProfile),
 assert.throws(() => approvalSummary("machines", broken, flatten(broken), catalogue),
   /disagrees|cannot approve|requires approved price evidence/,
   "Provisional quote must never be treated as approved");
-console.log("Machines consolidated: 42 canonical, 26 review fields, 5 approved physical BOMs, 35 provisional CC scenarios, 7 blocked designs, 14 pending compatibility edges.");
+console.log("Machines consolidated: 45 canonical, 30 review fields, 5 approved physical BOMs, 35 provisional CC scenarios, 10 blocked designs, 14 pending compatibility edges.");

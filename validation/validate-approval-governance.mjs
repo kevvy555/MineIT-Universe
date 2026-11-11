@@ -64,11 +64,11 @@ const partRequired = partDefinitions.filter(d => d.requiresApproval).map(d => d.
 assert.deepEqual(new Set(partRequired), new Set([
   "partRole", "finishedUnitCount", "finishedUnitDescription", "materialInputs",
   "planningReference.finishedMassKg", "planningReference.manufacturerCostCC",
-  "planningReference.baseManufacturerQuoteCC"
+  "planningReference.baseManufacturerQuoteCC", "manufacturingRequirements", "wearProfile"
 ]));
 assert.ok(!partDefinitions.some(d => d.fieldKey === "materialApprovalStatus"),
   "Old Part-specific approval column must be retired from the shared registry");
-assert.equal(partDefinitions.length, 20,
+assert.equal(partDefinitions.length, 22,
   "The Parts review table only exposes necessary designer-facing columns");
 const excluded = [
   "massReview", "partImage", "unresolvedMaterialInputs",
@@ -131,8 +131,8 @@ assert.throws(() => approvalSummary("parts", incomplete, battery.fields, catalog
   /missing or invalid explicit approval/,
   "A missing field decision must fail rather than silently inheriting old approval");
 const machineDefinitions = definitions.filter(d => d.table === "machines");
-assert.equal(machineDefinitions.length, 26,
-  "Machine review has exactly six compact groups and 26 selectable columns");
+assert.equal(machineDefinitions.length, 30,
+  "Machine review has 30 selectable columns including service Parts, functions, configurations and condition");
 assert.deepEqual(machineDefinitions.filter(d => d.fieldKey.startsWith("image."))
   .map(d => d.fieldKey), ["image.generated"]);
 assert.ok(!machineDefinitions.some(d => d.fieldKey.startsWith("review.") ||
@@ -142,11 +142,11 @@ assert.ok(!machineDefinitions.some(d => d.fieldKey.startsWith("review.") ||
 const machineRequired = machineDefinitions.filter(d => d.requiresApproval)
   .map(d => d.fieldKey);
 const machineRows = industrialReviewRows("machines", catalogue, industrialReference);
-assert.equal(machineRows.length, 42);
+assert.equal(machineRows.length, 45);
 assert.equal(machineRows.filter(r => r.fields.approval === "Approved").length, 0,
   "Approved amenity recipe is not blanket Machine approval");
-assert.equal(machineRows.filter(r => r.fields.approval === "Blocked").length, 7,
-  "All seven documented blocked machine cost scenarios remain visible");
+assert.equal(machineRows.filter(r => r.fields.approval === "Blocked").length, 10,
+  "All seven prior blocked scenarios and three specialist engineering blocks remain visible");
 for (const machine of collections.machines) {
   assert.deepEqual(new Set(Object.keys(machine.fieldApprovalStatuses || {})),
     new Set(machineRequired), machine.id + " must track every mandatory approval field");

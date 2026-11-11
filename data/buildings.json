@@ -48,7 +48,85 @@
         5
       ],
       "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
-    }
+    },
+    "equipmentConfigurations": [
+      {
+        "id": "manual-camp",
+        "name": "Manual unpowered camp",
+        "selection": "standard",
+        "applicableLevels": [
+          1
+        ],
+        "equipment": [
+          {
+            "machineId": "machine-thermoelectric-trickler",
+            "role": "optional",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 0,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-climate-control-machine",
+            "role": "conditional",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 0,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          }
+        ],
+        "approval": "Approved"
+      }
+    ],
+    "levelProfiles": [
+      {
+        "level": 1,
+        "applicableEquipmentConfigurationIds": [
+          "manual-camp"
+        ],
+        "powerUnits": 0,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": "site-specific-native-food",
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      }
+    ],
+    "directPartRequirements": [],
+    "operatingRequirements": {
+      "power": "not-required",
+      "workforce": "required-when-operating",
+      "productionInputs": [],
+      "approval": "Approved",
+      "notes": "Exact quantities, production rates and staffing remain platform balance unless explicitly approved in levelProfiles."
+    },
+    "wearModel": {
+      "modelId": "industrial-wear-model-v1",
+      "operationalConditionSource": "installed-operational-machines",
+      "failedEquipmentExcludedFromCapability": true,
+      "independentBuildingEquipmentWearSystem": false,
+      "shellWearRate": null,
+      "approval": "Approved",
+      "notes": "Building output is derated by installed Machine condition. Mutable Machine/Part instances and condition remain save-owned."
+    },
+    "fieldApprovalStatuses": {
+      "equipmentConfigurations": "Approved",
+      "levelProfiles": "Approved",
+      "directPartRequirements": "Approved",
+      "operatingRequirements": "Approved",
+      "wearModel": "Approved"
+    },
+    "approval": "Approved"
   },
   {
     "id": "building-quarry",
@@ -105,7 +183,177 @@
         5
       ],
       "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
-    }
+    },
+    "equipmentConfigurations": [
+      {
+        "id": "quarry-excavation",
+        "name": "Quarry excavation",
+        "selection": "standard",
+        "applicableLevels": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "equipment": [
+          {
+            "machineId": "machine-drill-machine",
+            "role": "required",
+            "capabilityConfigurationId": "quarry-bench-drilling",
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-conveyor-machine",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          }
+        ],
+        "approval": "Approved"
+      }
+    ],
+    "levelProfiles": [
+      {
+        "level": 1,
+        "applicableEquipmentConfigurationIds": [
+          "quarry-excavation"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 2,
+        "applicableEquipmentConfigurationIds": [
+          "quarry-excavation"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 3,
+        "applicableEquipmentConfigurationIds": [
+          "quarry-excavation"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 4,
+        "applicableEquipmentConfigurationIds": [
+          "quarry-excavation"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 5,
+        "applicableEquipmentConfigurationIds": [
+          "quarry-excavation"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      }
+    ],
+    "directPartRequirements": [],
+    "operatingRequirements": {
+      "power": "required-when-operating",
+      "workforce": "required-when-operating",
+      "productionInputs": [],
+      "approval": "Approved",
+      "notes": "Exact quantities, production rates and staffing remain platform balance unless explicitly approved in levelProfiles."
+    },
+    "wearModel": {
+      "modelId": "industrial-wear-model-v1",
+      "operationalConditionSource": "installed-operational-machines",
+      "failedEquipmentExcludedFromCapability": true,
+      "independentBuildingEquipmentWearSystem": false,
+      "shellWearRate": null,
+      "approval": "Approved",
+      "notes": "Building output is derated by installed Machine condition. Mutable Machine/Part instances and condition remain save-owned."
+    },
+    "fieldApprovalStatuses": {
+      "equipmentConfigurations": "Approved",
+      "levelProfiles": "Approved",
+      "directPartRequirements": "Approved",
+      "operatingRequirements": "Approved",
+      "wearModel": "Approved"
+    },
+    "approval": "Approved"
   },
   {
     "id": "building-simple-pit-mine",
@@ -130,8 +378,12 @@
       "substance-refined-insulator"
     ],
     "machineIds": [
-      "machine-drill-machine",
-      "machine-conveyor-machine"
+      "machine-underground-mining-system",
+      "machine-conveyor-machine",
+      "machine-mine-ventilation",
+      "machine-pump-machine",
+      "machine-substance-analyser",
+      "machine-filtration-machine"
     ],
     "description": "A conventional frontier mine for accessible mineral and ore deposits, using powered drilling and material handling as the operation develops.",
     "canonStatus": "source-canonical",
@@ -164,7 +416,551 @@
         5
       ],
       "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
-    }
+    },
+    "equipmentConfigurations": [
+      {
+        "id": "standard-shaft",
+        "name": "Standard shaft mine",
+        "selection": "standard",
+        "applicableLevels": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "equipment": [
+          {
+            "machineId": "machine-underground-mining-system",
+            "role": "required",
+            "capabilityConfigurationId": "standard-shaft",
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-conveyor-machine",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-mine-ventilation",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-pump-machine",
+            "role": "conditional",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 0,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 0,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 0,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 0,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 0,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          }
+        ],
+        "approval": "Approved"
+      },
+      {
+        "id": "precision-extraction",
+        "name": "Precision-controlled mine",
+        "selection": "alternative",
+        "applicableLevels": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "equipment": [
+          {
+            "machineId": "machine-underground-mining-system",
+            "role": "required",
+            "capabilityConfigurationId": "standard-shaft",
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-substance-analyser",
+            "role": "required",
+            "capabilityConfigurationId": "precision-extraction-control",
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": [
+              "machine-underground-mining-system"
+            ]
+          },
+          {
+            "machineId": "machine-conveyor-machine",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-mine-ventilation",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          }
+        ],
+        "approval": "Approved"
+      },
+      {
+        "id": "exotic-separation",
+        "name": "Mine with exotic separation",
+        "selection": "alternative",
+        "applicableLevels": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "equipment": [
+          {
+            "machineId": "machine-underground-mining-system",
+            "role": "required",
+            "capabilityConfigurationId": "standard-shaft",
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-filtration-machine",
+            "role": "required",
+            "capabilityConfigurationId": "exotic-separation",
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": [
+              "machine-underground-mining-system"
+            ]
+          },
+          {
+            "machineId": "machine-conveyor-machine",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-mine-ventilation",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          }
+        ],
+        "approval": "Approved"
+      }
+    ],
+    "levelProfiles": [
+      {
+        "level": 1,
+        "applicableEquipmentConfigurationIds": [
+          "standard-shaft",
+          "precision-extraction",
+          "exotic-separation"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 2,
+        "applicableEquipmentConfigurationIds": [
+          "standard-shaft",
+          "precision-extraction",
+          "exotic-separation"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 3,
+        "applicableEquipmentConfigurationIds": [
+          "standard-shaft",
+          "precision-extraction",
+          "exotic-separation"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 4,
+        "applicableEquipmentConfigurationIds": [
+          "standard-shaft",
+          "precision-extraction",
+          "exotic-separation"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 5,
+        "applicableEquipmentConfigurationIds": [
+          "standard-shaft",
+          "precision-extraction",
+          "exotic-separation"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      }
+    ],
+    "directPartRequirements": [],
+    "operatingRequirements": {
+      "power": "required-when-operating",
+      "workforce": "required-when-operating",
+      "productionInputs": [],
+      "approval": "Approved",
+      "notes": "Exact quantities, production rates and staffing remain platform balance unless explicitly approved in levelProfiles."
+    },
+    "wearModel": {
+      "modelId": "industrial-wear-model-v1",
+      "operationalConditionSource": "installed-operational-machines",
+      "failedEquipmentExcludedFromCapability": true,
+      "independentBuildingEquipmentWearSystem": false,
+      "shellWearRate": null,
+      "approval": "Approved",
+      "notes": "Building output is derated by installed Machine condition. Mutable Machine/Part instances and condition remain save-owned."
+    },
+    "fieldApprovalStatuses": {
+      "equipmentConfigurations": "Approved",
+      "levelProfiles": "Approved",
+      "directPartRequirements": "Approved",
+      "operatingRequirements": "Approved",
+      "wearModel": "Approved"
+    },
+    "approval": "Approved"
   },
   {
     "id": "building-deep-mine",
@@ -189,9 +985,12 @@
       "substance-refined-insulator"
     ],
     "machineIds": [
-      "machine-drill-machine",
+      "machine-underground-mining-system",
       "machine-conveyor-machine",
-      "machine-mine-ventilation"
+      "machine-mine-ventilation",
+      "machine-pump-machine",
+      "machine-substance-analyser",
+      "machine-filtration-machine"
     ],
     "description": "A reinforced underground extraction complex for deep, difficult or high-value deposits requiring extensive drilling, haulage and ventilation systems.",
     "canonStatus": "source-canonical",
@@ -222,7 +1021,703 @@
         5
       ],
       "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
-    }
+    },
+    "equipmentConfigurations": [
+      {
+        "id": "deep-hard-rock",
+        "name": "Deep hard-rock mine",
+        "selection": "standard",
+        "applicableLevels": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "equipment": [
+          {
+            "machineId": "machine-underground-mining-system",
+            "role": "required",
+            "capabilityConfigurationId": "deep-hard-rock",
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-conveyor-machine",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-mine-ventilation",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-pump-machine",
+            "role": "conditional",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 0,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 0,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 0,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 0,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 0,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          }
+        ],
+        "approval": "Approved"
+      },
+      {
+        "id": "deep-core",
+        "name": "Deep-core mine",
+        "selection": "alternative",
+        "applicableLevels": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "equipment": [
+          {
+            "machineId": "machine-underground-mining-system",
+            "role": "required",
+            "capabilityConfigurationId": "deep-core",
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-conveyor-machine",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-mine-ventilation",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-pump-machine",
+            "role": "conditional",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 0,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 0,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 0,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 0,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 0,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          }
+        ],
+        "approval": "Approved"
+      },
+      {
+        "id": "precision-extraction",
+        "name": "Precision-controlled deep mine",
+        "selection": "alternative",
+        "applicableLevels": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "equipment": [
+          {
+            "machineId": "machine-underground-mining-system",
+            "role": "required",
+            "capabilityConfigurationId": "deep-core",
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-substance-analyser",
+            "role": "required",
+            "capabilityConfigurationId": "precision-extraction-control",
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": [
+              "machine-underground-mining-system"
+            ]
+          },
+          {
+            "machineId": "machine-conveyor-machine",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-mine-ventilation",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          }
+        ],
+        "approval": "Approved"
+      },
+      {
+        "id": "exotic-separation",
+        "name": "Deep mine with exotic separation",
+        "selection": "alternative",
+        "applicableLevels": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "equipment": [
+          {
+            "machineId": "machine-underground-mining-system",
+            "role": "required",
+            "capabilityConfigurationId": "deep-core",
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-filtration-machine",
+            "role": "required",
+            "capabilityConfigurationId": "exotic-separation",
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": [
+              "machine-underground-mining-system"
+            ]
+          },
+          {
+            "machineId": "machine-conveyor-machine",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-mine-ventilation",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          }
+        ],
+        "approval": "Approved"
+      }
+    ],
+    "levelProfiles": [
+      {
+        "level": 1,
+        "applicableEquipmentConfigurationIds": [
+          "deep-hard-rock",
+          "deep-core",
+          "precision-extraction",
+          "exotic-separation"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 2,
+        "applicableEquipmentConfigurationIds": [
+          "deep-hard-rock",
+          "deep-core",
+          "precision-extraction",
+          "exotic-separation"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 3,
+        "applicableEquipmentConfigurationIds": [
+          "deep-hard-rock",
+          "deep-core",
+          "precision-extraction",
+          "exotic-separation"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 4,
+        "applicableEquipmentConfigurationIds": [
+          "deep-hard-rock",
+          "deep-core",
+          "precision-extraction",
+          "exotic-separation"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 5,
+        "applicableEquipmentConfigurationIds": [
+          "deep-hard-rock",
+          "deep-core",
+          "precision-extraction",
+          "exotic-separation"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      }
+    ],
+    "directPartRequirements": [],
+    "operatingRequirements": {
+      "power": "required-when-operating",
+      "workforce": "required-when-operating",
+      "productionInputs": [],
+      "approval": "Approved",
+      "notes": "Exact quantities, production rates and staffing remain platform balance unless explicitly approved in levelProfiles."
+    },
+    "wearModel": {
+      "modelId": "industrial-wear-model-v1",
+      "operationalConditionSource": "installed-operational-machines",
+      "failedEquipmentExcludedFromCapability": true,
+      "independentBuildingEquipmentWearSystem": false,
+      "shellWearRate": null,
+      "approval": "Approved",
+      "notes": "Building output is derated by installed Machine condition. Mutable Machine/Part instances and condition remain save-owned."
+    },
+    "fieldApprovalStatuses": {
+      "equipmentConfigurations": "Approved",
+      "levelProfiles": "Approved",
+      "directPartRequirements": "Approved",
+      "operatingRequirements": "Approved",
+      "wearModel": "Approved"
+    },
+    "approval": "Approved"
   },
   {
     "id": "building-extraction-rig",
@@ -247,8 +1742,10 @@
       "substance-refined-insulator"
     ],
     "machineIds": [
-      "machine-drill-machine",
-      "machine-pump-machine"
+      "machine-well-drilling-system",
+      "machine-pump-machine",
+      "machine-filtration-machine",
+      "machine-quantum-bore-system"
     ],
     "description": "A drilling and pumping installation used to recover liquid, gaseous and brine-bearing resources from subsurface reservoirs.",
     "canonStatus": "source-canonical",
@@ -279,7 +1776,382 @@
         5
       ],
       "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
-    }
+    },
+    "equipmentConfigurations": [
+      {
+        "id": "rotary-well",
+        "name": "Rotary well rig",
+        "selection": "standard",
+        "applicableLevels": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "equipment": [
+          {
+            "machineId": "machine-well-drilling-system",
+            "role": "required",
+            "capabilityConfigurationId": "rotary-well-control",
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-pump-machine",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          }
+        ],
+        "approval": "Approved"
+      },
+      {
+        "id": "high-pressure-well",
+        "name": "High-pressure and brine rig",
+        "selection": "alternative",
+        "applicableLevels": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "equipment": [
+          {
+            "machineId": "machine-well-drilling-system",
+            "role": "required",
+            "capabilityConfigurationId": "high-pressure-drilling",
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-pump-machine",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-filtration-machine",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          }
+        ],
+        "approval": "Approved"
+      },
+      {
+        "id": "quantum-bore",
+        "name": "Quantum bore rig",
+        "selection": "alternative",
+        "applicableLevels": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "equipment": [
+          {
+            "machineId": "machine-quantum-bore-system",
+            "role": "required",
+            "capabilityConfigurationId": "quantum-boring",
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-pump-machine",
+            "role": "conditional",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 0,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 0,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 0,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 0,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 0,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          }
+        ],
+        "approval": "Approved"
+      }
+    ],
+    "levelProfiles": [
+      {
+        "level": 1,
+        "applicableEquipmentConfigurationIds": [
+          "rotary-well",
+          "high-pressure-well",
+          "quantum-bore"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 2,
+        "applicableEquipmentConfigurationIds": [
+          "rotary-well",
+          "high-pressure-well",
+          "quantum-bore"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 3,
+        "applicableEquipmentConfigurationIds": [
+          "rotary-well",
+          "high-pressure-well",
+          "quantum-bore"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 4,
+        "applicableEquipmentConfigurationIds": [
+          "rotary-well",
+          "high-pressure-well",
+          "quantum-bore"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 5,
+        "applicableEquipmentConfigurationIds": [
+          "rotary-well",
+          "high-pressure-well",
+          "quantum-bore"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      }
+    ],
+    "directPartRequirements": [],
+    "operatingRequirements": {
+      "power": "required-when-operating",
+      "workforce": "required-when-operating",
+      "productionInputs": [],
+      "approval": "Approved",
+      "notes": "Exact quantities, production rates and staffing remain platform balance unless explicitly approved in levelProfiles."
+    },
+    "wearModel": {
+      "modelId": "industrial-wear-model-v1",
+      "operationalConditionSource": "installed-operational-machines",
+      "failedEquipmentExcludedFromCapability": true,
+      "independentBuildingEquipmentWearSystem": false,
+      "shellWearRate": null,
+      "approval": "Approved",
+      "notes": "Building output is derated by installed Machine condition. Mutable Machine/Part instances and condition remain save-owned."
+    },
+    "fieldApprovalStatuses": {
+      "equipmentConfigurations": "Approved",
+      "levelProfiles": "Approved",
+      "directPartRequirements": "Approved",
+      "operatingRequirements": "Approved",
+      "wearModel": "Approved"
+    },
+    "approval": "Approved"
   },
   {
     "id": "building-water-collector",
@@ -332,7 +2204,177 @@
         5
       ],
       "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
-    }
+    },
+    "equipmentConfigurations": [
+      {
+        "id": "water-collection",
+        "name": "Water collection and treatment",
+        "selection": "standard",
+        "applicableLevels": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "equipment": [
+          {
+            "machineId": "machine-pump-machine",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-filtration-machine",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          }
+        ],
+        "approval": "Approved"
+      }
+    ],
+    "levelProfiles": [
+      {
+        "level": 1,
+        "applicableEquipmentConfigurationIds": [
+          "water-collection"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 2,
+        "applicableEquipmentConfigurationIds": [
+          "water-collection"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 3,
+        "applicableEquipmentConfigurationIds": [
+          "water-collection"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 4,
+        "applicableEquipmentConfigurationIds": [
+          "water-collection"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 5,
+        "applicableEquipmentConfigurationIds": [
+          "water-collection"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      }
+    ],
+    "directPartRequirements": [],
+    "operatingRequirements": {
+      "power": "required-when-operating",
+      "workforce": "required-when-operating",
+      "productionInputs": [],
+      "approval": "Approved",
+      "notes": "Exact quantities, production rates and staffing remain platform balance unless explicitly approved in levelProfiles."
+    },
+    "wearModel": {
+      "modelId": "industrial-wear-model-v1",
+      "operationalConditionSource": "installed-operational-machines",
+      "failedEquipmentExcludedFromCapability": true,
+      "independentBuildingEquipmentWearSystem": false,
+      "shellWearRate": null,
+      "approval": "Approved",
+      "notes": "Building output is derated by installed Machine condition. Mutable Machine/Part instances and condition remain save-owned."
+    },
+    "fieldApprovalStatuses": {
+      "equipmentConfigurations": "Approved",
+      "levelProfiles": "Approved",
+      "directPartRequirements": "Approved",
+      "operatingRequirements": "Approved",
+      "wearModel": "Approved"
+    },
+    "approval": "Approved"
   },
   {
     "id": "building-crashed-ship",
@@ -387,7 +2429,150 @@
         5
       ],
       "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
-    }
+    },
+    "equipmentConfigurations": [
+      {
+        "id": "surviving-ship-systems",
+        "name": "Surviving ship systems",
+        "selection": "existing-asset",
+        "applicableLevels": [
+          1
+        ],
+        "equipment": [
+          {
+            "machineId": "machine-ship-reactor",
+            "role": "installed-at-origin",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-ship-life-support",
+            "role": "installed-at-origin",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-ship-computer",
+            "role": "installed-at-origin",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-ship-refinery-unit",
+            "role": "installed-at-origin",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-ship-scanner",
+            "role": "installed-at-origin",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-substance-analyser",
+            "role": "installed-at-origin",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-exploration-vehicle",
+            "role": "installed-at-origin",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          }
+        ],
+        "approval": "Approved"
+      }
+    ],
+    "levelProfiles": [
+      {
+        "level": 1,
+        "applicableEquipmentConfigurationIds": [
+          "surviving-ship-systems"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      }
+    ],
+    "directPartRequirements": [],
+    "operatingRequirements": {
+      "power": "required-when-operating",
+      "workforce": "required-when-operating",
+      "productionInputs": [],
+      "approval": "Approved",
+      "notes": "Exact quantities, production rates and staffing remain platform balance unless explicitly approved in levelProfiles."
+    },
+    "wearModel": {
+      "modelId": "industrial-wear-model-v1",
+      "operationalConditionSource": "installed-operational-machines",
+      "failedEquipmentExcludedFromCapability": true,
+      "independentBuildingEquipmentWearSystem": false,
+      "shellWearRate": null,
+      "approval": "Approved",
+      "notes": "Building output is derated by installed Machine condition. Mutable Machine/Part instances and condition remain save-owned."
+    },
+    "fieldApprovalStatuses": {
+      "equipmentConfigurations": "Approved",
+      "levelProfiles": "Approved",
+      "directPartRequirements": "Approved",
+      "operatingRequirements": "Approved",
+      "wearModel": "Approved"
+    },
+    "approval": "Approved"
   },
   {
     "id": "building-farm",
@@ -446,7 +2631,177 @@
         5
       ],
       "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
-    }
+    },
+    "equipmentConfigurations": [
+      {
+        "id": "managed-farm",
+        "name": "Managed field agriculture",
+        "selection": "standard",
+        "applicableLevels": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "equipment": [
+          {
+            "machineId": "machine-irrigation-system",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-growth-management-system",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          }
+        ],
+        "approval": "Approved"
+      }
+    ],
+    "levelProfiles": [
+      {
+        "level": 1,
+        "applicableEquipmentConfigurationIds": [
+          "managed-farm"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 2,
+        "applicableEquipmentConfigurationIds": [
+          "managed-farm"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 3,
+        "applicableEquipmentConfigurationIds": [
+          "managed-farm"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 4,
+        "applicableEquipmentConfigurationIds": [
+          "managed-farm"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 5,
+        "applicableEquipmentConfigurationIds": [
+          "managed-farm"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      }
+    ],
+    "directPartRequirements": [],
+    "operatingRequirements": {
+      "power": "required-when-operating",
+      "workforce": "required-when-operating",
+      "productionInputs": [],
+      "approval": "Approved",
+      "notes": "Exact quantities, production rates and staffing remain platform balance unless explicitly approved in levelProfiles."
+    },
+    "wearModel": {
+      "modelId": "industrial-wear-model-v1",
+      "operationalConditionSource": "installed-operational-machines",
+      "failedEquipmentExcludedFromCapability": true,
+      "independentBuildingEquipmentWearSystem": false,
+      "shellWearRate": null,
+      "approval": "Approved",
+      "notes": "Building output is derated by installed Machine condition. Mutable Machine/Part instances and condition remain save-owned."
+    },
+    "fieldApprovalStatuses": {
+      "equipmentConfigurations": "Approved",
+      "levelProfiles": "Approved",
+      "directPartRequirements": "Approved",
+      "operatingRequirements": "Approved",
+      "wearModel": "Approved"
+    },
+    "approval": "Approved"
   },
   {
     "id": "building-ranch",
@@ -502,7 +2857,177 @@
         5
       ],
       "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
-    }
+    },
+    "equipmentConfigurations": [
+      {
+        "id": "managed-ranch",
+        "name": "Managed livestock operation",
+        "selection": "standard",
+        "applicableLevels": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "equipment": [
+          {
+            "machineId": "machine-irrigation-system",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-livestock-handling-system",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          }
+        ],
+        "approval": "Approved"
+      }
+    ],
+    "levelProfiles": [
+      {
+        "level": 1,
+        "applicableEquipmentConfigurationIds": [
+          "managed-ranch"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 2,
+        "applicableEquipmentConfigurationIds": [
+          "managed-ranch"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 3,
+        "applicableEquipmentConfigurationIds": [
+          "managed-ranch"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 4,
+        "applicableEquipmentConfigurationIds": [
+          "managed-ranch"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 5,
+        "applicableEquipmentConfigurationIds": [
+          "managed-ranch"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      }
+    ],
+    "directPartRequirements": [],
+    "operatingRequirements": {
+      "power": "required-when-operating",
+      "workforce": "required-when-operating",
+      "productionInputs": [],
+      "approval": "Approved",
+      "notes": "Exact quantities, production rates and staffing remain platform balance unless explicitly approved in levelProfiles."
+    },
+    "wearModel": {
+      "modelId": "industrial-wear-model-v1",
+      "operationalConditionSource": "installed-operational-machines",
+      "failedEquipmentExcludedFromCapability": true,
+      "independentBuildingEquipmentWearSystem": false,
+      "shellWearRate": null,
+      "approval": "Approved",
+      "notes": "Building output is derated by installed Machine condition. Mutable Machine/Part instances and condition remain save-owned."
+    },
+    "fieldApprovalStatuses": {
+      "equipmentConfigurations": "Approved",
+      "levelProfiles": "Approved",
+      "directPartRequirements": "Approved",
+      "operatingRequirements": "Approved",
+      "wearModel": "Approved"
+    },
+    "approval": "Approved"
   },
   {
     "id": "building-bio-harvester",
@@ -558,7 +3083,177 @@
         5
       ],
       "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
-    }
+    },
+    "equipmentConfigurations": [
+      {
+        "id": "bio-harvest",
+        "name": "Biological harvest",
+        "selection": "standard",
+        "applicableLevels": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "equipment": [
+          {
+            "machineId": "machine-growth-management-system",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-pump-machine",
+            "role": "conditional",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 0,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 0,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 0,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 0,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 0,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          }
+        ],
+        "approval": "Approved"
+      }
+    ],
+    "levelProfiles": [
+      {
+        "level": 1,
+        "applicableEquipmentConfigurationIds": [
+          "bio-harvest"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 2,
+        "applicableEquipmentConfigurationIds": [
+          "bio-harvest"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 3,
+        "applicableEquipmentConfigurationIds": [
+          "bio-harvest"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 4,
+        "applicableEquipmentConfigurationIds": [
+          "bio-harvest"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 5,
+        "applicableEquipmentConfigurationIds": [
+          "bio-harvest"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      }
+    ],
+    "directPartRequirements": [],
+    "operatingRequirements": {
+      "power": "required-when-operating",
+      "workforce": "required-when-operating",
+      "productionInputs": [],
+      "approval": "Approved",
+      "notes": "Exact quantities, production rates and staffing remain platform balance unless explicitly approved in levelProfiles."
+    },
+    "wearModel": {
+      "modelId": "industrial-wear-model-v1",
+      "operationalConditionSource": "installed-operational-machines",
+      "failedEquipmentExcludedFromCapability": true,
+      "independentBuildingEquipmentWearSystem": false,
+      "shellWearRate": null,
+      "approval": "Approved",
+      "notes": "Building output is derated by installed Machine condition. Mutable Machine/Part instances and condition remain save-owned."
+    },
+    "fieldApprovalStatuses": {
+      "equipmentConfigurations": "Approved",
+      "levelProfiles": "Approved",
+      "directPartRequirements": "Approved",
+      "operatingRequirements": "Approved",
+      "wearModel": "Approved"
+    },
+    "approval": "Approved"
   },
   {
     "id": "building-algae-facility",
@@ -614,7 +3309,177 @@
         5
       ],
       "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
-    }
+    },
+    "equipmentConfigurations": [
+      {
+        "id": "algae-production",
+        "name": "Algae production",
+        "selection": "standard",
+        "applicableLevels": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "equipment": [
+          {
+            "machineId": "machine-growth-management-system",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-pump-machine",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          }
+        ],
+        "approval": "Approved"
+      }
+    ],
+    "levelProfiles": [
+      {
+        "level": 1,
+        "applicableEquipmentConfigurationIds": [
+          "algae-production"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 2,
+        "applicableEquipmentConfigurationIds": [
+          "algae-production"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 3,
+        "applicableEquipmentConfigurationIds": [
+          "algae-production"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 4,
+        "applicableEquipmentConfigurationIds": [
+          "algae-production"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 5,
+        "applicableEquipmentConfigurationIds": [
+          "algae-production"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      }
+    ],
+    "directPartRequirements": [],
+    "operatingRequirements": {
+      "power": "required-when-operating",
+      "workforce": "required-when-operating",
+      "productionInputs": [],
+      "approval": "Approved",
+      "notes": "Exact quantities, production rates and staffing remain platform balance unless explicitly approved in levelProfiles."
+    },
+    "wearModel": {
+      "modelId": "industrial-wear-model-v1",
+      "operationalConditionSource": "installed-operational-machines",
+      "failedEquipmentExcludedFromCapability": true,
+      "independentBuildingEquipmentWearSystem": false,
+      "shellWearRate": null,
+      "approval": "Approved",
+      "notes": "Building output is derated by installed Machine condition. Mutable Machine/Part instances and condition remain save-owned."
+    },
+    "fieldApprovalStatuses": {
+      "equipmentConfigurations": "Approved",
+      "levelProfiles": "Approved",
+      "directPartRequirements": "Approved",
+      "operatingRequirements": "Approved",
+      "wearModel": "Approved"
+    },
+    "approval": "Approved"
   },
   {
     "id": "building-accommodation-building",
@@ -636,7 +3501,13 @@
     ],
     "fitOutSubstanceIds": [],
     "machineIds": [
-      "machine-climate-control-machine"
+      "machine-climate-control-machine",
+      "machine-life-support-machine",
+      "machine-personal-recreation-terminal",
+      "machine-communal-fitness-leisure-system",
+      "machine-advanced-entertainment-system",
+      "machine-immersive-recreation-suite",
+      "machine-integrated-wellness-leisure-system"
     ],
     "description": "A straightforward frontier accommodation block providing enclosed residential space for a growing settlement.",
     "canonStatus": "source-canonical",
@@ -664,7 +3535,163 @@
         5
       ],
       "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
-    }
+    },
+    "equipmentConfigurations": [
+      {
+        "id": "temperate-accommodation",
+        "name": "Temperate accommodation",
+        "selection": "standard",
+        "applicableLevels": [
+          1
+        ],
+        "equipment": [
+          {
+            "machineId": "machine-climate-control-machine",
+            "role": "conditional",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 0,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-life-support-machine",
+            "role": "conditional",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 0,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-personal-recreation-terminal",
+            "role": "optional",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 0,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-communal-fitness-leisure-system",
+            "role": "optional",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 0,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-advanced-entertainment-system",
+            "role": "optional",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 0,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-immersive-recreation-suite",
+            "role": "optional",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 0,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-integrated-wellness-leisure-system",
+            "role": "optional",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 0,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          }
+        ],
+        "approval": "Approved"
+      }
+    ],
+    "levelProfiles": [
+      {
+        "level": 1,
+        "applicableEquipmentConfigurationIds": [
+          "temperate-accommodation"
+        ],
+        "powerUnits": 0,
+        "workforce": null,
+        "capacity": 20,
+        "capacityUnit": "certified-basic-beds",
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      }
+    ],
+    "directPartRequirements": [
+      {
+        "partId": "part-fluid-handling-parts",
+        "quantity": 1,
+        "role": "fixed-fit-out",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-power-electronics",
+        "quantity": 1,
+        "role": "fixed-fit-out",
+        "approval": "Approved"
+      }
+    ],
+    "operatingRequirements": {
+      "power": "required-when-operating",
+      "workforce": "not-inherently-required",
+      "productionInputs": [],
+      "approval": "Approved",
+      "notes": "Exact quantities, production rates and staffing remain platform balance unless explicitly approved in levelProfiles."
+    },
+    "wearModel": {
+      "modelId": "industrial-wear-model-v1",
+      "operationalConditionSource": "installed-operational-machines",
+      "failedEquipmentExcludedFromCapability": true,
+      "independentBuildingEquipmentWearSystem": false,
+      "shellWearRate": null,
+      "approval": "Approved",
+      "notes": "Building output is derated by installed Machine condition. Mutable Machine/Part instances and condition remain save-owned."
+    },
+    "fieldApprovalStatuses": {
+      "equipmentConfigurations": "Approved",
+      "levelProfiles": "Approved",
+      "directPartRequirements": "Approved",
+      "operatingRequirements": "Approved",
+      "wearModel": "Approved"
+    },
+    "approval": "Approved"
   },
   {
     "id": "building-habitat",
@@ -723,7 +3750,177 @@
         5
       ],
       "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
-    }
+    },
+    "equipmentConfigurations": [
+      {
+        "id": "sealed-habitat",
+        "name": "Sealed habitat",
+        "selection": "standard",
+        "applicableLevels": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "equipment": [
+          {
+            "machineId": "machine-life-support-machine",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-climate-control-machine",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          }
+        ],
+        "approval": "Approved"
+      }
+    ],
+    "levelProfiles": [
+      {
+        "level": 1,
+        "applicableEquipmentConfigurationIds": [
+          "sealed-habitat"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 2,
+        "applicableEquipmentConfigurationIds": [
+          "sealed-habitat"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 3,
+        "applicableEquipmentConfigurationIds": [
+          "sealed-habitat"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 4,
+        "applicableEquipmentConfigurationIds": [
+          "sealed-habitat"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 5,
+        "applicableEquipmentConfigurationIds": [
+          "sealed-habitat"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      }
+    ],
+    "directPartRequirements": [],
+    "operatingRequirements": {
+      "power": "required-when-operating",
+      "workforce": "not-inherently-required",
+      "productionInputs": [],
+      "approval": "Approved",
+      "notes": "Exact quantities, production rates and staffing remain platform balance unless explicitly approved in levelProfiles."
+    },
+    "wearModel": {
+      "modelId": "industrial-wear-model-v1",
+      "operationalConditionSource": "installed-operational-machines",
+      "failedEquipmentExcludedFromCapability": true,
+      "independentBuildingEquipmentWearSystem": false,
+      "shellWearRate": null,
+      "approval": "Approved",
+      "notes": "Building output is derated by installed Machine condition. Mutable Machine/Part instances and condition remain save-owned."
+    },
+    "fieldApprovalStatuses": {
+      "equipmentConfigurations": "Approved",
+      "levelProfiles": "Approved",
+      "directPartRequirements": "Approved",
+      "operatingRequirements": "Approved",
+      "wearModel": "Approved"
+    },
+    "approval": "Approved"
   },
   {
     "id": "building-power-plant",
@@ -782,7 +3979,435 @@
         5
       ],
       "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
-    }
+    },
+    "equipmentConfigurations": [
+      {
+        "id": "wind-generation",
+        "name": "Wind generation",
+        "selection": "alternative",
+        "applicableLevels": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "equipment": [
+          {
+            "machineId": "machine-power-distribution-system",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-wind-generator",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          }
+        ],
+        "approval": "Approved"
+      },
+      {
+        "id": "water-generation",
+        "name": "Water-wheel generation",
+        "selection": "alternative",
+        "applicableLevels": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "equipment": [
+          {
+            "machineId": "machine-power-distribution-system",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-water-wheel-generator",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          }
+        ],
+        "approval": "Approved"
+      },
+      {
+        "id": "solar-thermal-generation",
+        "name": "Solar thermal generation",
+        "selection": "alternative",
+        "applicableLevels": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "equipment": [
+          {
+            "machineId": "machine-power-distribution-system",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-solar-thermal-generator",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          }
+        ],
+        "approval": "Approved"
+      },
+      {
+        "id": "chemical-storage",
+        "name": "Chemical storage plant",
+        "selection": "alternative",
+        "applicableLevels": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "equipment": [
+          {
+            "machineId": "machine-power-distribution-system",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-crude-chemical-battery",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          }
+        ],
+        "approval": "Approved"
+      }
+    ],
+    "levelProfiles": [
+      {
+        "level": 1,
+        "applicableEquipmentConfigurationIds": [
+          "wind-generation",
+          "water-generation",
+          "solar-thermal-generation",
+          "chemical-storage"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 2,
+        "applicableEquipmentConfigurationIds": [
+          "wind-generation",
+          "water-generation",
+          "solar-thermal-generation",
+          "chemical-storage"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 3,
+        "applicableEquipmentConfigurationIds": [
+          "wind-generation",
+          "water-generation",
+          "solar-thermal-generation",
+          "chemical-storage"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 4,
+        "applicableEquipmentConfigurationIds": [
+          "wind-generation",
+          "water-generation",
+          "solar-thermal-generation",
+          "chemical-storage"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 5,
+        "applicableEquipmentConfigurationIds": [
+          "wind-generation",
+          "water-generation",
+          "solar-thermal-generation",
+          "chemical-storage"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      }
+    ],
+    "directPartRequirements": [],
+    "operatingRequirements": {
+      "power": "self-generating",
+      "workforce": "required-when-operating",
+      "productionInputs": [],
+      "approval": "Approved",
+      "notes": "Exact quantities, production rates and staffing remain platform balance unless explicitly approved in levelProfiles."
+    },
+    "wearModel": {
+      "modelId": "industrial-wear-model-v1",
+      "operationalConditionSource": "installed-operational-machines",
+      "failedEquipmentExcludedFromCapability": true,
+      "independentBuildingEquipmentWearSystem": false,
+      "shellWearRate": null,
+      "approval": "Approved",
+      "notes": "Building output is derated by installed Machine condition. Mutable Machine/Part instances and condition remain save-owned."
+    },
+    "fieldApprovalStatuses": {
+      "equipmentConfigurations": "Approved",
+      "levelProfiles": "Approved",
+      "directPartRequirements": "Approved",
+      "operatingRequirements": "Approved",
+      "wearModel": "Approved"
+    },
+    "approval": "Approved"
   },
   {
     "id": "building-industry",
@@ -809,8 +4434,8 @@
     ],
     "machineIds": [
       "machine-fabrication-machine",
-      "machine-assembly-crane",
-      "machine-welding-machine"
+      "machine-welding-machine",
+      "machine-assembly-crane"
     ],
     "description": "A general-purpose industrial complex providing fabrication, maintenance, assembly and engineering capacity to a colony.",
     "canonStatus": "source-canonical",
@@ -841,7 +4466,382 @@
         5
       ],
       "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
-    }
+    },
+    "equipmentConfigurations": [
+      {
+        "id": "fabrication-workshop",
+        "name": "Fabrication workshop",
+        "selection": "alternative",
+        "applicableLevels": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "equipment": [
+          {
+            "machineId": "machine-fabrication-machine",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-welding-machine",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          }
+        ],
+        "approval": "Approved"
+      },
+      {
+        "id": "assembly-workshop",
+        "name": "Assembly workshop",
+        "selection": "alternative",
+        "applicableLevels": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "equipment": [
+          {
+            "machineId": "machine-assembly-crane",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-welding-machine",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          }
+        ],
+        "approval": "Approved"
+      },
+      {
+        "id": "integrated-works",
+        "name": "Integrated industrial works",
+        "selection": "alternative",
+        "applicableLevels": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "equipment": [
+          {
+            "machineId": "machine-fabrication-machine",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-assembly-crane",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-welding-machine",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          }
+        ],
+        "approval": "Approved"
+      }
+    ],
+    "levelProfiles": [
+      {
+        "level": 1,
+        "applicableEquipmentConfigurationIds": [
+          "fabrication-workshop",
+          "assembly-workshop",
+          "integrated-works"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 2,
+        "applicableEquipmentConfigurationIds": [
+          "fabrication-workshop",
+          "assembly-workshop",
+          "integrated-works"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 3,
+        "applicableEquipmentConfigurationIds": [
+          "fabrication-workshop",
+          "assembly-workshop",
+          "integrated-works"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 4,
+        "applicableEquipmentConfigurationIds": [
+          "fabrication-workshop",
+          "assembly-workshop",
+          "integrated-works"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 5,
+        "applicableEquipmentConfigurationIds": [
+          "fabrication-workshop",
+          "assembly-workshop",
+          "integrated-works"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      }
+    ],
+    "directPartRequirements": [],
+    "operatingRequirements": {
+      "power": "required-when-operating",
+      "workforce": "required-when-operating",
+      "productionInputs": [],
+      "approval": "Approved",
+      "notes": "Exact quantities, production rates and staffing remain platform balance unless explicitly approved in levelProfiles."
+    },
+    "wearModel": {
+      "modelId": "industrial-wear-model-v1",
+      "operationalConditionSource": "installed-operational-machines",
+      "failedEquipmentExcludedFromCapability": true,
+      "independentBuildingEquipmentWearSystem": false,
+      "shellWearRate": null,
+      "approval": "Approved",
+      "notes": "Building output is derated by installed Machine condition. Mutable Machine/Part instances and condition remain save-owned."
+    },
+    "fieldApprovalStatuses": {
+      "equipmentConfigurations": "Approved",
+      "levelProfiles": "Approved",
+      "directPartRequirements": "Approved",
+      "operatingRequirements": "Approved",
+      "wearModel": "Approved"
+    },
+    "approval": "Approved"
   },
   {
     "id": "building-basic-refinery",
@@ -896,7 +4896,283 @@
         5
       ],
       "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
-    }
+    },
+    "equipmentConfigurations": [
+      {
+        "id": "crushing-line",
+        "name": "Crushing line",
+        "selection": "alternative",
+        "applicableLevels": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "equipment": [
+          {
+            "machineId": "machine-crusher-machine",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          }
+        ],
+        "approval": "Approved"
+      },
+      {
+        "id": "smelting-line",
+        "name": "Smelting line",
+        "selection": "alternative",
+        "applicableLevels": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "equipment": [
+          {
+            "machineId": "machine-smelter-machine",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          }
+        ],
+        "approval": "Approved"
+      },
+      {
+        "id": "integrated-refinery",
+        "name": "Integrated crushing and smelting",
+        "selection": "alternative",
+        "applicableLevels": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "equipment": [
+          {
+            "machineId": "machine-crusher-machine",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-smelter-machine",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          }
+        ],
+        "approval": "Approved"
+      }
+    ],
+    "levelProfiles": [
+      {
+        "level": 1,
+        "applicableEquipmentConfigurationIds": [
+          "crushing-line",
+          "smelting-line",
+          "integrated-refinery"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 2,
+        "applicableEquipmentConfigurationIds": [
+          "crushing-line",
+          "smelting-line",
+          "integrated-refinery"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 3,
+        "applicableEquipmentConfigurationIds": [
+          "crushing-line",
+          "smelting-line",
+          "integrated-refinery"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 4,
+        "applicableEquipmentConfigurationIds": [
+          "crushing-line",
+          "smelting-line",
+          "integrated-refinery"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 5,
+        "applicableEquipmentConfigurationIds": [
+          "crushing-line",
+          "smelting-line",
+          "integrated-refinery"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      }
+    ],
+    "directPartRequirements": [],
+    "operatingRequirements": {
+      "power": "required-when-operating",
+      "workforce": "required-when-operating",
+      "productionInputs": [],
+      "approval": "Approved",
+      "notes": "Exact quantities, production rates and staffing remain platform balance unless explicitly approved in levelProfiles."
+    },
+    "wearModel": {
+      "modelId": "industrial-wear-model-v1",
+      "operationalConditionSource": "installed-operational-machines",
+      "failedEquipmentExcludedFromCapability": true,
+      "independentBuildingEquipmentWearSystem": false,
+      "shellWearRate": null,
+      "approval": "Approved",
+      "notes": "Building output is derated by installed Machine condition. Mutable Machine/Part instances and condition remain save-owned."
+    },
+    "fieldApprovalStatuses": {
+      "equipmentConfigurations": "Approved",
+      "levelProfiles": "Approved",
+      "directPartRequirements": "Approved",
+      "operatingRequirements": "Approved",
+      "wearModel": "Approved"
+    },
+    "approval": "Approved"
   },
   {
     "id": "building-headquarters",
@@ -953,7 +5229,144 @@
         5
       ],
       "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
-    }
+    },
+    "equipmentConfigurations": [
+      {
+        "id": "command-centre",
+        "name": "Command centre",
+        "selection": "standard",
+        "applicableLevels": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "equipment": [
+          {
+            "machineId": "machine-colony-operations-computer",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          }
+        ],
+        "approval": "Approved"
+      }
+    ],
+    "levelProfiles": [
+      {
+        "level": 1,
+        "applicableEquipmentConfigurationIds": [
+          "command-centre"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 2,
+        "applicableEquipmentConfigurationIds": [
+          "command-centre"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 3,
+        "applicableEquipmentConfigurationIds": [
+          "command-centre"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 4,
+        "applicableEquipmentConfigurationIds": [
+          "command-centre"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 5,
+        "applicableEquipmentConfigurationIds": [
+          "command-centre"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      }
+    ],
+    "directPartRequirements": [],
+    "operatingRequirements": {
+      "power": "required-when-operating",
+      "workforce": "required-when-operating",
+      "productionInputs": [],
+      "approval": "Approved",
+      "notes": "Exact quantities, production rates and staffing remain platform balance unless explicitly approved in levelProfiles."
+    },
+    "wearModel": {
+      "modelId": "industrial-wear-model-v1",
+      "operationalConditionSource": "installed-operational-machines",
+      "failedEquipmentExcludedFromCapability": true,
+      "independentBuildingEquipmentWearSystem": false,
+      "shellWearRate": null,
+      "approval": "Approved",
+      "notes": "Building output is derated by installed Machine condition. Mutable Machine/Part instances and condition remain save-owned."
+    },
+    "fieldApprovalStatuses": {
+      "equipmentConfigurations": "Approved",
+      "levelProfiles": "Approved",
+      "directPartRequirements": "Approved",
+      "operatingRequirements": "Approved",
+      "wearModel": "Approved"
+    },
+    "approval": "Approved"
   },
   {
     "id": "building-research-building",
@@ -1006,7 +5419,144 @@
         5
       ],
       "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
-    }
+    },
+    "equipmentConfigurations": [
+      {
+        "id": "research-computing",
+        "name": "Research computing laboratory",
+        "selection": "standard",
+        "applicableLevels": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "equipment": [
+          {
+            "machineId": "machine-research-computer",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          }
+        ],
+        "approval": "Approved"
+      }
+    ],
+    "levelProfiles": [
+      {
+        "level": 1,
+        "applicableEquipmentConfigurationIds": [
+          "research-computing"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 2,
+        "applicableEquipmentConfigurationIds": [
+          "research-computing"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 3,
+        "applicableEquipmentConfigurationIds": [
+          "research-computing"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 4,
+        "applicableEquipmentConfigurationIds": [
+          "research-computing"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 5,
+        "applicableEquipmentConfigurationIds": [
+          "research-computing"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      }
+    ],
+    "directPartRequirements": [],
+    "operatingRequirements": {
+      "power": "required-when-operating",
+      "workforce": "required-when-operating",
+      "productionInputs": [],
+      "approval": "Approved",
+      "notes": "Exact quantities, production rates and staffing remain platform balance unless explicitly approved in levelProfiles."
+    },
+    "wearModel": {
+      "modelId": "industrial-wear-model-v1",
+      "operationalConditionSource": "installed-operational-machines",
+      "failedEquipmentExcludedFromCapability": true,
+      "independentBuildingEquipmentWearSystem": false,
+      "shellWearRate": null,
+      "approval": "Approved",
+      "notes": "Building output is derated by installed Machine condition. Mutable Machine/Part instances and condition remain save-owned."
+    },
+    "fieldApprovalStatuses": {
+      "equipmentConfigurations": "Approved",
+      "levelProfiles": "Approved",
+      "directPartRequirements": "Approved",
+      "operatingRequirements": "Approved",
+      "wearModel": "Approved"
+    },
+    "approval": "Approved"
   },
   {
     "id": "building-spaceport",
@@ -1062,7 +5612,144 @@
         5
       ],
       "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
-    }
+    },
+    "equipmentConfigurations": [
+      {
+        "id": "cargo-handling",
+        "name": "Cargo handling",
+        "selection": "standard",
+        "applicableLevels": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "equipment": [
+          {
+            "machineId": "machine-assembly-crane",
+            "role": "conditional",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 0,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 0,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 0,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 0,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 0,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          }
+        ],
+        "approval": "Approved"
+      }
+    ],
+    "levelProfiles": [
+      {
+        "level": 1,
+        "applicableEquipmentConfigurationIds": [
+          "cargo-handling"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 2,
+        "applicableEquipmentConfigurationIds": [
+          "cargo-handling"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 3,
+        "applicableEquipmentConfigurationIds": [
+          "cargo-handling"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 4,
+        "applicableEquipmentConfigurationIds": [
+          "cargo-handling"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 5,
+        "applicableEquipmentConfigurationIds": [
+          "cargo-handling"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      }
+    ],
+    "directPartRequirements": [],
+    "operatingRequirements": {
+      "power": "required-when-operating",
+      "workforce": "required-when-operating",
+      "productionInputs": [],
+      "approval": "Approved",
+      "notes": "Exact quantities, production rates and staffing remain platform balance unless explicitly approved in levelProfiles."
+    },
+    "wearModel": {
+      "modelId": "industrial-wear-model-v1",
+      "operationalConditionSource": "installed-operational-machines",
+      "failedEquipmentExcludedFromCapability": true,
+      "independentBuildingEquipmentWearSystem": false,
+      "shellWearRate": null,
+      "approval": "Approved",
+      "notes": "Building output is derated by installed Machine condition. Mutable Machine/Part instances and condition remain save-owned."
+    },
+    "fieldApprovalStatuses": {
+      "equipmentConfigurations": "Approved",
+      "levelProfiles": "Approved",
+      "directPartRequirements": "Approved",
+      "operatingRequirements": "Approved",
+      "wearModel": "Approved"
+    },
+    "approval": "Approved"
   },
   {
     "id": "building-shipyard-bay",
@@ -1117,7 +5804,210 @@
         5
       ],
       "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
-    }
+    },
+    "equipmentConfigurations": [
+      {
+        "id": "ship-assembly",
+        "name": "Ship assembly bay",
+        "selection": "standard",
+        "applicableLevels": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "equipment": [
+          {
+            "machineId": "machine-fabrication-machine",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-assembly-crane",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-welding-machine",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          }
+        ],
+        "approval": "Approved"
+      }
+    ],
+    "levelProfiles": [
+      {
+        "level": 1,
+        "applicableEquipmentConfigurationIds": [
+          "ship-assembly"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 2,
+        "applicableEquipmentConfigurationIds": [
+          "ship-assembly"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 3,
+        "applicableEquipmentConfigurationIds": [
+          "ship-assembly"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 4,
+        "applicableEquipmentConfigurationIds": [
+          "ship-assembly"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 5,
+        "applicableEquipmentConfigurationIds": [
+          "ship-assembly"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      }
+    ],
+    "directPartRequirements": [],
+    "operatingRequirements": {
+      "power": "required-when-operating",
+      "workforce": "required-when-operating",
+      "productionInputs": [],
+      "approval": "Approved",
+      "notes": "Exact quantities, production rates and staffing remain platform balance unless explicitly approved in levelProfiles."
+    },
+    "wearModel": {
+      "modelId": "industrial-wear-model-v1",
+      "operationalConditionSource": "installed-operational-machines",
+      "failedEquipmentExcludedFromCapability": true,
+      "independentBuildingEquipmentWearSystem": false,
+      "shellWearRate": null,
+      "approval": "Approved",
+      "notes": "Building output is derated by installed Machine condition. Mutable Machine/Part instances and condition remain save-owned."
+    },
+    "fieldApprovalStatuses": {
+      "equipmentConfigurations": "Approved",
+      "levelProfiles": "Approved",
+      "directPartRequirements": "Approved",
+      "operatingRequirements": "Approved",
+      "wearModel": "Approved"
+    },
+    "approval": "Approved"
   },
   {
     "id": "building-stockpile",
@@ -1164,7 +6054,85 @@
         5
       ],
       "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
-    }
+    },
+    "equipmentConfigurations": [
+      {
+        "id": "manual-stockpile",
+        "name": "Manual open stockpile",
+        "selection": "standard",
+        "applicableLevels": [
+          1
+        ],
+        "equipment": [
+          {
+            "machineId": "machine-conveyor-machine",
+            "role": "optional",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 0,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-bulk-stacker",
+            "role": "optional",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 0,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          }
+        ],
+        "approval": "Approved"
+      }
+    ],
+    "levelProfiles": [
+      {
+        "level": 1,
+        "applicableEquipmentConfigurationIds": [
+          "manual-stockpile"
+        ],
+        "powerUnits": 0,
+        "workforce": 0,
+        "capacity": 50,
+        "capacityUnit": "tonnes-loose-storage-design-target",
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      }
+    ],
+    "directPartRequirements": [],
+    "operatingRequirements": {
+      "power": "not-required",
+      "workforce": "not-inherently-required",
+      "productionInputs": [],
+      "approval": "Approved",
+      "notes": "Exact quantities, production rates and staffing remain platform balance unless explicitly approved in levelProfiles."
+    },
+    "wearModel": {
+      "modelId": "industrial-wear-model-v1",
+      "operationalConditionSource": "installed-operational-machines",
+      "failedEquipmentExcludedFromCapability": true,
+      "independentBuildingEquipmentWearSystem": false,
+      "shellWearRate": null,
+      "approval": "Approved",
+      "notes": "Building output is derated by installed Machine condition. Mutable Machine/Part instances and condition remain save-owned."
+    },
+    "fieldApprovalStatuses": {
+      "equipmentConfigurations": "Approved",
+      "levelProfiles": "Approved",
+      "directPartRequirements": "Approved",
+      "operatingRequirements": "Approved",
+      "wearModel": "Approved"
+    },
+    "approval": "Approved"
   },
   {
     "id": "building-warehouse",
@@ -1215,7 +6183,144 @@
         5
       ],
       "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
-    }
+    },
+    "equipmentConfigurations": [
+      {
+        "id": "warehouse-handling",
+        "name": "Warehouse handling",
+        "selection": "standard",
+        "applicableLevels": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "equipment": [
+          {
+            "machineId": "machine-warehouse-handler",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          }
+        ],
+        "approval": "Approved"
+      }
+    ],
+    "levelProfiles": [
+      {
+        "level": 1,
+        "applicableEquipmentConfigurationIds": [
+          "warehouse-handling"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 2,
+        "applicableEquipmentConfigurationIds": [
+          "warehouse-handling"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 3,
+        "applicableEquipmentConfigurationIds": [
+          "warehouse-handling"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 4,
+        "applicableEquipmentConfigurationIds": [
+          "warehouse-handling"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 5,
+        "applicableEquipmentConfigurationIds": [
+          "warehouse-handling"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      }
+    ],
+    "directPartRequirements": [],
+    "operatingRequirements": {
+      "power": "required-when-operating",
+      "workforce": "required-when-operating",
+      "productionInputs": [],
+      "approval": "Approved",
+      "notes": "Exact quantities, production rates and staffing remain platform balance unless explicitly approved in levelProfiles."
+    },
+    "wearModel": {
+      "modelId": "industrial-wear-model-v1",
+      "operationalConditionSource": "installed-operational-machines",
+      "failedEquipmentExcludedFromCapability": true,
+      "independentBuildingEquipmentWearSystem": false,
+      "shellWearRate": null,
+      "approval": "Approved",
+      "notes": "Building output is derated by installed Machine condition. Mutable Machine/Part instances and condition remain save-owned."
+    },
+    "fieldApprovalStatuses": {
+      "equipmentConfigurations": "Approved",
+      "levelProfiles": "Approved",
+      "directPartRequirements": "Approved",
+      "operatingRequirements": "Approved",
+      "wearModel": "Approved"
+    },
+    "approval": "Approved"
   },
   {
     "id": "building-aquaculture-facility",
@@ -1275,7 +6380,210 @@
         5
       ],
       "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
-    }
+    },
+    "equipmentConfigurations": [
+      {
+        "id": "aquaculture",
+        "name": "Controlled aquaculture",
+        "selection": "standard",
+        "applicableLevels": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "equipment": [
+          {
+            "machineId": "machine-pump-machine",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-filtration-machine",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-growth-management-system",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          }
+        ],
+        "approval": "Approved"
+      }
+    ],
+    "levelProfiles": [
+      {
+        "level": 1,
+        "applicableEquipmentConfigurationIds": [
+          "aquaculture"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 2,
+        "applicableEquipmentConfigurationIds": [
+          "aquaculture"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 3,
+        "applicableEquipmentConfigurationIds": [
+          "aquaculture"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 4,
+        "applicableEquipmentConfigurationIds": [
+          "aquaculture"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 5,
+        "applicableEquipmentConfigurationIds": [
+          "aquaculture"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      }
+    ],
+    "directPartRequirements": [],
+    "operatingRequirements": {
+      "power": "required-when-operating",
+      "workforce": "required-when-operating",
+      "productionInputs": [],
+      "approval": "Approved",
+      "notes": "Exact quantities, production rates and staffing remain platform balance unless explicitly approved in levelProfiles."
+    },
+    "wearModel": {
+      "modelId": "industrial-wear-model-v1",
+      "operationalConditionSource": "installed-operational-machines",
+      "failedEquipmentExcludedFromCapability": true,
+      "independentBuildingEquipmentWearSystem": false,
+      "shellWearRate": null,
+      "approval": "Approved",
+      "notes": "Building output is derated by installed Machine condition. Mutable Machine/Part instances and condition remain save-owned."
+    },
+    "fieldApprovalStatuses": {
+      "equipmentConfigurations": "Approved",
+      "levelProfiles": "Approved",
+      "directPartRequirements": "Approved",
+      "operatingRequirements": "Approved",
+      "wearModel": "Approved"
+    },
+    "approval": "Approved"
   },
   {
     "id": "building-agricultural-dome",
@@ -1336,6 +6644,242 @@
         5
       ],
       "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
-    }
+    },
+    "equipmentConfigurations": [
+      {
+        "id": "controlled-dome",
+        "name": "Controlled agricultural dome",
+        "selection": "standard",
+        "applicableLevels": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "equipment": [
+          {
+            "machineId": "machine-life-support-machine",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-climate-control-machine",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-irrigation-system",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-growth-management-system",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          }
+        ],
+        "approval": "Approved"
+      }
+    ],
+    "levelProfiles": [
+      {
+        "level": 1,
+        "applicableEquipmentConfigurationIds": [
+          "controlled-dome"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 2,
+        "applicableEquipmentConfigurationIds": [
+          "controlled-dome"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 3,
+        "applicableEquipmentConfigurationIds": [
+          "controlled-dome"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 4,
+        "applicableEquipmentConfigurationIds": [
+          "controlled-dome"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      },
+      {
+        "level": 5,
+        "applicableEquipmentConfigurationIds": [
+          "controlled-dome"
+        ],
+        "powerUnits": null,
+        "workforce": null,
+        "capacity": null,
+        "capacityUnit": null,
+        "approval": "Approved",
+        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+      }
+    ],
+    "directPartRequirements": [],
+    "operatingRequirements": {
+      "power": "required-when-operating",
+      "workforce": "required-when-operating",
+      "productionInputs": [],
+      "approval": "Approved",
+      "notes": "Exact quantities, production rates and staffing remain platform balance unless explicitly approved in levelProfiles."
+    },
+    "wearModel": {
+      "modelId": "industrial-wear-model-v1",
+      "operationalConditionSource": "installed-operational-machines",
+      "failedEquipmentExcludedFromCapability": true,
+      "independentBuildingEquipmentWearSystem": false,
+      "shellWearRate": null,
+      "approval": "Approved",
+      "notes": "Building output is derated by installed Machine condition. Mutable Machine/Part instances and condition remain save-owned."
+    },
+    "fieldApprovalStatuses": {
+      "equipmentConfigurations": "Approved",
+      "levelProfiles": "Approved",
+      "directPartRequirements": "Approved",
+      "operatingRequirements": "Approved",
+      "wearModel": "Approved"
+    },
+    "approval": "Approved"
   }
 ]

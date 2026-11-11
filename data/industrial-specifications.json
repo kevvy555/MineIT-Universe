@@ -1,0 +1,246 @@
+[
+  {
+    "id": "industrial-specification-buildings-machines-parts",
+    "name": "Buildings, Machines and Parts Alignment",
+    "entityType": "IndustrialSpecification",
+    "version": 1,
+    "approval": "Approved",
+    "relationshipSemantics": {
+      "buildingMachineIds": "Compatibility index: union of Machines present in building.equipmentConfigurations; it is not an assertion that every listed Machine is installed.",
+      "buildingEquipmentConfigurations": "Authoritative structural demand. A selected configuration defines required, conditional and optional Machine quantities by applicable building level.",
+      "machinePartIds": "Compatibility index: exact unique Part IDs present in machine.servicePartRequirements.",
+      "machineServicePartRequirements": "Identifiable installed or compatible service slots used for condition, maintenance and failure simulation.",
+      "manufacturingFinishedPartInputs": "Finished Part products consumed to manufacture one Machine. Quantities are production BOM inputs, not a second compatibility list; every resolved input must also be a service Part unless explicitly marked manufacturing-only.",
+      "partMachineIds": "Derived inverse index of machine.partIds; it is not independently authored."
+    },
+    "stateBoundary": {
+      "universeOwns": [
+        "stable identities",
+        "compatibility",
+        "structural fit-outs",
+        "wear parameters",
+        "failure effects",
+        "method and depth capability"
+      ],
+      "gameSaveOwns": [
+        "Machine instance IDs",
+        "installed Part instance IDs",
+        "condition",
+        "operating hours",
+        "intensity history",
+        "repairs and replacements",
+        "facility ownership",
+        "current output and reserves"
+      ],
+      "automaticProvisioning": "A game may create new Machine and Part instances at 100% condition when a facility is built. This is a gameplay policy and does not imply zero canonical manufacturer cost."
+    },
+    "wearModel": {
+      "id": "industrial-wear-model-v1",
+      "conditionRangePct": [
+        0,
+        100
+      ],
+      "partWearFormula": "nextConditionPct = clamp(conditionPct - baseWearRatePctPerEquivalentFullLoadHour * operatingHours * pow(intensity, intensityExponent), 0, 100)",
+      "slotConditionRule": "For a service slot with multiple installed units, use the lowest unit condition.",
+      "machineConditionFormula": "weighted mean of service-slot condition using conditionWeight",
+      "machinePerformanceRule": "performanceFactor = machineConditionPct / 100 while powered, enabled and without a failed critical service slot; otherwise 0",
+      "criticalFailureRule": "Any critical slot at or below its Part failureConditionPct disables the Machine.",
+      "capabilityRule": "Only powered, enabled Machines without a failed critical service slot contribute capability.",
+      "approval": "Approved"
+    },
+    "extractionCapabilities": [
+      {
+        "id": "quarry-excavation",
+        "name": "Quarry Excavation",
+        "extractionMethodId": "quarrying",
+        "buildingIds": [
+          "building-quarry"
+        ],
+        "maximumDepthM": 50,
+        "requiredMachineConfigurations": [
+          {
+            "machineId": "machine-drill-machine",
+            "configurationId": "quarry-bench-drilling"
+          }
+        ],
+        "dependencies": [
+          "machine-conveyor-machine"
+        ],
+        "technologyRequirement": "quarrying",
+        "approval": "Approved"
+      },
+      {
+        "id": "standard-shaft",
+        "name": "Standard Shaft",
+        "extractionMethodId": "shaft-mining",
+        "buildingIds": [
+          "building-simple-pit-mine",
+          "building-deep-mine"
+        ],
+        "maximumDepthM": 2000,
+        "requiredMachineConfigurations": [
+          {
+            "machineId": "machine-underground-mining-system",
+            "configurationId": "standard-shaft"
+          }
+        ],
+        "dependencies": [
+          "machine-conveyor-machine",
+          "machine-mine-ventilation"
+        ],
+        "technologyRequirement": "shaft-mining",
+        "approval": "Approved"
+      },
+      {
+        "id": "deep-hard-rock",
+        "name": "Deep Hard Rock",
+        "extractionMethodId": "deep-mining",
+        "buildingIds": [
+          "building-deep-mine"
+        ],
+        "maximumDepthM": 8000,
+        "requiredMachineConfigurations": [
+          {
+            "machineId": "machine-underground-mining-system",
+            "configurationId": "deep-hard-rock"
+          }
+        ],
+        "dependencies": [
+          "machine-conveyor-machine",
+          "machine-mine-ventilation"
+        ],
+        "technologyRequirement": "deep-mining",
+        "approval": "Approved"
+      },
+      {
+        "id": "deep-core",
+        "name": "Deep Core",
+        "extractionMethodId": "deep-core-extraction",
+        "buildingIds": [
+          "building-deep-mine"
+        ],
+        "maximumDepthM": 20000,
+        "requiredMachineConfigurations": [
+          {
+            "machineId": "machine-underground-mining-system",
+            "configurationId": "deep-core"
+          }
+        ],
+        "dependencies": [
+          "machine-conveyor-machine",
+          "machine-mine-ventilation"
+        ],
+        "technologyRequirement": "deep-core-extraction",
+        "approval": "Approved"
+      },
+      {
+        "id": "rotary-well-control",
+        "name": "Rotary Well Control",
+        "extractionMethodId": "rotary-drilling",
+        "buildingIds": [
+          "building-extraction-rig"
+        ],
+        "maximumDepthM": 8000,
+        "requiredMachineConfigurations": [
+          {
+            "machineId": "machine-well-drilling-system",
+            "configurationId": "rotary-well-control"
+          }
+        ],
+        "dependencies": [
+          "machine-pump-machine"
+        ],
+        "technologyRequirement": "rotary-drilling",
+        "approval": "Approved"
+      },
+      {
+        "id": "high-pressure-drilling",
+        "name": "High Pressure Drilling",
+        "extractionMethodId": "pressure-brine-drilling",
+        "buildingIds": [
+          "building-extraction-rig"
+        ],
+        "maximumDepthM": 12000,
+        "requiredMachineConfigurations": [
+          {
+            "machineId": "machine-well-drilling-system",
+            "configurationId": "high-pressure-drilling"
+          }
+        ],
+        "dependencies": [
+          "machine-pump-machine",
+          "machine-filtration-machine"
+        ],
+        "technologyRequirement": "pressure-brine-drilling",
+        "approval": "Approved"
+      },
+      {
+        "id": "quantum-boring",
+        "name": "Quantum Boring",
+        "extractionMethodId": "quantum-bore-systems",
+        "buildingIds": [
+          "building-extraction-rig"
+        ],
+        "maximumDepthM": 70000,
+        "requiredMachineConfigurations": [
+          {
+            "machineId": "machine-quantum-bore-system",
+            "configurationId": "quantum-boring"
+          }
+        ],
+        "dependencies": [],
+        "technologyRequirement": "quantum-bore-systems",
+        "approval": "Approved"
+      },
+      {
+        "id": "precision-control",
+        "name": "Precision Control",
+        "extractionMethodId": "precision-extraction",
+        "buildingIds": [
+          "building-simple-pit-mine",
+          "building-deep-mine"
+        ],
+        "maximumDepthM": null,
+        "requiredMachineConfigurations": [
+          {
+            "machineId": "machine-substance-analyser",
+            "configurationId": "precision-extraction-control"
+          }
+        ],
+        "dependencies": [
+          "depth-qualified-underground-mining-system"
+        ],
+        "technologyRequirement": "precision-extraction",
+        "approval": "Approved"
+      },
+      {
+        "id": "exotic-separation",
+        "name": "Exotic Separation",
+        "extractionMethodId": "exotic-matter-separation",
+        "buildingIds": [
+          "building-simple-pit-mine",
+          "building-deep-mine"
+        ],
+        "maximumDepthM": null,
+        "requiredMachineConfigurations": [
+          {
+            "machineId": "machine-filtration-machine",
+            "configurationId": "exotic-separation"
+          }
+        ],
+        "dependencies": [
+          "depth-qualified-underground-mining-system"
+        ],
+        "technologyRequirement": "exotic-matter-separation",
+        "approval": "Approved"
+      }
+    ],
+    "provenance": {
+      "androidSourceCommit": "3f91c7a4d2a215d99f739165041bfa0e3b50f14b",
+      "sourcePath": "app/src/main/java/com/mineit/android/domain/spatial/LandExtractionCapabilities.kt",
+      "reviewedAt": "2026-11-11",
+      "approvedAt": "2026-11-11",
+      "approvalDecision": "User approved the complete Buildings, Machines and Parts alignment and all recommended options in one consolidated decision. Deliberately unresolved engineering, price and legacy-compatibility fields retain their existing non-approved status."
+    }
+  }
+]
