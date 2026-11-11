@@ -1,6 +1,6 @@
 {
   "schemaVersion": 13,
-  "contentVersion": "0.15.1",
+  "contentVersion": "0.15.2",
   "universeId": "mineit",
   "name": "MineIT Universe",
   "canonicalYear": 5326,
@@ -111,6 +111,7 @@
     "mobileResourceOccurrenceProfiles": "mobile-resource-occurrence-profiles.json",
     "mobileBiologicalResources": "mobile-biological-resources.json",
     "visualAssets": "visual-assets-mobile-landscape.json",
+    "terrainMaterials": "terrain-materials.json",
     "worldAtlases": "world-atlases.json",
     "worldAtlasTiles": "world-atlas-tiles.json",
     "namedSubstances": "named-substances.json",

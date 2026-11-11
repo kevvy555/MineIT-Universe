@@ -28,3 +28,17 @@ Assets:
 `assets/art/visual-library/landscape/mobile/`
 
 This library is deliberately separate from authored world-specific sets such as Koplin 3. A generated world may use the reusable library without pretending that Koplin-specific terrain belongs to that world.
+
+## MineIT Desktop-derived 3D terrain materials
+
+`visual-series-desktop-terrain-materials` is the reusable identity-neutral close-up material library for world-aligned 3D terrain rendering.
+
+Catalogue:
+
+`data/terrain-materials.json`
+
+Assets:
+
+`assets/art/visual-library/terrain/materials/`
+
+The ten materials were curated from the high-resolution MineIT Desktop `Ground.zip` source library. Published WebPs are 1024x1024 Android assets; the matching lossless, edge-matched PNGs are retained under `Originals/`. They are presentation-only and never author terrain height, geology, biome identity or save data.

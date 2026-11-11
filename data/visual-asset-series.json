@@ -50,5 +50,32 @@
       "Land tiles must cover the complete canonical landform/biome cross-product so presentation never needs to invent a tile.",
       "Subsurface aquifers and hydrosphere-none do not receive visible water tiles."
     ]
+  },
+  {
+    "id": "visual-series-desktop-terrain-materials",
+    "name": "MineIT Desktop Seamless Terrain Material Library",
+    "assetType": "seamless-terrain-material-series",
+    "assetIdPattern": "visual-terrain-material-{biome}-01",
+    "assetKeyPattern": "assets/art/visual-library/terrain/materials/{asset-id}.webp",
+    "plannedAssetCount": 10,
+    "generatedAssetCount": 10,
+    "status": "generated",
+    "reusableAcrossUniverses": true,
+    "identityNeutral": true,
+    "intendedGameId": "game-mineit-mobile",
+    "description": "Identity-neutral close-up 3D ground materials curated from the high-resolution MineIT Desktop Ground library. One 1024x1024 edge-matched material covers every canonical surface biome for deterministic world-aligned Mobile rendering.",
+    "styleLock": {
+      "camera": "orthographic-nadir",
+      "aspectRatio": "1:1",
+      "pixelSize": 1024,
+      "joinRule": "Opposite edges match for direct GPU repeat without runtime image repair.",
+      "scaleHint": "One repeat represents approximately 25 world metres."
+    },
+    "constraints": [
+      "No baked-in world, system, organisation or colony identity.",
+      "No readable text, UI, buildings, roads, people, vehicles or resource markers.",
+      "Every canonical surface biome must resolve to exactly one material.",
+      "Material processing must not change terrain height, geology, gameplay or saved state."
+    ]
   }
 ]

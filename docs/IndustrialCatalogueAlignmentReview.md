@@ -1,7 +1,7 @@
 # Buildings, Machines and Parts — Complete Alignment Review
 
 **Review date:** 11 November 2026
-**Universe release:** schema 13 / content 0.15.1
+**Universe release:** schema 13 / content 0.15.2
 **Branch:** `develop`; the commit SHA is recorded in repository history; no pull request was created.
 **Approval decision:** On 11 November 2026 the user approved the complete alignment and every recommended option as one consolidated decision. Deliberately unknown engineering and price fields remain **In Review** or **Blocked** rather than being falsely approved.
 
