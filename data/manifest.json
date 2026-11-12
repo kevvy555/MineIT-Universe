@@ -52,6 +52,7 @@
     "buildings": "buildings.json",
     "buildingMobileLevelImages": "building-mobile-level-images.json",
     "games": "games.json",
+    "gameLandscapeConcepts": "game-landscape-concepts.json",
     "species": "species.json",
     "people": [
       "people.json",
