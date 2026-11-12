@@ -10,21 +10,21 @@
     "variant": 1,
     "pixelSize": 1024,
     "seamless": true,
-    "repeatMetresHint": 25,
+    "repeatMetresHint": 100,
     "provenance": {
-      "sourceArchive": "Ground.zip",
-      "sourceArchiveSha256": "ffff953f86324c0d7adb98ac7d7d3e66ddc2ded09b9a6df00341dbf9f18ec3fa",
-      "sourcePath": "Ground/Biome/RockyOutcrop.png",
-      "sourceSha256": "02a662a8946a4fb95fa40c18a15b25d815c0fd7b4dfe7db5033c0668e86d4735",
-      "sourceBytes": 3868427,
-      "processing": "Centre-square crop, Lanczos resize to 1024px, periodic-plus-smooth boundary correction with distributed edge ramp, RGB WebP quality 86."
+      "source": "Built-in image generation, 2026-11-12",
+      "sourceSha256": "4ba78b485579aa13b0cc114f9dd9ee4eac83189597dd7e5722feb36e3a394d34",
+      "sourceBytes": 4034860,
+      "sourcePixelSize": 1254,
+      "processing": "Native lossless PNG retained unchanged. Lanczos downsample to 1024px; RGB WebP quality 94. No edge-ramp or periodic correction.",
+      "replaces": "Desktop RockyOutcrop material: conspicuous repeated boulders and processing streaks."
     },
     "image": {
       "key": "assets/art/visual-library/terrain/materials/visual-terrain-material-barren-rock-01.webp",
       "generated": true,
       "status": "generated",
-      "promptDescription": "Identity-neutral close-up exposed rock and regolith material derived from the MineIT Desktop RockyOutcrop source for world-aligned 3D ground.",
-      "notes": "Lossless processed PNG is retained under Originals. Physical-device visual acceptance remains separate."
+      "promptDescription": "Square seamless tileable bedrock base-colour texture for a realistic mobile terrain game. Straight-on orthographic scan of continuous weathered grey granite, broad irregular connected fractures with subordinate fine mineral grain and hairline fissures. Neutral warm grey with subtle mineral variation. Uniform diffuse flat illumination, no directional highlights, cast shadows, ambient occlusion, vignette or perspective. Restrained contrast without a distinctive central formation. Fractures continue across opposite edges; even detail distribution. No detached pebbles, boulder piles, vegetation, moss, soil, snow, grid, stripes, text, borders or watermarks. Full-bleed single material, 1024 by 1024 pixels.",
+      "notes": "Generated bedrock for exposed mountain faces. Native lossless original in Originals. Android uses deterministic multi-offset triplanar sampling at 100 metres. Device visual acceptance pending."
     }
   },
   {
