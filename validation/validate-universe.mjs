@@ -30,6 +30,7 @@ const imageStatuses = new Set(['not-generated', 'in-progress', 'generated', 'app
 const mobileOriginalCollections = new Set([
   'mobileResourceDefinitions', 'mobileBiologicalResources', 'buildings',
   'buildingMobileLevelImages', 'landscapeTiles', 'visualAssets', 'terrainMaterials',
+  'gameLandscapeConcepts',
   'shipClasses',
 ]);
 
@@ -106,6 +107,7 @@ const scalarRefs = {
   people: ['speciesId', 'organisationId', 'organisationUnitId', 'workLocationId', 'homeLocationId'],
   economicSectors: ['anchorOrganisationId'],
   visualAssetSeries: ['generationSourceId', 'intendedGameId'],
+  gameLandscapeConcepts: ['gameId'],
   visualAssets: ['seriesId', 'intendedGameId', 'landformId', 'biomeId', 'hydrosphereId'],
   terrainMaterials: ['seriesId', 'intendedGameId', 'biomeId'],
   shipLines: ['manufacturerOrganisationId', 'flagshipYardFacilityId'],
@@ -326,6 +328,28 @@ for (const game of collections.games ?? []) {
   if (!game.sharedLandUse || !game.sharedSubstanceUse) errors.push(`${game.id}: game record requires sharedLandUse and sharedSubstanceUse.`);
   if (game.knowledgeScope !== 'designer truth') errors.push(`${game.id}: games are designer catalogue records, not in-universe organisations.`);
 }
+const mobileConcepts = collections.gameLandscapeConcepts ?? [];
+const expectedMobileConcepts = [
+  'natural-landscape', 'temperate-initial', 'temperate-revised',
+  'cryogenic', 'arid', 'barren', 'toxic', 'volcanic'
+].map(slug => `game-landscape-concept-${slug}`);
+if (mobileConcepts.length !== expectedMobileConcepts.length)
+  errors.push(`Expected ${expectedMobileConcepts.length} Mobile landscape concepts; found ${mobileConcepts.length}.`);
+for (const id of expectedMobileConcepts)
+  if (!mobileConcepts.some(concept => concept.id === id)) errors.push(`Missing landscape concept: ${id}.`);
+for (const concept of mobileConcepts) {
+  if (concept.gameId !== 'game-mineit-mobile')
+    errors.push(`${concept.id}: concept must belong to MineIT Mobile.`);
+  if (concept.knowledgeScope !== 'designer concept' || concept.isCanonicalWorldMap !== false)
+    errors.push(`${concept.id}: concepts must not masquerade as canonical world maps.`);
+  if (concept.category !== 'Landscape Concepts')
+    errors.push(`${concept.id}: invalid concept category.`);
+  if (concept.intendedMapWidthKm !== 64 || concept.intendedMapHeightKm !== 64)
+    errors.push(`${concept.id}: intended map extent must be 64 km by 64 km.`);
+  if (!concept.image?.key?.startsWith('assets/art/universe/games/mobile/landscape-concepts/'))
+    errors.push(`${concept.id}: invalid concept asset directory.`);
+}
+
 
 for (const tileset of collections.landscapeTilesets ?? []) {
   if (!tileset.planetId) errors.push(`${tileset.id}: landscape tileset requires planetId.`);
