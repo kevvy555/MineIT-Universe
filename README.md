@@ -38,6 +38,7 @@ Generated expansion material that does not conflict with the source bibles may r
 
 - `index.html` — entity Directory: Geography / Organisation / Directory.
 - `games.html` — the three current MineIT games and how they share Universe land, worlds and substances.
+- `Games → Mobile → Landscape Concepts` in the Directory — eight non-canonical visual overviews of 64 × 64 km colony-map ideas (see `docs/MobileLandscapeConcepts.md`).
 - `commercial-network.html` — persistent commercial contacts and their canonical structural resource demand.
 - `ship-catalogue.html` — factory-new Year-5326 ship catalogue grouped by manufacturer and ship line.
 - `lore.html` — full canonical lore explorer with source switching, quick-reference topics and section navigation.
