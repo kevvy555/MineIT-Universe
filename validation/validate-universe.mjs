@@ -736,6 +736,23 @@ for (const material of terrainMaterials) {
   if (material.pixelSize !== 1024) errors.push(`${material.id}: terrain material must declare 1024px Android output.`);
   if (material.seamless !== true) errors.push(`${material.id}: terrain material must be edge-matched.`);
   if (!material.image?.key?.startsWith('assets/art/visual-library/terrain/materials/')) errors.push(`${material.id}: terrain material must live under assets/art/visual-library/terrain/materials/.`);
+  const atlas = material.lodAtlas;
+  if (JSON.stringify(atlas?.levelRepeatMetres) !== JSON.stringify([6.25, 25, 100, 400, 1600]) ||
+      atlas?.tilePixelSize !== 512 || atlas?.gutterPixels !== 4 ||
+      JSON.stringify(atlas?.atlasPixelSize) !== JSON.stringify([1536, 1024])) {
+    errors.push(`${material.id}: five-scale terrain atlas layout is invalid.`);
+  }
+  if (atlas?.sourceImageKey !== material.image?.key ||
+      !atlas?.image?.key?.startsWith('assets/art/visual-library/terrain/materials/') ||
+      atlas?.image?.generated !== true || atlas?.image?.status !== 'generated' ||
+      !atlas?.originalPath?.startsWith('assets/art/visual-library/terrain/materials/Originals/')) {
+    errors.push(`${material.id}: five-scale terrain atlas provenance is invalid.`);
+  }
+  for (const file of [atlas?.image?.key, atlas?.originalPath]) {
+    if (!file) continue;
+    try { await access(resolve(repoRoot, file)); }
+    catch { errors.push(`${material.id}: five-scale terrain atlas file is missing: ${file}.`); }
+  }
 }
 
 const requiredMobileParentSubstances = [

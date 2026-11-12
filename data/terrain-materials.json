@@ -67,7 +67,32 @@
           "notes": "Identity-neutral rock detail layer. Native lossless original retained in Originals; physical-device acceptance pending."
         }
       }
-    ]
+    ],
+    "lodAtlas": {
+      "levelRepeatMetres": [
+        6.25,
+        25,
+        100,
+        400,
+        1600
+      ],
+      "tilePixelSize": 512,
+      "gutterPixels": 4,
+      "atlasPixelSize": [
+        1536,
+        1024
+      ],
+      "originalPath": "assets/art/visual-library/terrain/materials/Originals/visual-terrain-material-barren-rock-01-lod.png",
+      "generationScript": "scripts/build_terrain_lod_atlases.py",
+      "sourceImageKey": "assets/art/visual-library/terrain/materials/visual-terrain-material-barren-rock-01.webp",
+      "image": {
+        "key": "assets/art/visual-library/terrain/materials/visual-terrain-material-barren-rock-01-lod.webp",
+        "generated": true,
+        "status": "generated",
+        "promptDescription": "Five seamless material scales derived deterministically from the canonical source: fine 6.25 m, local 25 m, regional 100 m, broad 400 m, and orbit-view 1600 m.",
+        "notes": "The three broadest scales use periodic palette-preserving colour variation; the lossless atlas original is stored beside the published WebP."
+      }
+    }
   },
   {
     "id": "visual-terrain-material-desert-01",
@@ -95,6 +120,31 @@
       "status": "generated",
       "promptDescription": "Identity-neutral close-up pale sand and fine mineral grains derived from the MineIT Desktop BeachSand source for world-aligned 3D ground.",
       "notes": "Lossless processed PNG is retained under Originals. Physical-device visual acceptance remains separate."
+    },
+    "lodAtlas": {
+      "levelRepeatMetres": [
+        6.25,
+        25,
+        100,
+        400,
+        1600
+      ],
+      "tilePixelSize": 512,
+      "gutterPixels": 4,
+      "atlasPixelSize": [
+        1536,
+        1024
+      ],
+      "originalPath": "assets/art/visual-library/terrain/materials/Originals/visual-terrain-material-desert-01-lod.png",
+      "generationScript": "scripts/build_terrain_lod_atlases.py",
+      "sourceImageKey": "assets/art/visual-library/terrain/materials/visual-terrain-material-desert-01.webp",
+      "image": {
+        "key": "assets/art/visual-library/terrain/materials/visual-terrain-material-desert-01-lod.webp",
+        "generated": true,
+        "status": "generated",
+        "promptDescription": "Five seamless material scales derived deterministically from the canonical source: fine 6.25 m, local 25 m, regional 100 m, broad 400 m, and orbit-view 1600 m.",
+        "notes": "The three broadest scales use periodic palette-preserving colour variation; the lossless atlas original is stored beside the published WebP."
+      }
     }
   },
   {
@@ -123,6 +173,31 @@
       "status": "generated",
       "promptDescription": "Identity-neutral close-up natural grass cover derived from the MineIT Desktop Grassland source for world-aligned 3D ground.",
       "notes": "Lossless processed PNG is retained under Originals. Physical-device visual acceptance remains separate."
+    },
+    "lodAtlas": {
+      "levelRepeatMetres": [
+        6.25,
+        25,
+        100,
+        400,
+        1600
+      ],
+      "tilePixelSize": 512,
+      "gutterPixels": 4,
+      "atlasPixelSize": [
+        1536,
+        1024
+      ],
+      "originalPath": "assets/art/visual-library/terrain/materials/Originals/visual-terrain-material-grassland-01-lod.png",
+      "generationScript": "scripts/build_terrain_lod_atlases.py",
+      "sourceImageKey": "assets/art/visual-library/terrain/materials/visual-terrain-material-grassland-01.webp",
+      "image": {
+        "key": "assets/art/visual-library/terrain/materials/visual-terrain-material-grassland-01-lod.webp",
+        "generated": true,
+        "status": "generated",
+        "promptDescription": "Five seamless material scales derived deterministically from the canonical source: fine 6.25 m, local 25 m, regional 100 m, broad 400 m, and orbit-view 1600 m.",
+        "notes": "The three broadest scales use periodic palette-preserving colour variation; the lossless atlas original is stored beside the published WebP."
+      }
     }
   },
   {
@@ -151,6 +226,31 @@
       "status": "generated",
       "promptDescription": "Identity-neutral close-up leaf litter, moss and soil derived from the MineIT Desktop ForrestFloor source for world-aligned 3D ground.",
       "notes": "The Desktop source retains its original ForrestFloor spelling in provenance. Lossless processed PNG is retained under Originals."
+    },
+    "lodAtlas": {
+      "levelRepeatMetres": [
+        6.25,
+        25,
+        100,
+        400,
+        1600
+      ],
+      "tilePixelSize": 512,
+      "gutterPixels": 4,
+      "atlasPixelSize": [
+        1536,
+        1024
+      ],
+      "originalPath": "assets/art/visual-library/terrain/materials/Originals/visual-terrain-material-forest-01-lod.png",
+      "generationScript": "scripts/build_terrain_lod_atlases.py",
+      "sourceImageKey": "assets/art/visual-library/terrain/materials/visual-terrain-material-forest-01.webp",
+      "image": {
+        "key": "assets/art/visual-library/terrain/materials/visual-terrain-material-forest-01-lod.webp",
+        "generated": true,
+        "status": "generated",
+        "promptDescription": "Five seamless material scales derived deterministically from the canonical source: fine 6.25 m, local 25 m, regional 100 m, broad 400 m, and orbit-view 1600 m.",
+        "notes": "The three broadest scales use periodic palette-preserving colour variation; the lossless atlas original is stored beside the published WebP."
+      }
     }
   },
   {
@@ -179,6 +279,31 @@
       "status": "generated",
       "promptDescription": "Identity-neutral close-up damp soil, reeds and low vegetation derived from the MineIT Desktop Wetland source for world-aligned 3D ground.",
       "notes": "Lossless processed PNG is retained under Originals. Physical-device visual acceptance remains separate."
+    },
+    "lodAtlas": {
+      "levelRepeatMetres": [
+        6.25,
+        25,
+        100,
+        400,
+        1600
+      ],
+      "tilePixelSize": 512,
+      "gutterPixels": 4,
+      "atlasPixelSize": [
+        1536,
+        1024
+      ],
+      "originalPath": "assets/art/visual-library/terrain/materials/Originals/visual-terrain-material-wetland-01-lod.png",
+      "generationScript": "scripts/build_terrain_lod_atlases.py",
+      "sourceImageKey": "assets/art/visual-library/terrain/materials/visual-terrain-material-wetland-01.webp",
+      "image": {
+        "key": "assets/art/visual-library/terrain/materials/visual-terrain-material-wetland-01-lod.webp",
+        "generated": true,
+        "status": "generated",
+        "promptDescription": "Five seamless material scales derived deterministically from the canonical source: fine 6.25 m, local 25 m, regional 100 m, broad 400 m, and orbit-view 1600 m.",
+        "notes": "The three broadest scales use periodic palette-preserving colour variation; the lossless atlas original is stored beside the published WebP."
+      }
     }
   },
   {
@@ -207,6 +332,31 @@
       "status": "generated",
       "promptDescription": "Identity-neutral close-up cold scrub, lichen and frost-muted ground derived from the MineIT Desktop Tundra source for world-aligned 3D ground.",
       "notes": "Lossless processed PNG is retained under Originals. Physical-device visual acceptance remains separate."
+    },
+    "lodAtlas": {
+      "levelRepeatMetres": [
+        6.25,
+        25,
+        100,
+        400,
+        1600
+      ],
+      "tilePixelSize": 512,
+      "gutterPixels": 4,
+      "atlasPixelSize": [
+        1536,
+        1024
+      ],
+      "originalPath": "assets/art/visual-library/terrain/materials/Originals/visual-terrain-material-tundra-01-lod.png",
+      "generationScript": "scripts/build_terrain_lod_atlases.py",
+      "sourceImageKey": "assets/art/visual-library/terrain/materials/visual-terrain-material-tundra-01.webp",
+      "image": {
+        "key": "assets/art/visual-library/terrain/materials/visual-terrain-material-tundra-01-lod.webp",
+        "generated": true,
+        "status": "generated",
+        "promptDescription": "Five seamless material scales derived deterministically from the canonical source: fine 6.25 m, local 25 m, regional 100 m, broad 400 m, and orbit-view 1600 m.",
+        "notes": "The three broadest scales use periodic palette-preserving colour variation; the lossless atlas original is stored beside the published WebP."
+      }
     }
   },
   {
@@ -235,6 +385,31 @@
       "status": "generated",
       "promptDescription": "Identity-neutral close-up cryogenic ice surface derived from the MineIT Desktop CryogenicField source for world-aligned 3D ground.",
       "notes": "Lossless processed PNG is retained under Originals. Physical-device visual acceptance remains separate."
+    },
+    "lodAtlas": {
+      "levelRepeatMetres": [
+        6.25,
+        25,
+        100,
+        400,
+        1600
+      ],
+      "tilePixelSize": 512,
+      "gutterPixels": 4,
+      "atlasPixelSize": [
+        1536,
+        1024
+      ],
+      "originalPath": "assets/art/visual-library/terrain/materials/Originals/visual-terrain-material-ice-sheet-01-lod.png",
+      "generationScript": "scripts/build_terrain_lod_atlases.py",
+      "sourceImageKey": "assets/art/visual-library/terrain/materials/visual-terrain-material-ice-sheet-01.webp",
+      "image": {
+        "key": "assets/art/visual-library/terrain/materials/visual-terrain-material-ice-sheet-01-lod.webp",
+        "generated": true,
+        "status": "generated",
+        "promptDescription": "Five seamless material scales derived deterministically from the canonical source: fine 6.25 m, local 25 m, regional 100 m, broad 400 m, and orbit-view 1600 m.",
+        "notes": "The three broadest scales use periodic palette-preserving colour variation; the lossless atlas original is stored beside the published WebP."
+      }
     }
   },
   {
@@ -263,6 +438,31 @@
       "status": "generated",
       "promptDescription": "Identity-neutral close-up rough cooled volcanic rock derived from the MineIT Desktop VolcanicRock source for world-aligned 3D ground.",
       "notes": "Lossless processed PNG is retained under Originals. Physical-device visual acceptance remains separate."
+    },
+    "lodAtlas": {
+      "levelRepeatMetres": [
+        6.25,
+        25,
+        100,
+        400,
+        1600
+      ],
+      "tilePixelSize": 512,
+      "gutterPixels": 4,
+      "atlasPixelSize": [
+        1536,
+        1024
+      ],
+      "originalPath": "assets/art/visual-library/terrain/materials/Originals/visual-terrain-material-volcanic-field-01-lod.png",
+      "generationScript": "scripts/build_terrain_lod_atlases.py",
+      "sourceImageKey": "assets/art/visual-library/terrain/materials/visual-terrain-material-volcanic-field-01.webp",
+      "image": {
+        "key": "assets/art/visual-library/terrain/materials/visual-terrain-material-volcanic-field-01-lod.webp",
+        "generated": true,
+        "status": "generated",
+        "promptDescription": "Five seamless material scales derived deterministically from the canonical source: fine 6.25 m, local 25 m, regional 100 m, broad 400 m, and orbit-view 1600 m.",
+        "notes": "The three broadest scales use periodic palette-preserving colour variation; the lossless atlas original is stored beside the published WebP."
+      }
     }
   },
   {
@@ -291,6 +491,31 @@
       "status": "generated",
       "promptDescription": "Identity-neutral close-up cooled crust with glowing lava fissures derived from the MineIT Desktop LavaPlain source for world-aligned 3D ground.",
       "notes": "Lossless processed PNG is retained under Originals. The current mobile renderer consumes this as base colour without an emissive channel."
+    },
+    "lodAtlas": {
+      "levelRepeatMetres": [
+        6.25,
+        25,
+        100,
+        400,
+        1600
+      ],
+      "tilePixelSize": 512,
+      "gutterPixels": 4,
+      "atlasPixelSize": [
+        1536,
+        1024
+      ],
+      "originalPath": "assets/art/visual-library/terrain/materials/Originals/visual-terrain-material-lava-field-01-lod.png",
+      "generationScript": "scripts/build_terrain_lod_atlases.py",
+      "sourceImageKey": "assets/art/visual-library/terrain/materials/visual-terrain-material-lava-field-01.webp",
+      "image": {
+        "key": "assets/art/visual-library/terrain/materials/visual-terrain-material-lava-field-01-lod.webp",
+        "generated": true,
+        "status": "generated",
+        "promptDescription": "Five seamless material scales derived deterministically from the canonical source: fine 6.25 m, local 25 m, regional 100 m, broad 400 m, and orbit-view 1600 m.",
+        "notes": "The three broadest scales use periodic palette-preserving colour variation; the lossless atlas original is stored beside the published WebP."
+      }
     }
   },
   {
@@ -319,6 +544,31 @@
       "status": "generated",
       "promptDescription": "Identity-neutral close-up chemically stained toxic ground derived from the MineIT Desktop ToxicWasteland source for world-aligned 3D ground.",
       "notes": "Lossless processed PNG is retained under Originals. Physical-device visual acceptance remains separate."
+    },
+    "lodAtlas": {
+      "levelRepeatMetres": [
+        6.25,
+        25,
+        100,
+        400,
+        1600
+      ],
+      "tilePixelSize": 512,
+      "gutterPixels": 4,
+      "atlasPixelSize": [
+        1536,
+        1024
+      ],
+      "originalPath": "assets/art/visual-library/terrain/materials/Originals/visual-terrain-material-toxic-wasteland-01-lod.png",
+      "generationScript": "scripts/build_terrain_lod_atlases.py",
+      "sourceImageKey": "assets/art/visual-library/terrain/materials/visual-terrain-material-toxic-wasteland-01.webp",
+      "image": {
+        "key": "assets/art/visual-library/terrain/materials/visual-terrain-material-toxic-wasteland-01-lod.webp",
+        "generated": true,
+        "status": "generated",
+        "promptDescription": "Five seamless material scales derived deterministically from the canonical source: fine 6.25 m, local 25 m, regional 100 m, broad 400 m, and orbit-view 1600 m.",
+        "notes": "The three broadest scales use periodic palette-preserving colour variation; the lossless atlas original is stored beside the published WebP."
+      }
     }
   }
 ]
