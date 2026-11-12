@@ -25,7 +25,49 @@
       "status": "generated",
       "promptDescription": "Square seamless tileable bedrock base-colour texture for a realistic mobile terrain game. Straight-on orthographic scan of continuous weathered grey granite, broad irregular connected fractures with subordinate fine mineral grain and hairline fissures. Neutral warm grey with subtle mineral variation. Uniform diffuse flat illumination, no directional highlights, cast shadows, ambient occlusion, vignette or perspective. Restrained contrast without a distinctive central formation. Fractures continue across opposite edges; even detail distribution. No detached pebbles, boulder piles, vegetation, moss, soil, snow, grid, stripes, text, borders or watermarks. Full-bleed single material, 1024 by 1024 pixels.",
       "notes": "Generated bedrock for exposed mountain faces. Native lossless original in Originals. Android uses deterministic multi-offset triplanar sampling at 100 metres. Device visual acceptance pending."
-    }
+    },
+    "detailLayers": [
+      {
+        "id": "visual-terrain-material-barren-rock-mid",
+        "role": "mid",
+        "repeatMetresHint": 20,
+        "pixelSize": 1024,
+        "provenance": {
+          "source": "Built-in image generation, 2026-11-12",
+          "sourceSha256": "0c6be4bb4863fd6b9ee79c1de6a1494f55c63d580ce15f2faed2bea22773f7cd",
+          "sourceBytes": 4224559,
+          "sourcePixelSize": 1254,
+          "processing": "Lossless source PNG retained unchanged. Lanczos downsample to 1024px, 32px opposite-edge feather, RGB WebP quality 94."
+        },
+        "image": {
+          "key": "assets/art/visual-library/terrain/materials/visual-terrain-material-barren-rock-mid.webp",
+          "generated": true,
+          "status": "generated",
+          "promptDescription": "Orthographic seamless weathered grey granite with medium fractured plates and fissures, even diffuse light, no vegetation or cast shadows.",
+          "notes": "Identity-neutral rock detail layer. Native lossless original retained in Originals; physical-device acceptance pending."
+        }
+      },
+      {
+        "id": "visual-terrain-material-barren-rock-fine",
+        "role": "fine",
+        "repeatMetresHint": 3,
+        "pixelSize": 1024,
+        "provenance": {
+          "source": "Built-in image generation, 2026-11-12",
+          "sourceSha256": "45898cd9472edc97da460663e79930ac9a0d8a13b4969a288d1c5b653e043440",
+          "sourceBytes": 4379144,
+          "sourcePixelSize": 1254,
+          "processing": "Lossless source PNG retained unchanged. Lanczos downsample to 1024px, 32px opposite-edge feather, RGB WebP quality 94."
+        },
+        "image": {
+          "key": "assets/art/visual-library/terrain/materials/visual-terrain-material-barren-rock-fine.webp",
+          "generated": true,
+          "status": "generated",
+          "promptDescription": "Orthographic seamless grey granite microdetail: dense fine mineral grains, tiny pits and hairline fissures, even diffuse light, no large slabs or cast shadows.",
+          "notes": "Identity-neutral rock detail layer. Native lossless original retained in Originals; physical-device acceptance pending."
+        }
+      }
+    ]
   },
   {
     "id": "visual-terrain-material-desert-01",
