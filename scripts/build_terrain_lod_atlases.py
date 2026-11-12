@@ -41,8 +41,12 @@ def macro_tile(source: np.ndarray, seed: int, frequency: int, strength: float) -
     principal = vectors[:, -1] * np.sqrt(max(values[-1], 0.0))
     secondary = vectors[:, -2] * np.sqrt(max(values[-2], 0.0))
     broad = periodic_noise(INNER_SIZE, seed, frequency)
-    detail = periodic_noise(INNER_SIZE, seed + 971, frequency * 2)
-    colour = mean + strength * (broad[..., None] * principal + 0.5 * detail[..., None] * secondary)
+    medium = periodic_noise(INNER_SIZE, seed + 971, frequency * 4)
+    fine = periodic_noise(INNER_SIZE, seed + 1949, frequency * 12)
+    colour = mean + strength * (
+        (0.5 * broad + 0.4 * medium + 0.25 * fine)[..., None] * principal
+        + (0.2 * medium + 0.15 * fine)[..., None] * secondary
+    )
     return Image.fromarray(np.clip(colour, 0, 255).astype(np.uint8), "RGB")
 
 
@@ -58,8 +62,8 @@ def build(material: dict) -> None:
     source_pixels = np.asarray(source, dtype=np.float32)
     seed = int.from_bytes(hashlib.sha256(material["id"].encode()).digest()[:8], "little")
     near = ImageEnhance.Sharpness(source).enhance(1.2)
-    regional = macro_tile(source_pixels, seed, 2, 2.2)
-    broad = macro_tile(source_pixels, seed + 1, 1, 2.8)
+    regional = macro_tile(source_pixels, seed, 2, 1.5)
+    broad = macro_tile(source_pixels, seed + 1, 1, 1.7)
     hundred = Image.blend(source.filter(ImageFilter.GaussianBlur(18)), regional, 0.65)
     tiles = [near, source, hundred, regional, broad]
     atlas = Image.new("RGB", ATLAS_SIZE)
