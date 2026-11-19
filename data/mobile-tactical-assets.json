@@ -888,7 +888,7 @@
     "id": "tactical-vehicle-haulage-truck",
     "name": "Haulage Truck tactical symbol",
     "assetType": "vehicle-symbol",
-    "entityId": null,
+    "entityId": "machine-haulage-truck",
     "intendedGameId": "game-mineit-mobile",
     "image": {
       "key": "assets/art/universe/tactical/tactical-vehicle-haulage-truck.webp",
@@ -913,7 +913,6 @@
         "assets/art/universe/tactical/64px/tactical-reference-quarry-level-1.png"
       ]
     },
-    "orientation": "side-view; heading convention not established",
-    "identityStatus": "unlinked; canonical haulage-truck identity not established"
+    "orientation": "side-view; heading convention not established"
   }
 ]

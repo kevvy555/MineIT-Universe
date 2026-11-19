@@ -10,7 +10,7 @@ const androidReference = load('game-specs/mineit-mobile/industrial-alignment-ref
 const report = readFileSync(new URL('../docs/IndustrialCatalogueAlignmentReview.md', import.meta.url), 'utf8');
 
 assert.equal(parts.length, 19);
-assert.equal(machines.length, 45);
+assert.equal(machines.length, 46);
 assert.equal(buildings.length, 24);
 assert.equal(specifications.length, 1);
 assert.equal(androidReference.length, 1);
@@ -51,8 +51,12 @@ for (const part of parts) {
 
 // Machines: service slots are the exact meaning of partIds; production BOM is distinct.
 for (const machine of machines) {
-  assert.ok(Array.isArray(machine.servicePartRequirements) && machine.servicePartRequirements.length,
-    `${machine.id}: every Machine needs identifiable service Parts`);
+  const unreviewedHaulage = machine.id === 'machine-haulage-truck' &&
+    machine.engineeringStatus === 'not-reviewed' &&
+    machine.fieldApprovalStatuses.servicePartRequirements === 'Not Reviewed';
+  assert.ok(Array.isArray(machine.servicePartRequirements) &&
+    (machine.servicePartRequirements.length || unreviewedHaulage),
+    `${machine.id}: every reviewed Machine needs identifiable service Parts`);
   const serviceIds = machine.servicePartRequirements.map(slot => slot.partId);
   assert.deepEqual(machine.partIds, [...new Set(serviceIds)], `${machine.id}: partIds must project service slots`);
   for (const slot of machine.servicePartRequirements) {
@@ -217,4 +221,4 @@ for (const capability of spec.extractionCapabilities) {
   assert.ok(report.includes(capability.name), `Consolidated report missing ${capability.name}`);
 }
 
-console.log('Industrial alignment valid: 24 Buildings, 45 Machines, 19 Parts, 9 extraction capabilities, one deterministic wear model.');
+console.log('Industrial alignment valid: 24 Buildings, 46 Machines, 19 Parts, 9 extraction capabilities, one deterministic wear model.');

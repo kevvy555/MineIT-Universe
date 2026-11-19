@@ -19,8 +19,18 @@ const ids = {
   parts: new Set(parts.map(p => p.id)),
   materials: new Set(materials.map(m => m.id))
 };
-assert.equal(machines.length, 45);
+assert.equal(machines.length, 46);
 assert.equal(ids.machines.size, machines.length);
+const haulage = machines.find(m => m.id === "machine-haulage-truck");
+assert.ok(haulage, "Canonical haulage truck must exist");
+assert.equal(haulage.engineeringStatus, "not-reviewed");
+assert.equal(haulage.approval, "Not Reviewed");
+assert.deepEqual(haulage.servicePartRequirements, []);
+assert.equal(haulage.fieldApprovalStatuses.servicePartRequirements, "Not Reviewed");
+assert.equal(haulage.manufacturing.finishedPartInputs, null);
+assert.equal(haulage.operating.ratedCapacity, null);
+assert.equal(haulage.image.generated, false);
+
 const all = [...machines, ...parts, ...buildings, ...materials];
 const byId = new Map(all.map(x => [x.id, x]));
 const catalogue = {
@@ -173,7 +183,7 @@ assert.equal(aliases.size, 8);
 for (const proposed of reference.unmappedCandidates.machines)
   assert.ok(aliases.has(proposed.id), "Unmapped discovery candidate: " + proposed.id);
 const rows = industrialReviewRows("machines", catalogue, reference);
-assert.equal(rows.length, 45);
+assert.equal(rows.length, 46);
 assert.deepEqual(new Set(rows.map(r => r.id)), ids.machines);
 const displayed = new Set(rows.flatMap(r => Object.keys(r.fields)));
 assert.deepEqual(displayed, new Set(selected.map(d => d.fieldKey)),
@@ -182,8 +192,8 @@ assert.ok(rows.every(r => r.canonical && !("catalogueStatus" in r.fields)));
 assert.ok(rows.every(r => !Object.keys(r.fields).some(k =>
   k.startsWith("review.") || k.startsWith("provenance.") ||
   k.startsWith("fieldApprovalStatuses."))));
-assert.equal(rows.filter(r => r.fields["image.generated"] === false).length, 3,
-  "The three new specialist Machine identities must visibly remain in the art queue");
+assert.equal(rows.filter(r => r.fields["image.generated"] === false).length, 4,
+  "The ungenerated specialist and haulage Machine identities must remain in the art queue");
 const individual = pendingColumnSelection(rows, [...displayed], "machine-ship-reactor");
 assert.ok(individual.includes("manufacturing.manufacturerCostCC"));
 assert.ok(individual.includes("pendingPartCompatibility"));
@@ -198,4 +208,4 @@ const broken = { ...machines.find(m => m.amenityProfile),
 assert.throws(() => approvalSummary("machines", broken, flatten(broken), catalogue),
   /disagrees|cannot approve|requires approved price evidence/,
   "Provisional quote must never be treated as approved");
-console.log("Machines consolidated: 45 canonical, 30 review fields, 5 approved physical BOMs, 35 provisional CC scenarios, 10 blocked designs, 14 pending compatibility edges.");
+console.log("Machines consolidated: 46 canonical, 30 review fields, 5 approved physical BOMs, 35 provisional CC scenarios, 10 blocked designs, 14 pending compatibility edges.");

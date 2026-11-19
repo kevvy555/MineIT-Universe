@@ -746,7 +746,7 @@ const tacticalBuildings = tacticalAssets.filter(item => item.assetType === 'buil
 const pylonAssets = tacticalAssets.filter(item => item.id === 'tactical-power-pylon' && item.assetType === 'infrastructure-symbol');
 if (pylonAssets.length !== 1) errors.push('Expected one tactical power pylon symbol.');
 if (tacticalAssets.filter(item => item.id === 'tactical-machine-exploration-vehicle' && item.entityId === 'machine-exploration-vehicle').length !== 1) errors.push('Expected one exploration vehicle tactical symbol linked to its machine.');
-if (tacticalAssets.filter(item => item.id === 'tactical-vehicle-haulage-truck' && item.assetType === 'vehicle-symbol').length !== 1) errors.push('Expected one haulage truck tactical symbol.');
+if (tacticalAssets.filter(item => item.id === 'tactical-vehicle-haulage-truck' && item.assetType === 'vehicle-symbol' && item.entityId === 'machine-haulage-truck').length !== 1) errors.push('Expected one haulage truck tactical symbol.');
 for (let level = 1; level <= 5; level++) {
   const matches = tacticalAssets.filter(item => item.id === `tactical-level-${level}` && item.assetType === 'level-badge');
   if (matches.length !== 1) errors.push(`Expected one tactical level ${level} badge.`);
