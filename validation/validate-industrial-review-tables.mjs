@@ -10,7 +10,7 @@ assert.match(reference.sourceCommit, /^[0-9a-f]{40}$/);
 assert.equal(reference.sourceFiles.length, 10);
 const expected = {
   parts: { original: 14, reconciled: 8, total: 19 },
-  machines: { original: 34, reconciled: 8, total: 45 },
+  machines: { original: 34, reconciled: 8, total: 46 },
   buildings: { original: 24, reconciled: 0, total: 24 }
 };
 const collections = Object.fromEntries(["parts", "machines", "buildings", "columnDefinitions", "approvalStatuses"].map(kind =>
@@ -88,4 +88,4 @@ assert.equal(camp.fields["review.quantitativeBOM.site_construction_labour_hours"
 assert.match(camp.fields["review.systematicReview.review_status"], /APPROVED/);
 const quarry = buildings.find(row => row.id === "building-quarry");
 assert.match(quarry.fields["review.quantitativeBOM.approval_status"], /UNAPPROVED/);
-console.log("Industrial review tables validated: 19 canonical Parts, 45 canonical Machines, 24 Buildings; three retired source IDs ignored.");
+console.log("Industrial review tables validated: 19 canonical Parts, 46 canonical Machines, 24 Buildings; three retired source IDs ignored.");

@@ -142,7 +142,7 @@ assert.ok(!machineDefinitions.some(d => d.fieldKey.startsWith("review.") ||
 const machineRequired = machineDefinitions.filter(d => d.requiresApproval)
   .map(d => d.fieldKey);
 const machineRows = industrialReviewRows("machines", catalogue, industrialReference);
-assert.equal(machineRows.length, 45);
+assert.equal(machineRows.length, 46);
 assert.equal(machineRows.filter(r => r.fields.approval === "Approved").length, 0,
   "Approved amenity recipe is not blanket Machine approval");
 assert.equal(machineRows.filter(r => r.fields.approval === "Blocked").length, 10,
