@@ -731,3 +731,7 @@ assets/art/universe/resources/Originals/
 ```
 
 The generator should process records whose image state requires generation and leave Mobile-owned balance data such as rarity, price, scan requirement, quality and per-save reserve out of the canonical artwork.
+
+## MineIT Mobile tactical symbols
+
+The symbolic tactical library, its independently layered level badges, generation prompts and small PNGs are documented in `docs/MobileTacticalArtwork.md`. These are separate presentation art and must not replace an identity's 2D catalogue art, level art, 3D model or their prompts. Keep full-size originals and record the actual tactical prompt/reference separately; preserve stable linked building IDs. A compact pylon is a reusable infrastructure visual, not a newly asserted canonical machine.

@@ -28,6 +28,8 @@ const COLLECTION_LABELS = {
   parts: 'Part',
   machines: 'Machine',
   buildings: 'Building',
+  buildingMobileLevelImages: 'Building Level Artwork',
+  mobileTacticalAssets: 'Mobile Tactical Artwork',
   researchTechnologies: 'Research Technology',
   substanceArchetypes: 'Substance Archetype',
   substanceProperties: 'Substance Property',
@@ -87,7 +89,8 @@ const SCALAR_REFS = {
   namedSubstances: ['genericSubstanceId'],
   mobileResourceDefinitions: ['gameId', 'genericSubstanceId'],
   mobileResourceOccurrenceProfiles: ['resourceId'],
-  mobileBiologicalResources: ['gameId']
+  mobileBiologicalResources: ['gameId'],
+  mobileTacticalAssets: ['entityId', 'intendedGameId']
 };
 
 const ARRAY_REFS = {

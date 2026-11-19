@@ -1,0 +1,856 @@
+[
+  {
+    "id": "tactical-building-collection-camp",
+    "name": "Collection Camp tactical symbol",
+    "assetType": "building-symbol",
+    "entityId": "building-collection-camp",
+    "intendedGameId": "game-mineit-mobile",
+    "image": {
+      "key": "assets/art/universe/tactical/tactical-building-collection-camp.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Create ONE standalone symbolic tactical map icon for MineIT Mobile, matching the supplied pickaxe reference's clean polished graphic game-icon style. Subject: a rugged canvas frontier collection tent with a small pile of gathered stones, representing a collection camp. Strong bold dark charcoal outlines, simplified geometric forms, pale white/light grey, charcoal and restrained vivid orange, limited details, flat icon presentation, readable at 32 pixels. Centred isolated object with generous transparent margin. No background, no shadows beyond object, no terrain, no map, no text, no numbers, no badges, no logos, no frames, no watermark. Do not include the reference pickaxe unless explicitly requested.",
+      "notes": "Tactical-only presentation art; does not replace catalogue imagery or 3D prompts."
+    },
+    "originalKey": "assets/art/universe/tactical/Originals/tactical-building-collection-camp.png",
+    "smallImageKey": "assets/art/universe/tactical/32px/tactical-building-collection-camp.png",
+    "smallSize": [
+      32,
+      32
+    ],
+    "generator": "image-generation",
+    "generationReference": {
+      "previewKey": "assets/art/universe/tactical/tactical-reference-quarry-level-1.webp",
+      "originalKey": "assets/art/universe/tactical/Originals/tactical-reference-quarry-level-1.png",
+      "prompt": "Create ONE standalone tactical map sprite for MineIT Mobile: a crisp, simple, symbolic LEVEL 1 QUARRY marker. This is a map symbol, not a depiction of a building or a realistic aerial view. Show a single bold pickaxe and a small group of three chunky stone bricks, arranged as a compact, immediately recognizable graphic. Include a prominent, perfectly legible numeral \"1\" as a small integrated level badge in the lower-right corner. Visual style: polished, clean sci-fi game icon, strong silhouette, simple geometric shapes, restrained white/light stone, charcoal and orange palette, clear contrast, minimal details, designed to remain legible at 24–48 pixels. Direct flat overhead/icon presentation, centred and isolated with generous padding on genuinely transparent background. No terrain, no scene, no building, no other text, no border around the whole image, no watermark.",
+      "smallImageKeys": [
+        "assets/art/universe/tactical/32px/tactical-reference-quarry-level-1.png",
+        "assets/art/universe/tactical/64px/tactical-reference-quarry-level-1.png"
+      ]
+    }
+  },
+  {
+    "id": "tactical-building-quarry",
+    "name": "Quarry tactical symbol",
+    "assetType": "building-symbol",
+    "entityId": "building-quarry",
+    "intendedGameId": "game-mineit-mobile",
+    "image": {
+      "key": "assets/art/universe/tactical/tactical-building-quarry.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Create ONE standalone symbolic tactical map icon for MineIT Mobile, matching the supplied pickaxe reference's clean polished graphic game-icon style. Subject: a single pickaxe above three chunky stone blocks, representing a quarry. Strong bold dark charcoal outlines, simplified geometric forms, pale white/light grey, charcoal and restrained vivid orange, limited details, flat icon presentation, readable at 32 pixels. Centred isolated object with generous transparent margin. No background, no shadows beyond object, no terrain, no map, no text, no numbers, no badges, no logos, no frames, no watermark. Do not include the reference pickaxe unless explicitly requested.",
+      "notes": "Tactical-only presentation art; does not replace catalogue imagery or 3D prompts."
+    },
+    "originalKey": "assets/art/universe/tactical/Originals/tactical-building-quarry.png",
+    "smallImageKey": "assets/art/universe/tactical/32px/tactical-building-quarry.png",
+    "smallSize": [
+      32,
+      32
+    ],
+    "generator": "image-generation",
+    "generationReference": {
+      "previewKey": "assets/art/universe/tactical/tactical-reference-quarry-level-1.webp",
+      "originalKey": "assets/art/universe/tactical/Originals/tactical-reference-quarry-level-1.png",
+      "prompt": "Create ONE standalone tactical map sprite for MineIT Mobile: a crisp, simple, symbolic LEVEL 1 QUARRY marker. This is a map symbol, not a depiction of a building or a realistic aerial view. Show a single bold pickaxe and a small group of three chunky stone bricks, arranged as a compact, immediately recognizable graphic. Include a prominent, perfectly legible numeral \"1\" as a small integrated level badge in the lower-right corner. Visual style: polished, clean sci-fi game icon, strong silhouette, simple geometric shapes, restrained white/light stone, charcoal and orange palette, clear contrast, minimal details, designed to remain legible at 24–48 pixels. Direct flat overhead/icon presentation, centred and isolated with generous padding on genuinely transparent background. No terrain, no scene, no building, no other text, no border around the whole image, no watermark.",
+      "smallImageKeys": [
+        "assets/art/universe/tactical/32px/tactical-reference-quarry-level-1.png",
+        "assets/art/universe/tactical/64px/tactical-reference-quarry-level-1.png"
+      ]
+    }
+  },
+  {
+    "id": "tactical-building-simple-pit-mine",
+    "name": "Simple Pit Mine tactical symbol",
+    "assetType": "building-symbol",
+    "entityId": "building-simple-pit-mine",
+    "intendedGameId": "game-mineit-mobile",
+    "image": {
+      "key": "assets/art/universe/tactical/tactical-building-simple-pit-mine.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Create ONE standalone symbolic tactical map icon for MineIT Mobile, matching the supplied pickaxe reference's clean polished graphic game-icon style. Subject: a simple open mining pit with a descending stepped rim and one pickaxe, representing an open pit mine. Strong bold dark charcoal outlines, simplified geometric forms, pale white/light grey, charcoal and restrained vivid orange, limited details, flat icon presentation, readable at 32 pixels. Centred isolated object with generous transparent margin. No background, no shadows beyond object, no terrain, no map, no text, no numbers, no badges, no logos, no frames, no watermark. Do not include the reference pickaxe unless explicitly requested.",
+      "notes": "Tactical-only presentation art; does not replace catalogue imagery or 3D prompts."
+    },
+    "originalKey": "assets/art/universe/tactical/Originals/tactical-building-simple-pit-mine.png",
+    "smallImageKey": "assets/art/universe/tactical/32px/tactical-building-simple-pit-mine.png",
+    "smallSize": [
+      32,
+      32
+    ],
+    "generator": "image-generation",
+    "generationReference": {
+      "previewKey": "assets/art/universe/tactical/tactical-reference-quarry-level-1.webp",
+      "originalKey": "assets/art/universe/tactical/Originals/tactical-reference-quarry-level-1.png",
+      "prompt": "Create ONE standalone tactical map sprite for MineIT Mobile: a crisp, simple, symbolic LEVEL 1 QUARRY marker. This is a map symbol, not a depiction of a building or a realistic aerial view. Show a single bold pickaxe and a small group of three chunky stone bricks, arranged as a compact, immediately recognizable graphic. Include a prominent, perfectly legible numeral \"1\" as a small integrated level badge in the lower-right corner. Visual style: polished, clean sci-fi game icon, strong silhouette, simple geometric shapes, restrained white/light stone, charcoal and orange palette, clear contrast, minimal details, designed to remain legible at 24–48 pixels. Direct flat overhead/icon presentation, centred and isolated with generous padding on genuinely transparent background. No terrain, no scene, no building, no other text, no border around the whole image, no watermark.",
+      "smallImageKeys": [
+        "assets/art/universe/tactical/32px/tactical-reference-quarry-level-1.png",
+        "assets/art/universe/tactical/64px/tactical-reference-quarry-level-1.png"
+      ]
+    }
+  },
+  {
+    "id": "tactical-building-deep-mine",
+    "name": "Deep Mine tactical symbol",
+    "assetType": "building-symbol",
+    "entityId": "building-deep-mine",
+    "intendedGameId": "game-mineit-mobile",
+    "image": {
+      "key": "assets/art/universe/tactical/tactical-building-deep-mine.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Create ONE standalone symbolic tactical map icon for MineIT Mobile, matching the supplied pickaxe reference's clean polished graphic game-icon style. Subject: two crossed pickaxes representing an underground mine. Strong bold dark charcoal outlines, simplified geometric forms, pale white/light grey, charcoal and restrained vivid orange, limited details, flat icon presentation, readable at 32 pixels. Centred isolated object with generous transparent margin. No background, no shadows beyond object, no terrain, no map, no text, no numbers, no badges, no logos, no frames, no watermark. Do not include the reference pickaxe unless it is explicitly the requested subject.",
+      "notes": "Tactical-only presentation art; does not replace catalogue imagery or 3D prompts."
+    },
+    "originalKey": "assets/art/universe/tactical/Originals/tactical-building-deep-mine.png",
+    "smallImageKey": "assets/art/universe/tactical/32px/tactical-building-deep-mine.png",
+    "smallSize": [
+      32,
+      32
+    ],
+    "generator": "image-generation",
+    "generationReference": {
+      "previewKey": "assets/art/universe/tactical/tactical-reference-quarry-level-1.webp",
+      "originalKey": "assets/art/universe/tactical/Originals/tactical-reference-quarry-level-1.png",
+      "prompt": "Create ONE standalone tactical map sprite for MineIT Mobile: a crisp, simple, symbolic LEVEL 1 QUARRY marker. This is a map symbol, not a depiction of a building or a realistic aerial view. Show a single bold pickaxe and a small group of three chunky stone bricks, arranged as a compact, immediately recognizable graphic. Include a prominent, perfectly legible numeral \"1\" as a small integrated level badge in the lower-right corner. Visual style: polished, clean sci-fi game icon, strong silhouette, simple geometric shapes, restrained white/light stone, charcoal and orange palette, clear contrast, minimal details, designed to remain legible at 24–48 pixels. Direct flat overhead/icon presentation, centred and isolated with generous padding on genuinely transparent background. No terrain, no scene, no building, no other text, no border around the whole image, no watermark.",
+      "smallImageKeys": [
+        "assets/art/universe/tactical/32px/tactical-reference-quarry-level-1.png",
+        "assets/art/universe/tactical/64px/tactical-reference-quarry-level-1.png"
+      ]
+    }
+  },
+  {
+    "id": "tactical-building-extraction-rig",
+    "name": "Extraction Rig tactical symbol",
+    "assetType": "building-symbol",
+    "entityId": "building-extraction-rig",
+    "intendedGameId": "game-mineit-mobile",
+    "image": {
+      "key": "assets/art/universe/tactical/tactical-building-extraction-rig.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Create ONE standalone symbolic tactical map icon for MineIT Mobile, matching the supplied pickaxe reference's clean polished graphic game-icon style. Subject: a simple oil derrick and droplet representing an extraction rig. Strong bold dark charcoal outlines, simplified geometric forms, pale white/light grey, charcoal and restrained vivid orange, limited details, flat icon presentation, readable at 32 pixels. Centred isolated object with generous transparent margin. No background, no shadows beyond object, no terrain, no map, no text, no numbers, no badges, no logos, no frames, no watermark. Do not include the reference pickaxe unless it is explicitly the requested subject.",
+      "notes": "Tactical-only presentation art; does not replace catalogue imagery or 3D prompts."
+    },
+    "originalKey": "assets/art/universe/tactical/Originals/tactical-building-extraction-rig.png",
+    "smallImageKey": "assets/art/universe/tactical/32px/tactical-building-extraction-rig.png",
+    "smallSize": [
+      32,
+      32
+    ],
+    "generator": "image-generation",
+    "generationReference": {
+      "previewKey": "assets/art/universe/tactical/tactical-reference-quarry-level-1.webp",
+      "originalKey": "assets/art/universe/tactical/Originals/tactical-reference-quarry-level-1.png",
+      "prompt": "Create ONE standalone tactical map sprite for MineIT Mobile: a crisp, simple, symbolic LEVEL 1 QUARRY marker. This is a map symbol, not a depiction of a building or a realistic aerial view. Show a single bold pickaxe and a small group of three chunky stone bricks, arranged as a compact, immediately recognizable graphic. Include a prominent, perfectly legible numeral \"1\" as a small integrated level badge in the lower-right corner. Visual style: polished, clean sci-fi game icon, strong silhouette, simple geometric shapes, restrained white/light stone, charcoal and orange palette, clear contrast, minimal details, designed to remain legible at 24–48 pixels. Direct flat overhead/icon presentation, centred and isolated with generous padding on genuinely transparent background. No terrain, no scene, no building, no other text, no border around the whole image, no watermark.",
+      "smallImageKeys": [
+        "assets/art/universe/tactical/32px/tactical-reference-quarry-level-1.png",
+        "assets/art/universe/tactical/64px/tactical-reference-quarry-level-1.png"
+      ]
+    }
+  },
+  {
+    "id": "tactical-building-water-collector",
+    "name": "Water Collector tactical symbol",
+    "assetType": "building-symbol",
+    "entityId": "building-water-collector",
+    "intendedGameId": "game-mineit-mobile",
+    "image": {
+      "key": "assets/art/universe/tactical/tactical-building-water-collector.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Create ONE standalone symbolic tactical map icon for MineIT Mobile, matching the supplied pickaxe reference's clean polished graphic game-icon style. Subject: a bold water droplet above a compact collection funnel, representing a water collector. Strong bold dark charcoal outlines, simplified geometric forms, pale white/light grey, charcoal and restrained vivid orange, limited details, flat icon presentation, readable at 32 pixels. Centred isolated object with generous transparent margin. No background, no shadows beyond object, no terrain, no map, no text, no numbers, no badges, no logos, no frames, no watermark. Do not include the reference pickaxe unless explicitly requested.",
+      "notes": "Tactical-only presentation art; does not replace catalogue imagery or 3D prompts."
+    },
+    "originalKey": "assets/art/universe/tactical/Originals/tactical-building-water-collector.png",
+    "smallImageKey": "assets/art/universe/tactical/32px/tactical-building-water-collector.png",
+    "smallSize": [
+      32,
+      32
+    ],
+    "generator": "image-generation",
+    "generationReference": {
+      "previewKey": "assets/art/universe/tactical/tactical-reference-quarry-level-1.webp",
+      "originalKey": "assets/art/universe/tactical/Originals/tactical-reference-quarry-level-1.png",
+      "prompt": "Create ONE standalone tactical map sprite for MineIT Mobile: a crisp, simple, symbolic LEVEL 1 QUARRY marker. This is a map symbol, not a depiction of a building or a realistic aerial view. Show a single bold pickaxe and a small group of three chunky stone bricks, arranged as a compact, immediately recognizable graphic. Include a prominent, perfectly legible numeral \"1\" as a small integrated level badge in the lower-right corner. Visual style: polished, clean sci-fi game icon, strong silhouette, simple geometric shapes, restrained white/light stone, charcoal and orange palette, clear contrast, minimal details, designed to remain legible at 24–48 pixels. Direct flat overhead/icon presentation, centred and isolated with generous padding on genuinely transparent background. No terrain, no scene, no building, no other text, no border around the whole image, no watermark.",
+      "smallImageKeys": [
+        "assets/art/universe/tactical/32px/tactical-reference-quarry-level-1.png",
+        "assets/art/universe/tactical/64px/tactical-reference-quarry-level-1.png"
+      ]
+    }
+  },
+  {
+    "id": "tactical-building-crashed-ship",
+    "name": "Crashed Ship tactical symbol",
+    "assetType": "building-symbol",
+    "entityId": "building-crashed-ship",
+    "intendedGameId": "game-mineit-mobile",
+    "image": {
+      "key": "assets/art/universe/tactical/tactical-building-crashed-ship.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Create ONE standalone symbolic tactical map icon for MineIT Mobile, matching the supplied pickaxe reference's clean polished graphic game-icon style. Subject: a small damaged spacecraft silhouette tilted with one broken wing, representing a crashed ship. Strong bold dark charcoal outlines, simplified geometric forms, pale white/light grey, charcoal and restrained vivid orange, limited details, flat icon presentation, readable at 32 pixels. Centred isolated object with generous transparent margin. No background, no shadows beyond object, no terrain, no map, no text, no numbers, no badges, no logos, no frames, no watermark. Do not include the reference pickaxe unless explicitly requested.",
+      "notes": "Tactical-only presentation art; does not replace catalogue imagery or 3D prompts."
+    },
+    "originalKey": "assets/art/universe/tactical/Originals/tactical-building-crashed-ship.png",
+    "smallImageKey": "assets/art/universe/tactical/32px/tactical-building-crashed-ship.png",
+    "smallSize": [
+      32,
+      32
+    ],
+    "generator": "image-generation",
+    "generationReference": {
+      "previewKey": "assets/art/universe/tactical/tactical-reference-quarry-level-1.webp",
+      "originalKey": "assets/art/universe/tactical/Originals/tactical-reference-quarry-level-1.png",
+      "prompt": "Create ONE standalone tactical map sprite for MineIT Mobile: a crisp, simple, symbolic LEVEL 1 QUARRY marker. This is a map symbol, not a depiction of a building or a realistic aerial view. Show a single bold pickaxe and a small group of three chunky stone bricks, arranged as a compact, immediately recognizable graphic. Include a prominent, perfectly legible numeral \"1\" as a small integrated level badge in the lower-right corner. Visual style: polished, clean sci-fi game icon, strong silhouette, simple geometric shapes, restrained white/light stone, charcoal and orange palette, clear contrast, minimal details, designed to remain legible at 24–48 pixels. Direct flat overhead/icon presentation, centred and isolated with generous padding on genuinely transparent background. No terrain, no scene, no building, no other text, no border around the whole image, no watermark.",
+      "smallImageKeys": [
+        "assets/art/universe/tactical/32px/tactical-reference-quarry-level-1.png",
+        "assets/art/universe/tactical/64px/tactical-reference-quarry-level-1.png"
+      ]
+    }
+  },
+  {
+    "id": "tactical-building-farm",
+    "name": "Farm tactical symbol",
+    "assetType": "building-symbol",
+    "entityId": "building-farm",
+    "intendedGameId": "game-mineit-mobile",
+    "image": {
+      "key": "assets/art/universe/tactical/tactical-building-farm.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Create ONE standalone symbolic tactical map icon for MineIT Mobile, matching the supplied pickaxe reference's clean polished graphic game-icon style. Subject: one simple golden wheat sheaf representing food production. Strong bold dark charcoal outlines, simplified geometric forms, pale white/light grey, charcoal and restrained vivid orange, limited details, flat icon presentation, readable at 32 pixels. Centred isolated object with generous transparent margin. No background, no shadows beyond object, no terrain, no map, no text, no numbers, no badges, no logos, no frames, no watermark. Do not include the reference pickaxe unless it is explicitly the requested subject.",
+      "notes": "Tactical-only presentation art; does not replace catalogue imagery or 3D prompts."
+    },
+    "originalKey": "assets/art/universe/tactical/Originals/tactical-building-farm.png",
+    "smallImageKey": "assets/art/universe/tactical/32px/tactical-building-farm.png",
+    "smallSize": [
+      32,
+      32
+    ],
+    "generator": "image-generation",
+    "generationReference": {
+      "previewKey": "assets/art/universe/tactical/tactical-reference-quarry-level-1.webp",
+      "originalKey": "assets/art/universe/tactical/Originals/tactical-reference-quarry-level-1.png",
+      "prompt": "Create ONE standalone tactical map sprite for MineIT Mobile: a crisp, simple, symbolic LEVEL 1 QUARRY marker. This is a map symbol, not a depiction of a building or a realistic aerial view. Show a single bold pickaxe and a small group of three chunky stone bricks, arranged as a compact, immediately recognizable graphic. Include a prominent, perfectly legible numeral \"1\" as a small integrated level badge in the lower-right corner. Visual style: polished, clean sci-fi game icon, strong silhouette, simple geometric shapes, restrained white/light stone, charcoal and orange palette, clear contrast, minimal details, designed to remain legible at 24–48 pixels. Direct flat overhead/icon presentation, centred and isolated with generous padding on genuinely transparent background. No terrain, no scene, no building, no other text, no border around the whole image, no watermark.",
+      "smallImageKeys": [
+        "assets/art/universe/tactical/32px/tactical-reference-quarry-level-1.png",
+        "assets/art/universe/tactical/64px/tactical-reference-quarry-level-1.png"
+      ]
+    }
+  },
+  {
+    "id": "tactical-building-ranch",
+    "name": "Ranch tactical symbol",
+    "assetType": "building-symbol",
+    "entityId": "building-ranch",
+    "intendedGameId": "game-mineit-mobile",
+    "image": {
+      "key": "assets/art/universe/tactical/tactical-building-ranch.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Create ONE standalone symbolic tactical map icon for MineIT Mobile, matching the supplied pickaxe reference's clean polished graphic game-icon style. Subject: a simple cow head silhouette, representing an animal ranch. Strong bold dark charcoal outlines, simplified geometric forms, pale white/light grey, charcoal and restrained vivid orange, limited details, flat icon presentation, readable at 32 pixels. Centred isolated object with generous transparent margin. No background, no shadows beyond object, no terrain, no map, no text, no numbers, no badges, no logos, no frames, no watermark. Do not include the reference pickaxe unless explicitly requested.",
+      "notes": "Tactical-only presentation art; does not replace catalogue imagery or 3D prompts."
+    },
+    "originalKey": "assets/art/universe/tactical/Originals/tactical-building-ranch.png",
+    "smallImageKey": "assets/art/universe/tactical/32px/tactical-building-ranch.png",
+    "smallSize": [
+      32,
+      32
+    ],
+    "generator": "image-generation",
+    "generationReference": {
+      "previewKey": "assets/art/universe/tactical/tactical-reference-quarry-level-1.webp",
+      "originalKey": "assets/art/universe/tactical/Originals/tactical-reference-quarry-level-1.png",
+      "prompt": "Create ONE standalone tactical map sprite for MineIT Mobile: a crisp, simple, symbolic LEVEL 1 QUARRY marker. This is a map symbol, not a depiction of a building or a realistic aerial view. Show a single bold pickaxe and a small group of three chunky stone bricks, arranged as a compact, immediately recognizable graphic. Include a prominent, perfectly legible numeral \"1\" as a small integrated level badge in the lower-right corner. Visual style: polished, clean sci-fi game icon, strong silhouette, simple geometric shapes, restrained white/light stone, charcoal and orange palette, clear contrast, minimal details, designed to remain legible at 24–48 pixels. Direct flat overhead/icon presentation, centred and isolated with generous padding on genuinely transparent background. No terrain, no scene, no building, no other text, no border around the whole image, no watermark.",
+      "smallImageKeys": [
+        "assets/art/universe/tactical/32px/tactical-reference-quarry-level-1.png",
+        "assets/art/universe/tactical/64px/tactical-reference-quarry-level-1.png"
+      ]
+    }
+  },
+  {
+    "id": "tactical-building-bio-harvester",
+    "name": "Bio Harvester tactical symbol",
+    "assetType": "building-symbol",
+    "entityId": "building-bio-harvester",
+    "intendedGameId": "game-mineit-mobile",
+    "image": {
+      "key": "assets/art/universe/tactical/tactical-building-bio-harvester.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Create ONE standalone symbolic tactical map icon for MineIT Mobile, matching the supplied pickaxe reference's clean polished graphic game-icon style. Subject: a simple leaf and harvesting sickle, representing biological harvesting. Strong bold dark charcoal outlines, simplified geometric forms, pale white/light grey, charcoal and restrained vivid orange, limited details, flat icon presentation, readable at 32 pixels. Centred isolated object with generous transparent margin. No background, no shadows beyond object, no terrain, no map, no text, no numbers, no badges, no logos, no frames, no watermark. Do not include the reference pickaxe unless explicitly requested.",
+      "notes": "Tactical-only presentation art; does not replace catalogue imagery or 3D prompts."
+    },
+    "originalKey": "assets/art/universe/tactical/Originals/tactical-building-bio-harvester.png",
+    "smallImageKey": "assets/art/universe/tactical/32px/tactical-building-bio-harvester.png",
+    "smallSize": [
+      32,
+      32
+    ],
+    "generator": "image-generation",
+    "generationReference": {
+      "previewKey": "assets/art/universe/tactical/tactical-reference-quarry-level-1.webp",
+      "originalKey": "assets/art/universe/tactical/Originals/tactical-reference-quarry-level-1.png",
+      "prompt": "Create ONE standalone tactical map sprite for MineIT Mobile: a crisp, simple, symbolic LEVEL 1 QUARRY marker. This is a map symbol, not a depiction of a building or a realistic aerial view. Show a single bold pickaxe and a small group of three chunky stone bricks, arranged as a compact, immediately recognizable graphic. Include a prominent, perfectly legible numeral \"1\" as a small integrated level badge in the lower-right corner. Visual style: polished, clean sci-fi game icon, strong silhouette, simple geometric shapes, restrained white/light stone, charcoal and orange palette, clear contrast, minimal details, designed to remain legible at 24–48 pixels. Direct flat overhead/icon presentation, centred and isolated with generous padding on genuinely transparent background. No terrain, no scene, no building, no other text, no border around the whole image, no watermark.",
+      "smallImageKeys": [
+        "assets/art/universe/tactical/32px/tactical-reference-quarry-level-1.png",
+        "assets/art/universe/tactical/64px/tactical-reference-quarry-level-1.png"
+      ]
+    }
+  },
+  {
+    "id": "tactical-building-algae-facility",
+    "name": "Algae Facility tactical symbol",
+    "assetType": "building-symbol",
+    "entityId": "building-algae-facility",
+    "intendedGameId": "game-mineit-mobile",
+    "image": {
+      "key": "assets/art/universe/tactical/tactical-building-algae-facility.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Create ONE standalone symbolic tactical map icon for MineIT Mobile, matching the supplied pickaxe reference's clean polished graphic game-icon style. Subject: a simple transparent cultivation tank containing wavy algae fronds, representing an algae facility. Strong bold dark charcoal outlines, simplified geometric forms, pale white/light grey, charcoal and restrained vivid orange, limited details, flat icon presentation, readable at 32 pixels. Centred isolated object with generous transparent margin. No background, no shadows beyond object, no terrain, no map, no text, no numbers, no badges, no logos, no frames, no watermark. Do not include the reference pickaxe unless explicitly requested.",
+      "notes": "Tactical-only presentation art; does not replace catalogue imagery or 3D prompts."
+    },
+    "originalKey": "assets/art/universe/tactical/Originals/tactical-building-algae-facility.png",
+    "smallImageKey": "assets/art/universe/tactical/32px/tactical-building-algae-facility.png",
+    "smallSize": [
+      32,
+      32
+    ],
+    "generator": "image-generation",
+    "generationReference": {
+      "previewKey": "assets/art/universe/tactical/tactical-reference-quarry-level-1.webp",
+      "originalKey": "assets/art/universe/tactical/Originals/tactical-reference-quarry-level-1.png",
+      "prompt": "Create ONE standalone tactical map sprite for MineIT Mobile: a crisp, simple, symbolic LEVEL 1 QUARRY marker. This is a map symbol, not a depiction of a building or a realistic aerial view. Show a single bold pickaxe and a small group of three chunky stone bricks, arranged as a compact, immediately recognizable graphic. Include a prominent, perfectly legible numeral \"1\" as a small integrated level badge in the lower-right corner. Visual style: polished, clean sci-fi game icon, strong silhouette, simple geometric shapes, restrained white/light stone, charcoal and orange palette, clear contrast, minimal details, designed to remain legible at 24–48 pixels. Direct flat overhead/icon presentation, centred and isolated with generous padding on genuinely transparent background. No terrain, no scene, no building, no other text, no border around the whole image, no watermark.",
+      "smallImageKeys": [
+        "assets/art/universe/tactical/32px/tactical-reference-quarry-level-1.png",
+        "assets/art/universe/tactical/64px/tactical-reference-quarry-level-1.png"
+      ]
+    }
+  },
+  {
+    "id": "tactical-building-accommodation-building",
+    "name": "Accommodation Building tactical symbol",
+    "assetType": "building-symbol",
+    "entityId": "building-accommodation-building",
+    "intendedGameId": "game-mineit-mobile",
+    "image": {
+      "key": "assets/art/universe/tactical/tactical-building-accommodation-building.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Create ONE standalone symbolic tactical map icon for MineIT Mobile, matching the supplied pickaxe reference's clean polished graphic game-icon style. Subject: a simple multi-storey accommodation block silhouette with several windows, clearly distinct from a small house. Strong bold dark charcoal outlines, simplified geometric forms, pale white/light grey, charcoal and restrained vivid orange, limited details, flat icon presentation, readable at 32 pixels. Centred isolated object with generous transparent margin. No background, no shadows beyond object, no terrain, no map, no text, no numbers, no badges, no logos, no frames, no watermark. Do not include the reference pickaxe unless explicitly requested.",
+      "notes": "Tactical-only presentation art; does not replace catalogue imagery or 3D prompts."
+    },
+    "originalKey": "assets/art/universe/tactical/Originals/tactical-building-accommodation-building.png",
+    "smallImageKey": "assets/art/universe/tactical/32px/tactical-building-accommodation-building.png",
+    "smallSize": [
+      32,
+      32
+    ],
+    "generator": "image-generation",
+    "generationReference": {
+      "previewKey": "assets/art/universe/tactical/tactical-reference-quarry-level-1.webp",
+      "originalKey": "assets/art/universe/tactical/Originals/tactical-reference-quarry-level-1.png",
+      "prompt": "Create ONE standalone tactical map sprite for MineIT Mobile: a crisp, simple, symbolic LEVEL 1 QUARRY marker. This is a map symbol, not a depiction of a building or a realistic aerial view. Show a single bold pickaxe and a small group of three chunky stone bricks, arranged as a compact, immediately recognizable graphic. Include a prominent, perfectly legible numeral \"1\" as a small integrated level badge in the lower-right corner. Visual style: polished, clean sci-fi game icon, strong silhouette, simple geometric shapes, restrained white/light stone, charcoal and orange palette, clear contrast, minimal details, designed to remain legible at 24–48 pixels. Direct flat overhead/icon presentation, centred and isolated with generous padding on genuinely transparent background. No terrain, no scene, no building, no other text, no border around the whole image, no watermark.",
+      "smallImageKeys": [
+        "assets/art/universe/tactical/32px/tactical-reference-quarry-level-1.png",
+        "assets/art/universe/tactical/64px/tactical-reference-quarry-level-1.png"
+      ]
+    }
+  },
+  {
+    "id": "tactical-building-habitat",
+    "name": "Habitat tactical symbol",
+    "assetType": "building-symbol",
+    "entityId": "building-habitat",
+    "intendedGameId": "game-mineit-mobile",
+    "image": {
+      "key": "assets/art/universe/tactical/tactical-building-habitat.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Create ONE standalone symbolic tactical map icon for MineIT Mobile, matching the supplied pickaxe reference's clean polished graphic game-icon style. Subject: a simple house silhouette representing housing. Strong bold dark charcoal outlines, simplified geometric forms, pale white/light grey, charcoal and restrained vivid orange, limited details, flat icon presentation, readable at 32 pixels. Centred isolated object with generous transparent margin. No background, no shadows beyond object, no terrain, no map, no text, no numbers, no badges, no logos, no frames, no watermark. Do not include the reference pickaxe unless it is explicitly the requested subject.",
+      "notes": "Tactical-only presentation art; does not replace catalogue imagery or 3D prompts."
+    },
+    "originalKey": "assets/art/universe/tactical/Originals/tactical-building-habitat.png",
+    "smallImageKey": "assets/art/universe/tactical/32px/tactical-building-habitat.png",
+    "smallSize": [
+      32,
+      32
+    ],
+    "generator": "image-generation",
+    "generationReference": {
+      "previewKey": "assets/art/universe/tactical/tactical-reference-quarry-level-1.webp",
+      "originalKey": "assets/art/universe/tactical/Originals/tactical-reference-quarry-level-1.png",
+      "prompt": "Create ONE standalone tactical map sprite for MineIT Mobile: a crisp, simple, symbolic LEVEL 1 QUARRY marker. This is a map symbol, not a depiction of a building or a realistic aerial view. Show a single bold pickaxe and a small group of three chunky stone bricks, arranged as a compact, immediately recognizable graphic. Include a prominent, perfectly legible numeral \"1\" as a small integrated level badge in the lower-right corner. Visual style: polished, clean sci-fi game icon, strong silhouette, simple geometric shapes, restrained white/light stone, charcoal and orange palette, clear contrast, minimal details, designed to remain legible at 24–48 pixels. Direct flat overhead/icon presentation, centred and isolated with generous padding on genuinely transparent background. No terrain, no scene, no building, no other text, no border around the whole image, no watermark.",
+      "smallImageKeys": [
+        "assets/art/universe/tactical/32px/tactical-reference-quarry-level-1.png",
+        "assets/art/universe/tactical/64px/tactical-reference-quarry-level-1.png"
+      ]
+    }
+  },
+  {
+    "id": "tactical-building-power-plant",
+    "name": "Power Plant tactical symbol",
+    "assetType": "building-symbol",
+    "entityId": "building-power-plant",
+    "intendedGameId": "game-mineit-mobile",
+    "image": {
+      "key": "assets/art/universe/tactical/tactical-building-power-plant.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Create ONE standalone symbolic tactical map icon for MineIT Mobile, matching the supplied pickaxe reference's clean polished graphic game-icon style. Subject: one bold lightning bolt representing power. Strong bold dark charcoal outlines, simplified geometric forms, pale white/light grey, charcoal and restrained vivid orange, limited details, flat icon presentation, readable at 32 pixels. Centred isolated object with generous transparent margin. No background, no shadows beyond object, no terrain, no map, no text, no numbers, no badges, no logos, no frames, no watermark. Do not include the reference pickaxe unless it is explicitly the requested subject.",
+      "notes": "Tactical-only presentation art; does not replace catalogue imagery or 3D prompts."
+    },
+    "originalKey": "assets/art/universe/tactical/Originals/tactical-building-power-plant.png",
+    "smallImageKey": "assets/art/universe/tactical/32px/tactical-building-power-plant.png",
+    "smallSize": [
+      32,
+      32
+    ],
+    "generator": "image-generation",
+    "generationReference": {
+      "previewKey": "assets/art/universe/tactical/tactical-reference-quarry-level-1.webp",
+      "originalKey": "assets/art/universe/tactical/Originals/tactical-reference-quarry-level-1.png",
+      "prompt": "Create ONE standalone tactical map sprite for MineIT Mobile: a crisp, simple, symbolic LEVEL 1 QUARRY marker. This is a map symbol, not a depiction of a building or a realistic aerial view. Show a single bold pickaxe and a small group of three chunky stone bricks, arranged as a compact, immediately recognizable graphic. Include a prominent, perfectly legible numeral \"1\" as a small integrated level badge in the lower-right corner. Visual style: polished, clean sci-fi game icon, strong silhouette, simple geometric shapes, restrained white/light stone, charcoal and orange palette, clear contrast, minimal details, designed to remain legible at 24–48 pixels. Direct flat overhead/icon presentation, centred and isolated with generous padding on genuinely transparent background. No terrain, no scene, no building, no other text, no border around the whole image, no watermark.",
+      "smallImageKeys": [
+        "assets/art/universe/tactical/32px/tactical-reference-quarry-level-1.png",
+        "assets/art/universe/tactical/64px/tactical-reference-quarry-level-1.png"
+      ]
+    }
+  },
+  {
+    "id": "tactical-building-industry",
+    "name": "Industry tactical symbol",
+    "assetType": "building-symbol",
+    "entityId": "building-industry",
+    "intendedGameId": "game-mineit-mobile",
+    "image": {
+      "key": "assets/art/universe/tactical/tactical-building-industry.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Create ONE standalone symbolic tactical map icon for MineIT Mobile, matching the supplied pickaxe reference's clean polished graphic game-icon style. Subject: one bold industrial gear representing industry. Strong bold dark charcoal outlines, simplified geometric forms, pale white/light grey, charcoal and restrained vivid orange, limited details, flat icon presentation, readable at 32 pixels. Centred isolated object with generous transparent margin. No background, no shadows beyond object, no terrain, no map, no text, no numbers, no badges, no logos, no frames, no watermark. Do not include the reference pickaxe unless it is explicitly the requested subject.",
+      "notes": "Tactical-only presentation art; does not replace catalogue imagery or 3D prompts."
+    },
+    "originalKey": "assets/art/universe/tactical/Originals/tactical-building-industry.png",
+    "smallImageKey": "assets/art/universe/tactical/32px/tactical-building-industry.png",
+    "smallSize": [
+      32,
+      32
+    ],
+    "generator": "image-generation",
+    "generationReference": {
+      "previewKey": "assets/art/universe/tactical/tactical-reference-quarry-level-1.webp",
+      "originalKey": "assets/art/universe/tactical/Originals/tactical-reference-quarry-level-1.png",
+      "prompt": "Create ONE standalone tactical map sprite for MineIT Mobile: a crisp, simple, symbolic LEVEL 1 QUARRY marker. This is a map symbol, not a depiction of a building or a realistic aerial view. Show a single bold pickaxe and a small group of three chunky stone bricks, arranged as a compact, immediately recognizable graphic. Include a prominent, perfectly legible numeral \"1\" as a small integrated level badge in the lower-right corner. Visual style: polished, clean sci-fi game icon, strong silhouette, simple geometric shapes, restrained white/light stone, charcoal and orange palette, clear contrast, minimal details, designed to remain legible at 24–48 pixels. Direct flat overhead/icon presentation, centred and isolated with generous padding on genuinely transparent background. No terrain, no scene, no building, no other text, no border around the whole image, no watermark.",
+      "smallImageKeys": [
+        "assets/art/universe/tactical/32px/tactical-reference-quarry-level-1.png",
+        "assets/art/universe/tactical/64px/tactical-reference-quarry-level-1.png"
+      ]
+    }
+  },
+  {
+    "id": "tactical-building-basic-refinery",
+    "name": "Basic Refinery tactical symbol",
+    "assetType": "building-symbol",
+    "entityId": "building-basic-refinery",
+    "intendedGameId": "game-mineit-mobile",
+    "image": {
+      "key": "assets/art/universe/tactical/tactical-building-basic-refinery.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Create ONE standalone symbolic tactical map icon for MineIT Mobile, matching the supplied pickaxe reference's clean polished graphic game-icon style. Subject: a simple industrial distillation column and pipe with a droplet, representing a refinery. Strong bold dark charcoal outlines, simplified geometric forms, pale white/light grey, charcoal and restrained vivid orange, limited details, flat icon presentation, readable at 32 pixels. Centred isolated object with generous transparent margin. No background, no shadows beyond object, no terrain, no map, no text, no numbers, no badges, no logos, no frames, no watermark. Do not include the reference pickaxe unless explicitly requested.",
+      "notes": "Tactical-only presentation art; does not replace catalogue imagery or 3D prompts."
+    },
+    "originalKey": "assets/art/universe/tactical/Originals/tactical-building-basic-refinery.png",
+    "smallImageKey": "assets/art/universe/tactical/32px/tactical-building-basic-refinery.png",
+    "smallSize": [
+      32,
+      32
+    ],
+    "generator": "image-generation",
+    "generationReference": {
+      "previewKey": "assets/art/universe/tactical/tactical-reference-quarry-level-1.webp",
+      "originalKey": "assets/art/universe/tactical/Originals/tactical-reference-quarry-level-1.png",
+      "prompt": "Create ONE standalone tactical map sprite for MineIT Mobile: a crisp, simple, symbolic LEVEL 1 QUARRY marker. This is a map symbol, not a depiction of a building or a realistic aerial view. Show a single bold pickaxe and a small group of three chunky stone bricks, arranged as a compact, immediately recognizable graphic. Include a prominent, perfectly legible numeral \"1\" as a small integrated level badge in the lower-right corner. Visual style: polished, clean sci-fi game icon, strong silhouette, simple geometric shapes, restrained white/light stone, charcoal and orange palette, clear contrast, minimal details, designed to remain legible at 24–48 pixels. Direct flat overhead/icon presentation, centred and isolated with generous padding on genuinely transparent background. No terrain, no scene, no building, no other text, no border around the whole image, no watermark.",
+      "smallImageKeys": [
+        "assets/art/universe/tactical/32px/tactical-reference-quarry-level-1.png",
+        "assets/art/universe/tactical/64px/tactical-reference-quarry-level-1.png"
+      ]
+    }
+  },
+  {
+    "id": "tactical-building-headquarters",
+    "name": "Headquarters tactical symbol",
+    "assetType": "building-symbol",
+    "entityId": "building-headquarters",
+    "intendedGameId": "game-mineit-mobile",
+    "image": {
+      "key": "assets/art/universe/tactical/tactical-building-headquarters.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Create ONE standalone symbolic tactical map icon for MineIT Mobile, matching the supplied pickaxe reference's clean polished graphic game-icon style. Subject: a simple command building silhouette with a small star representing headquarters. Strong bold dark charcoal outlines, simplified geometric forms, pale white/light grey, charcoal and restrained vivid orange, limited details, flat icon presentation, readable at 32 pixels. Centred isolated object with generous transparent margin. No background, no shadows beyond object, no terrain, no map, no text, no numbers, no badges, no logos, no frames, no watermark. Do not include the reference pickaxe unless it is explicitly the requested subject.",
+      "notes": "Tactical-only presentation art; does not replace catalogue imagery or 3D prompts."
+    },
+    "originalKey": "assets/art/universe/tactical/Originals/tactical-building-headquarters.png",
+    "smallImageKey": "assets/art/universe/tactical/32px/tactical-building-headquarters.png",
+    "smallSize": [
+      32,
+      32
+    ],
+    "generator": "image-generation",
+    "generationReference": {
+      "previewKey": "assets/art/universe/tactical/tactical-reference-quarry-level-1.webp",
+      "originalKey": "assets/art/universe/tactical/Originals/tactical-reference-quarry-level-1.png",
+      "prompt": "Create ONE standalone tactical map sprite for MineIT Mobile: a crisp, simple, symbolic LEVEL 1 QUARRY marker. This is a map symbol, not a depiction of a building or a realistic aerial view. Show a single bold pickaxe and a small group of three chunky stone bricks, arranged as a compact, immediately recognizable graphic. Include a prominent, perfectly legible numeral \"1\" as a small integrated level badge in the lower-right corner. Visual style: polished, clean sci-fi game icon, strong silhouette, simple geometric shapes, restrained white/light stone, charcoal and orange palette, clear contrast, minimal details, designed to remain legible at 24–48 pixels. Direct flat overhead/icon presentation, centred and isolated with generous padding on genuinely transparent background. No terrain, no scene, no building, no other text, no border around the whole image, no watermark.",
+      "smallImageKeys": [
+        "assets/art/universe/tactical/32px/tactical-reference-quarry-level-1.png",
+        "assets/art/universe/tactical/64px/tactical-reference-quarry-level-1.png"
+      ]
+    }
+  },
+  {
+    "id": "tactical-building-research-building",
+    "name": "Research Building tactical symbol",
+    "assetType": "building-symbol",
+    "entityId": "building-research-building",
+    "intendedGameId": "game-mineit-mobile",
+    "image": {
+      "key": "assets/art/universe/tactical/tactical-building-research-building.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Create ONE standalone symbolic tactical map icon for MineIT Mobile, matching the supplied pickaxe reference's clean polished graphic game-icon style. Subject: a simple microscope representing research. Strong bold dark charcoal outlines, simplified geometric forms, pale white/light grey, charcoal and restrained vivid orange, limited details, flat icon presentation, readable at 32 pixels. Centred isolated object with generous transparent margin. No background, no shadows beyond object, no terrain, no map, no text, no numbers, no badges, no logos, no frames, no watermark. Do not include the reference pickaxe unless it is explicitly the requested subject.",
+      "notes": "Tactical-only presentation art; does not replace catalogue imagery or 3D prompts."
+    },
+    "originalKey": "assets/art/universe/tactical/Originals/tactical-building-research-building.png",
+    "smallImageKey": "assets/art/universe/tactical/32px/tactical-building-research-building.png",
+    "smallSize": [
+      32,
+      32
+    ],
+    "generator": "image-generation",
+    "generationReference": {
+      "previewKey": "assets/art/universe/tactical/tactical-reference-quarry-level-1.webp",
+      "originalKey": "assets/art/universe/tactical/Originals/tactical-reference-quarry-level-1.png",
+      "prompt": "Create ONE standalone tactical map sprite for MineIT Mobile: a crisp, simple, symbolic LEVEL 1 QUARRY marker. This is a map symbol, not a depiction of a building or a realistic aerial view. Show a single bold pickaxe and a small group of three chunky stone bricks, arranged as a compact, immediately recognizable graphic. Include a prominent, perfectly legible numeral \"1\" as a small integrated level badge in the lower-right corner. Visual style: polished, clean sci-fi game icon, strong silhouette, simple geometric shapes, restrained white/light stone, charcoal and orange palette, clear contrast, minimal details, designed to remain legible at 24–48 pixels. Direct flat overhead/icon presentation, centred and isolated with generous padding on genuinely transparent background. No terrain, no scene, no building, no other text, no border around the whole image, no watermark.",
+      "smallImageKeys": [
+        "assets/art/universe/tactical/32px/tactical-reference-quarry-level-1.png",
+        "assets/art/universe/tactical/64px/tactical-reference-quarry-level-1.png"
+      ]
+    }
+  },
+  {
+    "id": "tactical-building-spaceport",
+    "name": "Spaceport tactical symbol",
+    "assetType": "building-symbol",
+    "entityId": "building-spaceport",
+    "intendedGameId": "game-mineit-mobile",
+    "image": {
+      "key": "assets/art/universe/tactical/tactical-building-spaceport.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Create ONE standalone symbolic tactical map icon for MineIT Mobile, matching the supplied pickaxe reference's clean polished graphic game-icon style. Subject: one upright rocket representing space operations. Strong bold dark charcoal outlines, simplified geometric forms, pale white/light grey, charcoal and restrained vivid orange, limited details, flat icon presentation, readable at 32 pixels. Centred isolated object with generous transparent margin. No background, no shadows beyond object, no terrain, no map, no text, no numbers, no badges, no logos, no frames, no watermark. Do not include the reference pickaxe unless it is explicitly the requested subject.",
+      "notes": "Tactical-only presentation art; does not replace catalogue imagery or 3D prompts."
+    },
+    "originalKey": "assets/art/universe/tactical/Originals/tactical-building-spaceport.png",
+    "smallImageKey": "assets/art/universe/tactical/32px/tactical-building-spaceport.png",
+    "smallSize": [
+      32,
+      32
+    ],
+    "generator": "image-generation",
+    "generationReference": {
+      "previewKey": "assets/art/universe/tactical/tactical-reference-quarry-level-1.webp",
+      "originalKey": "assets/art/universe/tactical/Originals/tactical-reference-quarry-level-1.png",
+      "prompt": "Create ONE standalone tactical map sprite for MineIT Mobile: a crisp, simple, symbolic LEVEL 1 QUARRY marker. This is a map symbol, not a depiction of a building or a realistic aerial view. Show a single bold pickaxe and a small group of three chunky stone bricks, arranged as a compact, immediately recognizable graphic. Include a prominent, perfectly legible numeral \"1\" as a small integrated level badge in the lower-right corner. Visual style: polished, clean sci-fi game icon, strong silhouette, simple geometric shapes, restrained white/light stone, charcoal and orange palette, clear contrast, minimal details, designed to remain legible at 24–48 pixels. Direct flat overhead/icon presentation, centred and isolated with generous padding on genuinely transparent background. No terrain, no scene, no building, no other text, no border around the whole image, no watermark.",
+      "smallImageKeys": [
+        "assets/art/universe/tactical/32px/tactical-reference-quarry-level-1.png",
+        "assets/art/universe/tactical/64px/tactical-reference-quarry-level-1.png"
+      ]
+    }
+  },
+  {
+    "id": "tactical-building-shipyard-bay",
+    "name": "Shipyard Bay tactical symbol",
+    "assetType": "building-symbol",
+    "entityId": "building-shipyard-bay",
+    "intendedGameId": "game-mineit-mobile",
+    "image": {
+      "key": "assets/art/universe/tactical/tactical-building-shipyard-bay.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Create ONE standalone symbolic tactical map icon for MineIT Mobile, matching the supplied pickaxe reference's clean polished graphic game-icon style. Subject: a small spacecraft silhouette held in a U-shaped repair gantry, representing a shipyard bay. Strong bold dark charcoal outlines, simplified geometric forms, pale white/light grey, charcoal and restrained vivid orange, limited details, flat icon presentation, readable at 32 pixels. Centred isolated object with generous transparent margin. No background, no shadows beyond object, no terrain, no map, no text, no numbers, no badges, no logos, no frames, no watermark. Do not include the reference pickaxe unless explicitly requested.",
+      "notes": "Tactical-only presentation art; does not replace catalogue imagery or 3D prompts."
+    },
+    "originalKey": "assets/art/universe/tactical/Originals/tactical-building-shipyard-bay.png",
+    "smallImageKey": "assets/art/universe/tactical/32px/tactical-building-shipyard-bay.png",
+    "smallSize": [
+      32,
+      32
+    ],
+    "generator": "image-generation",
+    "generationReference": {
+      "previewKey": "assets/art/universe/tactical/tactical-reference-quarry-level-1.webp",
+      "originalKey": "assets/art/universe/tactical/Originals/tactical-reference-quarry-level-1.png",
+      "prompt": "Create ONE standalone tactical map sprite for MineIT Mobile: a crisp, simple, symbolic LEVEL 1 QUARRY marker. This is a map symbol, not a depiction of a building or a realistic aerial view. Show a single bold pickaxe and a small group of three chunky stone bricks, arranged as a compact, immediately recognizable graphic. Include a prominent, perfectly legible numeral \"1\" as a small integrated level badge in the lower-right corner. Visual style: polished, clean sci-fi game icon, strong silhouette, simple geometric shapes, restrained white/light stone, charcoal and orange palette, clear contrast, minimal details, designed to remain legible at 24–48 pixels. Direct flat overhead/icon presentation, centred and isolated with generous padding on genuinely transparent background. No terrain, no scene, no building, no other text, no border around the whole image, no watermark.",
+      "smallImageKeys": [
+        "assets/art/universe/tactical/32px/tactical-reference-quarry-level-1.png",
+        "assets/art/universe/tactical/64px/tactical-reference-quarry-level-1.png"
+      ]
+    }
+  },
+  {
+    "id": "tactical-building-stockpile",
+    "name": "Stockpile tactical symbol",
+    "assetType": "building-symbol",
+    "entityId": "building-stockpile",
+    "intendedGameId": "game-mineit-mobile",
+    "image": {
+      "key": "assets/art/universe/tactical/tactical-building-stockpile.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Create ONE standalone symbolic tactical map icon for MineIT Mobile, matching the supplied pickaxe reference's clean polished graphic game-icon style. Subject: a neat open pile of raw stone and material blocks, representing outdoor bulk storage. Strong bold dark charcoal outlines, simplified geometric forms, pale white/light grey, charcoal and restrained vivid orange, limited details, flat icon presentation, readable at 32 pixels. Centred isolated object with generous transparent margin. No background, no shadows beyond object, no terrain, no map, no text, no numbers, no badges, no logos, no frames, no watermark. Do not include the reference pickaxe unless explicitly requested.",
+      "notes": "Tactical-only presentation art; does not replace catalogue imagery or 3D prompts."
+    },
+    "originalKey": "assets/art/universe/tactical/Originals/tactical-building-stockpile.png",
+    "smallImageKey": "assets/art/universe/tactical/32px/tactical-building-stockpile.png",
+    "smallSize": [
+      32,
+      32
+    ],
+    "generator": "image-generation",
+    "generationReference": {
+      "previewKey": "assets/art/universe/tactical/tactical-reference-quarry-level-1.webp",
+      "originalKey": "assets/art/universe/tactical/Originals/tactical-reference-quarry-level-1.png",
+      "prompt": "Create ONE standalone tactical map sprite for MineIT Mobile: a crisp, simple, symbolic LEVEL 1 QUARRY marker. This is a map symbol, not a depiction of a building or a realistic aerial view. Show a single bold pickaxe and a small group of three chunky stone bricks, arranged as a compact, immediately recognizable graphic. Include a prominent, perfectly legible numeral \"1\" as a small integrated level badge in the lower-right corner. Visual style: polished, clean sci-fi game icon, strong silhouette, simple geometric shapes, restrained white/light stone, charcoal and orange palette, clear contrast, minimal details, designed to remain legible at 24–48 pixels. Direct flat overhead/icon presentation, centred and isolated with generous padding on genuinely transparent background. No terrain, no scene, no building, no other text, no border around the whole image, no watermark.",
+      "smallImageKeys": [
+        "assets/art/universe/tactical/32px/tactical-reference-quarry-level-1.png",
+        "assets/art/universe/tactical/64px/tactical-reference-quarry-level-1.png"
+      ]
+    }
+  },
+  {
+    "id": "tactical-building-warehouse",
+    "name": "Warehouse tactical symbol",
+    "assetType": "building-symbol",
+    "entityId": "building-warehouse",
+    "intendedGameId": "game-mineit-mobile",
+    "image": {
+      "key": "assets/art/universe/tactical/tactical-building-warehouse.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Create ONE standalone symbolic tactical map icon for MineIT Mobile, matching the supplied pickaxe reference's clean polished graphic game-icon style. Subject: one simple cargo crate representing storage. Strong bold dark charcoal outlines, simplified geometric forms, pale white/light grey, charcoal and restrained vivid orange, limited details, flat icon presentation, readable at 32 pixels. Centred isolated object with generous transparent margin. No background, no shadows beyond object, no terrain, no map, no text, no numbers, no badges, no logos, no frames, no watermark. Do not include the reference pickaxe unless it is explicitly the requested subject.",
+      "notes": "Tactical-only presentation art; does not replace catalogue imagery or 3D prompts."
+    },
+    "originalKey": "assets/art/universe/tactical/Originals/tactical-building-warehouse.png",
+    "smallImageKey": "assets/art/universe/tactical/32px/tactical-building-warehouse.png",
+    "smallSize": [
+      32,
+      32
+    ],
+    "generator": "image-generation",
+    "generationReference": {
+      "previewKey": "assets/art/universe/tactical/tactical-reference-quarry-level-1.webp",
+      "originalKey": "assets/art/universe/tactical/Originals/tactical-reference-quarry-level-1.png",
+      "prompt": "Create ONE standalone tactical map sprite for MineIT Mobile: a crisp, simple, symbolic LEVEL 1 QUARRY marker. This is a map symbol, not a depiction of a building or a realistic aerial view. Show a single bold pickaxe and a small group of three chunky stone bricks, arranged as a compact, immediately recognizable graphic. Include a prominent, perfectly legible numeral \"1\" as a small integrated level badge in the lower-right corner. Visual style: polished, clean sci-fi game icon, strong silhouette, simple geometric shapes, restrained white/light stone, charcoal and orange palette, clear contrast, minimal details, designed to remain legible at 24–48 pixels. Direct flat overhead/icon presentation, centred and isolated with generous padding on genuinely transparent background. No terrain, no scene, no building, no other text, no border around the whole image, no watermark.",
+      "smallImageKeys": [
+        "assets/art/universe/tactical/32px/tactical-reference-quarry-level-1.png",
+        "assets/art/universe/tactical/64px/tactical-reference-quarry-level-1.png"
+      ]
+    }
+  },
+  {
+    "id": "tactical-building-aquaculture-facility",
+    "name": "Aquaculture Facility tactical symbol",
+    "assetType": "building-symbol",
+    "entityId": "building-aquaculture-facility",
+    "intendedGameId": "game-mineit-mobile",
+    "image": {
+      "key": "assets/art/universe/tactical/tactical-building-aquaculture-facility.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Create ONE standalone symbolic tactical map icon for MineIT Mobile, matching the supplied pickaxe reference's clean polished graphic game-icon style. Subject: a simple fish above two water waves, representing an aquaculture facility. Strong bold dark charcoal outlines, simplified geometric forms, pale white/light grey, charcoal and restrained vivid orange, limited details, flat icon presentation, readable at 32 pixels. Centred isolated object with generous transparent margin. No background, no shadows beyond object, no terrain, no map, no text, no numbers, no badges, no logos, no frames, no watermark. Do not include the reference pickaxe unless explicitly requested.",
+      "notes": "Tactical-only presentation art; does not replace catalogue imagery or 3D prompts."
+    },
+    "originalKey": "assets/art/universe/tactical/Originals/tactical-building-aquaculture-facility.png",
+    "smallImageKey": "assets/art/universe/tactical/32px/tactical-building-aquaculture-facility.png",
+    "smallSize": [
+      32,
+      32
+    ],
+    "generator": "image-generation",
+    "generationReference": {
+      "previewKey": "assets/art/universe/tactical/tactical-reference-quarry-level-1.webp",
+      "originalKey": "assets/art/universe/tactical/Originals/tactical-reference-quarry-level-1.png",
+      "prompt": "Create ONE standalone tactical map sprite for MineIT Mobile: a crisp, simple, symbolic LEVEL 1 QUARRY marker. This is a map symbol, not a depiction of a building or a realistic aerial view. Show a single bold pickaxe and a small group of three chunky stone bricks, arranged as a compact, immediately recognizable graphic. Include a prominent, perfectly legible numeral \"1\" as a small integrated level badge in the lower-right corner. Visual style: polished, clean sci-fi game icon, strong silhouette, simple geometric shapes, restrained white/light stone, charcoal and orange palette, clear contrast, minimal details, designed to remain legible at 24–48 pixels. Direct flat overhead/icon presentation, centred and isolated with generous padding on genuinely transparent background. No terrain, no scene, no building, no other text, no border around the whole image, no watermark.",
+      "smallImageKeys": [
+        "assets/art/universe/tactical/32px/tactical-reference-quarry-level-1.png",
+        "assets/art/universe/tactical/64px/tactical-reference-quarry-level-1.png"
+      ]
+    }
+  },
+  {
+    "id": "tactical-building-agricultural-dome",
+    "name": "Agricultural Dome tactical symbol",
+    "assetType": "building-symbol",
+    "entityId": "building-agricultural-dome",
+    "intendedGameId": "game-mineit-mobile",
+    "image": {
+      "key": "assets/art/universe/tactical/tactical-building-agricultural-dome.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Create ONE standalone symbolic tactical map icon for MineIT Mobile, matching the supplied pickaxe reference's clean polished graphic game-icon style. Subject: a bold rounded greenhouse dome with a sprout inside, representing an agricultural dome. Strong bold dark charcoal outlines, simplified geometric forms, pale white/light grey, charcoal and restrained vivid orange, limited details, flat icon presentation, readable at 32 pixels. Centred isolated object with generous transparent margin. No background, no shadows beyond object, no terrain, no map, no text, no numbers, no badges, no logos, no frames, no watermark. Do not include the reference pickaxe unless explicitly requested.",
+      "notes": "Tactical-only presentation art; does not replace catalogue imagery or 3D prompts."
+    },
+    "originalKey": "assets/art/universe/tactical/Originals/tactical-building-agricultural-dome.png",
+    "smallImageKey": "assets/art/universe/tactical/32px/tactical-building-agricultural-dome.png",
+    "smallSize": [
+      32,
+      32
+    ],
+    "generator": "image-generation",
+    "generationReference": {
+      "previewKey": "assets/art/universe/tactical/tactical-reference-quarry-level-1.webp",
+      "originalKey": "assets/art/universe/tactical/Originals/tactical-reference-quarry-level-1.png",
+      "prompt": "Create ONE standalone tactical map sprite for MineIT Mobile: a crisp, simple, symbolic LEVEL 1 QUARRY marker. This is a map symbol, not a depiction of a building or a realistic aerial view. Show a single bold pickaxe and a small group of three chunky stone bricks, arranged as a compact, immediately recognizable graphic. Include a prominent, perfectly legible numeral \"1\" as a small integrated level badge in the lower-right corner. Visual style: polished, clean sci-fi game icon, strong silhouette, simple geometric shapes, restrained white/light stone, charcoal and orange palette, clear contrast, minimal details, designed to remain legible at 24–48 pixels. Direct flat overhead/icon presentation, centred and isolated with generous padding on genuinely transparent background. No terrain, no scene, no building, no other text, no border around the whole image, no watermark.",
+      "smallImageKeys": [
+        "assets/art/universe/tactical/32px/tactical-reference-quarry-level-1.png",
+        "assets/art/universe/tactical/64px/tactical-reference-quarry-level-1.png"
+      ]
+    }
+  },
+  {
+    "id": "tactical-power-pylon",
+    "name": "Power Pylon tactical symbol",
+    "assetType": "infrastructure-symbol",
+    "entityId": null,
+    "intendedGameId": "game-mineit-mobile",
+    "image": {
+      "key": "assets/art/universe/tactical/tactical-power-pylon.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Redesign the reference into a compact, rounded tactical map marker for an electricity pylon junction. Make the entire silhouette nearly circular and extremely simple: a small round charcoal disc containing a bold simplified white pylon/crossarm symbol with one restrained orange highlight. It should remain identifiable at very tiny 12–16 pixel map size and occupy much less visual space than the large building icons. Same crisp, clean geometric game icon style and white/charcoal/orange palette. A single isolated symbol centred on genuine transparency, no outer square, no text, no numbers, no buildings or cables.",
+      "notes": "Tactical-only presentation art; does not replace catalogue imagery or 3D prompts."
+    },
+    "originalKey": "assets/art/universe/tactical/Originals/tactical-power-pylon.png",
+    "smallImageKey": "assets/art/universe/tactical/32px/tactical-power-pylon.png",
+    "smallSize": [
+      16,
+      16
+    ],
+    "generator": "image-generation",
+    "generationReference": {
+      "previewKey": "assets/art/universe/tactical/tactical-reference-power-pylon.webp",
+      "originalKey": "assets/art/universe/tactical/Originals/tactical-reference-power-pylon.png",
+      "prompt": "Create ONE standalone symbolic tactical map icon for MineIT Mobile matching the provided pickaxe reference style. Subject: a single electricity transmission pylon, an iconic upright lattice tower with broad crossarms and small insulators, instantly recognisable as a power line pylon. The symbol depicts only one tower: no cables, no electricity bolt, no power station. Strong bold dark charcoal outlines, simplified geometric form, pale white/light grey and charcoal with restrained vivid orange details, limited detail, clear distinctive silhouette at 32 pixels. Flat graphic game icon; centred and isolated with generous transparent margin. No terrain, no map, no text, no numbers, no badge, no logos, no border, no watermark.",
+      "smallImageKeys": [
+        "assets/art/universe/tactical/32px/tactical-reference-power-pylon.png"
+      ]
+    }
+  },
+  {
+    "id": "tactical-level-1",
+    "name": "Level 1 tactical badge",
+    "assetType": "level-badge",
+    "entityId": null,
+    "intendedGameId": "game-mineit-mobile",
+    "image": {
+      "key": "assets/art/universe/tactical/tactical-level-1.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Procedurally drawn level 1 badge: white Arial Bold numeral on an orange rounded rectangle with charcoal outline; original 256 × 256, reduced to 13 × 13.",
+      "notes": "Tactical-only presentation art; does not replace catalogue imagery or 3D prompts."
+    },
+    "originalKey": "assets/art/universe/tactical/Originals/tactical-level-1.png",
+    "smallImageKey": "assets/art/universe/tactical/32px/tactical-level-1.png",
+    "smallSize": [
+      13,
+      13
+    ],
+    "generator": "procedural-pillow"
+  },
+  {
+    "id": "tactical-level-2",
+    "name": "Level 2 tactical badge",
+    "assetType": "level-badge",
+    "entityId": null,
+    "intendedGameId": "game-mineit-mobile",
+    "image": {
+      "key": "assets/art/universe/tactical/tactical-level-2.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Procedurally drawn level 2 badge: white Arial Bold numeral on an orange rounded rectangle with charcoal outline; original 256 × 256, reduced to 13 × 13.",
+      "notes": "Tactical-only presentation art; does not replace catalogue imagery or 3D prompts."
+    },
+    "originalKey": "assets/art/universe/tactical/Originals/tactical-level-2.png",
+    "smallImageKey": "assets/art/universe/tactical/32px/tactical-level-2.png",
+    "smallSize": [
+      13,
+      13
+    ],
+    "generator": "procedural-pillow"
+  },
+  {
+    "id": "tactical-level-3",
+    "name": "Level 3 tactical badge",
+    "assetType": "level-badge",
+    "entityId": null,
+    "intendedGameId": "game-mineit-mobile",
+    "image": {
+      "key": "assets/art/universe/tactical/tactical-level-3.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Procedurally drawn level 3 badge: white Arial Bold numeral on an orange rounded rectangle with charcoal outline; original 256 × 256, reduced to 13 × 13.",
+      "notes": "Tactical-only presentation art; does not replace catalogue imagery or 3D prompts."
+    },
+    "originalKey": "assets/art/universe/tactical/Originals/tactical-level-3.png",
+    "smallImageKey": "assets/art/universe/tactical/32px/tactical-level-3.png",
+    "smallSize": [
+      13,
+      13
+    ],
+    "generator": "procedural-pillow"
+  },
+  {
+    "id": "tactical-level-4",
+    "name": "Level 4 tactical badge",
+    "assetType": "level-badge",
+    "entityId": null,
+    "intendedGameId": "game-mineit-mobile",
+    "image": {
+      "key": "assets/art/universe/tactical/tactical-level-4.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Procedurally drawn level 4 badge: white Arial Bold numeral on an orange rounded rectangle with charcoal outline; original 256 × 256, reduced to 13 × 13.",
+      "notes": "Tactical-only presentation art; does not replace catalogue imagery or 3D prompts."
+    },
+    "originalKey": "assets/art/universe/tactical/Originals/tactical-level-4.png",
+    "smallImageKey": "assets/art/universe/tactical/32px/tactical-level-4.png",
+    "smallSize": [
+      13,
+      13
+    ],
+    "generator": "procedural-pillow"
+  },
+  {
+    "id": "tactical-level-5",
+    "name": "Level 5 tactical badge",
+    "assetType": "level-badge",
+    "entityId": null,
+    "intendedGameId": "game-mineit-mobile",
+    "image": {
+      "key": "assets/art/universe/tactical/tactical-level-5.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Procedurally drawn level 5 badge: white Arial Bold numeral on an orange rounded rectangle with charcoal outline; original 256 × 256, reduced to 13 × 13.",
+      "notes": "Tactical-only presentation art; does not replace catalogue imagery or 3D prompts."
+    },
+    "originalKey": "assets/art/universe/tactical/Originals/tactical-level-5.png",
+    "smallImageKey": "assets/art/universe/tactical/32px/tactical-level-5.png",
+    "smallSize": [
+      13,
+      13
+    ],
+    "generator": "procedural-pillow"
+  }
+]

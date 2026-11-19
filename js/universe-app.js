@@ -47,7 +47,8 @@ const DIRECTORY = {
   relationships: 'Relationships',
   currencies: 'Currencies',
   loreDocuments: 'Canon Sources',
-  loreTopics: 'Lore Quick Reference'
+  loreTopics: 'Lore Quick Reference',
+  mobileTacticalAssets: 'Tactical Artwork'
 };
 
 const ICONS = {
@@ -271,6 +272,7 @@ function buildDirectoryTree() {
       buildPartsDirectoryNode(),
       buildMachinesDirectoryNode(),
       buildBuildingsDirectoryNode(),
+      flatNode('mobileTacticalAssets'),
       ...afterIndustrial.map(flatNode)
     ].filter(Boolean)
   };
@@ -828,6 +830,15 @@ function fieldsFor(collection, entity) {
       field('Unresolved design constraints', esc(bom.unresolvedDesignConstraints))
     );
   }
+  if (collection === 'mobileTacticalAssets') {
+    fields.push(field('Tactical asset type', esc(entity.assetType)),
+      field('Linked item', entity.entityId ? link(entity.entityId) : 'Reusable infrastructure or badge'),
+      field('Game', entity.intendedGameId ? link(entity.intendedGameId) : '—'),
+      field('Small image', `<code>${esc(entity.smallImageKey)}</code>`),
+      field('Small image size', esc((entity.smallSize || []).join(' × '))),
+      field('Original image', `<code>${esc(entity.originalKey)}</code>`),
+      field('Creation method', esc(entity.generator)));
+  }
   if (collection === 'buildings') {
     fields.push(
       field('Category', esc(entity.category)),
@@ -1065,7 +1076,7 @@ function imagePrompt(entity) {
 function imageSection(entity) {
   if (!entity.image) return '';
   const generated = entity.image.generated === true;
-  return `<section class="section"><h2>Image generation</h2><div class="fieldRows">${field('Generated', generated ? 'Yes' : 'No')}${field('Status', esc(entity.image.status))}${field('Asset', `<code>${esc(entity.image.key)}</code>`)}${field('Prompt', '<button class="copyButton" id="copyPrompt">Copy image prompt</button>')}</div><div class="longText"><pre class="rawBlock">${esc(imagePrompt(entity))}</pre></div></section>`;
+  return `<section class="section"><h2>2D image generation</h2><div class="fieldRows">${field('Generated', generated ? 'Yes' : 'No')}${field('Status', esc(entity.image.status))}${field('Asset', `<code>${esc(entity.image.key)}</code>`)}${field('Prompt', '<button class="copyButton" id="copyPrompt">Copy image prompt</button>')}</div><div class="longText"><pre class="rawBlock">${esc(imagePrompt(entity))}</pre></div>${entity.image.modelPrompt ? `<h3 class="artworkSubheading">3D model prompt</h3><div class="longText"><pre class="rawBlock">${esc(entity.image.modelPrompt)}</pre></div>` : ''}${entity.image.consistencyPrompt ? `<h3 class="artworkSubheading">3D consistency prompt</h3><div class="longText"><pre class="rawBlock">${esc(entity.image.consistencyPrompt)}</pre></div>` : ''}</section>`;
 }
 
 function extraSections(entity) {
@@ -1173,6 +1184,43 @@ function landscapeSections(collection, entity) {
   return '';
 }
 
+
+function artworkImage(key, title, originalKey) {
+  if (!key) return '';
+  const url = state.catalogue.assetUrl(key);
+  const original = state.catalogue.assetUrl(originalKey || state.catalogue.originalAssetKey(key)) || url;
+  return `<button type="button" class="portraitButton artworkImage" data-original-image="${esc(original)}" data-preview-image="${esc(url)}" data-image-name="${esc(title)}" aria-label="View ${esc(title)}"><img src="${esc(url)}" alt="${esc(title)}"></button>`;
+}
+
+function tacticalArtworkSections(collection, entity) {
+  const tactical = collection === 'mobileTacticalAssets' ? [entity] :
+    related('mobileTacticalAssets', item => item.entityId === entity.id);
+  if (!tactical.length) return '';
+  return tactical.map(item => `<section class="section"><h2>MineIT Mobile tactical symbol</h2>
+    <p class="landscapeNote">Separate from the catalogue image and 3D model. Level badges are separate overlays.</p>
+    <div class="artworkPair"><div>${artworkImage(item.image?.key, item.name, item.originalKey)}<span>Full-size artwork</span></div>
+      <div>${artworkImage(item.smallImageKey, item.name + ' small image', item.smallImageKey)}<span>${esc((item.smallSize || []).join(' × '))} PNG</span></div></div>
+    ${collection !== 'mobileTacticalAssets' ? `<div class="fieldRows">${field('Tactical record', link(item.id))}</div>` : ''}
+    <details class="artworkPrompt"><summary>Tactical generation prompt</summary><pre class="rawBlock">${esc(item.image?.promptDescription || '')}</pre></details>
+    ${item.generationReference ? `<details class="artworkPrompt"><summary>Generation reference and its prompt</summary>${artworkImage(item.generationReference.previewKey, item.name + ' generation reference', item.generationReference.originalKey)}<div class="longText">${(item.generationReference.smallImageKeys || []).map(key => `<a class="entityLink" href="${esc(state.catalogue.assetUrl(key))}">${esc(key.includes('/64px/') ? '64 × 64 reference' : '32 × 32 reference')}</a>`).join(' · ')}</div><pre class="rawBlock">${esc(item.generationReference.prompt)}</pre></details>` : ''}
+  </section>`).join('');
+}
+
+function buildingLevelArtwork(collection, entity) {
+  if (collection !== 'buildings') return '';
+  const levels = related('buildingMobileLevelImages', item => item.buildingId === entity.id).sort((a,b) => a.level - b.level);
+  if (!levels.length) return '';
+  return `<section class="section"><h2>Mobile building level artwork</h2>
+    <p class="landscapeNote">Linked 2D progression images. Prompts and availability are shown per level.</p>
+    <div class="levelArtwork">${levels.map(item => `<details><summary>Level ${esc(item.level)} · ${esc(item.image?.status || 'unknown')}</summary>
+      ${item.image?.generated && item.image?.key ? artworkImage(item.image.key, item.name) : '<p>Image not available.</p>'}
+      <h3>2D prompt</h3><pre class="rawBlock">${esc(item.image?.promptDescription || 'Not provided')}</pre>
+      ${item.image?.notes ? `<h3>Artwork notes</h3><pre class="rawBlock">${esc(item.image.notes)}</pre>` : ''}
+      <h3>3D model prompt</h3><pre class="rawBlock">${esc(item.image?.modelPrompt || 'Not provided')}</pre>
+      ${item.image?.consistencyPrompt ? `<h3>3D consistency prompt</h3><pre class="rawBlock">${esc(item.image.consistencyPrompt)}</pre>` : ''}
+    </details>`).join('')}</div></section>`;
+}
+
 function returnToCatalogueTree() {
   state.activeCatalogueTable = false;
   revealSelected();
@@ -1211,8 +1259,9 @@ function renderDetail() {
     <div class="hero${heroClass}"><div class="placeholder${placeholderClass}">${image}</div><div><div class="eyebrow">${esc(state.catalogue.typeLabelFor(entity.id))}</div><h1>${esc(entity.name)}</h1><div class="subtitle">${esc(subtitle(collection, entity))}</div></div></div>
     <div class="description">${esc(entity.description || '')}</div>
     ${landscapeSections(collection, entity)}
+    ${tacticalArtworkSections(collection, entity)}${buildingLevelArtwork(collection, entity)}
     <section class="section"><h2>Details</h2><div class="fieldRows">${fieldsFor(collection, entity)}</div></section>
-    ${resourceSection(entity)}${extraSections(entity)}${imageSection(entity)}
+    ${resourceSection(entity)}${extraSections(entity)}${collection === 'mobileTacticalAssets' ? '' : imageSection(entity)}
     <section class="section"><h2>Development details</h2><div class="longText"><div class="dev"><span>ID</span><code>${esc(entity.id)}</code><span>Collection</span><code>${esc(collection)}</code><span>Perspective</span><code>${esc(state.activeView)}</code><span>Content version</span><code>${esc(state.catalogue.manifest.contentVersion)}</code></div><pre class="rawBlock">${esc(JSON.stringify(entity, null, 2))}</pre></div></section>`;
 
   detailEl.querySelectorAll('[data-ref]').forEach(button => button.onclick = () => selectEntity(button.dataset.ref));
