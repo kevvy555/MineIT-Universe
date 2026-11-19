@@ -832,12 +832,13 @@ function fieldsFor(collection, entity) {
   }
   if (collection === 'mobileTacticalAssets') {
     fields.push(field('Tactical asset type', esc(entity.assetType)),
-      field('Linked item', entity.entityId ? link(entity.entityId) : 'Reusable infrastructure or badge'),
+      field('Linked item', entity.entityId ? link(entity.entityId) : (entity.identityStatus ? esc(entity.identityStatus) : 'Reusable infrastructure or badge')),
       field('Game', entity.intendedGameId ? link(entity.intendedGameId) : '—'),
       field('Small image', `<code>${esc(entity.smallImageKey)}</code>`),
       field('Small image size', esc((entity.smallSize || []).join(' × '))),
       field('Original image', `<code>${esc(entity.originalKey)}</code>`),
-      field('Creation method', esc(entity.generator)));
+      field('Creation method', esc(entity.generator)),
+      ...(entity.orientation ? [field('Orientation', esc(entity.orientation))] : []));
   }
   if (collection === 'buildings') {
     fields.push(
@@ -1197,7 +1198,8 @@ function tacticalArtworkSections(collection, entity) {
     related('mobileTacticalAssets', item => item.entityId === entity.id);
   if (!tactical.length) return '';
   return tactical.map(item => `<section class="section"><h2>MineIT Mobile tactical symbol</h2>
-    <p class="landscapeNote">Separate from the catalogue image and 3D model. Level badges are separate overlays.</p>
+    <p class="landscapeNote">Separate from the catalogue image and 3D model. Building-level badges are separate overlays.</p>
+    ${item.orientation ? `<p class="landscapeNote">Orientation: ${esc(item.orientation)}</p>` : ''}
     <div class="artworkPair"><div>${artworkImage(item.image?.key, item.name, item.originalKey)}<span>Full-size artwork</span></div>
       <div>${artworkImage(item.smallImageKey, item.name + ' small image', item.smallImageKey)}<span>${esc((item.smallSize || []).join(' × '))} PNG</span></div></div>
     ${collection !== 'mobileTacticalAssets' ? `<div class="fieldRows">${field('Tactical record', link(item.id))}</div>` : ''}

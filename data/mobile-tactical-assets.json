@@ -852,5 +852,68 @@
       13
     ],
     "generator": "procedural-pillow"
+  },
+  {
+    "id": "tactical-machine-exploration-vehicle",
+    "name": "Exploration Vehicle tactical symbol",
+    "assetType": "machine-symbol",
+    "entityId": "machine-exploration-vehicle",
+    "intendedGameId": "game-mineit-mobile",
+    "image": {
+      "key": "assets/art/universe/tactical/tactical-machine-exploration-vehicle.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Create ONE standalone symbolic tactical map icon for MineIT Mobile in the reference's clean polished graphic game-icon style: an exploration rover with EXACTLY THREE visible wheels in side profile, representing one side of a six-wheeled vehicle. Three wheels only visible: front, middle, rear. A compact pressurised cabin, small sensor mast and geological sampling arm. Strong bold dark charcoal outlines, simplified geometric forms, pale white/light grey, charcoal and restrained vivid orange, limited details, flat graphic, readable at 32 pixels. Centred isolated object with generous transparent margin. No other wheels, no background, no terrain, no map, no text, no numbers, no badge, no logos, no frame, no watermark.",
+      "notes": "Unnumbered tactical-only concept, separate from catalogue imagery. This side-view icon has no agreed heading rotation convention."
+    },
+    "originalKey": "assets/art/universe/tactical/Originals/tactical-machine-exploration-vehicle.png",
+    "smallImageKey": "assets/art/universe/tactical/32px/tactical-machine-exploration-vehicle.png",
+    "smallSize": [
+      32,
+      32
+    ],
+    "generator": "image-generation",
+    "generationReference": {
+      "previewKey": "assets/art/universe/tactical/tactical-reference-quarry-level-1.webp",
+      "originalKey": "assets/art/universe/tactical/Originals/tactical-reference-quarry-level-1.png",
+      "prompt": "Create ONE standalone tactical map sprite for MineIT Mobile: a crisp, simple, symbolic LEVEL 1 QUARRY marker. This is a map symbol, not a depiction of a building or a realistic aerial view. Show a single bold pickaxe and a small group of three chunky stone bricks, arranged as a compact, immediately recognizable graphic. Include a prominent, perfectly legible numeral \"1\" as a small integrated level badge in the lower-right corner. Visual style: polished, clean sci-fi game icon, strong silhouette, simple geometric shapes, restrained white/light stone, charcoal and orange palette, clear contrast, minimal details, designed to remain legible at 24–48 pixels. Direct flat overhead/icon presentation, centred and isolated with generous padding on genuinely transparent background. No terrain, no scene, no building, no other text, no border around the whole image, no watermark.",
+      "smallImageKeys": [
+        "assets/art/universe/tactical/32px/tactical-reference-quarry-level-1.png",
+        "assets/art/universe/tactical/64px/tactical-reference-quarry-level-1.png"
+      ]
+    },
+    "orientation": "side-view; heading convention not established"
+  },
+  {
+    "id": "tactical-vehicle-haulage-truck",
+    "name": "Haulage Truck tactical symbol",
+    "assetType": "vehicle-symbol",
+    "entityId": null,
+    "intendedGameId": "game-mineit-mobile",
+    "image": {
+      "key": "assets/art/universe/tactical/tactical-vehicle-haulage-truck.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Create ONE standalone symbolic tactical map icon for MineIT Mobile, matching the supplied pickaxe reference's clean polished graphic game-icon style. Subject: a distinctive heavy mining haulage dump truck with a large open tipping bed, compact cab and rugged large wheels, representing bulk material transport. Strong bold dark charcoal outlines, simplified geometric forms, pale white/light grey, charcoal and restrained vivid orange, limited details, flat icon presentation, readable at 32 pixels. Centred isolated object with generous transparent margin. No background, no shadows beyond object, no terrain, no map, no text, no numbers, no badges, no logos, no frames, no watermark. Do not include the reference pickaxe.",
+      "notes": "Unnumbered tactical-only concept, separate from catalogue imagery. This side-view icon has no agreed heading rotation convention."
+    },
+    "originalKey": "assets/art/universe/tactical/Originals/tactical-vehicle-haulage-truck.png",
+    "smallImageKey": "assets/art/universe/tactical/32px/tactical-vehicle-haulage-truck.png",
+    "smallSize": [
+      32,
+      32
+    ],
+    "generator": "image-generation",
+    "generationReference": {
+      "previewKey": "assets/art/universe/tactical/tactical-reference-quarry-level-1.webp",
+      "originalKey": "assets/art/universe/tactical/Originals/tactical-reference-quarry-level-1.png",
+      "prompt": "Create ONE standalone tactical map sprite for MineIT Mobile: a crisp, simple, symbolic LEVEL 1 QUARRY marker. This is a map symbol, not a depiction of a building or a realistic aerial view. Show a single bold pickaxe and a small group of three chunky stone bricks, arranged as a compact, immediately recognizable graphic. Include a prominent, perfectly legible numeral \"1\" as a small integrated level badge in the lower-right corner. Visual style: polished, clean sci-fi game icon, strong silhouette, simple geometric shapes, restrained white/light stone, charcoal and orange palette, clear contrast, minimal details, designed to remain legible at 24–48 pixels. Direct flat overhead/icon presentation, centred and isolated with generous padding on genuinely transparent background. No terrain, no scene, no building, no other text, no border around the whole image, no watermark.",
+      "smallImageKeys": [
+        "assets/art/universe/tactical/32px/tactical-reference-quarry-level-1.png",
+        "assets/art/universe/tactical/64px/tactical-reference-quarry-level-1.png"
+      ]
+    },
+    "orientation": "side-view; heading convention not established",
+    "identityStatus": "unlinked; canonical haulage-truck identity not established"
   }
 ]
