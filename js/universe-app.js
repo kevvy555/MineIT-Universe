@@ -55,7 +55,7 @@ const ICONS = {
   regions: '◎', starSystems: '✦', planets: '●', celestialBodyKinds: '◉', worldTypes: '◌',
   atmosphereTypes: '☁', surfaceLandforms: '⛰', surfaceBiomes: '⚘', surfaceFeatures: '◻',
   surfaceHydrospheres: '≈', geologyProvinces: '▣', findSites: '⌖', games: '▶',
-  landscapeTilesets: '▦', landscapeTiles: '▪', worldAtlases: '▣', worldAtlasTiles: '▫',
+  gameLandscapeConcepts: '▧', landscapeTilesets: '▦', landscapeTiles: '▪', worldAtlases: '▣', worldAtlasTiles: '▫',
   settlements: '⬡', organisations: 'O',
   organisationUnits: '▦', facilities: '⌂', operations: '⚙', products: '◆', substances: '▣',
   namedSubstances: '◆', parts: '⧉', machines: '⚒', buildings: '⌂', approvalStatuses: '✓', columnDefinitions: '▤', researchTechnologies: '⌬', substanceArchetypes: '◈', substanceProperties: '≋', rarityBands: '⋄', geologyProcesses: '⌁', depositShapes: '⬢', depositStates: '◐', stellarTypes: '✶', cometTypes: '☄', ringSystemTypes: '◎', starSystemTypes: '✦', species: 'S',
@@ -199,7 +199,12 @@ function buildBuildingsDirectoryNode() {
 
 
 function buildGamesDirectoryNode() {
-  return category('Games', nodes(state.catalogue.collection('games')));
+  const games = state.catalogue.collection('games');
+  return category('Games', games.map(game => entityNode(game.id, [
+    game.id === 'game-mineit-mobile'
+      ? category('Landscape Concepts', nodes(related('gameLandscapeConcepts', concept => concept.gameId === game.id)))
+      : null
+  ])));
 }
 
 function buildLandDirectoryNode() {
@@ -489,6 +494,8 @@ function renderTree() {
         record.requirementNotes,
         record.shortName,
         record.playPattern,
+        record.environment,
+        record.conceptStage,
         record.form,
         record.platform,
         record.surfaceAssignmentStatus,
@@ -535,6 +542,7 @@ function subtitle(collection, entity) {
     worldAtlases: entity.planetId ? state.catalogue.nameFor(entity.planetId) : '',
     worldAtlasTiles: `x${entity.x}, y${entity.y} • ring ${entity.ring ?? 0}`,
     games: `${entity.form || ''} • ${entity.playPattern || ''}`.trim(),
+    gameLandscapeConcepts: `${entity.environment || ''} • 64 × 64 km design concept`,
     settlements: entity.locationType,
     organisations: `${entity.scale || ''} ${entity.organisationType || ''}`.trim(),
     organisationUnits: entity.unitType,
@@ -849,6 +857,16 @@ function fieldsFor(collection, entity) {
       field('Structural shell substances', links(entity.structuralShellSubstanceIds)),
       field('Fit-out substances', links(entity.fitOutSubstanceIds)),
       field('Installed machines', links(entity.machineIds))
+    );
+  }
+  if (collection === 'gameLandscapeConcepts') {
+    fields.push(
+      field('Game', link(entity.gameId)),
+      field('Environment', esc(entity.environment)),
+      field('Concept stage', esc(entity.conceptStage)),
+      field('Intended map size', esc(`${entity.intendedMapWidthKm} × ${entity.intendedMapHeightKm} km`)),
+      field('Map status', 'Design concept — not a canonical world or terrain map'),
+      field('Scale', esc(entity.scaleNotes))
     );
   }
   if (collection === 'games') {
@@ -1249,7 +1267,7 @@ function renderDetail() {
   const icon = ICONS[collection] || '?';
   const previewUrl = entity.image?.generated && entity.image?.key ? state.catalogue.assetUrl(entity.image.key) : null;
   const originalUrl = previewUrl ? (state.catalogue.assetUrl(state.catalogue.originalAssetKey(entity.image.key)) || previewUrl) : null;
-  const landscapeArt = collection === 'starSystems';
+  const landscapeArt = collection === 'starSystems' || collection === 'gameLandscapeConcepts';
   const squareArt = collection === 'landscapeTiles' || collection === 'worldAtlasTiles';
   const heroClass = landscapeArt ? ' heroLandscape' : squareArt ? ' heroSquare' : '';
   const placeholderClass = landscapeArt ? ' landscape' : squareArt ? ' square' : '';

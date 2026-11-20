@@ -1,0 +1,170 @@
+[
+  {
+    "id": "game-landscape-concept-natural-landscape",
+    "name": "Natural Landscape (No Buildings)",
+    "gameId": "game-mineit-mobile",
+    "category": "Landscape Concepts",
+    "environment": "temperate",
+    "conceptStage": "terrain-only",
+    "intendedMapWidthKm": 64,
+    "intendedMapHeightKm": 64,
+    "knowledgeScope": "designer concept",
+    "isCanonicalWorldMap": false,
+    "description": "Landscape-only reference with mountains, lakes, forests, rivers and scattered rocks, before any colony construction.",
+    "scaleNotes": "64 × 64 km visual reference only; building sizes, separation distances and terrain relief are artistic and not to physical scale.",
+    "image": {
+      "key": "assets/art/universe/games/mobile/landscape-concepts/game-landscape-concept-natural-landscape.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Wide 16:9 high-angle 3D strategy-game concept view of a temperate MineIT Mobile landscape, suitable for exploring the design of a 64 km by 64 km colony map. Preserve the established building aesthetic and coherent environment.",
+      "notes": "Awaiting repository import of the already generated conversation image and its original PNG/WebP pair. Original no-buildings composition. The drawn geography is not a deterministic world map."
+    }
+  },
+  {
+    "id": "game-landscape-concept-temperate-initial",
+    "name": "Temperate Colony — Initial Concept",
+    "gameId": "game-mineit-mobile",
+    "category": "Landscape Concepts",
+    "environment": "temperate",
+    "conceptStage": "superseded-scale",
+    "intendedMapWidthKm": 64,
+    "intendedMapHeightKm": 64,
+    "knowledgeScope": "designer concept",
+    "isCanonicalWorldMap": false,
+    "description": "Initial colony montage placing habitat, quarry, deep mine, ranch, headquarters and spaceport buildings across a mountainous lake district.",
+    "scaleNotes": "64 × 64 km visual reference only; building sizes, separation distances and terrain relief are artistic and not to physical scale.",
+    "image": {
+      "key": "assets/art/universe/games/mobile/landscape-concepts/game-landscape-concept-temperate-initial.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Wide 16:9 high-angle 3D strategy-game concept view of a temperate MineIT Mobile landscape, suitable for exploring the design of a 64 km by 64 km colony map. Preserve the established building aesthetic and coherent environment.",
+      "notes": "Awaiting repository import of the already generated conversation image and its original PNG/WebP pair. Preserved for comparison: the buildings were judged too large relative to the mountains."
+    }
+  },
+  {
+    "id": "game-landscape-concept-temperate-revised",
+    "name": "Temperate Colony — Revised Scale",
+    "gameId": "game-mineit-mobile",
+    "category": "Landscape Concepts",
+    "environment": "temperate",
+    "conceptStage": "developed-colony",
+    "intendedMapWidthKm": 64,
+    "intendedMapHeightKm": 64,
+    "knowledgeScope": "designer concept",
+    "isCanonicalWorldMap": false,
+    "description": "Revised wider-angle temperate mining colony, with smaller habitats, domes, extraction and industry distributed across valleys and ridges.",
+    "scaleNotes": "64 × 64 km visual reference only; building sizes, separation distances and terrain relief are artistic and not to physical scale.",
+    "image": {
+      "key": "assets/art/universe/games/mobile/landscape-concepts/game-landscape-concept-temperate-revised.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Wide 16:9 high-angle 3D strategy-game concept view of a temperate MineIT Mobile landscape, suitable for exploring the design of a 64 km by 64 km colony map. Preserve the established building aesthetic and coherent environment.",
+      "notes": "Awaiting repository import of the already generated conversation image and its original PNG/WebP pair. Revised after scale feedback; still an illustrative not-to-scale concept."
+    }
+  },
+  {
+    "id": "game-landscape-concept-cryogenic",
+    "name": "Cryogenic Colony",
+    "gameId": "game-mineit-mobile",
+    "category": "Landscape Concepts",
+    "environment": "cryogenic",
+    "conceptStage": "developed-colony",
+    "intendedMapWidthKm": 64,
+    "intendedMapHeightKm": 64,
+    "knowledgeScope": "designer concept",
+    "isCanonicalWorldMap": false,
+    "description": "Mining settlement in a frigid region of snow-covered mountains, glaciers, ice sheets, frozen lakes and rocky outcrops.",
+    "scaleNotes": "64 × 64 km visual reference only; building sizes, separation distances and terrain relief are artistic and not to physical scale.",
+    "image": {
+      "key": "assets/art/universe/games/mobile/landscape-concepts/game-landscape-concept-cryogenic.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Wide 16:9 high-angle 3D strategy-game concept view of a cryogenic MineIT Mobile landscape, suitable for exploring the design of a 64 km by 64 km colony map. Preserve the established building aesthetic and coherent environment.",
+      "notes": "Awaiting repository import of the already generated conversation image and its original PNG/WebP pair. Environment-specific design reference, not a named world's surface map."
+    }
+  },
+  {
+    "id": "game-landscape-concept-arid",
+    "name": "Arid Colony",
+    "gameId": "game-mineit-mobile",
+    "category": "Landscape Concepts",
+    "environment": "arid",
+    "conceptStage": "developed-colony",
+    "intendedMapWidthKm": 64,
+    "intendedMapHeightKm": 64,
+    "knowledgeScope": "designer concept",
+    "isCanonicalWorldMap": false,
+    "description": "Mining settlement in an arid landscape of red deserts, mesas, canyons, dunes, rugged mountains and scarce water.",
+    "scaleNotes": "64 × 64 km visual reference only; building sizes, separation distances and terrain relief are artistic and not to physical scale.",
+    "image": {
+      "key": "assets/art/universe/games/mobile/landscape-concepts/game-landscape-concept-arid.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Wide 16:9 high-angle 3D strategy-game concept view of a arid MineIT Mobile landscape, suitable for exploring the design of a 64 km by 64 km colony map. Preserve the established building aesthetic and coherent environment.",
+      "notes": "Awaiting repository import of the already generated conversation image and its original PNG/WebP pair. Environment-specific design reference, not a named world's surface map."
+    }
+  },
+  {
+    "id": "game-landscape-concept-barren",
+    "name": "Barren Rocky Colony",
+    "gameId": "game-mineit-mobile",
+    "category": "Landscape Concepts",
+    "environment": "barren",
+    "conceptStage": "developed-colony",
+    "intendedMapWidthKm": 64,
+    "intendedMapHeightKm": 64,
+    "knowledgeScope": "designer concept",
+    "isCanonicalWorldMap": false,
+    "description": "Mining settlement on a lifeless rocky surface with impact craters, grey mountains, scattered boulders and dusty plains.",
+    "scaleNotes": "64 × 64 km visual reference only; building sizes, separation distances and terrain relief are artistic and not to physical scale.",
+    "image": {
+      "key": "assets/art/universe/games/mobile/landscape-concepts/game-landscape-concept-barren.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Wide 16:9 high-angle 3D strategy-game concept view of a barren MineIT Mobile landscape, suitable for exploring the design of a 64 km by 64 km colony map. Preserve the established building aesthetic and coherent environment.",
+      "notes": "Awaiting repository import of the already generated conversation image and its original PNG/WebP pair. Environment-specific design reference, not a named world's surface map."
+    }
+  },
+  {
+    "id": "game-landscape-concept-toxic",
+    "name": "Toxic Colony",
+    "gameId": "game-mineit-mobile",
+    "category": "Landscape Concepts",
+    "environment": "toxic",
+    "conceptStage": "developed-colony",
+    "intendedMapWidthKm": 64,
+    "intendedMapHeightKm": 64,
+    "knowledgeScope": "designer concept",
+    "isCanonicalWorldMap": false,
+    "description": "Mining settlement beneath a yellow-green toxic atmosphere, with corrosive pools, sulfurous vents, barren crags and heavy industry.",
+    "scaleNotes": "64 × 64 km visual reference only; building sizes, separation distances and terrain relief are artistic and not to physical scale.",
+    "image": {
+      "key": "assets/art/universe/games/mobile/landscape-concepts/game-landscape-concept-toxic.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Wide 16:9 high-angle 3D strategy-game concept view of a toxic MineIT Mobile landscape, suitable for exploring the design of a 64 km by 64 km colony map. Preserve the established building aesthetic and coherent environment.",
+      "notes": "Awaiting repository import of the already generated conversation image and its original PNG/WebP pair. Environment-specific design reference, not a named world's surface map."
+    }
+  },
+  {
+    "id": "game-landscape-concept-volcanic",
+    "name": "Volcanic Colony",
+    "gameId": "game-mineit-mobile",
+    "category": "Landscape Concepts",
+    "environment": "volcanic",
+    "conceptStage": "developed-colony",
+    "intendedMapWidthKm": 64,
+    "intendedMapHeightKm": 64,
+    "knowledgeScope": "designer concept",
+    "isCanonicalWorldMap": false,
+    "description": "Mining settlement amid basalt mountains, volcanic ash, lava fields, fumaroles and an actively erupting volcano.",
+    "scaleNotes": "64 × 64 km visual reference only; building sizes, separation distances and terrain relief are artistic and not to physical scale.",
+    "image": {
+      "key": "assets/art/universe/games/mobile/landscape-concepts/game-landscape-concept-volcanic.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Wide 16:9 high-angle 3D strategy-game concept view of a volcanic MineIT Mobile landscape, suitable for exploring the design of a 64 km by 64 km colony map. Preserve the established building aesthetic and coherent environment.",
+      "notes": "Awaiting repository import of the already generated conversation image and its original PNG/WebP pair. Environment-specific design reference, not a named world's surface map."
+    }
+  }
+]
