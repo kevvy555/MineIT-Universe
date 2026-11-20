@@ -84,3 +84,7 @@ person-talia-chen
 ```
 
 are referring to the same canonical Talia Chen, even if her role, biography or portrait is updated in a later content release.
+
+## Mobile tactical atlas
+
+The manifest's `assetBundles.mobileTacticalAtlas` names the repository-root-relative atlas metadata JSON; its page filenames are relative to that JSON. The metadata and transparent PNG pages are published site assets. Keep them pinned with the corresponding Universe snapshot when consumed offline. Exact frame, sprite, UV, level-badge and versioning conventions are described in `docs/MobileTacticalArtwork.md`.

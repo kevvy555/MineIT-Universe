@@ -1,6 +1,6 @@
 {
   "schemaVersion": 13,
-  "contentVersion": "0.15.3",
+  "contentVersion": "0.15.4",
   "universeId": "mineit",
   "name": "MineIT Universe",
   "canonicalYear": 5326,
@@ -119,5 +119,8 @@
     "columnDefinitions": "column-definitions.json",
     "industrialSpecifications": "industrial-specifications.json",
     "mobileTacticalAssets": "mobile-tactical-assets.json"
+  },
+  "assetBundles": {
+    "mobileTacticalAtlas": "assets/art/universe/tactical/atlas/tactical-atlas.json"
   }
 }

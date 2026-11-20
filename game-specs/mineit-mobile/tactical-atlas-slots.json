@@ -1,0 +1,42 @@
+{
+  "formatVersion": 1,
+  "slotSize": [
+    64,
+    64
+  ],
+  "slots": {
+    "tactical-building-collection-camp": 0,
+    "tactical-building-quarry": 1,
+    "tactical-building-simple-pit-mine": 2,
+    "tactical-building-deep-mine": 3,
+    "tactical-building-extraction-rig": 4,
+    "tactical-building-water-collector": 5,
+    "tactical-building-crashed-ship": 6,
+    "tactical-building-farm": 7,
+    "tactical-building-ranch": 8,
+    "tactical-building-bio-harvester": 9,
+    "tactical-building-algae-facility": 10,
+    "tactical-building-accommodation-building": 11,
+    "tactical-building-habitat": 12,
+    "tactical-building-power-plant": 13,
+    "tactical-building-industry": 14,
+    "tactical-building-basic-refinery": 15,
+    "tactical-building-headquarters": 16,
+    "tactical-building-research-building": 17,
+    "tactical-building-spaceport": 18,
+    "tactical-building-shipyard-bay": 19,
+    "tactical-building-stockpile": 20,
+    "tactical-building-warehouse": 21,
+    "tactical-building-aquaculture-facility": 22,
+    "tactical-building-agricultural-dome": 23,
+    "tactical-machine-exploration-vehicle": 24,
+    "tactical-vehicle-haulage-truck": 25,
+    "tactical-power-pylon": 26,
+    "tactical-level-1": 27,
+    "tactical-level-2": 28,
+    "tactical-level-3": 29,
+    "tactical-level-4": 30,
+    "tactical-level-5": 31
+  },
+  "reservedSlots": []
+}

@@ -26,6 +26,8 @@ jobs:
           node-version: '22'
       - name: Validate canonical universe
         run: node validation/validate-universe.mjs
+      - name: Validate tactical atlas pixels and mappings
+        run: node validation/validate-tactical-atlas.mjs
       - name: Validate industrial catalogue
         run: node validation/validate-industrial-catalogue.mjs
       - name: Validate complete industrial alignment

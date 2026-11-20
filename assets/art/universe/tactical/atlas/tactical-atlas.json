@@ -1,0 +1,1570 @@
+{
+  "formatVersion": 1,
+  "name": "MineIT Mobile tactical symbols",
+  "atlasSize": [
+    512,
+    512
+  ],
+  "frameSize": [
+    64,
+    64
+  ],
+  "slotCapacityPerAtlas": 64,
+  "origin": "top-left",
+  "alpha": "straight",
+  "slotsFile": "game-specs/mineit-mobile/tactical-atlas-slots.json",
+  "pages": [
+    {
+      "page": 0,
+      "file": "tactical-atlas-0.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "bab54cbc30f5bf242d1aa0468049768d53e04877112ecfcf8e8fedb34b05867d"
+    }
+  ],
+  "levelOverlay": {
+    "mode": "separate-sprite",
+    "badgeSize": [
+      13,
+      13
+    ],
+    "baseSize": [
+      32,
+      32
+    ],
+    "topLeftOnBase": [
+      19,
+      19
+    ],
+    "levels": {
+      "1": "tactical-level-1",
+      "2": "tactical-level-2",
+      "3": "tactical-level-3",
+      "4": "tactical-level-4",
+      "5": "tactical-level-5"
+    }
+  },
+  "sampling": "Use sprite rectangles or texel-centre UVs with linear filtering; avoid whole-atlas mipmaps without per-sprite isolation.",
+  "sprites": [
+    {
+      "assetId": "tactical-building-collection-camp",
+      "entityId": "building-collection-camp",
+      "name": "Collection Camp tactical symbol",
+      "assetType": "building-symbol",
+      "variant": "base",
+      "level": null,
+      "supportedLevels": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "sourceImage": "assets/art/universe/tactical/32px/tactical-building-collection-camp.png",
+      "sourceSha256": "2a5ed2ed492e033d7fb9b4a768e17201b60d8a3cf2c785b190d0282f11232073",
+      "slot": 0,
+      "page": 0,
+      "atlas": "tactical-atlas-0.png",
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "width": 64,
+        "height": 64
+      },
+      "sprite": {
+        "x": 16,
+        "y": 16,
+        "width": 32,
+        "height": 32
+      },
+      "uvEdges": [
+        0.03125,
+        0.03125,
+        0.09375,
+        0.09375
+      ],
+      "uvTexelCenters": [
+        0.0322265625,
+        0.0322265625,
+        0.0927734375,
+        0.0927734375
+      ],
+      "orientation": "screen-upright symbol",
+      "anchor": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "tactical-building-quarry",
+      "entityId": "building-quarry",
+      "name": "Quarry tactical symbol",
+      "assetType": "building-symbol",
+      "variant": "base",
+      "level": null,
+      "supportedLevels": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "sourceImage": "assets/art/universe/tactical/32px/tactical-building-quarry.png",
+      "sourceSha256": "5dddb49b5cbb352279ff437d7ba1fbcb0d4d59ed8b20248fc4d5edefe3f89799",
+      "slot": 1,
+      "page": 0,
+      "atlas": "tactical-atlas-0.png",
+      "frame": {
+        "x": 64,
+        "y": 0,
+        "width": 64,
+        "height": 64
+      },
+      "sprite": {
+        "x": 80,
+        "y": 16,
+        "width": 32,
+        "height": 32
+      },
+      "uvEdges": [
+        0.15625,
+        0.03125,
+        0.21875,
+        0.09375
+      ],
+      "uvTexelCenters": [
+        0.1572265625,
+        0.0322265625,
+        0.2177734375,
+        0.0927734375
+      ],
+      "orientation": "screen-upright symbol",
+      "anchor": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "tactical-building-simple-pit-mine",
+      "entityId": "building-simple-pit-mine",
+      "name": "Simple Pit Mine tactical symbol",
+      "assetType": "building-symbol",
+      "variant": "base",
+      "level": null,
+      "supportedLevels": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "sourceImage": "assets/art/universe/tactical/32px/tactical-building-simple-pit-mine.png",
+      "sourceSha256": "c7475ba346ce5dd486b5ed68a7cda7019d5896c80efe8f8914aeca18d50a4645",
+      "slot": 2,
+      "page": 0,
+      "atlas": "tactical-atlas-0.png",
+      "frame": {
+        "x": 128,
+        "y": 0,
+        "width": 64,
+        "height": 64
+      },
+      "sprite": {
+        "x": 144,
+        "y": 16,
+        "width": 32,
+        "height": 32
+      },
+      "uvEdges": [
+        0.28125,
+        0.03125,
+        0.34375,
+        0.09375
+      ],
+      "uvTexelCenters": [
+        0.2822265625,
+        0.0322265625,
+        0.3427734375,
+        0.0927734375
+      ],
+      "orientation": "screen-upright symbol",
+      "anchor": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "tactical-building-deep-mine",
+      "entityId": "building-deep-mine",
+      "name": "Deep Mine tactical symbol",
+      "assetType": "building-symbol",
+      "variant": "base",
+      "level": null,
+      "supportedLevels": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "sourceImage": "assets/art/universe/tactical/32px/tactical-building-deep-mine.png",
+      "sourceSha256": "aea4a21de82bfc9b1433cfdc195a60495d279154ff267a2a1c531a92b7593b01",
+      "slot": 3,
+      "page": 0,
+      "atlas": "tactical-atlas-0.png",
+      "frame": {
+        "x": 192,
+        "y": 0,
+        "width": 64,
+        "height": 64
+      },
+      "sprite": {
+        "x": 208,
+        "y": 16,
+        "width": 32,
+        "height": 32
+      },
+      "uvEdges": [
+        0.40625,
+        0.03125,
+        0.46875,
+        0.09375
+      ],
+      "uvTexelCenters": [
+        0.4072265625,
+        0.0322265625,
+        0.4677734375,
+        0.0927734375
+      ],
+      "orientation": "screen-upright symbol",
+      "anchor": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "tactical-building-extraction-rig",
+      "entityId": "building-extraction-rig",
+      "name": "Extraction Rig tactical symbol",
+      "assetType": "building-symbol",
+      "variant": "base",
+      "level": null,
+      "supportedLevels": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "sourceImage": "assets/art/universe/tactical/32px/tactical-building-extraction-rig.png",
+      "sourceSha256": "987983e393d1a10af95002999546ecb2aae9f2b780c5bfcad5d8502e210374f4",
+      "slot": 4,
+      "page": 0,
+      "atlas": "tactical-atlas-0.png",
+      "frame": {
+        "x": 256,
+        "y": 0,
+        "width": 64,
+        "height": 64
+      },
+      "sprite": {
+        "x": 272,
+        "y": 16,
+        "width": 32,
+        "height": 32
+      },
+      "uvEdges": [
+        0.53125,
+        0.03125,
+        0.59375,
+        0.09375
+      ],
+      "uvTexelCenters": [
+        0.5322265625,
+        0.0322265625,
+        0.5927734375,
+        0.0927734375
+      ],
+      "orientation": "screen-upright symbol",
+      "anchor": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "tactical-building-water-collector",
+      "entityId": "building-water-collector",
+      "name": "Water Collector tactical symbol",
+      "assetType": "building-symbol",
+      "variant": "base",
+      "level": null,
+      "supportedLevels": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "sourceImage": "assets/art/universe/tactical/32px/tactical-building-water-collector.png",
+      "sourceSha256": "b6eec6a6f82f5220fe501b7c5fc337a63acdeaea9ccb487758a2ac724f7e0384",
+      "slot": 5,
+      "page": 0,
+      "atlas": "tactical-atlas-0.png",
+      "frame": {
+        "x": 320,
+        "y": 0,
+        "width": 64,
+        "height": 64
+      },
+      "sprite": {
+        "x": 336,
+        "y": 16,
+        "width": 32,
+        "height": 32
+      },
+      "uvEdges": [
+        0.65625,
+        0.03125,
+        0.71875,
+        0.09375
+      ],
+      "uvTexelCenters": [
+        0.6572265625,
+        0.0322265625,
+        0.7177734375,
+        0.0927734375
+      ],
+      "orientation": "screen-upright symbol",
+      "anchor": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "tactical-building-crashed-ship",
+      "entityId": "building-crashed-ship",
+      "name": "Crashed Ship tactical symbol",
+      "assetType": "building-symbol",
+      "variant": "base",
+      "level": null,
+      "supportedLevels": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "sourceImage": "assets/art/universe/tactical/32px/tactical-building-crashed-ship.png",
+      "sourceSha256": "8c211cb77faa4350a96218c041d590058e7beb996ba5b94e3ec5a07ea98b9155",
+      "slot": 6,
+      "page": 0,
+      "atlas": "tactical-atlas-0.png",
+      "frame": {
+        "x": 384,
+        "y": 0,
+        "width": 64,
+        "height": 64
+      },
+      "sprite": {
+        "x": 400,
+        "y": 16,
+        "width": 32,
+        "height": 32
+      },
+      "uvEdges": [
+        0.78125,
+        0.03125,
+        0.84375,
+        0.09375
+      ],
+      "uvTexelCenters": [
+        0.7822265625,
+        0.0322265625,
+        0.8427734375,
+        0.0927734375
+      ],
+      "orientation": "screen-upright symbol",
+      "anchor": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "tactical-building-farm",
+      "entityId": "building-farm",
+      "name": "Farm tactical symbol",
+      "assetType": "building-symbol",
+      "variant": "base",
+      "level": null,
+      "supportedLevels": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "sourceImage": "assets/art/universe/tactical/32px/tactical-building-farm.png",
+      "sourceSha256": "f6f24beb101e738af1323c496525db19cd55cf4cc9682f474dfbbe819ff868a5",
+      "slot": 7,
+      "page": 0,
+      "atlas": "tactical-atlas-0.png",
+      "frame": {
+        "x": 448,
+        "y": 0,
+        "width": 64,
+        "height": 64
+      },
+      "sprite": {
+        "x": 464,
+        "y": 16,
+        "width": 32,
+        "height": 32
+      },
+      "uvEdges": [
+        0.90625,
+        0.03125,
+        0.96875,
+        0.09375
+      ],
+      "uvTexelCenters": [
+        0.9072265625,
+        0.0322265625,
+        0.9677734375,
+        0.0927734375
+      ],
+      "orientation": "screen-upright symbol",
+      "anchor": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "tactical-building-ranch",
+      "entityId": "building-ranch",
+      "name": "Ranch tactical symbol",
+      "assetType": "building-symbol",
+      "variant": "base",
+      "level": null,
+      "supportedLevels": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "sourceImage": "assets/art/universe/tactical/32px/tactical-building-ranch.png",
+      "sourceSha256": "ebe3797c3acb10aa7c74a9417e9da748f7c3d82d871aa29293101812952672f7",
+      "slot": 8,
+      "page": 0,
+      "atlas": "tactical-atlas-0.png",
+      "frame": {
+        "x": 0,
+        "y": 64,
+        "width": 64,
+        "height": 64
+      },
+      "sprite": {
+        "x": 16,
+        "y": 80,
+        "width": 32,
+        "height": 32
+      },
+      "uvEdges": [
+        0.03125,
+        0.15625,
+        0.09375,
+        0.21875
+      ],
+      "uvTexelCenters": [
+        0.0322265625,
+        0.1572265625,
+        0.0927734375,
+        0.2177734375
+      ],
+      "orientation": "screen-upright symbol",
+      "anchor": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "tactical-building-bio-harvester",
+      "entityId": "building-bio-harvester",
+      "name": "Bio Harvester tactical symbol",
+      "assetType": "building-symbol",
+      "variant": "base",
+      "level": null,
+      "supportedLevels": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "sourceImage": "assets/art/universe/tactical/32px/tactical-building-bio-harvester.png",
+      "sourceSha256": "d28c952021eb18b9d4be82af83e05fb049c22e933254e9aeabcee2568fc6f927",
+      "slot": 9,
+      "page": 0,
+      "atlas": "tactical-atlas-0.png",
+      "frame": {
+        "x": 64,
+        "y": 64,
+        "width": 64,
+        "height": 64
+      },
+      "sprite": {
+        "x": 80,
+        "y": 80,
+        "width": 32,
+        "height": 32
+      },
+      "uvEdges": [
+        0.15625,
+        0.15625,
+        0.21875,
+        0.21875
+      ],
+      "uvTexelCenters": [
+        0.1572265625,
+        0.1572265625,
+        0.2177734375,
+        0.2177734375
+      ],
+      "orientation": "screen-upright symbol",
+      "anchor": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "tactical-building-algae-facility",
+      "entityId": "building-algae-facility",
+      "name": "Algae Facility tactical symbol",
+      "assetType": "building-symbol",
+      "variant": "base",
+      "level": null,
+      "supportedLevels": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "sourceImage": "assets/art/universe/tactical/32px/tactical-building-algae-facility.png",
+      "sourceSha256": "b2a35ec888c10f035338278eff593214849d440f9c56f16014e868fb2081cad9",
+      "slot": 10,
+      "page": 0,
+      "atlas": "tactical-atlas-0.png",
+      "frame": {
+        "x": 128,
+        "y": 64,
+        "width": 64,
+        "height": 64
+      },
+      "sprite": {
+        "x": 144,
+        "y": 80,
+        "width": 32,
+        "height": 32
+      },
+      "uvEdges": [
+        0.28125,
+        0.15625,
+        0.34375,
+        0.21875
+      ],
+      "uvTexelCenters": [
+        0.2822265625,
+        0.1572265625,
+        0.3427734375,
+        0.2177734375
+      ],
+      "orientation": "screen-upright symbol",
+      "anchor": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "tactical-building-accommodation-building",
+      "entityId": "building-accommodation-building",
+      "name": "Accommodation Building tactical symbol",
+      "assetType": "building-symbol",
+      "variant": "base",
+      "level": null,
+      "supportedLevels": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "sourceImage": "assets/art/universe/tactical/32px/tactical-building-accommodation-building.png",
+      "sourceSha256": "5d901bd80d271c8c99605cfb19a25be243c9c7bcfef7da0a61e683c701e1796f",
+      "slot": 11,
+      "page": 0,
+      "atlas": "tactical-atlas-0.png",
+      "frame": {
+        "x": 192,
+        "y": 64,
+        "width": 64,
+        "height": 64
+      },
+      "sprite": {
+        "x": 208,
+        "y": 80,
+        "width": 32,
+        "height": 32
+      },
+      "uvEdges": [
+        0.40625,
+        0.15625,
+        0.46875,
+        0.21875
+      ],
+      "uvTexelCenters": [
+        0.4072265625,
+        0.1572265625,
+        0.4677734375,
+        0.2177734375
+      ],
+      "orientation": "screen-upright symbol",
+      "anchor": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "tactical-building-habitat",
+      "entityId": "building-habitat",
+      "name": "Habitat tactical symbol",
+      "assetType": "building-symbol",
+      "variant": "base",
+      "level": null,
+      "supportedLevels": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "sourceImage": "assets/art/universe/tactical/32px/tactical-building-habitat.png",
+      "sourceSha256": "027f2f71e0f66db985f3305adfb8312f10f21bada23b000cceeac5cea9f07e9a",
+      "slot": 12,
+      "page": 0,
+      "atlas": "tactical-atlas-0.png",
+      "frame": {
+        "x": 256,
+        "y": 64,
+        "width": 64,
+        "height": 64
+      },
+      "sprite": {
+        "x": 272,
+        "y": 80,
+        "width": 32,
+        "height": 32
+      },
+      "uvEdges": [
+        0.53125,
+        0.15625,
+        0.59375,
+        0.21875
+      ],
+      "uvTexelCenters": [
+        0.5322265625,
+        0.1572265625,
+        0.5927734375,
+        0.2177734375
+      ],
+      "orientation": "screen-upright symbol",
+      "anchor": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "tactical-building-power-plant",
+      "entityId": "building-power-plant",
+      "name": "Power Plant tactical symbol",
+      "assetType": "building-symbol",
+      "variant": "base",
+      "level": null,
+      "supportedLevels": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "sourceImage": "assets/art/universe/tactical/32px/tactical-building-power-plant.png",
+      "sourceSha256": "c7a651a245ce4f47313aa70768864d245ad19f42c13c2a4fba414c726d164251",
+      "slot": 13,
+      "page": 0,
+      "atlas": "tactical-atlas-0.png",
+      "frame": {
+        "x": 320,
+        "y": 64,
+        "width": 64,
+        "height": 64
+      },
+      "sprite": {
+        "x": 336,
+        "y": 80,
+        "width": 32,
+        "height": 32
+      },
+      "uvEdges": [
+        0.65625,
+        0.15625,
+        0.71875,
+        0.21875
+      ],
+      "uvTexelCenters": [
+        0.6572265625,
+        0.1572265625,
+        0.7177734375,
+        0.2177734375
+      ],
+      "orientation": "screen-upright symbol",
+      "anchor": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "tactical-building-industry",
+      "entityId": "building-industry",
+      "name": "Industry tactical symbol",
+      "assetType": "building-symbol",
+      "variant": "base",
+      "level": null,
+      "supportedLevels": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "sourceImage": "assets/art/universe/tactical/32px/tactical-building-industry.png",
+      "sourceSha256": "d5a34ee6ae3f0b0abdf43a5eb22a472a97e1bf40d3819e3670948b2f819b04c8",
+      "slot": 14,
+      "page": 0,
+      "atlas": "tactical-atlas-0.png",
+      "frame": {
+        "x": 384,
+        "y": 64,
+        "width": 64,
+        "height": 64
+      },
+      "sprite": {
+        "x": 400,
+        "y": 80,
+        "width": 32,
+        "height": 32
+      },
+      "uvEdges": [
+        0.78125,
+        0.15625,
+        0.84375,
+        0.21875
+      ],
+      "uvTexelCenters": [
+        0.7822265625,
+        0.1572265625,
+        0.8427734375,
+        0.2177734375
+      ],
+      "orientation": "screen-upright symbol",
+      "anchor": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "tactical-building-basic-refinery",
+      "entityId": "building-basic-refinery",
+      "name": "Basic Refinery tactical symbol",
+      "assetType": "building-symbol",
+      "variant": "base",
+      "level": null,
+      "supportedLevels": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "sourceImage": "assets/art/universe/tactical/32px/tactical-building-basic-refinery.png",
+      "sourceSha256": "5aeecfe3e9f46d51d496f14ece38d7ea60b6efbfbae3f9280c379d0ddde478d6",
+      "slot": 15,
+      "page": 0,
+      "atlas": "tactical-atlas-0.png",
+      "frame": {
+        "x": 448,
+        "y": 64,
+        "width": 64,
+        "height": 64
+      },
+      "sprite": {
+        "x": 464,
+        "y": 80,
+        "width": 32,
+        "height": 32
+      },
+      "uvEdges": [
+        0.90625,
+        0.15625,
+        0.96875,
+        0.21875
+      ],
+      "uvTexelCenters": [
+        0.9072265625,
+        0.1572265625,
+        0.9677734375,
+        0.2177734375
+      ],
+      "orientation": "screen-upright symbol",
+      "anchor": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "tactical-building-headquarters",
+      "entityId": "building-headquarters",
+      "name": "Headquarters tactical symbol",
+      "assetType": "building-symbol",
+      "variant": "base",
+      "level": null,
+      "supportedLevels": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "sourceImage": "assets/art/universe/tactical/32px/tactical-building-headquarters.png",
+      "sourceSha256": "12e673d2d80bdd5bc0c18a6a7ed3fd62a463b7df0bb89fe7521a2e395b54639d",
+      "slot": 16,
+      "page": 0,
+      "atlas": "tactical-atlas-0.png",
+      "frame": {
+        "x": 0,
+        "y": 128,
+        "width": 64,
+        "height": 64
+      },
+      "sprite": {
+        "x": 16,
+        "y": 144,
+        "width": 32,
+        "height": 32
+      },
+      "uvEdges": [
+        0.03125,
+        0.28125,
+        0.09375,
+        0.34375
+      ],
+      "uvTexelCenters": [
+        0.0322265625,
+        0.2822265625,
+        0.0927734375,
+        0.3427734375
+      ],
+      "orientation": "screen-upright symbol",
+      "anchor": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "tactical-building-research-building",
+      "entityId": "building-research-building",
+      "name": "Research Building tactical symbol",
+      "assetType": "building-symbol",
+      "variant": "base",
+      "level": null,
+      "supportedLevels": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "sourceImage": "assets/art/universe/tactical/32px/tactical-building-research-building.png",
+      "sourceSha256": "4ab75c15aaa6d75beb887a67033bebe83d9e3eaa3c9829ea163cb621926e14cb",
+      "slot": 17,
+      "page": 0,
+      "atlas": "tactical-atlas-0.png",
+      "frame": {
+        "x": 64,
+        "y": 128,
+        "width": 64,
+        "height": 64
+      },
+      "sprite": {
+        "x": 80,
+        "y": 144,
+        "width": 32,
+        "height": 32
+      },
+      "uvEdges": [
+        0.15625,
+        0.28125,
+        0.21875,
+        0.34375
+      ],
+      "uvTexelCenters": [
+        0.1572265625,
+        0.2822265625,
+        0.2177734375,
+        0.3427734375
+      ],
+      "orientation": "screen-upright symbol",
+      "anchor": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "tactical-building-spaceport",
+      "entityId": "building-spaceport",
+      "name": "Spaceport tactical symbol",
+      "assetType": "building-symbol",
+      "variant": "base",
+      "level": null,
+      "supportedLevels": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "sourceImage": "assets/art/universe/tactical/32px/tactical-building-spaceport.png",
+      "sourceSha256": "86436a92329e6efea1af266076a4d8086450e331a8b4408959c180167c519c32",
+      "slot": 18,
+      "page": 0,
+      "atlas": "tactical-atlas-0.png",
+      "frame": {
+        "x": 128,
+        "y": 128,
+        "width": 64,
+        "height": 64
+      },
+      "sprite": {
+        "x": 144,
+        "y": 144,
+        "width": 32,
+        "height": 32
+      },
+      "uvEdges": [
+        0.28125,
+        0.28125,
+        0.34375,
+        0.34375
+      ],
+      "uvTexelCenters": [
+        0.2822265625,
+        0.2822265625,
+        0.3427734375,
+        0.3427734375
+      ],
+      "orientation": "screen-upright symbol",
+      "anchor": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "tactical-building-shipyard-bay",
+      "entityId": "building-shipyard-bay",
+      "name": "Shipyard Bay tactical symbol",
+      "assetType": "building-symbol",
+      "variant": "base",
+      "level": null,
+      "supportedLevels": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "sourceImage": "assets/art/universe/tactical/32px/tactical-building-shipyard-bay.png",
+      "sourceSha256": "224a3f6be00ef8333f266e23f609e11d252472cde42077fff003d0464b10584b",
+      "slot": 19,
+      "page": 0,
+      "atlas": "tactical-atlas-0.png",
+      "frame": {
+        "x": 192,
+        "y": 128,
+        "width": 64,
+        "height": 64
+      },
+      "sprite": {
+        "x": 208,
+        "y": 144,
+        "width": 32,
+        "height": 32
+      },
+      "uvEdges": [
+        0.40625,
+        0.28125,
+        0.46875,
+        0.34375
+      ],
+      "uvTexelCenters": [
+        0.4072265625,
+        0.2822265625,
+        0.4677734375,
+        0.3427734375
+      ],
+      "orientation": "screen-upright symbol",
+      "anchor": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "tactical-building-stockpile",
+      "entityId": "building-stockpile",
+      "name": "Stockpile tactical symbol",
+      "assetType": "building-symbol",
+      "variant": "base",
+      "level": null,
+      "supportedLevels": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "sourceImage": "assets/art/universe/tactical/32px/tactical-building-stockpile.png",
+      "sourceSha256": "0115d0edc962e90a0dab25683b12ba8d672e2c4edfc9293f02b61ab3515907fa",
+      "slot": 20,
+      "page": 0,
+      "atlas": "tactical-atlas-0.png",
+      "frame": {
+        "x": 256,
+        "y": 128,
+        "width": 64,
+        "height": 64
+      },
+      "sprite": {
+        "x": 272,
+        "y": 144,
+        "width": 32,
+        "height": 32
+      },
+      "uvEdges": [
+        0.53125,
+        0.28125,
+        0.59375,
+        0.34375
+      ],
+      "uvTexelCenters": [
+        0.5322265625,
+        0.2822265625,
+        0.5927734375,
+        0.3427734375
+      ],
+      "orientation": "screen-upright symbol",
+      "anchor": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "tactical-building-warehouse",
+      "entityId": "building-warehouse",
+      "name": "Warehouse tactical symbol",
+      "assetType": "building-symbol",
+      "variant": "base",
+      "level": null,
+      "supportedLevels": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "sourceImage": "assets/art/universe/tactical/32px/tactical-building-warehouse.png",
+      "sourceSha256": "168048fac941f5ae19b3d127ce54ff9755b61a96809e98d9f76a5d69842c2813",
+      "slot": 21,
+      "page": 0,
+      "atlas": "tactical-atlas-0.png",
+      "frame": {
+        "x": 320,
+        "y": 128,
+        "width": 64,
+        "height": 64
+      },
+      "sprite": {
+        "x": 336,
+        "y": 144,
+        "width": 32,
+        "height": 32
+      },
+      "uvEdges": [
+        0.65625,
+        0.28125,
+        0.71875,
+        0.34375
+      ],
+      "uvTexelCenters": [
+        0.6572265625,
+        0.2822265625,
+        0.7177734375,
+        0.3427734375
+      ],
+      "orientation": "screen-upright symbol",
+      "anchor": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "tactical-building-aquaculture-facility",
+      "entityId": "building-aquaculture-facility",
+      "name": "Aquaculture Facility tactical symbol",
+      "assetType": "building-symbol",
+      "variant": "base",
+      "level": null,
+      "supportedLevels": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "sourceImage": "assets/art/universe/tactical/32px/tactical-building-aquaculture-facility.png",
+      "sourceSha256": "14823beecb143db7eb079a79c57954b9712b7f73e3c7ff48d260a8934bf3b517",
+      "slot": 22,
+      "page": 0,
+      "atlas": "tactical-atlas-0.png",
+      "frame": {
+        "x": 384,
+        "y": 128,
+        "width": 64,
+        "height": 64
+      },
+      "sprite": {
+        "x": 400,
+        "y": 144,
+        "width": 32,
+        "height": 32
+      },
+      "uvEdges": [
+        0.78125,
+        0.28125,
+        0.84375,
+        0.34375
+      ],
+      "uvTexelCenters": [
+        0.7822265625,
+        0.2822265625,
+        0.8427734375,
+        0.3427734375
+      ],
+      "orientation": "screen-upright symbol",
+      "anchor": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "tactical-building-agricultural-dome",
+      "entityId": "building-agricultural-dome",
+      "name": "Agricultural Dome tactical symbol",
+      "assetType": "building-symbol",
+      "variant": "base",
+      "level": null,
+      "supportedLevels": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "sourceImage": "assets/art/universe/tactical/32px/tactical-building-agricultural-dome.png",
+      "sourceSha256": "cd82f6c39c7a4510dc254d585c03b98278fced82b303ec5f758622d22647bd17",
+      "slot": 23,
+      "page": 0,
+      "atlas": "tactical-atlas-0.png",
+      "frame": {
+        "x": 448,
+        "y": 128,
+        "width": 64,
+        "height": 64
+      },
+      "sprite": {
+        "x": 464,
+        "y": 144,
+        "width": 32,
+        "height": 32
+      },
+      "uvEdges": [
+        0.90625,
+        0.28125,
+        0.96875,
+        0.34375
+      ],
+      "uvTexelCenters": [
+        0.9072265625,
+        0.2822265625,
+        0.9677734375,
+        0.3427734375
+      ],
+      "orientation": "screen-upright symbol",
+      "anchor": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "tactical-machine-exploration-vehicle",
+      "entityId": "machine-exploration-vehicle",
+      "name": "Exploration Vehicle tactical symbol",
+      "assetType": "machine-symbol",
+      "variant": "base",
+      "level": null,
+      "supportedLevels": [],
+      "sourceImage": "assets/art/universe/tactical/32px/tactical-machine-exploration-vehicle.png",
+      "sourceSha256": "9c8bc288475be607ebe79ff2cc62287b17f2e454f5b42cdce538b7ce60fe8d3e",
+      "slot": 24,
+      "page": 0,
+      "atlas": "tactical-atlas-0.png",
+      "frame": {
+        "x": 0,
+        "y": 192,
+        "width": 64,
+        "height": 64
+      },
+      "sprite": {
+        "x": 16,
+        "y": 208,
+        "width": 32,
+        "height": 32
+      },
+      "uvEdges": [
+        0.03125,
+        0.40625,
+        0.09375,
+        0.46875
+      ],
+      "uvTexelCenters": [
+        0.0322265625,
+        0.4072265625,
+        0.0927734375,
+        0.4677734375
+      ],
+      "orientation": "side-view; heading convention not established",
+      "anchor": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "tactical-vehicle-haulage-truck",
+      "entityId": "machine-haulage-truck",
+      "name": "Haulage Truck tactical symbol",
+      "assetType": "vehicle-symbol",
+      "variant": "base",
+      "level": null,
+      "supportedLevels": [],
+      "sourceImage": "assets/art/universe/tactical/32px/tactical-vehicle-haulage-truck.png",
+      "sourceSha256": "32b30824bc41c45d2a294f2313f8eb471fd3dc0f7304dd37ff967ff53d50b6e1",
+      "slot": 25,
+      "page": 0,
+      "atlas": "tactical-atlas-0.png",
+      "frame": {
+        "x": 64,
+        "y": 192,
+        "width": 64,
+        "height": 64
+      },
+      "sprite": {
+        "x": 80,
+        "y": 208,
+        "width": 32,
+        "height": 32
+      },
+      "uvEdges": [
+        0.15625,
+        0.40625,
+        0.21875,
+        0.46875
+      ],
+      "uvTexelCenters": [
+        0.1572265625,
+        0.4072265625,
+        0.2177734375,
+        0.4677734375
+      ],
+      "orientation": "side-view; heading convention not established",
+      "anchor": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "tactical-power-pylon",
+      "entityId": null,
+      "name": "Power Pylon tactical symbol",
+      "assetType": "infrastructure-symbol",
+      "variant": "base",
+      "level": null,
+      "supportedLevels": [],
+      "sourceImage": "assets/art/universe/tactical/32px/tactical-power-pylon.png",
+      "sourceSha256": "4d8206ade9f6bdd29f764071126a2b032c2cdc1870d99f161a480a2b721f1aea",
+      "slot": 26,
+      "page": 0,
+      "atlas": "tactical-atlas-0.png",
+      "frame": {
+        "x": 128,
+        "y": 192,
+        "width": 64,
+        "height": 64
+      },
+      "sprite": {
+        "x": 152,
+        "y": 216,
+        "width": 16,
+        "height": 16
+      },
+      "uvEdges": [
+        0.296875,
+        0.421875,
+        0.328125,
+        0.453125
+      ],
+      "uvTexelCenters": [
+        0.2978515625,
+        0.4228515625,
+        0.3271484375,
+        0.4521484375
+      ],
+      "orientation": "screen-upright symbol",
+      "anchor": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "tactical-level-1",
+      "entityId": null,
+      "name": "Level 1 tactical badge",
+      "assetType": "level-badge",
+      "variant": "level-badge",
+      "level": 1,
+      "supportedLevels": [],
+      "sourceImage": "assets/art/universe/tactical/32px/tactical-level-1.png",
+      "sourceSha256": "c1bbc62a35c601874700801dea76fa505db0e043fdd36894bdd58e13604d6f56",
+      "slot": 27,
+      "page": 0,
+      "atlas": "tactical-atlas-0.png",
+      "frame": {
+        "x": 192,
+        "y": 192,
+        "width": 64,
+        "height": 64
+      },
+      "sprite": {
+        "x": 217,
+        "y": 217,
+        "width": 13,
+        "height": 13
+      },
+      "uvEdges": [
+        0.423828125,
+        0.423828125,
+        0.44921875,
+        0.44921875
+      ],
+      "uvTexelCenters": [
+        0.4248046875,
+        0.4248046875,
+        0.4482421875,
+        0.4482421875
+      ],
+      "orientation": "screen-upright overlay",
+      "anchor": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "tactical-level-2",
+      "entityId": null,
+      "name": "Level 2 tactical badge",
+      "assetType": "level-badge",
+      "variant": "level-badge",
+      "level": 2,
+      "supportedLevels": [],
+      "sourceImage": "assets/art/universe/tactical/32px/tactical-level-2.png",
+      "sourceSha256": "9120c6e5726db04130949b9d28faeba2a396395dcc6524ef389022d4d3b09985",
+      "slot": 28,
+      "page": 0,
+      "atlas": "tactical-atlas-0.png",
+      "frame": {
+        "x": 256,
+        "y": 192,
+        "width": 64,
+        "height": 64
+      },
+      "sprite": {
+        "x": 281,
+        "y": 217,
+        "width": 13,
+        "height": 13
+      },
+      "uvEdges": [
+        0.548828125,
+        0.423828125,
+        0.57421875,
+        0.44921875
+      ],
+      "uvTexelCenters": [
+        0.5498046875,
+        0.4248046875,
+        0.5732421875,
+        0.4482421875
+      ],
+      "orientation": "screen-upright overlay",
+      "anchor": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "tactical-level-3",
+      "entityId": null,
+      "name": "Level 3 tactical badge",
+      "assetType": "level-badge",
+      "variant": "level-badge",
+      "level": 3,
+      "supportedLevels": [],
+      "sourceImage": "assets/art/universe/tactical/32px/tactical-level-3.png",
+      "sourceSha256": "9c9fa83ccfba7ed4279cc26f3e991decf273bd7faabd112024154859863d0dbf",
+      "slot": 29,
+      "page": 0,
+      "atlas": "tactical-atlas-0.png",
+      "frame": {
+        "x": 320,
+        "y": 192,
+        "width": 64,
+        "height": 64
+      },
+      "sprite": {
+        "x": 345,
+        "y": 217,
+        "width": 13,
+        "height": 13
+      },
+      "uvEdges": [
+        0.673828125,
+        0.423828125,
+        0.69921875,
+        0.44921875
+      ],
+      "uvTexelCenters": [
+        0.6748046875,
+        0.4248046875,
+        0.6982421875,
+        0.4482421875
+      ],
+      "orientation": "screen-upright overlay",
+      "anchor": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "tactical-level-4",
+      "entityId": null,
+      "name": "Level 4 tactical badge",
+      "assetType": "level-badge",
+      "variant": "level-badge",
+      "level": 4,
+      "supportedLevels": [],
+      "sourceImage": "assets/art/universe/tactical/32px/tactical-level-4.png",
+      "sourceSha256": "53e18664a1f0cf3e8db5465c2e9ccfd042882f35032ea769c5502d8ee780e70a",
+      "slot": 30,
+      "page": 0,
+      "atlas": "tactical-atlas-0.png",
+      "frame": {
+        "x": 384,
+        "y": 192,
+        "width": 64,
+        "height": 64
+      },
+      "sprite": {
+        "x": 409,
+        "y": 217,
+        "width": 13,
+        "height": 13
+      },
+      "uvEdges": [
+        0.798828125,
+        0.423828125,
+        0.82421875,
+        0.44921875
+      ],
+      "uvTexelCenters": [
+        0.7998046875,
+        0.4248046875,
+        0.8232421875,
+        0.4482421875
+      ],
+      "orientation": "screen-upright overlay",
+      "anchor": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "assetId": "tactical-level-5",
+      "entityId": null,
+      "name": "Level 5 tactical badge",
+      "assetType": "level-badge",
+      "variant": "level-badge",
+      "level": 5,
+      "supportedLevels": [],
+      "sourceImage": "assets/art/universe/tactical/32px/tactical-level-5.png",
+      "sourceSha256": "066bac71106c9662aad2b118db1c18d440c8b1f199c22ba920734ed866b88ee6",
+      "slot": 31,
+      "page": 0,
+      "atlas": "tactical-atlas-0.png",
+      "frame": {
+        "x": 448,
+        "y": 192,
+        "width": 64,
+        "height": 64
+      },
+      "sprite": {
+        "x": 473,
+        "y": 217,
+        "width": 13,
+        "height": 13
+      },
+      "uvEdges": [
+        0.923828125,
+        0.423828125,
+        0.94921875,
+        0.44921875
+      ],
+      "uvTexelCenters": [
+        0.9248046875,
+        0.4248046875,
+        0.9482421875,
+        0.4482421875
+      ],
+      "orientation": "screen-upright overlay",
+      "anchor": [
+        0.5,
+        0.5
+      ]
+    }
+  ]
+}
