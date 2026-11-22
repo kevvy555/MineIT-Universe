@@ -5594,14 +5594,15 @@
     "image": {
       "key": "assets/art/universe/buildings/building-spaceport.webp",
       "generated": true,
-      "status": "generated",
-      "promptDescription": "Perfect 1:1 square MineIT Mobile building tile on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent three-quarter elevated angle, matching the established Mobile development-building language: clean rounded white ceramic/composite shells, charcoal structural frames and platforms, vivid orange trim and safety rails, restrained electric-blue emissive details, warm amber windows, crisp bevels, compact modular construction and a strong readable silhouette at 128×128. Centre the complete structure with comfortable transparent margin. No terrain scene, sky, horizon, rectangular backdrop, people, readable text, logos, company marks, registration numbers, UI, border or watermark. Show a complete mature reference configuration that clearly communicates the building identity without representing a numbered gameplay level. Building identity and required functional content: Exterior of a surface spaceport: prepared pad and the heavy assembly crane for berthing and cargo, not a warehouse handler. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records. Canonical identity art follows the MineIT Mobile isometric style; separate linked L1-L5 presentation images are materialised in building-mobile-level-images.json."
+      "status": "needs-regeneration",
+      "promptDescription": "Square transparent MineIT Mobile catalogue artwork of a mature surface Spaceport, with one detailed command building beside multiple large square spacecraft landing berths. The berths are approximately twice the width and length of those in the earlier six-berth review image relative to the command building. Use the detailed established isometric style: layered pale ceramic shells, charcoal platforms, orange railings and safety trim, rooftop antennas and dish, pipes and service equipment, blue indicators and warm amber windows. Keep the complete installation visible and readable; no numbered gameplay level, cranes, round landing pads, spacecraft, people, terrain, sky, text, logos, UI or watermark.",
+      "notes": "Canonical identity art is independent of numbered Mobile levels. Existing artwork remains available while replacement is pending.",
+      "modelPrompt": "Create a complete game-ready 3D model of a mature MineIT surface Spaceport: one detailed command building alongside multiple large square spacecraft berths on a connected modular deck. Make the pads approximately twice the width and length of those in the earlier six-berth review image relative to the command building; maintain consistent proportions across the five level variants. Match the established Spaceport reference with layered pale ceramic/composite shells, charcoal structural platforms, orange safety rails, rooftop antennas and dish, pipes, utility modules, blue indicators and amber windows. Model a complete exterior from all sides with reusable modular berth units and sensible pivots, efficient topology, UVs, PBR materials and emissive lights. Provide editable source and textured glTF/GLB if supported; exact dimensions and budgets remain to be agreed. No crane, round landing pads, spacecraft, people, terrain, readable text, logos or baked-in background. Do not encode a numbered level in this canonical identity model."
     },
     "mobileLevelAtlas": {
       "key": "assets/art/universe/buildings/mobile-levels/atlases/building-spaceport-levels-256.webp",
       "generated": true,
-      "status": "generated",
+      "status": "needs-regeneration",
       "frameWidth": 256,
       "frameHeight": 256,
       "frameOrder": [
