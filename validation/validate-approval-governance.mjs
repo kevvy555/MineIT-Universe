@@ -145,11 +145,22 @@ const machineRows = industrialReviewRows("machines", catalogue, industrialRefere
 assert.equal(machineRows.length, 46);
 assert.equal(machineRows.filter(r => r.fields.approval === "Approved").length, 0,
   "Approved amenity recipe is not blanket Machine approval");
-assert.equal(machineRows.filter(r => r.fields.approval === "Blocked").length, 10,
-  "All seven prior blocked scenarios and three specialist engineering blocks remain visible");
+assert.equal(machineRows.filter(r => r.fields.approval === "Blocked").length, 7,
+  "Seven unresolved manufacturing/engineering block records remain; three newly rated generators are In Review");
 for (const machine of collections.machines) {
-  assert.deepEqual(new Set(Object.keys(machine.fieldApprovalStatuses || {})),
+  const statusKeys = Object.keys(machine.fieldApprovalStatuses || {});
+  assert.deepEqual(new Set(statusKeys.filter(key => machineRequired.includes(key))),
     new Set(machineRequired), machine.id + " must track every mandatory approval field");
+  const authorizedExtraFields = new Set([
+    "operating.ratedCapacityUnit", "operating.idlePowerUnits", "operating.operatingConsumables",
+    "operating.consumableUnitPolicy", "operating.foundingCargoUnits", "operating.configurationProfiles",
+    "operating.generatorFuelProfile", "operating.environmentalGate",
+    "operating.storedEnergyCapacityPowerUnitHours"
+  ]);
+  const extras = statusKeys.filter(key => !machineRequired.includes(key));
+  assert.ok(extras.every(key => machine.mobileMineInitialBalance?.approval === "Approved" &&
+    machine.mobileMineInitialBalance.scope === "mine-and-connected-power" &&
+    authorizedExtraFields.has(key)), machine.id + " has unauthorized extra approval fields");
   assert.ok(validApprovalStatuses.has(machine.approval));
   assert.equal(machine.approvedPhysicalBOM, undefined,
     "Parallel legacy Machine BOM cannot remain after consolidation");
