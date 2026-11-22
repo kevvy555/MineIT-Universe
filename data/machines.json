@@ -3013,7 +3013,7 @@
       "operating.generatorFuelProfile": "Approved",
       "operating.foundingCargoUnits": "Approved"
     },
-    "approval": "Blocked",
+    "approval": "In Review",
     "servicePartRequirements": [
       {
         "partId": "part-power-electronics",
@@ -5449,7 +5449,7 @@
       "operating.generatorFuelProfile": "Approved",
       "operating.foundingCargoUnits": "Approved"
     },
-    "approval": "Blocked",
+    "approval": "In Review",
     "servicePartRequirements": [
       {
         "partId": "part-generator-parts",
@@ -5670,7 +5670,7 @@
       "operating.generatorFuelProfile": "Approved",
       "operating.foundingCargoUnits": "Approved"
     },
-    "approval": "Blocked",
+    "approval": "In Review",
     "servicePartRequirements": [
       {
         "partId": "part-generator-parts",
