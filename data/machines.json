@@ -449,8 +449,8 @@
       "finishedMassKg": 234.1,
       "manufacturerCostCC": 74404.07,
       "manufacturerQuoteCC": 93050,
-      "reviewBasis": "Unapproved Android derived-cost scenario; quantities, ratings and CC require Building-led review.",
-      "unresolvedDesignConstraints": "Precision analyser optics sensor grade and calibration unreviewed"
+      "reviewBasis": "User-authorized initial MineIT Mobile numeric reference baseline approved on 22 Nov 2026 (manufacturer quote/mass/cost only). Manufacturing BOM inputs, yields and qualified engineering remain separately Proposed/Blocked when explicitly not yet reviewed.",
+      "unresolvedDesignConstraints": "Outstanding physical manufacturing process/qualified material and test details remain subject to separate engineering review; initial operating ratings, reference mass and manufacturer quote are Approved for MineIT Mobile."
     },
     "operating": {
       "ratedCapacity": 10,
@@ -1651,8 +1651,8 @@
       "finishedMassKg": 3054.2,
       "manufacturerCostCC": 173710.28,
       "manufacturerQuoteCC": 217150,
-      "reviewBasis": "Unapproved Android derived-cost scenario; quantities, ratings and CC require Building-led review.",
-      "unresolvedDesignConstraints": "Belt material Polymer stand-in and rated length/capacity pending"
+      "reviewBasis": "User-authorized initial MineIT Mobile numeric reference baseline approved on 22 Nov 2026 (manufacturer quote/mass/cost only). Manufacturing BOM inputs, yields and qualified engineering remain separately Proposed/Blocked when explicitly not yet reviewed.",
+      "unresolvedDesignConstraints": "Outstanding physical manufacturing process/qualified material and test details remain subject to separate engineering review; initial operating ratings, reference mass and manufacturer quote are Approved for MineIT Mobile."
     },
     "operating": {
       "ratedCapacity": 15,
@@ -1833,8 +1833,8 @@
       "finishedMassKg": 1171.5,
       "manufacturerCostCC": 118103.06,
       "manufacturerQuoteCC": 147650,
-      "reviewBasis": "Unapproved Android derived-cost scenario; quantities, ratings and CC require Building-led review.",
-      "unresolvedDesignConstraints": "Fan duct length/capacity and filter consumable needs TBD"
+      "reviewBasis": "User-authorized initial MineIT Mobile numeric reference baseline approved on 22 Nov 2026 (manufacturer quote/mass/cost only). Manufacturing BOM inputs, yields and qualified engineering remain separately Proposed/Blocked when explicitly not yet reviewed.",
+      "unresolvedDesignConstraints": "Outstanding physical manufacturing process/qualified material and test details remain subject to separate engineering review; initial operating ratings, reference mass and manufacturer quote are Approved for MineIT Mobile."
     },
     "operating": {
       "ratedCapacity": 1,
@@ -2383,8 +2383,8 @@
       "finishedMassKg": 1342.7,
       "manufacturerCostCC": 100112.17,
       "manufacturerQuoteCC": 125150,
-      "reviewBasis": "Unapproved Android derived-cost scenario; quantities, ratings and CC require Building-led review.",
-      "unresolvedDesignConstraints": "Lead-acid chemistry and rated energy capacity require signoff"
+      "reviewBasis": "User-authorized initial MineIT Mobile numeric reference baseline approved on 22 Nov 2026 (manufacturer quote/mass/cost only). Manufacturing BOM inputs, yields and qualified engineering remain separately Proposed/Blocked when explicitly not yet reviewed.",
+      "unresolvedDesignConstraints": "Outstanding physical manufacturing process/qualified material and test details remain subject to separate engineering review; initial operating ratings, reference mass and manufacturer quote are Approved for MineIT Mobile."
     },
     "operating": {
       "ratedCapacity": 25,
@@ -2562,8 +2562,8 @@
       "finishedMassKg": 4165.5,
       "manufacturerCostCC": 240968.42,
       "manufacturerQuoteCC": 301250,
-      "reviewBasis": "Unapproved Android derived-cost scenario; quantities, ratings and CC require Building-led review.",
-      "unresolvedDesignConstraints": "Rotor blades and support foundation rating; no motor as generator"
+      "reviewBasis": "User-authorized initial MineIT Mobile numeric reference baseline approved on 22 Nov 2026 (manufacturer quote/mass/cost only). Manufacturing BOM inputs, yields and qualified engineering remain separately Proposed/Blocked when explicitly not yet reviewed.",
+      "unresolvedDesignConstraints": "Outstanding physical manufacturing process/qualified material and test details remain subject to separate engineering review; initial operating ratings, reference mass and manufacturer quote are Approved for MineIT Mobile."
     },
     "operating": {
       "ratedCapacity": 75,
@@ -2745,8 +2745,8 @@
       "finishedMassKg": 4987.1,
       "manufacturerCostCC": 243038.67,
       "manufacturerQuoteCC": 303800,
-      "reviewBasis": "Unapproved Android derived-cost scenario; quantities, ratings and CC require Building-led review.",
-      "unresolvedDesignConstraints": "Hydraulic head and site engineering separate from Machine"
+      "reviewBasis": "User-authorized initial MineIT Mobile numeric reference baseline approved on 22 Nov 2026 (manufacturer quote/mass/cost only). Manufacturing BOM inputs, yields and qualified engineering remain separately Proposed/Blocked when explicitly not yet reviewed.",
+      "unresolvedDesignConstraints": "Outstanding physical manufacturing process/qualified material and test details remain subject to separate engineering review; initial operating ratings, reference mass and manufacturer quote are Approved for MineIT Mobile."
     },
     "operating": {
       "ratedCapacity": 75,
@@ -2944,8 +2944,8 @@
       "finishedMassKg": 950,
       "manufacturerCostCC": 75200,
       "manufacturerQuoteCC": 94000,
-      "reviewBasis": "Unapproved Android derived-cost scenario; quantities, ratings and CC require Building-led review.",
-      "unresolvedDesignConstraints": "Thermoelectric semiconductor junction materials unapproved; no rotating generator Part"
+      "reviewBasis": "User-authorized initial MineIT Mobile numeric reference baseline approved on 22 Nov 2026 (manufacturer quote/mass/cost only). Manufacturing BOM inputs, yields and qualified engineering remain separately Proposed/Blocked when explicitly not yet reviewed.",
+      "unresolvedDesignConstraints": "Outstanding physical manufacturing process/qualified material and test details remain subject to separate engineering review; initial operating ratings, reference mass and manufacturer quote are Approved for MineIT Mobile."
     },
     "operating": {
       "ratedCapacity": 10,
@@ -3166,8 +3166,8 @@
       "finishedMassKg": 7031.7,
       "manufacturerCostCC": 471092.73,
       "manufacturerQuoteCC": 588900,
-      "reviewBasis": "Unapproved Android derived-cost scenario; quantities, ratings and CC require Building-led review.",
-      "unresolvedDesignConstraints": "Tracking motor size optics field/reflector area and thermal receiver ratings"
+      "reviewBasis": "User-authorized initial MineIT Mobile numeric reference baseline approved on 22 Nov 2026 (manufacturer quote/mass/cost only). Manufacturing BOM inputs, yields and qualified engineering remain separately Proposed/Blocked when explicitly not yet reviewed.",
+      "unresolvedDesignConstraints": "Outstanding physical manufacturing process/qualified material and test details remain subject to separate engineering review; initial operating ratings, reference mass and manufacturer quote are Approved for MineIT Mobile."
     },
     "operating": {
       "ratedCapacity": 75,
@@ -3361,8 +3361,8 @@
       "finishedMassKg": 2856.4,
       "manufacturerCostCC": 262467.76,
       "manufacturerQuoteCC": 328100,
-      "reviewBasis": "Unapproved Android derived-cost scenario; quantities, ratings and CC require Building-led review.",
-      "unresolvedDesignConstraints": "Transformer winding voltage and switchgear test burden"
+      "reviewBasis": "User-authorized initial MineIT Mobile numeric reference baseline approved on 22 Nov 2026 (manufacturer quote/mass/cost only). Manufacturing BOM inputs, yields and qualified engineering remain separately Proposed/Blocked when explicitly not yet reviewed.",
+      "unresolvedDesignConstraints": "Outstanding physical manufacturing process/qualified material and test details remain subject to separate engineering review; initial operating ratings, reference mass and manufacturer quote are Approved for MineIT Mobile."
     },
     "operating": {
       "ratedCapacity": 800,
@@ -4255,8 +4255,8 @@
       "finishedMassKg": 2637.7,
       "manufacturerCostCC": 192664.01,
       "manufacturerQuoteCC": 240850,
-      "reviewBasis": "Unapproved Android derived-cost scenario; quantities, ratings and CC require Building-led review.",
-      "unresolvedDesignConstraints": "Pressure class and distinction from Hydraulic actuator seals TBD"
+      "reviewBasis": "User-authorized initial MineIT Mobile numeric reference baseline approved on 22 Nov 2026 (manufacturer quote/mass/cost only). Manufacturing BOM inputs, yields and qualified engineering remain separately Proposed/Blocked when explicitly not yet reviewed.",
+      "unresolvedDesignConstraints": "Outstanding physical manufacturing process/qualified material and test details remain subject to separate engineering review; initial operating ratings, reference mass and manufacturer quote are Approved for MineIT Mobile."
     },
     "operating": {
       "ratedCapacity": 20,
@@ -4443,8 +4443,8 @@
       "finishedMassKg": 2149,
       "manufacturerCostCC": 181214.13,
       "manufacturerQuoteCC": 226550,
-      "reviewBasis": "Unapproved Android derived-cost scenario; quantities, ratings and CC require Building-led review.",
-      "unresolvedDesignConstraints": "Filter area and replaceable media cycle not priced"
+      "reviewBasis": "User-authorized initial MineIT Mobile numeric reference baseline approved on 22 Nov 2026 (manufacturer quote/mass/cost only). Manufacturing BOM inputs, yields and qualified engineering remain separately Proposed/Blocked when explicitly not yet reviewed.",
+      "unresolvedDesignConstraints": "Outstanding physical manufacturing process/qualified material and test details remain subject to separate engineering review; initial operating ratings, reference mass and manufacturer quote are Approved for MineIT Mobile."
     },
     "operating": {
       "ratedCapacity": 10,
@@ -5369,8 +5369,8 @@
       "finishedMassKg": 6800,
       "manufacturerCostCC": 330000,
       "manufacturerQuoteCC": 412500,
-      "reviewBasis": "Unapproved Android derived-cost scenario; quantities, ratings and CC require Building-led review.",
-      "unresolvedDesignConstraints": "Universe source partIds empty; candidate only and steam engine/condenser fuel inputs TBD"
+      "reviewBasis": "User-authorized initial MineIT Mobile numeric reference baseline approved on 22 Nov 2026 (manufacturer quote/mass/cost only). Manufacturing BOM inputs, yields and qualified engineering remain separately Proposed/Blocked when explicitly not yet reviewed.",
+      "unresolvedDesignConstraints": "Outstanding physical manufacturing process/qualified material and test details remain subject to separate engineering review; initial operating ratings, reference mass and manufacturer quote are Approved for MineIT Mobile."
     },
     "operating": {
       "ratedCapacity": 75,
@@ -5584,8 +5584,8 @@
       "finishedMassKg": 4900,
       "manufacturerCostCC": 300000,
       "manufacturerQuoteCC": 375000,
-      "reviewBasis": "Unapproved Android derived-cost scenario; quantities, ratings and CC require Building-led review.",
-      "unresolvedDesignConstraints": "Universe source partIds empty; combustion engine/exhaust and fuel/ratings TBD"
+      "reviewBasis": "User-authorized initial MineIT Mobile numeric reference baseline approved on 22 Nov 2026 (manufacturer quote/mass/cost only). Manufacturing BOM inputs, yields and qualified engineering remain separately Proposed/Blocked when explicitly not yet reviewed.",
+      "unresolvedDesignConstraints": "Outstanding physical manufacturing process/qualified material and test details remain subject to separate engineering review; initial operating ratings, reference mass and manufacturer quote are Approved for MineIT Mobile."
     },
     "operating": {
       "ratedCapacity": 75,
@@ -7838,8 +7838,8 @@
       "finishedMassKg": 5500,
       "manufacturerCostCC": 315000,
       "manufacturerQuoteCC": 393750,
-      "reviewBasis": "Specialist physical identity is required by the approved extraction compatibility boundary; engineering BOM, mass and price remain blocked pending review.",
-      "unresolvedDesignConstraints": "Qualified materials, rated capacity, footprint, power, manufacture and test programme require engineering approval."
+      "reviewBasis": "User-authorized initial MineIT Mobile numeric reference baseline approved on 22 Nov 2026 (manufacturer quote/mass/cost only). Manufacturing BOM inputs, yields and qualified engineering remain separately Proposed/Blocked when explicitly not yet reviewed.",
+      "unresolvedDesignConstraints": "Outstanding physical manufacturing process/qualified material and test details remain subject to separate engineering review; initial operating ratings, reference mass and manufacturer quote are Approved for MineIT Mobile."
     },
     "servicePartRequirements": [
       {

@@ -32,7 +32,7 @@
         "facility ownership",
         "current output and reserves"
       ],
-      "automaticProvisioning": "A game may create new Machine and Part instances at 100% condition when a facility is built. This is a gameplay policy and does not imply zero canonical manufacturer cost."
+      "automaticProvisioning": "Facility construction must not mint free Machines or Parts. A new Machine is acquired as an owned physical asset and includes the source-defined factory-fitted Parts in its paid Machine price; a stock-backed construction fit is an immutable location transfer that preserves unique Machine and Part IDs/condition. All unowned required roles remain unfilled."
     },
     "wearModel": {
       "id": "industrial-wear-model-v1",

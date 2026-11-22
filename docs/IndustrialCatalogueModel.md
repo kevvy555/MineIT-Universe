@@ -38,8 +38,7 @@ unresolved and remains separate from equipment condition.
 Universe owns identities, compatibility, structural demand, method/depth
 capability, wear parameters and failure effects. A consuming game save owns
 Machine and installed-Part instance IDs, condition, operating hours, intensity,
-ownership, repairs and replacements. This supports automatic 100%-condition
-fit-out at construction without canonising free Machines or mutable instances.
+ownership, repairs and replacements. This supports **stock-backed automatic fitting** at construction, preserving instance identity and condition. Construction never mints free Machinery or service Parts. A genuinely newly purchased Machine includes its factory-fitted Parts in the quoted price; spare replacements must be acquired separately.
 
 ## Extraction configurations
 
