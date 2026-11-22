@@ -3947,7 +3947,8 @@
       "machine-wind-generator",
       "machine-water-wheel-generator",
       "machine-solar-thermal-generator",
-      "machine-crude-chemical-battery"
+      "machine-crude-chemical-battery",
+      "machine-crude-combustion-generator"
     ],
     "description": "A colony-scale power generation and distribution facility supporting permanent surface infrastructure.",
     "canonStatus": "source-canonical",
@@ -4304,6 +4305,87 @@
           }
         ],
         "approval": "Approved"
+      },
+      {
+        "id": "combustion-generation",
+        "name": "Fuel combustion generation",
+        "selection": "alternative",
+        "applicableLevels": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "equipment": [
+          {
+            "machineId": "machine-power-distribution-system",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-crude-combustion-generator",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 1,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          }
+        ],
+        "approval": "Approved"
       }
     ],
     "levelProfiles": [
@@ -4407,7 +4489,11 @@
       "operatingRequirements": "Approved",
       "wearModel": "Approved"
     },
-    "approval": "Approved"
+    "approval": "Approved",
+    "mobileMineInitialBalance": {
+      "approval": "Approved",
+      "basis": "Fuel combustion path for Mobile initial mine-power migration; catalogue remains one canonical Building/Machine relationship"
+    }
   },
   {
     "id": "building-industry",

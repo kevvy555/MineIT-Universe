@@ -76,9 +76,9 @@
       "finishedUnitCount": "Approved",
       "finishedUnitDescription": "In Review",
       "materialInputs": "In Review",
-      "planningReference.finishedMassKg": "In Review",
-      "planningReference.manufacturerCostCC": "In Review",
-      "planningReference.baseManufacturerQuoteCC": "In Review",
+      "planningReference.finishedMassKg": "Approved",
+      "planningReference.manufacturerCostCC": "Approved",
+      "planningReference.baseManufacturerQuoteCC": "Approved",
       "manufacturingRequirements": "Approved",
       "wearProfile": "Approved"
     },
@@ -109,6 +109,10 @@
       "failureEffect": "reduced electrical output; complete failure disables generation",
       "approval": "Approved",
       "notes": "Deterministic first-pass parameter for review; per-save condition and accumulated operating hours belong to the consuming game."
+    },
+    "mobileMineInitialBalance": {
+      "approval": "Approved",
+      "basis": "Existing reference quote/mass accepted as initial Mobile baseline 22 Nov 2026; later tuning permitted"
     }
   },
   {
@@ -232,9 +236,9 @@
       "finishedUnitCount": "Approved",
       "finishedUnitDescription": "In Review",
       "materialInputs": "In Review",
-      "planningReference.finishedMassKg": "In Review",
-      "planningReference.manufacturerCostCC": "In Review",
-      "planningReference.baseManufacturerQuoteCC": "In Review",
+      "planningReference.finishedMassKg": "Approved",
+      "planningReference.manufacturerCostCC": "Approved",
+      "planningReference.baseManufacturerQuoteCC": "Approved",
       "manufacturingRequirements": "Approved",
       "wearProfile": "Approved"
     },
@@ -264,6 +268,10 @@
       "failureEffect": "unstable power conversion and progressive derating; failure disables powered operation",
       "approval": "Approved",
       "notes": "Deterministic first-pass parameter for review; per-save condition and accumulated operating hours belong to the consuming game."
+    },
+    "mobileMineInitialBalance": {
+      "approval": "Approved",
+      "basis": "Existing reference quote/mass accepted as initial Mobile baseline 22 Nov 2026; later tuning permitted"
     }
   },
   {
@@ -365,9 +373,9 @@
       "finishedUnitCount": "Approved",
       "finishedUnitDescription": "In Review",
       "materialInputs": "In Review",
-      "planningReference.finishedMassKg": "In Review",
-      "planningReference.manufacturerCostCC": "In Review",
-      "planningReference.baseManufacturerQuoteCC": "In Review",
+      "planningReference.finishedMassKg": "Approved",
+      "planningReference.manufacturerCostCC": "Approved",
+      "planningReference.baseManufacturerQuoteCC": "Approved",
       "manufacturingRequirements": "Approved",
       "wearProfile": "Approved"
     },
@@ -397,6 +405,10 @@
       "failureEffect": "increased friction and reduced throughput; seizure disables driven motion",
       "approval": "Approved",
       "notes": "Deterministic first-pass parameter for review; per-save condition and accumulated operating hours belong to the consuming game."
+    },
+    "mobileMineInitialBalance": {
+      "approval": "Approved",
+      "basis": "Existing reference quote/mass accepted as initial Mobile baseline 22 Nov 2026; later tuning permitted"
     }
   },
   {
@@ -516,9 +528,9 @@
       "finishedUnitCount": "Approved",
       "finishedUnitDescription": "In Review",
       "materialInputs": "In Review",
-      "planningReference.finishedMassKg": "In Review",
-      "planningReference.manufacturerCostCC": "In Review",
-      "planningReference.baseManufacturerQuoteCC": "In Review",
+      "planningReference.finishedMassKg": "Approved",
+      "planningReference.manufacturerCostCC": "Approved",
+      "planningReference.baseManufacturerQuoteCC": "Approved",
       "manufacturingRequirements": "Approved",
       "wearProfile": "Approved"
     },
@@ -548,6 +560,10 @@
       "failureEffect": "loss of control accuracy and automation; failure disables safety-critical automatic operation",
       "approval": "Approved",
       "notes": "Deterministic first-pass parameter for review; per-save condition and accumulated operating hours belong to the consuming game."
+    },
+    "mobileMineInitialBalance": {
+      "approval": "Approved",
+      "basis": "Existing reference quote/mass accepted as initial Mobile baseline 22 Nov 2026; later tuning permitted"
     }
   },
   {
@@ -651,9 +667,9 @@
       "finishedUnitCount": "Approved",
       "finishedUnitDescription": "In Review",
       "materialInputs": "In Review",
-      "planningReference.finishedMassKg": "In Review",
-      "planningReference.manufacturerCostCC": "In Review",
-      "planningReference.baseManufacturerQuoteCC": "In Review",
+      "planningReference.finishedMassKg": "Approved",
+      "planningReference.manufacturerCostCC": "Approved",
+      "planningReference.baseManufacturerQuoteCC": "Approved",
       "manufacturingRequirements": "Approved",
       "wearProfile": "Approved"
     },
@@ -684,6 +700,10 @@
       "failureEffect": "reduced safe load rating; failure makes the supported machine unsafe to operate",
       "approval": "Approved",
       "notes": "Deterministic first-pass parameter for review; per-save condition and accumulated operating hours belong to the consuming game."
+    },
+    "mobileMineInitialBalance": {
+      "approval": "Approved",
+      "basis": "Existing reference quote/mass accepted as initial Mobile baseline 22 Nov 2026; later tuning permitted"
     }
   },
   {
@@ -771,9 +791,9 @@
       "finishedUnitCount": "Approved",
       "finishedUnitDescription": "In Review",
       "materialInputs": "In Review",
-      "planningReference.finishedMassKg": "In Review",
-      "planningReference.manufacturerCostCC": "In Review",
-      "planningReference.baseManufacturerQuoteCC": "In Review",
+      "planningReference.finishedMassKg": "Approved",
+      "planningReference.manufacturerCostCC": "Approved",
+      "planningReference.baseManufacturerQuoteCC": "Approved",
       "manufacturingRequirements": "Approved",
       "wearProfile": "Approved"
     },
@@ -803,6 +823,10 @@
       "failureEffect": "pressure loss and slower actuation; failure disables hydraulic functions",
       "approval": "Approved",
       "notes": "Deterministic first-pass parameter for review; per-save condition and accumulated operating hours belong to the consuming game."
+    },
+    "mobileMineInitialBalance": {
+      "approval": "Approved",
+      "basis": "Existing reference quote/mass accepted as initial Mobile baseline 22 Nov 2026; later tuning permitted"
     }
   },
   {
@@ -874,9 +898,9 @@
       "finishedUnitCount": "Approved",
       "finishedUnitDescription": "In Review",
       "materialInputs": "In Review",
-      "planningReference.finishedMassKg": "In Review",
-      "planningReference.manufacturerCostCC": "In Review",
-      "planningReference.baseManufacturerQuoteCC": "In Review",
+      "planningReference.finishedMassKg": "Approved",
+      "planningReference.manufacturerCostCC": "Approved",
+      "planningReference.baseManufacturerQuoteCC": "Approved",
       "manufacturingRequirements": "Approved",
       "wearProfile": "Approved"
     },
@@ -906,6 +930,10 @@
       "failureEffect": "falling cut rate and depth performance; failure disables extraction",
       "approval": "Approved",
       "notes": "Deterministic first-pass parameter for review; per-save condition and accumulated operating hours belong to the consuming game."
+    },
+    "mobileMineInitialBalance": {
+      "approval": "Approved",
+      "basis": "Existing reference quote/mass accepted as initial Mobile baseline 22 Nov 2026; later tuning permitted"
     }
   },
   {
@@ -983,9 +1011,9 @@
       "finishedUnitCount": "Approved",
       "finishedUnitDescription": "In Review",
       "materialInputs": "In Review",
-      "planningReference.finishedMassKg": "In Review",
-      "planningReference.manufacturerCostCC": "In Review",
-      "planningReference.baseManufacturerQuoteCC": "In Review",
+      "planningReference.finishedMassKg": "Approved",
+      "planningReference.manufacturerCostCC": "Approved",
+      "planningReference.baseManufacturerQuoteCC": "Approved",
       "manufacturingRequirements": "Approved",
       "wearProfile": "Approved"
     },
@@ -1015,6 +1043,10 @@
       "failureEffect": "lower process yield and contamination control; failure disables the affected process path",
       "approval": "Approved",
       "notes": "Deterministic first-pass parameter for review; per-save condition and accumulated operating hours belong to the consuming game."
+    },
+    "mobileMineInitialBalance": {
+      "approval": "Approved",
+      "basis": "Existing reference quote/mass accepted as initial Mobile baseline 22 Nov 2026; later tuning permitted"
     }
   },
   {
@@ -1110,9 +1142,9 @@
       "finishedUnitCount": "Approved",
       "finishedUnitDescription": "In Review",
       "materialInputs": "In Review",
-      "planningReference.finishedMassKg": "In Review",
-      "planningReference.manufacturerCostCC": "In Review",
-      "planningReference.baseManufacturerQuoteCC": "In Review",
+      "planningReference.finishedMassKg": "Approved",
+      "planningReference.manufacturerCostCC": "Approved",
+      "planningReference.baseManufacturerQuoteCC": "Approved",
       "manufacturingRequirements": "Approved",
       "wearProfile": "Approved"
     },
@@ -1142,6 +1174,10 @@
       "failureEffect": "reduced compute/control availability; failure disables dependent control functions",
       "approval": "Approved",
       "notes": "Deterministic first-pass parameter for review; per-save condition and accumulated operating hours belong to the consuming game."
+    },
+    "mobileMineInitialBalance": {
+      "approval": "Approved",
+      "basis": "Existing reference quote/mass accepted as initial Mobile baseline 22 Nov 2026; later tuning permitted"
     }
   },
   {
@@ -1237,9 +1273,9 @@
       "finishedUnitCount": "Approved",
       "finishedUnitDescription": "In Review",
       "materialInputs": "In Review",
-      "planningReference.finishedMassKg": "In Review",
-      "planningReference.manufacturerCostCC": "In Review",
-      "planningReference.baseManufacturerQuoteCC": "In Review",
+      "planningReference.finishedMassKg": "Approved",
+      "planningReference.manufacturerCostCC": "Approved",
+      "planningReference.baseManufacturerQuoteCC": "Approved",
       "manufacturingRequirements": "Approved",
       "wearProfile": "Approved"
     },
@@ -1270,6 +1306,10 @@
       "failureEffect": "leakage and reduced flow; failure disables containment-critical service",
       "approval": "Approved",
       "notes": "Deterministic first-pass parameter for review; per-save condition and accumulated operating hours belong to the consuming game."
+    },
+    "mobileMineInitialBalance": {
+      "approval": "Approved",
+      "basis": "Existing reference quote/mass accepted as initial Mobile baseline 22 Nov 2026; later tuning permitted"
     }
   },
   {
@@ -1346,9 +1386,9 @@
       "finishedUnitCount": "Approved",
       "finishedUnitDescription": "In Review",
       "materialInputs": "In Review",
-      "planningReference.finishedMassKg": "In Review",
-      "planningReference.manufacturerCostCC": "In Review",
-      "planningReference.baseManufacturerQuoteCC": "In Review",
+      "planningReference.finishedMassKg": "Approved",
+      "planningReference.manufacturerCostCC": "Approved",
+      "planningReference.baseManufacturerQuoteCC": "Approved",
       "manufacturingRequirements": "Approved",
       "wearProfile": "Approved"
     },
@@ -1379,6 +1419,10 @@
       "failureEffect": "lower handling rate and higher jam risk; failure stops the affected material path",
       "approval": "Approved",
       "notes": "Deterministic first-pass parameter for review; per-save condition and accumulated operating hours belong to the consuming game."
+    },
+    "mobileMineInitialBalance": {
+      "approval": "Approved",
+      "basis": "Existing reference quote/mass accepted as initial Mobile baseline 22 Nov 2026; later tuning permitted"
     }
   },
   {
@@ -1461,9 +1505,9 @@
       "finishedUnitCount": "Approved",
       "finishedUnitDescription": "In Review",
       "materialInputs": "In Review",
-      "planningReference.finishedMassKg": "In Review",
-      "planningReference.manufacturerCostCC": "In Review",
-      "planningReference.baseManufacturerQuoteCC": "In Review",
+      "planningReference.finishedMassKg": "Approved",
+      "planningReference.manufacturerCostCC": "Approved",
+      "planningReference.baseManufacturerQuoteCC": "Approved",
       "manufacturingRequirements": "Approved",
       "wearProfile": "Approved"
     },
@@ -1493,6 +1537,10 @@
       "failureEffect": "reduced stored-energy capacity; failure removes the module from service",
       "approval": "Approved",
       "notes": "Deterministic first-pass parameter for review; per-save condition and accumulated operating hours belong to the consuming game."
+    },
+    "mobileMineInitialBalance": {
+      "approval": "Approved",
+      "basis": "Existing reference quote/mass accepted as initial Mobile baseline 22 Nov 2026; later tuning permitted"
     }
   },
   {
@@ -1719,9 +1767,9 @@
       "finishedUnitCount": "Approved",
       "finishedUnitDescription": "In Review",
       "materialInputs": "In Review",
-      "planningReference.finishedMassKg": "In Review",
-      "planningReference.manufacturerCostCC": "In Review",
-      "planningReference.baseManufacturerQuoteCC": "In Review",
+      "planningReference.finishedMassKg": "Approved",
+      "planningReference.manufacturerCostCC": "Approved",
+      "planningReference.baseManufacturerQuoteCC": "Approved",
       "manufacturingRequirements": "Approved",
       "wearProfile": "Approved"
     },
@@ -1751,6 +1799,10 @@
       "failureEffect": "reduced heat-transfer or insulation performance; failure forces thermal shutdown",
       "approval": "Approved",
       "notes": "Deterministic first-pass parameter for review; per-save condition and accumulated operating hours belong to the consuming game."
+    },
+    "mobileMineInitialBalance": {
+      "approval": "Approved",
+      "basis": "Existing reference quote/mass accepted as initial Mobile baseline 22 Nov 2026; later tuning permitted"
     }
   },
   {
@@ -1837,9 +1889,9 @@
       "finishedUnitCount": "Approved",
       "finishedUnitDescription": "In Review",
       "materialInputs": "In Review",
-      "planningReference.finishedMassKg": "In Review",
-      "planningReference.manufacturerCostCC": "In Review",
-      "planningReference.baseManufacturerQuoteCC": "In Review",
+      "planningReference.finishedMassKg": "Approved",
+      "planningReference.manufacturerCostCC": "Approved",
+      "planningReference.baseManufacturerQuoteCC": "Approved",
       "manufacturingRequirements": "Approved",
       "wearProfile": "Approved"
     },
@@ -1869,6 +1921,10 @@
       "failureEffect": "reduced optical accuracy or transmission; failure disables the optical function",
       "approval": "Approved",
       "notes": "Deterministic first-pass parameter for review; per-save condition and accumulated operating hours belong to the consuming game."
+    },
+    "mobileMineInitialBalance": {
+      "approval": "Approved",
+      "basis": "Existing reference quote/mass accepted as initial Mobile baseline 22 Nov 2026; later tuning permitted"
     }
   },
   {

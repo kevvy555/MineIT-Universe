@@ -453,10 +453,15 @@
       "unresolvedDesignConstraints": "Precision analyser optics sensor grade and calibration unreviewed"
     },
     "operating": {
-      "ratedCapacity": null,
-      "powerUnits": null,
+      "ratedCapacity": 10,
+      "powerUnits": 1.5,
       "footprintM2": null,
-      "housingTechTier": null
+      "housingTechTier": null,
+      "ratedCapacityUnit": "raw-resource-units-per-hour",
+      "idlePowerUnits": 0.15,
+      "operatingConsumables": [],
+      "consumableUnitPolicy": "physical units consumed only when operating; machine service Parts tracked through condition/wear, never charged as hourly material",
+      "foundingCargoUnits": 3
     },
     "pendingPartCompatibility": [],
     "fieldApprovalStatuses": {
@@ -467,21 +472,26 @@
       "manufacturing.factoryHours": "Proposed",
       "manufacturing.testHours": "Proposed",
       "manufacturing.goodUnitYield": "Proposed",
-      "manufacturing.finishedMassKg": "Proposed",
-      "manufacturing.manufacturerCostCC": "Proposed",
-      "manufacturing.manufacturerQuoteCC": "Proposed",
+      "manufacturing.finishedMassKg": "Approved",
+      "manufacturing.manufacturerCostCC": "Approved",
+      "manufacturing.manufacturerQuoteCC": "Approved",
       "partIds": "Approved",
       "pendingPartCompatibility": "Approved",
       "outputSummary": "Not Reviewed",
       "inputSummary": "Not Reviewed",
-      "operating.ratedCapacity": "Not Reviewed",
-      "operating.powerUnits": "Not Reviewed",
+      "operating.ratedCapacity": "Approved",
+      "operating.powerUnits": "Approved",
       "operating.footprintM2": "Not Reviewed",
       "operating.housingTechTier": "Not Reviewed",
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
-      "conditionModel": "Approved"
+      "conditionModel": "Approved",
+      "operating.ratedCapacityUnit": "Approved",
+      "operating.idlePowerUnits": "Approved",
+      "operating.operatingConsumables": "Approved",
+      "operating.consumableUnitPolicy": "Approved",
+      "operating.foundingCargoUnits": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -566,6 +576,11 @@
       "criticalFailureDisables": true,
       "excludesNonOperationalCapability": true,
       "approval": "Approved"
+    },
+    "mobileMineInitialBalance": {
+      "approval": "Approved",
+      "basis": "AI-calibrated initial Mobile game balance authorised by user 22 Nov 2026; future player review/tuning allowed; not a certified engineering specification",
+      "scope": "mine-and-connected-power"
     }
   },
   {
@@ -1640,10 +1655,15 @@
       "unresolvedDesignConstraints": "Belt material Polymer stand-in and rated length/capacity pending"
     },
     "operating": {
-      "ratedCapacity": null,
-      "powerUnits": null,
+      "ratedCapacity": 15,
+      "powerUnits": 1,
       "footprintM2": null,
-      "housingTechTier": null
+      "housingTechTier": null,
+      "ratedCapacityUnit": "raw-resource-units-per-hour",
+      "idlePowerUnits": 0.1,
+      "operatingConsumables": [],
+      "consumableUnitPolicy": "physical units consumed only when operating; machine service Parts tracked through condition/wear, never charged as hourly material",
+      "foundingCargoUnits": 31
     },
     "pendingPartCompatibility": [],
     "fieldApprovalStatuses": {
@@ -1654,21 +1674,26 @@
       "manufacturing.factoryHours": "Proposed",
       "manufacturing.testHours": "Proposed",
       "manufacturing.goodUnitYield": "Proposed",
-      "manufacturing.finishedMassKg": "Proposed",
-      "manufacturing.manufacturerCostCC": "Proposed",
-      "manufacturing.manufacturerQuoteCC": "Proposed",
+      "manufacturing.finishedMassKg": "Approved",
+      "manufacturing.manufacturerCostCC": "Approved",
+      "manufacturing.manufacturerQuoteCC": "Approved",
       "partIds": "Approved",
       "pendingPartCompatibility": "Approved",
       "outputSummary": "In Review",
       "inputSummary": "In Review",
-      "operating.ratedCapacity": "Not Reviewed",
-      "operating.powerUnits": "Not Reviewed",
+      "operating.ratedCapacity": "Approved",
+      "operating.powerUnits": "Approved",
       "operating.footprintM2": "Not Reviewed",
       "operating.housingTechTier": "Not Reviewed",
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
-      "conditionModel": "Approved"
+      "conditionModel": "Approved",
+      "operating.ratedCapacityUnit": "Approved",
+      "operating.idlePowerUnits": "Approved",
+      "operating.operatingConsumables": "Approved",
+      "operating.consumableUnitPolicy": "Approved",
+      "operating.foundingCargoUnits": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -1729,6 +1754,11 @@
       "criticalFailureDisables": true,
       "excludesNonOperationalCapability": true,
       "approval": "Approved"
+    },
+    "mobileMineInitialBalance": {
+      "approval": "Approved",
+      "basis": "AI-calibrated initial Mobile game balance authorised by user 22 Nov 2026; future player review/tuning allowed; not a certified engineering specification",
+      "scope": "mine-and-connected-power"
     }
   },
   {
@@ -1807,10 +1837,15 @@
       "unresolvedDesignConstraints": "Fan duct length/capacity and filter consumable needs TBD"
     },
     "operating": {
-      "ratedCapacity": null,
-      "powerUnits": null,
+      "ratedCapacity": 1,
+      "powerUnits": 1,
       "footprintM2": null,
-      "housingTechTier": null
+      "housingTechTier": null,
+      "ratedCapacityUnit": "simultaneous-mine-systems-supported",
+      "idlePowerUnits": 1,
+      "operatingConsumables": [],
+      "consumableUnitPolicy": "physical units consumed only when operating; machine service Parts tracked through condition/wear, never charged as hourly material",
+      "foundingCargoUnits": 12
     },
     "pendingPartCompatibility": [],
     "fieldApprovalStatuses": {
@@ -1821,21 +1856,26 @@
       "manufacturing.factoryHours": "Proposed",
       "manufacturing.testHours": "Proposed",
       "manufacturing.goodUnitYield": "Proposed",
-      "manufacturing.finishedMassKg": "Proposed",
-      "manufacturing.manufacturerCostCC": "Proposed",
-      "manufacturing.manufacturerQuoteCC": "Proposed",
+      "manufacturing.finishedMassKg": "Approved",
+      "manufacturing.manufacturerCostCC": "Approved",
+      "manufacturing.manufacturerQuoteCC": "Approved",
       "partIds": "Approved",
       "pendingPartCompatibility": "Approved",
       "outputSummary": "In Review",
       "inputSummary": "In Review",
-      "operating.ratedCapacity": "Not Reviewed",
-      "operating.powerUnits": "Not Reviewed",
+      "operating.ratedCapacity": "Approved",
+      "operating.powerUnits": "Approved",
       "operating.footprintM2": "Not Reviewed",
       "operating.housingTechTier": "Not Reviewed",
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
-      "conditionModel": "Approved"
+      "conditionModel": "Approved",
+      "operating.ratedCapacityUnit": "Approved",
+      "operating.idlePowerUnits": "Approved",
+      "operating.operatingConsumables": "Approved",
+      "operating.consumableUnitPolicy": "Approved",
+      "operating.foundingCargoUnits": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -1888,6 +1928,11 @@
       "criticalFailureDisables": true,
       "excludesNonOperationalCapability": true,
       "approval": "Approved"
+    },
+    "mobileMineInitialBalance": {
+      "approval": "Approved",
+      "basis": "AI-calibrated initial Mobile game balance authorised by user 22 Nov 2026; future player review/tuning allowed; not a certified engineering specification",
+      "scope": "mine-and-connected-power"
     }
   },
   {
@@ -2342,10 +2387,17 @@
       "unresolvedDesignConstraints": "Lead-acid chemistry and rated energy capacity require signoff"
     },
     "operating": {
-      "ratedCapacity": null,
-      "powerUnits": null,
+      "ratedCapacity": 25,
+      "powerUnits": 0,
       "footprintM2": null,
-      "housingTechTier": null
+      "housingTechTier": null,
+      "ratedCapacityUnit": "power-units-max-discharge",
+      "idlePowerUnits": 0,
+      "operatingConsumables": [],
+      "consumableUnitPolicy": "physical units consumed only when operating; machine service Parts tracked through condition/wear, never charged as hourly material",
+      "environmentalGate": "must-have-previously-stored-energy",
+      "storedEnergyCapacityPowerUnitHours": 300,
+      "foundingCargoUnits": 14
     },
     "fieldApprovalStatuses": {
       "manufacturing.finishedPartInputs": "Proposed",
@@ -2355,21 +2407,28 @@
       "manufacturing.factoryHours": "Proposed",
       "manufacturing.testHours": "Proposed",
       "manufacturing.goodUnitYield": "Proposed",
-      "manufacturing.finishedMassKg": "Proposed",
-      "manufacturing.manufacturerCostCC": "Proposed",
-      "manufacturing.manufacturerQuoteCC": "Proposed",
+      "manufacturing.finishedMassKg": "Approved",
+      "manufacturing.manufacturerCostCC": "Approved",
+      "manufacturing.manufacturerQuoteCC": "Approved",
       "partIds": "Approved",
       "pendingPartCompatibility": "In Review",
       "outputSummary": "In Review",
       "inputSummary": "In Review",
-      "operating.ratedCapacity": "Not Reviewed",
-      "operating.powerUnits": "Not Reviewed",
+      "operating.ratedCapacity": "Approved",
+      "operating.powerUnits": "Approved",
       "operating.footprintM2": "Not Reviewed",
       "operating.housingTechTier": "Not Reviewed",
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
-      "conditionModel": "Approved"
+      "conditionModel": "Approved",
+      "operating.ratedCapacityUnit": "Approved",
+      "operating.idlePowerUnits": "Approved",
+      "operating.operatingConsumables": "Approved",
+      "operating.consumableUnitPolicy": "Approved",
+      "operating.environmentalGate": "Approved",
+      "operating.storedEnergyCapacityPowerUnitHours": "Approved",
+      "operating.foundingCargoUnits": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -2421,6 +2480,11 @@
       "criticalFailureDisables": true,
       "excludesNonOperationalCapability": true,
       "approval": "Approved"
+    },
+    "mobileMineInitialBalance": {
+      "approval": "Approved",
+      "basis": "AI-calibrated initial Mobile game balance authorised by user 22 Nov 2026; future player review/tuning allowed; not a certified engineering specification",
+      "scope": "mine-and-connected-power"
     }
   },
   {
@@ -2502,10 +2566,16 @@
       "unresolvedDesignConstraints": "Rotor blades and support foundation rating; no motor as generator"
     },
     "operating": {
-      "ratedCapacity": null,
-      "powerUnits": null,
+      "ratedCapacity": 75,
+      "powerUnits": 0,
       "footprintM2": null,
-      "housingTechTier": null
+      "housingTechTier": null,
+      "ratedCapacityUnit": "power-units-output",
+      "idlePowerUnits": 0,
+      "operatingConsumables": [],
+      "consumableUnitPolicy": "physical units consumed only when operating; machine service Parts tracked through condition/wear, never charged as hourly material",
+      "environmentalGate": "ambient-wind-available",
+      "foundingCargoUnits": 42
     },
     "pendingPartCompatibility": [],
     "fieldApprovalStatuses": {
@@ -2516,21 +2586,27 @@
       "manufacturing.factoryHours": "Proposed",
       "manufacturing.testHours": "Proposed",
       "manufacturing.goodUnitYield": "Proposed",
-      "manufacturing.finishedMassKg": "Proposed",
-      "manufacturing.manufacturerCostCC": "Proposed",
-      "manufacturing.manufacturerQuoteCC": "Proposed",
+      "manufacturing.finishedMassKg": "Approved",
+      "manufacturing.manufacturerCostCC": "Approved",
+      "manufacturing.manufacturerQuoteCC": "Approved",
       "partIds": "Approved",
       "pendingPartCompatibility": "Approved",
       "outputSummary": "In Review",
       "inputSummary": "In Review",
-      "operating.ratedCapacity": "Not Reviewed",
-      "operating.powerUnits": "Not Reviewed",
+      "operating.ratedCapacity": "Approved",
+      "operating.powerUnits": "Approved",
       "operating.footprintM2": "Not Reviewed",
       "operating.housingTechTier": "Not Reviewed",
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
-      "conditionModel": "Approved"
+      "conditionModel": "Approved",
+      "operating.ratedCapacityUnit": "Approved",
+      "operating.idlePowerUnits": "Approved",
+      "operating.operatingConsumables": "Approved",
+      "operating.consumableUnitPolicy": "Approved",
+      "operating.environmentalGate": "Approved",
+      "operating.foundingCargoUnits": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -2591,6 +2667,11 @@
       "criticalFailureDisables": true,
       "excludesNonOperationalCapability": true,
       "approval": "Approved"
+    },
+    "mobileMineInitialBalance": {
+      "approval": "Approved",
+      "basis": "AI-calibrated initial Mobile game balance authorised by user 22 Nov 2026; future player review/tuning allowed; not a certified engineering specification",
+      "scope": "mine-and-connected-power"
     }
   },
   {
@@ -2668,10 +2749,16 @@
       "unresolvedDesignConstraints": "Hydraulic head and site engineering separate from Machine"
     },
     "operating": {
-      "ratedCapacity": null,
-      "powerUnits": null,
+      "ratedCapacity": 75,
+      "powerUnits": 0,
       "footprintM2": null,
-      "housingTechTier": null
+      "housingTechTier": null,
+      "ratedCapacityUnit": "power-units-output",
+      "idlePowerUnits": 0,
+      "operatingConsumables": [],
+      "consumableUnitPolicy": "physical units consumed only when operating; machine service Parts tracked through condition/wear, never charged as hourly material",
+      "environmentalGate": "flowing-water-required",
+      "foundingCargoUnits": 50
     },
     "pendingPartCompatibility": [],
     "fieldApprovalStatuses": {
@@ -2682,21 +2769,27 @@
       "manufacturing.factoryHours": "Proposed",
       "manufacturing.testHours": "Proposed",
       "manufacturing.goodUnitYield": "Proposed",
-      "manufacturing.finishedMassKg": "Proposed",
-      "manufacturing.manufacturerCostCC": "Proposed",
-      "manufacturing.manufacturerQuoteCC": "Proposed",
+      "manufacturing.finishedMassKg": "Approved",
+      "manufacturing.manufacturerCostCC": "Approved",
+      "manufacturing.manufacturerQuoteCC": "Approved",
       "partIds": "Approved",
       "pendingPartCompatibility": "Approved",
       "outputSummary": "In Review",
       "inputSummary": "In Review",
-      "operating.ratedCapacity": "Not Reviewed",
-      "operating.powerUnits": "Not Reviewed",
+      "operating.ratedCapacity": "Approved",
+      "operating.powerUnits": "Approved",
       "operating.footprintM2": "Not Reviewed",
       "operating.housingTechTier": "Not Reviewed",
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
-      "conditionModel": "Approved"
+      "conditionModel": "Approved",
+      "operating.ratedCapacityUnit": "Approved",
+      "operating.idlePowerUnits": "Approved",
+      "operating.operatingConsumables": "Approved",
+      "operating.consumableUnitPolicy": "Approved",
+      "operating.environmentalGate": "Approved",
+      "operating.foundingCargoUnits": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -2757,6 +2850,11 @@
       "criticalFailureDisables": true,
       "excludesNonOperationalCapability": true,
       "approval": "Approved"
+    },
+    "mobileMineInitialBalance": {
+      "approval": "Approved",
+      "basis": "AI-calibrated initial Mobile game balance authorised by user 22 Nov 2026; future player review/tuning allowed; not a certified engineering specification",
+      "scope": "mine-and-connected-power"
     }
   },
   {
@@ -2843,17 +2941,33 @@
       "factoryHours": 100,
       "testHours": 55,
       "goodUnitYield": 0.93,
-      "finishedMassKg": null,
-      "manufacturerCostCC": null,
-      "manufacturerQuoteCC": null,
+      "finishedMassKg": 950,
+      "manufacturerCostCC": 75200,
+      "manufacturerQuoteCC": 94000,
       "reviewBasis": "Unapproved Android derived-cost scenario; quantities, ratings and CC require Building-led review.",
       "unresolvedDesignConstraints": "Thermoelectric semiconductor junction materials unapproved; no rotating generator Part"
     },
     "operating": {
-      "ratedCapacity": null,
-      "powerUnits": null,
+      "ratedCapacity": 10,
+      "powerUnits": 0,
       "footprintM2": null,
-      "housingTechTier": null
+      "housingTechTier": null,
+      "ratedCapacityUnit": "power-units-output",
+      "idlePowerUnits": 0,
+      "operatingConsumables": [],
+      "consumableUnitPolicy": "physical units consumed only when operating; machine service Parts tracked through condition/wear, never charged as hourly material",
+      "generatorFuelProfile": {
+        "resourceIds": [
+          "mobile-resource-biomass",
+          "mobile-resource-peat",
+          "mobile-resource-coal"
+        ],
+        "effectiveFuelEnergyPerPowerUnitHour": 0.08333333333333333,
+        "dispatch": "heat-source-available",
+        "fuelAvailabilityRule": "solid-source-heat-only",
+        "approvedInitialBalance": true
+      },
+      "foundingCargoUnits": 10
     },
     "fieldApprovalStatuses": {
       "manufacturing.finishedPartInputs": "Proposed",
@@ -2863,21 +2977,27 @@
       "manufacturing.factoryHours": "Proposed",
       "manufacturing.testHours": "Proposed",
       "manufacturing.goodUnitYield": "Proposed",
-      "manufacturing.finishedMassKg": "Not Reviewed",
-      "manufacturing.manufacturerCostCC": "Blocked",
-      "manufacturing.manufacturerQuoteCC": "Blocked",
+      "manufacturing.finishedMassKg": "Approved",
+      "manufacturing.manufacturerCostCC": "Approved",
+      "manufacturing.manufacturerQuoteCC": "Approved",
       "partIds": "Approved",
       "pendingPartCompatibility": "In Review",
       "outputSummary": "In Review",
       "inputSummary": "In Review",
-      "operating.ratedCapacity": "Not Reviewed",
-      "operating.powerUnits": "Not Reviewed",
+      "operating.ratedCapacity": "Approved",
+      "operating.powerUnits": "Approved",
       "operating.footprintM2": "Not Reviewed",
       "operating.housingTechTier": "Not Reviewed",
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
-      "conditionModel": "Approved"
+      "conditionModel": "Approved",
+      "operating.ratedCapacityUnit": "Approved",
+      "operating.idlePowerUnits": "Approved",
+      "operating.operatingConsumables": "Approved",
+      "operating.consumableUnitPolicy": "Approved",
+      "operating.generatorFuelProfile": "Approved",
+      "operating.foundingCargoUnits": "Approved"
     },
     "approval": "Blocked",
     "servicePartRequirements": [
@@ -2938,6 +3058,11 @@
       "criticalFailureDisables": true,
       "excludesNonOperationalCapability": true,
       "approval": "Approved"
+    },
+    "mobileMineInitialBalance": {
+      "approval": "Approved",
+      "basis": "AI-calibrated initial Mobile game balance authorised by user 22 Nov 2026; future player review/tuning allowed; not a certified engineering specification",
+      "scope": "mine-and-connected-power"
     }
   },
   {
@@ -3045,10 +3170,16 @@
       "unresolvedDesignConstraints": "Tracking motor size optics field/reflector area and thermal receiver ratings"
     },
     "operating": {
-      "ratedCapacity": null,
-      "powerUnits": null,
+      "ratedCapacity": 75,
+      "powerUnits": 0,
       "footprintM2": null,
-      "housingTechTier": null
+      "housingTechTier": null,
+      "ratedCapacityUnit": "power-units-output",
+      "idlePowerUnits": 0,
+      "operatingConsumables": [],
+      "consumableUnitPolicy": "physical units consumed only when operating; machine service Parts tracked through condition/wear, never charged as hourly material",
+      "environmentalGate": "usable-solar-irradiance-required",
+      "foundingCargoUnits": 71
     },
     "fieldApprovalStatuses": {
       "manufacturing.finishedPartInputs": "Proposed",
@@ -3058,21 +3189,27 @@
       "manufacturing.factoryHours": "Proposed",
       "manufacturing.testHours": "Proposed",
       "manufacturing.goodUnitYield": "Proposed",
-      "manufacturing.finishedMassKg": "Proposed",
-      "manufacturing.manufacturerCostCC": "Proposed",
-      "manufacturing.manufacturerQuoteCC": "Proposed",
+      "manufacturing.finishedMassKg": "Approved",
+      "manufacturing.manufacturerCostCC": "Approved",
+      "manufacturing.manufacturerQuoteCC": "Approved",
       "partIds": "Approved",
       "pendingPartCompatibility": "In Review",
       "outputSummary": "In Review",
       "inputSummary": "In Review",
-      "operating.ratedCapacity": "Not Reviewed",
-      "operating.powerUnits": "Not Reviewed",
+      "operating.ratedCapacity": "Approved",
+      "operating.powerUnits": "Approved",
       "operating.footprintM2": "Not Reviewed",
       "operating.housingTechTier": "Not Reviewed",
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
-      "conditionModel": "Approved"
+      "conditionModel": "Approved",
+      "operating.ratedCapacityUnit": "Approved",
+      "operating.idlePowerUnits": "Approved",
+      "operating.operatingConsumables": "Approved",
+      "operating.consumableUnitPolicy": "Approved",
+      "operating.environmentalGate": "Approved",
+      "operating.foundingCargoUnits": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -3151,6 +3288,11 @@
       "criticalFailureDisables": true,
       "excludesNonOperationalCapability": true,
       "approval": "Approved"
+    },
+    "mobileMineInitialBalance": {
+      "approval": "Approved",
+      "basis": "AI-calibrated initial Mobile game balance authorised by user 22 Nov 2026; future player review/tuning allowed; not a certified engineering specification",
+      "scope": "mine-and-connected-power"
     }
   },
   {
@@ -3223,10 +3365,15 @@
       "unresolvedDesignConstraints": "Transformer winding voltage and switchgear test burden"
     },
     "operating": {
-      "ratedCapacity": null,
-      "powerUnits": null,
+      "ratedCapacity": 800,
+      "powerUnits": 0.5,
       "footprintM2": null,
-      "housingTechTier": null
+      "housingTechTier": null,
+      "ratedCapacityUnit": "power-units-delivered",
+      "idlePowerUnits": 0.5,
+      "operatingConsumables": [],
+      "consumableUnitPolicy": "physical units consumed only when operating; machine service Parts tracked through condition/wear, never charged as hourly material",
+      "foundingCargoUnits": 29
     },
     "pendingPartCompatibility": [],
     "fieldApprovalStatuses": {
@@ -3237,21 +3384,26 @@
       "manufacturing.factoryHours": "Proposed",
       "manufacturing.testHours": "Proposed",
       "manufacturing.goodUnitYield": "Proposed",
-      "manufacturing.finishedMassKg": "Proposed",
-      "manufacturing.manufacturerCostCC": "Proposed",
-      "manufacturing.manufacturerQuoteCC": "Proposed",
+      "manufacturing.finishedMassKg": "Approved",
+      "manufacturing.manufacturerCostCC": "Approved",
+      "manufacturing.manufacturerQuoteCC": "Approved",
       "partIds": "Approved",
       "pendingPartCompatibility": "Approved",
       "outputSummary": "In Review",
       "inputSummary": "In Review",
-      "operating.ratedCapacity": "Not Reviewed",
-      "operating.powerUnits": "Not Reviewed",
+      "operating.ratedCapacity": "Approved",
+      "operating.powerUnits": "Approved",
       "operating.footprintM2": "Not Reviewed",
       "operating.housingTechTier": "Not Reviewed",
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
-      "conditionModel": "Approved"
+      "conditionModel": "Approved",
+      "operating.ratedCapacityUnit": "Approved",
+      "operating.idlePowerUnits": "Approved",
+      "operating.operatingConsumables": "Approved",
+      "operating.consumableUnitPolicy": "Approved",
+      "operating.foundingCargoUnits": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -3304,6 +3456,11 @@
       "criticalFailureDisables": true,
       "excludesNonOperationalCapability": true,
       "approval": "Approved"
+    },
+    "mobileMineInitialBalance": {
+      "approval": "Approved",
+      "basis": "AI-calibrated initial Mobile game balance authorised by user 22 Nov 2026; future player review/tuning allowed; not a certified engineering specification",
+      "scope": "mine-and-connected-power"
     }
   },
   {
@@ -4102,10 +4259,15 @@
       "unresolvedDesignConstraints": "Pressure class and distinction from Hydraulic actuator seals TBD"
     },
     "operating": {
-      "ratedCapacity": null,
-      "powerUnits": null,
+      "ratedCapacity": 20,
+      "powerUnits": 2,
       "footprintM2": null,
-      "housingTechTier": null
+      "housingTechTier": null,
+      "ratedCapacityUnit": "fluid-resource-units-per-hour",
+      "idlePowerUnits": 0,
+      "operatingConsumables": [],
+      "consumableUnitPolicy": "physical units consumed only when operating; machine service Parts tracked through condition/wear, never charged as hourly material",
+      "foundingCargoUnits": 27
     },
     "pendingPartCompatibility": [],
     "fieldApprovalStatuses": {
@@ -4116,21 +4278,26 @@
       "manufacturing.factoryHours": "Proposed",
       "manufacturing.testHours": "Proposed",
       "manufacturing.goodUnitYield": "Proposed",
-      "manufacturing.finishedMassKg": "Proposed",
-      "manufacturing.manufacturerCostCC": "Proposed",
-      "manufacturing.manufacturerQuoteCC": "Proposed",
+      "manufacturing.finishedMassKg": "Approved",
+      "manufacturing.manufacturerCostCC": "Approved",
+      "manufacturing.manufacturerQuoteCC": "Approved",
       "partIds": "Approved",
       "pendingPartCompatibility": "Approved",
       "outputSummary": "In Review",
       "inputSummary": "In Review",
-      "operating.ratedCapacity": "Not Reviewed",
-      "operating.powerUnits": "Not Reviewed",
+      "operating.ratedCapacity": "Approved",
+      "operating.powerUnits": "Approved",
       "operating.footprintM2": "Not Reviewed",
       "operating.housingTechTier": "Not Reviewed",
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
-      "conditionModel": "Approved"
+      "conditionModel": "Approved",
+      "operating.ratedCapacityUnit": "Approved",
+      "operating.idlePowerUnits": "Approved",
+      "operating.operatingConsumables": "Approved",
+      "operating.consumableUnitPolicy": "Approved",
+      "operating.foundingCargoUnits": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -4193,6 +4360,11 @@
       "criticalFailureDisables": true,
       "excludesNonOperationalCapability": true,
       "approval": "Approved"
+    },
+    "mobileMineInitialBalance": {
+      "approval": "Approved",
+      "basis": "AI-calibrated initial Mobile game balance authorised by user 22 Nov 2026; future player review/tuning allowed; not a certified engineering specification",
+      "scope": "mine-and-connected-power"
     }
   },
   {
@@ -4275,10 +4447,15 @@
       "unresolvedDesignConstraints": "Filter area and replaceable media cycle not priced"
     },
     "operating": {
-      "ratedCapacity": null,
-      "powerUnits": null,
+      "ratedCapacity": 10,
+      "powerUnits": 2,
       "footprintM2": null,
-      "housingTechTier": null
+      "housingTechTier": null,
+      "ratedCapacityUnit": "processed-resource-units-per-hour",
+      "idlePowerUnits": 0.1,
+      "operatingConsumables": [],
+      "consumableUnitPolicy": "physical units consumed only when operating; machine service Parts tracked through condition/wear, never charged as hourly material",
+      "foundingCargoUnits": 22
     },
     "pendingPartCompatibility": [],
     "fieldApprovalStatuses": {
@@ -4289,21 +4466,26 @@
       "manufacturing.factoryHours": "Proposed",
       "manufacturing.testHours": "Proposed",
       "manufacturing.goodUnitYield": "Proposed",
-      "manufacturing.finishedMassKg": "Proposed",
-      "manufacturing.manufacturerCostCC": "Proposed",
-      "manufacturing.manufacturerQuoteCC": "Proposed",
+      "manufacturing.finishedMassKg": "Approved",
+      "manufacturing.manufacturerCostCC": "Approved",
+      "manufacturing.manufacturerQuoteCC": "Approved",
       "partIds": "Approved",
       "pendingPartCompatibility": "Approved",
       "outputSummary": "In Review",
       "inputSummary": "In Review",
-      "operating.ratedCapacity": "Not Reviewed",
-      "operating.powerUnits": "Not Reviewed",
+      "operating.ratedCapacity": "Approved",
+      "operating.powerUnits": "Approved",
       "operating.footprintM2": "Not Reviewed",
       "operating.housingTechTier": "Not Reviewed",
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
-      "conditionModel": "Approved"
+      "conditionModel": "Approved",
+      "operating.ratedCapacityUnit": "Approved",
+      "operating.idlePowerUnits": "Approved",
+      "operating.operatingConsumables": "Approved",
+      "operating.consumableUnitPolicy": "Approved",
+      "operating.foundingCargoUnits": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -4379,6 +4561,11 @@
       "criticalFailureDisables": true,
       "excludesNonOperationalCapability": true,
       "approval": "Approved"
+    },
+    "mobileMineInitialBalance": {
+      "approval": "Approved",
+      "basis": "AI-calibrated initial Mobile game balance authorised by user 22 Nov 2026; future player review/tuning allowed; not a certified engineering specification",
+      "scope": "mine-and-connected-power"
     }
   },
   {
@@ -5179,17 +5366,33 @@
       "factoryHours": 495,
       "testHours": 170,
       "goodUnitYield": 0.9,
-      "finishedMassKg": null,
-      "manufacturerCostCC": null,
-      "manufacturerQuoteCC": null,
+      "finishedMassKg": 6800,
+      "manufacturerCostCC": 330000,
+      "manufacturerQuoteCC": 412500,
       "reviewBasis": "Unapproved Android derived-cost scenario; quantities, ratings and CC require Building-led review.",
       "unresolvedDesignConstraints": "Universe source partIds empty; candidate only and steam engine/condenser fuel inputs TBD"
     },
     "operating": {
-      "ratedCapacity": null,
-      "powerUnits": null,
+      "ratedCapacity": 75,
+      "powerUnits": 0,
       "footprintM2": null,
-      "housingTechTier": null
+      "housingTechTier": null,
+      "ratedCapacityUnit": "power-units-output",
+      "idlePowerUnits": 0,
+      "operatingConsumables": [],
+      "consumableUnitPolicy": "physical units consumed only when operating; machine service Parts tracked through condition/wear, never charged as hourly material",
+      "generatorFuelProfile": {
+        "resourceIds": [
+          "mobile-resource-biomass",
+          "mobile-resource-peat",
+          "mobile-resource-coal"
+        ],
+        "effectiveFuelEnergyPerPowerUnitHour": 0.041666666666666664,
+        "dispatch": "load-following",
+        "fuelAvailabilityRule": "solid-fuel-boiler-only",
+        "approvedInitialBalance": true
+      },
+      "foundingCargoUnits": 68
     },
     "pendingPartCompatibility": [],
     "fieldApprovalStatuses": {
@@ -5200,21 +5403,27 @@
       "manufacturing.factoryHours": "Proposed",
       "manufacturing.testHours": "Proposed",
       "manufacturing.goodUnitYield": "Proposed",
-      "manufacturing.finishedMassKg": "Not Reviewed",
-      "manufacturing.manufacturerCostCC": "Blocked",
-      "manufacturing.manufacturerQuoteCC": "Blocked",
+      "manufacturing.finishedMassKg": "Approved",
+      "manufacturing.manufacturerCostCC": "Approved",
+      "manufacturing.manufacturerQuoteCC": "Approved",
       "partIds": "Approved",
       "pendingPartCompatibility": "Approved",
       "outputSummary": "Not Reviewed",
       "inputSummary": "Not Reviewed",
-      "operating.ratedCapacity": "Not Reviewed",
-      "operating.powerUnits": "Not Reviewed",
+      "operating.ratedCapacity": "Approved",
+      "operating.powerUnits": "Approved",
       "operating.footprintM2": "Not Reviewed",
       "operating.housingTechTier": "Not Reviewed",
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
-      "conditionModel": "Approved"
+      "conditionModel": "Approved",
+      "operating.ratedCapacityUnit": "Approved",
+      "operating.idlePowerUnits": "Approved",
+      "operating.operatingConsumables": "Approved",
+      "operating.consumableUnitPolicy": "Approved",
+      "operating.generatorFuelProfile": "Approved",
+      "operating.foundingCargoUnits": "Approved"
     },
     "approval": "Blocked",
     "servicePartRequirements": [
@@ -5293,6 +5502,11 @@
       "criticalFailureDisables": true,
       "excludesNonOperationalCapability": true,
       "approval": "Approved"
+    },
+    "mobileMineInitialBalance": {
+      "approval": "Approved",
+      "basis": "AI-calibrated initial Mobile game balance authorised by user 22 Nov 2026; future player review/tuning allowed; not a certified engineering specification",
+      "scope": "mine-and-connected-power"
     }
   },
   {
@@ -5367,17 +5581,37 @@
       "factoryHours": 465,
       "testHours": 170,
       "goodUnitYield": 0.91,
-      "finishedMassKg": null,
-      "manufacturerCostCC": null,
-      "manufacturerQuoteCC": null,
+      "finishedMassKg": 4900,
+      "manufacturerCostCC": 300000,
+      "manufacturerQuoteCC": 375000,
       "reviewBasis": "Unapproved Android derived-cost scenario; quantities, ratings and CC require Building-led review.",
       "unresolvedDesignConstraints": "Universe source partIds empty; combustion engine/exhaust and fuel/ratings TBD"
     },
     "operating": {
-      "ratedCapacity": null,
-      "powerUnits": null,
+      "ratedCapacity": 75,
+      "powerUnits": 0,
       "footprintM2": null,
-      "housingTechTier": null
+      "housingTechTier": null,
+      "ratedCapacityUnit": "power-units-output",
+      "idlePowerUnits": 0,
+      "operatingConsumables": [],
+      "consumableUnitPolicy": "physical units consumed only when operating; machine service Parts tracked through condition/wear, never charged as hourly material",
+      "generatorFuelProfile": {
+        "resourceIds": [
+          "mobile-resource-biomass",
+          "mobile-resource-peat",
+          "mobile-resource-coal",
+          "mobile-resource-crude-oil",
+          "mobile-resource-natural-gas",
+          "mobile-resource-methane-ice",
+          "mobile-resource-hydrogen"
+        ],
+        "effectiveFuelEnergyPerPowerUnitHour": 0.041666666666666664,
+        "dispatch": "load-following",
+        "fuelAvailabilityRule": "distinct-resource-id-compatibility-not-generic-fuel-category",
+        "approvedInitialBalance": true
+      },
+      "foundingCargoUnits": 49
     },
     "pendingPartCompatibility": [],
     "fieldApprovalStatuses": {
@@ -5388,21 +5622,27 @@
       "manufacturing.factoryHours": "Proposed",
       "manufacturing.testHours": "Proposed",
       "manufacturing.goodUnitYield": "Proposed",
-      "manufacturing.finishedMassKg": "Not Reviewed",
-      "manufacturing.manufacturerCostCC": "Blocked",
-      "manufacturing.manufacturerQuoteCC": "Blocked",
+      "manufacturing.finishedMassKg": "Approved",
+      "manufacturing.manufacturerCostCC": "Approved",
+      "manufacturing.manufacturerQuoteCC": "Approved",
       "partIds": "Approved",
       "pendingPartCompatibility": "Approved",
       "outputSummary": "Not Reviewed",
       "inputSummary": "Not Reviewed",
-      "operating.ratedCapacity": "Not Reviewed",
-      "operating.powerUnits": "Not Reviewed",
+      "operating.ratedCapacity": "Approved",
+      "operating.powerUnits": "Approved",
       "operating.footprintM2": "Not Reviewed",
       "operating.housingTechTier": "Not Reviewed",
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
-      "conditionModel": "Approved"
+      "conditionModel": "Approved",
+      "operating.ratedCapacityUnit": "Approved",
+      "operating.idlePowerUnits": "Approved",
+      "operating.operatingConsumables": "Approved",
+      "operating.consumableUnitPolicy": "Approved",
+      "operating.generatorFuelProfile": "Approved",
+      "operating.foundingCargoUnits": "Approved"
     },
     "approval": "Blocked",
     "servicePartRequirements": [
@@ -5472,6 +5712,11 @@
       "criticalFailureDisables": true,
       "excludesNonOperationalCapability": true,
       "approval": "Approved"
+    },
+    "mobileMineInitialBalance": {
+      "approval": "Approved",
+      "basis": "AI-calibrated initial Mobile game balance authorised by user 22 Nov 2026; future player review/tuning allowed; not a certified engineering specification",
+      "scope": "mine-and-connected-power"
     }
   },
   {
@@ -7497,10 +7742,60 @@
     "inputSummary": "Power, qualified operators and method-specific consumables",
     "outputSummary": "Access to a depth-qualified geological extraction method",
     "operating": {
-      "ratedCapacity": null,
-      "powerUnits": null,
+      "ratedCapacity": 12,
+      "powerUnits": 3,
       "footprintM2": null,
-      "housingTechTier": null
+      "housingTechTier": null,
+      "ratedCapacityUnit": "raw-resource-units-per-hour",
+      "idlePowerUnits": 0.15,
+      "operatingConsumables": [],
+      "consumableUnitPolicy": "physical units consumed only when operating; machine service Parts tracked through condition/wear, never charged as hourly material",
+      "configurationProfiles": {
+        "standard-shaft": {
+          "ratedCapacity": 12,
+          "powerUnits": 3,
+          "operatingConsumables": [
+            {
+              "resourceId": "substance-refined-lubricant",
+              "quantityPerOperatingHour": 0.1,
+              "unit": "kg"
+            }
+          ]
+        },
+        "deep-hard-rock": {
+          "ratedCapacity": 10,
+          "powerUnits": 3.8,
+          "operatingConsumables": [
+            {
+              "resourceId": "substance-refined-lubricant",
+              "quantityPerOperatingHour": 0.15,
+              "unit": "kg"
+            },
+            {
+              "resourceId": "substance-coolant",
+              "quantityPerOperatingHour": 0.2,
+              "unit": "kg"
+            }
+          ]
+        },
+        "deep-core": {
+          "ratedCapacity": 8,
+          "powerUnits": 5,
+          "operatingConsumables": [
+            {
+              "resourceId": "substance-refined-lubricant",
+              "quantityPerOperatingHour": 0.2,
+              "unit": "kg"
+            },
+            {
+              "resourceId": "substance-coolant",
+              "quantityPerOperatingHour": 0.5,
+              "unit": "kg"
+            }
+          ]
+        }
+      },
+      "foundingCargoUnits": 55
     },
     "pendingPartCompatibility": [],
     "conditionModel": {
@@ -7540,9 +7835,9 @@
       "factoryHours": null,
       "testHours": null,
       "goodUnitYield": null,
-      "finishedMassKg": null,
-      "manufacturerCostCC": null,
-      "manufacturerQuoteCC": null,
+      "finishedMassKg": 5500,
+      "manufacturerCostCC": 315000,
+      "manufacturerQuoteCC": 393750,
       "reviewBasis": "Specialist physical identity is required by the approved extraction compatibility boundary; engineering BOM, mass and price remain blocked pending review.",
       "unresolvedDesignConstraints": "Qualified materials, rated capacity, footprint, power, manufacture and test programme require engineering approval."
     },
@@ -7665,21 +7960,32 @@
       "manufacturing.factoryHours": "Not Reviewed",
       "manufacturing.testHours": "Not Reviewed",
       "manufacturing.goodUnitYield": "Not Reviewed",
-      "manufacturing.finishedMassKg": "Blocked",
-      "manufacturing.manufacturerCostCC": "Blocked",
-      "manufacturing.manufacturerQuoteCC": "Blocked",
+      "manufacturing.finishedMassKg": "Approved",
+      "manufacturing.manufacturerCostCC": "Approved",
+      "manufacturing.manufacturerQuoteCC": "Approved",
       "partIds": "Approved",
       "pendingPartCompatibility": "Approved",
       "outputSummary": "Approved",
       "inputSummary": "Approved",
-      "operating.ratedCapacity": "Not Reviewed",
-      "operating.powerUnits": "Not Reviewed",
+      "operating.ratedCapacity": "Approved",
+      "operating.powerUnits": "Approved",
       "operating.footprintM2": "Not Reviewed",
       "operating.housingTechTier": "Not Reviewed",
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
-      "conditionModel": "Approved"
+      "conditionModel": "Approved",
+      "operating.ratedCapacityUnit": "Approved",
+      "operating.idlePowerUnits": "Approved",
+      "operating.operatingConsumables": "Approved",
+      "operating.consumableUnitPolicy": "Approved",
+      "operating.configurationProfiles": "Approved",
+      "operating.foundingCargoUnits": "Approved"
+    },
+    "mobileMineInitialBalance": {
+      "approval": "Approved",
+      "basis": "AI-calibrated initial Mobile game balance authorised by user 22 Nov 2026; future player review/tuning allowed; not a certified engineering specification",
+      "scope": "mine-and-connected-power"
     }
   },
   {

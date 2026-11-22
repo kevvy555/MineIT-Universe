@@ -241,6 +241,18 @@
       "reviewedAt": "2026-11-11",
       "approvedAt": "2026-11-11",
       "approvalDecision": "User approved the complete Buildings, Machines and Parts alignment and all recommended options in one consolidated decision. Deliberately unresolved engineering, price and legacy-compatibility fields retain their existing non-approved status."
+    },
+    "operatingProfileSemantics": {
+      "approval": "Approved",
+      "initialMobileBaseline": "2026-11-22",
+      "ratedCapacity": "Numeric Machine capability, qualified by ratedCapacityUnit and selected configuration. Building level alone cannot exceed installed Machine rating.",
+      "powerUnits": "Electrical units demanded while active; power generator's powerUnits is self-consumption, not generation.",
+      "idlePowerUnits": "Demand while online but not actively processing; Mine ventilation has mandatory continuous demand.",
+      "operatingConsumables": "Explicit physical resource debits per operating hour; spare-Part wear is not a generic hourly stock debit.",
+      "generatorFuelProfile": "Compatible canonical Mobile fuel IDs and effective-energy consumption at dispatched output; battery energy cannot be created without charging.",
+      "foundingCargoUnits": "Game cargo burden unit, one unit per 100kg of approved Machine reference mass, rounded up; not equivalent to a natural resource unit.",
+      "commercialPricing": "Manufacturer quote is an initial canonical reference, not automatically a player quote; gameplay freight/markup determined by existing trade rules.",
+      "baselineAuthority": "AI-authored numerical initial estimates authorised by user for approval, subject to later balancing review."
     }
   }
 ]
