@@ -450,7 +450,9 @@
       "manufacturerCostCC": 74404.07,
       "manufacturerQuoteCC": 93050,
       "reviewBasis": "User-authorized initial MineIT Mobile numeric reference baseline approved on 22 Nov 2026 (manufacturer quote/mass/cost only). Manufacturing BOM inputs, yields and qualified engineering remain separately Proposed/Blocked when explicitly not yet reviewed.",
-      "unresolvedDesignConstraints": "Outstanding physical manufacturing process/qualified material and test details remain subject to separate engineering review; initial operating ratings, reference mass and manufacturer quote are Approved for MineIT Mobile."
+      "unresolvedDesignConstraints": "Outstanding physical manufacturing process/qualified material and test details remain subject to separate engineering review; initial operating ratings, reference mass and manufacturer quote are Approved for MineIT Mobile.",
+      "approvedPriceEvidence": "Delegated user approval, 22 November 2026: MineIT Mobile initial balance manufacturer cost and quote reference for Mine Production Simulation 2.0; separate actual corporate trade quote/markup remains game state and numerical tuning may revise this reference.",
+      "approvedMassEvidence": "Delegated user approval, 22 November 2026: MineIT Mobile initial game cargo/mass reference for Mine Production Simulation 2.0; not independently measured or certified physical engineering mass."
     },
     "operating": {
       "ratedCapacity": 10,
@@ -1652,7 +1654,9 @@
       "manufacturerCostCC": 173710.28,
       "manufacturerQuoteCC": 217150,
       "reviewBasis": "User-authorized initial MineIT Mobile numeric reference baseline approved on 22 Nov 2026 (manufacturer quote/mass/cost only). Manufacturing BOM inputs, yields and qualified engineering remain separately Proposed/Blocked when explicitly not yet reviewed.",
-      "unresolvedDesignConstraints": "Outstanding physical manufacturing process/qualified material and test details remain subject to separate engineering review; initial operating ratings, reference mass and manufacturer quote are Approved for MineIT Mobile."
+      "unresolvedDesignConstraints": "Outstanding physical manufacturing process/qualified material and test details remain subject to separate engineering review; initial operating ratings, reference mass and manufacturer quote are Approved for MineIT Mobile.",
+      "approvedPriceEvidence": "Delegated user approval, 22 November 2026: MineIT Mobile initial balance manufacturer cost and quote reference for Mine Production Simulation 2.0; separate actual corporate trade quote/markup remains game state and numerical tuning may revise this reference.",
+      "approvedMassEvidence": "Delegated user approval, 22 November 2026: MineIT Mobile initial game cargo/mass reference for Mine Production Simulation 2.0; not independently measured or certified physical engineering mass."
     },
     "operating": {
       "ratedCapacity": 15,
@@ -1834,7 +1838,9 @@
       "manufacturerCostCC": 118103.06,
       "manufacturerQuoteCC": 147650,
       "reviewBasis": "User-authorized initial MineIT Mobile numeric reference baseline approved on 22 Nov 2026 (manufacturer quote/mass/cost only). Manufacturing BOM inputs, yields and qualified engineering remain separately Proposed/Blocked when explicitly not yet reviewed.",
-      "unresolvedDesignConstraints": "Outstanding physical manufacturing process/qualified material and test details remain subject to separate engineering review; initial operating ratings, reference mass and manufacturer quote are Approved for MineIT Mobile."
+      "unresolvedDesignConstraints": "Outstanding physical manufacturing process/qualified material and test details remain subject to separate engineering review; initial operating ratings, reference mass and manufacturer quote are Approved for MineIT Mobile.",
+      "approvedPriceEvidence": "Delegated user approval, 22 November 2026: MineIT Mobile initial balance manufacturer cost and quote reference for Mine Production Simulation 2.0; separate actual corporate trade quote/markup remains game state and numerical tuning may revise this reference.",
+      "approvedMassEvidence": "Delegated user approval, 22 November 2026: MineIT Mobile initial game cargo/mass reference for Mine Production Simulation 2.0; not independently measured or certified physical engineering mass."
     },
     "operating": {
       "ratedCapacity": 1,
@@ -2384,7 +2390,9 @@
       "manufacturerCostCC": 100112.17,
       "manufacturerQuoteCC": 125150,
       "reviewBasis": "User-authorized initial MineIT Mobile numeric reference baseline approved on 22 Nov 2026 (manufacturer quote/mass/cost only). Manufacturing BOM inputs, yields and qualified engineering remain separately Proposed/Blocked when explicitly not yet reviewed.",
-      "unresolvedDesignConstraints": "Outstanding physical manufacturing process/qualified material and test details remain subject to separate engineering review; initial operating ratings, reference mass and manufacturer quote are Approved for MineIT Mobile."
+      "unresolvedDesignConstraints": "Outstanding physical manufacturing process/qualified material and test details remain subject to separate engineering review; initial operating ratings, reference mass and manufacturer quote are Approved for MineIT Mobile.",
+      "approvedPriceEvidence": "Delegated user approval, 22 November 2026: MineIT Mobile initial balance manufacturer cost and quote reference for Mine Production Simulation 2.0; separate actual corporate trade quote/markup remains game state and numerical tuning may revise this reference.",
+      "approvedMassEvidence": "Delegated user approval, 22 November 2026: MineIT Mobile initial game cargo/mass reference for Mine Production Simulation 2.0; not independently measured or certified physical engineering mass."
     },
     "operating": {
       "ratedCapacity": 25,
@@ -2563,7 +2571,9 @@
       "manufacturerCostCC": 240968.42,
       "manufacturerQuoteCC": 301250,
       "reviewBasis": "User-authorized initial MineIT Mobile numeric reference baseline approved on 22 Nov 2026 (manufacturer quote/mass/cost only). Manufacturing BOM inputs, yields and qualified engineering remain separately Proposed/Blocked when explicitly not yet reviewed.",
-      "unresolvedDesignConstraints": "Outstanding physical manufacturing process/qualified material and test details remain subject to separate engineering review; initial operating ratings, reference mass and manufacturer quote are Approved for MineIT Mobile."
+      "unresolvedDesignConstraints": "Outstanding physical manufacturing process/qualified material and test details remain subject to separate engineering review; initial operating ratings, reference mass and manufacturer quote are Approved for MineIT Mobile.",
+      "approvedPriceEvidence": "Delegated user approval, 22 November 2026: MineIT Mobile initial balance manufacturer cost and quote reference for Mine Production Simulation 2.0; separate actual corporate trade quote/markup remains game state and numerical tuning may revise this reference.",
+      "approvedMassEvidence": "Delegated user approval, 22 November 2026: MineIT Mobile initial game cargo/mass reference for Mine Production Simulation 2.0; not independently measured or certified physical engineering mass."
     },
     "operating": {
       "ratedCapacity": 75,
@@ -2746,7 +2756,9 @@
       "manufacturerCostCC": 243038.67,
       "manufacturerQuoteCC": 303800,
       "reviewBasis": "User-authorized initial MineIT Mobile numeric reference baseline approved on 22 Nov 2026 (manufacturer quote/mass/cost only). Manufacturing BOM inputs, yields and qualified engineering remain separately Proposed/Blocked when explicitly not yet reviewed.",
-      "unresolvedDesignConstraints": "Outstanding physical manufacturing process/qualified material and test details remain subject to separate engineering review; initial operating ratings, reference mass and manufacturer quote are Approved for MineIT Mobile."
+      "unresolvedDesignConstraints": "Outstanding physical manufacturing process/qualified material and test details remain subject to separate engineering review; initial operating ratings, reference mass and manufacturer quote are Approved for MineIT Mobile.",
+      "approvedPriceEvidence": "Delegated user approval, 22 November 2026: MineIT Mobile initial balance manufacturer cost and quote reference for Mine Production Simulation 2.0; separate actual corporate trade quote/markup remains game state and numerical tuning may revise this reference.",
+      "approvedMassEvidence": "Delegated user approval, 22 November 2026: MineIT Mobile initial game cargo/mass reference for Mine Production Simulation 2.0; not independently measured or certified physical engineering mass."
     },
     "operating": {
       "ratedCapacity": 75,
@@ -2945,7 +2957,9 @@
       "manufacturerCostCC": 75200,
       "manufacturerQuoteCC": 94000,
       "reviewBasis": "User-authorized initial MineIT Mobile numeric reference baseline approved on 22 Nov 2026 (manufacturer quote/mass/cost only). Manufacturing BOM inputs, yields and qualified engineering remain separately Proposed/Blocked when explicitly not yet reviewed.",
-      "unresolvedDesignConstraints": "Outstanding physical manufacturing process/qualified material and test details remain subject to separate engineering review; initial operating ratings, reference mass and manufacturer quote are Approved for MineIT Mobile."
+      "unresolvedDesignConstraints": "Outstanding physical manufacturing process/qualified material and test details remain subject to separate engineering review; initial operating ratings, reference mass and manufacturer quote are Approved for MineIT Mobile.",
+      "approvedPriceEvidence": "Delegated user approval, 22 November 2026: MineIT Mobile initial balance manufacturer cost and quote reference for Mine Production Simulation 2.0; separate actual corporate trade quote/markup remains game state and numerical tuning may revise this reference.",
+      "approvedMassEvidence": "Delegated user approval, 22 November 2026: MineIT Mobile initial game cargo/mass reference for Mine Production Simulation 2.0; not independently measured or certified physical engineering mass."
     },
     "operating": {
       "ratedCapacity": 10,
@@ -3167,7 +3181,9 @@
       "manufacturerCostCC": 471092.73,
       "manufacturerQuoteCC": 588900,
       "reviewBasis": "User-authorized initial MineIT Mobile numeric reference baseline approved on 22 Nov 2026 (manufacturer quote/mass/cost only). Manufacturing BOM inputs, yields and qualified engineering remain separately Proposed/Blocked when explicitly not yet reviewed.",
-      "unresolvedDesignConstraints": "Outstanding physical manufacturing process/qualified material and test details remain subject to separate engineering review; initial operating ratings, reference mass and manufacturer quote are Approved for MineIT Mobile."
+      "unresolvedDesignConstraints": "Outstanding physical manufacturing process/qualified material and test details remain subject to separate engineering review; initial operating ratings, reference mass and manufacturer quote are Approved for MineIT Mobile.",
+      "approvedPriceEvidence": "Delegated user approval, 22 November 2026: MineIT Mobile initial balance manufacturer cost and quote reference for Mine Production Simulation 2.0; separate actual corporate trade quote/markup remains game state and numerical tuning may revise this reference.",
+      "approvedMassEvidence": "Delegated user approval, 22 November 2026: MineIT Mobile initial game cargo/mass reference for Mine Production Simulation 2.0; not independently measured or certified physical engineering mass."
     },
     "operating": {
       "ratedCapacity": 75,
@@ -3362,7 +3378,9 @@
       "manufacturerCostCC": 262467.76,
       "manufacturerQuoteCC": 328100,
       "reviewBasis": "User-authorized initial MineIT Mobile numeric reference baseline approved on 22 Nov 2026 (manufacturer quote/mass/cost only). Manufacturing BOM inputs, yields and qualified engineering remain separately Proposed/Blocked when explicitly not yet reviewed.",
-      "unresolvedDesignConstraints": "Outstanding physical manufacturing process/qualified material and test details remain subject to separate engineering review; initial operating ratings, reference mass and manufacturer quote are Approved for MineIT Mobile."
+      "unresolvedDesignConstraints": "Outstanding physical manufacturing process/qualified material and test details remain subject to separate engineering review; initial operating ratings, reference mass and manufacturer quote are Approved for MineIT Mobile.",
+      "approvedPriceEvidence": "Delegated user approval, 22 November 2026: MineIT Mobile initial balance manufacturer cost and quote reference for Mine Production Simulation 2.0; separate actual corporate trade quote/markup remains game state and numerical tuning may revise this reference.",
+      "approvedMassEvidence": "Delegated user approval, 22 November 2026: MineIT Mobile initial game cargo/mass reference for Mine Production Simulation 2.0; not independently measured or certified physical engineering mass."
     },
     "operating": {
       "ratedCapacity": 800,
@@ -4256,7 +4274,9 @@
       "manufacturerCostCC": 192664.01,
       "manufacturerQuoteCC": 240850,
       "reviewBasis": "User-authorized initial MineIT Mobile numeric reference baseline approved on 22 Nov 2026 (manufacturer quote/mass/cost only). Manufacturing BOM inputs, yields and qualified engineering remain separately Proposed/Blocked when explicitly not yet reviewed.",
-      "unresolvedDesignConstraints": "Outstanding physical manufacturing process/qualified material and test details remain subject to separate engineering review; initial operating ratings, reference mass and manufacturer quote are Approved for MineIT Mobile."
+      "unresolvedDesignConstraints": "Outstanding physical manufacturing process/qualified material and test details remain subject to separate engineering review; initial operating ratings, reference mass and manufacturer quote are Approved for MineIT Mobile.",
+      "approvedPriceEvidence": "Delegated user approval, 22 November 2026: MineIT Mobile initial balance manufacturer cost and quote reference for Mine Production Simulation 2.0; separate actual corporate trade quote/markup remains game state and numerical tuning may revise this reference.",
+      "approvedMassEvidence": "Delegated user approval, 22 November 2026: MineIT Mobile initial game cargo/mass reference for Mine Production Simulation 2.0; not independently measured or certified physical engineering mass."
     },
     "operating": {
       "ratedCapacity": 20,
@@ -4444,7 +4464,9 @@
       "manufacturerCostCC": 181214.13,
       "manufacturerQuoteCC": 226550,
       "reviewBasis": "User-authorized initial MineIT Mobile numeric reference baseline approved on 22 Nov 2026 (manufacturer quote/mass/cost only). Manufacturing BOM inputs, yields and qualified engineering remain separately Proposed/Blocked when explicitly not yet reviewed.",
-      "unresolvedDesignConstraints": "Outstanding physical manufacturing process/qualified material and test details remain subject to separate engineering review; initial operating ratings, reference mass and manufacturer quote are Approved for MineIT Mobile."
+      "unresolvedDesignConstraints": "Outstanding physical manufacturing process/qualified material and test details remain subject to separate engineering review; initial operating ratings, reference mass and manufacturer quote are Approved for MineIT Mobile.",
+      "approvedPriceEvidence": "Delegated user approval, 22 November 2026: MineIT Mobile initial balance manufacturer cost and quote reference for Mine Production Simulation 2.0; separate actual corporate trade quote/markup remains game state and numerical tuning may revise this reference.",
+      "approvedMassEvidence": "Delegated user approval, 22 November 2026: MineIT Mobile initial game cargo/mass reference for Mine Production Simulation 2.0; not independently measured or certified physical engineering mass."
     },
     "operating": {
       "ratedCapacity": 10,
@@ -5370,7 +5392,9 @@
       "manufacturerCostCC": 330000,
       "manufacturerQuoteCC": 412500,
       "reviewBasis": "User-authorized initial MineIT Mobile numeric reference baseline approved on 22 Nov 2026 (manufacturer quote/mass/cost only). Manufacturing BOM inputs, yields and qualified engineering remain separately Proposed/Blocked when explicitly not yet reviewed.",
-      "unresolvedDesignConstraints": "Outstanding physical manufacturing process/qualified material and test details remain subject to separate engineering review; initial operating ratings, reference mass and manufacturer quote are Approved for MineIT Mobile."
+      "unresolvedDesignConstraints": "Outstanding physical manufacturing process/qualified material and test details remain subject to separate engineering review; initial operating ratings, reference mass and manufacturer quote are Approved for MineIT Mobile.",
+      "approvedPriceEvidence": "Delegated user approval, 22 November 2026: MineIT Mobile initial balance manufacturer cost and quote reference for Mine Production Simulation 2.0; separate actual corporate trade quote/markup remains game state and numerical tuning may revise this reference.",
+      "approvedMassEvidence": "Delegated user approval, 22 November 2026: MineIT Mobile initial game cargo/mass reference for Mine Production Simulation 2.0; not independently measured or certified physical engineering mass."
     },
     "operating": {
       "ratedCapacity": 75,
@@ -5585,7 +5609,9 @@
       "manufacturerCostCC": 300000,
       "manufacturerQuoteCC": 375000,
       "reviewBasis": "User-authorized initial MineIT Mobile numeric reference baseline approved on 22 Nov 2026 (manufacturer quote/mass/cost only). Manufacturing BOM inputs, yields and qualified engineering remain separately Proposed/Blocked when explicitly not yet reviewed.",
-      "unresolvedDesignConstraints": "Outstanding physical manufacturing process/qualified material and test details remain subject to separate engineering review; initial operating ratings, reference mass and manufacturer quote are Approved for MineIT Mobile."
+      "unresolvedDesignConstraints": "Outstanding physical manufacturing process/qualified material and test details remain subject to separate engineering review; initial operating ratings, reference mass and manufacturer quote are Approved for MineIT Mobile.",
+      "approvedPriceEvidence": "Delegated user approval, 22 November 2026: MineIT Mobile initial balance manufacturer cost and quote reference for Mine Production Simulation 2.0; separate actual corporate trade quote/markup remains game state and numerical tuning may revise this reference.",
+      "approvedMassEvidence": "Delegated user approval, 22 November 2026: MineIT Mobile initial game cargo/mass reference for Mine Production Simulation 2.0; not independently measured or certified physical engineering mass."
     },
     "operating": {
       "ratedCapacity": 75,
@@ -7839,7 +7865,9 @@
       "manufacturerCostCC": 315000,
       "manufacturerQuoteCC": 393750,
       "reviewBasis": "User-authorized initial MineIT Mobile numeric reference baseline approved on 22 Nov 2026 (manufacturer quote/mass/cost only). Manufacturing BOM inputs, yields and qualified engineering remain separately Proposed/Blocked when explicitly not yet reviewed.",
-      "unresolvedDesignConstraints": "Outstanding physical manufacturing process/qualified material and test details remain subject to separate engineering review; initial operating ratings, reference mass and manufacturer quote are Approved for MineIT Mobile."
+      "unresolvedDesignConstraints": "Outstanding physical manufacturing process/qualified material and test details remain subject to separate engineering review; initial operating ratings, reference mass and manufacturer quote are Approved for MineIT Mobile.",
+      "approvedPriceEvidence": "Delegated user approval, 22 November 2026: MineIT Mobile initial balance manufacturer cost and quote reference for Mine Production Simulation 2.0; separate actual corporate trade quote/markup remains game state and numerical tuning may revise this reference.",
+      "approvedMassEvidence": "Delegated user approval, 22 November 2026: MineIT Mobile initial game cargo/mass reference for Mine Production Simulation 2.0; not independently measured or certified physical engineering mass."
     },
     "servicePartRequirements": [
       {

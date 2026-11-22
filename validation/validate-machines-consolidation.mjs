@@ -54,7 +54,12 @@ const flatten = (obj, prefix = "", out = {}) => {
   }
   return out;
 };
-let pending = 0, priceProposals = 0, fullyApprovedBoms = 0, blocked = 0;
+let pending = 0, priceProposals = 0, fullyApprovedBoms = 0, blocked = 0, mobileApproved = 0;
+const initialMobileFields = new Set([
+  "operating.ratedCapacityUnit", "operating.idlePowerUnits", "operating.operatingConsumables",
+  "operating.consumableUnitPolicy", "operating.foundingCargoUnits", "operating.configurationProfiles",
+  "operating.generatorFuelProfile", "operating.environmentalGate", "operating.storedEnergyCapacityPowerUnitHours"
+]);
 for (const machine of machines) {
   assert.equal(machine.entityType, "Machine");
   assert.equal(typeof machine.image?.generated, "boolean", machine.id + " image state retained");
@@ -90,16 +95,44 @@ for (const machine of machines) {
   }
   assert.ok(bom.goodUnitYield === null ||
     (bom.goodUnitYield > 0 && bom.goodUnitYield <= 1));
-  if (Number.isFinite(bom.manufacturerCostCC)) {
-    priceProposals++;
+  const delegatedMobile = machine.mobileMineInitialBalance?.approval === "Approved" &&
+    machine.mobileMineInitialBalance.scope === "mine-and-connected-power";
+  if (Number.isFinite(bom.manufacturerCostCC)) priceProposals++;
+  if (delegatedMobile) {
+    mobileApproved++;
+    assert.match(machine.manufacturing.approvedPriceEvidence || "", /Delegated user approval, 22 November 2026/);
+    assert.match(machine.manufacturing.approvedMassEvidence || "", /Delegated user approval, 22 November 2026/);
+    assert.ok(Number.isFinite(bom.manufacturerCostCC) && bom.manufacturerCostCC > 0);
+    assert.ok(Number.isFinite(bom.manufacturerQuoteCC) && bom.manufacturerQuoteCC >= bom.manufacturerCostCC);
+    assert.ok(Number.isFinite(bom.finishedMassKg) && bom.finishedMassKg > 0);
+    assert.ok(Number.isFinite(machine.operating.ratedCapacity) && machine.operating.ratedCapacity > 0);
+    assert.ok(typeof machine.operating.ratedCapacityUnit === "string" && machine.operating.ratedCapacityUnit.length);
+    assert.ok(Number.isFinite(machine.operating.powerUnits) && machine.operating.powerUnits >= 0);
+    assert.ok(Number.isFinite(machine.operating.idlePowerUnits) && machine.operating.idlePowerUnits >= 0);
+    assert.ok(Number.isInteger(machine.operating.foundingCargoUnits) && machine.operating.foundingCargoUnits > 0);
+    assert.equal(machine.operating.foundingCargoUnits, Math.ceil(bom.finishedMassKg / 100));
+    for (const field of ["manufacturing.finishedMassKg", "manufacturing.manufacturerCostCC",
+      "manufacturing.manufacturerQuoteCC", "operating.ratedCapacity", "operating.powerUnits"])
+      assert.equal(machine.fieldApprovalStatuses[field], "Approved", machine.id + ": " + field);
+    for (const field of ["operating.ratedCapacityUnit", "operating.idlePowerUnits",
+      "operating.operatingConsumables", "operating.consumableUnitPolicy", "operating.foundingCargoUnits"])
+      assert.equal(machine.fieldApprovalStatuses[field], "Approved", machine.id + ": " + field);
+  } else {
     assert.notEqual(machine.fieldApprovalStatuses["manufacturing.manufacturerCostCC"], "Approved",
-      "Android scenario CC cannot be promoted to approved");
+      "Unapproved Android scenario CC cannot be promoted");
+    assert.notEqual(machine.fieldApprovalStatuses["manufacturing.manufacturerQuoteCC"], "Approved",
+      "Unapproved Android scenario CC cannot be promoted");
+    assert.notEqual(machine.fieldApprovalStatuses["manufacturing.finishedMassKg"], "Approved",
+      "Unapproved estimated Machine mass cannot be approved");
   }
-  assert.notEqual(machine.fieldApprovalStatuses["manufacturing.manufacturerQuoteCC"], "Approved");
   assert.equal(machine.manufacturerCostCC, undefined, "Do not install live machine price");
   assert.equal(machine.baseSellQuoteCC, undefined);
-  assert.deepEqual(new Set(Object.keys(machine.fieldApprovalStatuses)), new Set(required),
+  const statusFields = Object.keys(machine.fieldApprovalStatuses);
+  assert.deepEqual(new Set(statusFields.filter(key => required.includes(key))), new Set(required),
     machine.id + " must have explicit decisions for every required field");
+  const extras = statusFields.filter(key => !required.includes(key));
+  assert.ok(extras.every(key => delegatedMobile && initialMobileFields.has(key)),
+    machine.id + " has noncanonical field-approval keys: " + extras.join(", "));
   const fields = flatten(machine);
   fields.buildingCompatibility = buildings
     .filter(b => (b.machineIds || []).includes(machine.id)).map(b => b.id);
@@ -175,7 +208,8 @@ assertAcyclicMachineBoms(new Map(machines.map(machine => [
 assert.equal(pending, 14, "14 deliberate compatibility reviews must survive");
 assert.equal(fullyApprovedBoms, 5, "Five approved accommodation physical BOMs must survive");
 assert.equal(blocked, 10, "Seven prior blocked designs and three specialist engineering designs must remain blocked");
-assert.equal(priceProposals, 35, "29 source and 5 accommodation and 1 motor CC proposals survive");
+assert.equal(priceProposals, 38, "35 original numerical CC proposals plus 3 new user-approved Mobile baselines");
+assert.equal(mobileApproved, 14, "14 user-delegated initial Mobile Machine approvals verified with explicit price/mass evidence");
 for (const row of reference.machines) assert.ok(ids.machines.has(row.id));
 const aliases = new Map(machines.filter(m => m.provenance?.androidDiscoveryWorkingId)
   .map(m => [m.provenance.androidDiscoveryWorkingId, m.id]));
@@ -208,4 +242,4 @@ const broken = { ...machines.find(m => m.amenityProfile),
 assert.throws(() => approvalSummary("machines", broken, flatten(broken), catalogue),
   /disagrees|cannot approve|requires approved price evidence/,
   "Provisional quote must never be treated as approved");
-console.log("Machines consolidated: 46 canonical, 30 review fields, 5 approved physical BOMs, 35 provisional CC scenarios, 10 blocked designs, 14 pending compatibility edges.");
+console.log("Machines consolidated: 46 canonical, 30 review fields, 5 approved physical BOMs, 38 numeric CC scenarios (14 user-delegated Mobile baseline approvals), 10 blocked designs, 14 pending compatibility edges.");
