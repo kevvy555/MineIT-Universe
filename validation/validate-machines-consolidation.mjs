@@ -208,7 +208,7 @@ assertAcyclicMachineBoms(new Map(machines.map(machine => [
 assert.equal(pending, 14, "14 deliberate compatibility reviews must survive");
 assert.equal(fullyApprovedBoms, 5, "Five approved accommodation physical BOMs must survive");
 assert.equal(blocked, 7, "Seven remaining truly blocked Machine design records survive; three priced generators are In Review");
-assert.equal(priceProposals, 38, "35 original numerical CC proposals plus 3 new user-approved Mobile baselines");
+assert.equal(priceProposals, 39, "35 original numerical CC proposals plus 4 new user-approved Mobile baselines");
 assert.equal(mobileApproved, 14, "14 user-delegated initial Mobile Machine approvals verified with explicit price/mass evidence");
 for (const row of reference.machines) assert.ok(ids.machines.has(row.id));
 const aliases = new Map(machines.filter(m => m.provenance?.androidDiscoveryWorkingId)
@@ -242,4 +242,4 @@ const broken = { ...machines.find(m => m.amenityProfile),
 assert.throws(() => approvalSummary("machines", broken, flatten(broken), catalogue),
   /disagrees|cannot approve|requires approved price evidence/,
   "Provisional quote must never be treated as approved");
-console.log("Machines consolidated: 46 canonical, 30 review fields, 5 approved physical BOMs, 38 numeric CC scenarios (14 user-delegated Mobile baseline approvals), 7 blocked designs, 14 pending compatibility edges.");
+console.log("Machines consolidated: 46 canonical, 30 review fields, 5 approved physical BOMs, 39 numeric CC scenarios (14 user-delegated Mobile baseline approvals), 7 blocked designs, 14 pending compatibility edges.");
