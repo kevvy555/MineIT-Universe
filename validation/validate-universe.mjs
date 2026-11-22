@@ -108,6 +108,7 @@ const scalarRefs = {
   visualAssetSeries: ['generationSourceId', 'intendedGameId'],
   visualAssets: ['seriesId', 'intendedGameId', 'landformId', 'biomeId', 'hydrosphereId'],
   terrainMaterials: ['seriesId', 'intendedGameId', 'biomeId'],
+  mobileTacticalAssets: ['entityId', 'intendedGameId'],
   shipLines: ['manufacturerOrganisationId', 'flagshipYardFacilityId'],
   shipClasses: ['manufacturerOrganisationId', 'shipLineId'],
   ships: ['organisationId', 'shipClassId', 'homePortLocationId'],
@@ -736,6 +737,56 @@ for (const material of terrainMaterials) {
   if (material.pixelSize !== 1024) errors.push(`${material.id}: terrain material must declare 1024px Android output.`);
   if (material.seamless !== true) errors.push(`${material.id}: terrain material must be edge-matched.`);
   if (!material.image?.key?.startsWith('assets/art/visual-library/terrain/materials/')) errors.push(`${material.id}: terrain material must live under assets/art/visual-library/terrain/materials/.`);
+}
+
+
+// Tactical artwork is presentation data linked to existing building identities.
+const tacticalAssets = collections.mobileTacticalAssets ?? [];
+const tacticalBuildings = tacticalAssets.filter(item => item.assetType === 'building-symbol');
+const pylonAssets = tacticalAssets.filter(item => item.id === 'tactical-power-pylon' && item.assetType === 'infrastructure-symbol');
+if (pylonAssets.length !== 1) errors.push('Expected one tactical power pylon symbol.');
+if (tacticalAssets.filter(item => item.id === 'tactical-machine-exploration-vehicle' && item.entityId === 'machine-exploration-vehicle').length !== 1) errors.push('Expected one exploration vehicle tactical symbol linked to its machine.');
+if (tacticalAssets.filter(item => item.id === 'tactical-vehicle-haulage-truck' && item.assetType === 'vehicle-symbol' && item.entityId === 'machine-haulage-truck').length !== 1) errors.push('Expected one haulage truck tactical symbol.');
+for (let level = 1; level <= 5; level++) {
+  const matches = tacticalAssets.filter(item => item.id === `tactical-level-${level}` && item.assetType === 'level-badge');
+  if (matches.length !== 1) errors.push(`Expected one tactical level ${level} badge.`);
+}
+for (const building of collections.buildings ?? []) {
+  const matches = tacticalBuildings.filter(item => item.entityId === building.id);
+  if (matches.length !== 1) errors.push(`${building.id}: expected one linked tactical symbol, found ${matches.length}.`);
+}
+for (const item of tacticalAssets) {
+  if (!['building-symbol', 'machine-symbol', 'vehicle-symbol', 'infrastructure-symbol', 'level-badge'].includes(item.assetType)) errors.push(`${item.id}: invalid tactical asset type.`);
+  if (item.assetType === 'building-symbol' && byId.get(item.entityId)?.collectionName !== 'buildings') errors.push(`${item.id}: linked entity must be a building.`);
+  if (item.assetType === 'machine-symbol' && byId.get(item.entityId)?.collectionName !== 'machines') errors.push(`${item.id}: linked entity must be a machine.`);
+  if (item.assetType === 'vehicle-symbol' && item.entityId != null && byId.get(item.entityId)?.collectionName !== 'machines') errors.push(`${item.id}: linked vehicle must reference a machine.`);
+  if (item.intendedGameId !== 'game-mineit-mobile') errors.push(`${item.id}: tactical artwork must target MineIT Mobile.`);
+  for (const key of ['originalKey', 'smallImageKey']) {
+    const value = item[key];
+    if (typeof value !== 'string' || !value.startsWith('assets/art/universe/tactical/') || value.includes('..')) {
+      errors.push(`${item.id}: invalid ${key}.`); continue;
+    }
+    try { await access(resolve(repoRoot, value)); } catch { errors.push(`${item.id}: missing ${key} at ${value}.`); }
+  }
+  if (item.generationReference) {
+    for (const key of ['previewKey', 'originalKey']) {
+      const value = item.generationReference[key];
+      if (typeof value !== 'string' || !value.startsWith('assets/art/universe/tactical/') || value.includes('..')) errors.push(`${item.id}: invalid generation reference ${key}.`);
+      else try { await access(resolve(repoRoot, value)); } catch { errors.push(`${item.id}: missing generation reference ${key}.`); }
+    }
+    for (const value of item.generationReference.smallImageKeys ?? []) {
+      if (typeof value !== 'string' || !value.startsWith('assets/art/universe/tactical/') || value.includes('..')) errors.push(`${item.id}: invalid small reference path.`);
+      else try { await access(resolve(repoRoot, value)); } catch { errors.push(`${item.id}: missing small reference image.`); }
+    }
+    if (!item.generationReference.prompt) errors.push(`${item.id}: missing generation reference prompt.`);
+  }
+  try {
+    const png = await readFile(resolve(repoRoot, item.smallImageKey));
+    if (png.subarray(0, 8).toString('hex') !== '89504e470d0a1a0a') throw new Error('not PNG');
+    const size = [png.readUInt32BE(16), png.readUInt32BE(20)];
+    const expected = ['building-symbol', 'machine-symbol', 'vehicle-symbol'].includes(item.assetType) ? [32, 32] : item.assetType === 'level-badge' ? [13, 13] : [16, 16];
+    if (String(size) !== String(expected) || String(item.smallSize) !== String(expected)) errors.push(`${item.id}: invalid tactical pixel dimensions.`);
+  } catch { errors.push(`${item.id}: small image is not a valid PNG.`); }
 }
 
 const requiredMobileParentSubstances = [

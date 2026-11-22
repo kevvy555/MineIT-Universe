@@ -8028,5 +8028,88 @@
       "capabilityConfigurations": "Approved",
       "conditionModel": "Approved"
     }
+  },
+  {
+    "id": "machine-haulage-truck",
+    "name": "Haulage Truck",
+    "entityType": "Machine",
+    "category": "Transport",
+    "subCategory": "Wheeled Vehicle",
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [],
+    "description": "A heavy wheeled vehicle designed to carry bulk material between extraction sites, storage and processing facilities.",
+    "canonStatus": "authored-materialised",
+    "engineeringStatus": "not-reviewed",
+    "provenance": {
+      "description": "New MineIT Mobile logistics machine identity, authored for tactical and future haulage use; engineering, compatibility and operation remain unreviewed."
+    },
+    "image": {
+      "key": "assets/art/universe/machines/machine-haulage-truck.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile machine catalogue asset on a genuinely transparent background. Polished stylized isometric 3D game art from an elevated three-quarter angle: a heavy all-terrain mining haulage truck with a large open tipping bed, compact cab and rugged wheels; clean pale composite panels, charcoal structural frame, orange safety details and restrained lighting. Centre the complete vehicle with a strong readable silhouette. No terrain, people, readable text, logos, company marks, UI, border or watermark.",
+      "notes": "Catalogue image is not yet generated. The separate symbolic tactical artwork does not replace it."
+    },
+    "manufacturing": {
+      "finishedPartInputs": null,
+      "directMaterialInputs": null,
+      "nestedMachineInputs": null,
+      "assemblyHours": null,
+      "factoryHours": null,
+      "testHours": null,
+      "goodUnitYield": null,
+      "finishedMassKg": null,
+      "manufacturerCostCC": null,
+      "manufacturerQuoteCC": null,
+      "reviewBasis": "New authored vehicle identity; no physical design, bill of materials, cost or pricing has been reviewed.",
+      "unresolvedDesignConstraints": "Payload, propulsion, dimensions, service parts, manufacturing inputs and compatibility require design review."
+    },
+    "operating": {
+      "ratedCapacity": null,
+      "powerUnits": null,
+      "footprintM2": null,
+      "housingTechTier": null
+    },
+    "pendingPartCompatibility": [],
+    "fieldApprovalStatuses": {
+      "partIds": "Not Reviewed",
+      "manufacturing.finishedPartInputs": "Not Reviewed",
+      "manufacturing.directMaterialInputs": "Not Reviewed",
+      "manufacturing.nestedMachineInputs": "Not Reviewed",
+      "pendingPartCompatibility": "Not Reviewed",
+      "outputSummary": "Not Reviewed",
+      "inputSummary": "Not Reviewed",
+      "operating.ratedCapacity": "Not Reviewed",
+      "operating.powerUnits": "Not Reviewed",
+      "operating.footprintM2": "Not Reviewed",
+      "operating.housingTechTier": "Not Reviewed",
+      "manufacturing.assemblyHours": "Not Reviewed",
+      "manufacturing.factoryHours": "Not Reviewed",
+      "manufacturing.testHours": "Not Reviewed",
+      "manufacturing.goodUnitYield": "Not Reviewed",
+      "manufacturing.finishedMassKg": "Not Reviewed",
+      "manufacturing.manufacturerCostCC": "Not Reviewed",
+      "manufacturing.manufacturerQuoteCC": "Not Reviewed",
+      "servicePartRequirements": "Not Reviewed",
+      "operatingFunctions": "Not Reviewed",
+      "capabilityConfigurations": "Not Reviewed",
+      "conditionModel": "Not Reviewed"
+    },
+    "approval": "Not Reviewed",
+    "servicePartRequirements": [],
+    "operatingFunctions": [
+      "bulk-material-haulage"
+    ],
+    "capabilityConfigurations": [],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    }
   }
 ]

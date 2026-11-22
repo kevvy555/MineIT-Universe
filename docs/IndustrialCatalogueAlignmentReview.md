@@ -1,7 +1,7 @@
 # Buildings, Machines and Parts — Complete Alignment Review
 
 **Review date:** 11 November 2026
-**Universe release:** schema 13 / content 0.15.2
+**Universe release:** schema 13 / content 0.15.3
 **Branch:** `develop`; the commit SHA is recorded in repository history; no pull request was created.
 **Approval decision:** On 11 November 2026 the user approved the complete alignment and every recommended option as one consolidated decision. Deliberately unknown engineering and price fields remain **In Review** or **Blocked** rather than being falsely approved.
 
@@ -10,7 +10,7 @@
 | Measure | Result |
 | --- | --- |
 | Buildings reviewed | 24 |
-| Machines reviewed | 45 |
+| Machines reviewed | 46 |
 | Parts reviewed | 19 |
 | Existing catalogue records modified | 85 (24 Buildings, 42 Machines, 19 Parts) |
 | Records added | 3 Machines, 1 shared industrial specification, 1 Android reference snapshot |
@@ -270,6 +270,7 @@ Wear formula: `nextConditionPct = clamp(conditionPct - baseWearRatePctPerEquival
 | machine-underground-mining-system | Underground Mining System | Extraction / Shaft and Hard-Rock Mining | Simple Pit Mine, Deep Mine | Extraction Parts ×1, Mechanical Parts ×1, Hydraulic Parts ×1, Power Electronics ×1, Control & Sensor Parts ×1, Structural Components ×1, Fluid Handling Parts ×1 | unresolved | unresolved | Derived from installed Part rates and intensity | critical Part thresholds: Extraction Parts, Hydraulic Parts, Power Electronics, Control & Sensor Parts, Structural Components, Fluid Handling Parts | unresolved | not-generated | Blocked |
 | machine-well-drilling-system | Well Drilling and Control System | Extraction / Rotary and Pressure Well | Extraction Rig | Extraction Parts ×1, Mechanical Parts ×1, Hydraulic Parts ×1, Power Electronics ×1, Control & Sensor Parts ×1, Structural Components ×1, Fluid Handling Parts ×1 | unresolved | unresolved | Derived from installed Part rates and intensity | critical Part thresholds: Extraction Parts, Hydraulic Parts, Power Electronics, Control & Sensor Parts, Structural Components, Fluid Handling Parts | unresolved | not-generated | Blocked |
 | machine-quantum-bore-system | Quantum Bore System | Extraction / Extreme-Depth Bore | Extraction Rig | Extraction Parts ×1, Power Electronics ×1, Control & Sensor Parts ×1, Computing Parts ×1, Structural Components ×1, Thermal Parts ×1 | unresolved | unresolved | Derived from installed Part rates and intensity | critical Part thresholds: Extraction Parts, Power Electronics, Control & Sensor Parts, Structural Components | unresolved | not-generated | Blocked |
+| machine-haulage-truck | Haulage Truck | Transport / Wheeled Vehicle | — |  | unresolved | unresolved | Derived from installed Part rates and intensity | weighted Part condition | unresolved | not-generated | Not Reviewed |
 
 ### Machine manufacturing, operation and unresolved engineering
 
@@ -320,6 +321,7 @@ Wear formula: `nextConditionPct = clamp(conditionPct - baseWearRatePctPerEquival
 | Underground Mining System | standard-shaft, deep-hard-rock, deep-core | shaft-mining, deep-mining, deep-core-extraction | Power, qualified operators and method-specific consumables | unresolved | unresolved / none approved | none / unresolved | unresolved | unresolved | unresolved | Qualified materials, rated capacity, footprint, power, manufacture and test programme require engineering approval.; Specialist physical identity is required by the approved extraction compatibility boundary; engineering BOM, mass and price remain blocked pending review. |
 | Well Drilling and Control System | rotary-well-control, high-pressure-drilling | rotary-drilling, pressure-brine-drilling | Power, qualified operators and method-specific consumables | unresolved | unresolved / none approved | none / unresolved | unresolved | unresolved | unresolved | Qualified materials, rated capacity, footprint, power, manufacture and test programme require engineering approval.; Specialist physical identity is required by the approved extraction compatibility boundary; engineering BOM, mass and price remain blocked pending review. |
 | Quantum Bore System | quantum-boring | quantum-bore-systems | Power, qualified operators and method-specific consumables | unresolved | unresolved / none approved | none / unresolved | unresolved | unresolved | unresolved | Qualified materials, rated capacity, footprint, power, manufacture and test programme require engineering approval.; Specialist physical identity is required by the approved extraction compatibility boundary; engineering BOM, mass and price remain blocked pending review. |
+| Haulage Truck | bulk-material-haulage | no explicit technology link authored | unresolved | unresolved | unresolved / none approved | none / unresolved | unresolved | unresolved | unresolved | Payload, propulsion, dimensions, service parts, manufacturing inputs and compatibility require design review.; New authored vehicle identity; no physical design, bill of materials, cost or pricing has been reviewed. |
 
 ## D — Complete parts catalogue
 
