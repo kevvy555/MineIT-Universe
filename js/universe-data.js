@@ -28,6 +28,7 @@ const COLLECTION_LABELS = {
   parts: 'Part',
   machines: 'Machine',
   buildings: 'Building',
+  buildingCategories: 'Building Category',
   buildingMobileLevelImages: 'Building Level Artwork',
   mobileTacticalAssets: 'Mobile Tactical Artwork',
   researchTechnologies: 'Research Technology',

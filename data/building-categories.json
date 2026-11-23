@@ -1,0 +1,157 @@
+[
+  {
+    "id": "building-category-command",
+    "name": "Command",
+    "shortName": "Cmd",
+    "showInLoadoutFilter": true,
+    "image": {
+      "key": "assets/art/universe/tactical/categories/building-category-command.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Create ONE standalone tactical game UI category icon representing COMMAND: a compact sci-fi command tower with a small radar dish. Match MineIT tactical symbols: bold charcoal outlines, polished simplified geometric forms, pale white and light grey panels, restrained vivid orange accents, tiny cool blue highlights, strong clear silhouette readable at 24–32px. Flat symbolic game-icon presentation, not a realistic building scene. Single centered object with generous transparent margins, square composition. Genuinely transparent background. No text, letters, numbers, badges, frame, terrain, cast shadow, logos or watermark.",
+      "notes": "Building category filter artwork; shortName is the text fallback."
+    },
+    "originalKey": "assets/art/universe/tactical/categories/Originals/building-category-command.png"
+  },
+  {
+    "id": "building-category-housing",
+    "name": "Housing",
+    "shortName": "Accom",
+    "showInLoadoutFilter": true,
+    "image": {
+      "key": "assets/art/universe/tactical/categories/building-category-housing.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Create ONE standalone tactical game UI category icon representing HOUSING: a compact rounded habitat dwelling with a glowing warm doorway. Match MineIT tactical symbols: bold charcoal outlines, polished simplified geometric forms, pale white and light grey panels, restrained vivid orange accents, tiny cool blue highlights, strong clear silhouette readable at 24–32px. Flat symbolic game-icon presentation, not a realistic building scene. Single centered object with generous transparent margins, square composition. Genuinely transparent background. No text, letters, numbers, badges, frame, terrain, cast shadow, logos or watermark.",
+      "notes": "Building category filter artwork; shortName is the text fallback."
+    },
+    "originalKey": "assets/art/universe/tactical/categories/Originals/building-category-housing.png"
+  },
+  {
+    "id": "building-category-industry",
+    "name": "Industry",
+    "shortName": "Ind",
+    "showInLoadoutFilter": true,
+    "image": {
+      "key": "assets/art/universe/tactical/categories/building-category-industry.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Create ONE standalone tactical game UI category icon representing INDUSTRY: a compact fabrication robot arm and heavy cogwheel. Match MineIT tactical symbols: bold charcoal outlines, polished simplified geometric forms, pale white and light grey panels, restrained vivid orange accents, tiny cool blue highlights, strong clear silhouette readable at 24–32px. Flat symbolic game-icon presentation, not a realistic building scene. Single centered object with generous transparent margins, square composition. Genuinely transparent background. No text, letters, numbers, badges, frame, terrain, cast shadow, logos or watermark.",
+      "notes": "Building category filter artwork; shortName is the text fallback."
+    },
+    "originalKey": "assets/art/universe/tactical/categories/Originals/building-category-industry.png"
+  },
+  {
+    "id": "building-category-power",
+    "name": "Power",
+    "shortName": "Pwr",
+    "showInLoadoutFilter": true,
+    "image": {
+      "key": "assets/art/universe/tactical/categories/building-category-power.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Create ONE standalone tactical game UI category icon representing POWER: a bold lightning bolt over a compact generator. Match MineIT tactical symbols: bold charcoal outlines, polished simplified geometric forms, pale white and light grey panels, restrained vivid orange accents, tiny cool blue highlights, strong clear silhouette readable at 24–32px. Flat symbolic game-icon presentation, not a realistic building scene. Single centered object with generous transparent margins, square composition. Genuinely transparent background. No text, letters, numbers, badges, frame, terrain, cast shadow, logos or watermark.",
+      "notes": "Building category filter artwork; shortName is the text fallback."
+    },
+    "originalKey": "assets/art/universe/tactical/categories/Originals/building-category-power.png"
+  },
+  {
+    "id": "building-category-processing",
+    "name": "Processing",
+    "shortName": "Proc",
+    "showInLoadoutFilter": true,
+    "image": {
+      "key": "assets/art/universe/tactical/categories/building-category-processing.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Create ONE standalone tactical game UI category icon representing PROCESSING: a crusher funnel with three chunky mineral stones. Match MineIT tactical symbols: bold charcoal outlines, polished simplified geometric forms, pale white and light grey panels, restrained vivid orange accents, tiny cool blue highlights, strong clear silhouette readable at 24–32px. Flat symbolic game-icon presentation, not a realistic building scene. Single centered object with generous transparent margins, square composition. Genuinely transparent background. No text, letters, numbers, badges, frame, terrain, cast shadow, logos or watermark.",
+      "notes": "Building category filter artwork; shortName is the text fallback."
+    },
+    "originalKey": "assets/art/universe/tactical/categories/Originals/building-category-processing.png"
+  },
+  {
+    "id": "building-category-research",
+    "name": "Research",
+    "shortName": "Rsch",
+    "showInLoadoutFilter": true,
+    "image": {
+      "key": "assets/art/universe/tactical/categories/building-category-research.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Create ONE standalone tactical game UI category icon representing RESEARCH: a stylized microscope with small blue lens. Match MineIT tactical symbols: bold charcoal outlines, polished simplified geometric forms, pale white and light grey panels, restrained vivid orange accents, tiny cool blue highlights, strong clear silhouette readable at 24–32px. Flat symbolic game-icon presentation, not a realistic building scene. Single centered object with generous transparent margins, square composition. Genuinely transparent background. No text, letters, numbers, badges, frame, terrain, cast shadow, logos or watermark.",
+      "notes": "Building category filter artwork; shortName is the text fallback."
+    },
+    "originalKey": "assets/art/universe/tactical/categories/Originals/building-category-research.png"
+  },
+  {
+    "id": "building-category-collection",
+    "name": "Resource Collection",
+    "shortName": "Coll",
+    "showInLoadoutFilter": true,
+    "image": {
+      "key": "assets/art/universe/tactical/categories/building-category-collection.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Create ONE standalone tactical game UI category icon representing RESOURCE COLLECTION: an open collection crate with three gathered stones and a small scoop. Match MineIT tactical symbols: bold charcoal outlines, polished simplified geometric forms, pale white and light grey panels, restrained vivid orange accents, tiny cool blue highlights, strong clear silhouette readable at 24–32px. Flat symbolic game-icon presentation, not a realistic building scene. Single centered object with generous transparent margins, square composition. Genuinely transparent background. No text, letters, numbers, badges, frame, terrain, cast shadow, logos or watermark.",
+      "notes": "Building category filter artwork; shortName is the text fallback."
+    },
+    "originalKey": "assets/art/universe/tactical/categories/Originals/building-category-collection.png"
+  },
+  {
+    "id": "building-category-extraction",
+    "name": "Resource Extraction",
+    "shortName": "Extract",
+    "showInLoadoutFilter": true,
+    "image": {
+      "key": "assets/art/universe/tactical/categories/building-category-extraction.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Create ONE standalone tactical game UI category icon representing RESOURCE EXTRACTION: a single bold pickaxe above three chunky stone blocks. Match MineIT tactical symbols: bold charcoal outlines, polished simplified geometric forms, pale white and light grey panels, restrained vivid orange accents, tiny cool blue highlights, strong clear silhouette readable at 24–32px. Flat symbolic game-icon presentation, not a realistic building scene. Single centered object with generous transparent margins, square composition. Genuinely transparent background. No text, letters, numbers, badges, frame, terrain, cast shadow, logos or watermark.",
+      "notes": "Building category filter artwork; shortName is the text fallback."
+    },
+    "originalKey": "assets/art/universe/tactical/categories/Originals/building-category-extraction.png"
+  },
+  {
+    "id": "building-category-production",
+    "name": "Resource Production",
+    "shortName": "Prod",
+    "showInLoadoutFilter": true,
+    "image": {
+      "key": "assets/art/universe/tactical/categories/building-category-production.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Create ONE standalone tactical game UI category icon representing RESOURCE PRODUCTION: a green crop sprout with two leaves and a small pale greenhouse arch. Match MineIT tactical symbols: bold charcoal outlines, polished simplified geometric forms, pale white and light grey panels, restrained vivid orange accents, tiny cool blue highlights, strong clear silhouette readable at 24–32px. Flat symbolic game-icon presentation, not a realistic building scene. Single centered object with generous transparent margins, square composition. Genuinely transparent background. No text, letters, numbers, badges, frame, terrain, cast shadow, logos or watermark.",
+      "notes": "Building category filter artwork; shortName is the text fallback."
+    },
+    "originalKey": "assets/art/universe/tactical/categories/Originals/building-category-production.png"
+  },
+  {
+    "id": "building-category-storage",
+    "name": "Storage",
+    "shortName": "Str",
+    "showInLoadoutFilter": true,
+    "image": {
+      "key": "assets/art/universe/tactical/categories/building-category-storage.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Create ONE standalone tactical game UI category icon representing STORAGE: two neatly stacked sturdy sci-fi cargo crates. Match MineIT tactical symbols: bold charcoal outlines, polished simplified geometric forms, pale white and light grey panels, restrained vivid orange accents, tiny cool blue highlights, strong clear silhouette readable at 24–32px. Flat symbolic game-icon presentation, not a realistic building scene. Single centered object with generous transparent margins, square composition. Genuinely transparent background. No text, letters, numbers, badges, frame, terrain, cast shadow, logos or watermark.",
+      "notes": "Building category filter artwork; shortName is the text fallback."
+    },
+    "originalKey": "assets/art/universe/tactical/categories/Originals/building-category-storage.png"
+  },
+  {
+    "id": "building-category-scenario-infrastructure",
+    "name": "Scenario Infrastructure",
+    "showInLoadoutFilter": false
+  },
+  {
+    "id": "building-category-ship-production",
+    "name": "Ship Production",
+    "showInLoadoutFilter": false
+  },
+  {
+    "id": "building-category-space-operations",
+    "name": "Space Operations",
+    "showInLoadoutFilter": false
+  }
+]

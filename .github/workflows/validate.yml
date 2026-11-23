@@ -28,6 +28,8 @@ jobs:
         run: node validation/validate-universe.mjs
       - name: Validate industrial catalogue
         run: node validation/validate-industrial-catalogue.mjs
+      - name: Validate building category filters and artwork
+        run: node validation/validate-building-categories.mjs
       - name: Validate complete industrial alignment
         run: node validation/validate-industrial-alignment.mjs
       - name: Verify consolidated industrial report is reproducible

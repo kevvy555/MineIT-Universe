@@ -1,6 +1,6 @@
 {
   "schemaVersion": 13,
-  "contentVersion": "0.15.4",
+  "contentVersion": "0.15.5",
   "universeId": "mineit",
   "name": "MineIT Universe",
   "canonicalYear": 5326,
@@ -118,6 +118,7 @@
     "approvalStatuses": "approval-statuses.json",
     "columnDefinitions": "column-definitions.json",
     "industrialSpecifications": "industrial-specifications.json",
-    "mobileTacticalAssets": "mobile-tactical-assets.json"
+    "mobileTacticalAssets": "mobile-tactical-assets.json",
+    "buildingCategories": "building-categories.json"
   }
 }
