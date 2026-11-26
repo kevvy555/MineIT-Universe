@@ -1,0 +1,12 @@
+# Storage compatibility review — U07 / #40
+
+**Design review; pending numeric and catalogue implementation.**
+
+- Both buildings accept compatible ordinary solid feedstock, as listed in the raw and named material reviews. Stockpile is for bulk/open-air goods, Warehouse for those goods plus packaged solids, refined products, loose spares and uninstalled equipment.
+- Precious metals, gemstones, packaged fibre and delicate/finished goods: Warehouse only. Explicitly exclude bulk liquids, gases, cryogenic methane ice, radiological stock, regulated waste, non-stockable site processes and fictional materials with unresolved physical properties from both buildings. Do not impose restrictions on their existing colony stock during this feature.
+- The existing warehouse lubricant/coolant direction permits packaged goods, not bulk liquids. Existing operatingMaterialsKg stock stays separate and is not routed. Define packaging/storage density only if actually exposed as a stored inventory item; no second density concept or kg double conversion.
+- Machines/parts require positive approved physical fields. Fitted parts are included in their parent machine. Installed equipment doesn't occupy goods volume; uninstalled compatible equipment does. New spare part family quantities remain aggregated, fitted/used identities and condition preserved.
+- No goods deterioration, no loading, no transfer UI or production routing. Start storage empty. Domain test fixtures may insert stock to prove capacity and rendering; no free gameplay goods.
+- Every Stockpile substance has a deterministic separate pile with volume based on quantity. Timber/block stock is not physically cone-shaped: initial representation may be a simple non-conical stack, or restrict non-loose forms to Warehouse pending owner decision. No texture/LOD work. Do not silently accept a pile that cannot fit: use a deterministic allocation rule owned by domain, not renderer. Volume is the main capacity gate; shape/area constraints must be deterministic and cannot depend on camera state.
+- Construction material, installed machinery and stored goods are separate. Upgrades retain contents; demolition blocked while contents/equipment remain. No generic category-only compatibility: use canonical stable ID and explicit eligibility.
+- Validation: tests for all supported classes and exclusions; capacity with exact boundaries, zero quantity, no NaN/overflow, atomic indivisible equipment admission, no duplicate stock ownership. No runtime code changed.
