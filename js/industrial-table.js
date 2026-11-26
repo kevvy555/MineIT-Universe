@@ -48,7 +48,7 @@ const configurations = {
         "substanceIds materialInputs"),
       group("Machines & Usage", "machineIds"),
       group("Production & Prices",
-        "manufacturingRequirements planningReference.finishedMassKg planningReference.manufacturerCostCC planningReference.baseManufacturerQuoteCC"),
+        "manufacturingRequirements planningReference.finishedMassKg storageVolumeM3 planningReference.manufacturerCostCC planningReference.baseManufacturerQuoteCC"),
       group("Condition & Maintenance", "wearProfile"),
       group("Discovery & Approval", "approval needsApproval"),
       group("Canon", "canonStatus"),
@@ -73,7 +73,7 @@ const configurations = {
         "operatingFunctions capabilityConfigurations outputSummary inputSummary operating.ratedCapacity operating.powerUnits operating.footprintM2 buildingCompatibility operating.housingTechTier"),
       group("Condition & Maintenance", "conditionModel"),
       group("Manufacturing & Pricing",
-        "manufacturing.assemblyHours manufacturing.factoryHours manufacturing.testHours manufacturing.goodUnitYield manufacturing.finishedMassKg manufacturing.manufacturerCostCC manufacturing.manufacturerQuoteCC"),
+        "manufacturing.assemblyHours manufacturing.factoryHours manufacturing.testHours manufacturing.goodUnitYield manufacturing.finishedMassKg storageVolumeM3 manufacturing.manufacturerCostCC manufacturing.manufacturerQuoteCC"),
       group("Discovery & Approval", "approval needsApproval"),
       group("Artwork & Visuals", "image.generated")
     ]
