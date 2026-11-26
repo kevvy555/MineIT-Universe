@@ -29,12 +29,12 @@ assert.deepEqual(new Set(reference.resources.map(r => r.resourceId)),
 assert.equal(new Set(reference.resources.map(r => r.resourceId)).size, 42);
 
 const rows = substanceRows(catalogue, reference);
-assert.equal(rows.length, 206, "92 generic + 42 natural + 65 named + 7 biological");
+assert.equal(rows.length, 207, "92 generic + 42 natural + 66 named + 7 biological");
 assert.equal(rows.filter(row => row.collection === "substances").length, 92);
 assert.equal(collections.substances.length, 92);
 assert.equal(new Set(rows.map(row => row.id)).size, rows.length, "No duplicated resources");
 assert.equal(rows.filter(row => row.fields.kind === "Biological food").length, 7);
-assert.equal(rows.filter(row => row.fields.kind === "Named material").length, 65);
+assert.equal(rows.filter(row => row.fields.kind === "Named material").length, 66);
 assert.equal(rows.filter(row => row.fields.kind === "Natural resource").length, 42);
 assert.equal(rows.filter(row => row.fields.kind === "Raw substance category").length, 42);
 assert.equal(rows.filter(row => row.fields.kind === "Refined substance category").length, 45);
@@ -129,8 +129,8 @@ assert.deepEqual(SUBSTANCE_COLUMN_GROUPS.map(group => group.name), [
   "Sources & Provenance", "Artwork & Visuals"
 ]);
 const groupedFields = SUBSTANCE_COLUMN_GROUPS.flatMap(group => group.fields);
-assert.equal(groupedFields.length, 83, "The consolidated current column set is preserved");
-assert.equal(new Set(groupedFields).size, 83, "Every field belongs to one category");
+assert.equal(groupedFields.length, 88, "The consolidated current column set is preserved");
+assert.equal(new Set(groupedFields).size, 88, "Every field belongs to one category");
 assert.deepEqual(new Set(groupedFields), new Set(keys), "No missing or extra field definitions");
 assert.ok(SUBSTANCE_COLUMN_GROUPS.every(group => group.fields.length > 0));
 for (const group of SUBSTANCE_COLUMN_GROUPS) {
