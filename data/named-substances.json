@@ -402,6 +402,50 @@
     }
   },
   {
+    "id": "named-substance-construction-glass",
+    "name": "Construction Glass",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-glass",
+    "dominantArchetype": "Silicate",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-silica-sand"
+    ],
+    "upstreamMaterialIds": [
+      "named-substance-purified-silica"
+    ],
+    "upstreamInputDescription": "Refined silica for construction glass panels; recipe not yet qualified.",
+    "industrialRole": "Construction / Glazing",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Universe",
+      "path": "docs/discovery/physical-storage-warehouse-review.md",
+      "workingId": "named-substance-construction-glass"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-construction-glass.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Square MineIT Universe material catalogue icon: neatly arranged stack of industrial glass sheets and panels, slightly green-blue tinted, clean polished edges, realistic reflections, match the existing material catalogue image style. No text or people.",
+      "notes": "User will supply original PNG and published WebP separately."
+    },
+    "massPerUnitKg": 5,
+    "densityKgPerM3": 2200,
+    "storageBuildingIds": [
+      "building-warehouse"
+    ],
+    "stockpileShape": null,
+    "fieldApprovalStatuses": {
+      "massPerUnitKg": "Approved",
+      "densityKgPerM3": "Approved",
+      "storageBuildingIds": "Approved",
+      "stockpileShape": "Not Reviewed"
+    }
+  },
+  {
     "id": "named-substance-cut-diamond",
     "name": "Cut Diamond",
     "entityType": "NamedSubstance",
@@ -915,8 +959,10 @@
       "massPerUnitKg": "Approved",
       "densityKgPerM3": "Approved",
       "storageBuildingIds": "Approved",
-      "stockpileShape": "Approved"
-    }
+      "stockpileShape": "Approved",
+      "baseReferencePriceCCPerUnit": "Approved"
+    },
+    "baseReferencePriceCCPerUnit": 1
   },
   {
     "id": "named-substance-high-temperature-nickel-alloy",
@@ -1035,6 +1081,46 @@
     }
   },
   {
+    "id": "named-substance-lithium-carbonate",
+    "name": "Lithium Carbonate",
+    "entityType": "NamedSubstance",
+    "genericSubstanceId": "substance-refined-carbonate-salt",
+    "dominantArchetype": "Salt",
+    "classificationStatus": "classified",
+    "materialStage": "processed",
+    "stockBehaviour": "stockable",
+    "sourceRawResourceIds": [
+      "mobile-resource-lithium-ore"
+    ],
+    "industrialRole": "Battery-material precursor; do not assume elemental lithium metal",
+    "discoveryStatus": "approved-identity",
+    "canonStatus": "working canon",
+    "sourceProvenance": {
+      "repository": "kevvy555/MineIT-Android",
+      "path": "/docs/discovery/processed-metal-catalogue.csv",
+      "workingId": "candidate-processed-lithium-carbonate"
+    },
+    "image": {
+      "key": "assets/art/universe/substances/named-substance-lithium-carbonate.webp",
+      "generated": true,
+      "status": "generated",
+      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Lithium Carbonate. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact cluster of fine white lithium carbonate crystals and powder with cool pearly highlights. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
+      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-lithium-carbonate.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
+    },
+    "massPerUnitKg": 25,
+    "densityKgPerM3": 900,
+    "storageBuildingIds": [
+      "building-warehouse"
+    ],
+    "stockpileShape": null,
+    "fieldApprovalStatuses": {
+      "massPerUnitKg": "Approved",
+      "densityKgPerM3": "Approved",
+      "storageBuildingIds": "Approved",
+      "stockpileShape": "Not Reviewed"
+    }
+  },
+  {
     "id": "named-substance-lfp-cathode-material",
     "name": "Lithium Iron Phosphate (LFP) Cathode Material",
     "entityType": "NamedSubstance",
@@ -1065,46 +1151,6 @@
     },
     "massPerUnitKg": 10,
     "densityKgPerM3": 1600,
-    "storageBuildingIds": [
-      "building-warehouse"
-    ],
-    "stockpileShape": null,
-    "fieldApprovalStatuses": {
-      "massPerUnitKg": "Approved",
-      "densityKgPerM3": "Approved",
-      "storageBuildingIds": "Approved",
-      "stockpileShape": "Not Reviewed"
-    }
-  },
-  {
-    "id": "named-substance-lithium-carbonate",
-    "name": "Lithium Carbonate",
-    "entityType": "NamedSubstance",
-    "genericSubstanceId": "substance-refined-carbonate-salt",
-    "dominantArchetype": "Salt",
-    "classificationStatus": "classified",
-    "materialStage": "processed",
-    "stockBehaviour": "stockable",
-    "sourceRawResourceIds": [
-      "mobile-resource-lithium-ore"
-    ],
-    "industrialRole": "Battery-material precursor; do not assume elemental lithium metal",
-    "discoveryStatus": "approved-identity",
-    "canonStatus": "working canon",
-    "sourceProvenance": {
-      "repository": "kevvy555/MineIT-Android",
-      "path": "/docs/discovery/processed-metal-catalogue.csv",
-      "workingId": "candidate-processed-lithium-carbonate"
-    },
-    "image": {
-      "key": "assets/art/universe/substances/named-substance-lithium-carbonate.webp",
-      "generated": true,
-      "status": "generated",
-      "promptDescription": "Perfect 1:1 square MineIT Universe material catalogue icon for Lithium Carbonate. One centred isolated, instantly recognisable subject occupying roughly 65–75% of the frame. Depict a compact cluster of fine white lithium carbonate crystals and powder with cool pearly highlights. Match the established Crops and Emerald resource-art language: polished semi-realistic 3D digital game art with simplified sculpted or faceted forms, a strong clean silhouette, dark navy-to-black radial vignette, soft electric-blue/cyan halo behind the subject, cool rim lighting, crisp highlights and a restrained luminous edge. Design for clear recognition at 128×128. No landscape, geological scene, table, tray, crate, bottle, jar, room, machinery, people, readable text, element symbols, numbers, labels, logos, UI, decorative border or watermark. Do not encode mutable quality, quantity, reserve, rarity or price.",
-      "notes": "Canonical 1:1 MineIT Universe material catalogue art. Store the lossless PNG under assets/art/universe/substances/Originals/named-substance-lithium-carbonate.png and the published WebP at image.key. Match the established Crops/Emerald icon language; do not encode mutable quality, quantity, reserve, rarity or price."
-    },
-    "massPerUnitKg": 25,
-    "densityKgPerM3": 900,
     "storageBuildingIds": [
       "building-warehouse"
     ],
