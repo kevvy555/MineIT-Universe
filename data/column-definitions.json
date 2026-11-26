@@ -1854,5 +1854,75 @@
     "requiresApproval": true,
     "approvalPolicy": "Explicit catalogue field approval is required; proposed deterministic values remain visible without becoming approved canon.",
     "description": "Industrial alignment field introduced by the complete Buildings, Machines and Parts review."
+  },
+  {
+    "id": "column-definition-substances-mass-per-unit-kg",
+    "table": "substances",
+    "fieldKey": "massPerUnitKg",
+    "name": "Mass per unit (kg)",
+    "category": "Properties & Applications",
+    "requiresApproval": true,
+    "approvalPolicy": "Explicit physical-storage approval; unavailable values are not approved or treated as zero.",
+    "description": "Approved physical storage reference, MineIT Universe #33 / Android #580, 26 November 2026."
+  },
+  {
+    "id": "column-definition-substances-density-kg-per-m3",
+    "table": "substances",
+    "fieldKey": "densityKgPerM3",
+    "name": "Density (kg/m³)",
+    "category": "Properties & Applications",
+    "requiresApproval": true,
+    "approvalPolicy": "Explicit physical-storage approval; unavailable values are not approved or treated as zero.",
+    "description": "Approved physical storage reference, MineIT Universe #33 / Android #580, 26 November 2026."
+  },
+  {
+    "id": "column-definition-substances-storage-building-ids",
+    "table": "substances",
+    "fieldKey": "storageBuildingIds",
+    "name": "Compatible storage buildings",
+    "category": "Properties & Applications",
+    "requiresApproval": true,
+    "approvalPolicy": "Explicit physical-storage approval; unavailable values are not approved or treated as zero.",
+    "description": "Approved physical storage reference, MineIT Universe #33 / Android #580, 26 November 2026."
+  },
+  {
+    "id": "column-definition-substances-stockpile-shape",
+    "table": "substances",
+    "fieldKey": "stockpileShape",
+    "name": "Stockpile shape",
+    "category": "Properties & Applications",
+    "requiresApproval": true,
+    "approvalPolicy": "Explicit physical-storage approval; unavailable values are not approved or treated as zero.",
+    "description": "Approved physical storage reference, MineIT Universe #33 / Android #580, 26 November 2026."
+  },
+  {
+    "id": "column-definition-substances-base-reference-price-c-c-per-unit",
+    "table": "substances",
+    "fieldKey": "baseReferencePriceCCPerUnit",
+    "name": "Base reference price (CC/unit)",
+    "category": "Game Balancing — Android",
+    "requiresApproval": true,
+    "approvalPolicy": "Explicit physical-storage approval; unavailable values are not approved or treated as zero.",
+    "description": "Approved physical storage reference, MineIT Universe #33 / Android #580, 26 November 2026."
+  },
+  {
+    "id": "column-definition-parts-storage-volume-m3",
+    "table": "parts",
+    "fieldKey": "storageVolumeM3",
+    "name": "Storage volume (m³)",
+    "category": "Production & Prices",
+    "requiresApproval": true,
+    "approvalPolicy": "Explicit physical-storage approval; unavailable values are not approved or treated as zero.",
+    "description": "Approved physical storage reference, MineIT Universe #33 / Android #580, 26 November 2026."
+  },
+  {
+    "id": "column-definition-machines-storage-volume-m3",
+    "table": "machines",
+    "fieldKey": "storageVolumeM3",
+    "name": "Storage volume (m³)",
+    "category": "Manufacturing & Pricing",
+    "requiresApproval": true,
+    "approvalPolicy": "Explicit physical-storage approval; unavailable values are not approved or treated as zero.",
+    "description": "Approved physical storage reference, MineIT Universe #33 / Android #580, 26 November 2026."
   }
 ]
