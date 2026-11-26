@@ -23,6 +23,19 @@
       "status": "generated",
       "promptDescription": "1:1 MineIT Mobile resource icon for Timber. Translate this resource's physical identity into a compact, instantly recognisable game inventory/resource icon: cut natural timber grain and rough woody fibre, warm brown growth rings, bark edge and dense structural grain. Match the established MineIT Android resource-art style: a single centred resource symbol or specimen, polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms, strong clean silhouette, object filling roughly 65-75% of the square, dark navy-to-black radial vignette background, soft electric-blue/cyan halo behind the subject, cool blue rim lighting, crisp white/specular highlights and a restrained luminous edge. Keep it highly readable at 128x128. This is stylised game icon art, not photorealism. Do not show a geological scene, embedded rock face, landscape, table, tray, crate, bottle, jar, machinery, people, UI, text, logo or border. Do not scatter multiple loose samples around the frame. For gases, liquids or diffuse resources, create a compact iconic visual form without using a container.",
       "notes": "MineIT Mobile resource icon art. Match the established Android resource icon language: centred isolated subject, strong silhouette, dark navy vignette, blue/cyan halo and cool rim glow; readable at 128x128. Generate/store a 1:1 native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-timber.png and a same-composition WebP at this key. Canonical PNG newly generated from image.promptDescription on 2026-10-06; WebP derived from that original."
+    },
+    "massPerUnitKg": 25,
+    "densityKgPerM3": 500,
+    "storageBuildingIds": [
+      "building-stockpile",
+      "building-warehouse"
+    ],
+    "stockpileShape": "stack",
+    "fieldApprovalStatuses": {
+      "massPerUnitKg": "Approved",
+      "densityKgPerM3": "Approved",
+      "storageBuildingIds": "Approved",
+      "stockpileShape": "Approved"
     }
   },
   {
@@ -49,6 +62,18 @@
       "status": "generated",
       "promptDescription": "1:1 MineIT Mobile resource icon for Plant Fibre. Translate this resource's physical identity into a compact, instantly recognisable game inventory/resource icon: dense interwoven pale plant fibres and tough stalk material, dry natural strands filling the frame. Match the established MineIT Android resource-art style: a single centred resource symbol or specimen, polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms, strong clean silhouette, object filling roughly 65-75% of the square, dark navy-to-black radial vignette background, soft electric-blue/cyan halo behind the subject, cool blue rim lighting, crisp white/specular highlights and a restrained luminous edge. Keep it highly readable at 128x128. This is stylised game icon art, not photorealism. Do not show a geological scene, embedded rock face, landscape, table, tray, crate, bottle, jar, machinery, people, UI, text, logo or border. Do not scatter multiple loose samples around the frame. For gases, liquids or diffuse resources, create a compact iconic visual form without using a container.",
       "notes": "MineIT Mobile resource icon art. Match the established Android resource icon language: centred isolated subject, strong silhouette, dark navy vignette, blue/cyan halo and cool rim glow; readable at 128x128. Generate/store a 1:1 native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-plant-fibre.png and a same-composition WebP at this key. Canonical PNG and WebP migrated from the existing MineIT Android resource artwork."
+    },
+    "massPerUnitKg": 10,
+    "densityKgPerM3": 180,
+    "storageBuildingIds": [
+      "building-warehouse"
+    ],
+    "stockpileShape": null,
+    "fieldApprovalStatuses": {
+      "massPerUnitKg": "Approved",
+      "densityKgPerM3": "Approved",
+      "storageBuildingIds": "Approved",
+      "stockpileShape": "Not Reviewed"
     }
   },
   {
@@ -75,6 +100,19 @@
       "status": "generated",
       "promptDescription": "1:1 MineIT Mobile resource icon for Construction Stone. Translate this resource's physical identity into a compact, instantly recognisable game inventory/resource icon: rough grey construction-grade rock face and angular aggregate, dense mineral texture, no dressed masonry. Match the established MineIT Android resource-art style: a single centred resource symbol or specimen, polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms, strong clean silhouette, object filling roughly 65-75% of the square, dark navy-to-black radial vignette background, soft electric-blue/cyan halo behind the subject, cool blue rim lighting, crisp white/specular highlights and a restrained luminous edge. Keep it highly readable at 128x128. This is stylised game icon art, not photorealism. Do not show a geological scene, embedded rock face, landscape, table, tray, crate, bottle, jar, machinery, people, UI, text, logo or border. Do not scatter multiple loose samples around the frame. For gases, liquids or diffuse resources, create a compact iconic visual form without using a container.",
       "notes": "MineIT Mobile resource icon art. Match the established Android resource icon language: centred isolated subject, strong silhouette, dark navy vignette, blue/cyan halo and cool rim glow; readable at 128x128. Generate/store a 1:1 native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-stone.png and a same-composition WebP at this key. Canonical PNG and WebP migrated from the existing MineIT Android resource artwork."
+    },
+    "massPerUnitKg": 100,
+    "densityKgPerM3": 1700,
+    "storageBuildingIds": [
+      "building-stockpile",
+      "building-warehouse"
+    ],
+    "stockpileShape": "cone",
+    "fieldApprovalStatuses": {
+      "massPerUnitKg": "Approved",
+      "densityKgPerM3": "Approved",
+      "storageBuildingIds": "Approved",
+      "stockpileShape": "Approved"
     }
   },
   {
@@ -101,6 +139,19 @@
       "status": "generated",
       "promptDescription": "1:1 MineIT Mobile resource icon for Clay. Translate this resource's physical identity into a compact, instantly recognisable game inventory/resource icon: moist compact clay face with layered earthy red-brown and ochre mineral bands, fine-grained texture. Match the established MineIT Android resource-art style: a single centred resource symbol or specimen, polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms, strong clean silhouette, object filling roughly 65-75% of the square, dark navy-to-black radial vignette background, soft electric-blue/cyan halo behind the subject, cool blue rim lighting, crisp white/specular highlights and a restrained luminous edge. Keep it highly readable at 128x128. This is stylised game icon art, not photorealism. Do not show a geological scene, embedded rock face, landscape, table, tray, crate, bottle, jar, machinery, people, UI, text, logo or border. Do not scatter multiple loose samples around the frame. For gases, liquids or diffuse resources, create a compact iconic visual form without using a container.",
       "notes": "MineIT Mobile resource icon art. Match the established Android resource icon language: centred isolated subject, strong silhouette, dark navy vignette, blue/cyan halo and cool rim glow; readable at 128x128. Generate/store a 1:1 native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-clay.png and a same-composition WebP at this key. Canonical PNG and WebP migrated from the existing MineIT Android resource artwork."
+    },
+    "massPerUnitKg": 100,
+    "densityKgPerM3": 1600,
+    "storageBuildingIds": [
+      "building-stockpile",
+      "building-warehouse"
+    ],
+    "stockpileShape": "cone",
+    "fieldApprovalStatuses": {
+      "massPerUnitKg": "Approved",
+      "densityKgPerM3": "Approved",
+      "storageBuildingIds": "Approved",
+      "stockpileShape": "Approved"
     }
   },
   {
@@ -127,6 +178,19 @@
       "status": "generated",
       "promptDescription": "1:1 MineIT Mobile resource icon for Silica Sand. Translate this resource's physical identity into a compact, instantly recognisable game inventory/resource icon: clean quartz-rich sand grains in a continuous pale granular field, translucent and milky grains with subtle sparkle. Match the established MineIT Android resource-art style: a single centred resource symbol or specimen, polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms, strong clean silhouette, object filling roughly 65-75% of the square, dark navy-to-black radial vignette background, soft electric-blue/cyan halo behind the subject, cool blue rim lighting, crisp white/specular highlights and a restrained luminous edge. Keep it highly readable at 128x128. This is stylised game icon art, not photorealism. Do not show a geological scene, embedded rock face, landscape, table, tray, crate, bottle, jar, machinery, people, UI, text, logo or border. Do not scatter multiple loose samples around the frame. For gases, liquids or diffuse resources, create a compact iconic visual form without using a container.",
       "notes": "MineIT Mobile resource icon art. Match the established Android resource icon language: centred isolated subject, strong silhouette, dark navy vignette, blue/cyan halo and cool rim glow; readable at 128x128. Generate/store a 1:1 native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-silica-sand.png and a same-composition WebP at this key. Canonical PNG and WebP migrated from the existing MineIT Android resource artwork."
+    },
+    "massPerUnitKg": 100,
+    "densityKgPerM3": 1600,
+    "storageBuildingIds": [
+      "building-stockpile",
+      "building-warehouse"
+    ],
+    "stockpileShape": "cone",
+    "fieldApprovalStatuses": {
+      "massPerUnitKg": "Approved",
+      "densityKgPerM3": "Approved",
+      "storageBuildingIds": "Approved",
+      "stockpileShape": "Approved"
     }
   },
   {
@@ -153,6 +217,19 @@
       "status": "generated",
       "promptDescription": "1:1 MineIT Mobile resource icon for Limestone. Translate this resource's physical identity into a compact, instantly recognisable game inventory/resource icon: pale cream-grey limestone face with fine sedimentary bedding, fossil-like mineral texture kept subtle and generic. Match the established MineIT Android resource-art style: a single centred resource symbol or specimen, polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms, strong clean silhouette, object filling roughly 65-75% of the square, dark navy-to-black radial vignette background, soft electric-blue/cyan halo behind the subject, cool blue rim lighting, crisp white/specular highlights and a restrained luminous edge. Keep it highly readable at 128x128. This is stylised game icon art, not photorealism. Do not show a geological scene, embedded rock face, landscape, table, tray, crate, bottle, jar, machinery, people, UI, text, logo or border. Do not scatter multiple loose samples around the frame. For gases, liquids or diffuse resources, create a compact iconic visual form without using a container.",
       "notes": "MineIT Mobile resource icon art. Match the established Android resource icon language: centred isolated subject, strong silhouette, dark navy vignette, blue/cyan halo and cool rim glow; readable at 128x128. Generate/store a 1:1 native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-limestone.png and a same-composition WebP at this key. Canonical PNG and WebP migrated from the existing MineIT Android resource artwork."
+    },
+    "massPerUnitKg": 100,
+    "densityKgPerM3": 1500,
+    "storageBuildingIds": [
+      "building-stockpile",
+      "building-warehouse"
+    ],
+    "stockpileShape": "cone",
+    "fieldApprovalStatuses": {
+      "massPerUnitKg": "Approved",
+      "densityKgPerM3": "Approved",
+      "storageBuildingIds": "Approved",
+      "stockpileShape": "Approved"
     }
   },
   {
@@ -179,6 +256,19 @@
       "status": "generated",
       "promptDescription": "1:1 MineIT Mobile resource icon for Gypsum. Translate this resource's physical identity into a compact, instantly recognisable game inventory/resource icon: white to pale beige gypsum crystal mass and satin-spar mineral face, soft fibrous crystalline texture. Match the established MineIT Android resource-art style: a single centred resource symbol or specimen, polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms, strong clean silhouette, object filling roughly 65-75% of the square, dark navy-to-black radial vignette background, soft electric-blue/cyan halo behind the subject, cool blue rim lighting, crisp white/specular highlights and a restrained luminous edge. Keep it highly readable at 128x128. This is stylised game icon art, not photorealism. Do not show a geological scene, embedded rock face, landscape, table, tray, crate, bottle, jar, machinery, people, UI, text, logo or border. Do not scatter multiple loose samples around the frame. For gases, liquids or diffuse resources, create a compact iconic visual form without using a container.",
       "notes": "MineIT Mobile resource icon art. Match the established Android resource icon language: centred isolated subject, strong silhouette, dark navy vignette, blue/cyan halo and cool rim glow; readable at 128x128. Generate/store a 1:1 native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-gypsum.png and a same-composition WebP at this key. Canonical PNG newly generated from image.promptDescription on 2026-10-06; WebP derived from that original."
+    },
+    "massPerUnitKg": 50,
+    "densityKgPerM3": 1250,
+    "storageBuildingIds": [
+      "building-stockpile",
+      "building-warehouse"
+    ],
+    "stockpileShape": "cone",
+    "fieldApprovalStatuses": {
+      "massPerUnitKg": "Approved",
+      "densityKgPerM3": "Approved",
+      "storageBuildingIds": "Approved",
+      "stockpileShape": "Approved"
     }
   },
   {
@@ -205,6 +295,19 @@
       "status": "generated",
       "promptDescription": "1:1 MineIT Mobile resource icon for Biomass. Translate this resource's physical identity into a compact, instantly recognisable game inventory/resource icon: compressed mixed dry biological matter, woody fragments and plant material as one dense organic fuel texture. Match the established MineIT Android resource-art style: a single centred resource symbol or specimen, polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms, strong clean silhouette, object filling roughly 65-75% of the square, dark navy-to-black radial vignette background, soft electric-blue/cyan halo behind the subject, cool blue rim lighting, crisp white/specular highlights and a restrained luminous edge. Keep it highly readable at 128x128. This is stylised game icon art, not photorealism. Do not show a geological scene, embedded rock face, landscape, table, tray, crate, bottle, jar, machinery, people, UI, text, logo or border. Do not scatter multiple loose samples around the frame. For gases, liquids or diffuse resources, create a compact iconic visual form without using a container.",
       "notes": "MineIT Mobile resource icon art. Match the established Android resource icon language: centred isolated subject, strong silhouette, dark navy vignette, blue/cyan halo and cool rim glow; readable at 128x128. Generate/store a 1:1 native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-biomass.png and a same-composition WebP at this key. Canonical PNG and WebP migrated from the existing MineIT Android resource artwork."
+    },
+    "massPerUnitKg": 25,
+    "densityKgPerM3": 300,
+    "storageBuildingIds": [
+      "building-stockpile",
+      "building-warehouse"
+    ],
+    "stockpileShape": "cone",
+    "fieldApprovalStatuses": {
+      "massPerUnitKg": "Approved",
+      "densityKgPerM3": "Approved",
+      "storageBuildingIds": "Approved",
+      "stockpileShape": "Approved"
     }
   },
   {
@@ -231,6 +334,19 @@
       "status": "generated",
       "promptDescription": "1:1 MineIT Mobile resource icon for Peat. Translate this resource's physical identity into a compact, instantly recognisable game inventory/resource icon: dark brown fibrous peat face, compact wet decomposed vegetation with visible plant fibres. Match the established MineIT Android resource-art style: a single centred resource symbol or specimen, polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms, strong clean silhouette, object filling roughly 65-75% of the square, dark navy-to-black radial vignette background, soft electric-blue/cyan halo behind the subject, cool blue rim lighting, crisp white/specular highlights and a restrained luminous edge. Keep it highly readable at 128x128. This is stylised game icon art, not photorealism. Do not show a geological scene, embedded rock face, landscape, table, tray, crate, bottle, jar, machinery, people, UI, text, logo or border. Do not scatter multiple loose samples around the frame. For gases, liquids or diffuse resources, create a compact iconic visual form without using a container.",
       "notes": "MineIT Mobile resource icon art. Match the established Android resource icon language: centred isolated subject, strong silhouette, dark navy vignette, blue/cyan halo and cool rim glow; readable at 128x128. Generate/store a 1:1 native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-peat.png and a same-composition WebP at this key. Canonical PNG and WebP migrated from the existing MineIT Android resource artwork."
+    },
+    "massPerUnitKg": 25,
+    "densityKgPerM3": 400,
+    "storageBuildingIds": [
+      "building-stockpile",
+      "building-warehouse"
+    ],
+    "stockpileShape": "cone",
+    "fieldApprovalStatuses": {
+      "massPerUnitKg": "Approved",
+      "densityKgPerM3": "Approved",
+      "storageBuildingIds": "Approved",
+      "stockpileShape": "Approved"
     }
   },
   {
@@ -257,6 +373,19 @@
       "status": "generated",
       "promptDescription": "1:1 MineIT Mobile resource icon for Coal. Translate this resource's physical identity into a compact, instantly recognisable game inventory/resource icon: black coal seam face with matte carbon bands, fractured glossy edges and dark sedimentary layering. Match the established MineIT Android resource-art style: a single centred resource symbol or specimen, polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms, strong clean silhouette, object filling roughly 65-75% of the square, dark navy-to-black radial vignette background, soft electric-blue/cyan halo behind the subject, cool blue rim lighting, crisp white/specular highlights and a restrained luminous edge. Keep it highly readable at 128x128. This is stylised game icon art, not photorealism. Do not show a geological scene, embedded rock face, landscape, table, tray, crate, bottle, jar, machinery, people, UI, text, logo or border. Do not scatter multiple loose samples around the frame. For gases, liquids or diffuse resources, create a compact iconic visual form without using a container.",
       "notes": "MineIT Mobile resource icon art. Match the established Android resource icon language: centred isolated subject, strong silhouette, dark navy vignette, blue/cyan halo and cool rim glow; readable at 128x128. Generate/store a 1:1 native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-coal.png and a same-composition WebP at this key. Canonical PNG and WebP migrated from the existing MineIT Android resource artwork."
+    },
+    "massPerUnitKg": 50,
+    "densityKgPerM3": 800,
+    "storageBuildingIds": [
+      "building-stockpile",
+      "building-warehouse"
+    ],
+    "stockpileShape": "cone",
+    "fieldApprovalStatuses": {
+      "massPerUnitKg": "Approved",
+      "densityKgPerM3": "Approved",
+      "storageBuildingIds": "Approved",
+      "stockpileShape": "Approved"
     }
   },
   {
@@ -283,6 +412,16 @@
       "status": "generated",
       "promptDescription": "1:1 MineIT Mobile resource icon for Crude Oil. Translate this resource's physical identity into a compact, instantly recognisable game inventory/resource icon: full-bleed viscous black-brown crude oil surface, heavy iridescent hydrocarbon sheen and slow rippling texture. Match the established MineIT Android resource-art style: a single centred resource symbol or specimen, polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms, strong clean silhouette, object filling roughly 65-75% of the square, dark navy-to-black radial vignette background, soft electric-blue/cyan halo behind the subject, cool blue rim lighting, crisp white/specular highlights and a restrained luminous edge. Keep it highly readable at 128x128. This is stylised game icon art, not photorealism. Do not show a geological scene, embedded rock face, landscape, table, tray, crate, bottle, jar, machinery, people, UI, text, logo or border. Do not scatter multiple loose samples around the frame. For gases, liquids or diffuse resources, create a compact iconic visual form without using a container.",
       "notes": "MineIT Mobile resource icon art. Match the established Android resource icon language: centred isolated subject, strong silhouette, dark navy vignette, blue/cyan halo and cool rim glow; readable at 128x128. Generate/store a 1:1 native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-crude-oil.png and a same-composition WebP at this key. Canonical PNG and WebP migrated from the existing MineIT Android resource artwork."
+    },
+    "massPerUnitKg": null,
+    "densityKgPerM3": null,
+    "storageBuildingIds": [],
+    "stockpileShape": null,
+    "fieldApprovalStatuses": {
+      "massPerUnitKg": "Not Reviewed",
+      "densityKgPerM3": "Not Reviewed",
+      "storageBuildingIds": "Approved",
+      "stockpileShape": "Not Reviewed"
     }
   },
   {
@@ -309,6 +448,16 @@
       "status": "generated",
       "promptDescription": "1:1 MineIT Mobile resource icon for Natural Gas. Translate this resource's physical identity into a compact, instantly recognisable game inventory/resource icon: full-bleed turbulent transparent gas plume visualisation with subtle cool-grey density gradients, no flame, no vessel. Match the established MineIT Android resource-art style: a single centred resource symbol or specimen, polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms, strong clean silhouette, object filling roughly 65-75% of the square, dark navy-to-black radial vignette background, soft electric-blue/cyan halo behind the subject, cool blue rim lighting, crisp white/specular highlights and a restrained luminous edge. Keep it highly readable at 128x128. This is stylised game icon art, not photorealism. Do not show a geological scene, embedded rock face, landscape, table, tray, crate, bottle, jar, machinery, people, UI, text, logo or border. Do not scatter multiple loose samples around the frame. For gases, liquids or diffuse resources, create a compact iconic visual form without using a container.",
       "notes": "MineIT Mobile resource icon art. Match the established Android resource icon language: centred isolated subject, strong silhouette, dark navy vignette, blue/cyan halo and cool rim glow; readable at 128x128. Generate/store a 1:1 native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-natural-gas.png and a same-composition WebP at this key. Canonical PNG and WebP migrated from the existing MineIT Android resource artwork."
+    },
+    "massPerUnitKg": null,
+    "densityKgPerM3": null,
+    "storageBuildingIds": [],
+    "stockpileShape": null,
+    "fieldApprovalStatuses": {
+      "massPerUnitKg": "Not Reviewed",
+      "densityKgPerM3": "Not Reviewed",
+      "storageBuildingIds": "Approved",
+      "stockpileShape": "Not Reviewed"
     }
   },
   {
@@ -335,6 +484,16 @@
       "status": "generated",
       "promptDescription": "1:1 MineIT Mobile resource icon for Hydrogen. Translate this resource's physical identity into a compact, instantly recognisable game inventory/resource icon: full-bleed diffuse hydrogen gas visualisation, almost colourless with faint cool blue-white density gradients and wispy turbulence, no vessel. Match the established MineIT Android resource-art style: a single centred resource symbol or specimen, polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms, strong clean silhouette, object filling roughly 65-75% of the square, dark navy-to-black radial vignette background, soft electric-blue/cyan halo behind the subject, cool blue rim lighting, crisp white/specular highlights and a restrained luminous edge. Keep it highly readable at 128x128. This is stylised game icon art, not photorealism. Do not show a geological scene, embedded rock face, landscape, table, tray, crate, bottle, jar, machinery, people, UI, text, logo or border. Do not scatter multiple loose samples around the frame. For gases, liquids or diffuse resources, create a compact iconic visual form without using a container.",
       "notes": "MineIT Mobile resource icon art. Match the established Android resource icon language: centred isolated subject, strong silhouette, dark navy vignette, blue/cyan halo and cool rim glow; readable at 128x128. Generate/store a 1:1 native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-hydrogen.png and a same-composition WebP at this key. Canonical PNG newly generated from image.promptDescription on 2026-10-06; WebP derived from that original."
+    },
+    "massPerUnitKg": null,
+    "densityKgPerM3": null,
+    "storageBuildingIds": [],
+    "stockpileShape": null,
+    "fieldApprovalStatuses": {
+      "massPerUnitKg": "Not Reviewed",
+      "densityKgPerM3": "Not Reviewed",
+      "storageBuildingIds": "Approved",
+      "stockpileShape": "Not Reviewed"
     }
   },
   {
@@ -361,6 +520,16 @@
       "status": "generated",
       "promptDescription": "1:1 MineIT Mobile resource icon for Methane Ice. Translate this resource's physical identity into a compact, instantly recognisable game inventory/resource icon: pale blue-white methane-rich ice face with crystalline frost, trapped translucent bubbles and brittle fractured texture. Match the established MineIT Android resource-art style: a single centred resource symbol or specimen, polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms, strong clean silhouette, object filling roughly 65-75% of the square, dark navy-to-black radial vignette background, soft electric-blue/cyan halo behind the subject, cool blue rim lighting, crisp white/specular highlights and a restrained luminous edge. Keep it highly readable at 128x128. This is stylised game icon art, not photorealism. Do not show a geological scene, embedded rock face, landscape, table, tray, crate, bottle, jar, machinery, people, UI, text, logo or border. Do not scatter multiple loose samples around the frame. For gases, liquids or diffuse resources, create a compact iconic visual form without using a container.",
       "notes": "MineIT Mobile resource icon art. Match the established Android resource icon language: centred isolated subject, strong silhouette, dark navy vignette, blue/cyan halo and cool rim glow; readable at 128x128. Generate/store a 1:1 native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-methane-ice.png and a same-composition WebP at this key. Canonical PNG newly generated from image.promptDescription on 2026-10-06; WebP derived from that original."
+    },
+    "massPerUnitKg": null,
+    "densityKgPerM3": null,
+    "storageBuildingIds": [],
+    "stockpileShape": null,
+    "fieldApprovalStatuses": {
+      "massPerUnitKg": "Not Reviewed",
+      "densityKgPerM3": "Not Reviewed",
+      "storageBuildingIds": "Approved",
+      "stockpileShape": "Not Reviewed"
     }
   },
   {
@@ -387,6 +556,16 @@
       "status": "generated",
       "promptDescription": "1:1 MineIT Mobile resource icon for Uranium Ore. Translate this resource's physical identity into a compact, instantly recognisable game inventory/resource icon: dense dark uranium-bearing ore face with yellow-green uraninite mineral flecks, restrained natural mineral colour, no hazard symbols. Match the established MineIT Android resource-art style: a single centred resource symbol or specimen, polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms, strong clean silhouette, object filling roughly 65-75% of the square, dark navy-to-black radial vignette background, soft electric-blue/cyan halo behind the subject, cool blue rim lighting, crisp white/specular highlights and a restrained luminous edge. Keep it highly readable at 128x128. This is stylised game icon art, not photorealism. Do not show a geological scene, embedded rock face, landscape, table, tray, crate, bottle, jar, machinery, people, UI, text, logo or border. Do not scatter multiple loose samples around the frame. For gases, liquids or diffuse resources, create a compact iconic visual form without using a container.",
       "notes": "MineIT Mobile resource icon art. Match the established Android resource icon language: centred isolated subject, strong silhouette, dark navy vignette, blue/cyan halo and cool rim glow; readable at 128x128. Generate/store a 1:1 native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-uranium-ore.png and a same-composition WebP at this key. Canonical PNG and WebP migrated from the existing MineIT Android resource artwork."
+    },
+    "massPerUnitKg": 100,
+    "densityKgPerM3": 2200,
+    "storageBuildingIds": [],
+    "stockpileShape": null,
+    "fieldApprovalStatuses": {
+      "massPerUnitKg": "Approved",
+      "densityKgPerM3": "Approved",
+      "storageBuildingIds": "Approved",
+      "stockpileShape": "Not Reviewed"
     }
   },
   {
@@ -413,6 +592,16 @@
       "status": "generated",
       "promptDescription": "1:1 MineIT Mobile resource icon for Helium-3. Translate this resource's physical identity into a compact, instantly recognisable game inventory/resource icon: full-bleed helium gas or regolith-resource visualisation with fine pale lunar dust and subtle cool luminous particle impression, no container or text. Match the established MineIT Android resource-art style: a single centred resource symbol or specimen, polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms, strong clean silhouette, object filling roughly 65-75% of the square, dark navy-to-black radial vignette background, soft electric-blue/cyan halo behind the subject, cool blue rim lighting, crisp white/specular highlights and a restrained luminous edge. Keep it highly readable at 128x128. This is stylised game icon art, not photorealism. Do not show a geological scene, embedded rock face, landscape, table, tray, crate, bottle, jar, machinery, people, UI, text, logo or border. Do not scatter multiple loose samples around the frame. For gases, liquids or diffuse resources, create a compact iconic visual form without using a container.",
       "notes": "MineIT Mobile resource icon art. Match the established Android resource icon language: centred isolated subject, strong silhouette, dark navy vignette, blue/cyan halo and cool rim glow; readable at 128x128. Generate/store a 1:1 native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-helium-3.png and a same-composition WebP at this key. Canonical PNG newly generated from image.promptDescription on 2026-10-06; WebP derived from that original."
+    },
+    "massPerUnitKg": null,
+    "densityKgPerM3": null,
+    "storageBuildingIds": [],
+    "stockpileShape": null,
+    "fieldApprovalStatuses": {
+      "massPerUnitKg": "Not Reviewed",
+      "densityKgPerM3": "Not Reviewed",
+      "storageBuildingIds": "Approved",
+      "stockpileShape": "Not Reviewed"
     }
   },
   {
@@ -439,6 +628,19 @@
       "status": "generated",
       "promptDescription": "1:1 MineIT Mobile resource icon for Iron Ore. Translate this resource's physical identity into a compact, instantly recognisable game inventory/resource icon: rust-red and dark metallic iron ore face, hematite and magnetite-like bands in rough host rock. Match the established MineIT Android resource-art style: a single centred resource symbol or specimen, polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms, strong clean silhouette, object filling roughly 65-75% of the square, dark navy-to-black radial vignette background, soft electric-blue/cyan halo behind the subject, cool blue rim lighting, crisp white/specular highlights and a restrained luminous edge. Keep it highly readable at 128x128. This is stylised game icon art, not photorealism. Do not show a geological scene, embedded rock face, landscape, table, tray, crate, bottle, jar, machinery, people, UI, text, logo or border. Do not scatter multiple loose samples around the frame. For gases, liquids or diffuse resources, create a compact iconic visual form without using a container.",
       "notes": "MineIT Mobile resource icon art. Match the established Android resource icon language: centred isolated subject, strong silhouette, dark navy vignette, blue/cyan halo and cool rim glow; readable at 128x128. Generate/store a 1:1 native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-iron-ore.png and a same-composition WebP at this key. Canonical PNG and WebP migrated from the existing MineIT Android resource artwork."
+    },
+    "massPerUnitKg": 100,
+    "densityKgPerM3": 2500,
+    "storageBuildingIds": [
+      "building-stockpile",
+      "building-warehouse"
+    ],
+    "stockpileShape": "cone",
+    "fieldApprovalStatuses": {
+      "massPerUnitKg": "Approved",
+      "densityKgPerM3": "Approved",
+      "storageBuildingIds": "Approved",
+      "stockpileShape": "Approved"
     }
   },
   {
@@ -465,6 +667,19 @@
       "status": "generated",
       "promptDescription": "1:1 MineIT Mobile resource icon for Chromium Ore. Translate this resource's physical identity into a compact, instantly recognisable game inventory/resource icon: dark chromite-rich ore face with black metallic grains and subtle brown-green mineral host. Match the established MineIT Android resource-art style: a single centred resource symbol or specimen, polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms, strong clean silhouette, object filling roughly 65-75% of the square, dark navy-to-black radial vignette background, soft electric-blue/cyan halo behind the subject, cool blue rim lighting, crisp white/specular highlights and a restrained luminous edge. Keep it highly readable at 128x128. This is stylised game icon art, not photorealism. Do not show a geological scene, embedded rock face, landscape, table, tray, crate, bottle, jar, machinery, people, UI, text, logo or border. Do not scatter multiple loose samples around the frame. For gases, liquids or diffuse resources, create a compact iconic visual form without using a container.",
       "notes": "MineIT Mobile resource icon art. Match the established Android resource icon language: centred isolated subject, strong silhouette, dark navy vignette, blue/cyan halo and cool rim glow; readable at 128x128. Generate/store a 1:1 native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-chromium-ore.png and a same-composition WebP at this key. Canonical PNG newly generated from image.promptDescription on 2026-10-06; WebP derived from that original."
+    },
+    "massPerUnitKg": 100,
+    "densityKgPerM3": 2500,
+    "storageBuildingIds": [
+      "building-stockpile",
+      "building-warehouse"
+    ],
+    "stockpileShape": "cone",
+    "fieldApprovalStatuses": {
+      "massPerUnitKg": "Approved",
+      "densityKgPerM3": "Approved",
+      "storageBuildingIds": "Approved",
+      "stockpileShape": "Approved"
     }
   },
   {
@@ -491,6 +706,19 @@
       "status": "generated",
       "promptDescription": "1:1 MineIT Mobile resource icon for Copper Ore. Translate this resource's physical identity into a compact, instantly recognisable game inventory/resource icon: rough copper ore face with green-blue oxidised mineral staining and bright copper-bearing veins in dark host rock. Match the established MineIT Android resource-art style: a single centred resource symbol or specimen, polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms, strong clean silhouette, object filling roughly 65-75% of the square, dark navy-to-black radial vignette background, soft electric-blue/cyan halo behind the subject, cool blue rim lighting, crisp white/specular highlights and a restrained luminous edge. Keep it highly readable at 128x128. This is stylised game icon art, not photorealism. Do not show a geological scene, embedded rock face, landscape, table, tray, crate, bottle, jar, machinery, people, UI, text, logo or border. Do not scatter multiple loose samples around the frame. For gases, liquids or diffuse resources, create a compact iconic visual form without using a container.",
       "notes": "MineIT Mobile resource icon art. Match the established Android resource icon language: centred isolated subject, strong silhouette, dark navy vignette, blue/cyan halo and cool rim glow; readable at 128x128. Generate/store a 1:1 native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-copper-ore.png and a same-composition WebP at this key. Canonical PNG and WebP migrated from the existing MineIT Android resource artwork."
+    },
+    "massPerUnitKg": 100,
+    "densityKgPerM3": 2400,
+    "storageBuildingIds": [
+      "building-stockpile",
+      "building-warehouse"
+    ],
+    "stockpileShape": "cone",
+    "fieldApprovalStatuses": {
+      "massPerUnitKg": "Approved",
+      "densityKgPerM3": "Approved",
+      "storageBuildingIds": "Approved",
+      "stockpileShape": "Approved"
     }
   },
   {
@@ -517,6 +745,19 @@
       "status": "generated",
       "promptDescription": "1:1 MineIT Mobile resource icon for Tin Ore. Translate this resource's physical identity into a compact, instantly recognisable game inventory/resource icon: dark cassiterite-like tin ore crystals in coarse granite host, brown-black lustrous mineral grains. Match the established MineIT Android resource-art style: a single centred resource symbol or specimen, polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms, strong clean silhouette, object filling roughly 65-75% of the square, dark navy-to-black radial vignette background, soft electric-blue/cyan halo behind the subject, cool blue rim lighting, crisp white/specular highlights and a restrained luminous edge. Keep it highly readable at 128x128. This is stylised game icon art, not photorealism. Do not show a geological scene, embedded rock face, landscape, table, tray, crate, bottle, jar, machinery, people, UI, text, logo or border. Do not scatter multiple loose samples around the frame. For gases, liquids or diffuse resources, create a compact iconic visual form without using a container.",
       "notes": "MineIT Mobile resource icon art. Match the established Android resource icon language: centred isolated subject, strong silhouette, dark navy vignette, blue/cyan halo and cool rim glow; readable at 128x128. Generate/store a 1:1 native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-tin-ore.png and a same-composition WebP at this key. Canonical PNG newly generated from image.promptDescription on 2026-10-06; WebP derived from that original."
+    },
+    "massPerUnitKg": 50,
+    "densityKgPerM3": 2500,
+    "storageBuildingIds": [
+      "building-stockpile",
+      "building-warehouse"
+    ],
+    "stockpileShape": "cone",
+    "fieldApprovalStatuses": {
+      "massPerUnitKg": "Approved",
+      "densityKgPerM3": "Approved",
+      "storageBuildingIds": "Approved",
+      "stockpileShape": "Approved"
     }
   },
   {
@@ -543,6 +784,19 @@
       "status": "generated",
       "promptDescription": "1:1 MineIT Mobile resource icon for Bauxite. Translate this resource's physical identity into a compact, instantly recognisable game inventory/resource icon: earthy red-orange bauxite face with pale aluminium-rich nodules and pisolitic texture. Match the established MineIT Android resource-art style: a single centred resource symbol or specimen, polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms, strong clean silhouette, object filling roughly 65-75% of the square, dark navy-to-black radial vignette background, soft electric-blue/cyan halo behind the subject, cool blue rim lighting, crisp white/specular highlights and a restrained luminous edge. Keep it highly readable at 128x128. This is stylised game icon art, not photorealism. Do not show a geological scene, embedded rock face, landscape, table, tray, crate, bottle, jar, machinery, people, UI, text, logo or border. Do not scatter multiple loose samples around the frame. For gases, liquids or diffuse resources, create a compact iconic visual form without using a container.",
       "notes": "MineIT Mobile resource icon art. Match the established Android resource icon language: centred isolated subject, strong silhouette, dark navy vignette, blue/cyan halo and cool rim glow; readable at 128x128. Generate/store a 1:1 native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-bauxite.png and a same-composition WebP at this key. Canonical PNG newly generated from image.promptDescription on 2026-10-06; WebP derived from that original."
+    },
+    "massPerUnitKg": 100,
+    "densityKgPerM3": 1300,
+    "storageBuildingIds": [
+      "building-stockpile",
+      "building-warehouse"
+    ],
+    "stockpileShape": "cone",
+    "fieldApprovalStatuses": {
+      "massPerUnitKg": "Approved",
+      "densityKgPerM3": "Approved",
+      "storageBuildingIds": "Approved",
+      "stockpileShape": "Approved"
     }
   },
   {
@@ -569,6 +823,19 @@
       "status": "generated",
       "promptDescription": "1:1 MineIT Mobile resource icon for Titanium Ore. Translate this resource's physical identity into a compact, instantly recognisable game inventory/resource icon: dark titanium-bearing mineral face with black ilmenite-like grains and pale host-rock contrast. Match the established MineIT Android resource-art style: a single centred resource symbol or specimen, polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms, strong clean silhouette, object filling roughly 65-75% of the square, dark navy-to-black radial vignette background, soft electric-blue/cyan halo behind the subject, cool blue rim lighting, crisp white/specular highlights and a restrained luminous edge. Keep it highly readable at 128x128. This is stylised game icon art, not photorealism. Do not show a geological scene, embedded rock face, landscape, table, tray, crate, bottle, jar, machinery, people, UI, text, logo or border. Do not scatter multiple loose samples around the frame. For gases, liquids or diffuse resources, create a compact iconic visual form without using a container.",
       "notes": "MineIT Mobile resource icon art. Match the established Android resource icon language: centred isolated subject, strong silhouette, dark navy vignette, blue/cyan halo and cool rim glow; readable at 128x128. Generate/store a 1:1 native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-titanium-ore.png and a same-composition WebP at this key. Canonical PNG newly generated from image.promptDescription on 2026-10-06; WebP derived from that original."
+    },
+    "massPerUnitKg": 100,
+    "densityKgPerM3": 2300,
+    "storageBuildingIds": [
+      "building-stockpile",
+      "building-warehouse"
+    ],
+    "stockpileShape": "cone",
+    "fieldApprovalStatuses": {
+      "massPerUnitKg": "Approved",
+      "densityKgPerM3": "Approved",
+      "storageBuildingIds": "Approved",
+      "stockpileShape": "Approved"
     }
   },
   {
@@ -595,6 +862,19 @@
       "status": "generated",
       "promptDescription": "1:1 MineIT Mobile resource icon for Nickel Ore. Translate this resource's physical identity into a compact, instantly recognisable game inventory/resource icon: green-brown nickel ore face with dark metallic sulphide grains and weathered mineral bands. Match the established MineIT Android resource-art style: a single centred resource symbol or specimen, polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms, strong clean silhouette, object filling roughly 65-75% of the square, dark navy-to-black radial vignette background, soft electric-blue/cyan halo behind the subject, cool blue rim lighting, crisp white/specular highlights and a restrained luminous edge. Keep it highly readable at 128x128. This is stylised game icon art, not photorealism. Do not show a geological scene, embedded rock face, landscape, table, tray, crate, bottle, jar, machinery, people, UI, text, logo or border. Do not scatter multiple loose samples around the frame. For gases, liquids or diffuse resources, create a compact iconic visual form without using a container.",
       "notes": "MineIT Mobile resource icon art. Match the established Android resource icon language: centred isolated subject, strong silhouette, dark navy vignette, blue/cyan halo and cool rim glow; readable at 128x128. Generate/store a 1:1 native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-nickel-ore.png and a same-composition WebP at this key. Canonical PNG newly generated from image.promptDescription on 2026-10-06; WebP derived from that original."
+    },
+    "massPerUnitKg": 100,
+    "densityKgPerM3": 1900,
+    "storageBuildingIds": [
+      "building-stockpile",
+      "building-warehouse"
+    ],
+    "stockpileShape": "cone",
+    "fieldApprovalStatuses": {
+      "massPerUnitKg": "Approved",
+      "densityKgPerM3": "Approved",
+      "storageBuildingIds": "Approved",
+      "stockpileShape": "Approved"
     }
   },
   {
@@ -621,6 +901,19 @@
       "status": "generated",
       "promptDescription": "1:1 MineIT Mobile resource icon for Cobalt Ore. Translate this resource's physical identity into a compact, instantly recognisable game inventory/resource icon: dark cobalt-bearing ore with muted blue-violet mineral staining and metallic sulphide texture in host rock. Match the established MineIT Android resource-art style: a single centred resource symbol or specimen, polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms, strong clean silhouette, object filling roughly 65-75% of the square, dark navy-to-black radial vignette background, soft electric-blue/cyan halo behind the subject, cool blue rim lighting, crisp white/specular highlights and a restrained luminous edge. Keep it highly readable at 128x128. This is stylised game icon art, not photorealism. Do not show a geological scene, embedded rock face, landscape, table, tray, crate, bottle, jar, machinery, people, UI, text, logo or border. Do not scatter multiple loose samples around the frame. For gases, liquids or diffuse resources, create a compact iconic visual form without using a container.",
       "notes": "MineIT Mobile resource icon art. Match the established Android resource icon language: centred isolated subject, strong silhouette, dark navy vignette, blue/cyan halo and cool rim glow; readable at 128x128. Generate/store a 1:1 native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-cobalt-ore.png and a same-composition WebP at this key. Canonical PNG newly generated from image.promptDescription on 2026-10-06; WebP derived from that original."
+    },
+    "massPerUnitKg": 50,
+    "densityKgPerM3": 2200,
+    "storageBuildingIds": [
+      "building-stockpile",
+      "building-warehouse"
+    ],
+    "stockpileShape": "cone",
+    "fieldApprovalStatuses": {
+      "massPerUnitKg": "Approved",
+      "densityKgPerM3": "Approved",
+      "storageBuildingIds": "Approved",
+      "stockpileShape": "Approved"
     }
   },
   {
@@ -647,6 +940,19 @@
       "status": "generated",
       "promptDescription": "1:1 MineIT Mobile resource icon for Lithium Ore. Translate this resource's physical identity into a compact, instantly recognisable game inventory/resource icon: pale pegmatite-like rock face with white quartz, mica and faint pink-lilac lithium mineral crystals. Match the established MineIT Android resource-art style: a single centred resource symbol or specimen, polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms, strong clean silhouette, object filling roughly 65-75% of the square, dark navy-to-black radial vignette background, soft electric-blue/cyan halo behind the subject, cool blue rim lighting, crisp white/specular highlights and a restrained luminous edge. Keep it highly readable at 128x128. This is stylised game icon art, not photorealism. Do not show a geological scene, embedded rock face, landscape, table, tray, crate, bottle, jar, machinery, people, UI, text, logo or border. Do not scatter multiple loose samples around the frame. For gases, liquids or diffuse resources, create a compact iconic visual form without using a container.",
       "notes": "MineIT Mobile resource icon art. Match the established Android resource icon language: centred isolated subject, strong silhouette, dark navy vignette, blue/cyan halo and cool rim glow; readable at 128x128. Generate/store a 1:1 native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-lithium-ore.png and a same-composition WebP at this key. Canonical PNG newly generated from image.promptDescription on 2026-10-06; WebP derived from that original."
+    },
+    "massPerUnitKg": 50,
+    "densityKgPerM3": 1500,
+    "storageBuildingIds": [
+      "building-stockpile",
+      "building-warehouse"
+    ],
+    "stockpileShape": "cone",
+    "fieldApprovalStatuses": {
+      "massPerUnitKg": "Approved",
+      "densityKgPerM3": "Approved",
+      "storageBuildingIds": "Approved",
+      "stockpileShape": "Approved"
     }
   },
   {
@@ -673,6 +979,19 @@
       "status": "generated",
       "promptDescription": "1:1 MineIT Mobile resource icon for Zinc Ore. Translate this resource's physical identity into a compact, instantly recognisable game inventory/resource icon: grey-brown zinc ore face with resinous sphalerite-like crystals and pale mineral gangue. Match the established MineIT Android resource-art style: a single centred resource symbol or specimen, polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms, strong clean silhouette, object filling roughly 65-75% of the square, dark navy-to-black radial vignette background, soft electric-blue/cyan halo behind the subject, cool blue rim lighting, crisp white/specular highlights and a restrained luminous edge. Keep it highly readable at 128x128. This is stylised game icon art, not photorealism. Do not show a geological scene, embedded rock face, landscape, table, tray, crate, bottle, jar, machinery, people, UI, text, logo or border. Do not scatter multiple loose samples around the frame. For gases, liquids or diffuse resources, create a compact iconic visual form without using a container.",
       "notes": "MineIT Mobile resource icon art. Match the established Android resource icon language: centred isolated subject, strong silhouette, dark navy vignette, blue/cyan halo and cool rim glow; readable at 128x128. Generate/store a 1:1 native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-zinc-ore.png and a same-composition WebP at this key. Canonical PNG newly generated from image.promptDescription on 2026-10-06; WebP derived from that original."
+    },
+    "massPerUnitKg": 100,
+    "densityKgPerM3": 2200,
+    "storageBuildingIds": [
+      "building-stockpile",
+      "building-warehouse"
+    ],
+    "stockpileShape": "cone",
+    "fieldApprovalStatuses": {
+      "massPerUnitKg": "Approved",
+      "densityKgPerM3": "Approved",
+      "storageBuildingIds": "Approved",
+      "stockpileShape": "Approved"
     }
   },
   {
@@ -699,6 +1018,19 @@
       "status": "generated",
       "promptDescription": "1:1 MineIT Mobile resource icon for Lead Ore. Translate this resource's physical identity into a compact, instantly recognisable game inventory/resource icon: heavy dark lead ore face with bright cubic galena-like metallic cleavage in grey host rock. Match the established MineIT Android resource-art style: a single centred resource symbol or specimen, polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms, strong clean silhouette, object filling roughly 65-75% of the square, dark navy-to-black radial vignette background, soft electric-blue/cyan halo behind the subject, cool blue rim lighting, crisp white/specular highlights and a restrained luminous edge. Keep it highly readable at 128x128. This is stylised game icon art, not photorealism. Do not show a geological scene, embedded rock face, landscape, table, tray, crate, bottle, jar, machinery, people, UI, text, logo or border. Do not scatter multiple loose samples around the frame. For gases, liquids or diffuse resources, create a compact iconic visual form without using a container.",
       "notes": "MineIT Mobile resource icon art. Match the established Android resource icon language: centred isolated subject, strong silhouette, dark navy vignette, blue/cyan halo and cool rim glow; readable at 128x128. Generate/store a 1:1 native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-lead-ore.png and a same-composition WebP at this key. Canonical PNG newly generated from image.promptDescription on 2026-10-06; WebP derived from that original."
+    },
+    "massPerUnitKg": 100,
+    "densityKgPerM3": 3000,
+    "storageBuildingIds": [
+      "building-stockpile",
+      "building-warehouse"
+    ],
+    "stockpileShape": "cone",
+    "fieldApprovalStatuses": {
+      "massPerUnitKg": "Approved",
+      "densityKgPerM3": "Approved",
+      "storageBuildingIds": "Approved",
+      "stockpileShape": "Approved"
     }
   },
   {
@@ -725,6 +1057,19 @@
       "status": "generated",
       "promptDescription": "1:1 MineIT Mobile resource icon for Tungsten Ore. Translate this resource's physical identity into a compact, instantly recognisable game inventory/resource icon: dense dark tungsten ore face with black-brown wolframite-like blades and pale quartz veins. Match the established MineIT Android resource-art style: a single centred resource symbol or specimen, polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms, strong clean silhouette, object filling roughly 65-75% of the square, dark navy-to-black radial vignette background, soft electric-blue/cyan halo behind the subject, cool blue rim lighting, crisp white/specular highlights and a restrained luminous edge. Keep it highly readable at 128x128. This is stylised game icon art, not photorealism. Do not show a geological scene, embedded rock face, landscape, table, tray, crate, bottle, jar, machinery, people, UI, text, logo or border. Do not scatter multiple loose samples around the frame. For gases, liquids or diffuse resources, create a compact iconic visual form without using a container.",
       "notes": "MineIT Mobile resource icon art. Match the established Android resource icon language: centred isolated subject, strong silhouette, dark navy vignette, blue/cyan halo and cool rim glow; readable at 128x128. Generate/store a 1:1 native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-tungsten-ore.png and a same-composition WebP at this key. Canonical PNG newly generated from image.promptDescription on 2026-10-06; WebP derived from that original."
+    },
+    "massPerUnitKg": 50,
+    "densityKgPerM3": 3000,
+    "storageBuildingIds": [
+      "building-stockpile",
+      "building-warehouse"
+    ],
+    "stockpileShape": "cone",
+    "fieldApprovalStatuses": {
+      "massPerUnitKg": "Approved",
+      "densityKgPerM3": "Approved",
+      "storageBuildingIds": "Approved",
+      "stockpileShape": "Approved"
     }
   },
   {
@@ -751,6 +1096,19 @@
       "status": "generated",
       "promptDescription": "1:1 MineIT Mobile resource icon for Rare Earth Ore. Translate this resource's physical identity into a compact, instantly recognisable game inventory/resource icon: complex mottled rare-earth-bearing ore face with dark host rock, pale mineral bands and sparse reddish-brown crystalline grains. Match the established MineIT Android resource-art style: a single centred resource symbol or specimen, polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms, strong clean silhouette, object filling roughly 65-75% of the square, dark navy-to-black radial vignette background, soft electric-blue/cyan halo behind the subject, cool blue rim lighting, crisp white/specular highlights and a restrained luminous edge. Keep it highly readable at 128x128. This is stylised game icon art, not photorealism. Do not show a geological scene, embedded rock face, landscape, table, tray, crate, bottle, jar, machinery, people, UI, text, logo or border. Do not scatter multiple loose samples around the frame. For gases, liquids or diffuse resources, create a compact iconic visual form without using a container.",
       "notes": "MineIT Mobile resource icon art. Match the established Android resource icon language: centred isolated subject, strong silhouette, dark navy vignette, blue/cyan halo and cool rim glow; readable at 128x128. Generate/store a 1:1 native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-rare-earth-ore.png and a same-composition WebP at this key. Canonical PNG newly generated from image.promptDescription on 2026-10-06; WebP derived from that original."
+    },
+    "massPerUnitKg": 50,
+    "densityKgPerM3": 2000,
+    "storageBuildingIds": [
+      "building-stockpile",
+      "building-warehouse"
+    ],
+    "stockpileShape": "cone",
+    "fieldApprovalStatuses": {
+      "massPerUnitKg": "Approved",
+      "densityKgPerM3": "Approved",
+      "storageBuildingIds": "Approved",
+      "stockpileShape": "Approved"
     }
   },
   {
@@ -777,6 +1135,19 @@
       "status": "generated",
       "promptDescription": "1:1 MineIT Mobile resource icon for Graphite. Translate this resource's physical identity into a compact, instantly recognisable game inventory/resource icon: dark graphite-rich mineral face with soft layered silvery-black sheen and flaky crystalline texture. Match the established MineIT Android resource-art style: a single centred resource symbol or specimen, polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms, strong clean silhouette, object filling roughly 65-75% of the square, dark navy-to-black radial vignette background, soft electric-blue/cyan halo behind the subject, cool blue rim lighting, crisp white/specular highlights and a restrained luminous edge. Keep it highly readable at 128x128. This is stylised game icon art, not photorealism. Do not show a geological scene, embedded rock face, landscape, table, tray, crate, bottle, jar, machinery, people, UI, text, logo or border. Do not scatter multiple loose samples around the frame. For gases, liquids or diffuse resources, create a compact iconic visual form without using a container.",
       "notes": "MineIT Mobile resource icon art. Match the established Android resource icon language: centred isolated subject, strong silhouette, dark navy vignette, blue/cyan halo and cool rim glow; readable at 128x128. Generate/store a 1:1 native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-graphite.png and a same-composition WebP at this key. Canonical PNG newly generated from image.promptDescription on 2026-10-06; WebP derived from that original."
+    },
+    "massPerUnitKg": 25,
+    "densityKgPerM3": 750,
+    "storageBuildingIds": [
+      "building-stockpile",
+      "building-warehouse"
+    ],
+    "stockpileShape": "cone",
+    "fieldApprovalStatuses": {
+      "massPerUnitKg": "Approved",
+      "densityKgPerM3": "Approved",
+      "storageBuildingIds": "Approved",
+      "stockpileShape": "Approved"
     }
   },
   {
@@ -803,6 +1174,18 @@
       "status": "generated",
       "promptDescription": "1:1 MineIT Mobile resource icon for Sulfur. Translate this resource's physical identity into a compact, instantly recognisable game inventory/resource icon: bright natural yellow sulfur crystal crust filling the frame with rough volcanic mineral texture. Match the established MineIT Android resource-art style: a single centred resource symbol or specimen, polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms, strong clean silhouette, object filling roughly 65-75% of the square, dark navy-to-black radial vignette background, soft electric-blue/cyan halo behind the subject, cool blue rim lighting, crisp white/specular highlights and a restrained luminous edge. Keep it highly readable at 128x128. This is stylised game icon art, not photorealism. Do not show a geological scene, embedded rock face, landscape, table, tray, crate, bottle, jar, machinery, people, UI, text, logo or border. Do not scatter multiple loose samples around the frame. For gases, liquids or diffuse resources, create a compact iconic visual form without using a container.",
       "notes": "MineIT Mobile resource icon art. Match the established Android resource icon language: centred isolated subject, strong silhouette, dark navy vignette, blue/cyan halo and cool rim glow; readable at 128x128. Generate/store a 1:1 native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-sulfur.png and a same-composition WebP at this key. Canonical PNG newly generated from image.promptDescription on 2026-10-06; WebP derived from that original."
+    },
+    "massPerUnitKg": 25,
+    "densityKgPerM3": 1000,
+    "storageBuildingIds": [
+      "building-warehouse"
+    ],
+    "stockpileShape": null,
+    "fieldApprovalStatuses": {
+      "massPerUnitKg": "Approved",
+      "densityKgPerM3": "Approved",
+      "storageBuildingIds": "Approved",
+      "stockpileShape": "Not Reviewed"
     }
   },
   {
@@ -829,6 +1212,19 @@
       "status": "generated",
       "promptDescription": "1:1 MineIT Mobile resource icon for Phosphate Rock. Translate this resource's physical identity into a compact, instantly recognisable game inventory/resource icon: pale tan-grey phosphate rock face with granular nodules and sedimentary texture. Match the established MineIT Android resource-art style: a single centred resource symbol or specimen, polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms, strong clean silhouette, object filling roughly 65-75% of the square, dark navy-to-black radial vignette background, soft electric-blue/cyan halo behind the subject, cool blue rim lighting, crisp white/specular highlights and a restrained luminous edge. Keep it highly readable at 128x128. This is stylised game icon art, not photorealism. Do not show a geological scene, embedded rock face, landscape, table, tray, crate, bottle, jar, machinery, people, UI, text, logo or border. Do not scatter multiple loose samples around the frame. For gases, liquids or diffuse resources, create a compact iconic visual form without using a container.",
       "notes": "MineIT Mobile resource icon art. Match the established Android resource icon language: centred isolated subject, strong silhouette, dark navy vignette, blue/cyan halo and cool rim glow; readable at 128x128. Generate/store a 1:1 native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-phosphate-rock.png and a same-composition WebP at this key. Canonical PNG newly generated from image.promptDescription on 2026-10-06; WebP derived from that original."
+    },
+    "massPerUnitKg": 100,
+    "densityKgPerM3": 1500,
+    "storageBuildingIds": [
+      "building-stockpile",
+      "building-warehouse"
+    ],
+    "stockpileShape": "cone",
+    "fieldApprovalStatuses": {
+      "massPerUnitKg": "Approved",
+      "densityKgPerM3": "Approved",
+      "storageBuildingIds": "Approved",
+      "stockpileShape": "Approved"
     }
   },
   {
@@ -855,6 +1251,19 @@
       "status": "generated",
       "promptDescription": "1:1 MineIT Mobile resource icon for Quartz. Translate this resource's physical identity into a compact, instantly recognisable game inventory/resource icon: interlocking clear to milky quartz crystal mass filling the frame, raw uncut crystalline faces. Match the established MineIT Android resource-art style: a single centred resource symbol or specimen, polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms, strong clean silhouette, object filling roughly 65-75% of the square, dark navy-to-black radial vignette background, soft electric-blue/cyan halo behind the subject, cool blue rim lighting, crisp white/specular highlights and a restrained luminous edge. Keep it highly readable at 128x128. This is stylised game icon art, not photorealism. Do not show a geological scene, embedded rock face, landscape, table, tray, crate, bottle, jar, machinery, people, UI, text, logo or border. Do not scatter multiple loose samples around the frame. For gases, liquids or diffuse resources, create a compact iconic visual form without using a container.",
       "notes": "MineIT Mobile resource icon art. Match the established Android resource icon language: centred isolated subject, strong silhouette, dark navy vignette, blue/cyan halo and cool rim glow; readable at 128x128. Generate/store a 1:1 native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-quartz.png and a same-composition WebP at this key. Canonical PNG newly generated from image.promptDescription on 2026-10-06; WebP derived from that original."
+    },
+    "massPerUnitKg": 50,
+    "densityKgPerM3": 1500,
+    "storageBuildingIds": [
+      "building-stockpile",
+      "building-warehouse"
+    ],
+    "stockpileShape": "cone",
+    "fieldApprovalStatuses": {
+      "massPerUnitKg": "Approved",
+      "densityKgPerM3": "Approved",
+      "storageBuildingIds": "Approved",
+      "stockpileShape": "Approved"
     }
   },
   {
@@ -881,6 +1290,18 @@
       "status": "generated",
       "promptDescription": "1:1 MineIT Mobile resource icon for Mica. Translate this resource's physical identity into a compact, instantly recognisable game inventory/resource icon: layered mica mineral face with thin flaky translucent sheets, silver-brown pearly cleavage. Match the established MineIT Android resource-art style: a single centred resource symbol or specimen, polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms, strong clean silhouette, object filling roughly 65-75% of the square, dark navy-to-black radial vignette background, soft electric-blue/cyan halo behind the subject, cool blue rim lighting, crisp white/specular highlights and a restrained luminous edge. Keep it highly readable at 128x128. This is stylised game icon art, not photorealism. Do not show a geological scene, embedded rock face, landscape, table, tray, crate, bottle, jar, machinery, people, UI, text, logo or border. Do not scatter multiple loose samples around the frame. For gases, liquids or diffuse resources, create a compact iconic visual form without using a container.",
       "notes": "MineIT Mobile resource icon art. Match the established Android resource icon language: centred isolated subject, strong silhouette, dark navy vignette, blue/cyan halo and cool rim glow; readable at 128x128. Generate/store a 1:1 native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-mica.png and a same-composition WebP at this key. Canonical PNG newly generated from image.promptDescription on 2026-10-06; WebP derived from that original."
+    },
+    "massPerUnitKg": 10,
+    "densityKgPerM3": 500,
+    "storageBuildingIds": [
+      "building-warehouse"
+    ],
+    "stockpileShape": null,
+    "fieldApprovalStatuses": {
+      "massPerUnitKg": "Approved",
+      "densityKgPerM3": "Approved",
+      "storageBuildingIds": "Approved",
+      "stockpileShape": "Not Reviewed"
     }
   },
   {
@@ -907,6 +1328,18 @@
       "status": "generated",
       "promptDescription": "1:1 MineIT Mobile resource icon for Silver. Translate this resource's physical identity into a compact, instantly recognisable game inventory/resource icon: raw silver-bearing ore face with bright native-silver threads and metallic patches through dark host rock. Match the established MineIT Android resource-art style: a single centred resource symbol or specimen, polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms, strong clean silhouette, object filling roughly 65-75% of the square, dark navy-to-black radial vignette background, soft electric-blue/cyan halo behind the subject, cool blue rim lighting, crisp white/specular highlights and a restrained luminous edge. Keep it highly readable at 128x128. This is stylised game icon art, not photorealism. Do not show a geological scene, embedded rock face, landscape, table, tray, crate, bottle, jar, machinery, people, UI, text, logo or border. Do not scatter multiple loose samples around the frame. For gases, liquids or diffuse resources, create a compact iconic visual form without using a container.",
       "notes": "MineIT Mobile resource icon art. Match the established Android resource icon language: centred isolated subject, strong silhouette, dark navy vignette, blue/cyan halo and cool rim glow; readable at 128x128. Generate/store a 1:1 native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-silver.png and a same-composition WebP at this key. Canonical PNG and WebP migrated from the existing MineIT Android resource artwork."
+    },
+    "massPerUnitKg": 1,
+    "densityKgPerM3": 2500,
+    "storageBuildingIds": [
+      "building-warehouse"
+    ],
+    "stockpileShape": null,
+    "fieldApprovalStatuses": {
+      "massPerUnitKg": "Approved",
+      "densityKgPerM3": "Approved",
+      "storageBuildingIds": "Approved",
+      "stockpileShape": "Not Reviewed"
     }
   },
   {
@@ -933,6 +1366,18 @@
       "status": "generated",
       "promptDescription": "1:1 MineIT Mobile resource icon for Gold. Translate this resource's physical identity into a compact, instantly recognisable game inventory/resource icon: raw gold-bearing rock face with irregular native-gold veins and grains in quartz-rich dark host rock, unrefined. Match the established MineIT Android resource-art style: a single centred resource symbol or specimen, polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms, strong clean silhouette, object filling roughly 65-75% of the square, dark navy-to-black radial vignette background, soft electric-blue/cyan halo behind the subject, cool blue rim lighting, crisp white/specular highlights and a restrained luminous edge. Keep it highly readable at 128x128. This is stylised game icon art, not photorealism. Do not show a geological scene, embedded rock face, landscape, table, tray, crate, bottle, jar, machinery, people, UI, text, logo or border. Do not scatter multiple loose samples around the frame. For gases, liquids or diffuse resources, create a compact iconic visual form without using a container.",
       "notes": "MineIT Mobile resource icon art. Match the established Android resource icon language: centred isolated subject, strong silhouette, dark navy vignette, blue/cyan halo and cool rim glow; readable at 128x128. Generate/store a 1:1 native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-gold.png and a same-composition WebP at this key. Canonical PNG and WebP migrated from the existing MineIT Android resource artwork."
+    },
+    "massPerUnitKg": 0.1,
+    "densityKgPerM3": 3000,
+    "storageBuildingIds": [
+      "building-warehouse"
+    ],
+    "stockpileShape": null,
+    "fieldApprovalStatuses": {
+      "massPerUnitKg": "Approved",
+      "densityKgPerM3": "Approved",
+      "storageBuildingIds": "Approved",
+      "stockpileShape": "Not Reviewed"
     }
   },
   {
@@ -959,6 +1404,18 @@
       "status": "generated",
       "promptDescription": "1:1 MineIT Mobile resource icon for Platinum. Translate this resource's physical identity into a compact, instantly recognisable game inventory/resource icon: dense dark ore face with subtle bright platinum-group metallic grains and silvery inclusions, raw and unrefined. Match the established MineIT Android resource-art style: a single centred resource symbol or specimen, polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms, strong clean silhouette, object filling roughly 65-75% of the square, dark navy-to-black radial vignette background, soft electric-blue/cyan halo behind the subject, cool blue rim lighting, crisp white/specular highlights and a restrained luminous edge. Keep it highly readable at 128x128. This is stylised game icon art, not photorealism. Do not show a geological scene, embedded rock face, landscape, table, tray, crate, bottle, jar, machinery, people, UI, text, logo or border. Do not scatter multiple loose samples around the frame. For gases, liquids or diffuse resources, create a compact iconic visual form without using a container.",
       "notes": "MineIT Mobile resource icon art. Match the established Android resource icon language: centred isolated subject, strong silhouette, dark navy vignette, blue/cyan halo and cool rim glow; readable at 128x128. Generate/store a 1:1 native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-platinum.png and a same-composition WebP at this key. Canonical PNG and WebP migrated from the existing MineIT Android resource artwork."
+    },
+    "massPerUnitKg": 0.1,
+    "densityKgPerM3": 3000,
+    "storageBuildingIds": [
+      "building-warehouse"
+    ],
+    "stockpileShape": null,
+    "fieldApprovalStatuses": {
+      "massPerUnitKg": "Approved",
+      "densityKgPerM3": "Approved",
+      "storageBuildingIds": "Approved",
+      "stockpileShape": "Not Reviewed"
     }
   },
   {
@@ -985,6 +1442,18 @@
       "status": "generated",
       "promptDescription": "1:1 MineIT Mobile resource icon for Palladium. Translate this resource's physical identity into a compact, instantly recognisable game inventory/resource icon: dark sulphide-rich ore face with sparse pale silver-grey palladium-bearing metallic grains, raw unrefined texture. Match the established MineIT Android resource-art style: a single centred resource symbol or specimen, polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms, strong clean silhouette, object filling roughly 65-75% of the square, dark navy-to-black radial vignette background, soft electric-blue/cyan halo behind the subject, cool blue rim lighting, crisp white/specular highlights and a restrained luminous edge. Keep it highly readable at 128x128. This is stylised game icon art, not photorealism. Do not show a geological scene, embedded rock face, landscape, table, tray, crate, bottle, jar, machinery, people, UI, text, logo or border. Do not scatter multiple loose samples around the frame. For gases, liquids or diffuse resources, create a compact iconic visual form without using a container.",
       "notes": "MineIT Mobile resource icon art. Match the established Android resource icon language: centred isolated subject, strong silhouette, dark navy vignette, blue/cyan halo and cool rim glow; readable at 128x128. Generate/store a 1:1 native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-palladium.png and a same-composition WebP at this key. Canonical PNG and WebP migrated from the existing MineIT Android resource artwork."
+    },
+    "massPerUnitKg": 0.1,
+    "densityKgPerM3": 3000,
+    "storageBuildingIds": [
+      "building-warehouse"
+    ],
+    "stockpileShape": null,
+    "fieldApprovalStatuses": {
+      "massPerUnitKg": "Approved",
+      "densityKgPerM3": "Approved",
+      "storageBuildingIds": "Approved",
+      "stockpileShape": "Not Reviewed"
     }
   },
   {
@@ -1011,6 +1480,18 @@
       "status": "generated",
       "promptDescription": "1:1 MineIT Mobile resource icon for Diamond. Translate this resource's physical identity into a compact, instantly recognisable game inventory/resource icon: raw uncut diamond crystals embedded in dark kimberlite-like host rock, translucent octahedral faces, no jewellery. Match the established MineIT Android resource-art style: a single centred resource symbol or specimen, polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms, strong clean silhouette, object filling roughly 65-75% of the square, dark navy-to-black radial vignette background, soft electric-blue/cyan halo behind the subject, cool blue rim lighting, crisp white/specular highlights and a restrained luminous edge. Keep it highly readable at 128x128. This is stylised game icon art, not photorealism. Do not show a geological scene, embedded rock face, landscape, table, tray, crate, bottle, jar, machinery, people, UI, text, logo or border. Do not scatter multiple loose samples around the frame. For gases, liquids or diffuse resources, create a compact iconic visual form without using a container.",
       "notes": "MineIT Mobile resource icon art. Match the established Android resource icon language: centred isolated subject, strong silhouette, dark navy vignette, blue/cyan halo and cool rim glow; readable at 128x128. Generate/store a 1:1 native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-diamond.png and a same-composition WebP at this key. Canonical PNG and WebP migrated from the existing MineIT Android resource artwork."
+    },
+    "massPerUnitKg": 0.001,
+    "densityKgPerM3": 1500,
+    "storageBuildingIds": [
+      "building-warehouse"
+    ],
+    "stockpileShape": null,
+    "fieldApprovalStatuses": {
+      "massPerUnitKg": "Approved",
+      "densityKgPerM3": "Approved",
+      "storageBuildingIds": "Approved",
+      "stockpileShape": "Not Reviewed"
     }
   },
   {
@@ -1037,6 +1518,18 @@
       "status": "generated",
       "promptDescription": "1:1 MineIT Mobile resource icon for Ruby. Translate this resource's physical identity into a compact, instantly recognisable game inventory/resource icon: raw uncut ruby crystals embedded in pale rough host rock, deep red corundum faces, no jewellery. Match the established MineIT Android resource-art style: a single centred resource symbol or specimen, polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms, strong clean silhouette, object filling roughly 65-75% of the square, dark navy-to-black radial vignette background, soft electric-blue/cyan halo behind the subject, cool blue rim lighting, crisp white/specular highlights and a restrained luminous edge. Keep it highly readable at 128x128. This is stylised game icon art, not photorealism. Do not show a geological scene, embedded rock face, landscape, table, tray, crate, bottle, jar, machinery, people, UI, text, logo or border. Do not scatter multiple loose samples around the frame. For gases, liquids or diffuse resources, create a compact iconic visual form without using a container.",
       "notes": "MineIT Mobile resource icon art. Match the established Android resource icon language: centred isolated subject, strong silhouette, dark navy vignette, blue/cyan halo and cool rim glow; readable at 128x128. Generate/store a 1:1 native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-ruby.png and a same-composition WebP at this key. Canonical PNG and WebP migrated from the existing MineIT Android resource artwork."
+    },
+    "massPerUnitKg": 0.001,
+    "densityKgPerM3": 1800,
+    "storageBuildingIds": [
+      "building-warehouse"
+    ],
+    "stockpileShape": null,
+    "fieldApprovalStatuses": {
+      "massPerUnitKg": "Approved",
+      "densityKgPerM3": "Approved",
+      "storageBuildingIds": "Approved",
+      "stockpileShape": "Not Reviewed"
     }
   },
   {
@@ -1063,6 +1556,18 @@
       "status": "generated",
       "promptDescription": "1:1 MineIT Mobile resource icon for Sapphire. Translate this resource's physical identity into a compact, instantly recognisable game inventory/resource icon: raw uncut sapphire crystals embedded in rough host rock, deep blue corundum faces, no jewellery. Match the established MineIT Android resource-art style: a single centred resource symbol or specimen, polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms, strong clean silhouette, object filling roughly 65-75% of the square, dark navy-to-black radial vignette background, soft electric-blue/cyan halo behind the subject, cool blue rim lighting, crisp white/specular highlights and a restrained luminous edge. Keep it highly readable at 128x128. This is stylised game icon art, not photorealism. Do not show a geological scene, embedded rock face, landscape, table, tray, crate, bottle, jar, machinery, people, UI, text, logo or border. Do not scatter multiple loose samples around the frame. For gases, liquids or diffuse resources, create a compact iconic visual form without using a container.",
       "notes": "MineIT Mobile resource icon art. Match the established Android resource icon language: centred isolated subject, strong silhouette, dark navy vignette, blue/cyan halo and cool rim glow; readable at 128x128. Generate/store a 1:1 native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-sapphire.png and a same-composition WebP at this key. Canonical PNG and WebP migrated from the existing MineIT Android resource artwork."
+    },
+    "massPerUnitKg": 0.001,
+    "densityKgPerM3": 1800,
+    "storageBuildingIds": [
+      "building-warehouse"
+    ],
+    "stockpileShape": null,
+    "fieldApprovalStatuses": {
+      "massPerUnitKg": "Approved",
+      "densityKgPerM3": "Approved",
+      "storageBuildingIds": "Approved",
+      "stockpileShape": "Not Reviewed"
     }
   },
   {
@@ -1089,6 +1594,18 @@
       "status": "generated",
       "promptDescription": "1:1 MineIT Mobile resource icon for Emerald. Translate this resource's physical identity into a compact, instantly recognisable game inventory/resource icon: raw uncut emerald crystals embedded in pale schist-like host rock, vivid green beryl prisms, no jewellery. Match the established MineIT Android resource-art style: a single centred resource symbol or specimen, polished semi-realistic 3D/digital game art with simplified sculpted or faceted forms, strong clean silhouette, object filling roughly 65-75% of the square, dark navy-to-black radial vignette background, soft electric-blue/cyan halo behind the subject, cool blue rim lighting, crisp white/specular highlights and a restrained luminous edge. Keep it highly readable at 128x128. This is stylised game icon art, not photorealism. Do not show a geological scene, embedded rock face, landscape, table, tray, crate, bottle, jar, machinery, people, UI, text, logo or border. Do not scatter multiple loose samples around the frame. For gases, liquids or diffuse resources, create a compact iconic visual form without using a container.",
       "notes": "MineIT Mobile resource icon art. Match the established Android resource icon language: centred isolated subject, strong silhouette, dark navy vignette, blue/cyan halo and cool rim glow; readable at 128x128. Generate/store a 1:1 native lossless PNG at assets/art/universe/resources/Originals/mobile-resource-emerald.png and a same-composition WebP at this key. Canonical PNG and WebP migrated from the existing MineIT Android resource artwork."
+    },
+    "massPerUnitKg": 0.001,
+    "densityKgPerM3": 1400,
+    "storageBuildingIds": [
+      "building-warehouse"
+    ],
+    "stockpileShape": null,
+    "fieldApprovalStatuses": {
+      "massPerUnitKg": "Approved",
+      "densityKgPerM3": "Approved",
+      "storageBuildingIds": "Approved",
+      "stockpileShape": "Not Reviewed"
     }
   }
 ]
