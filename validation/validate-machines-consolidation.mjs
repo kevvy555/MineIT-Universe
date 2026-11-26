@@ -95,13 +95,35 @@ for (const machine of machines) {
   }
   assert.ok(bom.goodUnitYield === null ||
     (bom.goodUnitYield > 0 && bom.goodUnitYield <= 1));
+  const approvedQuarry = machine.id === "machine-drill-machine" &&
+    machine.mobileMineInitialBalance?.scope === "quarry";
   const delegatedMobile = machine.mobileMineInitialBalance?.approval === "Approved" &&
-    machine.mobileMineInitialBalance.scope === "mine-and-connected-power";
+    (machine.mobileMineInitialBalance.scope === "mine-and-connected-power" || approvedQuarry);
   if (Number.isFinite(bom.manufacturerCostCC)) priceProposals++;
   if (delegatedMobile) {
     mobileApproved++;
-    assert.match(machine.manufacturing.approvedPriceEvidence || "", /Delegated user approval, 22 November 2026/);
-    assert.match(machine.manufacturing.approvedMassEvidence || "", /Delegated user approval, 22 November 2026/);
+    assert.match(machine.manufacturing.approvedPriceEvidence || "", approvedQuarry
+      ? /User approval, 26 November 2026: MineIT-Android #571\/#572/ : /Delegated user approval, 22 November 2026/);
+    assert.match(machine.manufacturing.approvedMassEvidence || "", approvedQuarry
+      ? /User approval, 26 November 2026: MineIT-Android #571\/#572/ : /Delegated user approval, 22 November 2026/);
+    if (approvedQuarry) {
+      assert.equal(bom.manufacturerCostCC, 263722.38);
+      assert.equal(bom.manufacturerQuoteCC, 329700);
+      assert.equal(bom.finishedMassKg, 3787.5);
+      assert.equal(machine.operating.ratedCapacity, 15);
+      assert.equal(machine.operating.ratedCapacityUnit, "raw-resource-units-per-hour");
+      assert.equal(machine.operating.powerUnits, 3);
+      assert.equal(machine.operating.idlePowerUnits, 0.15);
+      assert.equal(machine.operating.foundingCargoUnits, 38);
+      assert.deepEqual(machine.operating.operatingConsumables, [
+        { resourceId: "substance-refined-lubricant", quantityPerOperatingHour: 0.1, unit: "kg" },
+        { resourceId: "substance-coolant", quantityPerOperatingHour: 0.2, unit: "kg" }
+      ]);
+      assert.equal(machine.servicePartRequirements.reduce((n, slot) => n + slot.quantity, 0), 39);
+      for (const field of ["finishedPartInputs", "directMaterialInputs", "nestedMachineInputs",
+        "assemblyHours", "factoryHours", "testHours", "goodUnitYield"])
+        assert.equal(machine.fieldApprovalStatuses["manufacturing." + field], "Proposed");
+    }
     assert.ok(Number.isFinite(bom.manufacturerCostCC) && bom.manufacturerCostCC > 0);
     assert.ok(Number.isFinite(bom.manufacturerQuoteCC) && bom.manufacturerQuoteCC >= bom.manufacturerCostCC);
     assert.ok(Number.isFinite(bom.finishedMassKg) && bom.finishedMassKg > 0);
@@ -209,7 +231,7 @@ assert.equal(pending, 14, "14 deliberate compatibility reviews must survive");
 assert.equal(fullyApprovedBoms, 5, "Five approved accommodation physical BOMs must survive");
 assert.equal(blocked, 7, "Seven remaining truly blocked Machine design records survive; three priced generators are In Review");
 assert.equal(priceProposals, 39, "35 original numerical CC proposals plus 4 new user-approved Mobile baselines");
-assert.equal(mobileApproved, 14, "14 user-delegated initial Mobile Machine approvals verified with explicit price/mass evidence");
+assert.equal(mobileApproved, 15, "15 approved initial Mobile Machine baselines verified with explicit price/mass evidence");
 for (const row of reference.machines) assert.ok(ids.machines.has(row.id));
 const aliases = new Map(machines.filter(m => m.provenance?.androidDiscoveryWorkingId)
   .map(m => [m.provenance.androidDiscoveryWorkingId, m.id]));
@@ -242,4 +264,4 @@ const broken = { ...machines.find(m => m.amenityProfile),
 assert.throws(() => approvalSummary("machines", broken, flatten(broken), catalogue),
   /disagrees|cannot approve|requires approved price evidence/,
   "Provisional quote must never be treated as approved");
-console.log("Machines consolidated: 46 canonical, 30 review fields, 5 approved physical BOMs, 39 numeric CC scenarios (14 user-delegated Mobile baseline approvals), 7 blocked designs, 14 pending compatibility edges.");
+console.log("Machines consolidated: 46 canonical, 30 review fields, 5 approved physical BOMs, 39 numeric CC scenarios (15 user-approved Mobile baseline approvals), 7 blocked designs, 14 pending compatibility edges.");

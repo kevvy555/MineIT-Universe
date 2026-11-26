@@ -1458,14 +1458,32 @@
       "finishedMassKg": 3787.5,
       "manufacturerCostCC": 263722.38,
       "manufacturerQuoteCC": 329700,
-      "reviewBasis": "Unapproved Android derived-cost scenario; quantities, ratings and CC require Building-led review.",
-      "unresolvedDesignConstraints": "Head wear/cut rate, torque and drill capacity TBD"
+      "reviewBasis": "User-approved initial MineIT Mobile Quarry numeric operating and commercial baseline, 26 November 2026 (Android Feature #571 / Story #572). Manufacturing BOM inputs, times, yield and physical engineering remain proposed or unresolved; approved reference cost, quote and mass are for game balance.",
+      "unresolvedDesignConstraints": "Detailed head wear, torque and physical engineering remain unqualified; initial game operating ratings are approved.",
+      "approvedPriceEvidence": "User approval, 26 November 2026: MineIT-Android #571/#572, A08–A10; manufacturer reference cost and quote only, not a manufacturing recipe or player-specific quote.",
+      "approvedMassEvidence": "User approval, 26 November 2026: MineIT-Android #571/#572, A06–A07; game reference mass and freight, not certified engineering mass."
     },
     "operating": {
-      "ratedCapacity": null,
-      "powerUnits": null,
+      "ratedCapacity": 15,
+      "powerUnits": 3,
       "footprintM2": null,
-      "housingTechTier": null
+      "housingTechTier": null,
+      "ratedCapacityUnit": "raw-resource-units-per-hour",
+      "idlePowerUnits": 0.15,
+      "operatingConsumables": [
+        {
+          "resourceId": "substance-refined-lubricant",
+          "quantityPerOperatingHour": 0.1,
+          "unit": "kg"
+        },
+        {
+          "resourceId": "substance-coolant",
+          "quantityPerOperatingHour": 0.2,
+          "unit": "kg"
+        }
+      ],
+      "consumableUnitPolicy": "physical units consumed only when operating; machine service Parts tracked through condition/wear, never charged as hourly material",
+      "foundingCargoUnits": 38
     },
     "pendingPartCompatibility": [],
     "fieldApprovalStatuses": {
@@ -1476,21 +1494,26 @@
       "manufacturing.factoryHours": "Proposed",
       "manufacturing.testHours": "Proposed",
       "manufacturing.goodUnitYield": "Proposed",
-      "manufacturing.finishedMassKg": "Proposed",
-      "manufacturing.manufacturerCostCC": "Proposed",
-      "manufacturing.manufacturerQuoteCC": "Proposed",
+      "manufacturing.finishedMassKg": "Approved",
+      "manufacturing.manufacturerCostCC": "Approved",
+      "manufacturing.manufacturerQuoteCC": "Approved",
       "partIds": "Approved",
       "pendingPartCompatibility": "Approved",
       "outputSummary": "In Review",
       "inputSummary": "In Review",
-      "operating.ratedCapacity": "Not Reviewed",
-      "operating.powerUnits": "Not Reviewed",
+      "operating.ratedCapacity": "Approved",
+      "operating.powerUnits": "Approved",
       "operating.footprintM2": "Not Reviewed",
       "operating.housingTechTier": "Not Reviewed",
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
-      "conditionModel": "Approved"
+      "conditionModel": "Approved",
+      "operating.ratedCapacityUnit": "Approved",
+      "operating.idlePowerUnits": "Approved",
+      "operating.operatingConsumables": "Approved",
+      "operating.consumableUnitPolicy": "Approved",
+      "operating.foundingCargoUnits": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -1574,6 +1597,11 @@
       "criticalFailureDisables": true,
       "excludesNonOperationalCapability": true,
       "approval": "Approved"
+    },
+    "mobileMineInitialBalance": {
+      "approval": "Approved",
+      "basis": "Explicit user approval 26 November 2026, MineIT-Android #571/#572 A01–A10; initial gameplay balance, not certified engineering.",
+      "scope": "quarry"
     }
   },
   {
