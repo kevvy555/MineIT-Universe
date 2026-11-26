@@ -158,7 +158,7 @@ for (const building of buildings) {
 }
 
 assert.deepEqual(buildingById.get('building-collection-camp').levelProfiles.map(profile => profile.level), [1]);
-assert.deepEqual(buildingById.get('building-stockpile').levelProfiles.map(profile => profile.level), [1]);
+assert.deepEqual(buildingById.get('building-stockpile').levelProfiles.map(profile => profile.level), [1,2,3,4,5,6,7,8,9,10]);
 assert.deepEqual(buildingById.get('building-accommodation-building').levelProfiles.map(profile => profile.level), [1]);
 assert.equal(buildingById.get('building-collection-camp').equipmentConfigurations[0].equipment
   .filter(item => item.role === 'required').length, 0);
