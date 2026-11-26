@@ -124,7 +124,8 @@
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
-      "conditionModel": "Approved"
+      "conditionModel": "Approved",
+      "storageVolumeM3": "Not Reviewed"
     },
     "approval": "Blocked",
     "servicePartRequirements": [
@@ -196,7 +197,8 @@
       "criticalFailureDisables": true,
       "excludesNonOperationalCapability": true,
       "approval": "Approved"
-    }
+    },
+    "storageVolumeM3": null
   },
   {
     "id": "machine-ship-scanner",
@@ -307,7 +309,8 @@
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
-      "conditionModel": "Approved"
+      "conditionModel": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -369,7 +372,8 @@
       "criticalFailureDisables": true,
       "excludesNonOperationalCapability": true,
       "approval": "Approved"
-    }
+    },
+    "storageVolumeM3": 3
   },
   {
     "id": "machine-substance-analyser",
@@ -493,7 +497,8 @@
       "operating.idlePowerUnits": "Approved",
       "operating.operatingConsumables": "Approved",
       "operating.consumableUnitPolicy": "Approved",
-      "operating.foundingCargoUnits": "Approved"
+      "operating.foundingCargoUnits": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -583,7 +588,8 @@
       "approval": "Approved",
       "basis": "AI-calibrated initial Mobile game balance authorised by user 22 Nov 2026; future player review/tuning allowed; not a certified engineering specification",
       "scope": "mine-and-connected-power"
-    }
+    },
+    "storageVolumeM3": 1.5
   },
   {
     "id": "machine-ship-reactor",
@@ -723,7 +729,8 @@
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
-      "conditionModel": "Approved"
+      "conditionModel": "Approved",
+      "storageVolumeM3": "Not Reviewed"
     },
     "approval": "Blocked",
     "servicePartRequirements": [
@@ -811,7 +818,8 @@
       "criticalFailureDisables": true,
       "excludesNonOperationalCapability": true,
       "approval": "Approved"
-    }
+    },
+    "storageVolumeM3": null
   },
   {
     "id": "machine-ship-life-support",
@@ -925,7 +933,8 @@
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
-      "conditionModel": "Approved"
+      "conditionModel": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -996,7 +1005,8 @@
       "criticalFailureDisables": true,
       "excludesNonOperationalCapability": true,
       "approval": "Approved"
-    }
+    },
+    "storageVolumeM3": 5
   },
   {
     "id": "machine-ship-computer",
@@ -1095,7 +1105,8 @@
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
-      "conditionModel": "Approved"
+      "conditionModel": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -1148,7 +1159,8 @@
       "criticalFailureDisables": true,
       "excludesNonOperationalCapability": true,
       "approval": "Approved"
-    }
+    },
+    "storageVolumeM3": 2
   },
   {
     "id": "machine-ship-refinery-unit",
@@ -1286,7 +1298,8 @@
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
-      "conditionModel": "Approved"
+      "conditionModel": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -1375,7 +1388,8 @@
       "criticalFailureDisables": true,
       "excludesNonOperationalCapability": true,
       "approval": "Approved"
-    }
+    },
+    "storageVolumeM3": 24
   },
   {
     "id": "machine-drill-machine",
@@ -1513,7 +1527,8 @@
       "operating.idlePowerUnits": "Approved",
       "operating.operatingConsumables": "Approved",
       "operating.consumableUnitPolicy": "Approved",
-      "operating.foundingCargoUnits": "Approved"
+      "operating.foundingCargoUnits": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -1602,7 +1617,8 @@
       "approval": "Approved",
       "basis": "Explicit user approval 26 November 2026, MineIT-Android #571/#572 A01–A10; initial gameplay balance, not certified engineering.",
       "scope": "quarry"
-    }
+    },
+    "storageVolumeM3": 18
   },
   {
     "id": "machine-conveyor-machine",
@@ -1725,7 +1741,8 @@
       "operating.idlePowerUnits": "Approved",
       "operating.operatingConsumables": "Approved",
       "operating.consumableUnitPolicy": "Approved",
-      "operating.foundingCargoUnits": "Approved"
+      "operating.foundingCargoUnits": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -1791,7 +1808,8 @@
       "approval": "Approved",
       "basis": "AI-calibrated initial Mobile game balance authorised by user 22 Nov 2026; future player review/tuning allowed; not a certified engineering specification",
       "scope": "mine-and-connected-power"
-    }
+    },
+    "storageVolumeM3": 20
   },
   {
     "id": "machine-mine-ventilation",
@@ -1909,7 +1927,8 @@
       "operating.idlePowerUnits": "Approved",
       "operating.operatingConsumables": "Approved",
       "operating.consumableUnitPolicy": "Approved",
-      "operating.foundingCargoUnits": "Approved"
+      "operating.foundingCargoUnits": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -1967,7 +1986,8 @@
       "approval": "Approved",
       "basis": "AI-calibrated initial Mobile game balance authorised by user 22 Nov 2026; future player review/tuning allowed; not a certified engineering specification",
       "scope": "mine-and-connected-power"
-    }
+    },
+    "storageVolumeM3": 8
   },
   {
     "id": "machine-crusher-machine",
@@ -2077,7 +2097,8 @@
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
-      "conditionModel": "Approved"
+      "conditionModel": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -2139,7 +2160,8 @@
       "criticalFailureDisables": true,
       "excludesNonOperationalCapability": true,
       "approval": "Approved"
-    }
+    },
+    "storageVolumeM3": 25
   },
   {
     "id": "machine-smelter-machine",
@@ -2262,7 +2284,8 @@
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
-      "conditionModel": "Approved"
+      "conditionModel": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -2333,7 +2356,8 @@
       "criticalFailureDisables": true,
       "excludesNonOperationalCapability": true,
       "approval": "Approved"
-    }
+    },
+    "storageVolumeM3": 28
   },
   {
     "id": "machine-crude-chemical-battery",
@@ -2464,7 +2488,8 @@
       "operating.consumableUnitPolicy": "Approved",
       "operating.environmentalGate": "Approved",
       "operating.storedEnergyCapacityPowerUnitHours": "Approved",
-      "operating.foundingCargoUnits": "Approved"
+      "operating.foundingCargoUnits": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -2521,7 +2546,8 @@
       "approval": "Approved",
       "basis": "AI-calibrated initial Mobile game balance authorised by user 22 Nov 2026; future player review/tuning allowed; not a certified engineering specification",
       "scope": "mine-and-connected-power"
-    }
+    },
+    "storageVolumeM3": 5
   },
   {
     "id": "machine-wind-generator",
@@ -2644,7 +2670,8 @@
       "operating.operatingConsumables": "Approved",
       "operating.consumableUnitPolicy": "Approved",
       "operating.environmentalGate": "Approved",
-      "operating.foundingCargoUnits": "Approved"
+      "operating.foundingCargoUnits": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -2710,7 +2737,8 @@
       "approval": "Approved",
       "basis": "AI-calibrated initial Mobile game balance authorised by user 22 Nov 2026; future player review/tuning allowed; not a certified engineering specification",
       "scope": "mine-and-connected-power"
-    }
+    },
+    "storageVolumeM3": 30
   },
   {
     "id": "machine-water-wheel-generator",
@@ -2829,7 +2857,8 @@
       "operating.operatingConsumables": "Approved",
       "operating.consumableUnitPolicy": "Approved",
       "operating.environmentalGate": "Approved",
-      "operating.foundingCargoUnits": "Approved"
+      "operating.foundingCargoUnits": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -2895,7 +2924,8 @@
       "approval": "Approved",
       "basis": "AI-calibrated initial Mobile game balance authorised by user 22 Nov 2026; future player review/tuning allowed; not a certified engineering specification",
       "scope": "mine-and-connected-power"
-    }
+    },
+    "storageVolumeM3": 32
   },
   {
     "id": "machine-thermoelectric-trickler",
@@ -3039,7 +3069,8 @@
       "operating.operatingConsumables": "Approved",
       "operating.consumableUnitPolicy": "Approved",
       "operating.generatorFuelProfile": "Approved",
-      "operating.foundingCargoUnits": "Approved"
+      "operating.foundingCargoUnits": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -3105,7 +3136,8 @@
       "approval": "Approved",
       "basis": "AI-calibrated initial Mobile game balance authorised by user 22 Nov 2026; future player review/tuning allowed; not a certified engineering specification",
       "scope": "mine-and-connected-power"
-    }
+    },
+    "storageVolumeM3": 4
   },
   {
     "id": "machine-solar-thermal-generator",
@@ -3253,7 +3285,8 @@
       "operating.operatingConsumables": "Approved",
       "operating.consumableUnitPolicy": "Approved",
       "operating.environmentalGate": "Approved",
-      "operating.foundingCargoUnits": "Approved"
+      "operating.foundingCargoUnits": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -3337,7 +3370,8 @@
       "approval": "Approved",
       "basis": "AI-calibrated initial Mobile game balance authorised by user 22 Nov 2026; future player review/tuning allowed; not a certified engineering specification",
       "scope": "mine-and-connected-power"
-    }
+    },
+    "storageVolumeM3": 50
   },
   {
     "id": "machine-power-distribution-system",
@@ -3449,7 +3483,8 @@
       "operating.idlePowerUnits": "Approved",
       "operating.operatingConsumables": "Approved",
       "operating.consumableUnitPolicy": "Approved",
-      "operating.foundingCargoUnits": "Approved"
+      "operating.foundingCargoUnits": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -3507,7 +3542,8 @@
       "approval": "Approved",
       "basis": "AI-calibrated initial Mobile game balance authorised by user 22 Nov 2026; future player review/tuning allowed; not a certified engineering specification",
       "scope": "mine-and-connected-power"
-    }
+    },
+    "storageVolumeM3": 12
   },
   {
     "id": "machine-life-support-machine",
@@ -3617,7 +3653,8 @@
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
-      "conditionModel": "Approved"
+      "conditionModel": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -3679,7 +3716,8 @@
       "criticalFailureDisables": true,
       "excludesNonOperationalCapability": true,
       "approval": "Approved"
-    }
+    },
+    "storageVolumeM3": 6
   },
   {
     "id": "machine-climate-control-machine",
@@ -3803,7 +3841,8 @@
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
-      "conditionModel": "Approved"
+      "conditionModel": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -3865,7 +3904,8 @@
       "criticalFailureDisables": true,
       "excludesNonOperationalCapability": true,
       "approval": "Approved"
-    }
+    },
+    "storageVolumeM3": 10
   },
   {
     "id": "machine-irrigation-system",
@@ -3980,7 +4020,8 @@
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
-      "conditionModel": "Approved"
+      "conditionModel": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -4042,7 +4083,8 @@
       "criticalFailureDisables": true,
       "excludesNonOperationalCapability": true,
       "approval": "Approved"
-    }
+    },
+    "storageVolumeM3": 12
   },
   {
     "id": "machine-growth-management-system",
@@ -4157,7 +4199,8 @@
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
-      "conditionModel": "Approved"
+      "conditionModel": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -4219,7 +4262,8 @@
       "criticalFailureDisables": true,
       "excludesNonOperationalCapability": true,
       "approval": "Approved"
-    }
+    },
+    "storageVolumeM3": 5
   },
   {
     "id": "machine-pump-machine",
@@ -4345,7 +4389,8 @@
       "operating.idlePowerUnits": "Approved",
       "operating.operatingConsumables": "Approved",
       "operating.consumableUnitPolicy": "Approved",
-      "operating.foundingCargoUnits": "Approved"
+      "operating.foundingCargoUnits": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -4413,7 +4458,8 @@
       "approval": "Approved",
       "basis": "AI-calibrated initial Mobile game balance authorised by user 22 Nov 2026; future player review/tuning allowed; not a certified engineering specification",
       "scope": "mine-and-connected-power"
-    }
+    },
+    "storageVolumeM3": 12
   },
   {
     "id": "machine-filtration-machine",
@@ -4535,7 +4581,8 @@
       "operating.idlePowerUnits": "Approved",
       "operating.operatingConsumables": "Approved",
       "operating.consumableUnitPolicy": "Approved",
-      "operating.foundingCargoUnits": "Approved"
+      "operating.foundingCargoUnits": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -4616,7 +4663,8 @@
       "approval": "Approved",
       "basis": "AI-calibrated initial Mobile game balance authorised by user 22 Nov 2026; future player review/tuning allowed; not a certified engineering specification",
       "scope": "mine-and-connected-power"
-    }
+    },
+    "storageVolumeM3": 10
   },
   {
     "id": "machine-research-computer",
@@ -4725,7 +4773,8 @@
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
-      "conditionModel": "Approved"
+      "conditionModel": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -4787,7 +4836,8 @@
       "criticalFailureDisables": true,
       "excludesNonOperationalCapability": true,
       "approval": "Approved"
-    }
+    },
+    "storageVolumeM3": 4
   },
   {
     "id": "machine-fabrication-machine",
@@ -4907,7 +4957,8 @@
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
-      "conditionModel": "Approved"
+      "conditionModel": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -4970,7 +5021,8 @@
       "criticalFailureDisables": true,
       "excludesNonOperationalCapability": true,
       "approval": "Approved"
-    }
+    },
+    "storageVolumeM3": 22
   },
   {
     "id": "machine-assembly-crane",
@@ -5081,7 +5133,8 @@
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
-      "conditionModel": "Approved"
+      "conditionModel": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -5152,7 +5205,8 @@
       "criticalFailureDisables": true,
       "excludesNonOperationalCapability": true,
       "approval": "Approved"
-    }
+    },
+    "storageVolumeM3": 80
   },
   {
     "id": "machine-welding-machine",
@@ -5275,7 +5329,8 @@
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
-      "conditionModel": "Approved"
+      "conditionModel": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -5337,7 +5392,8 @@
       "criticalFailureDisables": true,
       "excludesNonOperationalCapability": true,
       "approval": "Approved"
-    }
+    },
+    "storageVolumeM3": 8
   },
   {
     "id": "machine-crude-steam-piston-generator",
@@ -5475,7 +5531,8 @@
       "operating.operatingConsumables": "Approved",
       "operating.consumableUnitPolicy": "Approved",
       "operating.generatorFuelProfile": "Approved",
-      "operating.foundingCargoUnits": "Approved"
+      "operating.foundingCargoUnits": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -5559,7 +5616,8 @@
       "approval": "Approved",
       "basis": "AI-calibrated initial Mobile game balance authorised by user 22 Nov 2026; future player review/tuning allowed; not a certified engineering specification",
       "scope": "mine-and-connected-power"
-    }
+    },
+    "storageVolumeM3": 32
   },
   {
     "id": "machine-crude-combustion-generator",
@@ -5696,7 +5754,8 @@
       "operating.operatingConsumables": "Approved",
       "operating.consumableUnitPolicy": "Approved",
       "operating.generatorFuelProfile": "Approved",
-      "operating.foundingCargoUnits": "Approved"
+      "operating.foundingCargoUnits": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -5771,7 +5830,8 @@
       "approval": "Approved",
       "basis": "AI-calibrated initial Mobile game balance authorised by user 22 Nov 2026; future player review/tuning allowed; not a certified engineering specification",
       "scope": "mine-and-connected-power"
-    }
+    },
+    "storageVolumeM3": 24
   },
   {
     "id": "machine-livestock-handling-system",
@@ -5882,7 +5942,8 @@
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
-      "conditionModel": "Approved"
+      "conditionModel": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -5953,7 +6014,8 @@
       "criticalFailureDisables": true,
       "excludesNonOperationalCapability": true,
       "approval": "Approved"
-    }
+    },
+    "storageVolumeM3": 15
   },
   {
     "id": "machine-colony-operations-computer",
@@ -6053,7 +6115,8 @@
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
-      "conditionModel": "Approved"
+      "conditionModel": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -6106,7 +6169,8 @@
       "criticalFailureDisables": true,
       "excludesNonOperationalCapability": true,
       "approval": "Approved"
-    }
+    },
+    "storageVolumeM3": 4
   },
   {
     "id": "machine-bulk-stacker",
@@ -6217,7 +6281,8 @@
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
-      "conditionModel": "Approved"
+      "conditionModel": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -6288,7 +6353,8 @@
       "criticalFailureDisables": true,
       "excludesNonOperationalCapability": true,
       "approval": "Approved"
-    }
+    },
+    "storageVolumeM3": 45
   },
   {
     "id": "machine-warehouse-handler",
@@ -6399,7 +6465,8 @@
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
-      "conditionModel": "Approved"
+      "conditionModel": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -6470,7 +6537,8 @@
       "criticalFailureDisables": true,
       "excludesNonOperationalCapability": true,
       "approval": "Approved"
-    }
+    },
+    "storageVolumeM3": 12
   },
   {
     "id": "machine-conventional-electric-motor",
@@ -6562,7 +6630,8 @@
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
-      "conditionModel": "Approved"
+      "conditionModel": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -6614,7 +6683,8 @@
       "criticalFailureDisables": true,
       "excludesNonOperationalCapability": true,
       "approval": "Approved"
-    }
+    },
+    "storageVolumeM3": 0.12
   },
   {
     "id": "machine-rare-earth-permanent-magnet-motor",
@@ -6711,7 +6781,8 @@
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
-      "conditionModel": "Approved"
+      "conditionModel": "Approved",
+      "storageVolumeM3": "Not Reviewed"
     },
     "approval": "Blocked",
     "servicePartRequirements": [
@@ -6763,7 +6834,8 @@
       "criticalFailureDisables": true,
       "excludesNonOperationalCapability": true,
       "approval": "Approved"
-    }
+    },
+    "storageVolumeM3": null
   },
   {
     "id": "machine-vector-exchange-drive",
@@ -6841,7 +6913,8 @@
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
-      "conditionModel": "Approved"
+      "conditionModel": "Approved",
+      "storageVolumeM3": "Not Reviewed"
     },
     "approval": "Blocked",
     "servicePartRequirements": [
@@ -6911,7 +6984,8 @@
       "criticalFailureDisables": true,
       "excludesNonOperationalCapability": true,
       "approval": "Approved"
-    }
+    },
+    "storageVolumeM3": null
   },
   {
     "id": "machine-personal-recreation-terminal",
@@ -7012,7 +7086,8 @@
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
-      "conditionModel": "Approved"
+      "conditionModel": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -7037,7 +7112,8 @@
       "criticalFailureDisables": true,
       "excludesNonOperationalCapability": true,
       "approval": "Approved"
-    }
+    },
+    "storageVolumeM3": 0.12
   },
   {
     "id": "machine-communal-fitness-leisure-system",
@@ -7148,7 +7224,8 @@
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
-      "conditionModel": "Approved"
+      "conditionModel": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -7192,7 +7269,8 @@
       "criticalFailureDisables": true,
       "excludesNonOperationalCapability": true,
       "approval": "Approved"
-    }
+    },
+    "storageVolumeM3": 2
   },
   {
     "id": "machine-advanced-entertainment-system",
@@ -7308,7 +7386,8 @@
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
-      "conditionModel": "Approved"
+      "conditionModel": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -7360,7 +7439,8 @@
       "criticalFailureDisables": true,
       "excludesNonOperationalCapability": true,
       "approval": "Approved"
-    }
+    },
+    "storageVolumeM3": 2
   },
   {
     "id": "machine-immersive-recreation-suite",
@@ -7490,7 +7570,8 @@
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
-      "conditionModel": "Approved"
+      "conditionModel": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -7560,7 +7641,8 @@
       "criticalFailureDisables": true,
       "excludesNonOperationalCapability": true,
       "approval": "Approved"
-    }
+    },
+    "storageVolumeM3": 5
   },
   {
     "id": "machine-integrated-wellness-leisure-system",
@@ -7699,7 +7781,8 @@
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
-      "conditionModel": "Approved"
+      "conditionModel": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -7779,7 +7862,8 @@
       "criticalFailureDisables": true,
       "excludesNonOperationalCapability": true,
       "approval": "Approved"
-    }
+    },
+    "storageVolumeM3": 12
   },
   {
     "entityType": "Machine",
@@ -8036,13 +8120,15 @@
       "operating.operatingConsumables": "Approved",
       "operating.consumableUnitPolicy": "Approved",
       "operating.configurationProfiles": "Approved",
-      "operating.foundingCargoUnits": "Approved"
+      "operating.foundingCargoUnits": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "mobileMineInitialBalance": {
       "approval": "Approved",
       "basis": "AI-calibrated initial Mobile game balance authorised by user 22 Nov 2026; future player review/tuning allowed; not a certified engineering specification",
       "scope": "mine-and-connected-power"
-    }
+    },
+    "storageVolumeM3": 30
   },
   {
     "entityType": "Machine",
@@ -8225,8 +8311,10 @@
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
-      "conditionModel": "Approved"
-    }
+      "conditionModel": "Approved",
+      "storageVolumeM3": "Not Reviewed"
+    },
+    "storageVolumeM3": null
   },
   {
     "entityType": "Machine",
@@ -8386,8 +8474,10 @@
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
-      "conditionModel": "Approved"
-    }
+      "conditionModel": "Approved",
+      "storageVolumeM3": "Not Reviewed"
+    },
+    "storageVolumeM3": null
   },
   {
     "id": "machine-haulage-truck",
@@ -8455,7 +8545,8 @@
       "servicePartRequirements": "Not Reviewed",
       "operatingFunctions": "Not Reviewed",
       "capabilityConfigurations": "Not Reviewed",
-      "conditionModel": "Not Reviewed"
+      "conditionModel": "Not Reviewed",
+      "storageVolumeM3": "Not Reviewed"
     },
     "approval": "Not Reviewed",
     "servicePartRequirements": [],
@@ -8470,6 +8561,7 @@
       "criticalFailureDisables": true,
       "excludesNonOperationalCapability": true,
       "approval": "Approved"
-    }
+    },
+    "storageVolumeM3": null
   }
 ]
