@@ -103,10 +103,12 @@ for (const machine of machines) {
   if (Number.isFinite(bom.manufacturerCostCC)) priceProposals++;
   if (delegatedMobile) {
     mobileApproved++;
-    assert.match(machine.manufacturing.approvedPriceEvidence || "", approvedQuarry
-      ? /User approval, 26 November 2026: MineIT-Android #571\/#572/ : approvedStorage ? /Delegated continuation, 26 November 2026: MineIT-Android #580/ : approvedStorage ? /Delegated continuation, 26 November 2026: MineIT-Android #580/ : /Delegated user approval, 22 November 2026/);
-    assert.match(machine.manufacturing.approvedMassEvidence || "", approvedQuarry
-      ? /User approval, 26 November 2026: MineIT-Android #571\/#572/ : /Delegated user approval, 22 November 2026/);
+    const evidencePattern = approvedQuarry
+      ? /User approval, 26 November 2026: MineIT-Android #571\/#572/
+      : approvedStorage ? /Delegated continuation, 26 November 2026: MineIT-Android #580/ 
+      : /Delegated user approval, 22 November 2026/;
+    assert.match(machine.manufacturing.approvedPriceEvidence || "", evidencePattern);
+    assert.match(machine.manufacturing.approvedMassEvidence || "", evidencePattern);
     if (approvedStorage) {
       assert.equal(bom.finishedMassKg, 2659.7);
       assert.equal(bom.manufacturerCostCC, 213564.63);
