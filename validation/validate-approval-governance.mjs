@@ -64,11 +64,11 @@ const partRequired = partDefinitions.filter(d => d.requiresApproval).map(d => d.
 assert.deepEqual(new Set(partRequired), new Set([
   "partRole", "finishedUnitCount", "finishedUnitDescription", "materialInputs",
   "planningReference.finishedMassKg", "planningReference.manufacturerCostCC",
-  "planningReference.baseManufacturerQuoteCC", "manufacturingRequirements", "wearProfile"
+  "planningReference.baseManufacturerQuoteCC", "manufacturingRequirements", "wearProfile", "storageVolumeM3"
 ]));
 assert.ok(!partDefinitions.some(d => d.fieldKey === "materialApprovalStatus"),
   "Old Part-specific approval column must be retired from the shared registry");
-assert.equal(partDefinitions.length, 22,
+assert.equal(partDefinitions.length, 23,
   "The Parts review table only exposes necessary designer-facing columns");
 const excluded = [
   "massReview", "partImage", "unresolvedMaterialInputs",
@@ -131,8 +131,8 @@ assert.throws(() => approvalSummary("parts", incomplete, battery.fields, catalog
   /missing or invalid explicit approval/,
   "A missing field decision must fail rather than silently inheriting old approval");
 const machineDefinitions = definitions.filter(d => d.table === "machines");
-assert.equal(machineDefinitions.length, 30,
-  "Machine review has 30 selectable columns including service Parts, functions, configurations and condition");
+assert.equal(machineDefinitions.length, 31,
+  "Machine review has 31 selectable columns including service Parts, functions, configurations and condition");
 assert.deepEqual(machineDefinitions.filter(d => d.fieldKey.startsWith("image."))
   .map(d => d.fieldKey), ["image.generated"]);
 assert.ok(!machineDefinitions.some(d => d.fieldKey.startsWith("review.") ||
