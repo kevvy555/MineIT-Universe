@@ -80,7 +80,8 @@
       "planningReference.manufacturerCostCC": "Approved",
       "planningReference.baseManufacturerQuoteCC": "Approved",
       "manufacturingRequirements": "Approved",
-      "wearProfile": "Approved"
+      "wearProfile": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "manufacturingRequirements": {
       "requiredMachineIds": [
@@ -113,7 +114,8 @@
     "mobileMineInitialBalance": {
       "approval": "Approved",
       "basis": "Existing reference quote/mass accepted as initial Mobile baseline 22 Nov 2026; later tuning permitted"
-    }
+    },
+    "storageVolumeM3": 0.06
   },
   {
     "id": "part-power-electronics",
@@ -240,7 +242,8 @@
       "planningReference.manufacturerCostCC": "Approved",
       "planningReference.baseManufacturerQuoteCC": "Approved",
       "manufacturingRequirements": "Approved",
-      "wearProfile": "Approved"
+      "wearProfile": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "manufacturingRequirements": {
       "requiredMachineIds": [
@@ -272,7 +275,8 @@
     "mobileMineInitialBalance": {
       "approval": "Approved",
       "basis": "Existing reference quote/mass accepted as initial Mobile baseline 22 Nov 2026; later tuning permitted"
-    }
+    },
+    "storageVolumeM3": 0.025
   },
   {
     "id": "part-mechanical-parts",
@@ -377,7 +381,8 @@
       "planningReference.manufacturerCostCC": "Approved",
       "planningReference.baseManufacturerQuoteCC": "Approved",
       "manufacturingRequirements": "Approved",
-      "wearProfile": "Approved"
+      "wearProfile": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "manufacturingRequirements": {
       "requiredMachineIds": [
@@ -409,7 +414,8 @@
     "mobileMineInitialBalance": {
       "approval": "Approved",
       "basis": "Existing reference quote/mass accepted as initial Mobile baseline 22 Nov 2026; later tuning permitted"
-    }
+    },
+    "storageVolumeM3": 0.05
   },
   {
     "id": "part-control-and-sensor-parts",
@@ -532,7 +538,8 @@
       "planningReference.manufacturerCostCC": "Approved",
       "planningReference.baseManufacturerQuoteCC": "Approved",
       "manufacturingRequirements": "Approved",
-      "wearProfile": "Approved"
+      "wearProfile": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "manufacturingRequirements": {
       "requiredMachineIds": [
@@ -564,7 +571,8 @@
     "mobileMineInitialBalance": {
       "approval": "Approved",
       "basis": "Existing reference quote/mass accepted as initial Mobile baseline 22 Nov 2026; later tuning permitted"
-    }
+    },
+    "storageVolumeM3": 0.01
   },
   {
     "id": "part-structural-components",
@@ -671,7 +679,8 @@
       "planningReference.manufacturerCostCC": "Approved",
       "planningReference.baseManufacturerQuoteCC": "Approved",
       "manufacturingRequirements": "Approved",
-      "wearProfile": "Approved"
+      "wearProfile": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "manufacturingRequirements": {
       "requiredMachineIds": [
@@ -704,7 +713,8 @@
     "mobileMineInitialBalance": {
       "approval": "Approved",
       "basis": "Existing reference quote/mass accepted as initial Mobile baseline 22 Nov 2026; later tuning permitted"
-    }
+    },
+    "storageVolumeM3": 0.15
   },
   {
     "id": "part-hydraulic-parts",
@@ -795,7 +805,8 @@
       "planningReference.manufacturerCostCC": "Approved",
       "planningReference.baseManufacturerQuoteCC": "Approved",
       "manufacturingRequirements": "Approved",
-      "wearProfile": "Approved"
+      "wearProfile": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "manufacturingRequirements": {
       "requiredMachineIds": [
@@ -827,7 +838,8 @@
     "mobileMineInitialBalance": {
       "approval": "Approved",
       "basis": "Existing reference quote/mass accepted as initial Mobile baseline 22 Nov 2026; later tuning permitted"
-    }
+    },
+    "storageVolumeM3": 0.08
   },
   {
     "id": "part-extraction-parts",
@@ -902,7 +914,8 @@
       "planningReference.manufacturerCostCC": "Approved",
       "planningReference.baseManufacturerQuoteCC": "Approved",
       "manufacturingRequirements": "Approved",
-      "wearProfile": "Approved"
+      "wearProfile": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "manufacturingRequirements": {
       "requiredMachineIds": [
@@ -934,7 +947,8 @@
     "mobileMineInitialBalance": {
       "approval": "Approved",
       "basis": "Existing reference quote/mass accepted as initial Mobile baseline 22 Nov 2026; later tuning permitted"
-    }
+    },
+    "storageVolumeM3": 0.025
   },
   {
     "id": "part-processing-parts",
@@ -1015,7 +1029,8 @@
       "planningReference.manufacturerCostCC": "Approved",
       "planningReference.baseManufacturerQuoteCC": "Approved",
       "manufacturingRequirements": "Approved",
-      "wearProfile": "Approved"
+      "wearProfile": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "manufacturingRequirements": {
       "requiredMachineIds": [
@@ -1047,7 +1062,8 @@
     "mobileMineInitialBalance": {
       "approval": "Approved",
       "basis": "Existing reference quote/mass accepted as initial Mobile baseline 22 Nov 2026; later tuning permitted"
-    }
+    },
+    "storageVolumeM3": 0.07
   },
   {
     "id": "part-computing-parts",
@@ -1146,7 +1162,8 @@
       "planningReference.manufacturerCostCC": "Approved",
       "planningReference.baseManufacturerQuoteCC": "Approved",
       "manufacturingRequirements": "Approved",
-      "wearProfile": "Approved"
+      "wearProfile": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "manufacturingRequirements": {
       "requiredMachineIds": [
@@ -1178,7 +1195,8 @@
     "mobileMineInitialBalance": {
       "approval": "Approved",
       "basis": "Existing reference quote/mass accepted as initial Mobile baseline 22 Nov 2026; later tuning permitted"
-    }
+    },
+    "storageVolumeM3": 0.02
   },
   {
     "id": "part-fluid-handling-parts",
@@ -1277,7 +1295,8 @@
       "planningReference.manufacturerCostCC": "Approved",
       "planningReference.baseManufacturerQuoteCC": "Approved",
       "manufacturingRequirements": "Approved",
-      "wearProfile": "Approved"
+      "wearProfile": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "manufacturingRequirements": {
       "requiredMachineIds": [
@@ -1310,7 +1329,8 @@
     "mobileMineInitialBalance": {
       "approval": "Approved",
       "basis": "Existing reference quote/mass accepted as initial Mobile baseline 22 Nov 2026; later tuning permitted"
-    }
+    },
+    "storageVolumeM3": 0.07
   },
   {
     "id": "part-bulk-handling-parts",
@@ -1390,7 +1410,8 @@
       "planningReference.manufacturerCostCC": "Approved",
       "planningReference.baseManufacturerQuoteCC": "Approved",
       "manufacturingRequirements": "Approved",
-      "wearProfile": "Approved"
+      "wearProfile": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "manufacturingRequirements": {
       "requiredMachineIds": [
@@ -1423,7 +1444,8 @@
     "mobileMineInitialBalance": {
       "approval": "Approved",
       "basis": "Existing reference quote/mass accepted as initial Mobile baseline 22 Nov 2026; later tuning permitted"
-    }
+    },
+    "storageVolumeM3": 0.12
   },
   {
     "id": "part-lead-acid-battery-module",
@@ -1509,7 +1531,8 @@
       "planningReference.manufacturerCostCC": "Approved",
       "planningReference.baseManufacturerQuoteCC": "Approved",
       "manufacturingRequirements": "Approved",
-      "wearProfile": "Approved"
+      "wearProfile": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "manufacturingRequirements": {
       "requiredMachineIds": [
@@ -1541,7 +1564,8 @@
     "mobileMineInitialBalance": {
       "approval": "Approved",
       "basis": "Existing reference quote/mass accepted as initial Mobile baseline 22 Nov 2026; later tuning permitted"
-    }
+    },
+    "storageVolumeM3": 0.045
   },
   {
     "id": "part-lithium-based-battery-module",
@@ -1649,7 +1673,8 @@
       "planningReference.manufacturerCostCC": "In Review",
       "planningReference.baseManufacturerQuoteCC": "In Review",
       "manufacturingRequirements": "Approved",
-      "wearProfile": "Approved"
+      "wearProfile": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "manufacturingRequirements": {
       "requiredMachineIds": [
@@ -1677,7 +1702,8 @@
       "failureEffect": "reduced stored-energy capacity and peak output; failure removes the module from service",
       "approval": "Approved",
       "notes": "Deterministic first-pass parameter for review; per-save condition and accumulated operating hours belong to the consuming game."
-    }
+    },
+    "storageVolumeM3": 0.035
   },
   {
     "id": "part-thermal-parts",
@@ -1771,7 +1797,8 @@
       "planningReference.manufacturerCostCC": "Approved",
       "planningReference.baseManufacturerQuoteCC": "Approved",
       "manufacturingRequirements": "Approved",
-      "wearProfile": "Approved"
+      "wearProfile": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "manufacturingRequirements": {
       "requiredMachineIds": [
@@ -1803,7 +1830,8 @@
     "mobileMineInitialBalance": {
       "approval": "Approved",
       "basis": "Existing reference quote/mass accepted as initial Mobile baseline 22 Nov 2026; later tuning permitted"
-    }
+    },
+    "storageVolumeM3": 0.12
   },
   {
     "id": "part-optical-parts",
@@ -1893,7 +1921,8 @@
       "planningReference.manufacturerCostCC": "Approved",
       "planningReference.baseManufacturerQuoteCC": "Approved",
       "manufacturingRequirements": "Approved",
-      "wearProfile": "Approved"
+      "wearProfile": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "manufacturingRequirements": {
       "requiredMachineIds": [
@@ -1925,7 +1954,8 @@
     "mobileMineInitialBalance": {
       "approval": "Approved",
       "basis": "Existing reference quote/mass accepted as initial Mobile baseline 22 Nov 2026; later tuning permitted"
-    }
+    },
+    "storageVolumeM3": 0.04
   },
   {
     "id": "part-forming-cutting-tooling",
@@ -2000,7 +2030,8 @@
       "planningReference.manufacturerCostCC": "In Review",
       "planningReference.baseManufacturerQuoteCC": "In Review",
       "manufacturingRequirements": "Approved",
-      "wearProfile": "Approved"
+      "wearProfile": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "manufacturingRequirements": {
       "requiredMachineIds": [
@@ -2028,7 +2059,8 @@
       "failureEffect": "loss of dimensional accuracy and forming rate; failure stops the tooling operation",
       "approval": "Approved",
       "notes": "Deterministic first-pass parameter for review; per-save condition and accumulated operating hours belong to the consuming game."
-    }
+    },
+    "storageVolumeM3": 0.025
   },
   {
     "id": "part-welding-parts",
@@ -2107,7 +2139,8 @@
       "planningReference.manufacturerCostCC": "In Review",
       "planningReference.baseManufacturerQuoteCC": "In Review",
       "manufacturingRequirements": "Approved",
-      "wearProfile": "Approved"
+      "wearProfile": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "manufacturingRequirements": {
       "requiredMachineIds": [
@@ -2135,7 +2168,8 @@
       "failureEffect": "poor joint quality and reduced duty cycle; failure stops welding",
       "approval": "Approved",
       "notes": "Deterministic first-pass parameter for review; per-save condition and accumulated operating hours belong to the consuming game."
-    }
+    },
+    "storageVolumeM3": 0.035
   },
   {
     "id": "part-precast-concrete-sections",
@@ -2227,7 +2261,8 @@
       "planningReference.manufacturerCostCC": "In Review",
       "planningReference.baseManufacturerQuoteCC": "In Review",
       "manufacturingRequirements": "Approved",
-      "wearProfile": "Approved"
+      "wearProfile": "Approved",
+      "storageVolumeM3": "Approved"
     },
     "manufacturingRequirements": {
       "requiredMachineIds": [],
@@ -2255,7 +2290,8 @@
       "failureEffect": "loss of structural rating; failed sections require structural replacement",
       "approval": "Approved",
       "notes": "Deterministic first-pass parameter for review; per-save condition and accumulated operating hours belong to the consuming game."
-    }
+    },
+    "storageVolumeM3": 0.65
   },
   {
     "id": "part-nuclear-fuel-assembly",
@@ -2327,7 +2363,8 @@
       "planningReference.manufacturerCostCC": "Blocked",
       "planningReference.baseManufacturerQuoteCC": "Blocked",
       "manufacturingRequirements": "Blocked",
-      "wearProfile": "Approved"
+      "wearProfile": "Approved",
+      "storageVolumeM3": "Not Reviewed"
     },
     "manufacturingRequirements": {
       "requiredMachineIds": [],
@@ -2354,6 +2391,7 @@
       "failureEffect": "fuel depletion reduces thermal output; exhaustion requires a qualified replacement assembly",
       "approval": "Approved",
       "notes": "Deterministic first-pass parameter for review; per-save condition and accumulated operating hours belong to the consuming game."
-    }
+    },
+    "storageVolumeM3": null
   }
 ]
