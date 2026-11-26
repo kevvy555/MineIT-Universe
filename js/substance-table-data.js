@@ -39,6 +39,7 @@ export function substanceRows(catalogue, androidReference) {
       delete fields.dominantArchetype;
       delete fields.genericSubstanceId;
       delete fields.refined;
+      for (const key of Object.keys(fields)) if (key.startsWith("fieldApprovalStatuses.")) delete fields[key];
       if (occurrence.has(record.id)) flatten(occurrence.get(record.id), "occurrence", fields);
       if (tuning.has(record.id)) flatten(tuning.get(record.id), "android", fields);
       const summary = approvalSummary("substances", record, fields, catalogue);
@@ -87,6 +88,7 @@ export const SUBSTANCE_COLUMN_GROUPS = [
       "description",
       "industrialRole",
       "stockBehaviour",
+      "massPerUnitKg", "densityKgPerM3", "storageBuildingIds", "stockpileShape",
       "renewable",
       "naturalOccurrence",
       "thermalBehaviour",
@@ -169,7 +171,7 @@ export const SUBSTANCE_COLUMN_GROUPS = [
       "android.baseScan",
       "android.baselineExtractionMethod",
       "android.baselineExtractionFamily",
-      "android.basePrice",
+      "android.basePrice", "baseReferencePriceCCPerUnit",
       "android.operationalTags",
       "android.legacyAliases"
     ]
