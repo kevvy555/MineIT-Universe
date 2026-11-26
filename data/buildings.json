@@ -6107,7 +6107,9 @@
     "sources": [
       "Field-established storage"
     ],
-    "structuralShellSubstanceIds": [],
+    "structuralShellSubstanceIds": [
+      "substance-stone-aggregate"
+    ],
     "fitOutSubstanceIds": [],
     "machineIds": [
       "machine-conveyor-machine",
@@ -6122,8 +6124,8 @@
       "key": "assets/art/universe/buildings/building-stockpile.webp",
       "generated": true,
       "status": "needs-regeneration",
-      "promptDescription": "Perfect 1:1 square MineIT Mobile building tile on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent three-quarter elevated angle, matching the established Mobile development-building language: clean rounded white ceramic/composite shells, charcoal structural frames and platforms, vivid orange trim and safety rails, restrained electric-blue emissive details, warm amber windows, crisp bevels, compact modular construction and a strong readable silhouette at 128×128. Centre the complete structure with comfortable transparent margin. No terrain scene, sky, horizon, rectangular backdrop, people, readable text, logos, company marks, registration numbers, UI, border or watermark. Show a complete mature reference configuration that clearly communicates the building identity without representing a numbered gameplay level. Building identity and required functional content: Open frontier stockpile yard: the same conveyor feeding a bulk stacker-reclaimer over loose aggregate piles, no walls, no warehouse gantry. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records. Canonical identity art follows the MineIT Mobile isometric style; separate linked L1-L5 presentation images are materialised in building-mobile-level-images.json.",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile building tile on a genuinely transparent background. Consistent elevated three-quarter isometric camera, clean realistic industrial 3D game art, neutral daylight, centered, no text, people, vehicles or logos. Open graded aggregate hardstanding with separate conical coal, iron ore and stone piles, stacked logs and cut stone blocks. No walls, fences or machinery.",
+      "notes": "Identity artwork pending regeneration; ten level images describe progression. Runtime stockpile geometry is procedural.",
       "modelPrompt": "Match the exact visual style, rendering quality, materials, and lighting of the reference: highly detailed 3D octane render, intricate industrial sci-fi greebles, raytraced lighting, hard-surface modeling, isolated against a solid pitch-black background with clean edges. Viewed from an elevated 3/4 isometric angle. Materials: weathered charcoal structural steel, clean rounded white composite panels, vibrant safety orange trims and handrails, amber illuminated windows, subtle cyan and electric blue status indicator lights. Complete mature reference installation configuration. Subject: Open frontier stockpile yard: the same conveyor feeding a bulk stacker-reclaimer over loose aggregate piles, no walls, no warehouse gantry. No readable text, logos, names, company marks or registration numbers. Solid pure black background, no checkerboard, no ground terrain, no people, no text or logos."
     },
     "mobileLevelAtlas": {
@@ -6137,9 +6139,14 @@
         2,
         3,
         4,
-        5
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
       ],
-      "notes": "Derived MineIT Mobile runtime atlas containing five horizontal 256x256 frames, L1 through L5."
+      "notes": "Derived MineIT Mobile runtime atlas containing ten horizontal 256×256 frames, L1 through L10; pending supplied level images."
     },
     "equipmentConfigurations": [
       {
@@ -6147,7 +6154,16 @@
         "name": "Manual open stockpile",
         "selection": "standard",
         "applicableLevels": [
-          1
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
         ],
         "equipment": [
           {
@@ -6157,6 +6173,51 @@
             "quantityByLevel": [
               {
                 "level": 1,
+                "quantity": 0,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 0,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 0,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 0,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 0,
+                "approval": "Approved"
+              },
+              {
+                "level": 6,
+                "quantity": 0,
+                "approval": "Approved"
+              },
+              {
+                "level": 7,
+                "quantity": 0,
+                "approval": "Approved"
+              },
+              {
+                "level": 8,
+                "quantity": 0,
+                "approval": "Approved"
+              },
+              {
+                "level": 9,
+                "quantity": 0,
+                "approval": "Approved"
+              },
+              {
+                "level": 10,
                 "quantity": 0,
                 "approval": "Approved"
               }
@@ -6170,6 +6231,51 @@
             "quantityByLevel": [
               {
                 "level": 1,
+                "quantity": 0,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 0,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 0,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 0,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 0,
+                "approval": "Approved"
+              },
+              {
+                "level": 6,
+                "quantity": 0,
+                "approval": "Approved"
+              },
+              {
+                "level": 7,
+                "quantity": 0,
+                "approval": "Approved"
+              },
+              {
+                "level": 8,
+                "quantity": 0,
+                "approval": "Approved"
+              },
+              {
+                "level": 9,
+                "quantity": 0,
+                "approval": "Approved"
+              },
+              {
+                "level": 10,
                 "quantity": 0,
                 "approval": "Approved"
               }
@@ -6188,10 +6294,248 @@
         ],
         "powerUnits": 0,
         "workforce": 0,
-        "capacity": 50,
-        "capacityUnit": "tonnes-loose-storage-design-target",
+        "capacity": 30,
+        "capacityUnit": "cubic-metres",
+        "footprint": {
+          "widthM": 12,
+          "lengthM": 15
+        },
+        "construction": {
+          "cumulativeMaterials": [
+            {
+              "materialId": "named-substance-graded-aggregate",
+              "quantityKg": 31000
+            }
+          ],
+          "cumulativeLabourHours": 70
+        },
         "approval": "Approved",
-        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+        "notes": "User-approved initial physical storage baseline, 26 November 2026; construction totals cumulative, upgrades debit difference. No active goods transfer in this feature."
+      },
+      {
+        "level": 2,
+        "applicableEquipmentConfigurationIds": [
+          "manual-stockpile"
+        ],
+        "powerUnits": 0,
+        "workforce": 0,
+        "capacity": 60,
+        "capacityUnit": "cubic-metres",
+        "footprint": {
+          "widthM": 15,
+          "lengthM": 24
+        },
+        "construction": {
+          "cumulativeMaterials": [
+            {
+              "materialId": "named-substance-graded-aggregate",
+              "quantityKg": 62000
+            }
+          ],
+          "cumulativeLabourHours": 140
+        },
+        "approval": "Approved",
+        "notes": "User-approved initial physical storage baseline, 26 November 2026; construction totals cumulative, upgrades debit difference. No active goods transfer in this feature."
+      },
+      {
+        "level": 3,
+        "applicableEquipmentConfigurationIds": [
+          "manual-stockpile"
+        ],
+        "powerUnits": 0,
+        "workforce": 0,
+        "capacity": 90,
+        "capacityUnit": "cubic-metres",
+        "footprint": {
+          "widthM": 18,
+          "lengthM": 30
+        },
+        "construction": {
+          "cumulativeMaterials": [
+            {
+              "materialId": "named-substance-graded-aggregate",
+              "quantityKg": 93000
+            }
+          ],
+          "cumulativeLabourHours": 210
+        },
+        "approval": "Approved",
+        "notes": "User-approved initial physical storage baseline, 26 November 2026; construction totals cumulative, upgrades debit difference. No active goods transfer in this feature."
+      },
+      {
+        "level": 4,
+        "applicableEquipmentConfigurationIds": [
+          "manual-stockpile"
+        ],
+        "powerUnits": 0,
+        "workforce": 0,
+        "capacity": 120,
+        "capacityUnit": "cubic-metres",
+        "footprint": {
+          "widthM": 24,
+          "lengthM": 30
+        },
+        "construction": {
+          "cumulativeMaterials": [
+            {
+              "materialId": "named-substance-graded-aggregate",
+              "quantityKg": 124000
+            }
+          ],
+          "cumulativeLabourHours": 280
+        },
+        "approval": "Approved",
+        "notes": "User-approved initial physical storage baseline, 26 November 2026; construction totals cumulative, upgrades debit difference. No active goods transfer in this feature."
+      },
+      {
+        "level": 5,
+        "applicableEquipmentConfigurationIds": [
+          "manual-stockpile"
+        ],
+        "powerUnits": 0,
+        "workforce": 0,
+        "capacity": 180,
+        "capacityUnit": "cubic-metres",
+        "footprint": {
+          "widthM": 30,
+          "lengthM": 36
+        },
+        "construction": {
+          "cumulativeMaterials": [
+            {
+              "materialId": "named-substance-graded-aggregate",
+              "quantityKg": 186000
+            }
+          ],
+          "cumulativeLabourHours": 420
+        },
+        "approval": "Approved",
+        "notes": "User-approved initial physical storage baseline, 26 November 2026; construction totals cumulative, upgrades debit difference. No active goods transfer in this feature."
+      },
+      {
+        "level": 6,
+        "applicableEquipmentConfigurationIds": [
+          "manual-stockpile"
+        ],
+        "powerUnits": 0,
+        "workforce": 0,
+        "capacity": 300,
+        "capacityUnit": "cubic-metres",
+        "footprint": {
+          "widthM": 40,
+          "lengthM": 45
+        },
+        "construction": {
+          "cumulativeMaterials": [
+            {
+              "materialId": "named-substance-graded-aggregate",
+              "quantityKg": 310000
+            }
+          ],
+          "cumulativeLabourHours": 700
+        },
+        "approval": "Approved",
+        "notes": "User-approved initial physical storage baseline, 26 November 2026; construction totals cumulative, upgrades debit difference. No active goods transfer in this feature."
+      },
+      {
+        "level": 7,
+        "applicableEquipmentConfigurationIds": [
+          "manual-stockpile"
+        ],
+        "powerUnits": 0,
+        "workforce": 0,
+        "capacity": 450,
+        "capacityUnit": "cubic-metres",
+        "footprint": {
+          "widthM": 50,
+          "lengthM": 54
+        },
+        "construction": {
+          "cumulativeMaterials": [
+            {
+              "materialId": "named-substance-graded-aggregate",
+              "quantityKg": 465000
+            }
+          ],
+          "cumulativeLabourHours": 1050
+        },
+        "approval": "Approved",
+        "notes": "User-approved initial physical storage baseline, 26 November 2026; construction totals cumulative, upgrades debit difference. No active goods transfer in this feature."
+      },
+      {
+        "level": 8,
+        "applicableEquipmentConfigurationIds": [
+          "manual-stockpile"
+        ],
+        "powerUnits": 0,
+        "workforce": 0,
+        "capacity": 720,
+        "capacityUnit": "cubic-metres",
+        "footprint": {
+          "widthM": 60,
+          "lengthM": 72
+        },
+        "construction": {
+          "cumulativeMaterials": [
+            {
+              "materialId": "named-substance-graded-aggregate",
+              "quantityKg": 744000
+            }
+          ],
+          "cumulativeLabourHours": 1680
+        },
+        "approval": "Approved",
+        "notes": "User-approved initial physical storage baseline, 26 November 2026; construction totals cumulative, upgrades debit difference. No active goods transfer in this feature."
+      },
+      {
+        "level": 9,
+        "applicableEquipmentConfigurationIds": [
+          "manual-stockpile"
+        ],
+        "powerUnits": 0,
+        "workforce": 0,
+        "capacity": 1050,
+        "capacityUnit": "cubic-metres",
+        "footprint": {
+          "widthM": 75,
+          "lengthM": 84
+        },
+        "construction": {
+          "cumulativeMaterials": [
+            {
+              "materialId": "named-substance-graded-aggregate",
+              "quantityKg": 1085000
+            }
+          ],
+          "cumulativeLabourHours": 2450
+        },
+        "approval": "Approved",
+        "notes": "User-approved initial physical storage baseline, 26 November 2026; construction totals cumulative, upgrades debit difference. No active goods transfer in this feature."
+      },
+      {
+        "level": 10,
+        "applicableEquipmentConfigurationIds": [
+          "manual-stockpile"
+        ],
+        "powerUnits": 0,
+        "workforce": 0,
+        "capacity": 1800,
+        "capacityUnit": "cubic-metres",
+        "footprint": {
+          "widthM": 90,
+          "lengthM": 120
+        },
+        "construction": {
+          "cumulativeMaterials": [
+            {
+              "materialId": "named-substance-graded-aggregate",
+              "quantityKg": 1860000
+            }
+          ],
+          "cumulativeLabourHours": 4200
+        },
+        "approval": "Approved",
+        "notes": "User-approved initial physical storage baseline, 26 November 2026; construction totals cumulative, upgrades debit difference. No active goods transfer in this feature."
       }
     ],
     "directPartRequirements": [],
@@ -6251,8 +6595,8 @@
       "key": "assets/art/universe/buildings/building-warehouse.webp",
       "generated": true,
       "status": "needs-regeneration",
-      "promptDescription": "Perfect 1:1 square MineIT Mobile building tile on a genuinely transparent background. Polished stylized isometric 3D game art viewed from a consistent three-quarter elevated angle, matching the established Mobile development-building language: clean rounded white ceramic/composite shells, charcoal structural frames and platforms, vivid orange trim and safety rails, restrained electric-blue emissive details, warm amber windows, crisp bevels, compact modular construction and a strong readable silhouette at 128×128. Centre the complete structure with comfortable transparent margin. No terrain scene, sky, horizon, rectangular backdrop, people, readable text, logos, company marks, registration numbers, UI, border or watermark. Show a complete mature reference configuration that clearly communicates the building identity without representing a numbered gameplay level. Building identity and required functional content: Exterior and open-door view of an enclosed warehouse: wood-stone-metal hall with the warehouse handler moving pallets inside, not the shipyard crane and not an open stacker. No readable text, logos, names, company marks or registration numbers.",
-      "notes": "Colony building exterior must show its installed machines using the same visual kit as the machine records. Canonical identity art follows the MineIT Mobile isometric style; separate linked L1-L5 presentation images are materialised in building-mobile-level-images.json.",
+      "promptDescription": "Perfect 1:1 square MineIT Mobile building tile on a genuinely transparent background. Consistent elevated three-quarter isometric camera, clean realistic industrial 3D game art, neutral daylight, centered, no text, people, vehicles or logos. Enclosed modular industrial storage hall, metal cladding, structural steel, roller doors, windows and practical roof. No visible interior or machinery.",
+      "notes": "Identity artwork pending regeneration; five level images describe progression.",
       "modelPrompt": "Match the exact visual style, rendering quality, materials, and lighting of the reference: highly detailed 3D octane render, intricate industrial sci-fi greebles, raytraced lighting, hard-surface modeling, isolated against a solid pitch-black background with clean edges. Viewed from an elevated 3/4 isometric angle. Materials: weathered charcoal structural steel, clean rounded white composite panels, vibrant safety orange trims and handrails, amber illuminated windows, subtle cyan and electric blue status indicator lights. Complete mature reference installation configuration. Subject: Exterior and open-door view of an enclosed warehouse: wood-stone-metal hall with the warehouse handler moving pallets inside, not the shipyard crane and not an open stacker. No readable text, logos, names, company marks or registration numbers. Solid pure black background, no checkerboard, no ground terrain, no people, no text or logos."
     },
     "mobileLevelAtlas": {
@@ -6328,10 +6672,41 @@
         ],
         "powerUnits": null,
         "workforce": null,
-        "capacity": null,
-        "capacityUnit": null,
+        "capacity": 360,
+        "capacityUnit": "cubic-metres",
+        "footprint": {
+          "widthM": 12,
+          "lengthM": 15
+        },
+        "storageHeightM": 4,
+        "usableStorageFraction": 0.5,
+        "construction": {
+          "cumulativeMaterials": [
+            {
+              "materialId": "named-substance-graded-aggregate",
+              "quantityKg": 30600
+            },
+            {
+              "materialId": "named-substance-cut-stone-blocks",
+              "quantityKg": 21600
+            },
+            {
+              "materialId": "named-substance-sawn-lumber",
+              "quantityKg": 1525
+            },
+            {
+              "materialId": "named-substance-steel",
+              "quantityKg": 4500
+            },
+            {
+              "materialId": "named-substance-construction-glass",
+              "quantityKg": 540
+            }
+          ],
+          "cumulativeLabourHours": 324
+        },
         "approval": "Approved",
-        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+        "notes": "User-approved initial physical storage baseline, 26 November 2026; construction totals cumulative, upgrades debit difference. No active goods transfer in this feature."
       },
       {
         "level": 2,
@@ -6340,10 +6715,41 @@
         ],
         "powerUnits": null,
         "workforce": null,
-        "capacity": null,
-        "capacityUnit": null,
+        "capacity": 720,
+        "capacityUnit": "cubic-metres",
+        "footprint": {
+          "widthM": 15,
+          "lengthM": 24
+        },
+        "storageHeightM": 4,
+        "usableStorageFraction": 0.5,
+        "construction": {
+          "cumulativeMaterials": [
+            {
+              "materialId": "named-substance-graded-aggregate",
+              "quantityKg": 61200
+            },
+            {
+              "materialId": "named-substance-cut-stone-blocks",
+              "quantityKg": 43200
+            },
+            {
+              "materialId": "named-substance-sawn-lumber",
+              "quantityKg": 2800
+            },
+            {
+              "materialId": "named-substance-steel",
+              "quantityKg": 8700
+            },
+            {
+              "materialId": "named-substance-construction-glass",
+              "quantityKg": 785
+            }
+          ],
+          "cumulativeLabourHours": 588
+        },
         "approval": "Approved",
-        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+        "notes": "User-approved initial physical storage baseline, 26 November 2026; construction totals cumulative, upgrades debit difference. No active goods transfer in this feature."
       },
       {
         "level": 3,
@@ -6352,10 +6758,41 @@
         ],
         "powerUnits": null,
         "workforce": null,
-        "capacity": null,
-        "capacityUnit": null,
+        "capacity": 1080,
+        "capacityUnit": "cubic-metres",
+        "footprint": {
+          "widthM": 18,
+          "lengthM": 30
+        },
+        "storageHeightM": 4,
+        "usableStorageFraction": 0.5,
+        "construction": {
+          "cumulativeMaterials": [
+            {
+              "materialId": "named-substance-graded-aggregate",
+              "quantityKg": 91800
+            },
+            {
+              "materialId": "named-substance-cut-stone-blocks",
+              "quantityKg": 64800
+            },
+            {
+              "materialId": "named-substance-sawn-lumber",
+              "quantityKg": 4025
+            },
+            {
+              "materialId": "named-substance-steel",
+              "quantityKg": 12840
+            },
+            {
+              "materialId": "named-substance-construction-glass",
+              "quantityKg": 965
+            }
+          ],
+          "cumulativeLabourHours": 840
+        },
         "approval": "Approved",
-        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+        "notes": "User-approved initial physical storage baseline, 26 November 2026; construction totals cumulative, upgrades debit difference. No active goods transfer in this feature."
       },
       {
         "level": 4,
@@ -6364,10 +6801,41 @@
         ],
         "powerUnits": null,
         "workforce": null,
-        "capacity": null,
-        "capacityUnit": null,
+        "capacity": 1440,
+        "capacityUnit": "cubic-metres",
+        "footprint": {
+          "widthM": 24,
+          "lengthM": 30
+        },
+        "storageHeightM": 4,
+        "usableStorageFraction": 0.5,
+        "construction": {
+          "cumulativeMaterials": [
+            {
+              "materialId": "named-substance-graded-aggregate",
+              "quantityKg": 122400
+            },
+            {
+              "materialId": "named-substance-cut-stone-blocks",
+              "quantityKg": 86400
+            },
+            {
+              "materialId": "named-substance-sawn-lumber",
+              "quantityKg": 5200
+            },
+            {
+              "materialId": "named-substance-steel",
+              "quantityKg": 16920
+            },
+            {
+              "materialId": "named-substance-construction-glass",
+              "quantityKg": 1080
+            }
+          ],
+          "cumulativeLabourHours": 1080
+        },
         "approval": "Approved",
-        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+        "notes": "User-approved initial physical storage baseline, 26 November 2026; construction totals cumulative, upgrades debit difference. No active goods transfer in this feature."
       },
       {
         "level": 5,
@@ -6376,10 +6844,41 @@
         ],
         "powerUnits": null,
         "workforce": null,
-        "capacity": null,
-        "capacityUnit": null,
+        "capacity": 2160,
+        "capacityUnit": "cubic-metres",
+        "footprint": {
+          "widthM": 30,
+          "lengthM": 36
+        },
+        "storageHeightM": 4,
+        "usableStorageFraction": 0.5,
+        "construction": {
+          "cumulativeMaterials": [
+            {
+              "materialId": "named-substance-graded-aggregate",
+              "quantityKg": 183600
+            },
+            {
+              "materialId": "named-substance-cut-stone-blocks",
+              "quantityKg": 129600
+            },
+            {
+              "materialId": "named-substance-sawn-lumber",
+              "quantityKg": 7550
+            },
+            {
+              "materialId": "named-substance-steel",
+              "quantityKg": 25080
+            },
+            {
+              "materialId": "named-substance-construction-glass",
+              "quantityKg": 1320
+            }
+          ],
+          "cumulativeLabourHours": 1560
+        },
         "approval": "Approved",
-        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+        "notes": "User-approved initial physical storage baseline, 26 November 2026; construction totals cumulative, upgrades debit difference. No active goods transfer in this feature."
       }
     ],
     "directPartRequirements": [],
