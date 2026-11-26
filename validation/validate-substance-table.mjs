@@ -64,8 +64,15 @@ assert.equal(rows.find(row => row.id === "substance-refined-structural-metal").f
   "Available");
 assert.equal(rows.find(row => row.id === "substance-carbonate-mineral").fields["image.preview"],
   "Available");
-assert.ok(rows.every(row => row.fields["image.preview"] === "Available"),
-  "Every substance-table row must have a generated catalogue image");
+const pendingConstructionGlass = rows.find(row => row.id === "named-substance-construction-glass");
+assert.ok(pendingConstructionGlass, "Approved Construction Glass must be present");
+assert.ok(["Available", "Not generated"].includes(pendingConstructionGlass.fields["image.preview"]));
+assert.ok(rows.filter(row => row !== pendingConstructionGlass).every(row => row.fields["image.preview"] === "Available"),
+  "Existing substance-table rows must retain generated catalogue images");
+if (pendingConstructionGlass.fields["image.preview"] === "Not generated") {
+  assert.equal(pendingConstructionGlass.fields["image.status"], "not-generated");
+  assert.equal(pendingConstructionGlass.record.image.generated, false);
+}
 assert.ok(keys.includes("sourceProvenance.path"));
 assert.ok(keys.includes("upstreamMaterialIds"), "LFP cathode source links must remain reviewable");
 assert.ok(keys.includes("approval") && keys.includes("needsApproval"),
