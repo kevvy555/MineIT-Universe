@@ -914,5 +914,105 @@
       ]
     },
     "orientation": "side-view; heading convention not established"
+  },
+  {
+    "id": "tactical-level-6",
+    "name": "Level 6 tactical badge",
+    "assetType": "level-badge",
+    "entityId": null,
+    "intendedGameId": "game-mineit-mobile",
+    "image": {
+      "key": "assets/art/universe/tactical/tactical-level-6.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Match existing Level 1–5 tactical badges exactly: white bold numeral 6, orange rounded rectangle, charcoal outline, transparent margin; original 256 × 256, reduced to 13 × 13. Preserve dimensions, spacing and legibility.",
+      "notes": "User-supplied artwork pending; original and reduced images must be verified before generated status."
+    },
+    "originalKey": "assets/art/universe/tactical/Originals/tactical-level-6.png",
+    "smallImageKey": "assets/art/universe/tactical/32px/tactical-level-6.png",
+    "smallSize": [
+      13,
+      13
+    ]
+  },
+  {
+    "id": "tactical-level-7",
+    "name": "Level 7 tactical badge",
+    "assetType": "level-badge",
+    "entityId": null,
+    "intendedGameId": "game-mineit-mobile",
+    "image": {
+      "key": "assets/art/universe/tactical/tactical-level-7.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Match existing Level 1–5 tactical badges exactly: white bold numeral 7, orange rounded rectangle, charcoal outline, transparent margin; original 256 × 256, reduced to 13 × 13. Preserve dimensions, spacing and legibility.",
+      "notes": "User-supplied artwork pending; original and reduced images must be verified before generated status."
+    },
+    "originalKey": "assets/art/universe/tactical/Originals/tactical-level-7.png",
+    "smallImageKey": "assets/art/universe/tactical/32px/tactical-level-7.png",
+    "smallSize": [
+      13,
+      13
+    ]
+  },
+  {
+    "id": "tactical-level-8",
+    "name": "Level 8 tactical badge",
+    "assetType": "level-badge",
+    "entityId": null,
+    "intendedGameId": "game-mineit-mobile",
+    "image": {
+      "key": "assets/art/universe/tactical/tactical-level-8.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Match existing Level 1–5 tactical badges exactly: white bold numeral 8, orange rounded rectangle, charcoal outline, transparent margin; original 256 × 256, reduced to 13 × 13. Preserve dimensions, spacing and legibility.",
+      "notes": "User-supplied artwork pending; original and reduced images must be verified before generated status."
+    },
+    "originalKey": "assets/art/universe/tactical/Originals/tactical-level-8.png",
+    "smallImageKey": "assets/art/universe/tactical/32px/tactical-level-8.png",
+    "smallSize": [
+      13,
+      13
+    ]
+  },
+  {
+    "id": "tactical-level-9",
+    "name": "Level 9 tactical badge",
+    "assetType": "level-badge",
+    "entityId": null,
+    "intendedGameId": "game-mineit-mobile",
+    "image": {
+      "key": "assets/art/universe/tactical/tactical-level-9.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Match existing Level 1–5 tactical badges exactly: white bold numeral 9, orange rounded rectangle, charcoal outline, transparent margin; original 256 × 256, reduced to 13 × 13. Preserve dimensions, spacing and legibility.",
+      "notes": "User-supplied artwork pending; original and reduced images must be verified before generated status."
+    },
+    "originalKey": "assets/art/universe/tactical/Originals/tactical-level-9.png",
+    "smallImageKey": "assets/art/universe/tactical/32px/tactical-level-9.png",
+    "smallSize": [
+      13,
+      13
+    ]
+  },
+  {
+    "id": "tactical-level-10",
+    "name": "Level 10 tactical badge",
+    "assetType": "level-badge",
+    "entityId": null,
+    "intendedGameId": "game-mineit-mobile",
+    "image": {
+      "key": "assets/art/universe/tactical/tactical-level-10.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Match existing Level 1–5 tactical badges exactly: white bold numeral 10, orange rounded rectangle, charcoal outline, transparent margin; original 256 × 256, reduced to 13 × 13. Preserve dimensions, spacing and legibility.",
+      "notes": "User-supplied artwork pending; original and reduced images must be verified before generated status."
+    },
+    "originalKey": "assets/art/universe/tactical/Originals/tactical-level-10.png",
+    "smallImageKey": "assets/art/universe/tactical/32px/tactical-level-10.png",
+    "smallSize": [
+      13,
+      13
+    ]
   }
 ]
