@@ -38,7 +38,7 @@ const catalogue = {
   get: id => byId.get(id)
 };
 const selected = registry.filter(d => d.table === "machines");
-assert.equal(selected.length, 30);
+assert.equal(selected.length, 31);
 assert.deepEqual(new Set(selected.map(d => d.category)), new Set([
   "Identity & Classification", "Physical Construction", "Operation & Capabilities",
   "Manufacturing & Pricing", "Discovery & Approval", "Artwork & Visuals",
