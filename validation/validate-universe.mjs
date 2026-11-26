@@ -475,6 +475,7 @@ for (const machine of collections.machines ?? []) {
   if (!machine.category) errors.push(`${machine.id}: category missing.`);
   if (!Array.isArray(machine.partIds)) errors.push(`${machine.id}: partIds must be an array.`);
 }
+const mobileImageLevels = buildingId => Array.from({length: buildingId === 'building-stockpile' ? 10 : 5}, (_, i) => i + 1);
 for (const building of collections.buildings ?? []) {
   if (!building.category) errors.push(`${building.id}: category missing.`);
   if (!Array.isArray(building.structuralShellSubstanceIds)) errors.push(`${building.id}: structuralShellSubstanceIds must be an array.`);
@@ -482,7 +483,7 @@ for (const building of collections.buildings ?? []) {
   if (!Array.isArray(building.machineIds)) errors.push(`${building.id}: machineIds must be an array.`);
   const atlas = building.mobileLevelAtlas;
   if (!atlas?.key || typeof atlas.generated !== 'boolean' || !imageStatuses.has(atlas.status)) errors.push(`${building.id}: mobileLevelAtlas metadata is required.`);
-  if (atlas?.frameWidth !== 256 || atlas?.frameHeight !== 256 || JSON.stringify(atlas?.frameOrder) !== '[1,2,3,4,5]') errors.push(`${building.id}: mobileLevelAtlas must declare five ordered 256x256 frames.`);
+  if (atlas?.frameWidth !== 256 || atlas?.frameHeight !== 256 || JSON.stringify(atlas?.frameOrder) !== JSON.stringify(mobileImageLevels(building.id))) errors.push(`${building.id}: mobileLevelAtlas must declare the ordered 256x256 frames for its building family.`);
   if (atlas?.generated && atlas?.key) {
     try { await access(resolve(repoRoot, atlas.key)); }
     catch { errors.push(`${building.id}: mobileLevelAtlas is marked generated but missing at ${atlas.key}.`); }
@@ -496,7 +497,7 @@ for (const levelImage of mobileBuildingLevelImages) {
   validateRef(levelImage.id, 'intendedGameId', levelImage.intendedGameId);
   if (levelImage.intendedGameId !== 'game-mineit-mobile') errors.push(`${levelImage.id}: building level image must target game-mineit-mobile.`);
   if (levelImage.assetType !== 'mobile-building-level-image') errors.push(`${levelImage.id}: invalid assetType.`);
-  if (!Number.isInteger(levelImage.level) || levelImage.level < 1 || levelImage.level > 5) errors.push(`${levelImage.id}: level must be an integer from 1 to 5.`);
+  if (!Number.isInteger(levelImage.level) || levelImage.level < 1 || levelImage.level > mobileImageLevels(levelImage.buildingId).length) errors.push(`${levelImage.id}: level outside its building family's approved image progression.`);
   if (!String(levelImage.image?.key ?? '').startsWith('assets/art/universe/buildings/mobile-levels/')) errors.push(`${levelImage.id}: image key must use the Mobile building-level art root.`);
   const levels = mobileLevelsByBuilding.get(levelImage.buildingId) ?? [];
   levels.push(levelImage.level);
@@ -504,11 +505,12 @@ for (const levelImage of mobileBuildingLevelImages) {
 }
 for (const building of collections.buildings ?? []) {
   const levels = mobileLevelsByBuilding.get(building.id) ?? [];
-  if (levels.length !== 5 || new Set(levels).size !== 5 || ![1, 2, 3, 4, 5].every(level => levels.includes(level))) {
-    errors.push(`${building.id}: MineIT Mobile exception requires exactly one linked image for each level L1-L5.`);
+  const expected = mobileImageLevels(building.id);
+  if (levels.length !== expected.length || new Set(levels).size !== expected.length || !expected.every(level => levels.includes(level))) {
+    errors.push(`${building.id}: requires exactly one linked image for each approved level.`);
   }
 }
-if (mobileBuildingLevelImages.length !== (collections.buildings ?? []).length * 5) errors.push(`Mobile building-level image catalogue must contain five images per building; found ${mobileBuildingLevelImages.length}.`);
+if (mobileBuildingLevelImages.length !== (collections.buildings ?? []).reduce((sum, building) => sum + mobileImageLevels(building.id).length, 0)) errors.push(`Mobile building-level image catalogue count differs from approved level progression.`);
 
 for (const document of collections.loreDocuments ?? []) {
   if (!document.contentPath) { errors.push(`${document.id}: lore document contentPath missing.`); continue; }
@@ -747,7 +749,7 @@ const pylonAssets = tacticalAssets.filter(item => item.id === 'tactical-power-py
 if (pylonAssets.length !== 1) errors.push('Expected one tactical power pylon symbol.');
 if (tacticalAssets.filter(item => item.id === 'tactical-machine-exploration-vehicle' && item.entityId === 'machine-exploration-vehicle').length !== 1) errors.push('Expected one exploration vehicle tactical symbol linked to its machine.');
 if (tacticalAssets.filter(item => item.id === 'tactical-vehicle-haulage-truck' && item.assetType === 'vehicle-symbol' && item.entityId === 'machine-haulage-truck').length !== 1) errors.push('Expected one haulage truck tactical symbol.');
-for (let level = 1; level <= 5; level++) {
+for (let level = 1; level <= 10; level++) {
   const matches = tacticalAssets.filter(item => item.id === `tactical-level-${level}` && item.assetType === 'level-badge');
   if (matches.length !== 1) errors.push(`Expected one tactical level ${level} badge.`);
 }
@@ -756,6 +758,7 @@ for (const building of collections.buildings ?? []) {
   if (matches.length !== 1) errors.push(`${building.id}: expected one linked tactical symbol, found ${matches.length}.`);
 }
 for (const item of tacticalAssets) {
+  const pendingNewBadge = /^tactical-level-(6|7|8|9|10)$/.test(item.id) && item.assetType === 'level-badge' && item.image?.generated === false && item.image?.status === 'not-generated';
   if (!['building-symbol', 'machine-symbol', 'vehicle-symbol', 'infrastructure-symbol', 'level-badge'].includes(item.assetType)) errors.push(`${item.id}: invalid tactical asset type.`);
   if (item.assetType === 'building-symbol' && byId.get(item.entityId)?.collectionName !== 'buildings') errors.push(`${item.id}: linked entity must be a building.`);
   if (item.assetType === 'machine-symbol' && byId.get(item.entityId)?.collectionName !== 'machines') errors.push(`${item.id}: linked entity must be a machine.`);
@@ -766,7 +769,11 @@ for (const item of tacticalAssets) {
     if (typeof value !== 'string' || !value.startsWith('assets/art/universe/tactical/') || value.includes('..')) {
       errors.push(`${item.id}: invalid ${key}.`); continue;
     }
-    try { await access(resolve(repoRoot, value)); } catch { errors.push(`${item.id}: missing ${key} at ${value}.`); }
+    if (!pendingNewBadge) { try { await access(resolve(repoRoot, value)); } catch { errors.push(`${item.id}: missing ${key} at ${value}.`); } }
+  }
+  if (pendingNewBadge) {
+    if (String(item.smallSize) !== '13,13') errors.push(`${item.id}: invalid pending badge dimensions.`);
+    continue;
   }
   if (item.generationReference) {
     for (const key of ['previewKey', 'originalKey']) {
@@ -787,6 +794,57 @@ for (const item of tacticalAssets) {
     const expected = ['building-symbol', 'machine-symbol', 'vehicle-symbol'].includes(item.assetType) ? [32, 32] : item.assetType === 'level-badge' ? [13, 13] : [16, 16];
     if (String(size) !== String(expected) || String(item.smallSize) !== String(expected)) errors.push(`${item.id}: invalid tactical pixel dimensions.`);
   } catch { errors.push(`${item.id}: small image is not a valid PNG.`); }
+}
+
+
+// Approved storage properties use a single concrete stored-form density.
+// Missing physical references never represent free or zero-volume goods.
+const positivePhysical = value => Number.isFinite(value) && value > 0;
+const supportedStorageIds = new Set(['building-stockpile', 'building-warehouse']);
+for (const record of [...(collections.mobileResourceDefinitions ?? []), ...(collections.namedSubstances ?? [])]) {
+  const { massPerUnitKg: mass, densityKgPerM3: density, storageBuildingIds: ids, stockpileShape: shape } = record;
+  const status = record.fieldApprovalStatuses ?? {};
+  if ((mass === null) !== (density === null) || (mass !== null && (!positivePhysical(mass) || !positivePhysical(density)))) errors.push(`${record.id}: invalid physical mass/density pair.`);
+  if (Object.hasOwn(record, 'storageVolumeM3')) errors.push(`${record.id}: substance volume must be derived, not independently authored.`);
+  if (!Array.isArray(ids) || new Set(ids).size !== ids.length || ids.some(id => !supportedStorageIds.has(id))) {
+    errors.push(`${record.id}: invalid explicit storage compatibility.`);
+    continue;
+  }
+  for (const id of ids) validateRef(record.id, 'storageBuildingIds', id);
+  if (status.storageBuildingIds !== 'Approved' || (mass !== null && (status.massPerUnitKg !== 'Approved' || status.densityKgPerM3 !== 'Approved'))) errors.push(`${record.id}: missing physical property approval.`);
+  if (ids.length && (!positivePhysical(mass) || !positivePhysical(density))) errors.push(`${record.id}: storage eligibility needs positive physical properties.`);
+  if (ids.includes('building-stockpile') ? !['cone','stack'].includes(shape) || status.stockpileShape !== 'Approved' : shape !== null) errors.push(`${record.id}: invalid stockpile geometry classification.`);
+  if (record.stockBehaviour && record.stockBehaviour !== 'stockable' && ids.length) errors.push(`${record.id}: non-stockable material cannot be stored.`);
+  if (Object.hasOwn(record, 'baseReferencePriceCCPerUnit') && (!positivePhysical(record.baseReferencePriceCCPerUnit) || status.baseReferencePriceCCPerUnit !== 'Approved')) errors.push(`${record.id}: invalid approved procurement reference.`);
+}
+for (const record of [...(collections.parts ?? []), ...(collections.machines ?? [])]) {
+  if (record.storageVolumeM3 !== null && (!positivePhysical(record.storageVolumeM3) || record.fieldApprovalStatuses?.storageVolumeM3 !== 'Approved')) errors.push(`${record.id}: invalid approved packaged volume.`);
+  if (record.storageVolumeM3 === null && record.fieldApprovalStatuses?.storageVolumeM3 !== 'Not Reviewed') errors.push(`${record.id}: missing packaged volume must remain unapproved.`);
+}
+const storageMaterialIds = new Set((collections.namedSubstances ?? []).filter(material => material.stockBehaviour === 'stockable').map(material => material.id));
+for (const building of (collections.buildings ?? []).filter(record => supportedStorageIds.has(record.id))) {
+  const stockpile = building.id === 'building-stockpile';
+  const profiles = building.levelProfiles ?? [];
+  if (profiles.length !== (stockpile ? 10 : 5)) errors.push(`${building.id}: wrong storage level count.`);
+  let previousCapacity = 0, previousLabour = 0;
+  const previousMaterials = new Map();
+  for (const [index, profile] of profiles.entries()) {
+    const { widthM, lengthM } = profile.footprint ?? {};
+    const area = widthM * lengthM;
+    const expectedCapacity = stockpile ? area / 6 : area * profile.storageHeightM * profile.usableStorageFraction;
+    if (profile.level !== index + 1 || profile.capacityUnit !== 'cubic-metres' || !positivePhysical(widthM) || !positivePhysical(lengthM) || !positivePhysical(profile.capacity) || profile.capacity <= previousCapacity || Math.abs(expectedCapacity - profile.capacity) > 1e-9) errors.push(`${building.id}: invalid capacity at level ${profile.level}.`);
+    const bom = profile.construction?.cumulativeMaterials ?? [];
+    if (bom.length !== (stockpile ? 1 : 5) || new Set(bom.map(material => material.materialId)).size !== bom.length) errors.push(`${building.id}: invalid cumulative material list at level ${profile.level}.`);
+    for (const material of bom) {
+      validateRef(building.id, 'construction.cumulativeMaterials', material.materialId);
+      if (!storageMaterialIds.has(material.materialId) || !positivePhysical(material.quantityKg) || material.quantityKg <= (previousMaterials.get(material.materialId) ?? 0) || (stockpile && material.materialId !== 'named-substance-graded-aggregate')) errors.push(`${building.id}: invalid construction material at level ${profile.level}.`);
+      previousMaterials.set(material.materialId, material.quantityKg);
+    }
+    if (!positivePhysical(profile.construction?.cumulativeLabourHours) || profile.construction.cumulativeLabourHours <= previousLabour) errors.push(`${building.id}: invalid cumulative labour at level ${profile.level}.`);
+    if (stockpile && (profile.powerUnits !== 0 || profile.workforce !== 0)) errors.push(`${building.id}: passive stockpile cannot require power or staff.`);
+    previousCapacity = profile.capacity;
+    previousLabour = profile.construction?.cumulativeLabourHours;
+  }
 }
 
 const requiredMobileParentSubstances = [
