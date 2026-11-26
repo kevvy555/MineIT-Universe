@@ -442,8 +442,10 @@
       "massPerUnitKg": "Approved",
       "densityKgPerM3": "Approved",
       "storageBuildingIds": "Approved",
-      "stockpileShape": "Not Reviewed"
-    }
+      "stockpileShape": "Not Reviewed",
+      "baseReferencePriceCCPerUnit": "Approved"
+    },
+    "baseReferencePriceCCPerUnit": 75
   },
   {
     "id": "named-substance-cut-diamond",
@@ -644,8 +646,10 @@
       "massPerUnitKg": "Approved",
       "densityKgPerM3": "Approved",
       "storageBuildingIds": "Approved",
-      "stockpileShape": "Approved"
-    }
+      "stockpileShape": "Approved",
+      "baseReferencePriceCCPerUnit": "Approved"
+    },
+    "baseReferencePriceCCPerUnit": 1
   },
   {
     "id": "named-substance-dried-peat-briquettes",
@@ -2272,8 +2276,10 @@
       "massPerUnitKg": "Approved",
       "densityKgPerM3": "Approved",
       "storageBuildingIds": "Approved",
-      "stockpileShape": "Approved"
-    }
+      "stockpileShape": "Approved",
+      "baseReferencePriceCCPerUnit": "Approved"
+    },
+    "baseReferencePriceCCPerUnit": 1.5
   },
   {
     "id": "named-substance-spent-nuclear-fuel",
@@ -2389,8 +2395,10 @@
       "massPerUnitKg": "Approved",
       "densityKgPerM3": "Approved",
       "storageBuildingIds": "Approved",
-      "stockpileShape": "Not Reviewed"
-    }
+      "stockpileShape": "Not Reviewed",
+      "baseReferencePriceCCPerUnit": "Approved"
+    },
+    "baseReferencePriceCCPerUnit": 100
   },
   {
     "id": "named-substance-sulfuric-acid",

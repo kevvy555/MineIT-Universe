@@ -160,8 +160,9 @@ for (const machine of collections.machines) {
   const extras = statusKeys.filter(key => !machineRequired.includes(key));
   assert.ok(extras.every(key => machine.mobileMineInitialBalance?.approval === "Approved" &&
     (machine.mobileMineInitialBalance.scope === "mine-and-connected-power" ||
-      (machine.id === "machine-drill-machine" && machine.mobileMineInitialBalance.scope === "quarry")) &&
-    authorizedExtraFields.has(key)), machine.id + " has unauthorized extra approval fields");
+      (machine.id === "machine-drill-machine" && machine.mobileMineInitialBalance.scope === "quarry") ||
+      (machine.id === "machine-warehouse-handler" && machine.mobileMineInitialBalance.scope === "physical-storage")) &&
+    (authorizedExtraFields.has(key) || (machine.id === "machine-warehouse-handler" && machine.mobileMineInitialBalance.scope === "physical-storage" && key === "operating.workforce"))), machine.id + " has unauthorized extra approval fields");
   assert.ok(validApprovalStatuses.has(machine.approval));
   assert.equal(machine.approvedPhysicalBOM, undefined,
     "Parallel legacy Machine BOM cannot remain after consolidation");

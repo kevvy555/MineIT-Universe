@@ -6433,14 +6433,28 @@
       "finishedMassKg": 2659.7,
       "manufacturerCostCC": 213564.63,
       "manufacturerQuoteCC": 267000,
-      "reviewBasis": "Unapproved Android derived-cost scenario; quantities, ratings and CC require Building-led review.",
-      "unresolvedDesignConstraints": "Aisle clearance and capacity; not shipyard crane"
+      "reviewBasis": "Initial Mobile storage game-balance reference, following delegated continuation of Feature #580 / Universe #33 on 26 November 2026. Manufacturing recipe, production yield and engineering remain proposed.",
+      "unresolvedDesignConstraints": "Aisle clearance and capacity; not shipyard crane",
+      "approvedPriceEvidence": "Delegated continuation, 26 November 2026: MineIT-Android #580 / MineIT-Universe #43; reviewed initial reference cost and quote only.",
+      "approvedMassEvidence": "Delegated continuation, 26 November 2026: MineIT-Android #580 / MineIT-Universe #43; reviewed initial reference mass and freight only."
     },
     "operating": {
-      "ratedCapacity": null,
-      "powerUnits": null,
+      "ratedCapacity": 20,
+      "powerUnits": 2,
       "footprintM2": null,
-      "housingTechTier": null
+      "housingTechTier": null,
+      "ratedCapacityUnit": "cubic-metres-per-hour",
+      "idlePowerUnits": 0.2,
+      "workforce": 1,
+      "operatingConsumables": [
+        {
+          "resourceId": "substance-refined-lubricant",
+          "quantityPerOperatingHour": 0.05,
+          "unit": "kg"
+        }
+      ],
+      "consumableUnitPolicy": "physical units consumed only during active handling; no productive handling or wear in physical storage foundation",
+      "foundingCargoUnits": 27
     },
     "pendingPartCompatibility": [],
     "fieldApprovalStatuses": {
@@ -6451,22 +6465,28 @@
       "manufacturing.factoryHours": "Proposed",
       "manufacturing.testHours": "Proposed",
       "manufacturing.goodUnitYield": "Proposed",
-      "manufacturing.finishedMassKg": "Proposed",
-      "manufacturing.manufacturerCostCC": "Proposed",
-      "manufacturing.manufacturerQuoteCC": "Proposed",
+      "manufacturing.finishedMassKg": "Approved",
+      "manufacturing.manufacturerCostCC": "Approved",
+      "manufacturing.manufacturerQuoteCC": "Approved",
       "partIds": "Approved",
       "pendingPartCompatibility": "Approved",
       "outputSummary": "In Review",
       "inputSummary": "In Review",
-      "operating.ratedCapacity": "Not Reviewed",
-      "operating.powerUnits": "Not Reviewed",
+      "operating.ratedCapacity": "Approved",
+      "operating.powerUnits": "Approved",
       "operating.footprintM2": "Not Reviewed",
       "operating.housingTechTier": "Not Reviewed",
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
       "conditionModel": "Approved",
-      "storageVolumeM3": "Approved"
+      "storageVolumeM3": "Approved",
+      "operating.ratedCapacityUnit": "Approved",
+      "operating.idlePowerUnits": "Approved",
+      "operating.workforce": "Approved",
+      "operating.operatingConsumables": "Approved",
+      "operating.consumableUnitPolicy": "Approved",
+      "operating.foundingCargoUnits": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -6538,7 +6558,12 @@
       "excludesNonOperationalCapability": true,
       "approval": "Approved"
     },
-    "storageVolumeM3": 12
+    "storageVolumeM3": 12,
+    "mobileMineInitialBalance": {
+      "approval": "Approved",
+      "scope": "physical-storage",
+      "basis": "Delegated continuation of approved physical storage work; initial game reference only, not qualified manufacturing or active handling."
+    }
   },
   {
     "id": "machine-conventional-electric-motor",
