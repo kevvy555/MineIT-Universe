@@ -281,6 +281,81 @@
         }
       },
       {
+        "id": "refinery-recipe-cut-stone-blocks",
+        "approvalRef": "R02",
+        "name": "Cut Stone Blocks",
+        "requiredMachineIds": [
+          "machine-cutting-machine"
+        ],
+        "inputs": [
+          {
+            "substanceId": "mobile-resource-stone",
+            "quantityKg": 1000
+          }
+        ],
+        "output": {
+          "substanceId": "named-substance-cut-stone-blocks",
+          "quantityKg": 800
+        },
+        "residueKg": 200,
+        "approval": "Approved",
+        "provenance": {
+          "repository": "kevvy555/MineIT-Android",
+          "issue": 611,
+          "approvedAt": "2026-11-28"
+        }
+      },
+      {
+        "id": "refinery-recipe-sawn-lumber",
+        "approvalRef": "R03",
+        "name": "Sawn Lumber",
+        "requiredMachineIds": [
+          "machine-cutting-machine"
+        ],
+        "inputs": [
+          {
+            "substanceId": "mobile-resource-timber",
+            "quantityKg": 1000
+          }
+        ],
+        "output": {
+          "substanceId": "named-substance-sawn-lumber",
+          "quantityKg": 700
+        },
+        "residueKg": 300,
+        "approval": "Approved",
+        "provenance": {
+          "repository": "kevvy555/MineIT-Android",
+          "issue": 611,
+          "approvedAt": "2026-11-28"
+        }
+      },
+      {
+        "id": "refinery-recipe-coke",
+        "approvalRef": "R04",
+        "name": "Coke",
+        "requiredMachineIds": [
+          "machine-furnace-machine"
+        ],
+        "inputs": [
+          {
+            "substanceId": "mobile-resource-coal",
+            "quantityKg": 1000
+          }
+        ],
+        "output": {
+          "substanceId": "named-substance-coke",
+          "quantityKg": 700
+        },
+        "residueKg": 300,
+        "approval": "Approved",
+        "provenance": {
+          "repository": "kevvy555/MineIT-Android",
+          "issue": 611,
+          "approvedAt": "2026-11-28"
+        }
+      },
+      {
         "id": "refinery-recipe-refined-iron",
         "approvalRef": "R05",
         "name": "Refined Iron",
@@ -341,7 +416,157 @@
           "issue": 611,
           "approvedAt": "2026-11-28"
         }
+      },
+      {
+        "id": "refinery-recipe-construction-glass",
+        "approvalRef": "R07",
+        "name": "Construction Glass",
+        "requiredMachineIds": [
+          "machine-furnace-machine"
+        ],
+        "inputs": [
+          {
+            "substanceId": "mobile-resource-silica-sand",
+            "quantityKg": 900
+          },
+          {
+            "substanceId": "mobile-resource-limestone",
+            "quantityKg": 100
+          }
+        ],
+        "output": {
+          "substanceId": "named-substance-construction-glass",
+          "quantityKg": 950
+        },
+        "residueKg": 50,
+        "approval": "Approved",
+        "provenance": {
+          "repository": "kevvy555/MineIT-Android",
+          "issue": 611,
+          "approvedAt": "2026-11-28"
+        }
+      },
+      {
+        "id": "refinery-recipe-fired-bricks",
+        "approvalRef": "R08",
+        "name": "Fired Bricks",
+        "requiredMachineIds": [
+          "machine-furnace-machine"
+        ],
+        "inputs": [
+          {
+            "substanceId": "mobile-resource-clay",
+            "quantityKg": 1000
+          }
+        ],
+        "output": {
+          "substanceId": "named-substance-fired-bricks",
+          "quantityKg": 850
+        },
+        "residueKg": 150,
+        "approval": "Approved",
+        "provenance": {
+          "repository": "kevvy555/MineIT-Android",
+          "issue": 611,
+          "approvedAt": "2026-11-28"
+        }
+      },
+      {
+        "id": "refinery-recipe-quicklime",
+        "approvalRef": "R09",
+        "name": "Quicklime",
+        "requiredMachineIds": [
+          "machine-furnace-machine"
+        ],
+        "inputs": [
+          {
+            "substanceId": "mobile-resource-limestone",
+            "quantityKg": 1000
+          }
+        ],
+        "output": {
+          "substanceId": "named-substance-quicklime",
+          "quantityKg": 550
+        },
+        "residueKg": 450,
+        "approval": "Approved",
+        "provenance": {
+          "repository": "kevvy555/MineIT-Android",
+          "issue": 611,
+          "approvedAt": "2026-11-28"
+        }
+      },
+      {
+        "id": "refinery-recipe-cement",
+        "approvalRef": "R11",
+        "name": "Cement",
+        "requiredMachineIds": [
+          "machine-furnace-machine",
+          "machine-crusher-machine"
+        ],
+        "inputs": [
+          {
+            "substanceId": "mobile-resource-limestone",
+            "quantityKg": 800
+          },
+          {
+            "substanceId": "mobile-resource-clay",
+            "quantityKg": 200
+          },
+          {
+            "substanceId": "mobile-resource-gypsum",
+            "quantityKg": 50
+          }
+        ],
+        "output": {
+          "substanceId": "named-substance-cement",
+          "quantityKg": 700
+        },
+        "residueKg": 350,
+        "approval": "Approved",
+        "provenance": {
+          "repository": "kevvy555/MineIT-Android",
+          "issue": 611,
+          "approvedAt": "2026-11-28"
+        }
+      },
+      {
+        "id": "refinery-recipe-plaster",
+        "approvalRef": "R12",
+        "name": "Plaster",
+        "requiredMachineIds": [
+          "machine-furnace-machine"
+        ],
+        "inputs": [
+          {
+            "substanceId": "mobile-resource-gypsum",
+            "quantityKg": 1000
+          }
+        ],
+        "output": {
+          "substanceId": "named-substance-plaster",
+          "quantityKg": 840
+        },
+        "residueKg": 160,
+        "approval": "Approved",
+        "provenance": {
+          "repository": "kevvy555/MineIT-Android",
+          "issue": 611,
+          "approvedAt": "2026-11-28"
+        }
       }
-    ]
+    ],
+    "refineryOperatingPolicy": {
+      "approval": "Approved",
+      "provenance": "User approval, 28 November 2026: MineIT-Android #611 N01–N10 / MineIT-Universe #46. Initial gameplay balance; not a certified engineering or factory BOM.",
+      "shiftCount": 3,
+      "hoursPerShift": 8,
+      "activeRecipesPerFacility": 1,
+      "throughputBasis": "gross-input-kg-per-hour",
+      "multiMachineRate": "minimum available required machine capability across paired modules; both machines incur productive-hour costs",
+      "qualityRule": "mass-weighted input quality using existing canonical quality bands; fixed recipe yield",
+      "residueRule": "account processing losses; no separately stockable residue or clinker",
+      "storageRule": "common local building inventory for inputs and outputs; only configured physical routes; no direct global input fallback"
+    }
   }
 ]

@@ -4954,7 +4954,11 @@
     ],
     "machineIds": [
       "machine-crusher-machine",
-      "machine-smelter-machine"
+      "machine-bulk-stacker",
+      "machine-warehouse-handler",
+      "machine-smelter-machine",
+      "machine-furnace-machine",
+      "machine-cutting-machine"
     ],
     "description": "A basic mineral-processing plant that crushes, separates and thermally refines raw ore into usable industrial stock.",
     "canonStatus": "source-canonical",
@@ -5028,6 +5032,72 @@
               }
             ],
             "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-bulk-stacker",
+            "role": "optional",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 2,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 2,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-warehouse-handler",
+            "role": "optional",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 2,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 2,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
           }
         ],
         "approval": "Approved"
@@ -5076,13 +5146,79 @@
               }
             ],
             "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-bulk-stacker",
+            "role": "optional",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 2,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 2,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-warehouse-handler",
+            "role": "optional",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 2,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 2,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
           }
         ],
         "approval": "Approved"
       },
       {
-        "id": "integrated-refinery",
-        "name": "Integrated crushing and smelting",
+        "id": "furnace-line",
+        "name": "Furnace line",
         "selection": "alternative",
         "applicableLevels": [
           1,
@@ -5092,6 +5228,267 @@
           5
         ],
         "equipment": [
+          {
+            "machineId": "machine-furnace-machine",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 2,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 3,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 5,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 8,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-bulk-stacker",
+            "role": "optional",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 2,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 2,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-warehouse-handler",
+            "role": "optional",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 2,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 2,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          }
+        ],
+        "approval": "Approved"
+      },
+      {
+        "id": "cutting-line",
+        "name": "Cutting line",
+        "selection": "alternative",
+        "applicableLevels": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "equipment": [
+          {
+            "machineId": "machine-cutting-machine",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 2,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 3,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 5,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 8,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-bulk-stacker",
+            "role": "optional",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 2,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 2,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-warehouse-handler",
+            "role": "optional",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 2,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 2,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          }
+        ],
+        "approval": "Approved"
+      },
+      {
+        "id": "cement-line",
+        "name": "Cement production line",
+        "selection": "alternative",
+        "applicableLevels": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "equipment": [
+          {
+            "machineId": "machine-furnace-machine",
+            "role": "required",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 2,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 3,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 5,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 8,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
           {
             "machineId": "machine-crusher-machine",
             "role": "required",
@@ -5126,8 +5523,8 @@
             "dependsOnMachineIds": []
           },
           {
-            "machineId": "machine-smelter-machine",
-            "role": "required",
+            "machineId": "machine-bulk-stacker",
+            "role": "optional",
             "capabilityConfigurationId": null,
             "quantityByLevel": [
               {
@@ -5137,22 +5534,55 @@
               },
               {
                 "level": 2,
-                "quantity": 2,
+                "quantity": 1,
                 "approval": "Approved"
               },
               {
                 "level": 3,
-                "quantity": 3,
+                "quantity": 1,
                 "approval": "Approved"
               },
               {
                 "level": 4,
-                "quantity": 5,
+                "quantity": 2,
                 "approval": "Approved"
               },
               {
                 "level": 5,
-                "quantity": 8,
+                "quantity": 2,
+                "approval": "Approved"
+              }
+            ],
+            "dependsOnMachineIds": []
+          },
+          {
+            "machineId": "machine-warehouse-handler",
+            "role": "optional",
+            "capabilityConfigurationId": null,
+            "quantityByLevel": [
+              {
+                "level": 1,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 2,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 3,
+                "quantity": 1,
+                "approval": "Approved"
+              },
+              {
+                "level": 4,
+                "quantity": 2,
+                "approval": "Approved"
+              },
+              {
+                "level": 5,
+                "quantity": 2,
                 "approval": "Approved"
               }
             ],
@@ -5168,70 +5598,225 @@
         "applicableEquipmentConfigurationIds": [
           "crushing-line",
           "smelting-line",
-          "integrated-refinery"
+          "furnace-line",
+          "cutting-line",
+          "cement-line"
         ],
         "powerUnits": null,
         "workforce": null,
-        "capacity": null,
-        "capacityUnit": null,
+        "capacity": 30,
+        "capacityUnit": "cubic-metres",
+        "footprint": {
+          "widthM": 18,
+          "lengthM": 24
+        },
+        "construction": {
+          "cumulativeMaterials": [
+            {
+              "materialId": "named-substance-graded-aggregate",
+              "quantityKg": 73440
+            },
+            {
+              "materialId": "named-substance-cut-stone-blocks",
+              "quantityKg": 43200
+            },
+            {
+              "materialId": "named-substance-sawn-lumber",
+              "quantityKg": 2160
+            },
+            {
+              "materialId": "named-substance-steel",
+              "quantityKg": 17280
+            },
+            {
+              "materialId": "named-substance-construction-glass",
+              "quantityKg": 864
+            }
+          ],
+          "cumulativeLabourHours": 864
+        },
         "approval": "Approved",
-        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+        "notes": "Shared local raw/finished inventory; staffing and power derive from selected installed production and handling Machines. Approved Android #611 N05–N07."
       },
       {
         "level": 2,
         "applicableEquipmentConfigurationIds": [
           "crushing-line",
           "smelting-line",
-          "integrated-refinery"
+          "furnace-line",
+          "cutting-line",
+          "cement-line"
         ],
         "powerUnits": null,
         "workforce": null,
-        "capacity": null,
-        "capacityUnit": null,
+        "capacity": 60,
+        "capacityUnit": "cubic-metres",
+        "footprint": {
+          "widthM": 24,
+          "lengthM": 30
+        },
+        "construction": {
+          "cumulativeMaterials": [
+            {
+              "materialId": "named-substance-graded-aggregate",
+              "quantityKg": 122400
+            },
+            {
+              "materialId": "named-substance-cut-stone-blocks",
+              "quantityKg": 72000
+            },
+            {
+              "materialId": "named-substance-sawn-lumber",
+              "quantityKg": 3600
+            },
+            {
+              "materialId": "named-substance-steel",
+              "quantityKg": 28800
+            },
+            {
+              "materialId": "named-substance-construction-glass",
+              "quantityKg": 1440
+            }
+          ],
+          "cumulativeLabourHours": 1440
+        },
         "approval": "Approved",
-        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+        "notes": "Shared local raw/finished inventory; staffing and power derive from selected installed production and handling Machines. Approved Android #611 N05–N07."
       },
       {
         "level": 3,
         "applicableEquipmentConfigurationIds": [
           "crushing-line",
           "smelting-line",
-          "integrated-refinery"
+          "furnace-line",
+          "cutting-line",
+          "cement-line"
         ],
         "powerUnits": null,
         "workforce": null,
-        "capacity": null,
-        "capacityUnit": null,
+        "capacity": 90,
+        "capacityUnit": "cubic-metres",
+        "footprint": {
+          "widthM": 30,
+          "lengthM": 36
+        },
+        "construction": {
+          "cumulativeMaterials": [
+            {
+              "materialId": "named-substance-graded-aggregate",
+              "quantityKg": 183600
+            },
+            {
+              "materialId": "named-substance-cut-stone-blocks",
+              "quantityKg": 108000
+            },
+            {
+              "materialId": "named-substance-sawn-lumber",
+              "quantityKg": 5400
+            },
+            {
+              "materialId": "named-substance-steel",
+              "quantityKg": 43200
+            },
+            {
+              "materialId": "named-substance-construction-glass",
+              "quantityKg": 2160
+            }
+          ],
+          "cumulativeLabourHours": 2160
+        },
         "approval": "Approved",
-        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+        "notes": "Shared local raw/finished inventory; staffing and power derive from selected installed production and handling Machines. Approved Android #611 N05–N07."
       },
       {
         "level": 4,
         "applicableEquipmentConfigurationIds": [
           "crushing-line",
           "smelting-line",
-          "integrated-refinery"
+          "furnace-line",
+          "cutting-line",
+          "cement-line"
         ],
         "powerUnits": null,
         "workforce": null,
-        "capacity": null,
-        "capacityUnit": null,
+        "capacity": 150,
+        "capacityUnit": "cubic-metres",
+        "footprint": {
+          "widthM": 36,
+          "lengthM": 48
+        },
+        "construction": {
+          "cumulativeMaterials": [
+            {
+              "materialId": "named-substance-graded-aggregate",
+              "quantityKg": 293760
+            },
+            {
+              "materialId": "named-substance-cut-stone-blocks",
+              "quantityKg": 172800
+            },
+            {
+              "materialId": "named-substance-sawn-lumber",
+              "quantityKg": 8640
+            },
+            {
+              "materialId": "named-substance-steel",
+              "quantityKg": 69120
+            },
+            {
+              "materialId": "named-substance-construction-glass",
+              "quantityKg": 3456
+            }
+          ],
+          "cumulativeLabourHours": 3456
+        },
         "approval": "Approved",
-        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+        "notes": "Shared local raw/finished inventory; staffing and power derive from selected installed production and handling Machines. Approved Android #611 N05–N07."
       },
       {
         "level": 5,
         "applicableEquipmentConfigurationIds": [
           "crushing-line",
           "smelting-line",
-          "integrated-refinery"
+          "furnace-line",
+          "cutting-line",
+          "cement-line"
         ],
         "powerUnits": null,
         "workforce": null,
-        "capacity": null,
-        "capacityUnit": null,
+        "capacity": 240,
+        "capacityUnit": "cubic-metres",
+        "footprint": {
+          "widthM": 48,
+          "lengthM": 60
+        },
+        "construction": {
+          "cumulativeMaterials": [
+            {
+              "materialId": "named-substance-graded-aggregate",
+              "quantityKg": 489600
+            },
+            {
+              "materialId": "named-substance-cut-stone-blocks",
+              "quantityKg": 288000
+            },
+            {
+              "materialId": "named-substance-sawn-lumber",
+              "quantityKg": 14400
+            },
+            {
+              "materialId": "named-substance-steel",
+              "quantityKg": 115200
+            },
+            {
+              "materialId": "named-substance-construction-glass",
+              "quantityKg": 5760
+            }
+          ],
+          "cumulativeLabourHours": 5760
+        },
         "approval": "Approved",
-        "notes": "Universe owns structural fit-out; platform-specific balance owns exact power, workforce and production curves unless explicitly approved here."
+        "notes": "Shared local raw/finished inventory; staffing and power derive from selected installed production and handling Machines. Approved Android #611 N05–N07."
       }
     ],
     "directPartRequirements": [],
@@ -5240,7 +5825,7 @@
       "workforce": "required-when-operating",
       "productionInputs": [],
       "approval": "Approved",
-      "notes": "Exact quantities, production rates and staffing remain platform balance unless explicitly approved in levelProfiles."
+      "notes": "Production uses approved recipe, installed operating Machines and three eight-hour shifts. Power and workforce derive from actual enabled equipment. Machine fit-out purchased separately. Approved Android #611."
     },
     "wearModel": {
       "modelId": "industrial-wear-model-v1",

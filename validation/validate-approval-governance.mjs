@@ -142,7 +142,7 @@ assert.ok(!machineDefinitions.some(d => d.fieldKey.startsWith("review.") ||
 const machineRequired = machineDefinitions.filter(d => d.requiresApproval)
   .map(d => d.fieldKey);
 const machineRows = industrialReviewRows("machines", catalogue, industrialReference);
-assert.equal(machineRows.length, 46);
+assert.equal(machineRows.length, 48);
 assert.equal(machineRows.filter(r => r.fields.approval === "Approved").length, 0,
   "Approved amenity recipe is not blanket Machine approval");
 assert.equal(machineRows.filter(r => r.fields.approval === "Blocked").length, 7,
@@ -161,8 +161,8 @@ for (const machine of collections.machines) {
   assert.ok(extras.every(key => machine.mobileMineInitialBalance?.approval === "Approved" &&
     (machine.mobileMineInitialBalance.scope === "mine-and-connected-power" ||
       (machine.id === "machine-drill-machine" && machine.mobileMineInitialBalance.scope === "quarry") ||
-      (machine.id === "machine-warehouse-handler" && machine.mobileMineInitialBalance.scope === "physical-storage")) &&
-    (authorizedExtraFields.has(key) || (machine.id === "machine-warehouse-handler" && machine.mobileMineInitialBalance.scope === "physical-storage" && key === "operating.workforce"))), machine.id + " has unauthorized extra approval fields");
+      (machine.id === "machine-warehouse-handler" && machine.mobileMineInitialBalance.scope === "physical-storage") || (["machine-crusher-machine","machine-smelter-machine","machine-furnace-machine","machine-cutting-machine"].includes(machine.id) && machine.mobileMineInitialBalance.scope === "refinery")) &&
+    (authorizedExtraFields.has(key) || ((machine.id === "machine-warehouse-handler" && machine.mobileMineInitialBalance.scope === "physical-storage" || ["machine-crusher-machine","machine-smelter-machine","machine-furnace-machine","machine-cutting-machine"].includes(machine.id) && machine.mobileMineInitialBalance.scope === "refinery") && key === "operating.workforce"))), machine.id + " has unauthorized extra approval fields");
   assert.ok(validApprovalStatuses.has(machine.approval));
   assert.equal(machine.approvedPhysicalBOM, undefined,
     "Parallel legacy Machine BOM cannot remain after consolidation");

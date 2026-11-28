@@ -19,7 +19,7 @@ const ids = {
   parts: new Set(parts.map(p => p.id)),
   materials: new Set(materials.map(m => m.id))
 };
-assert.equal(machines.length, 46);
+assert.equal(machines.length, 48);
 assert.equal(ids.machines.size, machines.length);
 const haulage = machines.find(m => m.id === "machine-haulage-truck");
 assert.ok(haulage, "Canonical haulage truck must exist");
@@ -98,15 +98,16 @@ for (const machine of machines) {
   const approvedQuarry = machine.id === "machine-drill-machine" &&
     machine.mobileMineInitialBalance?.scope === "quarry";
   const approvedStorage = machine.id === "machine-warehouse-handler" && machine.mobileMineInitialBalance?.scope === "physical-storage";
+  const approvedRefinery = ["machine-crusher-machine","machine-smelter-machine","machine-furnace-machine","machine-cutting-machine"].includes(machine.id) && machine.mobileMineInitialBalance?.scope === "refinery";
   const delegatedMobile = machine.mobileMineInitialBalance?.approval === "Approved" &&
-    (machine.mobileMineInitialBalance.scope === "mine-and-connected-power" || approvedQuarry || approvedStorage);
+    (machine.mobileMineInitialBalance.scope === "mine-and-connected-power" || approvedQuarry || approvedStorage || approvedRefinery);
   if (Number.isFinite(bom.manufacturerCostCC)) priceProposals++;
   if (delegatedMobile) {
     mobileApproved++;
     const evidencePattern = approvedQuarry
       ? /User approval, 26 November 2026: MineIT-Android #571\/#572/
       : approvedStorage ? /Delegated continuation, 26 November 2026: MineIT-Android #580/ 
-      : /Delegated user approval, 22 November 2026/;
+      : approvedRefinery ? /User approval, 28 November 2026: MineIT-Android #611/ : /Delegated user approval, 22 November 2026/;
     assert.match(machine.manufacturing.approvedPriceEvidence || "", evidencePattern);
     assert.match(machine.manufacturing.approvedMassEvidence || "", evidencePattern);
     if (approvedStorage) {
@@ -142,6 +143,23 @@ for (const machine of machines) {
         "assemblyHours", "factoryHours", "testHours", "goodUnitYield"])
         assert.equal(machine.fieldApprovalStatuses["manufacturing." + field], "Proposed");
     }
+    if (approvedRefinery) {
+      const expected = {"machine-crusher-machine":[1000,3,0.15,0.1,0.2,5080.3,25,311844.65,389850],"machine-smelter-machine":[500,8,0.4,0.05,0.4,5200.4,28,384205.15,480300],"machine-furnace-machine":[750,6,0.3,0.05,0.2,4500,24,320000,400000],"machine-cutting-machine":[500,2,0.1,0.1,0.15,3400,18,260000,325000]};
+      const [rated,power,idle,lube,cool,mass,volume,cost,quote]=expected[machine.id];
+      assert.equal(machine.operating.ratedCapacity,rated);
+      assert.equal(machine.operating.ratedCapacityUnit,'gross-input-kg-per-hour');
+      assert.equal(machine.operating.powerUnits,power);
+      assert.equal(machine.operating.idlePowerUnits,idle);
+      assert.equal(machine.operating.workforce,2);
+      assert.equal(machine.fieldApprovalStatuses['operating.workforce'],'Approved');
+      assert.deepEqual(machine.operating.operatingConsumables,[{resourceId:'substance-refined-lubricant',quantityPerOperatingHour:lube,unit:'kg'},{resourceId:'substance-coolant',quantityPerOperatingHour:cool,unit:'kg'}]);
+      assert.equal(bom.finishedMassKg,mass);
+      assert.equal(machine.storageVolumeM3,volume);
+      assert.equal(bom.manufacturerCostCC,cost);
+      assert.equal(bom.manufacturerQuoteCC,quote);
+      assert.equal(machine.servicePartRequirements.reduce((sum,s)=>sum+s.quantity,0),{"machine-crusher-machine":29,"machine-smelter-machine":45,"machine-furnace-machine":34,"machine-cutting-machine":29}[machine.id]);
+      for(const field of ['finishedPartInputs','directMaterialInputs','nestedMachineInputs','assemblyHours','factoryHours','testHours','goodUnitYield']) assert.notEqual(machine.fieldApprovalStatuses['manufacturing.'+field],'Approved');
+    }
     assert.ok(Number.isFinite(bom.manufacturerCostCC) && bom.manufacturerCostCC > 0);
     assert.ok(Number.isFinite(bom.manufacturerQuoteCC) && bom.manufacturerQuoteCC >= bom.manufacturerCostCC);
     assert.ok(Number.isFinite(bom.finishedMassKg) && bom.finishedMassKg > 0);
@@ -171,7 +189,7 @@ for (const machine of machines) {
   assert.deepEqual(new Set(statusFields.filter(key => required.includes(key))), new Set(required),
     machine.id + " must have explicit decisions for every required field");
   const extras = statusFields.filter(key => !required.includes(key));
-  assert.ok(extras.every(key => delegatedMobile && (initialMobileFields.has(key) || (approvedStorage && key === "operating.workforce"))),
+  assert.ok(extras.every(key => delegatedMobile && (initialMobileFields.has(key) || ((approvedStorage || approvedRefinery) && key === "operating.workforce"))),
     machine.id + " has noncanonical field-approval keys: " + extras.join(", "));
   const fields = flatten(machine);
   fields.buildingCompatibility = buildings
@@ -248,8 +266,8 @@ assertAcyclicMachineBoms(new Map(machines.map(machine => [
 assert.equal(pending, 14, "14 deliberate compatibility reviews must survive");
 assert.equal(fullyApprovedBoms, 5, "Five approved accommodation physical BOMs must survive");
 assert.equal(blocked, 7, "Seven remaining truly blocked Machine design records survive; three priced generators are In Review");
-assert.equal(priceProposals, 39, "35 original numerical CC proposals plus 4 new user-approved Mobile baselines");
-assert.equal(mobileApproved, 16, "16 approved initial Mobile Machine baselines verified with explicit price/mass evidence");
+assert.equal(priceProposals, 41, "Existing numerical scenarios plus two new Refinery machines");
+assert.equal(mobileApproved, 20, "20 approved initial Mobile Machine baselines verified with explicit price/mass evidence");
 for (const row of reference.machines) assert.ok(ids.machines.has(row.id));
 const aliases = new Map(machines.filter(m => m.provenance?.androidDiscoveryWorkingId)
   .map(m => [m.provenance.androidDiscoveryWorkingId, m.id]));
@@ -257,7 +275,7 @@ assert.equal(aliases.size, 8);
 for (const proposed of reference.unmappedCandidates.machines)
   assert.ok(aliases.has(proposed.id), "Unmapped discovery candidate: " + proposed.id);
 const rows = industrialReviewRows("machines", catalogue, reference);
-assert.equal(rows.length, 46);
+assert.equal(rows.length, 48);
 assert.deepEqual(new Set(rows.map(r => r.id)), ids.machines);
 const displayed = new Set(rows.flatMap(r => Object.keys(r.fields)));
 assert.deepEqual(displayed, new Set(selected.map(d => d.fieldKey)),
@@ -266,8 +284,8 @@ assert.ok(rows.every(r => r.canonical && !("catalogueStatus" in r.fields)));
 assert.ok(rows.every(r => !Object.keys(r.fields).some(k =>
   k.startsWith("review.") || k.startsWith("provenance.") ||
   k.startsWith("fieldApprovalStatuses."))));
-assert.equal(rows.filter(r => r.fields["image.generated"] === false).length, 4,
-  "The ungenerated specialist and haulage Machine identities must remain in the art queue");
+assert.equal(rows.filter(r => r.fields["image.generated"] === false).length, 6,
+  "The ungenerated specialist, haulage and new Refinery Machine identities must remain in the art queue");
 const individual = pendingColumnSelection(rows, [...displayed], "machine-ship-reactor");
 assert.ok(individual.includes("manufacturing.manufacturerCostCC"));
 assert.ok(individual.includes("pendingPartCompatibility"));
@@ -282,4 +300,4 @@ const broken = { ...machines.find(m => m.amenityProfile),
 assert.throws(() => approvalSummary("machines", broken, flatten(broken), catalogue),
   /disagrees|cannot approve|requires approved price evidence/,
   "Provisional quote must never be treated as approved");
-console.log("Machines consolidated: 46 canonical, 30 review fields, 5 approved physical BOMs, 39 numeric CC scenarios (15 user-approved Mobile baseline approvals), 7 blocked designs, 14 pending compatibility edges.");
+console.log("Machines consolidated: 48 canonical, 31 review fields, 5 approved physical BOMs, 41 numeric CC scenarios (20 user-approved Mobile baseline approvals), 7 blocked designs, 14 pending compatibility edges.");

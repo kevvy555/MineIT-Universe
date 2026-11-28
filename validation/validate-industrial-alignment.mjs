@@ -10,7 +10,7 @@ const androidReference = load('game-specs/mineit-mobile/industrial-alignment-ref
 const report = readFileSync(new URL('../docs/IndustrialCatalogueAlignmentReview.md', import.meta.url), 'utf8');
 
 assert.equal(parts.length, 19);
-assert.equal(machines.length, 46);
+assert.equal(machines.length, 48);
 assert.equal(buildings.length, 24);
 assert.equal(specifications.length, 1);
 assert.equal(androidReference.length, 1);
@@ -198,45 +198,265 @@ for (const capability of spec.extractionCapabilities) {
 assert.deepEqual(new Set(expectedExtraction.keys()), new Set(spec.extractionCapabilities.map(row => row.id)));
 
 
- // Refinery recipes use canonical material identities and gross input mass.
- // The first catalogue checkpoint covers the three existing machine recipes;
- // the remaining approved recipes require new machine identities in this feature.
+// Approved R01–R12 (R10 retired): validate exact reviewed masses and machine IDs.
 const refineryRecipes = spec.refineryRecipes;
-assert.ok(Array.isArray(refineryRecipes) && refineryRecipes.length === 3);
-const refineryMaterials = new Map([...load('data/mobile-resource-definitions.json'),
-  ...load('data/named-substances.json')].map(material => [material.id, material]));
-assert.equal(new Set(refineryRecipes.map(recipe => recipe.id)).size, refineryRecipes.length);
-assert.equal(new Set(refineryRecipes.map(recipe => recipe.approvalRef)).size, refineryRecipes.length);
-for (const recipe of refineryRecipes) {
-  assert.equal(recipe.approval, 'Approved');
-  assert.ok(recipe.requiredMachineIds.length > 0);
-  assert.equal(new Set(recipe.requiredMachineIds).size, recipe.requiredMachineIds.length);
-  for (const id of recipe.requiredMachineIds) assert.ok(machineById.has(id), `${recipe.id}: unknown machine ${id}`);
-  assert.ok(recipe.inputs.length > 0);
-  assert.equal(new Set(recipe.inputs.map(row => row.substanceId)).size, recipe.inputs.length);
-  for (const row of [...recipe.inputs, recipe.output]) {
-    const material = refineryMaterials.get(row.substanceId);
-    assert.ok(material, `${recipe.id}: unknown material ${row.substanceId}`);
-    assert.ok(Number.isFinite(material.massPerUnitKg) && material.massPerUnitKg > 0);
-    assert.ok(Number.isFinite(row.quantityKg) && row.quantityKg > 0);
+const refineryMaterials = new Map([...load('data/mobile-resource-definitions.json'), ...load('data/named-substances.json')].map(m => [m.id,m]));
+assert.equal(refineryRecipes.length, 11);
+assert.equal(new Set(refineryRecipes.map(r=>r.id)).size,11);
+assert.equal(new Set(refineryRecipes.map(r=>r.output.substanceId)).size,11);
+const expectedRefineryRecipes = [
+  [
+    "R01",
+    [
+      "machine-crusher-machine"
+    ],
+    [
+      [
+        "mobile-resource-stone",
+        1000
+      ]
+    ],
+    [
+      "named-substance-graded-aggregate",
+      950
+    ],
+    50
+  ],
+  [
+    "R02",
+    [
+      "machine-cutting-machine"
+    ],
+    [
+      [
+        "mobile-resource-stone",
+        1000
+      ]
+    ],
+    [
+      "named-substance-cut-stone-blocks",
+      800
+    ],
+    200
+  ],
+  [
+    "R03",
+    [
+      "machine-cutting-machine"
+    ],
+    [
+      [
+        "mobile-resource-timber",
+        1000
+      ]
+    ],
+    [
+      "named-substance-sawn-lumber",
+      700
+    ],
+    300
+  ],
+  [
+    "R04",
+    [
+      "machine-furnace-machine"
+    ],
+    [
+      [
+        "mobile-resource-coal",
+        1000
+      ]
+    ],
+    [
+      "named-substance-coke",
+      700
+    ],
+    300
+  ],
+  [
+    "R05",
+    [
+      "machine-smelter-machine"
+    ],
+    [
+      [
+        "mobile-resource-iron-ore",
+        1000
+      ],
+      [
+        "named-substance-coke",
+        300
+      ],
+      [
+        "mobile-resource-limestone",
+        100
+      ]
+    ],
+    [
+      "named-substance-refined-iron",
+      600
+    ],
+    800
+  ],
+  [
+    "R06",
+    [
+      "machine-smelter-machine"
+    ],
+    [
+      [
+        "named-substance-refined-iron",
+        1000
+      ],
+      [
+        "named-substance-coke",
+        20
+      ]
+    ],
+    [
+      "named-substance-steel",
+      1000
+    ],
+    20
+  ],
+  [
+    "R07",
+    [
+      "machine-furnace-machine"
+    ],
+    [
+      [
+        "mobile-resource-silica-sand",
+        900
+      ],
+      [
+        "mobile-resource-limestone",
+        100
+      ]
+    ],
+    [
+      "named-substance-construction-glass",
+      950
+    ],
+    50
+  ],
+  [
+    "R08",
+    [
+      "machine-furnace-machine"
+    ],
+    [
+      [
+        "mobile-resource-clay",
+        1000
+      ]
+    ],
+    [
+      "named-substance-fired-bricks",
+      850
+    ],
+    150
+  ],
+  [
+    "R09",
+    [
+      "machine-furnace-machine"
+    ],
+    [
+      [
+        "mobile-resource-limestone",
+        1000
+      ]
+    ],
+    [
+      "named-substance-quicklime",
+      550
+    ],
+    450
+  ],
+  [
+    "R11",
+    [
+      "machine-furnace-machine",
+      "machine-crusher-machine"
+    ],
+    [
+      [
+        "mobile-resource-limestone",
+        800
+      ],
+      [
+        "mobile-resource-clay",
+        200
+      ],
+      [
+        "mobile-resource-gypsum",
+        50
+      ]
+    ],
+    [
+      "named-substance-cement",
+      700
+    ],
+    350
+  ],
+  [
+    "R12",
+    [
+      "machine-furnace-machine"
+    ],
+    [
+      [
+        "mobile-resource-gypsum",
+        1000
+      ]
+    ],
+    [
+      "named-substance-plaster",
+      840
+    ],
+    160
+  ]
+];
+assert.deepEqual(refineryRecipes.map(r=>[r.approvalRef,r.requiredMachineIds,r.inputs.map(x=>[x.substanceId,x.quantityKg]),[r.output.substanceId,r.output.quantityKg],r.residueKg]), expectedRefineryRecipes);
+const refineryBuilding = buildingById.get('building-basic-refinery');
+const configurationIds = new Set(refineryBuilding.equipmentConfigurations.map(c=>c.id));
+assert.deepEqual([...configurationIds], ['crushing-line','smelting-line','furnace-line','cutting-line','cement-line']);
+for(const recipe of refineryRecipes) {
+  assert.equal(recipe.approval,'Approved');
+  assert.ok(recipe.inputs.length && recipe.requiredMachineIds.length);
+  assert.equal(new Set(recipe.inputs.map(x=>x.substanceId)).size,recipe.inputs.length);
+  assert.equal(new Set(recipe.requiredMachineIds).size,recipe.requiredMachineIds.length);
+  assert.ok(refineryBuilding.equipmentConfigurations.some(c=>JSON.stringify(c.equipment.filter(e=>e.role==='required').map(e=>e.machineId))===JSON.stringify(recipe.requiredMachineIds)));
+  for(const id of recipe.requiredMachineIds) assert.equal(machineById.get(id).operating.ratedCapacityUnit,'gross-input-kg-per-hour');
+  for(const row of [...recipe.inputs,recipe.output]) {
+    const material=refineryMaterials.get(row.substanceId);
+    assert.ok(material && material.massPerUnitKg>0 && material.densityKgPerM3>0);
+    assert.ok(Number.isFinite(row.quantityKg) && row.quantityKg>0);
   }
   assert.ok(recipe.output.substanceId.startsWith('named-substance-'));
-  assert.ok(!recipe.inputs.some(row => row.substanceId === recipe.output.substanceId));
-  assert.ok(Number.isFinite(recipe.residueKg) && recipe.residueKg >= 0);
-  assert.equal(recipe.inputs.reduce((sum, row) => sum + row.quantityKg, 0),
-    recipe.output.quantityKg + recipe.residueKg, `${recipe.id}: mass balance`);
+  assert.ok(Number.isFinite(recipe.residueKg) && recipe.residueKg>=0);
+  assert.equal(recipe.inputs.reduce((sum,row)=>sum+row.quantityKg,0),recipe.output.quantityKg+recipe.residueKg);
 }
-assert.deepEqual(refineryRecipes.map(recipe => [recipe.approvalRef, recipe.requiredMachineIds,
-  recipe.inputs, recipe.output, recipe.residueKg]), [
-  ['R01', ['machine-crusher-machine'], [{substanceId:'mobile-resource-stone',quantityKg:1000}],
-    {substanceId:'named-substance-graded-aggregate',quantityKg:950}, 50],
-  ['R05', ['machine-smelter-machine'], [{substanceId:'mobile-resource-iron-ore',quantityKg:1000},
-    {substanceId:'named-substance-coke',quantityKg:300},{substanceId:'mobile-resource-limestone',quantityKg:100}],
-    {substanceId:'named-substance-refined-iron',quantityKg:600}, 800],
-  ['R06', ['machine-smelter-machine'], [{substanceId:'named-substance-refined-iron',quantityKg:1000},
-    {substanceId:'named-substance-coke',quantityKg:20}],
-    {substanceId:'named-substance-steel',quantityKg:1000}, 20],
-]);
+const recipeByOutput = new Map(refineryRecipes.map(r=>[r.output.substanceId,r]));
+function visitRefineryProduct(id,active=new Set()) {
+  assert.ok(!active.has(id),'Cyclic Refinery recipe '+id);
+  const recipe=recipeByOutput.get(id);
+  if(!recipe)return;
+  const next=new Set(active).add(id);
+  recipe.inputs.forEach(row=>visitRefineryProduct(row.substanceId,next));
+}
+for(const id of recipeByOutput.keys())visitRefineryProduct(id);
+assert.deepEqual(refineryBuilding.levelProfiles.map(p=>[p.footprint.widthM,p.footprint.lengthM,p.capacity]),[[18,24,30],[24,30,60],[30,36,90],[36,48,150],[48,60,240]]);
+for(const p of refineryBuilding.levelProfiles){
+  const area=p.footprint.widthM*p.footprint.lengthM;
+  assert.equal(p.construction.cumulativeLabourHours,area*2);
+  assert.deepEqual(p.construction.cumulativeMaterials.map(x=>[x.materialId,x.quantityKg]),[["named-substance-graded-aggregate",170],["named-substance-cut-stone-blocks",100],["named-substance-sawn-lumber",5],["named-substance-steel",40],["named-substance-construction-glass",2]].map(([id,rate])=>[id,rate*area]));
+}
+for(const c of refineryBuilding.equipmentConfigurations) for(const item of c.equipment)
+  assert.deepEqual(item.quantityByLevel.map(x=>x.quantity),item.role==='required'?[1,2,3,5,8]:[1,1,1,2,2]);
+assert.equal(spec.refineryOperatingPolicy.shiftCount*spec.refineryOperatingPolicy.hoursPerShift,24);
+assert.equal(spec.refineryOperatingPolicy.activeRecipesPerFacility,1);
 
 const android = androidReference[0];
 assert.equal(android.authority, 'reference-only-platform-balance-not-canonical-universe-facts');
@@ -262,4 +482,4 @@ for (const capability of spec.extractionCapabilities) {
   assert.ok(report.includes(capability.name), `Consolidated report missing ${capability.name}`);
 }
 
-console.log('Industrial alignment valid: 24 Buildings, 46 Machines, 19 Parts, 9 extraction capabilities, one deterministic wear model.');
+console.log('Industrial alignment valid: 24 Buildings, 48 Machines, 19 Parts, 9 extraction capabilities, one deterministic wear model.');

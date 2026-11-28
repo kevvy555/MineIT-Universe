@@ -250,9 +250,11 @@
     "materialStage": "processed",
     "stockBehaviour": "stockable",
     "sourceRawResourceIds": [
-      "mobile-resource-limestone"
+      "mobile-resource-limestone",
+      "mobile-resource-clay",
+      "mobile-resource-gypsum"
     ],
-    "upstreamInputDescription": "Limestone + Clay + Gypsum (calcination into clinker and grinding; intermediate clinker not independently stockable by default)",
+    "upstreamInputDescription": "Limestone + Clay + Gypsum (one Furnace and Crusher production module; no stockable clinker)",
     "industrialRole": "Construction / Binder",
     "discoveryStatus": "approved-identity",
     "canonStatus": "working canon",
@@ -332,7 +334,7 @@
     "sourceRawResourceIds": [
       "mobile-resource-coal"
     ],
-    "upstreamInputDescription": "Washed Coal / Coal",
+    "upstreamInputDescription": "Coal",
     "industrialRole": "Fuel / Industrial",
     "discoveryStatus": "approved-identity",
     "canonStatus": "working canon",
@@ -411,12 +413,11 @@
     "materialStage": "processed",
     "stockBehaviour": "stockable",
     "sourceRawResourceIds": [
-      "mobile-resource-silica-sand"
+      "mobile-resource-silica-sand",
+      "mobile-resource-limestone"
     ],
-    "upstreamMaterialIds": [
-      "named-substance-purified-silica"
-    ],
-    "upstreamInputDescription": "Refined silica for construction glass panels; recipe not yet qualified.",
+    "upstreamMaterialIds": [],
+    "upstreamInputDescription": "Silica Sand + Limestone",
     "industrialRole": "Construction / Glazing",
     "discoveryStatus": "approved-identity",
     "canonStatus": "working canon",
@@ -1850,7 +1851,8 @@
     "materialStage": "processed",
     "stockBehaviour": "stockable",
     "sourceRawResourceIds": [
-      "mobile-resource-iron-ore"
+      "mobile-resource-iron-ore",
+      "mobile-resource-limestone"
     ],
     "industrialRole": "Frames, fabricated structural steel feedstock",
     "discoveryStatus": "approved-identity",
@@ -1878,7 +1880,11 @@
       "densityKgPerM3": "Approved",
       "storageBuildingIds": "Approved",
       "stockpileShape": "Not Reviewed"
-    }
+    },
+    "upstreamMaterialIds": [
+      "named-substance-coke"
+    ],
+    "upstreamInputDescription": "Iron Ore + Coke + Limestone"
   },
   {
     "id": "named-substance-refined-lead",
@@ -2369,7 +2375,7 @@
     "materialStage": "processed",
     "stockBehaviour": "stockable",
     "sourceRawResourceIds": [],
-    "upstreamInputDescription": "Refined Iron + carbon from Refined Graphite",
+    "upstreamInputDescription": "Refined Iron + Coke",
     "industrialRole": "Structural equipment and buildings",
     "discoveryStatus": "approved-identity",
     "canonStatus": "working canon",
@@ -2398,7 +2404,11 @@
       "stockpileShape": "Not Reviewed",
       "baseReferencePriceCCPerUnit": "Approved"
     },
-    "baseReferencePriceCCPerUnit": 100
+    "baseReferencePriceCCPerUnit": 100,
+    "upstreamMaterialIds": [
+      "named-substance-refined-iron",
+      "named-substance-coke"
+    ]
   },
   {
     "id": "named-substance-sulfuric-acid",

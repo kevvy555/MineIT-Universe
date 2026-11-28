@@ -2065,14 +2065,33 @@
       "finishedMassKg": 5080.3,
       "manufacturerCostCC": 311844.65,
       "manufacturerQuoteCC": 389850,
-      "reviewBasis": "Unapproved Android derived-cost scenario; quantities, ratings and CC require Building-led review.",
-      "unresolvedDesignConstraints": "Crusher capacity hard-wear liners and drive rating TBD"
+      "reviewBasis": "User approval, 28 November 2026: MineIT-Android #611 N01–N10 / MineIT-Universe #46. Initial gameplay balance; not a certified engineering or factory BOM. Full manufacturing BOM remains unapproved.",
+      "unresolvedDesignConstraints": "Qualified factory BOM, machine footprint and certified engineering remain unresolved.",
+      "approvedMassEvidence": "User approval, 28 November 2026: MineIT-Android #611 N01–N10 / MineIT-Universe #46. Initial gameplay balance; not a certified engineering or factory BOM.",
+      "approvedPriceEvidence": "User approval, 28 November 2026: MineIT-Android #611 N01–N10 / MineIT-Universe #46. Initial gameplay balance; not a certified engineering or factory BOM."
     },
     "operating": {
-      "ratedCapacity": null,
-      "powerUnits": null,
+      "ratedCapacity": 1000,
+      "powerUnits": 3,
       "footprintM2": null,
-      "housingTechTier": null
+      "housingTechTier": null,
+      "ratedCapacityUnit": "gross-input-kg-per-hour",
+      "idlePowerUnits": 0.15,
+      "workforce": 2,
+      "foundingCargoUnits": 51,
+      "operatingConsumables": [
+        {
+          "resourceId": "substance-refined-lubricant",
+          "quantityPerOperatingHour": 0.1,
+          "unit": "kg"
+        },
+        {
+          "resourceId": "substance-coolant",
+          "quantityPerOperatingHour": 0.2,
+          "unit": "kg"
+        }
+      ],
+      "consumableUnitPolicy": "Debit per actual productive operating hour; service Parts use the shared wear model."
     },
     "pendingPartCompatibility": [],
     "fieldApprovalStatuses": {
@@ -2083,22 +2102,28 @@
       "manufacturing.factoryHours": "Proposed",
       "manufacturing.testHours": "Proposed",
       "manufacturing.goodUnitYield": "Proposed",
-      "manufacturing.finishedMassKg": "Proposed",
-      "manufacturing.manufacturerCostCC": "Proposed",
-      "manufacturing.manufacturerQuoteCC": "Proposed",
+      "manufacturing.finishedMassKg": "Approved",
+      "manufacturing.manufacturerCostCC": "Approved",
+      "manufacturing.manufacturerQuoteCC": "Approved",
       "partIds": "Approved",
       "pendingPartCompatibility": "Approved",
       "outputSummary": "In Review",
       "inputSummary": "In Review",
-      "operating.ratedCapacity": "Not Reviewed",
-      "operating.powerUnits": "Not Reviewed",
+      "operating.ratedCapacity": "Approved",
+      "operating.powerUnits": "Approved",
       "operating.footprintM2": "Not Reviewed",
       "operating.housingTechTier": "Not Reviewed",
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
       "conditionModel": "Approved",
-      "storageVolumeM3": "Approved"
+      "storageVolumeM3": "Approved",
+      "operating.ratedCapacityUnit": "Approved",
+      "operating.idlePowerUnits": "Approved",
+      "operating.workforce": "Approved",
+      "operating.operatingConsumables": "Approved",
+      "operating.consumableUnitPolicy": "Approved",
+      "operating.foundingCargoUnits": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -2161,7 +2186,12 @@
       "excludesNonOperationalCapability": true,
       "approval": "Approved"
     },
-    "storageVolumeM3": 25
+    "storageVolumeM3": 25,
+    "mobileMineInitialBalance": {
+      "approval": "Approved",
+      "scope": "refinery",
+      "basis": "User approval, 28 November 2026: MineIT-Android #611 N01–N10 / MineIT-Universe #46. Initial gameplay balance; not a certified engineering or factory BOM."
+    }
   },
   {
     "id": "machine-smelter-machine",
@@ -2253,14 +2283,33 @@
       "finishedMassKg": 5200.4,
       "manufacturerCostCC": 384205.15,
       "manufacturerQuoteCC": 480300,
-      "reviewBasis": "Unapproved Android derived-cost scenario; quantities, ratings and CC require Building-led review.",
-      "unresolvedDesignConstraints": "Refractory lining and operating heat/quality limits TBD"
+      "reviewBasis": "User approval, 28 November 2026: MineIT-Android #611 N01–N10 / MineIT-Universe #46. Initial gameplay balance; not a certified engineering or factory BOM. Full manufacturing BOM remains unapproved.",
+      "unresolvedDesignConstraints": "Qualified factory BOM, machine footprint and certified engineering remain unresolved.",
+      "approvedMassEvidence": "User approval, 28 November 2026: MineIT-Android #611 N01–N10 / MineIT-Universe #46. Initial gameplay balance; not a certified engineering or factory BOM.",
+      "approvedPriceEvidence": "User approval, 28 November 2026: MineIT-Android #611 N01–N10 / MineIT-Universe #46. Initial gameplay balance; not a certified engineering or factory BOM."
     },
     "operating": {
-      "ratedCapacity": null,
-      "powerUnits": null,
+      "ratedCapacity": 500,
+      "powerUnits": 8,
       "footprintM2": null,
-      "housingTechTier": null
+      "housingTechTier": null,
+      "ratedCapacityUnit": "gross-input-kg-per-hour",
+      "idlePowerUnits": 0.4,
+      "workforce": 2,
+      "foundingCargoUnits": 53,
+      "operatingConsumables": [
+        {
+          "resourceId": "substance-refined-lubricant",
+          "quantityPerOperatingHour": 0.05,
+          "unit": "kg"
+        },
+        {
+          "resourceId": "substance-coolant",
+          "quantityPerOperatingHour": 0.4,
+          "unit": "kg"
+        }
+      ],
+      "consumableUnitPolicy": "Debit per actual productive operating hour; service Parts use the shared wear model."
     },
     "fieldApprovalStatuses": {
       "manufacturing.finishedPartInputs": "Proposed",
@@ -2270,22 +2319,28 @@
       "manufacturing.factoryHours": "Proposed",
       "manufacturing.testHours": "Proposed",
       "manufacturing.goodUnitYield": "Proposed",
-      "manufacturing.finishedMassKg": "Proposed",
-      "manufacturing.manufacturerCostCC": "Proposed",
-      "manufacturing.manufacturerQuoteCC": "Proposed",
+      "manufacturing.finishedMassKg": "Approved",
+      "manufacturing.manufacturerCostCC": "Approved",
+      "manufacturing.manufacturerQuoteCC": "Approved",
       "partIds": "Approved",
       "pendingPartCompatibility": "In Review",
       "outputSummary": "In Review",
       "inputSummary": "In Review",
-      "operating.ratedCapacity": "Not Reviewed",
-      "operating.powerUnits": "Not Reviewed",
+      "operating.ratedCapacity": "Approved",
+      "operating.powerUnits": "Approved",
       "operating.footprintM2": "Not Reviewed",
       "operating.housingTechTier": "Not Reviewed",
       "servicePartRequirements": "Approved",
       "operatingFunctions": "Approved",
       "capabilityConfigurations": "Approved",
       "conditionModel": "Approved",
-      "storageVolumeM3": "Approved"
+      "storageVolumeM3": "Approved",
+      "operating.ratedCapacityUnit": "Approved",
+      "operating.idlePowerUnits": "Approved",
+      "operating.workforce": "Approved",
+      "operating.operatingConsumables": "Approved",
+      "operating.consumableUnitPolicy": "Approved",
+      "operating.foundingCargoUnits": "Approved"
     },
     "approval": "In Review",
     "servicePartRequirements": [
@@ -2357,7 +2412,12 @@
       "excludesNonOperationalCapability": true,
       "approval": "Approved"
     },
-    "storageVolumeM3": 28
+    "storageVolumeM3": 28,
+    "mobileMineInitialBalance": {
+      "approval": "Approved",
+      "scope": "refinery",
+      "basis": "User approval, 28 November 2026: MineIT-Android #611 N01–N10 / MineIT-Universe #46. Initial gameplay balance; not a certified engineering or factory BOM."
+    }
   },
   {
     "id": "machine-crude-chemical-battery",
@@ -8588,5 +8648,366 @@
       "approval": "Approved"
     },
     "storageVolumeM3": null
+  },
+  {
+    "id": "machine-furnace-machine",
+    "name": "Furnace Machine",
+    "entityType": "Machine",
+    "category": "Processing",
+    "subCategory": "Thermal Processing",
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-processing-parts",
+      "part-structural-components",
+      "part-power-electronics",
+      "part-fluid-handling-parts",
+      "part-thermal-parts",
+      "part-control-and-sensor-parts"
+    ],
+    "description": "A generic controlled thermal-processing furnace for firing, calcination, coking and glass production.",
+    "canonStatus": "authored-materialised",
+    "provenance": {
+      "description": "Approved generic Refinery machine; MineIT-Android #611 / MineIT-Universe #46."
+    },
+    "inputSummary": "Compatible recipe feedstock and power",
+    "outputSummary": "Processed recipe product",
+    "image": {
+      "key": "assets/art/universe/machines/machine-furnace-machine.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Square MineIT Mobile machine catalogue art, transparent background, stylised isometric three-quarter view: A generic controlled thermal-processing furnace for firing, calcination, coking and glass production. Pale composite panels, charcoal frame, orange safety trim, subtle blue indicators. One independent machine, no text, ground, or people.",
+      "notes": "New approved machine identity; artwork pending."
+    },
+    "manufacturing": {
+      "finishedPartInputs": null,
+      "directMaterialInputs": null,
+      "nestedMachineInputs": null,
+      "assemblyHours": null,
+      "factoryHours": null,
+      "testHours": null,
+      "goodUnitYield": null,
+      "finishedMassKg": 4500,
+      "manufacturerCostCC": 320000,
+      "manufacturerQuoteCC": 400000,
+      "reviewBasis": "User approval, 28 November 2026: MineIT-Android #611 N01–N10 / MineIT-Universe #46. Initial gameplay balance; not a certified engineering or factory BOM. Full manufacturing BOM remains unapproved.",
+      "unresolvedDesignConstraints": "Qualified factory BOM, machine footprint and certified engineering remain unresolved.",
+      "approvedMassEvidence": "User approval, 28 November 2026: MineIT-Android #611 N01–N10 / MineIT-Universe #46. Initial gameplay balance; not a certified engineering or factory BOM.",
+      "approvedPriceEvidence": "User approval, 28 November 2026: MineIT-Android #611 N01–N10 / MineIT-Universe #46. Initial gameplay balance; not a certified engineering or factory BOM."
+    },
+    "operating": {
+      "ratedCapacity": 750,
+      "powerUnits": 6,
+      "footprintM2": null,
+      "housingTechTier": null,
+      "ratedCapacityUnit": "gross-input-kg-per-hour",
+      "idlePowerUnits": 0.3,
+      "workforce": 2,
+      "foundingCargoUnits": 45,
+      "operatingConsumables": [
+        {
+          "resourceId": "substance-refined-lubricant",
+          "quantityPerOperatingHour": 0.05,
+          "unit": "kg"
+        },
+        {
+          "resourceId": "substance-coolant",
+          "quantityPerOperatingHour": 0.2,
+          "unit": "kg"
+        }
+      ],
+      "consumableUnitPolicy": "Debit per actual productive operating hour; service Parts use the shared wear model."
+    },
+    "pendingPartCompatibility": [],
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "Not Reviewed",
+      "manufacturing.directMaterialInputs": "Not Reviewed",
+      "manufacturing.nestedMachineInputs": "Not Reviewed",
+      "manufacturing.assemblyHours": "Not Reviewed",
+      "manufacturing.factoryHours": "Not Reviewed",
+      "manufacturing.testHours": "Not Reviewed",
+      "manufacturing.goodUnitYield": "Not Reviewed",
+      "manufacturing.finishedMassKg": "Approved",
+      "manufacturing.manufacturerCostCC": "Approved",
+      "manufacturing.manufacturerQuoteCC": "Approved",
+      "partIds": "Approved",
+      "pendingPartCompatibility": "Approved",
+      "outputSummary": "Approved",
+      "inputSummary": "Approved",
+      "operating.ratedCapacity": "Approved",
+      "operating.powerUnits": "Approved",
+      "operating.footprintM2": "Not Reviewed",
+      "operating.housingTechTier": "Not Reviewed",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved",
+      "storageVolumeM3": "Approved",
+      "operating.ratedCapacityUnit": "Approved",
+      "operating.idlePowerUnits": "Approved",
+      "operating.workforce": "Approved",
+      "operating.operatingConsumables": "Approved",
+      "operating.consumableUnitPolicy": "Approved",
+      "operating.foundingCargoUnits": "Approved"
+    },
+    "approval": "In Review",
+    "servicePartRequirements": [
+      {
+        "partId": "part-processing-parts",
+        "quantity": 8,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-structural-components",
+        "quantity": 8,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-power-electronics",
+        "quantity": 3,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-fluid-handling-parts",
+        "quantity": 4,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-thermal-parts",
+        "quantity": 8,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-control-and-sensor-parts",
+        "quantity": 3,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "thermal-processing",
+      "glass-melting",
+      "firing",
+      "calcination",
+      "coking"
+    ],
+    "capabilityConfigurations": [],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    },
+    "storageVolumeM3": 24,
+    "mobileMineInitialBalance": {
+      "approval": "Approved",
+      "scope": "refinery",
+      "basis": "User approval, 28 November 2026: MineIT-Android #611 N01–N10 / MineIT-Universe #46. Initial gameplay balance; not a certified engineering or factory BOM."
+    }
+  },
+  {
+    "id": "machine-cutting-machine",
+    "name": "Cutting Machine",
+    "entityType": "Machine",
+    "category": "Processing",
+    "subCategory": "Cutting",
+    "sources": [
+      "Manufactured"
+    ],
+    "partIds": [
+      "part-mechanical-parts",
+      "part-processing-parts",
+      "part-structural-components",
+      "part-power-electronics",
+      "part-forming-cutting-tooling",
+      "part-control-and-sensor-parts"
+    ],
+    "description": "A configurable mechanical cutting machine with interchangeable tooling for stone blocks and timber.",
+    "canonStatus": "authored-materialised",
+    "provenance": {
+      "description": "Approved generic Refinery machine; MineIT-Android #611 / MineIT-Universe #46."
+    },
+    "inputSummary": "Compatible recipe feedstock and power",
+    "outputSummary": "Processed recipe product",
+    "image": {
+      "key": "assets/art/universe/machines/machine-cutting-machine.webp",
+      "generated": false,
+      "status": "not-generated",
+      "promptDescription": "Square MineIT Mobile machine catalogue art, transparent background, stylised isometric three-quarter view: A configurable mechanical cutting machine with interchangeable tooling for stone blocks and timber. Pale composite panels, charcoal frame, orange safety trim, subtle blue indicators. One independent machine, no text, ground, or people.",
+      "notes": "New approved machine identity; artwork pending."
+    },
+    "manufacturing": {
+      "finishedPartInputs": null,
+      "directMaterialInputs": null,
+      "nestedMachineInputs": null,
+      "assemblyHours": null,
+      "factoryHours": null,
+      "testHours": null,
+      "goodUnitYield": null,
+      "finishedMassKg": 3400,
+      "manufacturerCostCC": 260000,
+      "manufacturerQuoteCC": 325000,
+      "reviewBasis": "User approval, 28 November 2026: MineIT-Android #611 N01–N10 / MineIT-Universe #46. Initial gameplay balance; not a certified engineering or factory BOM. Full manufacturing BOM remains unapproved.",
+      "unresolvedDesignConstraints": "Qualified factory BOM, machine footprint and certified engineering remain unresolved.",
+      "approvedMassEvidence": "User approval, 28 November 2026: MineIT-Android #611 N01–N10 / MineIT-Universe #46. Initial gameplay balance; not a certified engineering or factory BOM.",
+      "approvedPriceEvidence": "User approval, 28 November 2026: MineIT-Android #611 N01–N10 / MineIT-Universe #46. Initial gameplay balance; not a certified engineering or factory BOM."
+    },
+    "operating": {
+      "ratedCapacity": 500,
+      "powerUnits": 2,
+      "footprintM2": null,
+      "housingTechTier": null,
+      "ratedCapacityUnit": "gross-input-kg-per-hour",
+      "idlePowerUnits": 0.1,
+      "workforce": 2,
+      "foundingCargoUnits": 34,
+      "operatingConsumables": [
+        {
+          "resourceId": "substance-refined-lubricant",
+          "quantityPerOperatingHour": 0.1,
+          "unit": "kg"
+        },
+        {
+          "resourceId": "substance-coolant",
+          "quantityPerOperatingHour": 0.15,
+          "unit": "kg"
+        }
+      ],
+      "consumableUnitPolicy": "Debit per actual productive operating hour; service Parts use the shared wear model."
+    },
+    "pendingPartCompatibility": [],
+    "fieldApprovalStatuses": {
+      "manufacturing.finishedPartInputs": "Not Reviewed",
+      "manufacturing.directMaterialInputs": "Not Reviewed",
+      "manufacturing.nestedMachineInputs": "Not Reviewed",
+      "manufacturing.assemblyHours": "Not Reviewed",
+      "manufacturing.factoryHours": "Not Reviewed",
+      "manufacturing.testHours": "Not Reviewed",
+      "manufacturing.goodUnitYield": "Not Reviewed",
+      "manufacturing.finishedMassKg": "Approved",
+      "manufacturing.manufacturerCostCC": "Approved",
+      "manufacturing.manufacturerQuoteCC": "Approved",
+      "partIds": "Approved",
+      "pendingPartCompatibility": "Approved",
+      "outputSummary": "Approved",
+      "inputSummary": "Approved",
+      "operating.ratedCapacity": "Approved",
+      "operating.powerUnits": "Approved",
+      "operating.footprintM2": "Not Reviewed",
+      "operating.housingTechTier": "Not Reviewed",
+      "servicePartRequirements": "Approved",
+      "operatingFunctions": "Approved",
+      "capabilityConfigurations": "Approved",
+      "conditionModel": "Approved",
+      "storageVolumeM3": "Approved",
+      "operating.ratedCapacityUnit": "Approved",
+      "operating.idlePowerUnits": "Approved",
+      "operating.workforce": "Approved",
+      "operating.operatingConsumables": "Approved",
+      "operating.consumableUnitPolicy": "Approved",
+      "operating.foundingCargoUnits": "Approved"
+    },
+    "approval": "In Review",
+    "servicePartRequirements": [
+      {
+        "partId": "part-mechanical-parts",
+        "quantity": 6,
+        "role": "installed-serviceable-component",
+        "criticality": "degrading",
+        "conditionWeight": 2,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-processing-parts",
+        "quantity": 4,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-structural-components",
+        "quantity": 8,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-power-electronics",
+        "quantity": 3,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-forming-cutting-tooling",
+        "quantity": 6,
+        "role": "installed-serviceable-component",
+        "criticality": "functional",
+        "conditionWeight": 1,
+        "failureEffect": "derates-machine",
+        "approval": "Approved"
+      },
+      {
+        "partId": "part-control-and-sensor-parts",
+        "quantity": 2,
+        "role": "installed-serviceable-component",
+        "criticality": "critical",
+        "conditionWeight": 3,
+        "failureEffect": "disables-machine",
+        "approval": "Approved"
+      }
+    ],
+    "operatingFunctions": [
+      "stone-cutting",
+      "timber-sawing"
+    ],
+    "capabilityConfigurations": [],
+    "conditionModel": {
+      "modelId": "industrial-wear-model-v1",
+      "installedPartIdentityRequired": true,
+      "machineConditionDerivation": "weighted-mean-of-worst-unit-condition-per-service-slot",
+      "criticalFailureDisables": true,
+      "excludesNonOperationalCapability": true,
+      "approval": "Approved"
+    },
+    "storageVolumeM3": 18,
+    "mobileMineInitialBalance": {
+      "approval": "Approved",
+      "scope": "refinery",
+      "basis": "User approval, 28 November 2026: MineIT-Android #611 N01–N10 / MineIT-Universe #46. Initial gameplay balance; not a certified engineering or factory BOM."
+    }
   }
 ]
