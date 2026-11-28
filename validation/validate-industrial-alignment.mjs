@@ -197,6 +197,47 @@ for (const capability of spec.extractionCapabilities) {
 }
 assert.deepEqual(new Set(expectedExtraction.keys()), new Set(spec.extractionCapabilities.map(row => row.id)));
 
+
+ // Refinery recipes use canonical material identities and gross input mass.
+ // The first catalogue checkpoint covers the three existing machine recipes;
+ // the remaining approved recipes require new machine identities in this feature.
+const refineryRecipes = spec.refineryRecipes;
+assert.ok(Array.isArray(refineryRecipes) && refineryRecipes.length === 3);
+const refineryMaterials = new Map([...load('data/mobile-resource-definitions.json'),
+  ...load('data/named-substances.json')].map(material => [material.id, material]));
+assert.equal(new Set(refineryRecipes.map(recipe => recipe.id)).size, refineryRecipes.length);
+assert.equal(new Set(refineryRecipes.map(recipe => recipe.approvalRef)).size, refineryRecipes.length);
+for (const recipe of refineryRecipes) {
+  assert.equal(recipe.approval, 'Approved');
+  assert.ok(recipe.requiredMachineIds.length > 0);
+  assert.equal(new Set(recipe.requiredMachineIds).size, recipe.requiredMachineIds.length);
+  for (const id of recipe.requiredMachineIds) assert.ok(machineById.has(id), `${recipe.id}: unknown machine ${id}`);
+  assert.ok(recipe.inputs.length > 0);
+  assert.equal(new Set(recipe.inputs.map(row => row.substanceId)).size, recipe.inputs.length);
+  for (const row of [...recipe.inputs, recipe.output]) {
+    const material = refineryMaterials.get(row.substanceId);
+    assert.ok(material, `${recipe.id}: unknown material ${row.substanceId}`);
+    assert.ok(Number.isFinite(material.massPerUnitKg) && material.massPerUnitKg > 0);
+    assert.ok(Number.isFinite(row.quantityKg) && row.quantityKg > 0);
+  }
+  assert.ok(recipe.output.substanceId.startsWith('named-substance-'));
+  assert.ok(!recipe.inputs.some(row => row.substanceId === recipe.output.substanceId));
+  assert.ok(Number.isFinite(recipe.residueKg) && recipe.residueKg >= 0);
+  assert.equal(recipe.inputs.reduce((sum, row) => sum + row.quantityKg, 0),
+    recipe.output.quantityKg + recipe.residueKg, `${recipe.id}: mass balance`);
+}
+assert.deepEqual(refineryRecipes.map(recipe => [recipe.approvalRef, recipe.requiredMachineIds,
+  recipe.inputs, recipe.output, recipe.residueKg]), [
+  ['R01', ['machine-crusher-machine'], [{substanceId:'mobile-resource-stone',quantityKg:1000}],
+    {substanceId:'named-substance-graded-aggregate',quantityKg:950}, 50],
+  ['R05', ['machine-smelter-machine'], [{substanceId:'mobile-resource-iron-ore',quantityKg:1000},
+    {substanceId:'named-substance-coke',quantityKg:300},{substanceId:'mobile-resource-limestone',quantityKg:100}],
+    {substanceId:'named-substance-refined-iron',quantityKg:600}, 800],
+  ['R06', ['machine-smelter-machine'], [{substanceId:'named-substance-refined-iron',quantityKg:1000},
+    {substanceId:'named-substance-coke',quantityKg:20}],
+    {substanceId:'named-substance-steel',quantityKg:1000}, 20],
+]);
+
 const android = androidReference[0];
 assert.equal(android.authority, 'reference-only-platform-balance-not-canonical-universe-facts');
 assert.match(android.sourceCommit, /^[0-9a-f]{40}$/);

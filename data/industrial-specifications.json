@@ -253,6 +253,95 @@
       "foundingCargoUnits": "Game cargo burden unit, one unit per 100kg of approved Machine reference mass, rounded up; not equivalent to a natural resource unit.",
       "commercialPricing": "Manufacturer quote is an initial canonical reference, not automatically a player quote; gameplay freight/markup determined by existing trade rules.",
       "baselineAuthority": "AI-authored numerical initial estimates authorised by user for approval, subject to later balancing review."
-    }
+    },
+    "refineryRecipes": [
+      {
+        "id": "refinery-recipe-graded-aggregate",
+        "approvalRef": "R01",
+        "name": "Graded Aggregate",
+        "requiredMachineIds": [
+          "machine-crusher-machine"
+        ],
+        "inputs": [
+          {
+            "substanceId": "mobile-resource-stone",
+            "quantityKg": 1000
+          }
+        ],
+        "output": {
+          "substanceId": "named-substance-graded-aggregate",
+          "quantityKg": 950
+        },
+        "residueKg": 50,
+        "approval": "Approved",
+        "provenance": {
+          "repository": "kevvy555/MineIT-Android",
+          "issue": 611,
+          "approvedAt": "2026-11-28"
+        }
+      },
+      {
+        "id": "refinery-recipe-refined-iron",
+        "approvalRef": "R05",
+        "name": "Refined Iron",
+        "requiredMachineIds": [
+          "machine-smelter-machine"
+        ],
+        "inputs": [
+          {
+            "substanceId": "mobile-resource-iron-ore",
+            "quantityKg": 1000
+          },
+          {
+            "substanceId": "named-substance-coke",
+            "quantityKg": 300
+          },
+          {
+            "substanceId": "mobile-resource-limestone",
+            "quantityKg": 100
+          }
+        ],
+        "output": {
+          "substanceId": "named-substance-refined-iron",
+          "quantityKg": 600
+        },
+        "residueKg": 800,
+        "approval": "Approved",
+        "provenance": {
+          "repository": "kevvy555/MineIT-Android",
+          "issue": 611,
+          "approvedAt": "2026-11-28"
+        }
+      },
+      {
+        "id": "refinery-recipe-steel",
+        "approvalRef": "R06",
+        "name": "Steel",
+        "requiredMachineIds": [
+          "machine-smelter-machine"
+        ],
+        "inputs": [
+          {
+            "substanceId": "named-substance-refined-iron",
+            "quantityKg": 1000
+          },
+          {
+            "substanceId": "named-substance-coke",
+            "quantityKg": 20
+          }
+        ],
+        "output": {
+          "substanceId": "named-substance-steel",
+          "quantityKg": 1000
+        },
+        "residueKg": 20,
+        "approval": "Approved",
+        "provenance": {
+          "repository": "kevvy555/MineIT-Android",
+          "issue": 611,
+          "approvedAt": "2026-11-28"
+        }
+      }
+    ]
   }
 ]
